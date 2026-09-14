@@ -115,8 +115,14 @@ tail -n +2 tools/produits.csv | while IFS= read -r line; do
   fati_meta "$id" _fati_prix "$prix"
   wp post term set "$id" categorie_produit "$(fati_slug "$cat")" --by=slug >/dev/null
 
-  if [ -n "$img" ] && [ -f "$MEDIAS/produits/$img" ]; then
-    att=$(import_media "$MEDIAS/produits/$img" "$nom")
+  # Les visuels normalisés priment : même échelle et même fond pour toute la
+  # grille (voir tools/normaliser-visuels.py). On retombe sur les originaux
+  # si la normalisation n'a pas encore été lancée.
+  src="$MEDIAS/produits-normalises/$img"
+  [ -f "$src" ] || src="$MEDIAS/produits/$img"
+
+  if [ -n "$img" ] && [ -f "$src" ]; then
+    att=$(import_media "$src" "$nom")
     fati_meta "$id" _thumbnail_id "$att"
     wp post meta delete "$id" _fati_indispo >/dev/null 2>&1 || true
   else
@@ -155,9 +161,11 @@ create_page() {
   local id
   id=$(wp post list --post_type=page --name="$slug" --field=ID --posts_per_page=1)
   if [ -z "$id" ]; then
+    # Contenu volontairement vide : le texte réel est publié par
+    # tools/publier-pages-legales.py depuis _velix/copy-legal.md.
     id=$(wp post create --post_type=page --post_status=publish --porcelain \
          --post_title="$title" --post_name="$slug" \
-         --post_content="<p>Contenu à rédiger.</p>")
+         --post_content="")
   fi
   echo "$id"
 }
@@ -167,8 +175,9 @@ wp option update show_on_front page >/dev/null
 wp option update page_on_front "$HOME_ID" >/dev/null
 
 LEGAL_ID=$(create_page "Mentions légales" "mentions-legales")
-PRIV_ID=$(create_page "Confidentialité" "confidentialite")
-SHIP_ID=$(create_page "Livraison & retours" "livraison-retours")
+PRIV_ID=$(create_page "Politique de confidentialité" "confidentialite")
+CGV_ID=$(create_page "Conditions générales de vente" "conditions-generales-de-vente")
+SHIP_ID=$(create_page "Livraison et retours" "livraison-retours")
 
 # ---------------------------------------------------------------- menus
 echo "→ Menus"
@@ -202,7 +211,8 @@ build_menu "Pied — Navigation" pied_nav \
   "Boutique|/#shop" "Formations|/#training" "À propos|/#about"
 
 build_menu "Pied — Informations" pied_infos \
-  "FAQ|/#faq" "Mentions légales|$LEGAL_ID" "Confidentialité|$PRIV_ID" "Livraison & retours|$SHIP_ID"
+  "FAQ|/#faq" "Livraison et retours|$SHIP_ID" "Conditions générales de vente|$CGV_ID" \
+  "Mentions légales|$LEGAL_ID" "Politique de confidentialité|$PRIV_ID"
 
 # ---------------------------------------------------------------- réglages
 echo "→ Réglages du site"
