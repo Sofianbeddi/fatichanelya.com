@@ -29,12 +29,72 @@ function fati_meta_description() {
 	return trim( mb_substr( $desc, 0, 157 ) ) . ( mb_strlen( $desc ) > 157 ? '…' : '' );
 }
 
+/**
+ * URL canonique de la vue courante.
+ *
+ * Volontairement construite depuis l'objet interrogé, jamais depuis l'URL
+ * demandée : une arrivée en « ?utm_source=tiktok » ne doit pas produire une
+ * page canonique différente de la même page sans paramètre. L'acquisition de
+ * ce site passe par TikTok puis par de la publicité payante, donc ce cas est
+ * la norme, pas l'exception.
+ */
+function fati_canonical_url() {
+	if ( is_front_page() ) {
+		return home_url( '/' );
+	}
+
+	if ( is_singular() ) {
+		$permalink = get_permalink();
+		if ( $permalink ) {
+			return $permalink;
+		}
+	}
+
+	if ( is_post_type_archive() ) {
+		$link = get_post_type_archive_link( get_query_var( 'post_type' ) );
+		if ( $link ) {
+			return $link;
+		}
+	}
+
+	if ( is_tax() || is_category() || is_tag() ) {
+		$term = get_queried_object();
+		if ( $term instanceof WP_Term ) {
+			$link = get_term_link( $term );
+			if ( ! is_wp_error( $link ) ) {
+				return $link;
+			}
+		}
+	}
+
+	if ( is_home() ) {
+		$page_for_posts = (int) get_option( 'page_for_posts' );
+		if ( $page_for_posts ) {
+			return get_permalink( $page_for_posts );
+		}
+		return home_url( '/' );
+	}
+
+	// Pagination : on garde le numéro de page, qui est une vue distincte.
+	$paged = (int) get_query_var( 'paged' );
+	if ( $paged > 1 ) {
+		return home_url( user_trailingslashit( 'page/' . $paged ) );
+	}
+
+	// Recherche, 404 et vues sans URL propre : pas de canonique inventée.
+	return home_url( add_query_arg( array() ) );
+}
+
+// WordPress pose son propre canonical sur les vues singulières : sans cela,
+// la page en porterait deux, avec le risque qu'ils divergent.
+remove_action( 'wp_head', 'rel_canonical' );
+
 add_action(
 	'wp_head',
 	function () {
 		$desc  = fati_meta_description();
 		$title = wp_get_document_title();
-		$url   = home_url( add_query_arg( array() ) );
+		$url   = fati_canonical_url();
 		$image = fati_opt( 'hero_image' );
 
 		if ( is_singular() && has_post_thumbnail() ) {
