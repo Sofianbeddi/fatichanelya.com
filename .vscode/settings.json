@@ -1,0 +1,21 @@
+{
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.formatOnSave": false,
+  "[php]": { "editor.defaultFormatter": "bmewburn.vscode-intelephense-client" },
+  "intelephense.environment.phpVersion": "8.2",
+  "intelephense.files.exclude": [
+    "**/node_modules/**",
+    "**/wp-content/uploads/**",
+    "**/wp-content/plugins/**"
+  ],
+  "search.exclude": {
+    "wp-admin": true,
+    "wp-includes": true,
+    "wp-content/uploads": true,
+    "wp-content/plugins": true
+  },
+  "emmet.includeLanguages": { "php": "html" },
+  "css.lint.unknownAtRules": "ignore"
+}

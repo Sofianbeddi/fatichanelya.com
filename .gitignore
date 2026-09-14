@@ -1,0 +1,45 @@
+# ── WordPress : le cœur n'est pas versionné ───────────────────────────────
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+/.htaccess
+
+# ── Configuration et secrets ──────────────────────────────────────────────
+wp-config.php
+wp-config-local.php
+.env
+*.sql
+*.sql.gz
+
+# ── Contenu généré ou téléversé ───────────────────────────────────────────
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+wp-content/backup*/
+wp-content/advanced-cache.php
+wp-content/object-cache.php
+wp-content/debug.log
+wp-content/index.php
+
+# ── Plugins tiers : installés via l'admin, pas versionnés ─────────────────
+wp-content/plugins/*
+!wp-content/plugins/index.php
+
+# ── Thèmes : seul le nôtre est suivi ──────────────────────────────────────
+wp-content/themes/*
+!wp-content/themes/fatichanelya/
+
+# ── Outils et environnement ───────────────────────────────────────────────
+node_modules/
+vendor/
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

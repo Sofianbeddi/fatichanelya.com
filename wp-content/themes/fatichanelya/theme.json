@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": { "contentSize": "760px", "wideSize": "1280px" },
+    "color": {
+      "custom": false,
+      "customGradient": false,
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        { "slug": "paper",   "color": "#FBF8F3", "name": "Ivoire (fond)" },
+        { "slug": "ivory",   "color": "#F3EDE3", "name": "Beige (bandes)" },
+        { "slug": "surface", "color": "#FFFFFF", "name": "Blanc (cartes)" },
+        { "slug": "navy",    "color": "#16233D", "name": "Bleu nuit" },
+        { "slug": "ink",     "color": "#23201C", "name": "Noir doux" },
+        { "slug": "muted",   "color": "#605950", "name": "Gris texte" },
+        { "slug": "gold",    "color": "#C39A4E", "name": "Or champagne (fond)" },
+        { "slug": "goldink", "color": "#8A6521", "name": "Or champagne (texte)" },
+        { "slug": "sage",    "color": "#7B9482", "name": "Sauge" }
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "display",
+          "name": "Titres",
+          "fontFamily": "\"Iowan Old Style\", \"Palatino Linotype\", Palatino, \"Book Antiqua\", Georgia, serif"
+        },
+        {
+          "slug": "body",
+          "name": "Texte",
+          "fontFamily": "\"Avenir Next\", Avenir, \"Segoe UI\", system-ui, -apple-system, \"Helvetica Neue\", Arial, sans-serif"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small",  "name": "Petit",   "size": "0.8125rem" },
+        { "slug": "medium", "name": "Normal",  "size": "1rem",     "fluid": { "min": "0.95rem", "max": "1.06rem" } },
+        { "slug": "large",  "name": "Grand",   "size": "1.4rem",   "fluid": { "min": "1.1rem",  "max": "1.4rem" } },
+        { "slug": "xl",     "name": "Titre",   "size": "3rem",     "fluid": { "min": "1.85rem", "max": "3.05rem" } }
+      ]
+    },
+    "spacing": {
+      "units": [ "rem", "%", "vw" ],
+      "spacingSizes": [
+        { "slug": "30", "name": "Petit", "size": "1rem" },
+        { "slug": "50", "name": "Moyen", "size": "2rem" },
+        { "slug": "70", "name": "Grand", "size": "4rem" }
+      ]
+    }
+  },
+  "styles": {
+    "color": { "background": "var(--wp--preset--color--paper)", "text": "var(--wp--preset--color--ink)" },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--body)",
+      "fontSize": "var(--wp--preset--font-size--medium)",
+      "lineHeight": "1.65"
+    },
+    "elements": {
+      "link":    { "color": { "text": "var(--wp--preset--color--goldink)" } },
+      "heading": { "typography": { "fontFamily": "var(--wp--preset--font-family--display)", "fontWeight": "500" }, "color": { "text": "var(--wp--preset--color--navy)" } }
+    }
+  }
+}

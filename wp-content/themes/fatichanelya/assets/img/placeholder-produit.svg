@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620" role="img" aria-label="Visuel à venir">
+  <rect width="620" height="620" fill="#F3EDE3"/>
+  <g fill="none" stroke="#C39A4E" stroke-width="2" opacity=".55">
+    <circle cx="310" cy="272" r="70"/>
+    <path d="M262 300c22-34 44-34 66 0s44 34 66 0" stroke-linecap="round"/>
+  </g>
+  <text x="310" y="392" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#16233D">Fatichanelya</text>
+  <text x="310" y="424" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" letter-spacing="2" fill="#605950">VISUEL À VENIR</text>
+</svg>
