@@ -181,8 +181,12 @@ build_menu() {
   for item in "$@"; do
     IFS='|' read -r label target <<< "$item"
     # `wp menu item list` ne connaît que --fields ; on extrait la colonne titre.
-    wp menu item list "$name" --fields=title --format=csv 2>/dev/null \
-      | tail -n +2 | tr -d '"' | grep -qxF "$label" && continue
+    # WordPress échappe « & » en « &#038; » : on décode avant de comparer,
+    # sinon « Livraison & retours » est réajouté à chaque exécution.
+    if wp menu item list "$name" --fields=title --format=csv 2>/dev/null \
+       | tail -n +2 | tr -d '"' | sed 's/&#038;/\&/g' | grep -qxF "$label"; then
+      continue
+    fi
     if [[ "$target" =~ ^[0-9]+$ ]]; then
       wp menu item add-post "$name" "$target" --title="$label" >/dev/null
     else
