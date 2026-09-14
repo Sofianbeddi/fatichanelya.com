@@ -24,6 +24,16 @@ wp rewrite structure '/%postname%/' --hard >/dev/null
 wp rewrite flush --hard >/dev/null
 
 # ---------------------------------------------------------------- catégories
+# Slug d'un nom de catégorie, identique à sanitize_title() côté WordPress.
+fati_slug() {
+  python3 -c "
+import sys, re, unicodedata
+s = unicodedata.normalize('NFKD', sys.argv[1]).encode('ascii','ignore').decode()
+s = re.sub(r'[^a-zA-Z0-9]+', '-', s).strip('-').lower()
+print(s)
+" "$1"
+}
+
 echo "→ Catégories de produit"
 # Lecture par python : le CSV contient des virgules à l'intérieur des guillemets.
 python3 -c "
@@ -36,9 +46,29 @@ for r in csv.DictReader(open('tools/produits.csv', encoding='utf-8')):
 print('\n'.join(vus))
 " | while IFS= read -r cat; do
   [ -z "$cat" ] && continue
-  wp term get categorie_produit "$cat" --by=name >/dev/null 2>&1 \
-    || { wp term create categorie_produit "$cat" >/dev/null; echo "   + $cat"; }
+  # Comparaison par slug : WordPress échappe « & » en « &amp; » dans le nom,
+  # et `wp term get --by=name` n'existe pas.
+  slug_cat=$(fati_slug "$cat")
+  if wp term list categorie_produit --field=slug | grep -qxF "$slug_cat"; then
+    echo "   = $cat"
+  else
+    wp term create categorie_produit "$cat" --slug="$slug_cat" >/dev/null && echo "   + $cat"
+  fi
 done
+
+# Écrit une méta sans échouer quand la valeur est déjà la bonne.
+# `wp post meta update` renvoie une erreur dans ce cas, ce qui tuerait `set -e`.
+fati_meta() {
+  local id="$1" key="$2" value="$3" current
+  current=$(wp post meta get "$id" "$key" 2>/dev/null)
+  [ "$current" = "$value" ] && return 0
+  # « 40.50 » est relu « 40.5 » : comparer aussi en valeur numérique.
+  if [ -n "$current" ] && awk -v a="$current" -v b="$value" \
+      'BEGIN{exit !(a+0==b+0 && a ~ /^[0-9.]+$/ && b ~ /^[0-9.]+$/)}'; then
+    return 0
+  fi
+  wp post meta update "$id" "$key" "$value" >/dev/null || true
+}
 
 # ---------------------------------------------------------------- médias
 import_media() {
@@ -50,11 +80,11 @@ import_media() {
 }
 
 echo "→ Visuels des pages"
-declare -A PAGE_MEDIA
+# Pas de tableau associatif : bash 3.2 (macOS) ne les connaît pas.
 for f in "$MEDIAS"/pages/*.webp; do
   [ -e "$f" ] || continue
   key=$(basename "$f" .webp)
-  PAGE_MEDIA[$key]=$(import_media "$f" "$key")
+  import_media "$f" "$key" >/dev/null
 done
 
 # ---------------------------------------------------------------- produits
@@ -82,15 +112,15 @@ tail -n +2 tools/produits.csv | while IFS= read -r line; do
     echo "   ~ $nom"
   fi
 
-  wp post meta update "$id" _fati_prix "$prix" >/dev/null
-  wp post term set "$id" categorie_produit "$cat" --by=name >/dev/null
+  fati_meta "$id" _fati_prix "$prix"
+  wp post term set "$id" categorie_produit "$(fati_slug "$cat")" --by=slug >/dev/null
 
   if [ -n "$img" ] && [ -f "$MEDIAS/produits/$img" ]; then
     att=$(import_media "$MEDIAS/produits/$img" "$nom")
-    wp post meta update "$id" _thumbnail_id "$att" >/dev/null
+    fati_meta "$id" _thumbnail_id "$att"
     wp post meta delete "$id" _fati_indispo >/dev/null 2>&1 || true
   else
-    wp post meta update "$id" _fati_indispo 1 >/dev/null
+    fati_meta "$id" _fati_indispo 1
   fi
 done
 
@@ -114,8 +144,8 @@ tail -n +2 tools/formations.csv | while IFS= read -r line; do
          --post_content="$desc" --menu_order="$order")
     echo "   + $nom"
   fi
-  wp post meta update "$id" _fati_niveau "$niveau" >/dev/null
-  [ -n "$duree" ] && wp post meta update "$id" _fati_duree "$duree" >/dev/null
+  fati_meta "$id" _fati_niveau "$niveau"
+  if [ -n "$duree" ]; then fati_meta "$id" _fati_duree "$duree"; fi
 done
 
 # ---------------------------------------------------------------- pages
@@ -144,11 +174,15 @@ SHIP_ID=$(create_page "Livraison & retours" "livraison-retours")
 echo "→ Menus"
 build_menu() {
   local name="$1" location="$2"; shift 2
-  wp menu list --field=name | grep -qx "$name" || wp menu create "$name" >/dev/null
+  # `wp menu list` ne connaît que --fields ; on extrait la colonne nom.
+  wp menu list --fields=name --format=csv 2>/dev/null | tail -n +2 | tr -d '"' \
+    | grep -qxF "$name" || wp menu create "$name" >/dev/null
   wp menu location assign "$name" "$location" >/dev/null
   for item in "$@"; do
     IFS='|' read -r label target <<< "$item"
-    wp menu item list "$name" --field=title 2>/dev/null | grep -qx "$label" && continue
+    # `wp menu item list` ne connaît que --fields ; on extrait la colonne titre.
+    wp menu item list "$name" --fields=title --format=csv 2>/dev/null \
+      | tail -n +2 | tr -d '"' | grep -qxF "$label" && continue
     if [[ "$target" =~ ^[0-9]+$ ]]; then
       wp menu item add-post "$name" "$target" --title="$label" >/dev/null
     else
@@ -171,7 +205,7 @@ echo "→ Réglages du site"
 wp option update blogname "Fatichanelya" >/dev/null
 wp option update blogdescription "Bien-être, compétences et inspiration au quotidien." >/dev/null
 
-if [ -n "${PAGE_MEDIA[hero-fati]:-}" ]; then
+if [ -f "$MEDIAS/pages/hero-fati.webp" ]; then
   python3 - "$ROOT" <<'PY'
 import subprocess, sys, json
 def url(slug):
