@@ -13,14 +13,21 @@
   --navy-2:#22345A;
   --ink:#23201C;        /* noir doux */
   --muted:#605950;
-  --gold:#C39A4E;       /* accent champagne — fonds et décor */
-  --gold-ink:#8A6521;   /* accent champagne — texte sur clair */
+  --navy-deep:#0F1A2E;  /* surfaces navy en état actif, pied de page profond */
+  --gold:#C39A4E;       /* accent champagne — fonds et décor, JAMAIS en texte sur clair */
+  --gold-ink:#8A6521;   /* accent champagne — texte sur clair (5,00:1) */
+  --gold-press:#B98D3F; /* survol du bouton or : il fonce, il ne s'éclaircit pas */
   --gold-soft:#EFE0C4;
-  --sage:#7B9482;
-  --line:#E2D9CA;        /* filets décoratifs */
+  --sage:#7B9482;       /* décor uniquement — échoue à 3,10:1 en texte */
+  --sage-ink:#4F6857;   /* la même famille, lisible : 5,75:1 sur paper */
+  --line:#E2D9CA;        /* filets discrets */
+  --line-mid:#D8CDBA;    /* filet structurel — décoratif, ne porte pas d'information */
   --line-strong:#8F8065; /* bordures de contrôles sur fond clair — AA 3:1 */
   --line-on-navy:#8A94A3;/* bordures de contrôles sur navy — AA 3:1 */
+  --line-decor-navy:#9BA6B6; /* filet de cellule sur navy */
   --line-light:#FFFFFF2E;
+  --text-on-navy:#EAE3D8;    /* texte principal sur navy (12,28:1) */
+  --text-on-navy-2:#C9D0DB;  /* texte secondaire sur navy (10,08:1) */
 
   /* typographie */
   --font-display:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
@@ -28,17 +35,31 @@
   --fs-hero:clamp(2.6rem,1.5rem + 4.4vw,4.7rem);
   --fs-h2:clamp(1.85rem,1.25rem + 2.4vw,3.05rem);
   --fs-h3:clamp(1.1rem,1rem + .5vw,1.4rem);
-  --fs-body:clamp(.95rem,.91rem + .18vw,1.06rem);
+  --fs-body:clamp(1rem,.96rem + .2vw,1.09rem);
+  --fs-lead:clamp(1.06rem,1rem + .35vw,1.22rem);
+  --fs-num:2.125rem;      /* numéros en grand corps, sans zéro devant */
+  --fs-price:1.5rem;      /* prix en grille */
+  --fs-price-lg:clamp(1.9rem,1.6rem + 1vw,2.25rem); /* prix en fiche produit */
+  --fs-label:.875rem;     /* plancher des étiquettes réellement lues */
   --fs-sm:.8125rem;
   --fs-eyebrow:.75rem;
+  --lh-tight:1.08; --lh-body:1.65; --lh-prose:1.75;
+  --measure:56ch; --measure-prose:68ch;
 
   /* espace & formes */
   --container:1280px;
   --gutter:clamp(1.25rem,4.5vw,4rem);
   --section-y:clamp(3.75rem,7.5vw,7rem);
-  --r-sm:10px; --r-md:18px; --r-lg:28px; --r-pill:999px;
-  --shadow-card:0 1px 2px #23201c0a,0 10px 30px #23201c10;
-  --shadow-lift:0 4px 10px #23201c0f,0 22px 55px #23201c1f;
+  --section-y-lg:clamp(5rem,10vw,9rem);      /* respiration narrative */
+  --section-y-sm:clamp(2.25rem,4.5vw,3.75rem); /* bandes d'information */
+  /* Rayons resserrés : registre éditorial, pas applicatif. 28 px sur une carte
+     de 340 px lit « application mobile ». */
+  --r-sm:6px; --r-md:12px; --r-lg:18px; --r-pill:999px;
+  /* Les composants de contenu sont à plat. L'ombre est réservée à ce qui
+     flotte réellement : tiroir, modale, toast, panneau mobile. */
+  --shadow-card:none;
+  --shadow-lift:none;
+  --shadow-float:0 4px 10px #23201c0f,0 22px 55px #23201c1f;
 
   /* mouvement */
   --t-micro:150ms; --t-base:280ms; --t-enter:600ms;
@@ -97,8 +118,8 @@ ul{margin:0;padding:0;list-style:none}
    quand la page ne défile pas (viewport très haut, impression, capture pleine page). */
 .js-reveal .reveal{
   opacity:0;transform:translateY(22px);
-  transition:opacity var(--t-enter) var(--ease-out) calc(var(--i,0)*70ms),
-             transform var(--t-enter) var(--ease-out) calc(var(--i,0)*70ms);
+  transition:opacity var(--t-enter) var(--ease-out) calc(min(var(--i,0),4)*70ms),
+             transform var(--t-enter) var(--ease-out) calc(min(var(--i,0),4)*70ms);
 }
 .js-reveal .reveal.is-in{opacity:1;transform:none}
 
@@ -125,7 +146,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .button-lg{min-height:58px;padding-inline:2rem}
 .button-block{width:100%}
 @media (hover:hover){
-  .button:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+  .button:hover{transform:translateY(-1px)}
   .button-navy:hover{background:var(--navy-2)}
   .button-gold:hover{background:#D3AC64}
   .button-outline:hover{background:var(--navy);color:#fff}
@@ -186,6 +207,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .burger{display:none}
 
 .mobile-panel{position:fixed;inset-block-start:122px;inset-inline:0;z-index:45;
+  box-shadow:var(--shadow-float);
   background:var(--paper);border-block-end:1px solid var(--line);padding:1rem var(--gutter) 1.5rem}
 .mobile-panel nav{display:grid}
 .mobile-panel a{display:flex;align-items:center;min-height:52px;
@@ -258,13 +280,43 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 @media (max-width:520px){.trust ul{grid-template-columns:1fr}}
 
 /* ---------- 8. UNIVERS ---------- */
+/* ---------- CELLULE À FILET ----------
+   Le composant de grille par défaut du site. Une grille de contenu se compose
+   en cellules séparées par un filet, jamais en cartes bordées : quand une
+   catégorie, un produit, un engagement et une question portent tous le même
+   contour, l'œil ne hiérarchise plus rien. Les boîtes restent réservées à ce
+   qui porte une photo ou doit se distinguer du corps de texte. */
+.rule-cell{padding-block-start:1.5rem;padding-inline:0;
+  border-block-start:1px solid var(--line-mid);border-radius:0;
+  background:transparent;box-shadow:none;
+  transition:border-color var(--t-base)}
+@media (hover:hover){
+  a.rule-cell:hover,.rule-cell:has(a:hover){border-block-start-color:var(--navy)}}
+
+/* Sur fond sombre, le filet se relève pour rester perceptible. */
+.on-navy .rule-cell,.rule-cell--on-navy{border-block-start-color:var(--line-on-navy)}
+
+/* Variante à filet vertical : listes de valeurs et de points courts. */
+.rule-cell--side{padding-block-start:0;padding-inline-start:1.25rem;
+  border-block-start:0;border-inline-start:1px solid var(--line-mid)}
+
+/* Le numéro se pose en grand corps, sans zéro devant : jamais en petite
+   capitale colorée au-dessus du titre. */
+.rule-num{display:block;margin-block-end:.5rem;
+  font-family:var(--font-display);font-size:var(--fs-num);font-weight:500;
+  line-height:1;letter-spacing:-.03em;color:var(--navy)}
+.on-navy .rule-num{color:var(--gold)}
+
 .universe-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
   gap:clamp(1rem,2.2vw,1.75rem);max-width:var(--container);margin-inline:auto}
 .universe-card{position:relative;display:grid;align-content:space-between;gap:2rem;
   min-block-size:340px;padding:clamp(1.6rem,3vw,2.4rem);border-radius:var(--r-lg);
   background:var(--surface);border:1px solid var(--line);overflow:hidden;
-  transition:transform var(--t-base) var(--ease-out),box-shadow var(--t-base)}
-@media (hover:hover){.universe-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}}
+  transition:background var(--t-base),border-color var(--t-base)}
+/* Au survol on change une couleur, pas une position : une carte de contenu
+   ne décolle pas au passage du pointeur. */
+@media (hover:hover){.universe-card:hover{background:var(--ivory);
+  border-color:var(--line-mid)}}
 .universe-copy{display:grid;gap:.7rem;justify-items:start;max-width:34ch}
 .universe-copy p{color:var(--muted)}
 .universe-thumbs{display:flex;gap:.75rem;justify-self:end}
@@ -275,7 +327,6 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .universe-card--dark .arrow-link{color:var(--gold-soft)}
 .universe-bg{position:absolute;inset:0;inline-size:100%;block-size:100%;
   object-fit:cover;opacity:.26;transition:transform var(--t-enter) var(--ease-out)}
-@media (hover:hover){.universe-card--dark:hover .universe-bg{transform:scale(1.05)}}
 .universe-card--dark .universe-copy{position:relative}
 @media (max-width:860px){.universe-grid{grid-template-columns:1fr}}
 
@@ -286,7 +337,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .filters{display:flex;flex-wrap:wrap;gap:.5rem}
 .chip-button{min-height:44px;padding-inline:1.05rem;border-radius:var(--r-pill);
   border:1px solid var(--line-strong);background:var(--surface);color:var(--muted);
-  font-size:.78rem;font-weight:700;transition:all var(--t-micro)}
+  font-size:.78rem;font-weight:700;transition:background var(--t-micro),color var(--t-micro),border-color var(--t-micro)}
 .chip-button.is-active{background:var(--navy);border-color:var(--navy);color:#fff}
 @media (hover:hover){.chip-button:not(.is-active):hover{border-color:var(--navy);color:var(--navy)}}
 .search{position:relative;display:flex;align-items:center;gap:.6rem;
@@ -302,29 +353,31 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   gap:clamp(.9rem,1.8vw,1.5rem);max-width:var(--container);margin-inline:auto}
 .product-card{display:flex;flex-direction:column;background:var(--surface);
   border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;
-  transition:transform var(--t-base) var(--ease-out),box-shadow var(--t-base)}
-@media (hover:hover){.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}}
+  transition:border-color var(--t-base)}
+@media (hover:hover){
+  .product-card:hover{border-color:var(--line-strong)}
+  .product-card:hover .product-media{background:var(--gold-soft)}
+  .product-card:hover .product-name{color:var(--gold-ink)}}
 .product-media{position:relative;display:block;inline-size:100%;background:var(--ivory);
   border:0;overflow:hidden;aspect-ratio:1}
-.product-media img{inline-size:100%;block-size:100%;object-fit:cover;
-  transition:transform var(--t-enter) var(--ease-out)}
-@media (hover:hover){.product-card:hover .product-media img{transform:scale(1.05)}}
-.product-media::after{content:"Voir la fiche";position:absolute;inset-block-end:10px;
-  inset-inline:10px;padding:.45rem;border-radius:var(--r-pill);background:#16233DE0;color:#fff;
-  font-size:.7rem;font-weight:700;text-align:center;opacity:0;
-  transform:translateY(8px);transition:all var(--t-base) var(--ease-out)}
-@media (hover:hover){.product-card:hover .product-media::after{opacity:1;transform:none}}
+.product-media img{inline-size:100%;block-size:100%;object-fit:cover}
+/* Pas de pastille « Voir la fiche » en fondu : la vignette entière est déjà un
+   lien, et un libellé qui apparaît au survol n'existe pas au toucher. */
 .product-flag{position:absolute;inset-block-start:10px;inset-inline-start:10px;
   padding:.3rem .65rem;border-radius:var(--r-pill);background:var(--navy);color:#fff;
-  font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.product-body{display:grid;gap:.4rem;padding:1rem 1.05rem 1.15rem;flex:1}
-.product-cat{font-size:.66rem;font-weight:700;letter-spacing:.1em;
+  font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.product-body{display:grid;gap:.45rem;padding:1.15rem 1.15rem 1.25rem;flex:1}
+.product-cat{font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold-ink)}
-.product-name{font-family:var(--font-body);font-size:.92rem;font-weight:600;
-  color:var(--ink);line-height:1.35;letter-spacing:0}
-.product-price{font-family:var(--font-display);font-size:1.15rem;color:var(--navy)}
-.product-add{margin-block-start:.5rem;min-height:44px;border-radius:var(--r-pill);
-  border:1.5px solid var(--navy);color:var(--navy);font-size:.76rem;font-weight:700;
+/* Le nom du produit est l'information principale de la carte : il se lit en
+   police de titre, au-dessus du corps de texte, jamais en dessous. */
+.product-name{font-family:var(--font-display);font-size:1.18rem;font-weight:500;
+  color:var(--navy);line-height:1.24;letter-spacing:-.015em;
+  transition:color var(--t-micro)}
+.product-price{font-family:var(--font-display);font-size:var(--fs-price);
+  color:var(--gold-ink);line-height:1.1}
+.product-add{margin-block-start:.7rem;min-height:44px;border-radius:var(--r-pill);
+  border:1.5px solid var(--navy);color:var(--navy);font-size:var(--fs-label);font-weight:700;
   transition:background var(--t-micro),color var(--t-micro)}
 @media (hover:hover){.product-add:hover{background:var(--navy);color:#fff}}
 .no-result{max-width:var(--container);margin-inline:auto;padding-block:2rem;color:var(--muted)}
@@ -340,9 +393,11 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   inline-size:min(88%,320px);padding:1rem 1.2rem;border-radius:var(--r-md);
   background:var(--navy);color:#EDE7DC;font-size:.82rem;line-height:1.45;box-shadow:var(--shadow-lift)}
 .training-list{display:grid;gap:.75rem;margin-block-start:2rem}
-.training-list li{display:grid;gap:.4rem;justify-items:start;padding:1.25rem 1.4rem;
-  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);
-  transition:border-color var(--t-base),transform var(--t-base) var(--ease-out)}
+.training-list li{display:grid;gap:.4rem;justify-items:start;
+  padding-block-start:1.35rem;padding-inline:0;
+  background:transparent;border:0;border-block-start:1px solid var(--line-mid);
+  border-radius:0;transition:border-color var(--t-base)}
+@media (hover:hover){.training-list li:hover{border-block-start-color:var(--navy)}}
 @media (hover:hover){.training-list li:hover{border-color:var(--navy);transform:translateX(4px)}}
 .training-list p{color:var(--muted);font-size:.9rem}
 @media (max-width:920px){.training{grid-template-columns:1fr}
@@ -363,10 +418,11 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   background:var(--surface);box-shadow:var(--shadow-card);font-size:.72rem;color:var(--muted)}
 .about-stat strong{font-family:var(--font-display);font-size:1.1rem;color:var(--navy)}
 .values{display:grid;gap:.85rem;margin-block:1.9rem}
-.values li{display:grid;gap:.15rem;padding-inline-start:1.15rem;
-  border-inline-start:3px solid var(--gold-ink)}
-.values strong{font-size:.92rem;color:var(--navy)}
-.values span{font-size:.86rem;color:var(--muted)}
+.values li{display:grid;gap:.2rem;padding-inline-start:1.25rem;
+  border-inline-start:1px solid var(--line-mid)}
+.values strong{font-family:var(--font-display);font-size:1.06rem;font-weight:500;
+  color:var(--navy);letter-spacing:-.012em}
+.values span{font-size:var(--fs-label);color:var(--muted)}
 @media (max-width:920px){.about{grid-template-columns:1fr}}
 
 /* ---------- 12. TIKTOK ---------- */
@@ -376,9 +432,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   transition:transform var(--t-base) var(--ease-out),box-shadow var(--t-base)}
 .journal-card img{aspect-ratio:9/16;object-fit:cover;inline-size:100%;
   transition:transform var(--t-enter) var(--ease-out)}
-@media (hover:hover){
-  .journal-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
-  .journal-card:hover img{transform:scale(1.05)}}
+@media (hover:hover){.journal-card:hover{border-color:var(--line-strong)}}
 .journal-meta{position:absolute;inset-block-end:0;inset-inline:0;display:grid;gap:.2rem;
   padding:2.5rem 1.15rem 1.15rem;color:#fff;font-size:.85rem;font-weight:600;
   background:linear-gradient(to top,#16233DE6,#16233D00)}
@@ -391,8 +445,8 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .pledge h2{color:#fff}
 .pledge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:clamp(1rem,2.5vw,2rem);max-width:var(--container);margin-inline:auto}
-.pledge-grid li{display:grid;gap:.5rem;padding:1.5rem 1.6rem;border-radius:var(--r-md);
-  background:#FFFFFF0F;border:1px solid var(--line-light)}
+.pledge-grid li{display:grid;gap:.5rem;padding-block-start:1.5rem;padding-inline:0;
+  background:transparent;border:0;border-block-start:1px solid var(--line-on-navy)}
 .pledge-grid strong{font-family:var(--font-display);font-size:1.15rem;
   font-weight:500;color:#fff;letter-spacing:-.02em}
 .pledge-grid p{font-size:.88rem;color:#CFC8BC}
@@ -452,7 +506,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .drawer{position:fixed;inset-block:0;inset-inline-end:0;z-index:95;
   display:flex;flex-direction:column;inline-size:min(100%,400px);
-  background:var(--paper);box-shadow:var(--shadow-lift)}
+  background:var(--paper);box-shadow:var(--shadow-float)}
 .drawer-head{display:flex;align-items:center;justify-content:space-between;
   padding:1.15rem 1.25rem;border-block-end:1px solid var(--line)}
 .drawer-head h2{font-size:1.3rem}
@@ -469,7 +523,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 
 /* ---------- 18. FICHE PRODUIT ---------- */
 .product-dialog{inline-size:min(100%,860px);padding:0;border:0;border-radius:var(--r-lg);
-  background:var(--paper);color:var(--ink);box-shadow:var(--shadow-lift)}
+  background:var(--paper);color:var(--ink);box-shadow:var(--shadow-float)}
 .product-dialog::backdrop{background:#16233D8C;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 .pd-close{position:absolute;inset-block-start:12px;inset-inline-end:12px;z-index:2;
   background:var(--surface);box-shadow:var(--shadow-card)}
@@ -488,7 +542,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 /* ---------- 19. TOAST ---------- */
 .toast{position:fixed;inset-block-end:22px;inset-inline-start:50%;z-index:120;
   padding:.85rem 1.4rem;border-radius:var(--r-pill);background:var(--navy);color:#fff;
-  font-size:.82rem;font-weight:600;box-shadow:var(--shadow-lift);
+  font-size:.82rem;font-weight:600;box-shadow:var(--shadow-float);
   transform:translate(-50%,120%);transition:transform var(--t-base) var(--ease-out)}
 .toast.is-visible{transform:translate(-50%,0)}
 
