@@ -180,6 +180,22 @@ plafonnée à 4 index, soit 280 ms — douze cartes produisaient une vague de 84
 
 ## 4. Composants
 
+### Hero en cadre
+
+Le hero est un **cadre arrondi** (28 px) posé dans la colonne de contenu, fond
+sable `--ivory`, 58 / 42, **600 px de haut** sur bureau. Le portrait remplit sa
+colonne, hors flux, avec un fondu sable côté texte et un voile sombre sous la
+signature. En mobile le cadre empile le portrait (360 px) au-dessus du texte.
+
+> **La hauteur est un `min-block-size`, pas un `block-size`.** Le cadre porte
+> `overflow:hidden` pour arrondir le portrait ; une hauteur stricte coupait le
+> texte dès qu'il dépassait (676 px de contenu à 1280). En minimum, le cadre fait
+> 600 px dans le cas normal et grandit plutôt que d'amputer une ligne.
+
+Le texte du cadre est **inséré** par la marge intérieure du cadre : c'est le bord
+du cadre qui s'aligne sur la colonne, pas le texte. C'est le comportement attendu
+d'une carte.
+
 ### Cellule à filet — la grille par défaut
 
 ```

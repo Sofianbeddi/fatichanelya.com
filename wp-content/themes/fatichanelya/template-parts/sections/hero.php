@@ -2,9 +2,10 @@
 /**
  * Hero de la page d'accueil.
  *
- * Composition reprise de la maquette validée par le gérant : texte à gauche
- * sur fond beige, portrait de Fati à droite en pleine hauteur, fondu entre les
- * deux. La signature se pose en bas du portrait.
+ * Composition reprise de la maquette du gérant : un cadre arrondi posé dans
+ * la colonne de contenu, à hauteur fixe. Texte à gauche, portrait de Fati à
+ * droite, fondu entre les deux, signature en bas du portrait. En mobile, le
+ * cadre empile le portrait au-dessus du texte.
  *
  * Le titre tient sur deux lignes, la seconde en or : c'est l'élément LCP, il
  * ne porte donc aucune animation et l'image est chargée en priorité.
@@ -17,6 +18,7 @@ defined( 'ABSPATH' ) || exit;
 $portrait = fati_opt( 'hero_image' );
 ?>
 <section class="hero<?php echo $portrait ? '' : ' hero--sans-portrait'; ?>" aria-labelledby="hero-title">
+	<div class="hero-frame">
 	<div class="hero-copy">
 		<?php if ( fati_opt( 'hero_eyebrow' ) ) : ?>
 			<p class="eyebrow"><?php echo esc_html( fati_opt( 'hero_eyebrow' ) ); ?></p>
@@ -64,4 +66,5 @@ $portrait = fati_opt( 'hero_image' );
 			</figcaption>
 		</figure>
 	<?php endif; ?>
+	</div>
 </section>

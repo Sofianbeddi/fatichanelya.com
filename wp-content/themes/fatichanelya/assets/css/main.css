@@ -77,7 +77,7 @@
     system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --font-display:var(--font-body);
 
-  --fs-hero:clamp(2.35rem,1rem + 3.3vw,3.65rem);
+  --fs-hero:clamp(2.35rem,1rem + 3vw,3.65rem);
   --fs-h2:clamp(1.85rem,1.35rem + 2vw,2.85rem);
   --fs-h3:clamp(1.15rem,1.05rem + .45vw,1.4rem);
   --fs-body:clamp(.95rem,.92rem + .16vw,1.02rem);
@@ -283,23 +283,24 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 
 /* ---------- 6. HERO ---------- */
 /* ---------- HERO ----------
-   Composition de la maquette validée : texte à gauche sur beige, portrait à
-   droite en pleine hauteur, fondu entre les deux. Aucun vert : bleu marine,
-   beige et or, conformément au système de design. */
-.hero{position:relative;display:grid;
-  grid-template-columns:minmax(0,58%) minmax(0,42%);
-  align-items:stretch;gap:0;
-  min-block-size:min(84vh,680px);
-  background:var(--paper);overflow:hidden}
+   Un cadre arrondi posé dans la colonne de contenu, à hauteur fixe : texte à
+   gauche, portrait à droite, fondu entre les deux. Le cadre suit --bord comme
+   tout le reste, donc il reste à 1280 px sur un écran de 2722. Aucun vert :
+   bleu marine, beige et or. */
+.hero{padding-inline:var(--bord);padding-block:clamp(.75rem,1.5vw,1.5rem) 0;
+  background:var(--paper)}
 
-/* La marge intérieure droite est réduite : le fondu du portrait prend déjà le
-   relais, et 64 px de chaque côté laissaient le titre sur quatre lignes. */
-/* Aucune largeur maximale ici : la marge --bord est comptée dans le maximum
-   (border-box). À 2722 px de large, --bord vaut 721 et il ne restait que
-   71 px au titre. Ce sont les enfants qui portent leur mesure. */
-.hero-copy{display:grid;align-content:center;justify-items:start;
-  padding-inline:var(--bord) clamp(1.5rem,3vw,2.5rem);
-  padding-block:clamp(3rem,7vw,5.5rem);z-index:1}
+.hero-frame{position:relative;display:grid;
+  grid-template-columns:minmax(0,58%) minmax(0,42%);
+  /* Hauteur fixe dans le cas normal ; en minimum, pour qu'un texte plus haut
+     que prévu agrandisse le cadre au lieu d'être coupé par overflow:hidden. */
+  min-block-size:600px;
+  border-radius:28px;overflow:hidden;background:var(--ivory)}
+
+/* Aucune largeur maximale : les enfants portent leur mesure. */
+.hero-copy{display:grid;align-content:center;justify-items:start;min-inline-size:0;
+  padding-inline:clamp(1.75rem,3.5vw,3.5rem) clamp(1rem,2vw,1.5rem);
+  padding-block:1.75rem;z-index:1}
 
 /* Le titre est l'élément LCP : aucune animation, il est là au premier rendu.
    La seconde ligne passe en or, comme sur la maquette. */
@@ -307,68 +308,59 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   color:var(--navy);max-width:20ch;text-wrap:balance}
 .hero h1 em{display:block;font-style:normal;color:var(--gold-ink)}
 
-.hero .lead{margin-block:1.5rem 2.1rem;max-width:40ch;color:var(--muted);
+.hero .lead{margin-block:1.25rem 1.75rem;max-width:40ch;color:var(--muted);
   font-size:var(--fs-lead);line-height:1.7}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem}
 
-.hero-facts{display:flex;flex-wrap:wrap;gap:.7rem 1.9rem;
-  margin-block-start:2.5rem;padding-block-start:1.6rem;
-  border-block-start:1px solid var(--line);
+.hero-facts{display:flex;flex-wrap:wrap;gap:.6rem 1.9rem;
+  margin-block-start:2rem;padding-block-start:1.25rem;
+  border-block-start:1px solid var(--line-mid);
   inline-size:100%;max-inline-size:34rem;
   color:var(--muted);font-size:var(--fs-label)}
 .hero-facts li{display:inline-flex;align-items:center;gap:.6rem}
 .hero-facts li::before{content:"";inline-size:5px;block-size:5px;
   border-radius:50%;background:var(--gold);flex:none}
 
-/* Portrait pleine hauteur, fondu vers le beige côté texte. */
-.hero-portrait{position:relative;margin:0;align-self:stretch;
-  min-block-size:100%;overflow:hidden}
-/* Hors flux : sinon l'image impose sa hauteur intrinsèque à la rangée
-   (620 × 941 à 605 px de large donnait un hero de 918 px). */
+/* Portrait : remplit sa colonne sur toute la hauteur du cadre. Hors flux,
+   sinon l'image imposerait sa hauteur intrinsèque à la rangée. */
+.hero-portrait{position:relative;margin:0;min-inline-size:0;overflow:hidden}
 .hero-portrait img{position:absolute;inset:0;inline-size:100%;block-size:100%;
   object-fit:cover;object-position:center 18%}
+/* Fondu côté texte : le cadre est en sable, le fondu part du sable. */
 .hero-portrait::before{content:"";position:absolute;inset-block:0;
-  inset-inline-start:0;inline-size:38%;z-index:1;pointer-events:none;
-  background:linear-gradient(to right,var(--paper),transparent)}
-
-/* Voile dégradé sous la signature : une ombre portée ne compte pas comme du
-   contraste, et « Fati » tombait à 1,12:1 sur une zone claire de la photo.
-   Le voile garantit le ratio quelle que soit l'image posée ensuite. */
+  inset-inline-start:0;inline-size:34%;z-index:1;pointer-events:none;
+  background:linear-gradient(to right,var(--ivory),transparent)}
+/* Voile sous la signature : une ombre portée ne compte pas comme du contraste. */
 .hero-portrait::after{content:"";position:absolute;inset-inline:0;
   inset-block-end:0;block-size:38%;z-index:1;pointer-events:none;
   background:linear-gradient(to top,#0E1729D9,#0E172966 45%,transparent)}
-/* La signature se cale sur le bord du contenu, pas sur celui du portrait :
-   le portrait va jusqu'au bord de l'écran, le texte n'y va jamais. */
 .hero-portrait figcaption{position:absolute;z-index:2;
-  inset-block-end:clamp(1.25rem,3vw,2.25rem);
-  inset-inline-end:var(--bord);
+  inset-block-end:clamp(1.25rem,3vw,2rem);inset-inline-end:clamp(1.25rem,3vw,2rem);
   display:grid;gap:.1rem;text-align:end;color:#fff}
 .hero-portrait figcaption strong{font-size:1.5rem;font-weight:var(--fw-title);
   letter-spacing:-.02em}
 .hero-portrait figcaption span{font-size:var(--fs-label);color:#EDE6DA}
 
-/* Sans portrait, le texte occupe toute la largeur plutôt que de laisser un
-   vide à droite. */
-.hero--sans-portrait{grid-template-columns:minmax(0,1fr);min-block-size:auto}
-.hero--sans-portrait .hero-copy{padding-inline:var(--bord);inline-size:100%}
+/* Sans portrait, le cadre prend sa hauteur naturelle sur une colonne. */
+.hero--sans-portrait .hero-frame{grid-template-columns:minmax(0,1fr);block-size:auto}
 
-/* Entre la tablette en paysage et le petit écran, le texte reprend de la
-   largeur : à 1024 px, 58 % ne laissaient que 517 px au titre, qui passait
-   à quatre lignes. Le portrait n'a pas besoin de 42 % à cette taille. */
+/* Tablette en paysage : le texte reprend de la largeur, le cadre baisse. */
 @media (min-width:981px) and (max-width:1180px){
-  .hero{grid-template-columns:minmax(0,63%) minmax(0,37%)}
+  .hero-frame{grid-template-columns:minmax(0,62%) minmax(0,38%);min-block-size:540px}
 }
 
+/* Mobile : le cadre empile le portrait au-dessus du texte. Le portrait a une
+   hauteur fixe, le texte prend la sienne : un cadre entier à hauteur fixe
+   couperait le texte. Le fondu latéral disparaît, le voile de la signature
+   reste. */
 @media (max-width:980px){
-  /* Le titre passe avant l'image : meilleure lisibilité de l'offre, et
-     l'élément LCP reste du texte. */
-  .hero{grid-template-columns:minmax(0,1fr);min-block-size:auto}
-  .hero-copy{padding-block:clamp(2.5rem,7vw,3.5rem) 2rem;max-width:none}
+  .hero{padding-block:.75rem 0}
+  .hero-frame{grid-template-columns:minmax(0,1fr);min-block-size:0;border-radius:20px}
+  .hero-portrait{order:-1;block-size:clamp(280px,46vh,360px)}
+  .hero-portrait::before{display:none}
+  .hero-copy{padding:1.75rem clamp(1.25rem,5vw,2rem) 2rem}
   .hero h1{max-width:22ch}
-  .hero-portrait{block-size:min(68vh,520px);min-block-size:0}
-  .hero-portrait::before{inset-inline:0;inset-block-start:0;
-    inline-size:100%;block-size:24%;
-    background:linear-gradient(to bottom,var(--paper),transparent)}
+  .hero-facts{margin-block-start:1.75rem;padding-block-start:1.25rem}
 }
 
 /* ---------- 7. TRUST ---------- */

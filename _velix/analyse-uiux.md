@@ -19,7 +19,9 @@ préalable séparée, le diagnostic est fait pièce par pièce en mesurant.
 | 4 | **Titre sur quatre lignes** à 1440 : le bord unifié à 80 px avait repris 16 px à une colonne déjà plafonnée à 736 px. | Colonne de texte portée à 52 rem, pente du `clamp` de la taille adoucie. Trois lignes à 1440 et 1280. | ✅ |
 | 5 | **Titre sur quatre lignes à 1024** : 58 % de largeur ne laissaient que 517 px. | Palier tablette : 63 / 37 entre 981 et 1180 px. Trois lignes à 1024. | ✅ |
 | 6 | Bandeau d'engagements : titres **décalés de 4 px** selon que le texte descriptif tenait sur une ou deux lignes. | `align-items:start` avec l'icône seule centrée. | ✅ |
-| 7 | Les visuels de catégories n'étaient pas dans le script de réinstallation : **perdus à la prochaine réinitialisation**. | Étape ajoutée à `tools/seed.sh`, nommage `cat-<slug>.webp`. | ✅ |
+| 7 | **Largeurs écrasées sur l'écran de 2722 px du gérant** : la marge `--bord` (721 px à cette largeur) était comptée dans la largeur maximale de trois blocs. 71 px pour le titre du hero, zéro pour la section Formations. | Maximums retirés des blocs porteurs de `--bord`, pied de page aligné. Vérifié de 1024 à 3200 px. | ✅ |
+| 8 | Le gérant préfère le hero **dans un cadre** arrondi à hauteur fixe, comme sa première maquette. | Cadre de 600 px dans la colonne de contenu, 58 / 42, fondu sable vers le portrait. Hauteur en minimum pour qu'un texte plus haut agrandisse le cadre au lieu d'être coupé (676 px de contenu à 1280). En mobile, le portrait de 360 px passe au-dessus du texte. | ✅ |
+| 9 | Les visuels de catégories n'étaient pas dans le script de réinstallation : **perdus à la prochaine réinitialisation**. | Étape ajoutée à `tools/seed.sh`, nommage `cat-<slug>.webp`. | ✅ |
 
 ## Fichiers modifiés
 
@@ -39,7 +41,7 @@ voile dégradé, a été mesurée sur les pixels : 18,24:1.
 
 - 10 pages × 4 largeurs (375, 768, 1024, 1440) : zéro erreur console, zéro débordement, zéro image cassée
 - 4 pages × 4 largeurs supplémentaires (320, 1280, 1600, 1920) : bords alignés, aucun débordement
-- Hero : 727 px à 1440, titre sur 3 lignes à 1024, 1280 et 1440, portrait visible en mobile
+- Hero en cadre : 600 px à 1440 et 1280, titre sur 3 lignes de 1024 à 3200, cadre aligné sur la colonne de contenu à toutes les largeurs, portrait de 360 px en tête sur mobile
 
 ## Écarté volontairement
 
