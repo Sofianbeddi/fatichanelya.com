@@ -87,6 +87,19 @@ for f in "$MEDIAS"/pages/*.webp; do
   import_media "$f" "$key" >/dev/null
 done
 
+# ---------------------------------------------------------------- visuels des catégories
+# Un visuel par catégorie, nommé d'après son slug : tools/medias/categories/cat-<slug>.webp
+echo "→ Visuels des catégories"
+for f in "$MEDIAS"/categories/cat-*.webp; do
+  [ -e "$f" ] || continue
+  slug=$(basename "$f" .webp); slug="${slug#cat-}"
+  tid=$(wp term list categorie_produit --slug="$slug" --field=term_id 2>/dev/null)
+  [ -z "$tid" ] && { echo "   ? $slug : catégorie absente"; continue; }
+  att=$(import_media "$f" "$slug")
+  wp term meta update "$tid" _fati_visuel "$att" >/dev/null 2>&1 || true
+  echo "   + $slug → visuel $att"
+done
+
 # ---------------------------------------------------------------- produits
 echo "→ Produits"
 order=0
