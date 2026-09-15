@@ -236,6 +236,35 @@ Un type de contenu avec taxonomie a besoin de **deux** gabarits, jamais d'un seu
 Sans le second, WordPress retombe sur `archive.php`, le repli générique du blog :
 produits en vignettes de journal, sans carte, sans prix, sans bouton.
 
+## 5 bis. La marge unique `--bord` — et la règle qui va avec
+
+Tout le site s'aligne sur une seule marge :
+
+```
+--bord: max(var(--gutter), calc((100vw - var(--container)) / 2))
+```
+
+En dessous de 1280 px plus deux gouttières, c'est la gouttière qui décide ; au-delà,
+c'est le centrage du conteneur. L'en-tête, les sections, les bandeaux et le pied
+de page la portent tous. Vérifié aligné de 1024 à 3200 px.
+
+> **Règle absolue.** Un bloc qui porte `padding-inline: var(--bord)` **ne porte
+> jamais** de `max-width` ni de `max-inline-size`. En `border-box`, la marge est
+> comptée dans le maximum : sur un écran de 2722 px, `--bord` vaut 721 px, et un
+> bloc plafonné à 832 px ne laissait que 71 px à son texte. La section Formations,
+> plafonnée à 1408 px, tombait à **zéro**. Ce sont les **enfants** qui portent
+> leur mesure (`20ch`, `40ch`, `34rem`), jamais le bloc qui porte la marge.
+
+> **Piège vérifié.** Ce défaut est invisible en dessous de 1500 px : mes tests
+> allaient jusqu'à 1920 sans mesurer la largeur du texte. Le gérant l'a vu sur un
+> écran de 2722 px. Toute vérification de mise en page inclut désormais 2722 et
+> 3200 px, et mesure la **largeur du titre**, pas seulement les bords.
+
+Note : `100vw` compte la barre de défilement quand elle est visible (Windows,
+Linux). L'écart est de 8 px par côté au pire, invisible ; `100%` n'est pas
+utilisable car la marge est aussi posée sur des blocs imbriqués dont le bloc
+englobant n'est pas la fenêtre.
+
 ---
 
 ## 6. Images

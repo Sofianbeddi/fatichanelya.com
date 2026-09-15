@@ -294,10 +294,12 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 
 /* La marge intérieure droite est réduite : le fondu du portrait prend déjà le
    relais, et 64 px de chaque côté laissaient le titre sur quatre lignes. */
+/* Aucune largeur maximale ici : la marge --bord est comptée dans le maximum
+   (border-box). À 2722 px de large, --bord vaut 721 et il ne restait que
+   71 px au titre. Ce sont les enfants qui portent leur mesure. */
 .hero-copy{display:grid;align-content:center;justify-items:start;
   padding-inline:var(--bord) clamp(1.5rem,3vw,2.5rem);
-  padding-block:clamp(3rem,7vw,5.5rem);
-  max-width:52rem;z-index:1}
+  padding-block:clamp(3rem,7vw,5.5rem);z-index:1}
 
 /* Le titre est l'élément LCP : aucune animation, il est là au premier rendu.
    La seconde ligne passe en or, comme sur la maquette. */
@@ -348,8 +350,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 /* Sans portrait, le texte occupe toute la largeur plutôt que de laisser un
    vide à droite. */
 .hero--sans-portrait{grid-template-columns:minmax(0,1fr);min-block-size:auto}
-.hero--sans-portrait .hero-copy{max-width:var(--container);
-  margin-inline:auto;inline-size:100%}
+.hero--sans-portrait .hero-copy{padding-inline:var(--bord);inline-size:100%}
 
 /* Entre la tablette en paysage et le petit écran, le texte reprend de la
    largeur : à 1024 px, 58 % ne laissaient que 517 px au titre, qui passait
@@ -490,8 +491,10 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   font-size:.76rem;color:var(--muted)}
 
 /* ---------- 10. FORMATIONS ---------- */
+/* Pas de largeur maximale : la section porte déjà --bord, et 1408 px moins
+   deux fois 721 tombait à zéro sur un écran de 2722 px. */
 .training{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
-  gap:clamp(2rem,5vw,4.5rem);align-items:center;max-width:calc(var(--container) + 2*4rem);margin-inline:auto}
+  gap:clamp(2rem,5vw,4.5rem);align-items:center}
 .training-media{margin:0;position:relative}
 .training-media img{border-radius:var(--r-lg);aspect-ratio:4/5;object-fit:cover;box-shadow:var(--shadow-card)}
 .training-media figcaption{position:absolute;inset-block-end:-18px;inset-inline-start:16px;
@@ -579,7 +582,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 
 /* ---------- 16. FOOTER ---------- */
 .site-footer{background:var(--navy);color:var(--text-on-navy-2);
-  padding-inline:var(--gutter);padding-block:clamp(2.5rem,5vw,4rem) 1.5rem;
+  padding-inline:var(--bord);padding-block:clamp(2.5rem,5vw,4rem) 1.5rem;
   border-block-start:1px solid var(--line-light)}
 .footer-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.2fr) minmax(0,1.1fr);
   gap:2.5rem clamp(2rem,4vw,3.5rem);max-inline-size:100%}
