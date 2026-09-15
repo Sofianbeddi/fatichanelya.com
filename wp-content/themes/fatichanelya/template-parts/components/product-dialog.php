@@ -1,7 +1,7 @@
 <?php defined( 'ABSPATH' ) || exit; ?>
 <dialog class="product-dialog" id="product-dialog" aria-labelledby="pd-title">
 	<button class="icon-button pd-close" id="pd-close" aria-label="<?php esc_attr_e( 'Fermer la fiche produit', 'fatichanelya' ); ?>">
-		<?php echo fati_icon( 'close', 20 ); ?>
+		<?php echo fati_icon( 'close', 24 ); ?>
 	</button>
 
 	<div class="pd-body">

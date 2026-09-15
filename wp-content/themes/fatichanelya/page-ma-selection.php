@@ -39,7 +39,7 @@ get_template_part( 'template-parts/components/page-banner' );
 			<p class="selection-vide" id="selection-vide" hidden>
 				<?php esc_html_e( 'Votre sélection est vide pour le moment.', 'fatichanelya' ); ?>
 				<a class="arrow-link" href="<?php echo esc_url( get_post_type_archive_link( 'produit' ) ); ?>">
-					<?php esc_html_e( 'Voir le catalogue', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 15 ); ?>
+					<?php esc_html_e( 'Voir le catalogue', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
 				</a>
 			</p>
 
@@ -78,7 +78,7 @@ get_template_part( 'template-parts/components/page-banner' );
 			<a class="button button-gold button-lg button-block" id="selection-wa"
 			   href="<?php echo esc_url( fati_wa( __( 'Bonjour Fati, je souhaite commander.', 'fatichanelya' ) ) ); ?>"
 			   <?php echo fati_opt( 'whatsapp' ) ? 'target="_blank" rel="noopener"' : ''; ?>>
-				<?php echo fati_icon( 'whatsapp', 18 ); ?><?php esc_html_e( 'Envoyer ma sélection à Fati', 'fatichanelya' ); ?>
+				<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Envoyer ma sélection à Fati', 'fatichanelya' ); ?>
 			</a>
 
 			<p class="selection-paiement">

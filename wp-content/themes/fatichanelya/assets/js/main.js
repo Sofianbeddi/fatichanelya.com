@@ -363,6 +363,10 @@
       const espace  = parseFloat(getComputedStyle(piste).columnGap) || 0;
       /* On avance d'un écran plein, arrondi à un nombre entier de cartes :
          une carte coupée en fin de course donne une impression d'à-peu-près. */
+      /* Un écran plein, arrondi à un nombre entier de cartes : une carte
+         coupée en fin de course donne une impression d'à-peu-près.
+         On ne borne pas sur la distance restante — au départ elle vaut le
+         parcours entier, et le premier clic sautait alors jusqu'au bout. */
       const parEcran = Math.max(1, Math.floor(piste.clientWidth / (largeur + espace)));
       return parEcran * (largeur + espace);
     };

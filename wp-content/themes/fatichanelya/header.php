@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 <aside class="announcement" aria-label="<?php esc_attr_e( 'Informations générales', 'fatichanelya' ); ?>">
 	<p><?php echo esc_html( fati_opt( 'annonce' ) ); ?></p>
 	<a href="<?php echo esc_url( fati_wa() ); ?>"<?php echo fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : ''; ?>>
-		<?php echo fati_icon( 'whatsapp', 14 ); ?><?php echo esc_html( fati_opt( 'annonce_cta' ) ); ?>
+		<?php echo fati_icon( 'whatsapp', 20 ); ?><?php echo esc_html( fati_opt( 'annonce_cta' ) ); ?>
 	</a>
 </aside>
 
@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php $langues = fati_languages(); ?>
 		<?php if ( count( $langues ) > 1 ) : ?>
 			<div class="lang">
-				<?php echo fati_icon( 'globe', 17 ); ?>
+				<?php echo fati_icon( 'globe', 20 ); ?>
 				<label class="sr-only" for="lang-select"><?php esc_html_e( 'Langue du site', 'fatichanelya' ); ?></label>
 				<select id="lang-select">
 					<?php foreach ( $langues as $l ) : ?>
@@ -65,7 +65,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php endif; ?>
 
 		<button class="icon-button bag-button" id="open-bag" aria-label="<?php esc_attr_e( 'Ma sélection : 0 article', 'fatichanelya' ); ?>" aria-expanded="false" aria-controls="bag-drawer">
-			<?php echo fati_icon( 'bag', 19 ); ?>
+			<?php echo fati_icon( 'bag', 24 ); ?>
 			<span class="bag-count" id="bag-count" aria-hidden="true">0</span>
 		</button>
 
@@ -74,7 +74,7 @@ defined( 'ABSPATH' ) || exit;
 		</a>
 
 		<button class="icon-button burger" id="burger" aria-label="<?php esc_attr_e( 'Ouvrir le menu', 'fatichanelya' ); ?>" aria-expanded="false" aria-controls="mobile-panel">
-			<?php echo fati_icon( 'menu', 21 ); ?>
+			<?php echo fati_icon( 'menu', 26 ); ?>
 		</button>
 	</div>
 </header>

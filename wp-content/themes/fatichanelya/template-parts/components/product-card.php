@@ -39,8 +39,17 @@ $indispo = (bool) get_post_meta( $id, '_fati_indispo', true );
 			<p class="product-price"><?php echo esc_html( fati_format_prix( $prix ) ); ?></p>
 		<?php endif; ?>
 
-		<button class="product-add" type="button" data-add="<?php echo esc_attr( $id ); ?>">
-			<?php esc_html_e( 'Ajouter à ma sélection', 'fatichanelya' ); ?>
+		<?php
+		/*
+		 * Libellé court : « Ajouter à ma sélection » demande 194 px de texte
+		 * pour une boîte de 162 à 183 px dès que la grille passe à trois ou
+		 * quatre colonnes. Le nom du produit part dans le nom accessible, donc
+		 * une lectrice d'écran entend l'intention complète.
+		 */
+		?>
+		<button class="product-add" type="button" data-add="<?php echo esc_attr( $id ); ?>"
+		        aria-label="<?php echo esc_attr( sprintf( __( 'Ajouter %s à ma sélection', 'fatichanelya' ), get_the_title() ) ); ?>">
+			<?php esc_html_e( 'Ajouter', 'fatichanelya' ); ?>
 		</button>
 	</div>
 </li>

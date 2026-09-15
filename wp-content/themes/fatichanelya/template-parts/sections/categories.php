@@ -57,6 +57,11 @@ if ( is_wp_error( $categories ) || ! $categories ) {
 									'alt'      => '',
 									'loading'  => 'lazy',
 									'decoding' => 'async',
+									// `sizes` explicite : WordPress pose « auto », qui fait
+									// résoudre la largeur sur la boîte mise en page (184 px)
+									// et retenir la vignette de 240 px. Le rond paraît alors
+									// flou sur un écran à haute densité.
+									'sizes'    => '(min-width:1000px) 184px, (min-width:700px) 160px, 40vw',
 								)
 							);
 						}

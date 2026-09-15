@@ -5,7 +5,7 @@
 	<div class="drawer-head">
 		<h2 id="bag-title"><?php esc_html_e( 'Ma sélection', 'fatichanelya' ); ?></h2>
 		<button class="icon-button" id="close-bag" aria-label="<?php esc_attr_e( 'Fermer ma sélection', 'fatichanelya' ); ?>">
-			<?php echo fati_icon( 'close', 20 ); ?>
+			<?php echo fati_icon( 'close', 24 ); ?>
 		</button>
 	</div>
 

@@ -187,3 +187,25 @@ add_action(
 	},
 	5
 );
+
+/**
+ * Retire le mot-clé « auto » que WordPress ajoute en tête de `sizes`.
+ *
+ * Depuis WordPress 6.7, `auto` est préfixé à l'attribut dès que l'image est en
+ * chargement différé. Le navigateur résout alors la largeur sur la boîte mise
+ * en page et ignore les conditions écrites à la main : une vignette de
+ * catégorie de 184 px recevait le fichier de 240 px au lieu de celui de 320.
+ *
+ * On ne le retire que lorsque le gabarit a fourni ses propres conditions :
+ * ailleurs, « auto » reste le meilleur choix par défaut.
+ */
+add_filter(
+	'wp_get_attachment_image_attributes',
+	static function ( $attr ) {
+		if ( ! empty( $attr['sizes'] ) && str_starts_with( $attr['sizes'], 'auto, ' ) ) {
+			$attr['sizes'] = substr( $attr['sizes'], 6 );
+		}
+		return $attr;
+	},
+	20
+);

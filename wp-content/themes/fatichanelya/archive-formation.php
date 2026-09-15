@@ -50,7 +50,7 @@ get_template_part( 'template-parts/components/page-banner' );
 					<?php endif; ?>
 
 					<span class="arrow-link" aria-hidden="true">
-						<?php esc_html_e( 'Voir le programme', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 15 ); ?>
+						<?php esc_html_e( 'Voir le programme', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
 					</span>
 				</li>
 			<?php endwhile; ?>
@@ -65,7 +65,7 @@ get_template_part( 'template-parts/components/page-banner' );
 		<a class="button button-navy"
 		   href="<?php echo esc_url( fati_wa( __( 'Bonjour Fati, j\'hésite entre plusieurs formations. Pouvez-vous m\'orienter ?', 'fatichanelya' ) ) ); ?>"
 		   <?php echo fati_opt( 'whatsapp' ) ? 'target="_blank" rel="noopener"' : ''; ?>>
-			<?php echo fati_icon( 'whatsapp', 17 ); ?><?php esc_html_e( 'En parler avec Fati', 'fatichanelya' ); ?>
+			<?php echo fati_icon( 'whatsapp', 22 ); ?><?php esc_html_e( 'En parler avec Fati', 'fatichanelya' ); ?>
 		</a>
 	</aside>
 </main>

@@ -38,7 +38,7 @@
 
 		<?php if ( fati_opt( 'tiktok' ) ) : ?>
 			<a class="button button-outline" href="<?php echo esc_url( fati_opt( 'tiktok' ) ); ?>" target="_blank" rel="noopener">
-				<?php esc_html_e( 'Suivre Fati sur TikTok', 'fatichanelya' ); ?><?php echo fati_icon( 'external', 16 ); ?>
+				<?php esc_html_e( 'Suivre Fati sur TikTok', 'fatichanelya' ); ?><?php echo fati_icon( 'external', 20 ); ?>
 			</a>
 		<?php endif; ?>
 	</div>

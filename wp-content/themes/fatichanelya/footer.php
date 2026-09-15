@@ -17,7 +17,7 @@ get_template_part( 'template-parts/components/assurance' );
 			<p><?php bloginfo( 'description' ); ?></p>
 			<?php if ( fati_opt( 'tiktok' ) ) : ?>
 				<a class="arrow-link arrow-link--light" href="<?php echo esc_url( fati_opt( 'tiktok' ) ); ?>" target="_blank" rel="noopener">
-					TikTok<?php echo fati_icon( 'external', 15 ); ?>
+					TikTok<?php echo fati_icon( 'external', 20 ); ?>
 				</a>
 			<?php endif; ?>
 		</div>

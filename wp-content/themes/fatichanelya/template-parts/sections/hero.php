@@ -13,10 +13,10 @@
 
 		<div class="hero-actions">
 			<a class="button button-navy" href="#shop">
-				<?php echo esc_html( fati_opt( 'hero_cta1' ) ); ?><?php echo fati_icon( 'arrow', 17 ); ?>
+				<?php echo esc_html( fati_opt( 'hero_cta1' ) ); ?><?php echo fati_icon( 'arrow', 22 ); ?>
 			</a>
 			<a class="text-button" href="#training">
-				<?php echo esc_html( fati_opt( 'hero_cta2' ) ); ?><?php echo fati_icon( 'arrow', 16 ); ?>
+				<?php echo esc_html( fati_opt( 'hero_cta2' ) ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
 			</a>
 		</div>
 

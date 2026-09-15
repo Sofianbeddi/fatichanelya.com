@@ -78,11 +78,11 @@ get_template_part( 'template-parts/components/page-banner' );
 			<a class="button button-gold button-lg"
 			   href="<?php echo esc_url( fati_wa( __( 'Bonjour Fati, j\'aimerais échanger avec vous.', 'fatichanelya' ) ) ); ?>"
 			   <?php echo fati_opt( 'whatsapp' ) ? 'target="_blank" rel="noopener"' : ''; ?>>
-				<?php echo fati_icon( 'whatsapp', 18 ); ?><?php esc_html_e( 'Écrire sur WhatsApp', 'fatichanelya' ); ?>
+				<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Écrire sur WhatsApp', 'fatichanelya' ); ?>
 			</a>
 			<?php if ( fati_opt( 'tiktok' ) ) : ?>
 				<a class="button button-outline" href="<?php echo esc_url( fati_opt( 'tiktok' ) ); ?>" target="_blank" rel="noopener">
-					<?php esc_html_e( 'Voir mon TikTok', 'fatichanelya' ); ?><?php echo fati_icon( 'external', 16 ); ?>
+					<?php esc_html_e( 'Voir mon TikTok', 'fatichanelya' ); ?><?php echo fati_icon( 'external', 20 ); ?>
 				</a>
 			<?php endif; ?>
 		</div>

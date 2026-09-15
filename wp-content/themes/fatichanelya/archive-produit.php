@@ -58,7 +58,7 @@ get_template_part( 'template-parts/components/page-banner' );
 			</div>
 
 			<div class="search">
-				<?php echo fati_icon( 'search', 17 ); ?>
+				<?php echo fati_icon( 'search', 22 ); ?>
 				<label class="sr-only" for="product-search"><?php esc_html_e( 'Rechercher dans la sélection', 'fatichanelya' ); ?></label>
 				<input id="product-search" type="search" placeholder="<?php esc_attr_e( 'Rechercher un produit…', 'fatichanelya' ); ?>" autocomplete="off">
 			</div>

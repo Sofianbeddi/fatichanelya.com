@@ -63,7 +63,7 @@ while ( have_posts() ) :
 
 				<div class="pd-actions">
 					<a class="button button-gold button-lg" href="<?php echo esc_url( $commander ); ?>"<?php echo $cible; ?>>
-						<?php echo fati_icon( 'whatsapp', 18 ); ?><?php esc_html_e( 'Commander sur WhatsApp', 'fatichanelya' ); ?>
+						<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Commander sur WhatsApp', 'fatichanelya' ); ?>
 					</a>
 					<a class="button button-outline" href="<?php echo esc_url( get_post_type_archive_link( 'produit' ) ); ?>">
 						<?php esc_html_e( 'Voir tout le catalogue', 'fatichanelya' ); ?>
@@ -169,7 +169,7 @@ while ( have_posts() ) :
 					<p class="produit-rappel-prix"><?php echo esc_html( fati_format_prix( $prix ) ); ?></p>
 				</div>
 				<a class="button button-navy button-lg" href="<?php echo esc_url( $commander ); ?>"<?php echo $cible; ?>>
-					<?php echo fati_icon( 'whatsapp', 18 ); ?><?php esc_html_e( 'Commander sur WhatsApp', 'fatichanelya' ); ?>
+					<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Commander sur WhatsApp', 'fatichanelya' ); ?>
 				</a>
 			</aside>
 		<?php endif; ?>

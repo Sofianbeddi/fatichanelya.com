@@ -68,7 +68,7 @@ while ( have_posts() ) :
 			<a class="button button-gold button-lg"
 			   href="<?php echo esc_url( fati_wa( sprintf( __( 'Bonjour Fati, je souhaite le programme et le tarif de la formation « %s ».', 'fatichanelya' ), $titre ) ) ); ?>"
 			   <?php echo fati_opt( 'whatsapp' ) ? 'target="_blank" rel="noopener"' : ''; ?>>
-				<?php echo fati_icon( 'whatsapp', 18 ); ?><?php esc_html_e( 'Écrire à Fati', 'fatichanelya' ); ?>
+				<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Écrire à Fati', 'fatichanelya' ); ?>
 			</a>
 			<p class="formation-note"><?php esc_html_e( 'Réponse sous 24 h en semaine.', 'fatichanelya' ); ?></p>
 		</aside>
@@ -105,7 +105,7 @@ while ( have_posts() ) :
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</h3>
 						<span class="arrow-link" aria-hidden="true">
-							<?php esc_html_e( 'Voir le programme', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 15 ); ?>
+							<?php esc_html_e( 'Voir le programme', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
 						</span>
 					</li>
 				<?php endwhile; ?>

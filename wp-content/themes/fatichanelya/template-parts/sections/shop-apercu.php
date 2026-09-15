@@ -47,11 +47,11 @@ $total = (int) wp_count_posts( 'produit' )->publish;
 		<div class="carousel-nav">
 			<button class="carousel-bouton carousel-prec" type="button" data-carousel-prec
 			        aria-label="<?php esc_attr_e( 'Produits précédents', 'fatichanelya' ); ?>">
-				<?php echo fati_icon( 'arrow', 18 ); ?>
+				<?php echo fati_icon( 'arrow', 22 ); ?>
 			</button>
 			<button class="carousel-bouton carousel-suiv" type="button" data-carousel-suiv
 			        aria-label="<?php esc_attr_e( 'Produits suivants', 'fatichanelya' ); ?>">
-				<?php echo fati_icon( 'arrow', 18 ); ?>
+				<?php echo fati_icon( 'arrow', 22 ); ?>
 			</button>
 		</div>
 
@@ -81,7 +81,7 @@ $total = (int) wp_count_posts( 'produit' )->publish;
 				$total
 			);
 			?>
-			<?php echo fati_icon( 'arrow', 17 ); ?>
+			<?php echo fati_icon( 'arrow', 22 ); ?>
 		</a>
 		<p class="shop-note"><?php esc_html_e( 'Prix indicatifs en euros, hors livraison. Disponibilité confirmée avec Fati avant commande.', 'fatichanelya' ); ?></p>
 	</div>

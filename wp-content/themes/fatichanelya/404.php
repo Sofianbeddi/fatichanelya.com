@@ -9,8 +9,8 @@ get_header();
 		<p class="section-intro"><?php esc_html_e( 'Le lien est peut-être ancien. Reprenez depuis l\'accueil ou le catalogue.', 'fatichanelya' ); ?></p>
 	</header>
 	<div class="hero-actions">
-		<a class="button button-navy" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Retour à l\'accueil', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 17 ); ?></a>
-		<a class="text-button" href="<?php echo esc_url( get_post_type_archive_link( 'produit' ) ); ?>"><?php esc_html_e( 'Voir le catalogue', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 16 ); ?></a>
+		<a class="button button-navy" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Retour à l\'accueil', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 22 ); ?></a>
+		<a class="text-button" href="<?php echo esc_url( get_post_type_archive_link( 'produit' ) ); ?>"><?php esc_html_e( 'Voir le catalogue', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?></a>
 	</div>
 </main>
 <?php
