@@ -349,8 +349,16 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .result-count{max-width:var(--container);margin-inline:auto;margin-block-end:1.75rem;
   font-size:.78rem;color:var(--muted)}
 
-.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+/* `auto-fill` avec un minimum de 220 px calcule son nombre de colonnes sur la
+   largeur disponible ; imbriquée dans une autre grille, celle-ci vaut la place
+   maximale et non la place réelle, d'où cinq colonnes et un débordement.
+   Des points de rupture explicites suppriment ce calcul implicite. */
+.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
   gap:clamp(.9rem,1.8vw,1.5rem);max-width:var(--container);margin-inline:auto}
+@media (max-width:420px){.product-grid{grid-template-columns:minmax(0,1fr)}}
+@media (min-width:700px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1000px){.product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1240px){.product-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 .product-card{display:flex;flex-direction:column;background:var(--surface);
   border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;
   transition:border-color var(--t-base)}
@@ -690,6 +698,59 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   .formation-cta{position:sticky;inset-block-start:96px}
 }
 
+
+/* ---------- FICHE PRODUIT ----------
+   La page où se décide l'achat. Le bloc d'achat est isolé par du blanc, pas
+   par une bordure ; la réassurance vient juste dessous, là où naît le doute. */
+/* `grid-template-columns:1fr` vaut `minmax(auto,1fr)` : la colonne prend la
+   largeur minimale de son contenu, ici la grille des produits associés, et
+   pousse toute la page. `minmax(0,1fr)` l'autorise à rétrécir. */
+.single-produit{display:grid;grid-template-columns:minmax(0,1fr);
+  gap:clamp(2.5rem,5vw,4.5rem)}
+.single-produit > *{max-width:var(--container);margin-inline:auto;
+  inline-size:100%;min-inline-size:0}
+
+.produit-prix{font-family:var(--font-display);font-size:var(--fs-price-lg);
+  line-height:1.05;color:var(--navy)}
+.produit-accroche{max-width:52ch;font-size:var(--fs-lead);color:var(--muted)}
+.produit-cadrage{max-width:52ch;font-size:var(--fs-label);color:var(--muted)}
+
+/* Bande de réassurance : cellules à filets, jamais de cartes. */
+/* `repeat(4, minmax(0,1fr))` ne se replie pas : la grille gardait ses quatre
+   colonnes à 375 px et poussait toute la page à 1198 px de large. */
+.produit-reassurance ul{display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));
+  gap:clamp(1rem,2.5vw,2.25rem)}
+.produit-reassurance li{display:grid;gap:.25rem;align-content:start;
+  padding-block-start:1.1rem;border-block-start:1px solid var(--line-mid)}
+.produit-reassurance strong{font-family:var(--font-display);font-size:1.06rem;
+  font-weight:500;color:var(--navy);letter-spacing:-.012em}
+.produit-reassurance span{font-size:var(--fs-label);color:var(--muted)}
+
+.produit-description{display:grid;gap:.9rem}
+.produit-description h2{font-size:clamp(1.3rem,1.1rem+.8vw,1.7rem)}
+.produit-description .prose{max-width:62ch}
+
+.produit-legal{max-width:68ch;margin-inline:0;padding:1.1rem 1.25rem;
+  border-radius:var(--r-sm);background:var(--ivory);
+  font-size:var(--fs-label);color:var(--muted)}
+
+/* La grille des produits associés est imbriquée dans une grille : sans
+   `minmax(0,1fr)`, sa colonne prend la largeur de son contenu et déborde. */
+.produit-associes{display:grid;grid-template-columns:minmax(0,1fr);gap:1.35rem}
+.produit-associes .product-grid{min-inline-size:0}
+.produit-associes h2{font-size:clamp(1.3rem,1.1rem+.8vw,1.7rem)}
+
+/* Rappel d'achat en fin de lecture : la décision se prend souvent ici. */
+.produit-rappel{display:flex;flex-wrap:wrap;align-items:center;
+  justify-content:space-between;gap:1.25rem;
+  padding:clamp(1.4rem,3vw,2rem) clamp(1.4rem,3vw,2.25rem);
+  border-radius:var(--r-md);background:var(--ivory)}
+.produit-rappel-nom{font-family:var(--font-display);font-size:1.25rem;
+  color:var(--navy);letter-spacing:-.015em}
+.produit-rappel-prix{font-family:var(--font-display);font-size:var(--fs-price);
+  color:var(--gold-ink)}
+
 /* Fil d'Ariane */
 .breadcrumb{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;
   max-width:var(--container);margin-inline:auto;margin-block-end:2rem;
@@ -697,10 +758,14 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .breadcrumb a{text-decoration:underline;text-underline-offset:3px}
 @media (hover:hover){.breadcrumb a:hover{color:var(--navy)}}
 
-/* Fiche produit en page dédiée */
-.single-produit{max-width:var(--container);margin-inline:auto}
-.produit-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
-  gap:clamp(2rem,5vw,4rem);align-items:start}
+/* Fiche produit en page dédiée.
+   La largeur est portée par `.single-produit > *` plus haut : la reposer ici
+   annulait la grille de la page et poussait tout le document à 1198 px. */
+.produit-layout{display:grid;grid-template-columns:1fr;
+  gap:clamp(1.5rem,4vw,4rem);align-items:start}
+@media (min-width:820px){
+  .produit-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+}
 .produit-media{margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--ivory)}
 .produit-media img{inline-size:100%;aspect-ratio:1;object-fit:cover}
 .produit-copy{display:grid;gap:1rem;justify-items:start}
