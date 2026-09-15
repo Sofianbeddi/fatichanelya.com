@@ -174,6 +174,9 @@ HOME_ID=$(create_page "Accueil" "accueil")
 wp option update show_on_front page >/dev/null
 wp option update page_on_front "$HOME_ID" >/dev/null
 
+ABOUT_ID=$(create_page "À propos" "a-propos")
+CONTACT_ID=$(create_page "Contact" "contact")
+
 LEGAL_ID=$(create_page "Mentions légales" "mentions-legales")
 PRIV_ID=$(create_page "Politique de confidentialité" "confidentialite")
 CGV_ID=$(create_page "Conditions générales de vente" "conditions-generales-de-vente")
@@ -204,14 +207,20 @@ build_menu() {
   done
 }
 
+# Les entrées pointent vers de vraies pages, pas vers des ancres de l'accueil :
+# une ancre ne se partage pas, ne se référence pas et ne se traduit pas.
+HOME_URL=$(wp option get home)
+
 build_menu "Principal" principal \
-  "Boutique|/#shop" "Formations|/#training" "À propos|/#about" "FAQ|/#faq"
+  "Boutique|$HOME_URL/produits/" "Formations|$HOME_URL/formations/" \
+  "À propos|$HOME_URL/a-propos/" "FAQ|$HOME_URL/#faq" "Contact|$HOME_URL/contact/"
 
 build_menu "Pied — Navigation" pied_nav \
-  "Boutique|/#shop" "Formations|/#training" "À propos|/#about"
+  "Boutique|$HOME_URL/produits/" "Formations|$HOME_URL/formations/" \
+  "À propos|$HOME_URL/a-propos/" "Contact|$HOME_URL/contact/"
 
 build_menu "Pied — Informations" pied_infos \
-  "FAQ|/#faq" "Livraison et retours|$SHIP_ID" "Conditions générales de vente|$CGV_ID" \
+  "FAQ|$HOME_URL/#faq" "Livraison et retours|$SHIP_ID" "Conditions générales de vente|$CGV_ID" \
   "Mentions légales|$LEGAL_ID" "Politique de confidentialité|$PRIV_ID"
 
 # ---------------------------------------------------------------- réglages
