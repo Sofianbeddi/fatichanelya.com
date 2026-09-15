@@ -31,6 +31,21 @@ while ( have_posts() ) :
 	?>
 <main id="main" class="section formation-single">
 
+	<?php if ( has_post_thumbnail() ) : ?>
+		<figure class="formation-media">
+			<?php
+			the_post_thumbnail(
+				'fati-hero',
+				array(
+					'alt'      => '',
+					'decoding' => 'async',
+					'sizes'    => '(min-width:1280px) 1280px, 96vw',
+				)
+			);
+			?>
+		</figure>
+	<?php endif; ?>
+
 	<article class="formation-body">
 		<header class="formation-head">
 			<p class="eyebrow"><?php esc_html_e( 'L\'accompagnement par Fati', 'fatichanelya' ); ?></p>

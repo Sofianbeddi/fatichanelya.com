@@ -37,6 +37,22 @@ get_template_part( 'template-parts/components/page-banner' );
 				$chip   = trim( implode( ' · ', array_filter( array( $niveau, $duree ) ) ) );
 				?>
 				<li class="training-card reveal" style="--i:<?php echo esc_attr( $i++ ); ?>">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<span class="training-card-media">
+							<?php
+							the_post_thumbnail(
+								'fati-paysage',
+								array(
+									'alt'      => '',
+									'loading'  => 'lazy',
+									'decoding' => 'async',
+									'sizes'    => '(min-width:860px) 40vw, 92vw',
+								)
+							);
+							?>
+						</span>
+					<?php endif; ?>
+
 					<?php if ( $chip ) : ?>
 						<p class="chip"><?php echo esc_html( $chip ); ?></p>
 					<?php endif; ?>

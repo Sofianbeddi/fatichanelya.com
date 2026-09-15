@@ -44,10 +44,8 @@ if ( ! $formations->have_posts() ) {
 					<?php if ( has_excerpt() ) : ?>
 						<p><?php echo esc_html( get_the_excerpt() ); ?></p>
 					<?php endif; ?>
-					<a class="arrow-link"
-					   href="<?php echo esc_url( fati_wa( sprintf( __( 'Bonjour Fati, je souhaite le programme de la formation « %s ».', 'fatichanelya' ), get_the_title() ) ) ); ?>"
-					   <?php echo fati_opt( 'whatsapp' ) ? 'target="_blank" rel="noopener"' : ''; ?>>
-						<?php esc_html_e( 'Demander le programme', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
+					<a class="arrow-link" href="<?php the_permalink(); ?>">
+						<?php esc_html_e( 'Voir le programme', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
 					</a>
 				</li>
 			<?php endwhile; ?>

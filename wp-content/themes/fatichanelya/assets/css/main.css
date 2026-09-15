@@ -999,6 +999,23 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .button .i,.arrow-link .i,.text-button .i{stroke-width:1.9}
 .button-lg .i{stroke-width:1.7}
 
+
+/* ---------- VISUELS DES FORMATIONS ----------
+   Une formation sans image se lit comme une ligne de liste : le visuel lui
+   donne le poids d'une offre. Il reste en retrait, sans ombre ni contour,
+   pour ne pas réintroduire la carte que le reste du site a écartée. */
+.training-card-media{display:block;margin-block-end:1.1rem;
+  border-radius:var(--r-md);overflow:hidden;background:var(--ivory);
+  aspect-ratio:4/3}
+.training-card-media img{inline-size:100%;block-size:100%;object-fit:cover;
+  transition:transform var(--t-enter) var(--ease-out)}
+@media (hover:hover){.training-card:hover .training-card-media img{transform:scale(1.02)}}
+
+.formation-media{margin:0 0 clamp(1.5rem,3vw,2.25rem);
+  border-radius:var(--r-lg);overflow:hidden;background:var(--ivory);
+  aspect-ratio:16/7}
+.formation-media img{inline-size:100%;block-size:100%;object-fit:cover}
+
 /* ---------- CATÉGORIES ----------
    Vignettes rondes, reprises de la référence. Le rond découpe le visuel sans
    cadre ni ombre : c'est la photo qui porte, pas la boîte. */
