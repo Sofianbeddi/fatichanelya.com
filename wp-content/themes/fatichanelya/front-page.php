@@ -11,7 +11,7 @@ get_header();
 ?>
 <main id="main">
 	<?php
-	foreach ( array( 'hero', 'trust', 'universe', 'shop', 'training', 'about', 'pledge', 'faq', 'contact' ) as $section ) {
+	foreach ( array( 'hero', 'trust', 'universe', 'shop-apercu', 'training', 'about', 'pledge', 'faq', 'contact' ) as $section ) {
 		get_template_part( 'template-parts/sections/' . $section );
 	}
 	?>

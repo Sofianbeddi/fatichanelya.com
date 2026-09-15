@@ -816,6 +816,12 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .contact-ailleurs{display:grid;gap:.75rem;justify-items:start}
 .contact-ailleurs p{max-width:52ch;color:var(--muted)}
 
+
+/* Aperçu boutique sur l'accueil : la grille montre huit produits et renvoie
+   vers la boutique complète, où les filtres ont un sens. */
+.shop-apercu-suite{display:grid;gap:.9rem;justify-items:start;
+  max-width:var(--container);margin-inline:auto;margin-block-start:clamp(1.75rem,3.5vw,2.5rem)}
+
 /* Fil d'Ariane */
 .breadcrumb{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;
   max-width:var(--container);margin-inline:auto;margin-block-end:2rem;
