@@ -367,8 +367,9 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .trust ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem 2rem;
   max-inline-size:100%}
 .trust li{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;
-  gap:.1rem .8rem;align-items:center}
-.trust .i{grid-row:span 2;color:var(--gold-ink)}
+  gap:.15rem 1.1rem;align-items:center}
+.trust .i{grid-row:span 2;inline-size:44px;block-size:44px;
+  color:var(--gold);stroke-width:1.4}
 .trust strong{font-size:.85rem;color:var(--navy)}
 .trust span{font-size:.76rem;color:var(--muted);line-height:1.45}
 @media (max-width:900px){.trust ul{grid-template-columns:repeat(2,minmax(0,1fr))}}

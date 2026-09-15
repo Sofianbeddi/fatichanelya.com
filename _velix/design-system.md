@@ -118,6 +118,27 @@ oppose un 700 franc à un 400 régulier, sans niveau intermédiaire dans les tit
 > texte, soit **plus petit que le corps**. C'est l'information principale de la
 > carte : il se lit au-dessus du corps, jamais en dessous.
 
+### Taille des pictogrammes
+
+Une seule échelle, appliquée partout. **La taille se pose en CSS, jamais par
+l'attribut `width` de l'appel PHP** : une règle CSS prime quel que soit l'appel,
+un attribut se laisse oublier lors d'une reprise.
+
+| Emploi | Taille | Épaisseur de trait |
+|---|---|---|
+| Bandeau d'engagements, en-tête de section | **44 à 48 px** | `1.4` |
+| Bouton | **22 px** | `1.7` |
+| Lien flèche, lien texte | **20 px** | `1.9` |
+| Navigation, panier, menu | **24 à 26 px** | `1.7` |
+
+L'épaisseur du trait **baisse quand la taille monte** : un grand pictogramme
+au trait épais paraît lourd à côté du texte.
+
+> **Défaut rencontré.** Le bandeau d'engagements du haut et celui du pied de
+> page sont **deux composants distincts**. Une correction appliquée à l'un ne
+> touche pas l'autre : le premier est resté à 20 px quand le second passait à
+> 48. Vérifier les deux à chaque reprise sur les pictogrammes.
+
 ---
 
 ## 3. Formes, ombres, mouvement
