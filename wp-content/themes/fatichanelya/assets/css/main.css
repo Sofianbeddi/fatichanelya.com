@@ -3,65 +3,116 @@
    Système de design Velix : tokens → primitives → sections
    ========================================================= */
 
-/* ---------- 1. TOKENS ---------- */
-:root{
-  /* couleurs */
-  --paper:#FBF8F3;      /* fond de page, ivoire chaud */
-  --ivory:#F3EDE3;      /* bandes alternées */
-  --surface:#FFFFFF;    /* cartes */
-  --navy:#16233D;       /* surfaces fortes, header/footer */
-  --navy-2:#22345A;
-  --ink:#23201C;        /* noir doux */
-  --muted:#605950;
-  --navy-deep:#0F1A2E;  /* surfaces navy en état actif, pied de page profond */
-  --gold:#C39A4E;       /* accent champagne — fonds et décor, JAMAIS en texte sur clair */
-  --gold-ink:#8A6521;   /* accent champagne — texte sur clair (5,00:1) */
-  --gold-press:#B98D3F; /* survol du bouton or : il fonce, il ne s'éclaircit pas */
-  --gold-soft:#EFE0C4;
-  --sage:#7B9482;       /* décor uniquement — échoue à 3,10:1 en texte */
-  --sage-ink:#4F6857;   /* la même famille, lisible : 5,75:1 sur paper */
-  --line:#E2D9CA;        /* filets discrets */
-  --line-mid:#D8CDBA;    /* filet structurel — décoratif, ne porte pas d'information */
-  --line-strong:#8F8065; /* bordures de contrôles sur fond clair — AA 3:1 */
-  --line-on-navy:#8A94A3;/* bordures de contrôles sur navy — AA 3:1 */
-  --line-decor-navy:#9BA6B6; /* filet de cellule sur navy */
-  --line-light:#FFFFFF2E;
-  --text-on-navy:#EAE3D8;    /* texte principal sur navy (12,28:1) */
-  --text-on-navy-2:#C9D0DB;  /* texte secondaire sur navy (10,08:1) */
+/* ---------- 0. POLICE ----------
+   Poppins, servie depuis le thème : aucun appel à un service tiers, donc
+   aucune donnée de visiteur envoyée ailleurs, et rien à déclarer de plus dans
+   la politique de confidentialité. Sous-ensemble latin étendu, 7 Ko par
+   graisse. `font-display:swap` : le texte s'affiche immédiatement dans la
+   police de repli, puis bascule. */
+@font-face{
+  font-family:"Poppins";
+  src:url("../fonts/poppins-400.woff2") format("woff2");
+  font-weight:400;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:"Poppins";
+  src:url("../fonts/poppins-700.woff2") format("woff2");
+  font-weight:700;font-style:normal;font-display:swap;
+}
 
-  /* typographie */
-  --font-display:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-  --font-body:"Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
-  --fs-hero:clamp(2.6rem,1.5rem + 4.4vw,4.7rem);
-  --fs-h2:clamp(1.85rem,1.25rem + 2.4vw,3.05rem);
-  --fs-h3:clamp(1.1rem,1rem + .5vw,1.4rem);
-  --fs-body:clamp(1rem,.96rem + .2vw,1.09rem);
-  --fs-lead:clamp(1.06rem,1rem + .35vw,1.22rem);
-  --fs-num:2.125rem;      /* numéros en grand corps, sans zéro devant */
-  --fs-price:1.5rem;      /* prix en grille */
-  --fs-price-lg:clamp(1.9rem,1.6rem + 1vw,2.25rem); /* prix en fiche produit */
-  --fs-label:.875rem;     /* plancher des étiquettes réellement lues */
+/* ---------- 1. TOKENS ----------
+   Système repris de la référence fournie par le gérant : sans-empattement
+   unique, vert forêt dominant, doré en accent, fonds alternés blanc / gris.
+   Les deux dorés du modèle échouaient au contraste (3,00:1 sur blanc) : ils
+   sont conservés en teinte et corrigés en clarté. */
+:root{
+  /* --- couleurs --- */
+  --surface:#FFFFFF;      /* fond dominant */
+  --paper:#FFFFFF;        /* alias historique, le site est blanc désormais */
+  --ivory:#F4F4F4;        /* bande alternée, gris très clair */
+  --shell:#F7F7F7;        /* bannières de titre de page */
+
+  --forest:#1C4024;       /* vert forêt — en-tête, pied, surfaces fortes */
+  --forest-deep:#132C19;  /* état actif, survol des surfaces vertes */
+  --forest-soft:#E8EFE9;  /* fond très clair de la même famille */
+
+  --ink:#1A1A1A;          /* texte principal — 17,40:1 sur blanc */
+  --muted:#6B6B6B;        /* texte secondaire — 5,33:1 sur blanc */
+  --muted-soft:#9A9A9A;   /* mentions, jamais un texte qu'il faut lire */
+
+  /* Le doré du modèle vaut 3,00:1 sur blanc : illisible en texte.
+     Même teinte (36°), clarté corrigée, et deux rôles séparés. */
+  --gold:#C08B3E;         /* décor, icônes, aplats — JAMAIS en texte sur clair */
+  --gold-ink:#8E672E;     /* texte doré sur fond clair — 5,09:1 */
+  --gold-light:#D3AE77;   /* texte doré sur vert forêt — 5,58:1 */
+  --gold-press:#A87633;   /* survol : le doré fonce, il ne s'éclaircit pas */
+  --gold-soft:#F3E7D3;    /* aplat doré très clair */
+
+  --line:#EAEAEA;         /* filet discret entre blocs */
+  --line-mid:#E0E0E0;     /* filet structurel — décoratif */
+  --line-card:#ECECEC;    /* contour de carte, à peine visible */
+  --line-strong:#767676;  /* bordure de contrôle sur clair — 4,54:1 */
+  --line-on-forest:#7E9584;/* bordure de contrôle sur vert — 3,06:1 */
+  --line-light:#FFFFFF2E;
+
+  --text-on-forest:#FFFFFF;   /* 11,61:1 */
+  --text-on-forest-2:#C7D5CA; /* secondaire sur vert — 7,43:1 */
+
+  /* Compatibilité : d'anciennes règles nomment encore le bleu nuit.
+     Elles pointent sur le vert, le temps que tout soit repris. */
+  --navy:var(--forest);
+  --navy-2:var(--forest-deep);
+  --navy-deep:var(--forest-deep);
+  --line-on-navy:var(--line-on-forest);
+  --line-decor-navy:var(--line-on-forest);
+  --text-on-navy:var(--text-on-forest);
+  --text-on-navy-2:var(--text-on-forest-2);
+  --sage:#7B9482;
+  --sage-ink:#4F6857;
+
+  /* --- typographie ---
+     Une seule famille sans empattement, comme le modèle. La serif est
+     retirée : c'est elle qui donnait au site son air de gabarit générique. */
+  /* Poppins est chargée depuis le thème (deux graisses, en local, aucun appel
+     réseau externe). Les replis sont des polices géométriques réellement
+     présentes : Futura et Avenir Next sur macOS, Segoe UI sur Windows. */
+  --font-body:"Poppins",Futura,"Avenir Next",Avenir,"Segoe UI",
+    system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font-display:var(--font-body);
+
+  --fs-hero:clamp(2.35rem,1.5rem + 3.4vw,3.65rem);
+  --fs-h2:clamp(1.85rem,1.35rem + 2vw,2.85rem);
+  --fs-h3:clamp(1.15rem,1.05rem + .45vw,1.4rem);
+  --fs-body:clamp(.95rem,.92rem + .16vw,1.02rem);
+  --fs-lead:clamp(1rem,.96rem + .28vw,1.12rem);
+  --fs-num:2.125rem;
+  --fs-price:1.22rem;
+  --fs-price-lg:clamp(1.55rem,1.35rem + .7vw,1.85rem);
+  --fs-label:.875rem;
   --fs-sm:.8125rem;
   --fs-eyebrow:.75rem;
-  --lh-tight:1.08; --lh-body:1.65; --lh-prose:1.75;
+  --lh-tight:1.14; --lh-body:1.7; --lh-prose:1.75;
   --measure:56ch; --measure-prose:68ch;
 
-  /* espace & formes */
+  /* Graisses : le modèle oppose un 700 franc à un 400 régulier,
+     sans niveau intermédiaire dans les titres. */
+  --fw-title:700;
+  --fw-medium:500;
+  --fw-body:400;
+
+  /* --- espace & formes --- */
   --container:1280px;
   --gutter:clamp(1.25rem,4.5vw,4rem);
-  --section-y:clamp(3.75rem,7.5vw,7rem);
-  --section-y-lg:clamp(5rem,10vw,9rem);      /* respiration narrative */
-  --section-y-sm:clamp(2.25rem,4.5vw,3.75rem); /* bandes d'information */
-  /* Rayons resserrés : registre éditorial, pas applicatif. 28 px sur une carte
-     de 340 px lit « application mobile ». */
-  --r-sm:6px; --r-md:12px; --r-lg:18px; --r-pill:999px;
-  /* Les composants de contenu sont à plat. L'ombre est réservée à ce qui
-     flotte réellement : tiroir, modale, toast, panneau mobile. */
+  --section-y:clamp(3.25rem,6.5vw,6rem);
+  --section-y-lg:clamp(4.5rem,9vw,8rem);
+  --section-y-sm:clamp(2rem,4vw,3.25rem);
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-pill:999px;
+
   --shadow-card:none;
   --shadow-lift:none;
-  --shadow-float:0 4px 10px #23201c0f,0 22px 55px #23201c1f;
+  --shadow-float:0 4px 10px #1a1a1a0f,0 22px 55px #1a1a1a1f;
 
-  /* mouvement */
+  /* --- mouvement --- */
   --t-micro:150ms; --t-base:280ms; --t-enter:600ms;
   --ease-out:cubic-bezier(.22,1,.36,1);
   --ease-io:cubic-bezier(.65,0,.35,1);
@@ -141,7 +192,9 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   font-size:var(--fs-sm);font-weight:700;letter-spacing:.01em;
   transition:transform var(--t-base) var(--ease-out),background var(--t-base),color var(--t-base),box-shadow var(--t-base)}
 .button-navy{background:var(--navy);color:#fff}
-.button-gold{background:var(--gold);color:var(--navy)}
+/* Texte en vert très foncé, pas en vert forêt : sur le doré, le forêt
+   ne vaut que 3,87:1. Le ton plus sombre atteint 5,00:1. */
+.button-gold{background:var(--gold);color:var(--forest-deep)}
 .button-outline{border:1.5px solid var(--navy);color:var(--navy)}
 /* Sur fond sombre, le contour navy devient invisible : la variante claire
    s'applique automatiquement dans les blocs à fond navy. */
@@ -170,11 +223,11 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .chip{display:inline-flex;align-items:center;padding:.3rem .7rem;border-radius:var(--r-pill);
   background:var(--ivory);color:var(--muted);font-size:.7rem;font-weight:700;
   letter-spacing:.09em;text-transform:uppercase}
-.chip--light{background:#FFFFFF24;color:#F4EEE4}
+.chip--light{background:#FFFFFF24;color:var(--text-on-forest)}
 
 /* ---------- 5. BARRE + HEADER ---------- */
 .announcement{display:flex;justify-content:space-between;align-items:center;gap:1rem;
-  min-height:38px;padding-inline:var(--gutter);background:var(--navy);color:#EFE9DF;
+  min-height:38px;padding-inline:var(--gutter);background:var(--navy);color:var(--text-on-forest);
   font-size:.72rem;letter-spacing:.04em}
 .announcement a{display:inline-flex;align-items:center;gap:.5rem;min-height:38px;font-weight:700;color:var(--gold-soft)}
 .announcement p{margin:0}
@@ -184,9 +237,9 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .site-header{position:sticky;inset-block-start:0;z-index:50;
   display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;
   padding-inline:var(--gutter);block-size:84px;
-  background:#FBF8F3F0;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  background:var(--surface)F0;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
   transition:block-size var(--t-base) var(--ease-out),box-shadow var(--t-base),background var(--t-base)}
-.site-header.is-stuck{block-size:66px;box-shadow:0 1px 0 var(--line),0 10px 30px #23201c0f}
+.site-header.is-stuck{block-size:66px;box-shadow:0 1px 0 var(--line),0 10px 30px #1a1a1a0f}
 .wordmark{font-family:var(--font-display);font-size:clamp(1.5rem,2vw,1.95rem);
   font-weight:600;letter-spacing:-.045em;color:var(--navy)}
 .wordmark--light{color:#fff}
@@ -208,7 +261,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .bag-button{position:relative}
 .bag-count{position:absolute;inset-block-start:2px;inset-inline-end:0;
   display:grid;place-items:center;min-inline-size:19px;block-size:19px;padding-inline:4px;
-  border-radius:var(--r-pill);background:var(--gold);color:var(--navy);
+  border-radius:var(--r-pill);background:var(--gold);color:var(--forest-deep);
   font-size:.65rem;font-weight:800;line-height:1}
 .header-cta{margin-inline-start:.5rem;min-height:44px;padding-inline:1.15rem}
 .burger{display:none}
@@ -328,9 +381,9 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .universe-copy p{color:var(--muted)}
 .universe-thumbs{display:flex;gap:.75rem;justify-self:end}
 .universe-thumbs img{inline-size:104px;block-size:104px;object-fit:cover;border-radius:var(--r-md)}
-.universe-card--dark{color:#F4EEE4;background:var(--navy);border-color:transparent}
+.universe-card--dark{color:var(--text-on-forest);background:var(--navy);border-color:transparent}
 .universe-card--dark h3{color:#fff}
-.universe-card--dark p{color:#D6CFC4}
+.universe-card--dark p{color:var(--text-on-forest-2)}
 .universe-card--dark .arrow-link{color:var(--gold-soft)}
 .universe-bg{position:absolute;inset:0;inline-size:100%;block-size:100%;
   object-fit:cover;opacity:.26;transition:transform var(--t-enter) var(--ease-out)}
@@ -406,7 +459,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .training-media img{border-radius:var(--r-lg);aspect-ratio:4/5;object-fit:cover;box-shadow:var(--shadow-card)}
 .training-media figcaption{position:absolute;inset-block-end:-18px;inset-inline-start:16px;
   inline-size:min(88%,320px);padding:1rem 1.2rem;border-radius:var(--r-md);
-  background:var(--navy);color:#EDE7DC;font-size:.82rem;line-height:1.45;box-shadow:var(--shadow-lift)}
+  background:var(--navy);color:var(--text-on-forest);font-size:.82rem;line-height:1.45;box-shadow:var(--shadow-lift)}
 .training-list{display:grid;gap:.75rem;margin-block-start:2rem}
 .training-list li{display:grid;gap:.4rem;justify-items:start;
   padding-block-start:1.35rem;padding-inline:0;
@@ -450,13 +503,13 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 @media (hover:hover){.journal-card:hover{border-color:var(--line-strong)}}
 .journal-meta{position:absolute;inset-block-end:0;inset-inline:0;display:grid;gap:.2rem;
   padding:2.5rem 1.15rem 1.15rem;color:#fff;font-size:.85rem;font-weight:600;
-  background:linear-gradient(to top,#16233DE6,#16233D00)}
+  background:linear-gradient(to top,var(--forest)E6,var(--forest)00)}
 .journal-meta em{font-style:normal;font-size:.68rem;font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft)}
 @media (max-width:760px){.journal-grid{grid-template-columns:1fr;max-inline-size:420px}}
 
 /* ---------- 13. ENGAGEMENT ---------- */
-.pledge{background:var(--navy);color:#EAE3D8}
+.pledge{background:var(--navy);color:var(--text-on-forest)}
 .pledge h2{color:#fff}
 .pledge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:clamp(1rem,2.5vw,2rem);max-width:var(--container);margin-inline:auto}
@@ -464,7 +517,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   background:transparent;border:0;border-block-start:1px solid var(--line-on-navy)}
 .pledge-grid strong{font-family:var(--font-display);font-size:1.15rem;
   font-weight:500;color:#fff;letter-spacing:-.02em}
-.pledge-grid p{font-size:.88rem;color:#CFC8BC}
+.pledge-grid p{font-size:.88rem;color:var(--text-on-forest-2)}
 @media (max-width:820px){.pledge-grid{grid-template-columns:1fr}}
 
 /* ---------- 14. FAQ ---------- */
@@ -482,13 +535,13 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 @media (hover:hover){.faq-list summary:hover{background:var(--ivory)}}
 
 /* ---------- 15. CONTACT ---------- */
-.contact{background:var(--navy);color:#EAE3D8;text-align:center}
+.contact{background:var(--navy);color:var(--text-on-forest);text-align:center}
 .contact h2{color:#fff;max-width:22ch;margin-inline:auto}
-.contact .section-intro{margin-inline:auto;margin-block:1.25rem 2rem;color:#CFC8BC}
-.contact-note{margin-block-start:1.25rem;font-size:.76rem;color:#B6AFA3}
+.contact .section-intro{margin-inline:auto;margin-block:1.25rem 2rem;color:var(--text-on-forest-2)}
+.contact-note{margin-block-start:1.25rem;font-size:.76rem;color:var(--text-on-forest-2)}
 
 /* ---------- 16. FOOTER ---------- */
-.site-footer{background:var(--navy);color:#D6CFC4;
+.site-footer{background:var(--navy);color:var(--text-on-forest-2);
   padding-inline:var(--gutter);padding-block:clamp(2.5rem,5vw,4rem) 1.5rem;
   border-block-start:1px solid var(--line-light)}
 .footer-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.2fr) minmax(0,1.1fr);
@@ -505,19 +558,19 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .newsletter input{flex:1 1 180px;min-height:52px;padding-inline:1.15rem;
   border:1px solid var(--line-on-navy);border-radius:var(--r-pill);
   background:#FFFFFF12;color:#fff;font-size:.88rem}
-.newsletter input::placeholder{color:#A79F93}
-.newsletter-help{margin-block-start:.7rem;font-size:.72rem;color:#B6AFA3}
+.newsletter input::placeholder{color:var(--muted)}
+.newsletter-help{margin-block-start:.7rem;font-size:.72rem;color:var(--text-on-forest-2)}
 .disclaimer{max-width:var(--container);margin-inline:auto;margin-block-start:2.5rem;
   padding-block-start:1.5rem;border-block-start:1px solid var(--line-light);
-  font-size:.72rem;line-height:1.6;color:#B6AFA3}
+  font-size:.72rem;line-height:1.6;color:var(--text-on-forest-2)}
 .footer-bottom{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;
   max-width:var(--container);margin-inline:auto;margin-block-start:1.25rem;
-  font-size:.72rem;color:#B6AFA3}
+  font-size:.72rem;color:var(--text-on-forest-2)}
 .footer-bottom p{margin:0}
 @media (max-width:900px){.footer-top{grid-template-columns:1fr}}
 
 /* ---------- 17. PANNEAU SÉLECTION ---------- */
-.drawer-backdrop{position:fixed;inset:0;z-index:90;background:#16233D80;
+.drawer-backdrop{position:fixed;inset:0;z-index:90;background:var(--forest)80;
   -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .drawer{position:fixed;inset-block:0;inset-inline-end:0;z-index:95;
   display:flex;flex-direction:column;inline-size:min(100%,400px);
@@ -539,7 +592,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 /* ---------- 18. FICHE PRODUIT ---------- */
 .product-dialog{inline-size:min(100%,860px);padding:0;border:0;border-radius:var(--r-lg);
   background:var(--paper);color:var(--ink);box-shadow:var(--shadow-float)}
-.product-dialog::backdrop{background:#16233D8C;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.product-dialog::backdrop{background:var(--forest)8C;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 .pd-close{position:absolute;inset-block-start:12px;inset-inline-end:12px;z-index:2;
   background:var(--surface);box-shadow:var(--shadow-card)}
 .pd-body{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
@@ -598,7 +651,10 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .page-simple .section-head h1{font-size:clamp(2rem,1.45rem+2.1vw,2.9rem);
   max-width:18ch;text-wrap:balance}
 
-.prose{max-width:72ch;color:var(--ink);font-size:1.0125rem;line-height:1.72}
+.prose{max-width:72ch;color:var(--ink);font-size:1.0125rem;line-height:1.72;
+  /* Les marqueurs « [[À FOURNIR : … ]] » et les URL n'ont pas de point de
+     coupure naturel : sans cela ils débordent sur mobile. */
+  overflow-wrap:anywhere}
 .prose > p:first-child{font-size:1.14rem;line-height:1.62;color:var(--muted);
   max-width:60ch;margin-block-end:2.4rem}
 

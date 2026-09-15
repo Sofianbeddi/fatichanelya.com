@@ -78,3 +78,27 @@ add_action(
 		}
 	}
 );
+
+/**
+ * Préchargement de la police.
+ *
+ * La graisse normale porte tout le texte visible d'emblée : sans préchargement,
+ * le premier rendu se fait dans la police de repli puis saute. La graisse grasse
+ * peut attendre, elle ne sert qu'aux titres.
+ *
+ * Accroché directement sur `wp_head` : posé dans `wp_enqueue_scripts`, le lien
+ * arriverait après que wp_head a dépassé cette priorité.
+ */
+add_action(
+	'wp_head',
+	function () {
+		if ( is_admin() ) {
+			return;
+		}
+		printf(
+			'<link rel="preload" as="font" type="font/woff2" href="%s" crossorigin>' . "\n",
+			esc_url( FATI_URI . '/assets/fonts/poppins-400.woff2' )
+		);
+	},
+	1
+);
