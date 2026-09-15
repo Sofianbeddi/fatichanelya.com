@@ -19,18 +19,22 @@ while ( have_posts() ) :
 	$niveau = get_post_meta( get_the_ID(), '_fati_niveau', true );
 	$duree  = get_post_meta( get_the_ID(), '_fati_duree', true );
 	$titre  = get_the_title();
+	set_query_var( 'fati_banner_title', $titre );
+	set_query_var(
+		'fati_banner_trail',
+		array(
+			array( 'label' => __( 'Formations', 'fatichanelya' ), 'url' => get_post_type_archive_link( 'formation' ) ),
+			array( 'label' => $titre ),
+		)
+	);
+	get_template_part( 'template-parts/components/page-banner' );
 	?>
 <main id="main" class="section formation-single">
-	<nav class="breadcrumb" aria-label="<?php esc_attr_e( 'Fil d\'Ariane', 'fatichanelya' ); ?>">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Accueil', 'fatichanelya' ); ?></a>
-		<span aria-hidden="true">/</span>
-		<a href="<?php echo esc_url( get_post_type_archive_link( 'formation' ) ); ?>"><?php esc_html_e( 'Formations', 'fatichanelya' ); ?></a>
-	</nav>
 
 	<article class="formation-body">
 		<header class="formation-head">
 			<p class="eyebrow"><?php esc_html_e( 'L\'accompagnement par Fati', 'fatichanelya' ); ?></p>
-			<h1><?php echo esc_html( $titre ); ?></h1>
+			<h2><?php echo esc_html( $titre ); ?></h2>
 
 			<?php if ( $niveau || $duree ) : ?>
 				<dl class="formation-facts">

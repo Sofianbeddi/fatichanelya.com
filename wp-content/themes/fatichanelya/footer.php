@@ -6,6 +6,9 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+// Le bandeau de réassurance ferme chaque page, juste avant le pied.
+get_template_part( 'template-parts/components/assurance' );
 ?>
 <footer class="site-footer">
 	<div class="footer-top">

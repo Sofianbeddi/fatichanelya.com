@@ -12,12 +12,16 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+
+set_query_var( 'fati_banner_title', __( 'Formations', 'fatichanelya' ) );
+set_query_var( 'fati_banner_trail', array( array( 'label' => __( 'Formations', 'fatichanelya' ) ) ) );
+get_template_part( 'template-parts/components/page-banner' );
 ?>
 <main id="main" class="section training-archive">
 	<header class="section-head section-head--split">
 		<div>
 			<p class="eyebrow"><?php esc_html_e( 'L\'accompagnement par Fati', 'fatichanelya' ); ?></p>
-			<h1><?php echo wp_kses( fati_accent( fati_opt( 'training_titre' ) ), array( 'em' => array() ) ); ?></h1>
+			<h2><?php echo wp_kses( fati_accent( fati_opt( 'training_titre' ) ), array( 'em' => array() ) ); ?></h2>
 		</div>
 		<p class="section-intro"><?php echo esc_html( fati_opt( 'training_intro' ) ); ?></p>
 	</header>

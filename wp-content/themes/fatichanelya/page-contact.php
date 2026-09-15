@@ -13,12 +13,16 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
+set_query_var( 'fati_banner_title', __( 'Contact', 'fatichanelya' ) );
+set_query_var( 'fati_banner_trail', array( array( 'label' => __( 'Contact', 'fatichanelya' ) ) ) );
+get_template_part( 'template-parts/components/page-banner' );
+
 $cible = fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : '';
 ?>
 <main id="main" class="section page-contact">
 	<header class="contact-head">
 		<p class="eyebrow"><?php esc_html_e( 'WhatsApp · direct', 'fatichanelya' ); ?></p>
-		<h1><?php echo wp_kses( fati_accent( fati_opt( 'contact_titre' ) ), array( 'em' => array() ) ); ?></h1>
+		<h2><?php echo wp_kses( fati_accent( fati_opt( 'contact_titre' ) ), array( 'em' => array() ) ); ?></h2>
 		<p class="contact-intro"><?php echo esc_html( fati_opt( 'contact_intro' ) ); ?></p>
 	</header>
 

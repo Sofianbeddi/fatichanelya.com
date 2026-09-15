@@ -41,6 +41,10 @@ function fati_icon( $name, $size = 18 ) {
 		'shield'   => '<path d="M12 3 4 6v6c0 4.4 3.4 8.3 8 9 4.6-.7 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>',
 		'card'     => '<rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/>',
 		'leaf'     => '<path d="M12 3v18M5 8h14M7 16h10"/>',
+		// Bandeau de réassurance, repris de la référence.
+		'box'      => '<path d="M3 8.5 12 4l9 4.5v7L12 20l-9-4.5v-7Z"/><path d="m3 8.5 9 4.5 9-4.5M12 13v7"/>',
+		'wallet'   => '<rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/><circle cx="17" cy="14.5" r="1.2"/>',
+		'support'  => '<path d="M4 13a8 8 0 0 1 16 0"/><rect x="2.5" y="13" width="4" height="6" rx="1.6"/><rect x="17.5" y="13" width="4" height="6" rx="1.6"/><path d="M20 19a3 3 0 0 1-3 2.5h-2"/>',
 	);
 
 	if ( ! isset( $paths[ $name ] ) ) {

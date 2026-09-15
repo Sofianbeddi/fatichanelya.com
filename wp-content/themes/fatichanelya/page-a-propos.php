@@ -17,11 +17,15 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+
+set_query_var( 'fati_banner_title', __( 'À propos', 'fatichanelya' ) );
+set_query_var( 'fati_banner_trail', array( array( 'label' => __( 'À propos', 'fatichanelya' ) ) ) );
+get_template_part( 'template-parts/components/page-banner' );
 ?>
 <main id="main" class="section page-apropos">
 	<header class="apropos-head">
 		<p class="eyebrow"><?php esc_html_e( 'À propos de Fati', 'fatichanelya' ); ?></p>
-		<h1><?php echo wp_kses( fati_accent( fati_opt( 'about_titre' ) ), array( 'em' => array() ) ); ?></h1>
+		<h2><?php echo wp_kses( fati_accent( fati_opt( 'about_titre' ) ), array( 'em' => array() ) ); ?></h2>
 		<p class="apropos-intro"><?php echo esc_html( fati_opt( 'about_intro' ) ); ?></p>
 	</header>
 

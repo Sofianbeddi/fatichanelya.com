@@ -27,17 +27,19 @@ while ( have_posts() ) :
 
 	$commander = fati_wa( sprintf( __( 'Bonjour Fati, je souhaite commander « %s ».', 'fatichanelya' ), $titre ) );
 	$cible     = fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : '';
+	$trail = array(
+		array( 'label' => __( 'Boutique', 'fatichanelya' ), 'url' => get_post_type_archive_link( 'produit' ) ),
+	);
+	if ( $cat ) {
+		$trail[] = array( 'label' => $cat->name, 'url' => get_term_link( $cat ) );
+	}
+	$trail[] = array( 'label' => $titre );
+
+	set_query_var( 'fati_banner_title', $titre );
+	set_query_var( 'fati_banner_trail', $trail );
+	get_template_part( 'template-parts/components/page-banner' );
 	?>
 	<main id="main" class="section single-produit">
-		<nav class="breadcrumb" aria-label="<?php esc_attr_e( 'Fil d\'Ariane', 'fatichanelya' ); ?>">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Accueil', 'fatichanelya' ); ?></a>
-			<span aria-hidden="true">/</span>
-			<a href="<?php echo esc_url( get_post_type_archive_link( 'produit' ) ); ?>"><?php esc_html_e( 'Produits', 'fatichanelya' ); ?></a>
-			<?php if ( $cat ) : ?>
-				<span aria-hidden="true">/</span>
-				<a href="<?php echo esc_url( get_term_link( $cat ) ); ?>"><?php echo esc_html( $cat->name ); ?></a>
-			<?php endif; ?>
-		</nav>
 
 		<article class="produit-layout">
 			<figure class="produit-media">
@@ -49,7 +51,7 @@ while ( have_posts() ) :
 					<p class="eyebrow"><?php echo esc_html( $cat->name ); ?></p>
 				<?php endif; ?>
 
-				<h1><?php echo esc_html( $titre ); ?></h1>
+				<h2><?php echo esc_html( $titre ); ?></h2>
 
 				<?php if ( $prix ) : ?>
 					<p class="produit-prix"><?php echo esc_html( fati_format_prix( $prix ) ); ?></p>

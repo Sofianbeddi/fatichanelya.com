@@ -8,12 +8,24 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+
+$titre = is_tax() ? single_term_title( '', false ) : __( 'Boutique', 'fatichanelya' );
+$trail = is_tax()
+	? array(
+		array( 'label' => __( 'Boutique', 'fatichanelya' ), 'url' => get_post_type_archive_link( 'produit' ) ),
+		array( 'label' => $titre ),
+	)
+	: array( array( 'label' => $titre ) );
+
+set_query_var( 'fati_banner_title', $titre );
+set_query_var( 'fati_banner_trail', $trail );
+get_template_part( 'template-parts/components/page-banner' );
 ?>
 <main id="main" class="section shop">
 	<header class="section-head section-head--split">
 		<div>
 			<p class="eyebrow"><?php esc_html_e( 'La sélection Fatichanelya', 'fatichanelya' ); ?></p>
-			<h1><?php echo is_tax() ? esc_html( single_term_title( '', false ) ) : esc_html__( 'Tous les produits', 'fatichanelya' ); ?></h1>
+			<h2><?php echo is_tax() ? esc_html( single_term_title( '', false ) ) : esc_html__( 'Tous les produits', 'fatichanelya' ); ?></h2>
 		</div>
 		<p class="section-intro">
 			<?php echo is_tax() && term_description() ? wp_kses_post( term_description() ) : esc_html( fati_opt( 'shop_intro' ) ); ?>
