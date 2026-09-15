@@ -29,7 +29,7 @@ if ( is_wp_error( $categories ) || ! $categories ) {
 }
 ?>
 <section class="section categories" aria-labelledby="categories-title">
-	<header class="section-head section-head--center">
+	<header class="section-head">
 		<p class="eyebrow"><?php esc_html_e( 'Nos catégories', 'fatichanelya' ); ?></p>
 		<h2 id="categories-title">
 			<?php

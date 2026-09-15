@@ -333,9 +333,11 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .hero-portrait::after{content:"";position:absolute;inset-inline:0;
   inset-block-end:0;block-size:38%;z-index:1;pointer-events:none;
   background:linear-gradient(to top,#0E1729D9,#0E172966 45%,transparent)}
+/* La signature se cale sur le bord du contenu, pas sur celui du portrait :
+   le portrait va jusqu'au bord de l'écran, le texte n'y va jamais. */
 .hero-portrait figcaption{position:absolute;z-index:2;
   inset-block-end:clamp(1.25rem,3vw,2.25rem);
-  inset-inline-end:clamp(1.25rem,3vw,2.25rem);
+  inset-inline-end:var(--bord);
   display:grid;gap:.1rem;text-align:end;color:#fff}
 .hero-portrait figcaption strong{font-size:1.5rem;font-weight:var(--fw-title);
   letter-spacing:-.02em}
