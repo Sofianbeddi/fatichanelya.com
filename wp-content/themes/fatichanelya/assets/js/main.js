@@ -345,6 +345,46 @@
   }
 
 
+
+  /* ---------- Carrousel ----------
+     Le défilement est natif : le geste tactile et la molette fonctionnent sans
+     JavaScript, et les cartes restent toutes dans le HTML, donc lisibles par
+     les moteurs de recherche. Les boutons ne servent qu'à la souris. */
+  $$('[data-carousel]').forEach((carousel) => {
+    const piste = $('[data-carousel-piste]', carousel);
+    const prec  = $('[data-carousel-prec]', carousel);
+    const suiv  = $('[data-carousel-suiv]', carousel);
+    if (!piste) return;
+
+    const pas = () => {
+      const premiere = piste.firstElementChild;
+      if (!premiere) return piste.clientWidth;
+      const largeur = premiere.getBoundingClientRect().width;
+      const espace  = parseFloat(getComputedStyle(piste).columnGap) || 0;
+      /* On avance d'un écran plein, arrondi à un nombre entier de cartes :
+         une carte coupée en fin de course donne une impression d'à-peu-près. */
+      const parEcran = Math.max(1, Math.floor(piste.clientWidth / (largeur + espace)));
+      return parEcran * (largeur + espace);
+    };
+
+    const majBoutons = () => {
+      const max = piste.scrollWidth - piste.clientWidth - 1;
+      if (prec) prec.disabled = piste.scrollLeft <= 0;
+      if (suiv) suiv.disabled = piste.scrollLeft >= max;
+    };
+
+    const glisser = (sens) => {
+      const doux = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      piste.scrollBy({ left: sens * pas(), behavior: doux ? 'smooth' : 'auto' });
+    };
+
+    if (prec) prec.addEventListener('click', () => glisser(-1));
+    if (suiv) suiv.addEventListener('click', () => glisser(1));
+    piste.addEventListener('scroll', majBoutons, { passive: true });
+    window.addEventListener('resize', majBoutons);
+    majBoutons();
+  });
+
   /* ---------- Page « Ma sélection » ----------
      Elle réutilise la même sélection que le tiroir. Rien n'est envoyé au
      serveur : le récapitulatif se dessine à partir de ce que le navigateur a

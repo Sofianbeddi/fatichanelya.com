@@ -43,17 +43,34 @@ $total = (int) wp_count_posts( 'produit' )->publish;
 		<p class="section-intro"><?php echo esc_html( fati_opt( 'shop_intro' ) ); ?></p>
 	</header>
 
-	<ul class="product-grid">
-		<?php
-		$i = 0;
-		while ( $produits->have_posts() ) :
-			$produits->the_post();
-			set_query_var( 'fati_index', $i++ );
-			get_template_part( 'template-parts/components/product-card' );
-		endwhile;
-		wp_reset_postdata();
-		?>
-	</ul>
+	<div class="carousel" data-carousel>
+		<div class="carousel-nav">
+			<button class="carousel-bouton carousel-prec" type="button" data-carousel-prec
+			        aria-label="<?php esc_attr_e( 'Produits précédents', 'fatichanelya' ); ?>">
+				<?php echo fati_icon( 'arrow', 18 ); ?>
+			</button>
+			<button class="carousel-bouton carousel-suiv" type="button" data-carousel-suiv
+			        aria-label="<?php esc_attr_e( 'Produits suivants', 'fatichanelya' ); ?>">
+				<?php echo fati_icon( 'arrow', 18 ); ?>
+			</button>
+		</div>
+
+		<?php /* Une liste qui défile : au clavier, la tabulation parcourt les
+		         cartes et le navigateur fait défiler tout seul. */ ?>
+		<ul class="carousel-piste" data-carousel-piste
+		    tabindex="0" role="region"
+		    aria-label="<?php esc_attr_e( 'Sélection de produits, liste défilante', 'fatichanelya' ); ?>">
+			<?php
+			$i = 0;
+			while ( $produits->have_posts() ) :
+				$produits->the_post();
+				set_query_var( 'fati_index', $i++ );
+				get_template_part( 'template-parts/components/product-card' );
+			endwhile;
+			wp_reset_postdata();
+			?>
+		</ul>
+	</div>
 
 	<div class="shop-apercu-suite">
 		<a class="button button-navy button-lg" href="<?php echo esc_url( get_post_type_archive_link( 'produit' ) ); ?>">

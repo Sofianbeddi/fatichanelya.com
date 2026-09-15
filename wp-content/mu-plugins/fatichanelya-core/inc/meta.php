@@ -215,3 +215,94 @@ function fati_format_prix( $montant ) {
 	$decimales = fmod( $montant, 1 ) === 0.0 ? 0 : 2;
 	return number_format_i18n( $montant, $decimales ) . ' €';
 }
+
+/**
+ * Visuel de catégorie.
+ *
+ * Chaque catégorie de produit porte une image, utilisée par la section
+ * « Nos catégories » de l'accueil. Le champ vit dans le mu-plugin et non dans
+ * le thème : le visuel doit survivre à un changement de thème, comme le reste
+ * du contenu.
+ *
+ * L'interface reste volontairement sommaire — la médiathèque native, un champ
+ * et un aperçu — parce que la cliente y passera quatre fois, pas tous les jours.
+ */
+const FATI_TERM_VISUEL = '_fati_visuel';
+
+add_action(
+	'categorie_produit_add_form_fields',
+	function () {
+		?>
+		<div class="form-field">
+			<label for="fati_visuel"><?php esc_html_e( 'Visuel de la catégorie', 'fatichanelya' ); ?></label>
+			<input type="number" name="fati_visuel" id="fati_visuel" value="" min="0" step="1">
+			<p><?php esc_html_e( 'Identifiant du média. Ouvrez la médiathèque, cliquez sur l\'image : le numéro figure à la fin de l\'adresse.', 'fatichanelya' ); ?></p>
+		</div>
+		<?php
+	}
+);
+
+add_action(
+	'categorie_produit_edit_form_fields',
+	function ( $term ) {
+		$visuel = (int) get_term_meta( $term->term_id, FATI_TERM_VISUEL, true );
+		?>
+		<tr class="form-field">
+			<th scope="row">
+				<label for="fati_visuel"><?php esc_html_e( 'Visuel de la catégorie', 'fatichanelya' ); ?></label>
+			</th>
+			<td>
+				<input type="number" name="fati_visuel" id="fati_visuel"
+				       value="<?php echo $visuel ? esc_attr( $visuel ) : ''; ?>" min="0" step="1">
+				<p class="description">
+					<?php esc_html_e( 'Identifiant du média. Ouvrez la médiathèque, cliquez sur l\'image : le numéro figure à la fin de l\'adresse.', 'fatichanelya' ); ?>
+				</p>
+				<?php if ( $visuel && wp_get_attachment_image( $visuel, 'thumbnail' ) ) : ?>
+					<p style="margin-top:8px">
+						<?php echo wp_get_attachment_image( $visuel, 'thumbnail', false, array( 'style' => 'border-radius:50%' ) ); ?>
+					</p>
+				<?php endif; ?>
+			</td>
+		</tr>
+		<?php
+	}
+);
+
+/**
+ * Enregistrement du visuel. Vérifie que l'identifiant désigne bien un média
+ * existant : un numéro saisi au hasard produirait une image cassée en ligne.
+ */
+add_action(
+	'edited_categorie_produit',
+	'fati_save_term_visuel'
+);
+add_action(
+	'created_categorie_produit',
+	'fati_save_term_visuel'
+);
+
+function fati_save_term_visuel( $term_id ) {
+	if ( ! current_user_can( 'manage_categories' ) ) {
+		return;
+	}
+
+	$nonce = isset( $_POST['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_POST['_wpnonce'] ) ) : '';
+	if ( ! $nonce || ! wp_verify_nonce( $nonce, 'update-tag_' . $term_id ) ) {
+		// Création de terme : WordPress utilise un autre nonce, déjà vérifié.
+		if ( ! wp_verify_nonce( $nonce, 'add-tag' ) ) {
+			return;
+		}
+	}
+
+	if ( ! isset( $_POST['fati_visuel'] ) ) {
+		return;
+	}
+
+	$visuel = (int) $_POST['fati_visuel'];
+
+	if ( $visuel > 0 && 'attachment' === get_post_type( $visuel ) ) {
+		update_term_meta( $term_id, FATI_TERM_VISUEL, $visuel );
+	} else {
+		delete_term_meta( $term_id, FATI_TERM_VISUEL );
+	}
+}
