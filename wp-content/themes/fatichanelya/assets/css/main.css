@@ -21,52 +21,58 @@
 }
 
 /* ---------- 1. TOKENS ----------
-   Système repris de la référence fournie par le gérant : sans-empattement
-   unique, vert forêt dominant, doré en accent, fonds alternés blanc / gris.
-   Les deux dorés du modèle échouaient au contraste (3,00:1 sur blanc) : ils
-   sont conservés en teinte et corrigés en clarté. */
+   Palette de la marque : bleu marine et beige chaud, or champagne en accent.
+   C'est l'identité validée en maquette v3, réchauffée côté fonds.
+   Toutes les valeurs ci-dessous sont mesurées, pas estimées : voir
+   `_velix/design-system.md` pour les ratios et les règles d'emploi. */
 :root{
-  /* --- couleurs --- */
-  --surface:#FFFFFF;      /* fond dominant */
-  --paper:#FFFFFF;        /* alias historique, le site est blanc désormais */
-  --ivory:#F4F4F4;        /* bande alternée, gris très clair */
-  --shell:#F7F7F7;        /* bannières de titre de page */
+  /* --- fonds --- */
+  --paper:#F7F1E8;        /* beige chaud, fond dominant */
+  --ivory:#EFE6D8;        /* sable, bande alternée */
+  --shell:#F2EADE;        /* bannières de titre de page */
+  --surface:#FFFFFF;      /* cartes et surfaces posées */
 
-  --forest:#1C4024;       /* vert forêt — en-tête, pied, surfaces fortes */
-  --forest-deep:#132C19;  /* état actif, survol des surfaces vertes */
-  --forest-soft:#E8EFE9;  /* fond très clair de la même famille */
+  /* --- bleu marine, surfaces fortes --- */
+  --navy:#16233D;         /* en-tête, pied, aplats — blanc dessus 15,65:1 */
+  --navy-2:#1E3050;       /* variante, survol des surfaces bleues */
+  --navy-deep:#0E1729;    /* état actif — blanc dessus 17,90:1 */
+  --navy-soft:#E6EAF0;    /* aplat très clair de la même famille */
 
-  --ink:#1A1A1A;          /* texte principal — 17,40:1 sur blanc */
-  --muted:#6B6B6B;        /* texte secondaire — 5,33:1 sur blanc */
-  --muted-soft:#9A9A9A;   /* mentions, jamais un texte qu'il faut lire */
+  /* --- texte --- */
+  --ink:#221E19;          /* principal — 14,75:1 sur beige */
+  --muted:#5E574C;        /* secondaire — 6,35:1 sur beige */
+  --muted-soft:#8B8377;   /* mentions, jamais un texte qu'il faut lire */
 
-  /* Le doré du modèle vaut 3,00:1 sur blanc : illisible en texte.
-     Même teinte (36°), clarté corrigée, et deux rôles séparés. */
-  --gold:#C08B3E;         /* décor, icônes, aplats — JAMAIS en texte sur clair */
-  --gold-ink:#8E672E;     /* texte doré sur fond clair — 5,09:1 */
-  --gold-light:#D3AE77;   /* texte doré sur vert forêt — 5,58:1 */
-  --gold-press:#A87633;   /* survol : le doré fonce, il ne s'éclaircit pas */
-  --gold-soft:#F3E7D3;    /* aplat doré très clair */
+  /* --- or champagne ---
+     Deux rôles séparés, jamais interchangeables. L'or de fond ne vaut que
+     2,32:1 sur beige : il ne porte jamais de texte. */
+  --gold:#C39A4E;         /* décor, icônes, aplats — JAMAIS en texte sur clair */
+  --gold-ink:#825F1F;     /* texte or sur clair — 5,19:1 beige, 4,71:1 sable */
+  --gold-light:#D5A54E;   /* texte or sur bleu marine — 6,95:1 */
+  --gold-press:#A8803B;   /* survol : l'or fonce, il ne s'éclaircit pas */
+  --gold-soft:#F0E3C9;    /* aplat or très clair */
 
-  --line:#EAEAEA;         /* filet discret entre blocs */
-  --line-mid:#E0E0E0;     /* filet structurel — décoratif */
-  --line-card:#ECECEC;    /* contour de carte, à peine visible */
-  --line-strong:#767676;  /* bordure de contrôle sur clair — 4,54:1 */
-  --line-on-forest:#7E9584;/* bordure de contrôle sur vert — 3,06:1 */
+  /* --- filets et bordures --- */
+  --line:#E4DACA;         /* filet discret entre blocs */
+  --line-mid:#DCCFBA;     /* filet structurel — décoratif */
+  --line-card:#E8DECE;    /* contour de carte, à peine visible */
+  --line-strong:#8F8065;  /* bordure de contrôle sur clair */
+  --line-on-navy:#8A94A3; /* bordure de contrôle sur bleu marine */
+  --line-decor-navy:#9BA6B6;
   --line-light:#FFFFFF2E;
 
-  --text-on-forest:#FFFFFF;   /* 11,61:1 */
-  --text-on-forest-2:#C7D5CA; /* secondaire sur vert — 7,43:1 */
+  --text-on-navy:#F2EADE;   /* texte sur bleu marine — 13,50:1 */
+  --text-on-navy-2:#C9D0DB; /* secondaire sur bleu marine — 10,08:1 */
 
-  /* Compatibilité : d'anciennes règles nomment encore le bleu nuit.
-     Elles pointent sur le vert, le temps que tout soit repris. */
-  --navy:var(--forest);
-  --navy-2:var(--forest-deep);
-  --navy-deep:var(--forest-deep);
-  --line-on-navy:var(--line-on-forest);
-  --line-decor-navy:var(--line-on-forest);
-  --text-on-navy:var(--text-on-forest);
-  --text-on-navy-2:var(--text-on-forest-2);
+  /* Compatibilité : des règles écrites pendant la parenthèse verte nomment
+     encore `--forest`. Elles pointent sur le bleu marine, et disparaîtront
+     au fur et à mesure que ces règles seront reprises. */
+  --forest:var(--navy);
+  --forest-deep:var(--navy-deep);
+  --forest-soft:var(--navy-soft);
+  --line-on-forest:var(--line-on-navy);
+  --text-on-forest:var(--text-on-navy);
+  --text-on-forest-2:var(--text-on-navy-2);
   --sage:#7B9482;
   --sage-ink:#4F6857;
 
