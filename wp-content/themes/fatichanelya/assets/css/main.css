@@ -622,6 +622,74 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .prose mark{background:var(--gold-soft);color:var(--ink);
   padding-inline:.25em;border-radius:2px}
 
+
+/* ---------- FORMATIONS : ARCHIVE ET FICHE ----------
+   Le prix et les dates ne sont pas publics : la conversion passe par un
+   message, pas par un panier. La page doit donc donner assez de matière
+   pour qu'écrire devienne naturel. */
+.training-archive{display:grid;gap:clamp(2rem,4vw,3.25rem)}
+.training-cards{display:grid;gap:0;max-width:var(--container);
+  margin-inline:auto;inline-size:100%}
+.training-card{display:grid;gap:.5rem;justify-items:start;
+  padding-block:1.6rem;border-block-start:1px solid var(--line-mid);
+  transition:border-color var(--t-base)}
+.training-card:last-child{border-block-end:1px solid var(--line-mid)}
+@media (hover:hover){.training-card:hover{border-block-start-color:var(--navy)}}
+.training-card-title{font-size:clamp(1.3rem,1.1rem+.9vw,1.75rem);line-height:1.18}
+.training-card-title a::after{content:"";position:absolute;inset:0}
+.training-card{position:relative}
+.training-card-desc{max-width:62ch;color:var(--muted)}
+
+@media (min-width:860px){
+  .training-cards{grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:clamp(2rem,4vw,4rem)}
+  .training-card:nth-last-child(-n+2){border-block-end:1px solid var(--line-mid)}
+}
+
+.training-aside{display:grid;gap:.7rem;justify-items:start;
+  max-width:var(--container);margin-inline:auto;inline-size:100%;
+  padding:clamp(1.75rem,3.5vw,2.5rem);border-radius:var(--r-md);
+  background:var(--ivory)}
+.training-aside h2{font-size:clamp(1.3rem,1.1rem+.8vw,1.7rem)}
+.training-aside p{max-width:52ch;color:var(--muted)}
+
+.formation-single{display:grid;gap:clamp(2rem,4vw,3.25rem)}
+.formation-body{display:grid;gap:clamp(1.75rem,3.5vw,3rem);
+  max-width:var(--container);margin-inline:auto;inline-size:100%}
+.formation-head{display:grid;gap:.9rem;justify-items:start;max-width:none}
+.formation-head h1{font-size:clamp(2rem,1.5rem+2.2vw,3rem);
+  max-width:16ch;text-wrap:balance}
+
+.formation-facts{display:flex;flex-wrap:wrap;gap:0;margin:0;inline-size:100%}
+.formation-facts > div{flex:1 1 9rem;padding-block-start:1rem;
+  border-block-start:1px solid var(--line-mid)}
+.formation-facts dt{font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold-ink)}
+.formation-facts dd{margin:.25rem 0 0;font-family:var(--font-display);
+  font-size:1.14rem;color:var(--navy)}
+
+.formation-cta{display:grid;gap:.75rem;justify-items:start;
+  padding:clamp(1.75rem,3.5vw,2.5rem);border-radius:var(--r-md);
+  background:var(--navy);color:var(--text-on-navy)}
+.formation-cta h2{color:#fff;font-size:clamp(1.3rem,1.1rem+.8vw,1.7rem)}
+.formation-cta p{max-width:52ch;color:var(--text-on-navy-2)}
+.formation-note{font-size:var(--fs-label)}
+
+.formation-autres{max-width:var(--container);margin-inline:auto;inline-size:100%}
+.formation-autres h2{margin-block-end:1.25rem;
+  font-size:clamp(1.3rem,1.1rem+.8vw,1.7rem)}
+
+@media (min-width:1000px){
+  .formation-body{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);
+    align-items:start;column-gap:clamp(2.5rem,5vw,5rem)}
+  /* L'en-tête tient toute la largeur : sur une seule colonne, un titre comme
+     « Lancer son e-commerce » cassait sur trois lignes. */
+  .formation-head{grid-column:1/-1}
+  .formation-head h1{max-width:22ch}
+  .formation-facts{max-width:44rem}
+  .formation-cta{position:sticky;inset-block-start:96px}
+}
+
 /* Fil d'Ariane */
 .breadcrumb{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;
   max-width:var(--container);margin-inline:auto;margin-block-end:2rem;

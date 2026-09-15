@@ -90,6 +90,13 @@ add_action(
 			$query->set( 'posts_per_page', -1 );
 			$query->set( 'orderby', array( 'menu_order' => 'ASC', 'title' => 'ASC' ) );
 		}
+
+		// Les formations suivent l'ordre voulu par la cliente, du plus
+		// accessible au plus engageant, pas la date de publication.
+		if ( $query->is_post_type_archive( 'formation' ) ) {
+			$query->set( 'posts_per_page', -1 );
+			$query->set( 'orderby', array( 'menu_order' => 'ASC', 'title' => 'ASC' ) );
+		}
 	}
 );
 
