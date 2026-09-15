@@ -141,11 +141,14 @@ function fati_produits_json() {
 		$out[] = array(
 			'id'      => $post->ID,
 			'slug'    => $post->post_name,
-			'nom'     => get_the_title( $post ),
+			'nom'     => html_entity_decode( get_the_title( $post ), ENT_QUOTES, 'UTF-8' ),
 			'prix'    => $prix ? (float) $prix : null,
 			'prixFmt' => $prix ? fati_format_prix( $prix ) : '',
 			'cat'     => $cat ? $cat->slug : '',
-			'catNom'  => $cat ? $cat->name : '',
+			// WordPress stocke « & » échappé en « &amp; ». Le JSON part vers du
+			// JavaScript qui écrit en textContent : sans décodage, la visiteuse
+			// lit « Alimentation &amp; boissons ».
+			'catNom'  => $cat ? html_entity_decode( $cat->name, ENT_QUOTES, 'UTF-8' ) : '',
 			'desc'    => wp_strip_all_tags( $post->post_excerpt ? $post->post_excerpt : $post->post_content ),
 			'img'     => fati_produit_image( $post->ID, 'fati-produit' ),
 			'vignette'=> fati_produit_image( $post->ID, 'thumbnail' ),

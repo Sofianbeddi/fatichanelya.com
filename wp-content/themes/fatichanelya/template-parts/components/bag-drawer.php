@@ -23,6 +23,16 @@
 		<a class="button button-gold button-block" id="drawer-wa" href="#" target="_blank" rel="noopener">
 			<?php esc_html_e( 'Envoyer ma sélection sur WhatsApp', 'fatichanelya' ); ?>
 		</a>
+		<?php
+		// Le tiroir suffit pour deux ou trois références ; au-delà, la page
+		// dédiée laisse ajuster les quantités confortablement.
+		$page_selection = get_page_by_path( 'ma-selection' );
+		if ( $page_selection ) :
+			?>
+			<a class="text-button drawer-voir" href="<?php echo esc_url( get_permalink( $page_selection ) ); ?>">
+				<?php esc_html_e( 'Voir ma sélection en détail', 'fatichanelya' ); ?>
+			</a>
+		<?php endif; ?>
 		<p class="drawer-note">
 			<?php esc_html_e( 'Le paiement en ligne n\'est pas encore activé : la commande est confirmée avec Fati par message.', 'fatichanelya' ); ?>
 		</p>

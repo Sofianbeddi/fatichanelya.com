@@ -150,7 +150,34 @@
   }
 
   /* ---------- Sélection (panier léger, sans paiement en ligne) ---------- */
-  const bag       = new Map();
+
+  /* La sélection survit au changement de page : sans cela, passer de la
+     boutique à la page « Ma sélection » la viderait. Elle reste dans le
+     navigateur de la visiteuse, rien n'est envoyé au serveur. */
+  const BAG_KEY = 'fati-bag-v1';
+
+  const loadBag = () => {
+    try {
+      const brut = localStorage.getItem(BAG_KEY);
+      if (!brut) return new Map();
+      const lu = JSON.parse(brut);
+      if (!Array.isArray(lu)) return new Map();
+      return new Map(lu
+        .filter((it) => it && it.id != null && Number.isFinite(+it.q) && +it.q > 0)
+        .map((it) => [String(it.id), { ...it, q: Math.min(+it.q, 99) }]));
+    } catch (e) {
+      /* Navigation privée, stockage plein ou désactivé : on repart à vide. */
+      return new Map();
+    }
+  };
+
+  const saveBag = () => {
+    try {
+      localStorage.setItem(BAG_KEY, JSON.stringify([...bag.values()]));
+    } catch (e) { /* le panier reste en mémoire pour cette page */ }
+  };
+
+  const bag       = loadBag();
   const bagCount  = $('#bag-count');
   const drawer    = $('#bag-drawer');
   const backdrop  = $('#drawer-backdrop');
@@ -162,16 +189,23 @@
   let lastFocused = null;
 
   const renderBag = () => {
-    if (!list) return;
+    saveBag();
     const items = [...bag.values()];
     const units = items.reduce((s, it) => s + it.q, 0);
     const total = items.reduce((s, it) => s + (it.prix || 0) * it.q, 0);
 
+    /* Le compteur de l'en-tête existe sur toutes les pages, le tiroir non :
+       il se met à jour avant toute sortie anticipée. */
     if (bagCount) bagCount.textContent = String(units);
     if (openBtn) {
       // Le nom accessible doit contenir le texte visible (le compteur) — WCAG 2.5.3
       openBtn.setAttribute('aria-label', fmt(units > 1 ? T.bags : T.bag, units));
     }
+
+    /* La page « Ma sélection » écoute cet événement pour se redessiner. */
+    document.dispatchEvent(new CustomEvent('fati:bag', { detail: { items, units, total } }));
+
+    if (!list) return;
     if (empty)   empty.hidden = items.length > 0;
     if (totalEl) totalEl.textContent = eur(total);
 
@@ -215,7 +249,13 @@
   const addToBag = (id) => {
     const p = byId(id);
     if (!p) return;
-    const item = bag.get(String(id)) || { ...p, q: 0 };
+    /* On ne garde que ce qui sert à réafficher la ligne : copier le produit
+       entier mettrait des balises <img> complètes dans le stockage du
+       navigateur, qui est limité et partagé avec le reste du site. */
+    const item = bag.get(String(id)) || {
+      id: p.id, nom: p.nom, prix: p.prix, catNom: p.catNom,
+      vignette: p.vignette, url: p.url, q: 0,
+    };
     item.q += 1;
     bag.set(String(id), item);
     renderBag();
@@ -302,6 +342,130 @@
     const close = $('#pd-close');
     if (close) close.addEventListener('click', () => dlg.close());
     dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  }
+
+
+  /* ---------- Page « Ma sélection » ----------
+     Elle réutilise la même sélection que le tiroir. Rien n'est envoyé au
+     serveur : le récapitulatif se dessine à partir de ce que le navigateur a
+     enregistré, et le bouton prépare un message complet pour Fati. */
+  const selItems = $('#selection-items');
+
+  if (selItems) {
+    const selVide     = $('#selection-vide');
+    const selActions  = $('#selection-actions');
+    const selArticles = $('#resume-articles');
+    const selSousTot  = $('#resume-soustotal');
+    const selWa       = $('#selection-wa');
+    const selVider    = $('#selection-vider');
+
+    const ligne = (it) => {
+      const li = document.createElement('li');
+      li.className = 'selection-item';
+
+      const media = document.createElement('div');
+      media.className = 'selection-item-media';
+      if (it.vignette) {
+        /* `vignette` est une balise <img> complète produite côté serveur :
+           on l'insère telle quelle plutôt que de reconstruire une URL. */
+        const gabarit = document.createElement('template');
+        gabarit.innerHTML = it.vignette.trim();
+        const img = gabarit.content.querySelector('img');
+        if (img) { img.alt = ''; media.append(img); }
+      }
+
+      const nom = document.createElement('div');
+      nom.className = 'selection-item-nom';
+      const titre = document.createElement('p');
+      titre.textContent = it.nom;
+      nom.append(titre);
+      if (it.catNom) {
+        const cat = document.createElement('span');
+        cat.textContent = it.catNom;
+        nom.append(cat);
+      }
+
+      const prix = document.createElement('p');
+      prix.className = 'selection-item-prix';
+      prix.textContent = eur(it.prix || 0);
+
+      const qte = document.createElement('div');
+      qte.className = 'selection-item-qte';
+      const moins = document.createElement('button');
+      moins.type = 'button'; moins.textContent = '−';
+      moins.dataset.step = '-1'; moins.dataset.id = it.id;
+      moins.setAttribute('aria-label', fmt(T.selMoins || 'Retirer un %s', it.nom));
+      const val = document.createElement('span');
+      val.textContent = String(it.q);
+      const plus = document.createElement('button');
+      plus.type = 'button'; plus.textContent = '+';
+      plus.dataset.step = '1'; plus.dataset.id = it.id;
+      plus.setAttribute('aria-label', fmt(T.selPlus || 'Ajouter un %s', it.nom));
+      qte.append(moins, val, plus);
+
+      const soustotal = document.createElement('p');
+      soustotal.className = 'selection-item-soustotal';
+      soustotal.textContent = eur((it.prix || 0) * it.q);
+
+      const retirer = document.createElement('button');
+      retirer.type = 'button'; retirer.className = 'selection-item-retirer';
+      retirer.dataset.remove = it.id;
+      retirer.setAttribute('aria-label', fmt(T.remove || 'Retirer %s', it.nom));
+      retirer.textContent = '×';
+
+      li.append(retirer, media, nom, prix, qte, soustotal);
+      return li;
+    };
+
+    const dessiner = ({ items, units, total }) => {
+      selItems.replaceChildren(...items.map(ligne));
+      if (selVide)    selVide.hidden    = items.length > 0;
+      if (selActions) selActions.hidden = items.length === 0;
+      if (selArticles) selArticles.textContent = String(units);
+      if (selSousTot)  selSousTot.textContent  = items.length ? eur(total) : '—';
+
+      if (selWa) {
+        const lignes = items.map((it) => `• ${it.nom} × ${it.q} — ${eur((it.prix || 0) * it.q)}`).join('\n');
+        selWa.href = items.length
+          ? wa(`${T.waSelection || 'Bonjour Fati, voici ma sélection :'}\n${lignes}\n\n${T.waTotal || 'Total indicatif'} : ${eur(total)}`)
+          : wa(T.waHello || 'Bonjour Fati, je souhaite commander.');
+      }
+    };
+
+    document.addEventListener('fati:bag', (e) => dessiner(e.detail));
+
+    selItems.addEventListener('click', (e) => {
+      const pas = e.target.closest('[data-step]');
+      if (pas) {
+        const id  = String(pas.dataset.id);
+        const cur = bag.get(id);
+        if (!cur) return;
+        const q = cur.q + Number(pas.dataset.step);
+        if (q <= 0) bag.delete(id); else bag.set(id, { ...cur, q: Math.min(q, 99) });
+        renderBag();
+        return;
+      }
+      const retrait = e.target.closest('[data-remove]');
+      if (retrait) {
+        bag.delete(String(retrait.dataset.remove));
+        renderBag();
+      }
+    });
+
+    if (selVider) {
+      selVider.addEventListener('click', () => {
+        bag.clear();
+        renderBag();
+      });
+    }
+
+    /* Premier dessin : renderBag a déjà tourné avant que cette page existe. */
+    const items = [...bag.values()];
+    dessiner({
+      items,
+      units: items.reduce((s, it) => s + it.q, 0),
+      total: items.reduce((s, it) => s + (it.prix || 0) * it.q, 0),
+    });
   }
 
   document.addEventListener('click', (e) => {

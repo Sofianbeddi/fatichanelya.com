@@ -176,6 +176,7 @@ wp option update page_on_front "$HOME_ID" >/dev/null
 
 ABOUT_ID=$(create_page "À propos" "a-propos")
 CONTACT_ID=$(create_page "Contact" "contact")
+SELECTION_ID=$(create_page "Ma sélection" "ma-selection")
 
 LEGAL_ID=$(create_page "Mentions légales" "mentions-legales")
 PRIV_ID=$(create_page "Politique de confidentialité" "confidentialite")

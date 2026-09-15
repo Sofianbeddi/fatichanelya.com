@@ -917,6 +917,90 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .section--forest :is(h2,h3){color:var(--text-on-forest)}
 .section--forest .eyebrow{color:var(--gold-light)}
 
+
+.drawer-voir{justify-self:center;margin-block-start:.35rem;font-size:var(--fs-label)}
+
+/* ---------- PAGE « MA SÉLECTION » ----------
+   Structure du panier de la référence, sans paiement en ligne : le
+   récapitulatif prépare un message, il n'encaisse rien. */
+.page-selection{display:grid;grid-template-columns:minmax(0,1fr)}
+.selection-layout{display:grid;grid-template-columns:minmax(0,1fr);
+  gap:clamp(1.75rem,3.5vw,3rem);max-width:var(--container);
+  margin-inline:auto;inline-size:100%}
+
+.selection-head{display:none}
+.selection-items{display:grid;gap:0}
+
+.selection-item{position:relative;display:grid;align-items:center;
+  grid-template-columns:auto 72px minmax(0,1fr);
+  grid-template-areas:"retirer media nom" ". . prix" ". . qte" ". . soustotal";
+  gap:.5rem .9rem;padding-block:1.15rem;
+  border-block-start:1px solid var(--line)}
+.selection-item:last-child{border-block-end:1px solid var(--line)}
+
+.selection-item-retirer{grid-area:retirer;inline-size:32px;block-size:32px;
+  border-radius:var(--r-pill);color:var(--muted);font-size:1.1rem;line-height:1;
+  transition:background var(--t-micro),color var(--t-micro)}
+@media (hover:hover){.selection-item-retirer:hover{background:var(--ivory);color:var(--ink)}}
+
+.selection-item-media{grid-area:media;inline-size:72px;block-size:72px;
+  border-radius:var(--r-sm);overflow:hidden;background:var(--ivory)}
+.selection-item-media img{inline-size:100%;block-size:100%;object-fit:cover}
+
+.selection-item-nom{grid-area:nom;display:grid;gap:.1rem}
+.selection-item-nom p{font-weight:var(--fw-title);color:var(--ink);line-height:1.25}
+.selection-item-nom span{font-size:var(--fs-label);color:var(--muted)}
+
+.selection-item-prix{grid-area:prix;color:var(--muted)}
+.selection-item-soustotal{grid-area:soustotal;font-weight:var(--fw-title);color:var(--ink)}
+
+.selection-item-qte{grid-area:qte;display:inline-flex;align-items:center;
+  border:1px solid var(--line-mid);border-radius:var(--r-pill);inline-size:fit-content}
+.selection-item-qte button{inline-size:38px;min-block-size:38px;
+  color:var(--ink);font-size:1rem;line-height:1;
+  transition:color var(--t-micro)}
+@media (hover:hover){.selection-item-qte button:hover{color:var(--gold-ink)}}
+.selection-item-qte span{min-inline-size:2.25rem;text-align:center;
+  font-weight:var(--fw-title);font-variant-numeric:tabular-nums}
+
+.selection-vide{display:grid;gap:.6rem;justify-items:start;
+  padding-block:2.5rem;color:var(--muted)}
+.selection-actions{display:flex;flex-wrap:wrap;gap:1.5rem;
+  justify-content:space-between;padding-block-start:1.35rem}
+
+.selection-resume{display:grid;gap:.9rem;align-content:start;
+  padding:clamp(1.5rem,3vw,2rem);border:1px solid var(--line-card);
+  border-radius:var(--r-md);background:var(--surface)}
+.selection-resume h2{font-size:1.25rem}
+.selection-totaux{display:grid;gap:.6rem;margin:0}
+.selection-totaux > div{display:flex;justify-content:space-between;gap:1rem;
+  padding-block-end:.6rem;border-block-end:1px solid var(--line)}
+.selection-totaux dt{color:var(--muted)}
+.selection-totaux dd{margin:0;font-weight:var(--fw-title);color:var(--ink)}
+.selection-note,.selection-paiement{font-size:var(--fs-label);color:var(--muted)}
+
+@media (min-width:760px){
+  .selection-item{grid-template-columns:auto 84px minmax(0,1fr) 7rem 9rem 7rem;
+    grid-template-areas:"retirer media nom prix qte soustotal";
+    gap:1.1rem;align-items:center}
+  .selection-item-media{inline-size:84px;block-size:84px}
+  .selection-item-prix,.selection-item-soustotal{text-align:end}
+  .selection-head{display:grid;
+    grid-template-columns:auto 84px minmax(0,1fr) 7rem 9rem 7rem;
+    gap:1.1rem;padding-block:.85rem;
+    font-size:var(--fs-eyebrow);letter-spacing:.09em;text-transform:uppercase;
+    font-weight:var(--fw-title);color:var(--muted)}
+  .selection-head span:first-child{grid-column:3}
+  .selection-head span:nth-child(2){text-align:end}
+  .selection-head span:last-child{text-align:end}
+}
+
+@media (min-width:1000px){
+  .selection-layout{grid-template-columns:minmax(0,1fr) 22rem;
+    align-items:start;column-gap:clamp(2rem,4vw,3.5rem)}
+  .selection-resume{position:sticky;inset-block-start:96px}
+}
+
 /* Fil d'Ariane */
 .breadcrumb{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;
   max-width:var(--container);margin-inline:auto;margin-block-end:2rem;
