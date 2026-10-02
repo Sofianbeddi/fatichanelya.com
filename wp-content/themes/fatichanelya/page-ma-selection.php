@@ -62,7 +62,8 @@ get_template_part( 'template-parts/components/page-banner' );
 					<dd id="resume-articles">0</dd>
 				</div>
 				<div>
-					<dt><?php esc_html_e( 'Sous-total', 'fatichanelya' ); ?></dt>
+					<?php // Le libellé change quand un article est sans prix : « hors articles à confirmer ». ?>
+					<dt id="resume-soustotal-label"><?php esc_html_e( 'Sous-total', 'fatichanelya' ); ?></dt>
 					<dd id="resume-soustotal">—</dd>
 				</div>
 				<div>

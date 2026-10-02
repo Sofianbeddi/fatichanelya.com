@@ -3,12 +3,18 @@
  * Fiche produit complète (l'accueil ouvre une version condensée en <dialog>).
  *
  * C'est la page où se décide l'achat. Elle répond donc, dans l'ordre, aux
- * questions qui arrêtent une acheteuse : ce que c'est, combien ça coûte,
- * comment on commande, qui expédie, et ce qui se passe si ça ne convient pas.
+ * questions qui arrêtent une acheteuse : ce que c'est, combien ça coûte et
+ * pour quelle contenance, comment on commande, ce qu'il y a dedans et comment
+ * on s'en sert, qui expédie, et ce qui se passe si ça ne convient pas.
  *
- * Aucun champ n'est inventé : contenance, durée d'usage et conseils
- * d'utilisation n'existent pas encore côté CMS. Les blocs correspondants
- * n'apparaîtront que le jour où la donnée existera.
+ * Aucun champ n'est inventé : contenance, composition et conseils
+ * d'utilisation sont lus sur l'emballage et saisis dans le back-office
+ * (`_fati_format`, `_fati_composition`, `_fati_usage`). Un bloc dont la
+ * donnée manque n'est pas rendu.
+ *
+ * L'action principale est « Ajouter à ma sélection » : la fiche alimente le
+ * même parcours que la grille, et c'est la sélection complète qui part en
+ * message à Fati. « Poser une question » reste la sortie directe.
  *
  * @package Fatichanelya
  */
@@ -19,15 +25,17 @@ get_header();
 
 while ( have_posts() ) :
 	the_post();
-	$id    = get_the_ID();
-	$prix  = get_post_meta( $id, '_fati_prix', true );
-	$terms = get_the_terms( $id, 'categorie_produit' );
-	$cat   = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0] : null;
-	$titre = get_the_title();
+	$id      = get_the_ID();
+	$prix    = get_post_meta( $id, '_fati_prix', true );
+	$details = fati_produit_details( $id );
+	$terms   = get_the_terms( $id, 'categorie_produit' );
+	$cat     = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0] : null;
+	$titre   = get_the_title();
 
-	$commander = fati_wa( sprintf( __( 'Bonjour Fati, je souhaite commander « %s ».', 'fatichanelya' ), $titre ) );
-	$cible     = fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : '';
-	$trail = array(
+	// Même message que la boîte de dialogue produit (`waQuestion` dans assets.php).
+	$question = fati_wa( sprintf( __( 'Bonjour Fati, j\'ai une question sur « %s ».', 'fatichanelya' ), $titre ) );
+	$cible    = fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : '';
+	$trail    = array(
 		array( 'label' => __( 'Boutique', 'fatichanelya' ), 'url' => get_post_type_archive_link( 'produit' ) ),
 	);
 	if ( $cat ) {
@@ -39,11 +47,24 @@ while ( have_posts() ) :
 	set_query_var( 'fati_banner_trail', $trail );
 	get_template_part( 'template-parts/components/page-banner' );
 	?>
-	<main id="main" class="section single-produit">
+	<?php
+	/*
+	 * `produit-page` et non `single-produit` : WordPress pose déjà la classe
+	 * `single-produit` sur <body>, et une règle `.single-produit{display:grid}`
+	 * mettait tout le document en grille, avec 40 px d'écart entre
+	 * l'annonce, l'en-tête, la bannière et le pied de page.
+	 */
+	?>
+	<main id="main" class="section produit-page">
 
-		<article class="produit-layout">
+		<article class="produit-achat">
+			<?php
+			// Le visuel est l'élément LCP de la page : chargé d'emblée, jamais
+			// différé. Packshot sur fond blanc dans un carré blanc : rien n'est
+			// recadré, l'image est contenue.
+			?>
 			<figure class="produit-media">
-				<?php echo fati_produit_image( $id, 'fati-produit' ); ?>
+				<?php echo fati_produit_image( $id, 'fati-produit', '', true, '(min-width: 900px) min(41vw, 540px), calc(100vw - 2.5rem)' ); ?>
 			</figure>
 
 			<div class="produit-copy">
@@ -53,20 +74,27 @@ while ( have_posts() ) :
 
 				<h2><?php echo esc_html( $titre ); ?></h2>
 
-				<?php if ( $prix ) : ?>
-					<p class="produit-prix"><?php echo esc_html( fati_format_prix( $prix ) ); ?></p>
-				<?php endif; ?>
+				<?php
+				// Prix puis contenance sur la même ligne : « 61 € · 90 gélules ».
+				// Sans prix en base, la ligne le dit plutôt que d'afficher 0 €.
+				?>
+				<p class="produit-prix<?php echo $prix ? '' : ' produit-prix--demande'; ?>">
+					<?php echo $prix ? esc_html( fati_format_prix( $prix ) ) : esc_html__( 'Prix communiqué sur demande', 'fatichanelya' ); ?>
+					<?php if ( $details['format'] ) : ?>
+						<span class="produit-format">· <?php echo esc_html( $details['format'] ); ?></span>
+					<?php endif; ?>
+				</p>
 
 				<?php if ( has_excerpt() ) : ?>
 					<p class="produit-accroche"><?php echo esc_html( get_the_excerpt() ); ?></p>
 				<?php endif; ?>
 
-				<div class="pd-actions">
-					<a class="button button-gold button-lg" href="<?php echo esc_url( $commander ); ?>"<?php echo $cible; ?>>
-						<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Commander sur WhatsApp', 'fatichanelya' ); ?>
-					</a>
-					<a class="button button-outline" href="<?php echo esc_url( get_post_type_archive_link( 'produit' ) ); ?>">
-						<?php esc_html_e( 'Voir tout le catalogue', 'fatichanelya' ); ?>
+				<div class="produit-actions">
+					<button class="button button-navy button-lg" type="button" data-add="<?php echo esc_attr( $id ); ?>">
+						<?php echo fati_icon( 'bag', 22 ); ?><?php esc_html_e( 'Ajouter à ma sélection', 'fatichanelya' ); ?>
+					</button>
+					<a class="button button-outline button-lg" href="<?php echo esc_url( $question ); ?>"<?php echo $cible; ?>>
+						<?php echo fati_icon( 'whatsapp', 22 ); ?><?php esc_html_e( 'Poser une question', 'fatichanelya' ); ?>
 					</a>
 				</div>
 
@@ -93,6 +121,37 @@ while ( have_posts() ) :
 						</li>
 					<?php endforeach; ?>
 				</ul>
+			</section>
+		<?php endif; ?>
+
+		<?php
+		// Composition et conseils d'utilisation : deux cellules à filets côte à
+		// côte. Chaque colonne n'existe que si sa donnée a été saisie ; sans
+		// aucune des deux, la section n'est pas rendue.
+		if ( $details['composition'] || $details['usage'] ) :
+			?>
+			<section class="produit-details" aria-label="<?php esc_attr_e( 'Composition et conseils d\'utilisation', 'fatichanelya' ); ?>">
+				<?php if ( $details['composition'] ) : ?>
+					<div class="rule-cell produit-composition">
+						<h2><?php esc_html_e( 'Composition', 'fatichanelya' ); ?></h2>
+						<p><?php echo nl2br( esc_html( $details['composition'] ) ); ?></p>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( $details['usage'] ) : ?>
+					<div class="rule-cell produit-usage">
+						<h2><?php esc_html_e( 'Conseils d\'utilisation', 'fatichanelya' ); ?></h2>
+						<?php // Une étape par ligne saisie ; la liste ordonnée porte déjà le rang, le numéro visible est décoratif. ?>
+						<ol>
+							<?php foreach ( $details['usage'] as $n => $etape ) : ?>
+								<li>
+									<span class="rule-num" aria-hidden="true"><?php echo (int) $n + 1; ?></span>
+									<p><?php echo esc_html( $etape ); ?></p>
+								</li>
+							<?php endforeach; ?>
+						</ol>
+					</div>
+				<?php endif; ?>
 			</section>
 		<?php endif; ?>
 
@@ -162,17 +221,21 @@ while ( have_posts() ) :
 		endif;
 		?>
 
-		<?php if ( $prix ) : ?>
-			<aside class="produit-rappel">
-				<div>
-					<p class="produit-rappel-nom"><?php echo esc_html( $titre ); ?></p>
-					<p class="produit-rappel-prix"><?php echo esc_html( fati_format_prix( $prix ) ); ?></p>
-				</div>
-				<a class="button button-navy button-lg" href="<?php echo esc_url( $commander ); ?>"<?php echo $cible; ?>>
-					<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Commander sur WhatsApp', 'fatichanelya' ); ?>
-				</a>
-			</aside>
-		<?php endif; ?>
+		<?php
+		// Rappel d'achat en fin de lecture : la décision se prend souvent ici.
+		// Même action que le bloc d'achat, pour ne pas ouvrir un second parcours.
+		?>
+		<aside class="produit-rappel" aria-label="<?php esc_attr_e( 'Rappel du produit', 'fatichanelya' ); ?>">
+			<div>
+				<p class="produit-rappel-nom"><?php echo esc_html( $titre ); ?></p>
+				<p class="produit-rappel-prix<?php echo $prix ? '' : ' produit-rappel-prix--demande'; ?>">
+					<?php echo $prix ? esc_html( fati_format_prix( $prix ) ) : esc_html__( 'Prix communiqué sur demande', 'fatichanelya' ); ?>
+				</p>
+			</div>
+			<button class="button button-navy button-lg" type="button" data-add="<?php echo esc_attr( $id ); ?>">
+				<?php echo fati_icon( 'bag', 22 ); ?><?php esc_html_e( 'Ajouter à ma sélection', 'fatichanelya' ); ?>
+			</button>
+		</aside>
 	</main>
 	<?php
 endwhile;

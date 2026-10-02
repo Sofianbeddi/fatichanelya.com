@@ -33,6 +33,13 @@
     minimumFractionDigits: n % 1 === 0 ? 0 : 2
   }).format(n);
 
+  /* Un produit sans prix en base arrive avec `prix: null`. Il reste
+     sélectionnable, mais sa ligne dit « prix à confirmer » et il n'entre pas
+     dans le total, dont le libellé le signale. */
+  const sansPrix     = (items) => items.some((it) => it.prix == null);
+  const montantLigne = (it) => (it.prix == null ? (T.aConfirmer || 'prix à confirmer') : eur(it.prix * it.q));
+  const libelleTotal = (partiel, defaut) => (partiel ? (T.totalPartiel || defaut) : defaut);
+
   /* ---------- Header collant ---------- */
   const header = $('#header');
   const sentinel = $('#scroll-sentinel');
@@ -184,6 +191,8 @@
   const list      = $('#drawer-list');
   const empty     = $('#drawer-empty');
   const totalEl   = $('#drawer-total');
+  const totalLbl  = $('#drawer-total-label');
+  const totalLblDefaut = totalLbl ? totalLbl.textContent : '';
   const drawerWa  = $('#drawer-wa');
   const openBtn   = $('#open-bag');
   let lastFocused = null;
@@ -193,6 +202,7 @@
     const items = [...bag.values()];
     const units = items.reduce((s, it) => s + it.q, 0);
     const total = items.reduce((s, it) => s + (it.prix || 0) * it.q, 0);
+    const partiel = sansPrix(items);
 
     /* Le compteur de l'en-tête existe sur toutes les pages, le tiroir non :
        il se met à jour avant toute sortie anticipée. */
@@ -208,6 +218,7 @@
     if (!list) return;
     if (empty)   empty.hidden = items.length > 0;
     if (totalEl) totalEl.textContent = eur(total);
+    if (totalLbl) totalLbl.textContent = libelleTotal(partiel, totalLblDefaut);
 
     list.replaceChildren(...items.map((it) => {
       const li = document.createElement('li');
@@ -223,7 +234,7 @@
       name.textContent = it.nom;
       const price = document.createElement('span');
       price.className = 'dl-price';
-      price.textContent = `${it.q} × ${it.prixFmt || eur(it.prix || 0)}`;
+      price.textContent = `${it.q} × ${it.prix == null ? (T.aConfirmer || 'prix à confirmer') : (it.prixFmt || eur(it.prix))}`;
       info.append(name, document.createElement('br'), price);
       li.appendChild(info);
 
@@ -239,9 +250,10 @@
     }));
 
     if (drawerWa) {
-      const lines = items.map((it) => `• ${it.nom} × ${it.q} — ${eur((it.prix || 0) * it.q)}`).join('\n');
+      const lines = items.map((it) => `• ${it.nom} × ${it.q} — ${montantLigne(it)}`).join('\n');
+      const lblTotal = partiel ? `${T.totalPartiel} :` : T.waTotal;
       drawerWa.href = wa(items.length
-        ? `${T.waIntro}\n${lines}\n\n${T.waTotal} ${eur(total)}\n${T.waConfirm}`
+        ? `${T.waIntro}\n${lines}\n\n${lblTotal} ${eur(total)}\n${T.waConfirm}`
         : T.waHello);
     }
   };
@@ -323,11 +335,16 @@
     const set = (sel, value) => { const el = $(sel); if (el) el.textContent = value; };
     set('#pd-cat', p.catNom || '');
     set('#pd-title', p.nom);
-    set('#pd-price', p.prixFmt || '');
+    set('#pd-price', p.prix == null ? (T.prixDemande || '') : p.prixFmt);
+    set('#pd-format', p.format || '');
     set('#pd-desc', p.desc || '');
 
     const cat = $('#pd-cat');
     if (cat) cat.hidden = !p.catNom;
+    const prixEl = $('#pd-price');
+    if (prixEl) prixEl.classList.toggle('pd-price--demande', p.prix == null);
+    const format = $('#pd-format');
+    if (format) format.hidden = !p.format;
 
     const add = $('#pd-add');
     if (add) add.dataset.add = p.id;
@@ -400,6 +417,8 @@
     const selActions  = $('#selection-actions');
     const selArticles = $('#resume-articles');
     const selSousTot  = $('#resume-soustotal');
+    const selSousLbl  = $('#resume-soustotal-label');
+    const selSousLblDefaut = selSousLbl ? selSousLbl.textContent : '';
     const selWa       = $('#selection-wa');
     const selVider    = $('#selection-vider');
 
@@ -431,7 +450,7 @@
 
       const prix = document.createElement('p');
       prix.className = 'selection-item-prix';
-      prix.textContent = eur(it.prix || 0);
+      prix.textContent = it.prix == null ? (T.aConfirmer || 'prix à confirmer') : eur(it.prix);
 
       const qte = document.createElement('div');
       qte.className = 'selection-item-qte';
@@ -449,7 +468,7 @@
 
       const soustotal = document.createElement('p');
       soustotal.className = 'selection-item-soustotal';
-      soustotal.textContent = eur((it.prix || 0) * it.q);
+      soustotal.textContent = montantLigne(it);
 
       const retirer = document.createElement('button');
       retirer.type = 'button'; retirer.className = 'selection-item-retirer';
@@ -462,16 +481,20 @@
     };
 
     const dessiner = ({ items, units, total }) => {
+      const partiel = sansPrix(items);
       selItems.replaceChildren(...items.map(ligne));
       if (selVide)    selVide.hidden    = items.length > 0;
       if (selActions) selActions.hidden = items.length === 0;
       if (selArticles) selArticles.textContent = String(units);
       if (selSousTot)  selSousTot.textContent  = items.length ? eur(total) : '—';
+      if (selSousLbl)  selSousLbl.textContent  = libelleTotal(partiel, selSousLblDefaut);
 
       if (selWa) {
-        const lignes = items.map((it) => `• ${it.nom} × ${it.q} — ${eur((it.prix || 0) * it.q)}`).join('\n');
+        const lignes = items.map((it) => `• ${it.nom} × ${it.q} — ${montantLigne(it)}`).join('\n');
+        /* `waTotal` porte déjà son deux-points (« Total indicatif : »). */
+        const lblTotal = partiel ? `${T.totalPartiel} :` : (T.waTotal || 'Total indicatif :');
         selWa.href = items.length
-          ? wa(`${T.waSelection || 'Bonjour Fati, voici ma sélection :'}\n${lignes}\n\n${T.waTotal || 'Total indicatif'} : ${eur(total)}`)
+          ? wa(`${T.waIntro || 'Bonjour Fati, voici ma sélection :'}\n${lignes}\n\n${lblTotal} ${eur(total)}\n${T.waConfirm || ''}`)
           : wa(T.waHello || 'Bonjour Fati, je souhaite commander.');
       }
     };

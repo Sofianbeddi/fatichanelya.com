@@ -45,6 +45,11 @@ add_action(
 					'waHello'   => __( 'Bonjour Fati, j\'aimerais échanger avec vous.', 'fatichanelya' ),
 					'waQuestion'=> __( 'Bonjour Fati, j\'ai une question sur « %s ».', 'fatichanelya' ),
 					'remove'    => __( 'Retirer %s de ma sélection', 'fatichanelya' ),
+					// Produit sans prix en base : il reste sélectionnable, mais il
+					// n'entre pas dans le total et le dit.
+					'aConfirmer'   => __( 'prix à confirmer', 'fatichanelya' ),
+					'prixDemande'  => __( 'Prix communiqué sur demande', 'fatichanelya' ),
+					'totalPartiel' => __( 'Total indicatif, hors articles à confirmer', 'fatichanelya' ),
 				),
 			)
 		);
@@ -101,4 +106,23 @@ add_action(
 		);
 	},
 	1
+);
+
+/**
+ * Icône d'onglet. Le fichier existait dans le thème sans être annoncé : le
+ * navigateur demandait alors /favicon.ico, qui répondait 404 sur chaque page.
+ * Une icône de site choisie dans l'admin (Apparence > Personnaliser) prime.
+ */
+add_action(
+	'wp_head',
+	function () {
+		if ( has_site_icon() ) {
+			return;
+		}
+		printf(
+			'<link rel="icon" href="%s" type="image/svg+xml">' . "\n",
+			esc_url( FATI_URI . '/assets/favicon.svg' )
+		);
+	},
+	2
 );

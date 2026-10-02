@@ -10,6 +10,7 @@
 			<span class="chip" id="pd-cat"></span>
 			<h2 id="pd-title"></h2>
 			<p class="pd-price" id="pd-price"></p>
+			<p class="pd-format" id="pd-format" hidden></p>
 			<p class="pd-desc" id="pd-desc"></p>
 			<div class="pd-actions">
 				<button class="button button-navy" id="pd-add" type="button"><?php esc_html_e( 'Ajouter à ma sélection', 'fatichanelya' ); ?></button>

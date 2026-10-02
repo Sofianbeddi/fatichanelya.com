@@ -17,7 +17,8 @@
 
 	<div class="drawer-foot">
 		<p class="drawer-total">
-			<?php esc_html_e( 'Total indicatif', 'fatichanelya' ); ?>
+			<?php // Le libellé change quand un article est sans prix : « hors articles à confirmer ». ?>
+			<span id="drawer-total-label"><?php esc_html_e( 'Total indicatif', 'fatichanelya' ); ?></span>
 			<strong id="drawer-total">0 €</strong>
 		</p>
 		<a class="button button-gold button-block" id="drawer-wa" href="#" target="_blank" rel="noopener">

@@ -252,6 +252,15 @@ Un type de contenu avec taxonomie a besoin de **deux** gabarits, jamais d'un seu
 Sans le second, WordPress retombe sur `archive.php`, le repli générique du blog :
 produits en vignettes de journal, sans carte, sans prix, sans bouton.
 
+> **Piège vérifié (2 octobre 2026).** WordPress pose sur `<body>` des classes
+> nommées d'après le gabarit : `single-produit`, `archive-produit`,
+> `page-ma-selection`… Une classe de mise en page du même nom s'applique alors
+> au document entier. `.single-produit{display:grid;gap:…}` posait 40 px d'écart
+> entre l'annonce, l'en-tête, la bannière et le pied de la fiche produit, et un
+> blanc au-dessus de l'annonce. Les conteneurs de page s'appellent désormais
+> `produit-page`, `shop-page` : **jamais le nom d'un gabarit**. Les sélecteurs
+> `body.single-produit …` restent légitimes pour cibler une page.
+
 ## 5 bis. La marge unique `--bord` — et la règle qui va avec
 
 Tout le site s'aligne sur une seule marge :
@@ -298,13 +307,25 @@ Les visuels doivent être **homogènes en échelle**. À l'origine, le produit
 occupait de 11 % à 56 % de son cadre selon la référence, soit un rapport de 1 à 5
 dans la même grille : l'œil lit cet écart comme un défaut de fabrication.
 `tools/normaliser-visuels.py` détoure, recadre et repose chaque produit à
-occupation constante, autour de **26 %**.
+occupation constante, autour de **34 %** (bornes 86 % en hauteur et en largeur).
 
-> **À obtenir de la cliente.** Les visuels actuels portent tous un filigrane
-> « DXN's Property » incrusté. Ce n'est pas un défaut esthétique mais un
-> contresens sur une boutique dont l'argument est l'authenticité. **Ne pas
-> l'effacer par retouche** : demander les visuels officiels au back-office de
-> distributrice, ou photographier le stock réel.
+> **26 % jusqu'au 2 octobre 2026.** À cette échelle, dans le cadre mobile de la
+> fiche produit (227 px de haut à 375 × 667, imposé pour garder prix et bouton
+> au-dessus du pli), le produit ne mesurait plus que 59 px. Passé à 34 % : le
+> produit gagne un tiers partout, la grille reste aérée. Si le cadre mobile
+> paraît encore trop petit, c'est l'occupation qu'on relève, jamais un
+> `object-fit: cover` qui couperait les flacons hauts.
+
+> **Depuis le 2 octobre 2026**, 19 des 26 visuels sont des packshots de synthèse
+> (Higgsfield, `nano_banana_2`) produits à partir des emballages réels — ancien
+> visuel filigrané ou affiche du gérant — sur fond blanc pur, puis normalisés.
+> Le détail, les prompts et la question de droit sont dans `_velix/medias.md`.
+> La photo du stock réel de Fati reste la cible : un packshot généré est un
+> intérim, pas une preuve.
+
+> **Les packshots sont sur fond blanc** : le média de la carte produit et celui
+> de la fiche sont donc en `--surface`, jamais en `--ivory`, sinon un rectangle
+> blanc apparaît autour du produit.
 
 ---
 

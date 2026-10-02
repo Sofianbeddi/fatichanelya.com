@@ -11,6 +11,7 @@ $id     = get_the_ID();
 $terms  = get_the_terms( $id, 'categorie_produit' );
 $cat    = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0] : null;
 $prix   = get_post_meta( $id, '_fati_prix', true );
+$format = trim( (string) get_post_meta( $id, '_fati_format', true ) );
 $index  = (int) get_query_var( 'fati_index', 0 );
 $indispo = (bool) get_post_meta( $id, '_fati_indispo', true );
 ?>
@@ -35,9 +36,17 @@ $indispo = (bool) get_post_meta( $id, '_fati_indispo', true );
 
 		<h3 class="product-name"><?php the_title(); ?></h3>
 
-		<?php if ( $prix ) : ?>
-			<p class="product-price"><?php echo esc_html( fati_format_prix( $prix ) ); ?></p>
+		<?php if ( $format ) : ?>
+			<p class="product-format"><?php echo esc_html( $format ); ?></p>
 		<?php endif; ?>
+
+		<?php
+		// Sans prix en base, la ligne reste à sa place et le dit : une carte
+		// muette sur le prix se lit comme une erreur, pas comme une réserve.
+		?>
+		<p class="product-price<?php echo $prix ? '' : ' product-price--demande'; ?>">
+			<?php echo $prix ? esc_html( fati_format_prix( $prix ) ) : esc_html__( 'Sur demande', 'fatichanelya' ); ?>
+		</p>
 
 		<?php
 		/*

@@ -17,7 +17,12 @@ if ( ! $formations->have_posts() ) {
 <section class="section training" id="training" aria-labelledby="training-title">
 	<?php if ( fati_opt( 'training_image' ) ) : ?>
 		<figure class="training-media reveal">
-			<?php echo fati_image( fati_opt( 'training_image' ), 'fati-paysage', __( 'Fati pendant une session d\'accompagnement', 'fatichanelya' ) ); ?>
+			<?php
+			// Le visuel est une nature morte (bureau, carnet, tasse) : l'ancien
+			// texte « Fati pendant une session » décrivait une image générée
+			// d'une personne qui n'était pas Fati, retirée le 2 oct. 2026.
+			echo fati_image( fati_opt( 'training_image' ), 'fati-paysage', __( 'Un bureau calme en bois clair, carnet bleu nuit et tasse de thé près de la fenêtre', 'fatichanelya' ) );
+			?>
 			<figcaption><?php esc_html_e( 'Un accompagnement humain, adapté à votre point de départ.', 'fatichanelya' ); ?></figcaption>
 		</figure>
 	<?php endif; ?>

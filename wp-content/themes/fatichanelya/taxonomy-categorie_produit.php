@@ -29,7 +29,12 @@ set_query_var(
 );
 get_template_part( 'template-parts/components/page-banner' );
 ?>
-<main id="main" class="section shop">
+<?php
+// Même suite de bandes que l'archive : grille, parcours de commande,
+// question finale. Voir `archive-produit.php`.
+?>
+<main id="main" class="shop-page">
+<div class="section shop">
 	<header class="section-head section-head--split">
 		<div>
 			<p class="eyebrow"><?php esc_html_e( 'La sélection Fatichanelya', 'fatichanelya' ); ?></p>
@@ -66,6 +71,12 @@ get_template_part( 'template-parts/components/page-banner' );
 			<?php esc_html_e( 'Voir tout le catalogue', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 22 ); ?>
 		</a>
 	</div>
+</div>
+
+<?php
+get_template_part( 'template-parts/sections/parcours-commande' );
+get_template_part( 'template-parts/sections/question' );
+?>
 </main>
 <?php
 get_footer();

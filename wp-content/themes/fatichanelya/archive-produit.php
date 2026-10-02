@@ -21,7 +21,13 @@ set_query_var( 'fati_banner_title', $titre );
 set_query_var( 'fati_banner_trail', $trail );
 get_template_part( 'template-parts/components/page-banner' );
 ?>
-<main id="main" class="section shop">
+<?php
+// La page est une suite de bandes : la grille sur sable, le parcours de
+// commande sur beige, la question finale sur bleu nuit. Chaque bande porte
+// sa propre marge `--bord`, d'où le <main> sans classe de section.
+?>
+<main id="main" class="shop-page">
+<div class="section shop">
 	<header class="section-head section-head--split">
 		<div>
 			<p class="eyebrow"><?php esc_html_e( 'La sélection Fatichanelya', 'fatichanelya' ); ?></p>
@@ -95,6 +101,12 @@ get_template_part( 'template-parts/components/page-banner' );
 	<?php else : ?>
 		<p class="section-intro"><?php esc_html_e( 'Aucun produit dans cette catégorie.', 'fatichanelya' ); ?></p>
 	<?php endif; ?>
+</div>
+
+<?php
+get_template_part( 'template-parts/sections/parcours-commande' );
+get_template_part( 'template-parts/sections/question' );
+?>
 </main>
 <?php
 get_footer();

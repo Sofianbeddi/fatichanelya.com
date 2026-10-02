@@ -97,26 +97,65 @@ function fati_image( $source, $size, $alt = '', $eager = false, $class = '' ) {
 	);
 }
 
-/** Visuel d'un produit, avec repli sur le placeholder de marque. */
-function fati_produit_image( $post_id, $size = 'fati-produit', $class = '' ) {
+/**
+ * Visuel d'un produit, avec repli sur le placeholder de marque.
+ *
+ * $eager : réservé au visuel principal de la fiche produit, qui est l'élément
+ * LCP de la page et ne doit donc jamais être lazy-loadé. $sizes permet au
+ * gabarit de dire la largeur réellement rendue (le filtre de `seo.php` retire
+ * alors le mot-clé « auto » que WordPress préfixe).
+ */
+function fati_produit_image( $post_id, $size = 'fati-produit', $class = '', $eager = false, $sizes = '' ) {
+	$loading = $eager ? 'eager' : 'lazy';
+
 	if ( get_post_meta( $post_id, '_fati_indispo', true ) || ! has_post_thumbnail( $post_id ) ) {
 		return sprintf(
-			'<img src="%s" alt="%s" width="620" height="620" loading="lazy" decoding="async" class="%s">',
+			'<img src="%s" alt="%s" width="620" height="620" loading="%s" decoding="async" class="%s"%s>',
 			esc_url( FATI_URI . '/assets/img/placeholder-produit.svg' ),
 			esc_attr( sprintf( __( 'Visuel à venir pour %s', 'fatichanelya' ), get_the_title( $post_id ) ) ),
-			esc_attr( $class )
+			esc_attr( $loading ),
+			esc_attr( $class ),
+			$eager ? ' fetchpriority="high"' : ''
 		);
 	}
 
-	return get_the_post_thumbnail(
-		$post_id,
-		$size,
-		array(
-			'alt'      => get_the_title( $post_id ),
-			'loading'  => 'lazy',
-			'decoding' => 'async',
-			'class'    => $class,
-		)
+	$attrs = array(
+		'alt'      => get_the_title( $post_id ),
+		'loading'  => $loading,
+		'decoding' => 'async',
+		'class'    => $class,
+	);
+	if ( $eager ) {
+		$attrs['fetchpriority'] = 'high';
+	}
+	if ( $sizes ) {
+		$attrs['sizes'] = $sizes;
+	}
+
+	return get_the_post_thumbnail( $post_id, $size, $attrs );
+}
+
+/**
+ * Les trois métas descriptives d'un produit, lues sur l'emballage et saisies
+ * dans le back-office. Les textareas gardent leurs retours à la ligne : le
+ * gabarit en fait des paragraphes ou des étapes.
+ */
+function fati_produit_details( $post_id ) {
+	$lignes = static function ( $texte ) {
+		$out = array();
+		foreach ( preg_split( '/\R/', (string) $texte ) as $l ) {
+			$l = trim( $l );
+			if ( '' !== $l ) {
+				$out[] = $l;
+			}
+		}
+		return $out;
+	};
+
+	return array(
+		'format'      => trim( (string) get_post_meta( $post_id, '_fati_format', true ) ),
+		'composition' => trim( (string) get_post_meta( $post_id, '_fati_composition', true ) ),
+		'usage'       => $lignes( get_post_meta( $post_id, '_fati_usage', true ) ),
 	);
 }
 
@@ -133,6 +172,11 @@ function fati_produits_json() {
 
 	$out = array();
 
+	// Sans srcset : 26 produits × 2 balises <img> à cinq tailles pesaient
+	// 57 Ko de JSON dans chaque page. Le tiroir et la boîte de dialogue
+	// affichent ces images au plus à 620 px, la taille demandée suffit.
+	add_filter( 'wp_calculate_image_srcset_meta', '__return_false' );
+
 	foreach ( $query->posts as $post ) {
 		$terms = get_the_terms( $post, 'categorie_produit' );
 		$cat   = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0] : null;
@@ -142,8 +186,11 @@ function fati_produits_json() {
 			'id'      => $post->ID,
 			'slug'    => $post->post_name,
 			'nom'     => html_entity_decode( get_the_title( $post ), ENT_QUOTES, 'UTF-8' ),
+			// `null` quand le prix n'est pas encore en base : le JavaScript
+			// affiche alors « prix à confirmer » et laisse l'article hors total.
 			'prix'    => $prix ? (float) $prix : null,
 			'prixFmt' => $prix ? fati_format_prix( $prix ) : '',
+			'format'  => trim( (string) get_post_meta( $post->ID, '_fati_format', true ) ),
 			'cat'     => $cat ? $cat->slug : '',
 			// WordPress stocke « & » échappé en « &amp; ». Le JSON part vers du
 			// JavaScript qui écrit en textContent : sans décodage, la visiteuse
@@ -156,6 +203,7 @@ function fati_produits_json() {
 		);
 	}
 
+	remove_filter( 'wp_calculate_image_srcset_meta', '__return_false' );
 	wp_reset_postdata();
 
 	return $out;
