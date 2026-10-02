@@ -32,9 +32,9 @@ SOURCE = pathlib.Path("tools/medias/produits")
 DESTINATION = pathlib.Path("tools/medias/produits-normalises")
 
 TAILLE = 1000          # côté du carré produit, en pixels
-SURFACE_CIBLE = 0.26   # part de la surface du carré réellement couverte par le produit
-HAUTEUR_MAX = 0.80     # un objet élancé ne dépasse jamais cette part de la hauteur
-LARGEUR_MAX = 0.82     # ni celle-ci en largeur
+SURFACE_CIBLE = 0.34   # part de la surface du carré couverte par le produit (26 % jusqu'au 2 oct. 2026 : produit trop petit sur mobile)
+HAUTEUR_MAX = 0.86     # un objet élancé ne dépasse jamais cette part de la hauteur
+LARGEUR_MAX = 0.86     # ni celle-ci en largeur
 SEUIL_FOND = 244       # au-delà, le pixel est considéré comme du fond blanc
 FOND = (255, 255, 255)
 
