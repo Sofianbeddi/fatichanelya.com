@@ -31,24 +31,34 @@ add_action(
 			'fati',
 			'FATI',
 			array(
-				'whatsapp' => fati_opt( 'whatsapp' ),
+				// Chiffres seuls : c'est ce qu'attend wa.me. Sans numéro, les liens
+				// WhatsApp du script retombent sur la page Contact.
+				'whatsapp' => preg_replace( '/[^0-9]/', '', (string) fati_opt( 'whatsapp' ) ),
+				'contact'  => fati_page_url( 'contact' ) ? fati_page_url( 'contact' ) : home_url( '/' ),
+				// Sur la page Panier, l'icône de l'en-tête n'ouvre pas le tiroir :
+				// il doublerait la page.
+				'surPanier' => is_page( array( 'panier', 'ma-selection' ) ),
 				'i18n'     => array(
-					'added'     => __( '%s ajouté à votre sélection', 'fatichanelya' ),
-					'bag'       => __( 'Ma sélection : %d article', 'fatichanelya' ),
-					'bags'      => __( 'Ma sélection : %d articles', 'fatichanelya' ),
+					/* translators: nom du produit, puis quantité ajoutée. */
+					'ajoute'    => __( '%s × %d', 'fatichanelya' ),
+					'bag'       => __( 'Panier : %d article', 'fatichanelya' ),
+					'bags'      => __( 'Panier : %d articles', 'fatichanelya' ),
+					'dansPanier'  => __( '%d dans votre panier', 'fatichanelya' ),
 					'shown_one' => __( '%d produit affiché', 'fatichanelya' ),
 					'shown'     => __( '%d produits affichés', 'fatichanelya' ),
 					'none'      => __( 'Aucun produit affiché', 'fatichanelya' ),
-					'waIntro'   => __( 'Bonjour Fati, voici ma sélection :', 'fatichanelya' ),
+					'waIntro'   => __( 'Bonjour Fati, voici ma commande :', 'fatichanelya' ),
 					'waTotal'   => __( 'Total indicatif :', 'fatichanelya' ),
 					'waConfirm' => __( 'Pouvez-vous me confirmer la disponibilité et la livraison ?', 'fatichanelya' ),
-					'waHello'   => __( 'Bonjour Fati, j\'aimerais échanger avec vous.', 'fatichanelya' ),
-					'waQuestion'=> __( 'Bonjour Fati, j\'ai une question sur « %s ».', 'fatichanelya' ),
-					'remove'    => __( 'Retirer %s de ma sélection', 'fatichanelya' ),
-					// Produit sans prix en base : il reste sélectionnable, mais il
+					'waHello'   => __( 'Bonjour Fati, je souhaite commander.', 'fatichanelya' ),
+					'remove'    => __( 'Retirer %s du panier', 'fatichanelya' ),
+					'moins'     => __( 'Retirer un %s', 'fatichanelya' ),
+					'plus'      => __( 'Ajouter un %s', 'fatichanelya' ),
+					'quantite'  => __( 'Quantité de %s dans le panier', 'fatichanelya' ),
+					'unite'     => __( '%s l\'unité', 'fatichanelya' ),
+					// Produit sans prix en base : il reste commandable, mais il
 					// n'entre pas dans le total et le dit.
 					'aConfirmer'   => __( 'prix à confirmer', 'fatichanelya' ),
-					'prixDemande'  => __( 'Prix communiqué sur demande', 'fatichanelya' ),
 					'totalPartiel' => __( 'Total indicatif, hors articles à confirmer', 'fatichanelya' ),
 				),
 			)

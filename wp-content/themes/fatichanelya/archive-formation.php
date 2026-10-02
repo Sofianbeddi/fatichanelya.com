@@ -20,7 +20,7 @@ get_template_part( 'template-parts/components/page-banner' );
 <main id="main" class="section training-archive">
 	<header class="section-head section-head--split">
 		<div>
-			<p class="eyebrow"><?php esc_html_e( 'L\'accompagnement par Fati', 'fatichanelya' ); ?></p>
+			<p class="eyebrow"><?php esc_html_e( 'Les programmes', 'fatichanelya' ); ?></p>
 			<h2><?php echo wp_kses( fati_accent( fati_opt( 'training_titre' ) ), array( 'em' => array() ) ); ?></h2>
 		</div>
 		<p class="section-intro"><?php echo esc_html( fati_opt( 'training_intro' ) ); ?></p>
@@ -77,7 +77,7 @@ get_template_part( 'template-parts/components/page-banner' );
 
 	<aside class="training-aside">
 		<h2><?php esc_html_e( 'Vous ne savez pas laquelle choisir ?', 'fatichanelya' ); ?></h2>
-		<p><?php esc_html_e( 'Dites à Fati où vous en êtes et ce que vous voulez atteindre. Elle vous oriente, sans engagement.', 'fatichanelya' ); ?></p>
+		<p><?php esc_html_e( 'Dites à Fati où vous en êtes et ce que vous voulez atteindre. Elle vous indique le programme qui correspond, sans engagement.', 'fatichanelya' ); ?></p>
 		<a class="button button-navy"
 		   href="<?php echo esc_url( fati_wa( __( 'Bonjour Fati, j\'hésite entre plusieurs formations. Pouvez-vous m\'orienter ?', 'fatichanelya' ) ) ); ?>"
 		   <?php echo fati_opt( 'whatsapp' ) ? 'target="_blank" rel="noopener"' : ''; ?>>

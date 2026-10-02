@@ -1,15 +1,15 @@
 <?php
 /**
- * Page « Ma sélection » — l'équivalent du panier, sans paiement en ligne.
+ * Page « Panier », sans paiement en ligne.
  *
  * Le paiement n'est pas branché : cette page ne prétend pas encaisser. Elle
- * récapitule la sélection, laisse ajuster les quantités, et prépare un message
+ * récapitule le panier, laisse ajuster les quantités, et prépare un message
  * WhatsApp complet pour que Fati confirme disponibilité, frais de port réels
  * et total avant tout paiement.
  *
  * Le jour où PayPal sera actif, c'est le bouton de fin de page qui change,
  * pas la structure. Le contenu est rendu par le JavaScript à partir de la
- * sélection enregistrée dans le navigateur : rien n'est stocké côté serveur.
+ * panier enregistré dans le navigateur : rien n'est stocké côté serveur.
  *
  * @package Fatichanelya
  */
@@ -18,14 +18,14 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-set_query_var( 'fati_banner_title', __( 'Ma sélection', 'fatichanelya' ) );
-set_query_var( 'fati_banner_trail', array( array( 'label' => __( 'Ma sélection', 'fatichanelya' ) ) ) );
+set_query_var( 'fati_banner_title', __( 'Panier', 'fatichanelya' ) );
+set_query_var( 'fati_banner_trail', array( array( 'label' => __( 'Panier', 'fatichanelya' ) ) ) );
 get_template_part( 'template-parts/components/page-banner' );
 ?>
 <main id="main" class="section page-selection">
 	<div class="selection-layout">
 		<section class="selection-liste" aria-labelledby="selection-title">
-			<h2 id="selection-title" class="sr-only"><?php esc_html_e( 'Produits sélectionnés', 'fatichanelya' ); ?></h2>
+			<h2 id="selection-title" class="sr-only"><?php esc_html_e( 'Produits dans le panier', 'fatichanelya' ); ?></h2>
 
 			<div class="selection-head" aria-hidden="true">
 				<span><?php esc_html_e( 'Produit', 'fatichanelya' ); ?></span>
@@ -37,9 +37,9 @@ get_template_part( 'template-parts/components/page-banner' );
 			<ul class="selection-items" id="selection-items"></ul>
 
 			<p class="selection-vide" id="selection-vide" hidden>
-				<?php esc_html_e( 'Votre sélection est vide pour le moment.', 'fatichanelya' ); ?>
+				<?php esc_html_e( 'Votre panier est vide pour le moment.', 'fatichanelya' ); ?>
 				<a class="arrow-link" href="<?php echo esc_url( get_post_type_archive_link( 'produit' ) ); ?>">
-					<?php esc_html_e( 'Voir le catalogue', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
+					<?php esc_html_e( 'Voir la boutique', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
 				</a>
 			</p>
 
@@ -48,7 +48,7 @@ get_template_part( 'template-parts/components/page-banner' );
 					<?php esc_html_e( 'Continuer mes achats', 'fatichanelya' ); ?>
 				</a>
 				<button class="text-button" type="button" id="selection-vider">
-					<?php esc_html_e( 'Vider ma sélection', 'fatichanelya' ); ?>
+					<?php esc_html_e( 'Vider le panier', 'fatichanelya' ); ?>
 				</button>
 			</div>
 		</section>
@@ -79,7 +79,7 @@ get_template_part( 'template-parts/components/page-banner' );
 			<a class="button button-gold button-lg button-block" id="selection-wa"
 			   href="<?php echo esc_url( fati_wa( __( 'Bonjour Fati, je souhaite commander.', 'fatichanelya' ) ) ); ?>"
 			   <?php echo fati_opt( 'whatsapp' ) ? 'target="_blank" rel="noopener"' : ''; ?>>
-				<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Envoyer ma sélection à Fati', 'fatichanelya' ); ?>
+				<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Commander sur WhatsApp', 'fatichanelya' ); ?>
 			</a>
 
 			<p class="selection-paiement">

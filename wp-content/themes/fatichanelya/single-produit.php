@@ -1,6 +1,6 @@
 <?php
 /**
- * Fiche produit complète (l'accueil ouvre une version condensée en <dialog>).
+ * Fiche produit. Toutes les cartes du site y mènent.
  *
  * C'est la page où se décide l'achat. Elle répond donc, dans l'ordre, aux
  * questions qui arrêtent une acheteuse : ce que c'est, combien ça coûte et
@@ -12,9 +12,10 @@
  * (`_fati_format`, `_fati_composition`, `_fati_usage`). Un bloc dont la
  * donnée manque n'est pas rendu.
  *
- * L'action principale est « Ajouter à ma sélection » : la fiche alimente le
- * même parcours que la grille, et c'est la sélection complète qui part en
- * message à Fati. « Poser une question » reste la sortie directe.
+ * L'action principale est « Ajouter au panier », précédée du choix de la
+ * quantité : la fiche alimente le même panier que les cartes, et c'est le
+ * panier complet qui part en message à Fati. « Poser une question » reste la
+ * sortie directe.
  *
  * @package Fatichanelya
  */
@@ -32,7 +33,6 @@ while ( have_posts() ) :
 	$cat     = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0] : null;
 	$titre   = get_the_title();
 
-	// Même message que la boîte de dialogue produit (`waQuestion` dans assets.php).
 	$question = fati_wa( sprintf( __( 'Bonjour Fati, j\'ai une question sur « %s ».', 'fatichanelya' ), $titre ) );
 	$cible    = fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : '';
 	$trail    = array(
@@ -89,14 +89,47 @@ while ( have_posts() ) :
 					<p class="produit-accroche"><?php echo esc_html( get_the_excerpt() ); ?></p>
 				<?php endif; ?>
 
+				<?php
+				// Points clés : ce que le produit est, pas ce qu'il ferait à la
+				// santé. Sur mobile la liste passe sous le bouton (voir CSS) pour
+				// que prix et bouton restent visibles sans défiler.
+				if ( $details['points'] ) :
+					?>
+					<ul class="produit-points">
+						<?php foreach ( $details['points'] as $point ) : ?>
+							<li><?php echo fati_icon( 'check', 20 ); ?><span><?php echo esc_html( $point ); ?></span></li>
+						<?php endforeach; ?>
+					</ul>
+				<?php endif; ?>
+
+				<?php
+				// On choisit la quantité, puis on ajoute : le bouton confirme sur
+				// place (« Ajouté »), le panier de l'en-tête se met à jour, et la
+				// ligne du dessous rappelle ce qui s'y trouve déjà.
+				?>
 				<div class="produit-actions">
-					<button class="button button-navy button-lg" type="button" data-add="<?php echo esc_attr( $id ); ?>">
-						<?php echo fati_icon( 'bag', 22 ); ?><?php esc_html_e( 'Ajouter à ma sélection', 'fatichanelya' ); ?>
+					<div class="qty qty--lg" role="group" aria-label="<?php esc_attr_e( 'Quantité', 'fatichanelya' ); ?>">
+						<button class="qty-btn" type="button" data-pick-step="-1" aria-label="<?php esc_attr_e( 'Diminuer la quantité', 'fatichanelya' ); ?>"><?php echo fati_icon( 'minus', 20 ); ?></button>
+						<label class="sr-only" for="produit-qte"><?php esc_html_e( 'Quantité', 'fatichanelya' ); ?></label>
+						<input class="qty-val" id="produit-qte" type="number" inputmode="numeric" min="1" max="99" step="1" value="1" data-pick>
+						<button class="qty-btn" type="button" data-pick-step="1" aria-label="<?php esc_attr_e( 'Augmenter la quantité', 'fatichanelya' ); ?>"><?php echo fati_icon( 'plus', 20 ); ?></button>
+					</div>
+					<button class="button button-navy button-lg add-button" type="button" data-add="<?php echo esc_attr( $id ); ?>" data-add-pick="produit-qte">
+						<span class="add-label"><?php echo fati_icon( 'bag', 22 ); ?><?php esc_html_e( 'Ajouter au panier', 'fatichanelya' ); ?></span>
+						<span class="add-done" aria-hidden="true"><?php echo fati_icon( 'check', 22 ); ?><?php esc_html_e( 'Ajouté', 'fatichanelya' ); ?></span>
 					</button>
-					<a class="button button-outline button-lg" href="<?php echo esc_url( $question ); ?>"<?php echo $cible; ?>>
-						<?php echo fati_icon( 'whatsapp', 22 ); ?><?php esc_html_e( 'Poser une question', 'fatichanelya' ); ?>
-					</a>
 				</div>
+
+				<p class="produit-panier" data-inbag="<?php echo esc_attr( $id ); ?>" hidden>
+					<span data-inbag-texte></span>
+					<a class="arrow-link" href="<?php echo esc_url( fati_panier_url() ); ?>" data-open-bag>
+						<?php esc_html_e( 'Voir le panier', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
+					</a>
+				</p>
+
+				<a class="text-button produit-question" href="<?php echo esc_url( $question ); ?>"<?php echo $cible; ?>>
+					<?php echo fati_icon( 'whatsapp', 20 ); ?><?php esc_html_e( 'Poser une question sur ce produit', 'fatichanelya' ); ?>
+				</a>
 
 				<p class="produit-cadrage">
 					<?php esc_html_e( 'On confirme ensemble la disponibilité, les frais de port réels et le total avant tout paiement. Le paiement en ligne n\'est pas encore activé.', 'fatichanelya' ); ?>
@@ -232,8 +265,9 @@ while ( have_posts() ) :
 					<?php echo $prix ? esc_html( fati_format_prix( $prix ) ) : esc_html__( 'Prix communiqué sur demande', 'fatichanelya' ); ?>
 				</p>
 			</div>
-			<button class="button button-navy button-lg" type="button" data-add="<?php echo esc_attr( $id ); ?>">
-				<?php echo fati_icon( 'bag', 22 ); ?><?php esc_html_e( 'Ajouter à ma sélection', 'fatichanelya' ); ?>
+			<button class="button button-navy button-lg add-button" type="button" data-add="<?php echo esc_attr( $id ); ?>">
+				<span class="add-label"><?php echo fati_icon( 'bag', 22 ); ?><?php esc_html_e( 'Ajouter au panier', 'fatichanelya' ); ?></span>
+				<span class="add-done" aria-hidden="true"><?php echo fati_icon( 'check', 22 ); ?><?php esc_html_e( 'Ajouté', 'fatichanelya' ); ?></span>
 			</button>
 		</aside>
 	</main>

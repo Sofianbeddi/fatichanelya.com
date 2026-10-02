@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 
 $etapes = array(
 	array(
-		__( 'Vous composez votre sélection', 'fatichanelya' ),
+		__( 'Vous remplissez votre panier', 'fatichanelya' ),
 		__( 'Ajoutez les produits qui vous intéressent, sans engagement.', 'fatichanelya' ),
 	),
 	array(

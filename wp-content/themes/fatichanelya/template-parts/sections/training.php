@@ -23,12 +23,12 @@ if ( ! $formations->have_posts() ) {
 			// d'une personne qui n'était pas Fati, retirée le 2 oct. 2026.
 			echo fati_image( fati_opt( 'training_image' ), 'fati-paysage', __( 'Un bureau calme en bois clair, carnet bleu nuit et tasse de thé près de la fenêtre', 'fatichanelya' ) );
 			?>
-			<figcaption><?php esc_html_e( 'Un accompagnement humain, adapté à votre point de départ.', 'fatichanelya' ); ?></figcaption>
+			<figcaption><?php esc_html_e( 'Des formations à distance, à suivre depuis chez vous.', 'fatichanelya' ); ?></figcaption>
 		</figure>
 	<?php endif; ?>
 
 	<div class="training-copy">
-		<p class="eyebrow"><?php esc_html_e( 'L\'accompagnement par Fati', 'fatichanelya' ); ?></p>
+		<p class="eyebrow"><?php esc_html_e( 'Formations à distance', 'fatichanelya' ); ?></p>
 		<h2 id="training-title"><?php echo wp_kses( fati_accent( fati_opt( 'training_titre' ) ), array( 'em' => array() ) ); ?></h2>
 		<p class="section-intro"><?php echo esc_html( fati_opt( 'training_intro' ) ); ?></p>
 

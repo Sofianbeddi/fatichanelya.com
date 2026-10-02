@@ -73,9 +73,6 @@ get_template_part( 'template-parts/components/assurance' );
 </footer>
 
 <?php get_template_part( 'template-parts/components/bag-drawer' ); ?>
-<?php get_template_part( 'template-parts/components/product-dialog' ); ?>
-
-<p class="toast" id="toast" role="status" aria-live="polite" hidden></p>
 
 <?php wp_footer(); ?>
 </body>

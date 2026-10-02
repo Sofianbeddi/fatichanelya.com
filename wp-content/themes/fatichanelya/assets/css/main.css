@@ -263,6 +263,12 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   display:grid;place-items:center;min-inline-size:19px;block-size:19px;padding-inline:4px;
   border-radius:var(--r-pill);background:var(--gold);color:var(--navy-deep);
   font-size:.65rem;font-weight:800;line-height:1}
+/* À chaque ajout, l'icône et sa pastille rebondissent : le total qui change
+   se voit, même quand on regardait la carte. */
+.bag-button.is-bump .i{animation:bag-nudge .5s var(--ease-out)}
+.bag-button.is-bump .bag-count{animation:bag-bump .5s var(--ease-out)}
+@keyframes bag-nudge{35%{transform:translateY(-3px) scale(1.08)}}
+@keyframes bag-bump{35%{transform:scale(1.5)}}
 .header-cta{margin-inline-start:.5rem;min-height:44px;padding-inline:1.15rem}
 .burger{display:none}
 
@@ -445,14 +451,17 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   transition:border-color var(--t-base)}
 @media (hover:hover){
   .product-card:hover{border-color:var(--line-strong)}
-  .product-card:hover .product-name{color:var(--gold-ink)}}
+  .product-card:hover .product-name{color:var(--gold-ink)}
+  .product-card:hover .product-media img{transform:scale(1.03)}}
 /* Fond blanc : les visuels sont des packshots sur fond blanc, le cadre ne
    doit pas se voir autour d'eux. */
 .product-media{position:relative;display:block;inline-size:100%;background:var(--surface);
   border:0;overflow:hidden;aspect-ratio:1}
-.product-media img{inline-size:100%;block-size:100%;object-fit:cover}
-/* Pas de pastille « Voir la fiche » en fondu : la vignette entière est déjà un
-   lien, et un libellé qui apparaît au survol n'existe pas au toucher. */
+.product-media img{inline-size:100%;block-size:100%;object-fit:cover;
+  transition:transform var(--t-enter) var(--ease-out)}
+/* Pas de pastille « Voir la fiche » en fondu : le visuel et le nom sont déjà
+   des liens vers la fiche, et un libellé qui apparaît au survol n'existe pas
+   au toucher. */
 .product-flag{position:absolute;inset-block-start:10px;inset-inline-start:10px;
   padding:.3rem .65rem;border-radius:var(--r-pill);background:var(--navy);color:#fff;
   font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
@@ -477,8 +486,12 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .product-price--demande{color:var(--muted)}
 /* `auto` et non une valeur fixe : la ligne de contenance n'existe pas sur
    toutes les cartes, et les boutons d'une même rangée doivent rester alignés
-   en bas quelle que soit la hauteur du texte au-dessus. */
-.product-add{margin-block-start:auto;min-height:44px;padding-inline:1rem;
+   en bas quelle que soit la hauteur du texte au-dessus. Le bouton et le
+   sélecteur de quantité se remplacent l'un l'autre dans la même boîte : la
+   carte ne change pas de hauteur quand le produit entre au panier. */
+.product-buy{display:grid;margin-block-start:auto;padding-block-start:.35rem}
+.product-add{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+  min-height:44px;padding-inline:1rem;
   border-radius:var(--r-pill);border:1.5px solid var(--navy);color:var(--navy);
   font-size:var(--fs-label);font-weight:700;
   /* Le libellé reste sur une ligne. Plus de troncature par points de
@@ -487,6 +500,47 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   white-space:nowrap;
   transition:background var(--t-micro),color var(--t-micro)}
 @media (hover:hover){.product-add:hover{background:var(--navy);color:#fff}}
+
+/* ---------- SÉLECTEUR DE QUANTITÉ ----------
+   « − 2 + » : le même sur les cartes, la fiche produit, le tiroir et la page
+   Panier. Sur une carte il est plein, en bleu marine : il dit d'un coup d'œil
+   que le produit est dans le panier. */
+.qty{display:inline-flex;align-items:center;justify-content:space-between;
+  border:1.5px solid var(--line-strong);border-radius:var(--r-pill);
+  background:var(--surface);color:var(--navy)}
+.qty-btn{display:grid;place-items:center;flex:none;inline-size:44px;min-block-size:41px;
+  border-radius:var(--r-pill);color:inherit;transition:background var(--t-micro)}
+.qty-btn:focus-visible{outline-offset:-3px;border-radius:var(--r-pill)}
+@media (hover:hover){.qty-btn:hover{background:var(--ivory)}}
+.qty-val{min-inline-size:2rem;text-align:center;font-size:var(--fs-label);font-weight:700;
+  font-variant-numeric:tabular-nums}
+input.qty-val{inline-size:3rem;padding:0;border:0;background:none;
+  -moz-appearance:textfield;appearance:textfield}
+input.qty-val::-webkit-outer-spin-button,
+input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.qty--plein{inline-size:100%;border-color:var(--navy);background:var(--navy);color:#fff}
+.qty--plein .qty-btn:focus-visible{outline-color:var(--gold-light)}
+@media (hover:hover){.qty--plein .qty-btn:hover{background:#FFFFFF24}}
+.qty--sm .qty-btn{inline-size:38px;min-block-size:35px}
+.qty--lg .qty-btn{inline-size:50px;min-block-size:55px}
+.qty--lg .qty-val{font-size:1rem}
+.qty.is-pop{animation:qty-pop .34s var(--ease-out)}
+@keyframes qty-pop{from{transform:scale(.9);opacity:.35}}
+
+/* Bouton d'ajout de la fiche : il confirme sur place. Les deux libellés
+   occupent la même cellule, la largeur du bouton ne bouge pas. */
+.add-button{display:inline-grid;place-items:center}
+.add-button > span{grid-area:1/1;display:inline-flex;align-items:center;justify-content:center;
+  gap:.7rem;white-space:nowrap;
+  transition:opacity var(--t-micro),transform var(--t-base) var(--ease-out)}
+.add-done{opacity:0;transform:translateY(8px)}
+.add-button.is-added{background:var(--gold);color:var(--navy-deep)}
+.add-button.is-added .add-label{opacity:0;transform:translateY(-8px)}
+.add-button.is-added .add-done{opacity:1;transform:none}
+
+/* Le visuel qui file vers l'icône du panier à l'ajout. */
+.fly{position:fixed;z-index:130;margin:0;border-radius:var(--r-md);object-fit:cover;
+  background:var(--surface);box-shadow:var(--shadow-float);pointer-events:none;will-change:transform}
 .no-result{max-inline-size:100%;padding-block:2rem;color:var(--muted)}
 .shop-note{max-inline-size:100%;margin-block-start:2rem;
   font-size:.76rem;color:var(--muted)}
@@ -509,6 +563,8 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 @media (hover:hover){.training-list li:hover{border-block-start-color:var(--navy)}}
 @media (hover:hover){.training-list li:hover{border-color:var(--navy);transform:translateX(4px)}}
 .training-list p{color:var(--muted);font-size:.9rem}
+.training-list li{position:relative}
+.training-list .arrow-link::after{content:"";position:absolute;inset:0}
 @media (max-width:920px){.training{grid-template-columns:1fr}
   .training-media{max-inline-size:460px}}
 
@@ -625,52 +681,83 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .footer-bottom p{margin:0}
 @media (max-width:900px){.footer-top{grid-template-columns:1fr}}
 
-/* ---------- 17. PANNEAU SÉLECTION ---------- */
+/* ---------- 17. TIROIR DU PANIER ---------- */
 .drawer-backdrop{position:fixed;inset:0;z-index:90;background:var(--navy)80;
   -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.drawer-backdrop:not([hidden]){animation:fondu var(--t-base) both}
 .drawer{position:fixed;inset-block:0;inset-inline-end:0;z-index:95;
-  display:flex;flex-direction:column;inline-size:min(100%,400px);
+  display:flex;flex-direction:column;inline-size:min(100%,420px);
   background:var(--paper);box-shadow:var(--shadow-float)}
+.drawer:not([hidden]){animation:tiroir var(--t-base) var(--ease-out) both}
+@keyframes fondu{from{opacity:0}}
+@keyframes tiroir{from{transform:translateX(100%)}}
+[dir="rtl"] .drawer:not([hidden]){animation-name:tiroir-rtl}
+@keyframes tiroir-rtl{from{transform:translateX(-100%)}}
 .drawer-head{display:flex;align-items:center;justify-content:space-between;
   padding:1.15rem 1.25rem;border-block-end:1px solid var(--line)}
 .drawer-head h2{font-size:1.3rem}
-.drawer-list{flex:1;overflow-y:auto;padding:1rem 1.25rem;display:grid;gap:.75rem;align-content:start}
-.drawer-list li{display:grid;grid-template-columns:56px 1fr auto;gap:.8rem;align-items:center}
-.drawer-list img{inline-size:56px;block-size:56px;object-fit:cover;border-radius:var(--r-sm)}
-.drawer-list .dl-name{font-size:.85rem;font-weight:600}
-.drawer-list .dl-price{font-size:.78rem;color:var(--muted)}
-.drawer-empty{padding:1.5rem 1.25rem;color:var(--muted);font-size:.88rem}
-.drawer-foot{padding:1.25rem;border-block-start:1px solid var(--line);display:grid;gap:.85rem}
-.drawer-total{display:flex;justify-content:space-between;align-items:baseline;font-size:.85rem;color:var(--muted)}
+.drawer-list{flex:1;overflow-y:auto;padding-inline:1.25rem;align-content:start}
+/* Une ligne : visuel, nom, prix à l'unité, puis quantité et montant. */
+.drawer-item{display:grid;grid-template-columns:64px minmax(0,1fr) auto;
+  grid-template-areas:"media nom retirer" "media unite unite" "media qte montant";
+  gap:.15rem .85rem;align-items:center;padding-block:1.05rem;
+  border-block-end:1px solid var(--line)}
+.drawer-item-media{grid-area:media;align-self:start;inline-size:64px;block-size:64px;
+  border-radius:var(--r-sm);overflow:hidden;background:var(--surface)}
+.drawer-item-media img{inline-size:100%;block-size:100%;object-fit:cover}
+.drawer-item-nom{grid-area:nom;font-size:.88rem;font-weight:600;line-height:1.3;color:var(--navy)}
+@media (hover:hover){a.drawer-item-nom:hover{color:var(--gold-ink)}}
+.drawer-item-unite{grid-area:unite;font-size:.78rem;color:var(--muted)}
+.drawer-item .qty{grid-area:qte;justify-self:start;margin-block-start:.5rem}
+.drawer-item-montant{grid-area:montant;margin-block-start:.5rem;font-weight:700;
+  color:var(--navy);font-variant-numeric:tabular-nums}
+.drawer-item-retirer{grid-area:retirer;align-self:start;display:grid;place-items:center;
+  inline-size:32px;block-size:32px;margin-block-start:-.35rem;margin-inline-end:-.45rem;
+  border-radius:var(--r-pill);color:var(--muted);
+  transition:background var(--t-micro),color var(--t-micro)}
+@media (hover:hover){.drawer-item-retirer:hover{background:var(--ivory);color:var(--ink)}}
+.drawer-empty{flex:1;display:grid;gap:.4rem;align-content:start;justify-items:start;
+  padding:1.5rem 1.25rem;color:var(--muted);font-size:.9rem}
+.drawer-foot{padding:1.25rem;border-block-start:1px solid var(--line);display:grid;gap:.7rem}
+.drawer-total{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  font-size:.85rem;color:var(--muted)}
 .drawer-total strong{font-family:var(--font-display);font-size:1.4rem;color:var(--navy)}
 .drawer-note{font-size:.72rem;color:var(--muted)}
 
-/* ---------- 18. FICHE PRODUIT ---------- */
-.product-dialog{inline-size:min(100%,860px);padding:0;border:0;border-radius:var(--r-lg);
-  background:var(--paper);color:var(--ink);box-shadow:var(--shadow-float)}
-.product-dialog::backdrop{background:var(--navy)8C;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
-.pd-close{position:absolute;inset-block-start:12px;inset-inline-end:12px;z-index:2;
-  background:var(--surface);box-shadow:var(--shadow-card)}
-.pd-body{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
-.pd-body img{inline-size:100%;block-size:100%;object-fit:cover;background:var(--ivory);
-  border-start-start-radius:var(--r-lg);border-end-start-radius:var(--r-lg)}
-.pd-copy{display:grid;gap:.7rem;align-content:start;padding:clamp(1.5rem,3vw,2.4rem)}
-.pd-copy h2{font-size:clamp(1.4rem,1.1rem + 1vw,2rem)}
-.pd-price{font-family:var(--font-display);font-size:1.6rem;color:var(--gold-ink)}
-.pd-price--demande{font-size:1.1rem;color:var(--muted)}
-.pd-format{margin-block-start:-.35rem;font-size:var(--fs-label);color:var(--muted)}
-.pd-desc{color:var(--muted);font-size:.92rem}
-.pd-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-block-start:.5rem}
-.pd-legal{font-size:.72rem;color:var(--muted)}
-@media (max-width:720px){.pd-body{grid-template-columns:1fr}
-  .pd-body img{aspect-ratio:4/3;border-radius:var(--r-lg) var(--r-lg) 0 0}}
-
-/* ---------- 19. TOAST ---------- */
-.toast{position:fixed;inset-block-end:22px;inset-inline-start:50%;z-index:120;
-  padding:.85rem 1.4rem;border-radius:var(--r-pill);background:var(--navy);color:#fff;
-  font-size:.82rem;font-weight:600;box-shadow:var(--shadow-float);
-  transform:translate(-50%,120%);transition:transform var(--t-base) var(--ease-out)}
-.toast.is-visible{transform:translate(-50%,0)}
+/* ---------- 19. CONFIRMATION D'AJOUT ----------
+   Visuel, nom, quantité et accès au panier. En bas sur mobile, sous l'en-tête
+   près de l'icône du panier sur grand écran. */
+.toast{position:fixed;z-index:120;inset-block-end:16px;inset-inline:16px;
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:.8rem;
+  padding:.7rem .8rem;border-radius:var(--r-md);background:var(--navy);color:#fff;
+  box-shadow:var(--shadow-float);
+  opacity:0;transform:translateY(16px);
+  transition:opacity var(--t-base),transform var(--t-base) var(--ease-out)}
+.toast.is-visible{opacity:1;transform:none}
+.toast-media{inline-size:48px;block-size:48px;border-radius:var(--r-sm);overflow:hidden;
+  background:var(--surface)}
+.toast-media:empty{display:none}
+.toast-media img{inline-size:100%;block-size:100%;object-fit:cover}
+.toast-copy{display:grid;gap:.1rem;min-inline-size:0;font-size:.8rem;line-height:1.35;
+  color:var(--text-on-navy-2)}
+.toast-copy strong{display:inline-flex;align-items:center;gap:.4rem;font-size:.86rem;color:#fff;
+  white-space:nowrap}
+.toast-copy strong .i{color:var(--gold-light)}
+/* Deux lignes au plus pour le nom : coupé net, il ne dirait plus quel
+   produit vient d'être ajouté. */
+.toast-copy span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.toast-action{min-block-size:40px;padding-inline:.95rem;border-radius:var(--r-pill);
+  background:var(--gold);color:var(--navy-deep);font-size:.78rem;font-weight:700;white-space:nowrap}
+.toast-action:focus-visible{outline-color:var(--gold-light)}
+@media (max-width:699px){
+  .toast{gap:.6rem}
+  .toast-copy strong{font-size:.8rem}
+  .toast-action{padding-inline:.8rem;font-size:.74rem}
+}
+@media (min-width:700px){
+  .toast{inset-block:var(--toast-top,134px) auto;inset-inline:auto var(--bord);
+    inline-size:min(430px,calc(100vw - 2rem));transform:translateY(-12px)}
+}
 
 /* ---------- 20. PERF ----------
    content-visibility:auto retiré volontairement : gain nul ici (LCP 1,5 s / TBT 80 ms
@@ -690,14 +777,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .mobile-panel li:last-child a{border:0;color:var(--gold-ink)}
 .footer-nav li{display:block}
 
-/* Fiche produit : le conteneur du visuel est un <div> rempli par le JS.
-   Fond blanc, comme les packshots qu'il reçoit. */
-.pd-media{display:grid;background:var(--surface)}
-.pd-media img{inline-size:100%;block-size:100%;object-fit:cover;
-  border-start-start-radius:var(--r-lg);border-end-start-radius:var(--r-lg)}
-@media (max-width:720px){
-  .pd-media img{aspect-ratio:4/3;border-radius:var(--r-lg) var(--r-lg) 0 0}
-}
+
 
 /* Pages de contenu : mentions légales, confidentialité, CGV, livraison.
    Ce sont des documents longs qui se parcourent en diagonale avant de se lire.
@@ -872,8 +952,21 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 
 .produit-accroche{max-width:52ch;font-size:var(--fs-lead);color:var(--muted)}
 .produit-cadrage{max-width:52ch;font-size:var(--fs-label);color:var(--muted)}
+/* Points clés : liste cochée de faits sur le produit. La coche est en
+   --gold-ink, pas en --gold : elle reste lisible sur beige (5,19:1). */
+.produit-points{display:grid;gap:.4rem;max-width:52ch;color:var(--ink)}
+.produit-points li{display:flex;align-items:flex-start;gap:.6rem}
+.produit-points .i{inline-size:20px;block-size:20px;margin-block-start:.22em;
+  color:var(--gold-ink);stroke-width:2}
 .produit-actions{display:flex;flex-wrap:wrap;gap:.75rem;inline-size:100%;
   margin-block-start:.35rem}
+.produit-actions .add-button{flex:1 1 13rem;max-inline-size:22rem}
+/* « 2 dans votre panier — Voir le panier » : n'apparaît qu'après un ajout. */
+.produit-panier{display:flex;flex-wrap:wrap;align-items:center;gap:.15rem 1.1rem;
+  font-size:var(--fs-label);font-weight:700;color:var(--navy)}
+.produit-panier .arrow-link{min-height:36px}
+.produit-question{justify-self:start;color:var(--muted)}
+@media (hover:hover){.produit-question:hover{color:var(--navy)}}
 
 /* Mobile : image en premier, puis nom, prix et bouton principal — tous
    visibles sans défiler à 375 × 667, mesuré sur le titre le plus long du
@@ -894,8 +987,14 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   .produit-page{padding-block-start:1.25rem}
   .produit-media{block-size:max(200px,min(34vh,100vw - 2.5rem))}
   .produit-accroche{order:1}
+  .produit-points{order:1}
   .produit-cadrage{order:2}
-  .produit-actions .button{flex:1 1 100%}
+  /* Quantité et bouton sur la même ligne : le bouton prend la place qui
+     reste, le sélecteur se resserre pour la lui laisser à 375 px. */
+  .produit-actions{flex-wrap:nowrap}
+  .produit-actions .add-button{flex:1 1 0;min-inline-size:0;max-inline-size:none;padding-inline:1rem}
+  .produit-actions .qty--lg .qty-btn{inline-size:42px}
+  .produit-panier{order:0}
 }
 @media (min-width:900px){
   .produit-achat{grid-template-columns:minmax(0,45fr) minmax(0,55fr)}
@@ -1099,9 +1198,8 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .section--navy .eyebrow{color:var(--gold-light)}
 
 
-.drawer-voir{justify-self:center;margin-block-start:.35rem;font-size:var(--fs-label)}
 
-/* ---------- PAGE « MA SÉLECTION » ----------
+/* ---------- PAGE « PANIER » ----------
    Structure du panier de la référence, sans paiement en ligne : le
    récapitulatif prépare un message, il n'encaisse rien. */
 .page-selection{display:grid;grid-template-columns:minmax(0,1fr)}
@@ -1119,30 +1217,25 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   border-block-start:1px solid var(--line)}
 .selection-item:last-child{border-block-end:1px solid var(--line)}
 
-.selection-item-retirer{grid-area:retirer;inline-size:32px;block-size:32px;
-  border-radius:var(--r-pill);color:var(--muted);font-size:1.1rem;line-height:1;
+.selection-item-retirer{grid-area:retirer;display:grid;place-items:center;
+  inline-size:32px;block-size:32px;
+  border-radius:var(--r-pill);color:var(--muted);
   transition:background var(--t-micro),color var(--t-micro)}
 @media (hover:hover){.selection-item-retirer:hover{background:var(--ivory);color:var(--ink)}}
 
-.selection-item-media{grid-area:media;inline-size:72px;block-size:72px;
+.selection-item-media{grid-area:media;display:block;inline-size:72px;block-size:72px;
   border-radius:var(--r-sm);overflow:hidden;background:var(--ivory)}
 .selection-item-media img{inline-size:100%;block-size:100%;object-fit:cover}
 
 .selection-item-nom{grid-area:nom;display:grid;gap:.1rem}
-.selection-item-nom p{font-weight:var(--fw-title);color:var(--ink);line-height:1.25}
+.selection-item-titre{font-weight:var(--fw-title);color:var(--ink);line-height:1.25}
+@media (hover:hover){a.selection-item-titre:hover{color:var(--gold-ink)}}
 .selection-item-nom span{font-size:var(--fs-label);color:var(--muted)}
 
 .selection-item-prix{grid-area:prix;color:var(--muted)}
 .selection-item-soustotal{grid-area:soustotal;font-weight:var(--fw-title);color:var(--ink)}
 
-.selection-item-qte{grid-area:qte;display:inline-flex;align-items:center;
-  border:1px solid var(--line-mid);border-radius:var(--r-pill);inline-size:fit-content}
-.selection-item-qte button{inline-size:38px;min-block-size:38px;
-  color:var(--ink);font-size:1rem;line-height:1;
-  transition:color var(--t-micro)}
-@media (hover:hover){.selection-item-qte button:hover{color:var(--gold-ink)}}
-.selection-item-qte span{min-inline-size:2.25rem;text-align:center;
-  font-weight:var(--fw-title);font-variant-numeric:tabular-nums}
+.selection-item-qte{grid-area:qte;inline-size:fit-content}
 
 .selection-vide{display:grid;gap:.6rem;justify-items:start;
   padding-block:2.5rem;color:var(--muted)}
@@ -1197,7 +1290,11 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
    Une formation sans image se lit comme une ligne de liste : le visuel lui
    donne le poids d'une offre. Il reste en retrait, sans ombre ni contour,
    pour ne pas réintroduire la carte que le reste du site a écartée. */
-.training-card-media{display:block;margin-block-end:1.1rem;
+/* Deux cartes d'une même rangée n'ont pas la même hauteur dès qu'un titre
+   passe sur deux lignes : sans `align-content:start` la plus courte étirait
+   ses rangées, et le visuel, tenu par son ratio, s'élargissait avec elles. */
+.training-card{align-content:start}
+.training-card-media{display:block;inline-size:100%;margin-block-end:1.1rem;
   border-radius:var(--r-md);overflow:hidden;background:var(--ivory);
   aspect-ratio:4/3}
 .training-card-media img{inline-size:100%;block-size:100%;object-fit:cover;

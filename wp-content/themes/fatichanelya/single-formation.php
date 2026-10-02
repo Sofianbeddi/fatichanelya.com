@@ -2,9 +2,12 @@
 /**
  * Fiche d'une formation.
  *
- * Le prix et le format ne sont pas publics : la conversion passe par un
- * message WhatsApp prérempli, pas par un panier. Aucun champ n'est inventé —
- * un bloc dont la donnée manque ne s'affiche pas.
+ * Le prix n'est pas public : la conversion passe par un message WhatsApp
+ * prérempli, pas par un panier. Aucun champ n'est inventé — un bloc dont la
+ * donnée manque ne s'affiche pas.
+ *
+ * Fati revend ces formations, elle ne les anime pas : la fiche ne nomme ni
+ * formateur ni accompagnant, elle dit seulement qu'elles se suivent à distance.
  *
  * @package Fatichanelya
  */
@@ -48,7 +51,7 @@ while ( have_posts() ) :
 
 	<article class="formation-body">
 		<header class="formation-head">
-			<p class="eyebrow"><?php esc_html_e( 'L\'accompagnement par Fati', 'fatichanelya' ); ?></p>
+			<p class="eyebrow"><?php esc_html_e( 'Programme de formation', 'fatichanelya' ); ?></p>
 			<h2><?php echo esc_html( $titre ); ?></h2>
 
 			<?php if ( $niveau || $duree ) : ?>
@@ -67,7 +70,7 @@ while ( have_posts() ) :
 					<?php endif; ?>
 					<div>
 						<dt><?php esc_html_e( 'Format', 'fatichanelya' ); ?></dt>
-						<dd><?php esc_html_e( 'À distance, avec Fati', 'fatichanelya' ); ?></dd>
+						<dd><?php esc_html_e( 'À distance', 'fatichanelya' ); ?></dd>
 					</div>
 				</dl>
 			<?php endif; ?>

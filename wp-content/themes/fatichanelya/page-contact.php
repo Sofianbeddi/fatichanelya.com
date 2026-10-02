@@ -6,6 +6,11 @@
  * il n'existe aucun service d'envoi connecté, et un formulaire qui perd
  * les messages fait plus de mal que pas de formulaire du tout.
  *
+ * Tant que le numéro WhatsApp n'est pas saisi dans les réglages, aucun bouton
+ * WhatsApp n'est affiché ici : tous les autres boutons « Écrire à Fati » du
+ * site aboutissent sur cette page, et un bouton qui y ramène tournerait en
+ * rond. Le seul canal réel, TikTok, prend alors la première place.
+ *
  * @package Fatichanelya
  */
 
@@ -17,15 +22,19 @@ set_query_var( 'fati_banner_title', __( 'Contact', 'fatichanelya' ) );
 set_query_var( 'fati_banner_trail', array( array( 'label' => __( 'Contact', 'fatichanelya' ) ) ) );
 get_template_part( 'template-parts/components/page-banner' );
 
-$cible = fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : '';
+$whatsapp = fati_whatsapp_actif();
+$cible    = $whatsapp ? ' target="_blank" rel="noopener"' : '';
 ?>
 <main id="main" class="section page-contact">
 	<header class="contact-head">
-		<p class="eyebrow"><?php esc_html_e( 'WhatsApp · direct', 'fatichanelya' ); ?></p>
+		<?php if ( $whatsapp ) : ?>
+			<p class="eyebrow"><?php esc_html_e( 'WhatsApp · direct', 'fatichanelya' ); ?></p>
+		<?php endif; ?>
 		<h2><?php echo wp_kses( fati_accent( fati_opt( 'contact_titre' ) ), array( 'em' => array() ) ); ?></h2>
 		<p class="contact-intro"><?php echo esc_html( fati_opt( 'contact_intro' ) ); ?></p>
 	</header>
 
+	<?php if ( $whatsapp ) : ?>
 	<section class="contact-choix" aria-labelledby="choix-title">
 		<h2 id="choix-title" class="sr-only"><?php esc_html_e( 'Choisir le bon message', 'fatichanelya' ); ?></h2>
 		<ul>
@@ -49,7 +58,7 @@ $cible = fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : '';
 				<strong><?php esc_html_e( 'Une formation', 'fatichanelya' ); ?></strong>
 				<p><?php esc_html_e( 'Programme, dates et tarif vous sont envoyés par message, sans engagement.', 'fatichanelya' ); ?></p>
 				<a class="arrow-link"
-				   href="<?php echo esc_url( fati_wa( __( 'Bonjour Fati, je souhaite des informations sur vos formations.', 'fatichanelya' ) ) ); ?>"<?php echo $cible; ?>>
+				   href="<?php echo esc_url( fati_wa( __( 'Bonjour Fati, je souhaite des informations sur les formations.', 'fatichanelya' ) ) ); ?>"<?php echo $cible; ?>>
 					<?php esc_html_e( 'Demander le programme', 'fatichanelya' ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
 				</a>
 			</li>
@@ -63,8 +72,16 @@ $cible = fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : '';
 		</a>
 		<p class="contact-note"><?php esc_html_e( 'Réponse sous 24 h en semaine. Aucun conseil médical n\'est donné par message.', 'fatichanelya' ); ?></p>
 	</aside>
+	<?php elseif ( fati_opt( 'tiktok' ) ) : ?>
+	<aside class="contact-cta">
+		<a class="button button-gold button-lg" href="<?php echo esc_url( fati_opt( 'tiktok' ) ); ?>" target="_blank" rel="noopener">
+			<?php esc_html_e( 'Écrire à Fati sur TikTok', 'fatichanelya' ); ?><?php echo fati_icon( 'external', 22 ); ?>
+		</a>
+		<p class="contact-note"><?php esc_html_e( 'Le numéro WhatsApp arrive. Aucun conseil médical n\'est donné par message.', 'fatichanelya' ); ?></p>
+	</aside>
+	<?php endif; ?>
 
-	<?php if ( fati_opt( 'tiktok' ) ) : ?>
+	<?php if ( $whatsapp && fati_opt( 'tiktok' ) ) : ?>
 		<section class="contact-ailleurs" aria-labelledby="ailleurs-title">
 			<h2 id="ailleurs-title"><?php esc_html_e( 'Me suivre ailleurs', 'fatichanelya' ); ?></h2>
 			<p><?php esc_html_e( 'Le quotidien, les nouveautés et les coulisses passent surtout par TikTok.', 'fatichanelya' ); ?></p>

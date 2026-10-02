@@ -54,3 +54,21 @@ add_action(
 		remove_menu_page( 'edit-comments.php' );
 	}
 );
+
+/**
+ * Liens internes écrits depuis la racine (`/mentions-legales/`) dans les
+ * contenus : ils sont justes quand le site est à la racine de son domaine, et
+ * tombent en 404 quand il est installé dans un sous-dossier, comme en local.
+ * On les rattache à l'adresse du site ; à la racine, rien ne change.
+ */
+add_filter(
+	'the_content',
+	function ( $content ) {
+		$chemin = rtrim( (string) wp_parse_url( home_url(), PHP_URL_PATH ), '/' );
+		if ( '' === $chemin ) {
+			return $content;
+		}
+		return preg_replace( '~href="/(?!/)(?!' . preg_quote( ltrim( $chemin, '/' ), '~' ) . '/)~', 'href="' . esc_url( home_url( '/' ) ), $content );
+	},
+	20
+);

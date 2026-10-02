@@ -16,11 +16,34 @@ function fati_accent( $text ) {
 	return preg_replace( '/\*(.+?)\*/u', '<em>$1</em>', $escaped );
 }
 
-/** Lien WhatsApp prérempli. Renvoie le lien de contact du site si le numéro manque. */
+/** Le numéro WhatsApp est-il renseigné ? Sans lui, aucun bouton WhatsApp ne peut aboutir. */
+function fati_whatsapp_actif() {
+	return '' !== preg_replace( '/[^0-9]/', '', (string) fati_opt( 'whatsapp' ) );
+}
+
+/** Adresse d'une page par son slug, vide si elle n'existe pas. */
+function fati_page_url( $slug ) {
+	$page = get_page_by_path( $slug );
+	return $page ? get_permalink( $page ) : '';
+}
+
+/** Page « Panier ». Elle s'appelait « Ma sélection » jusqu'à la version 1.2.0. */
+function fati_panier_url() {
+	$url = fati_page_url( 'panier' );
+	return $url ? $url : fati_page_url( 'ma-selection' );
+}
+
+/**
+ * Lien WhatsApp prérempli.
+ *
+ * Sans numéro, il renvoie la page Contact : l'ancienne ancre `#contact`
+ * n'existe que sur l'accueil, et partout ailleurs le clic ne faisait rien.
+ */
 function fati_wa( $message = '' ) {
 	$numero = preg_replace( '/[^0-9]/', '', (string) fati_opt( 'whatsapp' ) );
 	if ( ! $numero ) {
-		return '#contact';
+		$contact = fati_page_url( 'contact' );
+		return $contact ? $contact : home_url( '/' );
 	}
 	return 'https://wa.me/' . $numero . ( $message ? '?text=' . rawurlencode( $message ) : '' );
 }
@@ -38,6 +61,9 @@ function fati_icon( $name, $size = 18 ) {
 		'globe'    => '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>',
 		'menu'     => '<path d="M4 7h16M4 12h16M4 17h16"/>',
 		'close'    => '<path d="M6 6l12 12M18 6 6 18"/>',
+		'check'    => '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+		'minus'    => '<path d="M6 12h12"/>',
+		'plus'     => '<path d="M6 12h12M12 6v12"/>',
 		'shield'   => '<path d="M12 2.5 4 5.8v5.9c0 4.7 3.4 8.8 8 9.8 4.6-1 8-5.1 8-9.8V5.8l-8-3.3Z"/><path d="m8.6 12.2 2.4 2.4 4.4-4.8"/>',
 		'card'     => '<rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/>',
 		'leaf'     => '<path d="M20 4C10 4 4 8.5 4 15a5 5 0 0 0 5 5c6.5 0 11-6 11-16Z"/><path d="M4 20c3-7 8-11 14-13"/>',
@@ -156,10 +182,33 @@ function fati_produit_details( $post_id ) {
 		'format'      => trim( (string) get_post_meta( $post_id, '_fati_format', true ) ),
 		'composition' => trim( (string) get_post_meta( $post_id, '_fati_composition', true ) ),
 		'usage'       => $lignes( get_post_meta( $post_id, '_fati_usage', true ) ),
+		'points'      => $lignes( get_post_meta( $post_id, '_fati_points', true ) ),
 	);
 }
 
-/** Les produits sérialisés pour le JavaScript de la boutique. */
+/**
+ * Sélecteur de quantité relié au panier : « − 2 + ». Il n'apparaît que
+ * lorsque le produit est dans le panier ; le JavaScript tient le nombre à jour.
+ */
+function fati_quantite( $post_id, $nom, $classe = '' ) {
+	return sprintf(
+		'<div class="qty %5$s" role="group" aria-label="%2$s" data-qty-box="%1$d" hidden>'
+		. '<button class="qty-btn" type="button" data-step="-1" data-id="%1$d" aria-label="%3$s">%6$s</button>'
+		. '<output class="qty-val" data-qty="%1$d">1</output>'
+		. '<button class="qty-btn" type="button" data-step="1" data-id="%1$d" aria-label="%4$s">%7$s</button>'
+		. '</div>',
+		(int) $post_id,
+		/* translators: %s : nom du produit. */
+		esc_attr( sprintf( __( 'Quantité de %s dans le panier', 'fatichanelya' ), $nom ) ),
+		esc_attr( sprintf( __( 'Retirer un %s', 'fatichanelya' ), $nom ) ),
+		esc_attr( sprintf( __( 'Ajouter un %s', 'fatichanelya' ), $nom ) ),
+		esc_attr( $classe ),
+		fati_icon( 'minus', 18 ),
+		fati_icon( 'plus', 18 )
+	);
+}
+
+/** Les produits sérialisés pour le JavaScript du panier. */
 function fati_produits_json() {
 	$query = new WP_Query(
 		array(
@@ -172,9 +221,9 @@ function fati_produits_json() {
 
 	$out = array();
 
-	// Sans srcset : 26 produits × 2 balises <img> à cinq tailles pesaient
-	// 57 Ko de JSON dans chaque page. Le tiroir et la boîte de dialogue
-	// affichent ces images au plus à 620 px, la taille demandée suffit.
+	// Sans srcset : le panier affiche ces vignettes à 72 px au plus, la taille
+	// demandée suffit. Avec les cinq tailles de chaque visuel, le JSON pesait
+	// 57 Ko dans chaque page.
 	add_filter( 'wp_calculate_image_srcset_meta', '__return_false' );
 
 	foreach ( $query->posts as $post ) {
@@ -196,8 +245,6 @@ function fati_produits_json() {
 			// JavaScript qui écrit en textContent : sans décodage, la visiteuse
 			// lit « Alimentation &amp; boissons ».
 			'catNom'  => $cat ? html_entity_decode( $cat->name, ENT_QUOTES, 'UTF-8' ) : '',
-			'desc'    => wp_strip_all_tags( $post->post_excerpt ? $post->post_excerpt : $post->post_content ),
-			'img'     => fati_produit_image( $post->ID, 'fati-produit' ),
 			'vignette'=> fati_produit_image( $post->ID, 'thumbnail' ),
 			'url'     => get_permalink( $post ),
 		);

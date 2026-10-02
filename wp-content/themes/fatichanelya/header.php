@@ -64,12 +64,18 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 		<?php endif; ?>
 
-		<button class="icon-button bag-button" id="open-bag" aria-label="<?php esc_attr_e( 'Ma sélection : 0 article', 'fatichanelya' ); ?>" aria-expanded="false" aria-controls="bag-drawer">
+		<?php
+		// Un lien vers la page Panier, pas un bouton sans destination : le
+		// JavaScript l'intercepte pour ouvrir le tiroir, et sans lui (ou sur
+		// la page Panier elle-même) le clic mène au panier.
+		?>
+		<a class="icon-button bag-button" id="open-bag" href="<?php echo esc_url( fati_panier_url() ? fati_panier_url() : get_post_type_archive_link( 'produit' ) ); ?>"
+		   aria-label="<?php esc_attr_e( 'Panier : 0 article', 'fatichanelya' ); ?>"<?php echo is_page( array( 'panier', 'ma-selection' ) ) ? ' aria-current="page"' : ''; ?>>
 			<?php echo fati_icon( 'bag', 24 ); ?>
-			<span class="bag-count" id="bag-count" aria-hidden="true">0</span>
-		</button>
+			<span class="bag-count" id="bag-count" aria-hidden="true" hidden>0</span>
+		</a>
 
-		<a class="button button-gold header-cta" href="<?php echo esc_url( fati_wa( fati_opt( 'contact_intro' ) ? '' : '' ) ); ?>"<?php echo fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : ''; ?>>
+		<a class="button button-gold header-cta" href="<?php echo esc_url( fati_wa() ); ?>"<?php echo fati_opt( 'whatsapp' ) ? ' target="_blank" rel="noopener"' : ''; ?>>
 			<?php echo esc_html( fati_opt( 'annonce_cta' ) ); ?>
 		</a>
 

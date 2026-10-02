@@ -1,6 +1,11 @@
 <?php
 /**
- * Carte produit. Utilisée sur l'accueil et sur les archives.
+ * Carte produit. Utilisée sur l'accueil, la boutique, les catégories et la
+ * fiche produit (produits associés).
+ *
+ * Deux gestes, et chacun mène où on l'attend : le visuel et le nom ouvrent la
+ * fiche du produit, le bouton ajoute au panier. La carte n'ouvre plus de
+ * fenêtre par-dessus la page : une fiche existe, c'est elle qu'on va lire.
  *
  * @package Fatichanelya
  */
@@ -8,6 +13,8 @@
 defined( 'ABSPATH' ) || exit;
 
 $id     = get_the_ID();
+$nom    = get_the_title();
+$url    = get_permalink();
 $terms  = get_the_terms( $id, 'categorie_produit' );
 $cat    = ( $terms && ! is_wp_error( $terms ) ) ? $terms[0] : null;
 $prix   = get_post_meta( $id, '_fati_prix', true );
@@ -18,23 +25,27 @@ $indispo = (bool) get_post_meta( $id, '_fati_indispo', true );
 <li class="product-card reveal"
     style="--i:<?php echo esc_attr( $index % 6 ); ?>"
     data-cat="<?php echo esc_attr( $cat ? $cat->slug : '' ); ?>"
-    data-name="<?php echo esc_attr( mb_strtolower( get_the_title() ) ); ?>"
+    data-name="<?php echo esc_attr( mb_strtolower( $nom ) ); ?>"
     data-id="<?php echo esc_attr( $id ); ?>">
 
-	<button class="product-media" type="button" data-open="<?php echo esc_attr( $id ); ?>"
-	        aria-label="<?php echo esc_attr( sprintf( __( 'Voir la fiche : %s', 'fatichanelya' ), get_the_title() ) ); ?>">
+	<?php
+	// Le nom porte déjà le lien pour le clavier et les lecteurs d'écran : le
+	// visuel mène au même endroit, il sort donc de l'ordre de tabulation
+	// plutôt que d'annoncer deux fois la même destination.
+	?>
+	<a class="product-media" href="<?php echo esc_url( $url ); ?>" tabindex="-1" aria-hidden="true">
 		<?php echo fati_produit_image( $id ); ?>
 		<?php if ( $indispo ) : ?>
 			<span class="product-flag"><?php esc_html_e( 'Visuel à venir', 'fatichanelya' ); ?></span>
 		<?php endif; ?>
-	</button>
+	</a>
 
 	<div class="product-body">
 		<?php if ( $cat ) : ?>
 			<p class="product-cat"><?php echo esc_html( $cat->name ); ?></p>
 		<?php endif; ?>
 
-		<h3 class="product-name"><?php the_title(); ?></h3>
+		<h3 class="product-name"><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $nom ); ?></a></h3>
 
 		<?php if ( $format ) : ?>
 			<p class="product-format"><?php echo esc_html( $format ); ?></p>
@@ -50,15 +61,21 @@ $indispo = (bool) get_post_meta( $id, '_fati_indispo', true );
 
 		<?php
 		/*
-		 * Libellé court : « Ajouter à ma sélection » demande 194 px de texte
-		 * pour une boîte de 162 à 183 px dès que la grille passe à trois ou
-		 * quatre colonnes. Le nom du produit part dans le nom accessible, donc
-		 * une lectrice d'écran entend l'intention complète.
+		 * Le bouton et le sélecteur de quantité occupent la même place : au
+		 * premier ajout le bouton cède sa place à « − 1 + », qui dit à la fois
+		 * que le produit est dans le panier et combien il y en a.
+		 *
+		 * Libellé court : « Ajouter au panier » ne tient pas dans une boîte de
+		 * 162 à 183 px dès que la grille passe à trois ou quatre colonnes. Le
+		 * nom du produit part dans le nom accessible.
 		 */
 		?>
-		<button class="product-add" type="button" data-add="<?php echo esc_attr( $id ); ?>"
-		        aria-label="<?php echo esc_attr( sprintf( __( 'Ajouter %s à ma sélection', 'fatichanelya' ), get_the_title() ) ); ?>">
-			<?php esc_html_e( 'Ajouter', 'fatichanelya' ); ?>
-		</button>
+		<div class="product-buy">
+			<button class="product-add" type="button" data-add="<?php echo esc_attr( $id ); ?>"
+			        aria-label="<?php echo esc_attr( sprintf( __( 'Ajouter %s au panier', 'fatichanelya' ), $nom ) ); ?>">
+				<?php echo fati_icon( 'bag', 18 ); ?><?php esc_html_e( 'Ajouter', 'fatichanelya' ); ?>
+			</button>
+			<?php echo fati_quantite( $id, $nom, 'qty--plein' ); ?>
+		</div>
 	</div>
 </li>
