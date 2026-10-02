@@ -421,3 +421,19 @@ Produits dont la **contenance est connue mais la composition reste incomplète**
 - **26. Gano Massage Oil** : pourcentages palme/Ganoderma non confirmés officiellement.
 
 Produits **bien documentés** (nom officiel, format, composition, mode d'emploi, prix € confirmés) : 2, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22 — soit 16 produits ; les produits 1, 3, 6, 7, 8, 23, 24, 25, 26 sont exploitables avec les réserves ci-dessus (9 produits) ; 1 produit inexistant (18).
+
+---
+
+## Ajout du 2 octobre 2026 — 27. DXN Omega 3
+
+- **Nom officiel exact** : « DXN Omega 3 » ; code EU **HF280** (ganodermavitalityshop.com, fiche de novembre 2025).
+- **Contenance / format** : 1 flacon de 90 capsules molles.
+- **Composition** : « aceite de pescado purificado, rico en ácidos grasos esenciales EPA y DHA » (ganodermavitalityshop.com). Un blog de distributeur (dxnganodermacoffee.us, 2024) donne 689 mg par capsule dont 500 mg d'huile de poisson, 200 mg d'EPA et 100 mg de DHA, enveloppe en gélatine bovine — **non confirmé pour l'étiquette espagnole**, et la dose y diffère. À lire sur le flacon.
+- **Mode d'emploi** : « Tomar 1–2 cápsulas al día después de las comidas » (revendeur espagnol) ; « 3 capsules/day » (blog) — **contradictoires**, d'où le renvoi à l'étiquette sur le site.
+- **Public / usage** : allergène poisson ; « conservar en un lugar fresco y seco ». L'étiquette porte « Soporte cardiovascular · Mejor función cerebral · Óptima salud visual ».
+- **Allégations** : le règlement (UE) 432/2012 autorise, pour 250 mg par jour, « l'EPA et le DHA contribuent à une fonction cardiaque normale », « le DHA contribue au fonctionnement normal du cerveau » et « au maintien d'une vision normale ». Utilisables **dans cette formulation**, avec la mention de la dose, une fois les teneurs lues sur l'étiquette. « Carence en vitamine D » (vu sur le kakémono) n'est pas une allégation autorisée.
+- **Prix public constaté** : 40,40 € — ganodermavitalityshop.com, 2 oct. 2026.
+- **Sources** :
+  - https://ganodermavitalityshop.com/producto/dxn-omega-3/
+  - https://dxnganodermacoffee.us/dxn/dxn-omega-3-fish-oil-capsule
+

@@ -80,6 +80,11 @@ dict(slug="spirulina", nom="DXN Spirulina", categorie=CO, prix="95", image="spir
  description="La spiruline DXN est une micro-algue, Spirulina platensis, cultivée en bassin sans pesticide ni herbicide selon DXN, puis séchée et compressée. Chaque comprimé en contient 250 mg, avec un minimum d'excipients.\n\nLe flacon de 500 comprimés est le grand format ; il existe aussi en 120 comprimés et en poudre. Les comprimés s'avalent avec de l'eau ou se croquent.",
  composition="Spirulina platensis, excipients. Détail sur l'étiquette.",
  usage="Suivre les conseils d'utilisation imprimés sur le flacon.\nAvaler avec un verre d'eau ou croquer."),
+dict(slug="omega-3", nom="DXN Omega 3", categorie=CO, prix="", image="omega-3.webp", format="90 capsules molles",
+ accroche="De l'huile de poisson purifiée, source d'EPA et de DHA, en capsules molles.",
+ description="L'Omega 3 de DXN est une huile de poisson purifiée, naturellement riche en deux acides gras de la famille des oméga-3 : l'EPA et le DHA. Elle est conditionnée en capsules molles, faciles à avaler.\n\nLe flacon contient 90 capsules. Elles se prennent après un repas, avec un verre d'eau, et se conservent dans un endroit frais et sec. Les teneurs exactes en EPA et en DHA figurent sur l'étiquette ; en cas de traitement anticoagulant, de grossesse ou d'allergie au poisson, demandez l'avis d'un professionnel de santé avant d'en prendre.",
+ composition="Huile de poisson purifiée (EPA, DHA), enveloppe de la capsule. Teneurs et liste complète sur l'étiquette.\nAllergène : poisson.",
+ usage="Suivre les conseils d'utilisation imprimés sur le flacon.\nÀ prendre après un repas, avec un verre d'eau.\nConserver dans un endroit frais et sec."),
 # ---------------------------------------------------------------- Beauté & soin
 dict(slug="natural-shield-deo", nom="Kallow Natural Shield — déodorant sans aluminium", categorie=BS, prix="18", image="natural-shield-deo.webp", format="Roll-on 50 ml",
  accroche="Un roll-on sans sels d'aluminium ni alcool, à l'aloe vera bio et à la sauge.",

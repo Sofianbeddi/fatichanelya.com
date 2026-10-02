@@ -19,14 +19,15 @@ remplacés sont conservés dans `tools/medias/sources/`, jamais effacés.
 - Envoi des références : `media_upload` (URL présignées) → `curl -X PUT` → `media_confirm`.
   Attention : la réponse de `media_upload` ne contient pas le nom du fichier, l'ordre des
   `uploads[]` est celui des `files[]` envoyés.
-- Solde après ce chantier : **12,5 crédits** (46 images dont 2 tests, 37,5 crédits dépensés).
+- Solde au 2 oct. 2026 après l'ajout de l'Omega 3 : **11 crédits** (47 images dont 2 tests, 39 crédits dépensés).
 
-## Visuels produits — 26 packshots, fond blanc
+## Visuels produits — 27 packshots, fond blanc
 
 | Fichier (`tools/medias/produits/`) | Source de la référence | Statut |
 |---|---|---|
 | cordyceps-coffee, lingzhi-coffee, lingzhi-coffee-3-en-1, lions-mane-coffee, kallow-shower-gel, kallow-sunscreen-spf50, natural-shield-deo, virgin-coconut-oil, gano-massage-oil | emballage découpé dans les affiches fournies par le gérant le 2 oct. 2026 (`tools/medias/sources/affiches-gerant/` à archiver — fichiers 1–17) | **généré** nano_banana_2, 1:1, 1k |
 | morinzhi, mycoveggie, poria-s, reishi-powder, rg-90, divine-night-oil, kallow-cosmetics, lions-mane, roselle, spirulina | ancien visuel DXN filigrané « DXN's Property » (`sources/produits-dxn-filigranes/`) | **généré** nano_banana_2 à partir de l'ancien visuel ; filigrane absent du rendu |
+| omega-3 | visuel officiel DXN HF280 (`sources/omega-3-officiel.png`, PNG détouré relevé chez un revendeur agréé espagnol) ; la photo du kakémono fournie par le gérant est dans `sources/affiches-gerant/18.png` | **généré** nano_banana_2 à partir du visuel officiel : flacon blanc sans ombrage, illisible sur fond blanc une fois aplati |
 | cordyceps, divine-dry-oil, divine-eye-cream, divine-face-cream, ganozhi-body-foam, ganozhi-shampoo, ganozhi-soap | visuels DXN d'origine, sans filigrane visible | **fournis**, inchangés |
 
 Prompt commun (packshot) : « Professional e-commerce packshot of the exact product shown in the
