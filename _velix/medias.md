@@ -19,15 +19,17 @@ remplacés sont conservés dans `tools/medias/sources/`, jamais effacés.
 - Envoi des références : `media_upload` (URL présignées) → `curl -X PUT` → `media_confirm`.
   Attention : la réponse de `media_upload` ne contient pas le nom du fichier, l'ordre des
   `uploads[]` est celui des `files[]` envoyés.
-- Solde au 2 oct. 2026 après l'ajout de l'Omega 3 : **11 crédits** (47 images dont 2 tests, 39 crédits dépensés).
+- Solde au 2 oct. 2026 en fin de journée : **2 crédits** sur 50 (packshots, Omega 3, trois visuels de formation, Reishilium, Spirulina 120 en deux essais).
 
-## Visuels produits — 27 packshots, fond blanc
+## Visuels produits — 28 packshots, fond blanc
 
 | Fichier (`tools/medias/produits/`) | Source de la référence | Statut |
 |---|---|---|
 | cordyceps-coffee, lingzhi-coffee, lingzhi-coffee-3-en-1, lions-mane-coffee, kallow-shower-gel, kallow-sunscreen-spf50, natural-shield-deo, virgin-coconut-oil, gano-massage-oil | emballage découpé dans les affiches fournies par le gérant le 2 oct. 2026 (`tools/medias/sources/affiches-gerant/` à archiver — fichiers 1–17) | **généré** nano_banana_2, 1:1, 1k |
 | morinzhi, mycoveggie, poria-s, reishi-powder, rg-90, divine-night-oil, kallow-cosmetics, lions-mane, roselle, spirulina | ancien visuel DXN filigrané « DXN's Property » (`sources/produits-dxn-filigranes/`) | **généré** nano_banana_2 à partir de l'ancien visuel ; filigrane absent du rendu |
 | omega-3 | visuel officiel DXN HF280 (`sources/omega-3-officiel.png`, PNG détouré relevé chez un revendeur agréé espagnol) ; la photo du kakémono fournie par le gérant est dans `sources/affiches-gerant/18.png` | **généré** nano_banana_2 à partir du visuel officiel : flacon blanc sans ombrage, illisible sur fond blanc une fois aplati |
+| reishi-powder (Reishilium Powder) | pot découpé dans l'affiche du gérant (`sources/affiches-gerant/20.png`, elle-même générée : la tranche y porte une coquille, corrigée dans le prompt) ; l'ancien rendu à étiquette européenne est dans `sources/reishi-powder-etiquette-eu.webp` | **généré** nano_banana_2 ; l'étiquette affiche « 22 g », contenance à confirmer |
+| spirulina-120 | petit flacon découpé dans une photo de revendeur agréé (`sources/spirulina-120-revendeur.jpg`) | **généré** nano_banana_2 ; le modèle a gardé le fond gris clair de la photo — ramené au blanc en posant le point blanc sur le fond (niveaux), le seuil du normaliseur découpait l'ombre en escalier |
 | cordyceps, divine-dry-oil, divine-eye-cream, divine-face-cream, ganozhi-body-foam, ganozhi-shampoo, ganozhi-soap | visuels DXN d'origine, sans filigrane visible | **fournis**, inchangés |
 
 Prompt commun (packshot) : « Professional e-commerce packshot of the exact product shown in the
@@ -48,14 +50,17 @@ emballages DXN. Montrer le produit que l'on revend est un usage nominatif normal
 posée à DXN dans `reglementaire-espagne.md` (« usage de la marque et des visuels ») reste ouverte.
 La meilleure solution reste des photos du stock réel de Fati.
 
-## Visuels de sections — 5 natures mortes, palette du site
+## Visuels de sections — 8 natures mortes, palette du site
 
 | Fichier | Emploi | Statut |
 |---|---|---|
-| `formations/formation-ecommerce.webp` | carte « Lancer son e-commerce » | généré, 4:3, 1200 × 896 |
+| `formations/formation-ecommerce.webp` | **sans emploi** depuis le 2 oct. 2026 (« Lancer son e-commerce » repassée en brouillon) | généré, 4:3, 1200 × 896 |
 | `formations/formation-vendre.webp` | carte « Vendre avec confiance » | généré |
 | `formations/formation-ia.webp` | carte « L'IA au quotidien » | généré |
-| `formations/formation-strategie.webp` | carte « Stratégie digitale » | généré |
+| `formations/formation-strategie.webp` | carte « Marketing digital » (auparavant « Stratégie digitale ») | généré |
+| `formations/formation-contenu.webp` | carte « Création de contenu et réseaux sociaux » | généré le 2 oct. 2026, `formation-ia.webp` en référence de style |
+| `formations/formation-media-buying.webp` | carte « Media buying et publicité en ligne » | idem |
+| `formations/formation-automatisation.webp` | carte « Automatisation et assistants IA » | idem |
 | `pages/training-session.webp` | section Formations de l'accueil (option `training_image`) | généré — **remplace une image générée d'une femme qui n'était pas Fati**, retirée pour la raison écrite dans le brief : jamais de visage inventé sur un site qui vend une personne réelle |
 
 Direction commune : vue de dessus, nappe de lin beige (`#F7F1E8`), objets sable / ivoire / bleu

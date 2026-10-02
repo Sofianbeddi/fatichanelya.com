@@ -1,13 +1,14 @@
 #!/bin/bash
 # Publie le CONTENU sur la préversion (fatichanelya.velixdigital.com) :
-# catalogue produits (textes, métas, visuels), visuels des formations, image de
-# la section Formations et image de partage.
+# catalogue produits (textes, métas, visuels), formations (programmes, métas,
+# visuels), image de la section Formations et image de partage.
 #
 #   bash tools/publier-contenu-preversion.sh
 #
 # Le thème se déploie à part (tools/deploy-preversion.sh). Ce script envoie le
-# dossier tools/ sur le serveur — nécessaire à l'importateur, qui lit
-# tools/catalogue.csv et tools/medias/ — puis le rend inaccessible depuis le web.
+# dossier tools/ sur le serveur — nécessaire aux importateurs, qui lisent
+# tools/catalogue.csv, tools/formations.csv, tools/formations/ et tools/medias/ —
+# puis le rend inaccessible depuis le web.
 # Idempotent : relancer ne crée ni doublon ni ré-import inutile (empreinte MD5).
 set -e
 cd "$(dirname "$0")/.."
@@ -34,19 +35,8 @@ echo "→ Catalogue"
 PY=$(command -v /opt/alt/python311/bin/python3 || command -v python3)
 "$PY" tools/importer-catalogue.py </dev/null
 
-echo "→ Visuels des formations"
-for pair in "lancer-ecommerce:formation-ecommerce" "vendre-avec-confiance:formation-vendre" "ia-au-quotidien:formation-ia" "strategie-digitale:formation-strategie"; do
-  slug=${pair%%:*}; img=${pair##*:}
-  id=$(wp post list --post_type=formation --name="$slug" --field=ID --posts_per_page=1)
-  [ -z "$id" ] && { echo "   ? $slug absente"; continue; }
-  md5=$(md5sum "tools/medias/formations/$img.webp" | cut -d' ' -f1)
-  if [ "$(wp post meta get "$id" _fati_visuel_md5 2>/dev/null)" = "$md5" ]; then echo "   = $slug"; continue; fi
-  old=$(wp post meta get "$id" _thumbnail_id 2>/dev/null || true)
-  wp media import "tools/medias/formations/$img.webp" --post_id="$id" --featured_image --title="$img" --porcelain >/dev/null
-  wp post meta update "$id" _fati_visuel_md5 "$md5" >/dev/null
-  [ -n "$old" ] && wp post delete "$old" --force >/dev/null 2>&1 || true
-  echo "   + $slug"
-done
+echo "→ Formations"
+"$PY" tools/importer-formations.py </dev/null
 
 echo "→ Images de réglage (section Formations, partage)"
 poser_option_image() { # clé, fichier, titre
@@ -60,6 +50,14 @@ poser_option_image() { # clé, fichier, titre
 poser_option_image training_image tools/medias/pages/training-session.webp "training-session-2"
 poser_option_image og_image       tools/medias/pages/og-default.jpg       "og-default"
 poser_option_image about_image    tools/medias/pages/about-main.webp      "about-main-2"
+
+echo "→ Page Panier"
+# Le thème 1.2.0 cherche la page « panier » ; elle s'appelait « ma-selection ».
+ancienne=$(wp post list --post_type=page --name=ma-selection --field=ID --posts_per_page=1)
+if [ -n "$ancienne" ]; then
+  wp post update "$ancienne" --post_name=panier --post_title="Panier" >/dev/null
+  echo "   ma-selection → panier"
+fi
 
 wp cache flush >/dev/null
 echo "✔ Contenu publié"

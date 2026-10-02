@@ -355,3 +355,33 @@ occupation constante, autour de **34 %** (bornes 86 % en hauteur et en largeur).
 
 La vérification se fait au navigateur, jamais en lisant le code : une
 compilation réussie n'est pas une preuve.
+
+## Panier et parcours d'achat (thème 1.2.0, 2 oct. 2026)
+
+Demande du gérant : aucun parcours bizarre, chaque clic a une raison, et une vraie manipulation
+e-commerce. Ce qui en découle, à ne pas défaire :
+
+- **Une carte produit mène à la fiche.** Visuel et nom sont des liens. Pas de fenêtre par-dessus
+  la page pour montrer un produit : la fiche existe, c'est elle qu'on ouvre.
+- **Un seul sélecteur de quantité**, `.qty` (« − n + »), partout : carte (`.qty--plein`, bleu marine,
+  il remplace le bouton « Ajouter » dès que le produit est au panier), fiche (`.qty--lg`, choisi
+  avant l'ajout), tiroir (`.qty--sm`), page Panier.
+- **Un ajout se voit trois fois** : le visuel file vers l'icône du panier (`.fly`), la pastille
+  rebondit (`.is-bump`), une confirmation nomme le produit et donne « Voir le panier » (`.toast`,
+  en bas sur mobile, sous l'en-tête sur grand écran). Tout est coupé en `prefers-reduced-motion`,
+  sauf la confirmation.
+- **Aucun lien vers une ancre absente, aucun `href="#"`.** Un bouton WhatsApp sans numéro mène à la
+  page Contact. L'icône du panier est un lien vers la page Panier que le script intercepte.
+- Le mot est **« panier »**, pas « sélection », dans tous les contrôles.
+
+## Points clés d'une fiche produit
+
+Liste cochée de trois faits, sous l'accroche (méta `_fati_points`, une ligne par fait). Coche en
+`--gold-ink`, texte en `--ink`, corps courant. **Sur mobile la liste passe sous le bouton**
+(`order:1`, comme l'accroche) : prix et bouton restent visibles sans défiler à 375 × 667.
+
+> **Ce que la liste contient, et ce qu'elle ne contient jamais.** Des faits lisibles sur
+> l'emballage : composition, format, façon d'utiliser. Jamais un effet sur la santé, même repris
+> d'une affiche de la marque : c'est interdit pour une boutique dans l'UE, et le site promet par
+> écrit de n'en faire aucun. `tools/rediger-catalogue.py` refuse les mots concernés.
+
