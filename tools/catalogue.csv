@@ -1,112 +1,172 @@
-"slug","nom","categorie","prix","image","format","accroche","description","composition","usage"
+"slug","nom","categorie","prix","image","format","accroche","description","composition","usage","points"
 "lingzhi-coffee","DXN Lingzhi Black Coffee","Alimentation & boissons","30","lingzhi-coffee.webp","","Un café noir instantané, sans sucre ajouté, enrichi en extrait de Ganoderma lucidum.","Le Lingzhi Black Coffee est un café soluble d'arabica brésilien auquel DXN ajoute un extrait de Ganoderma lucidum, le champignon reishi. Il se boit noir : aucun sucre ni crémier dans le sachet, un goût de café franc.
 
 C'est la référence la plus simple de la gamme café pour qui veut garder son geste du matin sans rien changer : un sachet, de l'eau chaude, c'est prêt. Il se conserve à température ambiante, à l'abri de l'humidité.","Café instantané (arabica du Brésil), extrait de Ganoderma lucidum.","Verser le contenu d'un sachet dans une tasse.
-Ajouter 150 à 180 ml d'eau chaude et remuer."
-"lingzhi-coffee-3-en-1","DXN Lingzhi Coffee 3 in 1","Alimentation & boissons","","lingzhi-coffee-3-en-1.webp","20 sachets × 21 g","Café, crémier et sucre réunis dans un sachet, avec l'extrait de Ganoderma de la gamme Lingzhi.","Version douce du café Lingzhi : le sachet contient déjà le crémier et le sucre, pour un café au lait prêt en trente secondes. L'extrait de Ganoderma lucidum est le même que dans le Black Coffee ; seule la rondeur change.
+Ajouter 150 à 180 ml d'eau chaude et remuer.","Café noir, sans sucre ni crémier dans le sachet
+Extrait de Ganoderma lucidum, le reishi
+Prêt en quelques secondes, un sachet par tasse"
+"lingzhi-coffee-3-en-1","DXN Lingzhi Coffee 3 in 1","Alimentation & boissons","32.90","lingzhi-coffee-3-en-1.webp","20 sachets × 21 g","Café, crémier et sucre réunis dans un sachet, avec l'extrait de Ganoderma de la gamme Lingzhi.","Version douce du café Lingzhi : le sachet contient déjà le crémier et le sucre, pour un café au lait prêt en trente secondes. L'extrait de Ganoderma lucidum est le même que dans le Black Coffee ; seule la rondeur change.
 
 Sans colorant, arôme ni conservateur artificiel selon la fiche DXN. Le crémier peut contenir un dérivé du lait : vérifiez la liste d'ingrédients de l'emballage si vous y êtes sensible.","Café soluble, crémier, sucre, extrait de Ganoderma lucidum. Détail complet sur l'emballage.","Vider un sachet dans une tasse.
-Ajouter de l'eau chaude et remuer."
-"lions-mane-coffee","DXN Lion's Mane Coffee","Alimentation & boissons","","lions-mane-coffee.webp","20 sachets × 21 g","Un café instantané au lait, préparé avec de la poudre de champignon Hericium erinaceus, la crinière de lion.","Le Lion's Mane Coffee associe café instantané, crémier et sucre à de la poudre de champignon Hericium erinaceus, plus connu sous le nom de crinière de lion. Le résultat est un café doux et rond, qui se prépare chaud ou froid.
+Ajouter de l'eau chaude et remuer.","Café, crémier et sucre déjà dosés
+Extrait de Ganoderma lucidum, le reishi
+20 sachets individuels, faciles à emporter"
+"lions-mane-coffee","DXN Lion's Mane Premix Coffee","Alimentation & boissons","29.20","lions-mane-coffee.webp","20 sachets × 21 g","Un café instantané au lait, préparé avec de la poudre de champignon Hericium erinaceus, la crinière de lion.","Le Lion's Mane Coffee — « Premix Coffee with Lion's Mane Mushroom » sur sa boîte — associe café instantané, crémier et sucre à de la poudre de champignon Hericium erinaceus, plus connu sous le nom de crinière de lion. Le résultat est un café doux et rond, qui se prépare chaud ou froid.
 
 Il contient du lait (caséinate de sodium dans le crémier) : il ne convient pas aux personnes allergiques aux protéines de lait.","Crémier (sirop de glucose, huile de palme, caséinate de sodium — lait, stabilisants, émulsifiants, sel), sucre, café instantané, poudre de champignon Lion's Mane (Hericium erinaceus).
 Allergène : lait.","Verser un sachet (21 g) dans une tasse.
-Ajouter 150 à 180 ml d'eau chaude, ou d'eau froide pour une version glacée. Remuer."
-"cordyceps-coffee","DXN Cordyceps Coffee","Alimentation & boissons","","cordyceps-coffee.webp","","Un café premium instantané associé à l'extrait de Cordyceps sinensis.","Le Cordyceps Coffee est un café soluble auquel DXN ajoute un extrait de Cordyceps sinensis, un champignon utilisé de longue date en Asie. Il se prépare en quelques secondes, chaud ou froid.
+Ajouter 150 à 180 ml d'eau chaude, ou d'eau froide pour une version glacée. Remuer.","Poudre de champignon Lion's Mane (Hericium erinaceus)
+Café doux, avec crémier et sucre
+Se prépare chaud ou glacé — 20 sachets"
+"cordyceps-coffee","DXN Cordyceps Coffee","Alimentation & boissons","35.40","cordyceps-coffee.webp","","Un café premium instantané associé à l'extrait de Cordyceps sinensis.","Le Cordyceps Coffee est un café soluble auquel DXN ajoute un extrait de Cordyceps sinensis, un champignon utilisé de longue date en Asie. Il se prépare en quelques secondes, chaud ou froid.
 
-Il existe en version noire (« 1 in 1 ») et en version avec crémier et sucre de canne (« 3 in 1 ») : la version expédiée est confirmée avec Fati avant la commande.","Café instantané, extrait de Cordyceps sinensis. Selon la version : crémier et sucre de canne.","Vider un sachet dans une tasse.
-Ajouter de l'eau chaude ou froide, bien remuer."
+C'est la version « 1 in 1 » : de la poudre de café instantané de qualité et l'extrait de champignon, sans crémier dans le sachet. À chacun d'ajouter, ou non, son lait et son sucre.","Café instantané, extrait de Cordyceps sinensis. Liste complète sur l'emballage.","Vider un sachet dans une tasse.
+Ajouter de l'eau chaude ou froide, bien remuer.","Café premium et extrait de Cordyceps sinensis
+Version « 1 in 1 », sans crémier dans le sachet
+Se prépare chaud ou froid"
 "morinzhi","DXN Morinzhi","Alimentation & boissons","30","morinzhi.webp","285 ml","Un jus de noni (Morinda citrifolia) adouci à la roselle, à diluer dans un verre d'eau.","Le Morinzhi est préparé à partir du fruit du noni, Morinda citrifolia, dont l'odeur très marquée est atténuée par l'ajout de roselle, l'hibiscus. Il se boit dilué : deux bouchons dans un verre d'eau ou de jus de fruit.
 
 La bouteille de 285 ml se conserve au réfrigérateur après ouverture. Bien agiter avant de servir : le dépôt est naturel.","Jus de noni (Morinda citrifolia), extrait de roselle (Hibiscus sabdariffa). Liste complète sur l'étiquette.","Bien agiter avant usage.
 Diluer 30 ml (deux bouchons) dans un verre d'eau ou de jus.
-Conserver au réfrigérateur après ouverture."
+Conserver au réfrigérateur après ouverture.","Jus de noni, Morinda citrifolia
+Adouci à la roselle
+À diluer : deux bouchons par verre"
 "roselle","DXN Roselle Juice","Alimentation & boissons","27","roselle.webp","285 ml","Un concentré de calices d'hibiscus, acidulé, à diluer chaud ou froid.","Le Roselle Juice est un concentré obtenu à partir des calices de roselle, l'Hibiscus sabdariffa que l'on connaît sous le nom de bissap ou de karkadé. Son goût est acidulé et rafraîchissant.
 
 Il se dilue à l'eau froide avec des glaçons, à l'eau chaude comme une infusion, ou s'ajoute à un thé. La fiche DXN suggère aussi de l'utiliser en cuisine, pour une gelée ou un sorbet. Sans conservateur ni colorant artificiel.","Extrait de calices de roselle (Hibiscus sabdariffa). Liste complète sur l'étiquette.","Diluer la quantité souhaitée dans de l'eau froide ou chaude, remuer.
-Se mélange aussi à un thé ou un jus."
+Se mélange aussi à un thé ou un jus.","Concentré de calices d'hibiscus
+Sans conservateur ni colorant artificiel
+Se boit chaud, froid, ou s'utilise en cuisine"
 "virgin-coconut-oil","DXN Virgin Coconut Oil with Ganoderma","Alimentation & boissons","","virgin-coconut-oil.webp","","Une huile de coco vierge, pressée à froid, associée à l'extrait de Ganoderma.","Cette huile de coco vierge est extraite à froid de noix de coco fraîches, non raffinée, puis associée à un extrait de Ganoderma lucidum. Elle est solide en dessous de 24 °C environ et redevient liquide à la chaleur : c'est le comportement normal d'une huile de coco non traitée.
 
 Elle s'utilise en cuisine, pour cuire ou assaisonner, et en soin : quelques gouttes sur la peau ou les pointes des cheveux.","Huile de coco vierge pressée à froid, extrait de Ganoderma lucidum.","En cuisine : une à deux cuillères à soupe pour cuire ou assaisonner.
-En soin : une petite quantité sur la peau ou les cheveux, selon le besoin."
+En soin : une petite quantité sur la peau ou les cheveux, selon le besoin.","Huile de coco vierge, pressée à froid
+Associée à l'extrait de Ganoderma
+En cuisine comme en soin"
 "rg-90","DXN Reishi Gano (RG) 90","Compléments","61","rg-90.webp","90 gélules × 270 mg","Du Ganoderma lucidum, corps fructifère récolté à 90 jours, en gélules de 270 mg.","Le Reishi Gano, ou RG, contient uniquement le corps fructifère du Ganoderma lucidum — le champignon reishi — récolté à maturité, après 90 jours de culture en ferme certifiée biologique selon DXN. Rien d'autre dans la gélule.
 
 Le flacon de 90 gélules est le format intermédiaire de la gamme, qui existe aussi en 30 et en 360. Les conseils d'utilisation figurent sur l'emballage ; en cas de traitement médical ou de grossesse, demandez l'avis d'un professionnel de santé avant d'en prendre.","100 % Ganoderma lucidum (corps fructifère), 270 mg par gélule.","Suivre les conseils d'utilisation imprimés sur le flacon.
-À prendre avec un verre d'eau."
-"reishi-powder","DXN Reishi Mushroom Powder","Compléments","40.50","reishi-powder.webp","","Corps fructifère et mycélium de Ganoderma lucidum réduits en poudre, à diluer.","Cette poudre réunit les deux parties du reishi que DXN propose séparément en gélules : le corps fructifère (RG) et le mycélium (GL). Elle se mélange dans de l'eau, une boisson ou une préparation.
+À prendre avec un verre d'eau.","100 % Ganoderma lucidum, corps fructifère
+Récolté à 90 jours, ferme certifiée bio selon DXN
+90 gélules de 270 mg"
+"reishi-powder","DXN Reishilium Powder","Compléments","87.50","reishi-powder.webp","","Corps fructifère et mycélium de Ganoderma lucidum réduits en poudre, à diluer.","Le Reishilium Powder — vendu en Europe sous le nom de Reishi Mushroom Powder — réunit les deux parties du reishi que DXN propose séparément en gélules : le corps fructifère (RG) et le mycélium (GL). Elle se mélange dans de l'eau, une boisson ou une préparation.
 
 Le goût est légèrement amer, caractéristique du champignon. La dose se mesure à la cuillère fournie ; le détail figure sur l'emballage.","Corps fructifère et mycélium de Ganoderma lucidum, 100 %.","Mélanger une cuillère-mesure rase dans un verre d'eau ou une boisson.
-Peut aussi s'incorporer à une préparation."
+Peut aussi s'incorporer à une préparation.","100 % Ganoderma lucidum : corps fructifère et mycélium
+Poudre fine, à diluer dans une boisson
+Dosage à la cuillère-mesure"
 "cordyceps","DXN Cordyceps","Compléments","75","cordyceps.webp","60 gélules × 450 mg","De la poudre de Cordyceps sinensis en gélules végétales.","Le Cordyceps sinensis est un champignon utilisé de longue date en Asie. DXN le propose ici en poudre encapsulée, 450 mg par gélule, sans autre ingrédient.
 
 Le flacon contient 60 gélules. Il existe aussi en poudre libre de 30 g, sur demande.","Poudre de Cordyceps sinensis, 450 mg par gélule. Gélule végétale.","Suivre les conseils d'utilisation imprimés sur le flacon.
-À prendre avec un verre d'eau."
+À prendre avec un verre d'eau.","Poudre de Cordyceps sinensis, sans autre ingrédient
+Gélules végétales de 450 mg
+60 gélules par flacon"
 "poria-s","DXN Poria S","Compléments","35","poria-s.webp","","Du mycélium de Poria cocos, un champignon de la tradition chinoise, en poudre à diluer.","Le Poria S contient uniquement du mycélium de Poria cocos, un champignon qui pousse sur les racines de pin et que la tradition chinoise utilise depuis des siècles. Il est produit en usine certifiée GMP selon DXN.
 
-Il se présente en poudre fine, à dissoudre dans de l'eau tiède.","100 % mycélium de Poria cocos.","Dissoudre une cuillère (3,5 g) dans 100 ml d'eau tiède."
+Il se présente en poudre fine, à dissoudre dans de l'eau tiède.","100 % mycélium de Poria cocos.","Dissoudre une cuillère (3,5 g) dans 100 ml d'eau tiède.","100 % mycélium de Poria cocos
+Produit en usine certifiée GMP selon DXN
+Poudre à dissoudre dans l'eau tiède"
 "lions-mane","DXN Lion's Mane","Compléments","48","lions-mane.webp","120 comprimés × 300 mg","Le champignon Hericium erinaceus, dit crinière de lion, en comprimés de 300 mg.","Le Lion's Mane, ou crinière de lion, est le champignon Hericium erinaceus, reconnaissable à ses longues aiguilles blanches. DXN le propose en comprimés de 300 mg à partir du corps fructifère.
 
 Le flacon contient 120 comprimés. Produit destiné aux adultes.","Hericium erinaceus (corps fructifère), excipient.","Suivre les conseils d'utilisation imprimés sur le flacon.
-À prendre avec un verre d'eau."
-"mycoveggie","DXN MycoVeggie","Compléments","118","mycoveggie.webp","400 g","Un mélange de psyllium, légumes, plantes, épices et champignons en poudre.","Le MycoVeggie est une poudre composée de téguments de psyllium, de légumes, de feuilles et d'épices, et d'une dizaine de champignons dont le shiitake, le pleurote et la crinière de lion. Le psyllium en est le premier ingrédient.
+À prendre avec un verre d'eau.","Hericium erinaceus, corps fructifère
+120 comprimés de 300 mg
+Produit destiné aux adultes"
+"mycoveggie","DXN MycoVeggie","Compléments","118","mycoveggie.webp","400 g","Un mélange de psyllium, légumes, plantes, épices et champignons en poudre.","Le MycoVeggie est une poudre composée de téguments de psyllium, de légumes, de feuilles et d'épices, et de sept champignons dont le shiitake, le pleurote et la crinière de lion. Le psyllium en est le premier ingrédient.
 
 Le pot de 400 g se dose à la cuillère-mesure dans un verre d'eau tiède ou froide, de préférence au shaker : la poudre épaissit vite, mieux vaut boire aussitôt.","Téguments de psyllium, céleri, feuille de mûrier, feuille de noni, feuille de ginkgo, gingembre, citronnelle, shiitake, Lyophyllum, tricholome de la Saint-Georges, crinière de lion, pleurote de l'orme, pleurote gris, Schizophyllum commune, maïs doux, citron vert, orange, spiruline, thé vert, écorce de mandarine, cannelle, anis étoilé, clou de girofle.","Mélanger une cuillère-mesure (5 g) dans un verre d'eau tiède ou froide, au shaker de préférence.
-Boire aussitôt."
-"spirulina","DXN Spirulina","Compléments","95","spirulina.webp","500 comprimés × 250 mg","De la spiruline (Spirulina platensis) cultivée en bassin, en comprimés de 250 mg.","La spiruline DXN est une micro-algue, Spirulina platensis, cultivée en bassin sans pesticide ni herbicide selon DXN, puis séchée et compressée. Chaque comprimé en contient 250 mg, avec un minimum d'excipients.
+Boire aussitôt.","23 ingrédients végétaux, dont sept champignons
+Le psyllium en premier ingrédient
+Pot de 400 g, à doser à la cuillère"
+"spirulina-120","DXN Spirulina — 120 comprimés","Compléments","28.70","spirulina-120.webp","120 comprimés × 250 mg","De la spiruline (Spirulina platensis) cultivée en bassin, en comprimés de 250 mg — le petit flacon.","La spiruline DXN est une micro-algue, Spirulina platensis, cultivée en bassin sans pesticide ni herbicide selon DXN, puis séchée et compressée. Chaque comprimé en contient 250 mg, avec un minimum d'excipients.
 
-Le flacon de 500 comprimés est le grand format ; il existe aussi en 120 comprimés et en poudre. Les comprimés s'avalent avec de l'eau ou se croquent.","Spirulina platensis, excipients. Détail sur l'étiquette.","Suivre les conseils d'utilisation imprimés sur le flacon.
-Avaler avec un verre d'eau ou croquer."
-"omega-3","DXN Omega 3","Compléments","","omega-3.webp","90 capsules molles","De l'huile de poisson purifiée, source d'EPA et de DHA, en capsules molles.","L'Omega 3 de DXN est une huile de poisson purifiée, naturellement riche en deux acides gras de la famille des oméga-3 : l'EPA et le DHA. Elle est conditionnée en capsules molles, faciles à avaler.
+Ce flacon de 120 comprimés est le format de découverte ; la même spiruline existe en flacon de 500. Les comprimés s'avalent avec de l'eau ou se croquent.","Spirulina platensis, excipients. Détail sur l'étiquette.","Suivre les conseils d'utilisation imprimés sur le flacon.
+Avaler avec un verre d'eau ou croquer.","Spirulina platensis cultivée en bassin
+Sans pesticide ni herbicide selon DXN
+120 comprimés de 250 mg, à avaler ou à croquer"
+"spirulina","DXN Spirulina — 500 comprimés","Compléments","91.90","spirulina.webp","500 comprimés × 250 mg","De la spiruline (Spirulina platensis) cultivée en bassin, en comprimés de 250 mg.","La spiruline DXN est une micro-algue, Spirulina platensis, cultivée en bassin sans pesticide ni herbicide selon DXN, puis séchée et compressée. Chaque comprimé en contient 250 mg, avec un minimum d'excipients.
+
+Ce flacon de 500 comprimés est le grand format ; la même spiruline existe en flacon de 120. Les comprimés s'avalent avec de l'eau ou se croquent.","Spirulina platensis, excipients. Détail sur l'étiquette.","Suivre les conseils d'utilisation imprimés sur le flacon.
+Avaler avec un verre d'eau ou croquer.","Spirulina platensis cultivée en bassin
+Sans pesticide ni herbicide selon DXN
+500 comprimés de 250 mg, à avaler ou à croquer"
+"omega-3","DXN Omega 3","Compléments","39.90","omega-3.webp","90 capsules molles","De l'huile de poisson purifiée, source d'EPA et de DHA, en capsules molles.","L'Omega 3 de DXN est une huile de poisson purifiée, naturellement riche en deux acides gras de la famille des oméga-3 : l'EPA et le DHA. Elle est conditionnée en capsules molles, faciles à avaler.
 
 Le flacon contient 90 capsules. Elles se prennent après un repas, avec un verre d'eau, et se conservent dans un endroit frais et sec. Les teneurs exactes en EPA et en DHA figurent sur l'étiquette ; en cas de traitement anticoagulant, de grossesse ou d'allergie au poisson, demandez l'avis d'un professionnel de santé avant d'en prendre.","Huile de poisson purifiée (EPA, DHA), enveloppe de la capsule. Teneurs et liste complète sur l'étiquette.
 Allergène : poisson.","Suivre les conseils d'utilisation imprimés sur le flacon.
 À prendre après un repas, avec un verre d'eau.
-Conserver dans un endroit frais et sec."
+Conserver dans un endroit frais et sec.","Huile de poisson purifiée
+Source d'EPA et de DHA, deux oméga-3
+90 capsules molles, à prendre après un repas"
 "natural-shield-deo","Kallow Natural Shield — déodorant sans aluminium","Beauté & soin","18","natural-shield-deo.webp","Roll-on 50 ml","Un roll-on sans sels d'aluminium ni alcool, à l'aloe vera bio et à la sauge.","Le Natural Shield est le déodorant de la gamme Kallow, la ligne cosmétique de DXN fabriquée en Grèce. Sa formule se passe de sels d'aluminium et d'alcool ; elle associe du jus d'aloe vera bio, de l'extrait de concombre et de l'huile de sauge dans une bille de 50 ml.
 
 Convient à tous les types de peau. Comme tout déodorant sans aluminium, il se réapplique au besoin dans la journée.","Aqua, Coco-Caprylate/Caprate, Caprylic/Capric Triglyceride, Triethyl Citrate, Glycerin, Zinc Ricinoleate, Parfum, Aloe Barbadensis Leaf Juice*, Cucumis Sativus Fruit Extract, Salvia Officinalis Oil, Tocopheryl Acetate, Sodium Caproyl/Lauroyl Lactylate, Glyceryl Stearate Citrate, Carbomer, Triethanolamine, Citric Acid, Phenoxyethanol, Ethylhexylglycerin, Potassium Sorbate, Sodium Benzoate.
 * issu de l'agriculture biologique","Bien agiter avant usage.
-Appliquer sur les aisselles propres et sèches, renouveler au besoin."
+Appliquer sur les aisselles propres et sèches, renouveler au besoin.","Sans sels d'aluminium, sans alcool
+Aloe vera bio, concombre et sauge
+Roll-on de 50 ml, tous types de peau"
 "kallow-shower-gel","Kallow Luxury Aromatic Shower Gel","Beauté & soin","","kallow-shower-gel.webp","250 ml","Un gel douche parfumé à l'aloe vera, à l'huile d'olive et à l'acide hyaluronique.","Le Luxury Aromatic Shower Gel nettoie le corps avec une mousse fine et laisse un parfum floral. Sa formule associe du jus d'aloe vera, de l'huile d'olive et de l'hyaluronate de sodium.
 
 Il ouvre la série Luxury Aromatic de Kallow, pensée pour être suivie de la lotion corps et de l'huile sèche Divine Touch. Réservé au corps : ce n'est pas un nettoyant visage.","Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Aloe Barbadensis Leaf Juice, Sodium Hyaluronate, Olea Europaea Fruit Oil, Parfum (Linalool, Limonene, Coumarin). Liste INCI complète sur le flacon.","Sur peau mouillée, faire mousser une petite quantité dans la main ou sur une fleur de douche.
-Rincer abondamment. Éviter le contact avec les yeux."
+Rincer abondamment. Éviter le contact avec les yeux.","Aloe vera, huile d'olive, acide hyaluronique
+Mousse fine, parfum floral
+Flacon-pompe de 250 ml"
 "kallow-sunscreen-spf50","Kallow High Protection Face Sunscreen SPF 50+","Beauté & soin","","kallow-sunscreen-spf50.webp","50 ml","Une crème solaire visage haute protection SPF 50+, à l'acide hyaluronique et à la vitamine E.","Cette crème solaire visage offre une haute protection SPF 50+ contre les UVA et les UVB grâce à des filtres organiques. Sa texture légère, enrichie en hyaluronate de sodium, vitamine E et allantoïne, se porte seule ou sous le maquillage.
 
 Tube de 50 ml, à appliquer généreusement avant l'exposition et à renouveler toutes les deux heures et après la baignade : une protection solaire ne tient que si elle est renouvelée.","Aqua, Ethylhexyl Methoxycinnamate, Octocrylene, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Glycerin, Glyceryl Stearate, Cetearyl Alcohol, Potassium Palmitoyl Hydrolyzed Wheat Protein, Polymethyl Methacrylate, Phenoxyethanol, Chlorphenesin, Tocopheryl Acetate, Parfum, Ethylhexylglycerin, Sodium Hyaluronate, Sodium Polyacrylate, Allantoin.","Appliquer uniformément sur le visage et le cou, 15 minutes avant l'exposition.
-Renouveler toutes les deux heures et après la baignade."
+Renouveler toutes les deux heures et après la baignade.","Haute protection SPF 50+, UVA et UVB
+Acide hyaluronique et vitamine E
+Texture légère, tube de 50 ml"
 "kallow-cosmetics","Coffret Kallow Divine Touch — sélection Fatichanelya","Beauté & soin","200","kallow-cosmetics.webp","","Les soins visage Divine Touch de Kallow réunis en un coffret composé par Fati.","Ce coffret rassemble les soins visage de la ligne Divine Touch de Kallow, la gamme cosmétique de DXN fabriquée en Grèce : crème, contour des yeux et huiles. La composition exacte du coffret est confirmée avec Fati au moment de la commande, selon les disponibilités.
 
-Chaque soin est aussi vendu à l'unité sur la boutique.","",""
+Chaque soin est aussi vendu à l'unité sur la boutique.","","","Les soins visage Divine Touch réunis
+Coffret composé par Fati
+Chaque soin existe aussi à l'unité"
 "divine-eye-cream","Kallow Divine Touch Lifting Impact Eye Cream","Beauté & soin","50","divine-eye-cream.webp","15 ml","Un contour des yeux à la caféine, aux peptides et à l'acide hyaluronique, en tube de 15 ml.","Le Lifting Impact Eye Cream est le soin contour des yeux de la ligne Divine Touch. Sa formule réunit de la caféine, un complexe de peptides, de l'hyaluronate de sodium, des vitamines C, E et A et des polyphénols de thé vert, dans une texture légère qui s'applique matin et soir.
 
 Il peut servir de base avant le maquillage.","Aqua, Glycerin, Glycereth-26, Caprylic/Capric Triglyceride, Cetearyl Glucoside, Sorbitan Olivate, Caffeine, Ascorbyl Glucoside, Malus Domestica Fruit Cell Culture Extract, Albizia Julibrissin Bark Extract, Butyrospermum Parkii Butter, Tocopheryl Acetate, Retinyl Palmitate, Allantoin, Sodium Hyaluronate Crosspolymer, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Trifluoroacetyl Tripeptide-2… Liste INCI complète sur l'emballage.","Appliquer une petite quantité sur le contour de l'œil, paupière supérieure comprise, par légers tapotements.
-Matin et soir, sur peau propre."
+Matin et soir, sur peau propre.","Caféine, peptides, acide hyaluronique
+Vitamines C, E et A
+Tube de 15 ml, matin et soir"
 "divine-dry-oil","Kallow Divine Touch Multi-Purpose Dry Oil","Beauté & soin","45","divine-dry-oil.webp","100 ml","Une huile sèche visage, corps et cheveux aux huiles de tournesol, d'argan et d'olive.","L'huile sèche Divine Touch s'applique sur le visage, le corps et les cheveux. Sa base d'huiles végétales — tournesol, argan, olive — et de vitamine E pénètre rapidement sans laisser de film gras, d'où son nom d'huile « sèche ».
 
 Flacon de 100 ml, parfumé. Elle se combine avec le gel douche et la lotion de la série Luxury Aromatic.","Coco-Caprylate/Caprate, Caprylic/Capric Triglyceride, Helianthus Annuus Seed Oil, Parfum, Argania Spinosa Kernel Oil, Olea Europaea Fruit Oil, Tocopheryl Acetate, BHT, composants du parfum (Linalool, Limonene, Citronellol, Geraniol, Coumarin, Benzyl Salicylate, Hexyl Cinnamal, Hydroxycitronellal, Alpha-Isomethyl Ionone).","Appliquer quelques gouttes sur la peau ou les longueurs, masser légèrement.
-Ne pas rincer."
+Ne pas rincer.","Huiles de tournesol, d'argan et d'olive
+Visage, corps et cheveux
+Pénètre vite, sans film gras"
 "divine-night-oil","Kallow Divine Touch Nourishing Night Oil","Beauté & soin","50","divine-night-oil.webp","30 ml","Une huile de nuit visage aux huiles de pépins de raisin, d'abricot, d'avocat et d'argan.","La Nourishing Night Oil se pose le soir, en dernier geste, sur peau propre. Elle associe six huiles végétales — pépins de raisin, noyau d'abricot, avocat, argan, olive, sacha inchi — à des vitamines A, C et E.
 
 Flacon de 30 ml. Quelques gouttes suffisent ; éviter le contour des yeux, ne pas rincer.","Vitis Vinifera Seed Oil, Prunus Armeniaca Kernel Oil, Persea Gratissima Oil, Argania Spinosa Kernel Oil, Tocopheryl Acetate, Olea Europaea Fruit Oil, Retinyl Palmitate, Plukenetia Volubilis Seed Oil, Carthamus Tinctorius Seed Oil, Prunus Amygdalus Dulcis Oil, Ascorbyl Palmitate, BHT, Linoleic Acid.","Le soir, après le nettoyage et les autres soins, appliquer quelques gouttes sur le visage et le cou.
-Éviter le contour des yeux. Ne pas rincer."
+Éviter le contour des yeux. Ne pas rincer.","Six huiles végétales
+Vitamines A, C et E
+Quelques gouttes le soir, sans rinçage"
 "divine-face-cream","Kallow Divine Touch Lifting Impact Face Cream","Beauté & soin","55","divine-face-cream.webp","50 ml","Une crème visage riche aux peptides, aux cellules de pomme verte et aux huiles d'avocat, d'abricot et d'argan.","La Lifting Impact Face Cream est la crème visage de la ligne Divine Touch. Sa texture riche réunit un complexe de peptides, un extrait de cellules de pomme verte (Malus domestica), de l'hyaluronate de sodium et des huiles d'avocat, d'abricot et d'argan, avec des vitamines A, C et E.
 
 Pot de 50 ml. Elle est conçue pour être appliquée après le sérum Divine Touch, mais s'utilise aussi seule.","Aqua, Persea Gratissima Oil, Prunus Armeniaca Kernel Oil, Argania Spinosa Kernel Oil, Olea Europaea Fruit Oil, Retinyl Palmitate, Malus Domestica Fruit Cell Culture Extract, Ascorbyl Glucoside, Tocopheryl Acetate, Trifluoroacetyl Tripeptide-2, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1, Sodium Hyaluronate Crosspolymer, Fomes Officinalis Extract… Liste INCI complète sur l'emballage.","Appliquer sur le visage et le cou nettoyés, matin et/ou soir.
-Après le sérum Divine Touch si vous l'utilisez."
+Après le sérum Divine Touch si vous l'utilisez.","Peptides et cellules de pomme verte
+Huiles d'avocat, d'abricot et d'argan
+Pot de 50 ml, texture riche"
 "ganozhi-soap","DXN Ganozhi Soap","Soin personnel","15","ganozhi-soap.webp","Pain de 80 g","Un savon corps et visage à l'extrait de Ganoderma et à l'huile de palme, sans colorant artificiel.","Le Ganozhi Soap est un pain de 80 g à base d'huile de palme, enrichi en extrait de Ganoderma lucidum, qui lui donne sa couleur brune naturelle. Il convient à tous les types de peau et peut aussi servir au rasage.
 
-Sans colorant artificiel. Laisser sécher le savon entre deux usages pour qu'il dure.","Base lavante à l'huile de palme, extrait de Ganoderma lucidum, glycérine, parfum. Liste INCI complète sur l'emballage.","Faire mousser sur peau humide, masser, rincer."
+Sans colorant artificiel. Laisser sécher le savon entre deux usages pour qu'il dure.","Base lavante à l'huile de palme, extrait de Ganoderma lucidum, glycérine, parfum. Liste INCI complète sur l'emballage.","Faire mousser sur peau humide, masser, rincer.","Extrait de Ganoderma et huile de palme
+Sans colorant artificiel
+Corps, visage et rasage"
 "ganozhi-shampoo","DXN Ganozhi Shampoo","Soin personnel","25","ganozhi-shampoo.webp","250 ml","Un shampooing au pH équilibré, à l'extrait de Ganoderma et à la vitamine B5, pour tous types de cheveux.","Le Ganozhi Shampoo lave les cheveux avec une formule au pH équilibré, enrichie en extrait de Ganoderma lucidum et en panthénol, la vitamine B5. Il convient à tous les types de cheveux et à un usage fréquent.
 
 Flacon de 250 ml.","Aqua, Cocamide DEA, Cocamidopropyl Betaine, Parfum, Ganoderma Lucidum Extract, Glycerin, Hydroxyethylcellulose, Lanolin, Panthenol, Sodium Laureth Sulfate… Liste INCI complète sur le flacon.","Appliquer sur cheveux mouillés, faire mousser, rincer.
-Renouveler si nécessaire."
+Renouveler si nécessaire.","Extrait de Ganoderma et vitamine B5
+pH équilibré
+Tous types de cheveux, usage fréquent"
 "ganozhi-body-foam","DXN Ganozhi Body Foam","Soin personnel","25","ganozhi-body-foam.webp","250 ml","Une mousse lavante corps douce, à l'extrait de Ganoderma et à la vitamine E.","Le Ganozhi Body Foam est un gel douche doux, formulé pour nettoyer sans décaper le film naturel de la peau selon DXN. Il contient de l'extrait de Ganoderma lucidum et de la vitamine E.
 
 Flacon de 250 ml. Convient à tous les types de peau.","Contient notamment : extrait de Ganoderma lucidum, vitamine E (Tocopheryl Acetate), glycérine, agents lavants doux (bétaïne, Sodium Laureth Sulfate). Liste INCI complète sur le flacon.","Verser quelques gouttes dans la main ou sur une fleur de douche, ajouter un peu d'eau et faire mousser.
-Rincer."
+Rincer.","Extrait de Ganoderma et vitamine E
+Formule douce, tous types de peau
+Flacon de 250 ml"
 "gano-massage-oil","DXN Gano Massage Oil","Soin personnel","","gano-massage-oil.webp","75 ml","Une huile de massage à l'huile de palme et à l'extrait de Ganoderma, pour le corps et les cheveux.","Le Gano Massage Oil, « Minyak Gosok Gano » sur son étiquette d'origine, est une huile de massage composée d'huile de palme et d'extrait de Ganoderma lucidum. Elle s'utilise sur le corps et peut aussi s'appliquer sur les cheveux.
 
 Flacon de 75 ml. Usage externe uniquement ; éviter le contact avec les yeux.","Huile de palme, extrait de Ganoderma lucidum.","Bien agiter avant usage.
 Appliquer la quantité souhaitée et masser doucement.
-Usage externe. En cas de contact avec les yeux, rincer abondamment."
+Usage externe. En cas de contact avec les yeux, rincer abondamment.","Huile de palme et extrait de Ganoderma
+Pour le corps et les cheveux
+Usage externe, flacon de 75 ml"

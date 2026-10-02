@@ -14,20 +14,20 @@ dict(slug="lingzhi-coffee", nom="DXN Lingzhi Black Coffee", categorie=AB, prix="
  description="Le Lingzhi Black Coffee est un café soluble d'arabica brésilien auquel DXN ajoute un extrait de Ganoderma lucidum, le champignon reishi. Il se boit noir : aucun sucre ni crémier dans le sachet, un goût de café franc.\n\nC'est la référence la plus simple de la gamme café pour qui veut garder son geste du matin sans rien changer : un sachet, de l'eau chaude, c'est prêt. Il se conserve à température ambiante, à l'abri de l'humidité.",
  composition="Café instantané (arabica du Brésil), extrait de Ganoderma lucidum.",
  usage="Verser le contenu d'un sachet dans une tasse.\nAjouter 150 à 180 ml d'eau chaude et remuer."),
-dict(slug="lingzhi-coffee-3-en-1", nom="DXN Lingzhi Coffee 3 in 1", categorie=AB, prix="", image="lingzhi-coffee-3-en-1.webp", format="20 sachets × 21 g",
+dict(slug="lingzhi-coffee-3-en-1", nom="DXN Lingzhi Coffee 3 in 1", categorie=AB, prix="32.90",image="lingzhi-coffee-3-en-1.webp", format="20 sachets × 21 g",
  accroche="Café, crémier et sucre réunis dans un sachet, avec l'extrait de Ganoderma de la gamme Lingzhi.",
  description="Version douce du café Lingzhi : le sachet contient déjà le crémier et le sucre, pour un café au lait prêt en trente secondes. L'extrait de Ganoderma lucidum est le même que dans le Black Coffee ; seule la rondeur change.\n\nSans colorant, arôme ni conservateur artificiel selon la fiche DXN. Le crémier peut contenir un dérivé du lait : vérifiez la liste d'ingrédients de l'emballage si vous y êtes sensible.",
  composition="Café soluble, crémier, sucre, extrait de Ganoderma lucidum. Détail complet sur l'emballage.",
  usage="Vider un sachet dans une tasse.\nAjouter de l'eau chaude et remuer."),
-dict(slug="lions-mane-coffee", nom="DXN Lion's Mane Coffee", categorie=AB, prix="", image="lions-mane-coffee.webp", format="20 sachets × 21 g",
+dict(slug="lions-mane-coffee", nom="DXN Lion's Mane Premix Coffee", categorie=AB, prix="29.20",image="lions-mane-coffee.webp", format="20 sachets × 21 g",
  accroche="Un café instantané au lait, préparé avec de la poudre de champignon Hericium erinaceus, la crinière de lion.",
- description="Le Lion's Mane Coffee associe café instantané, crémier et sucre à de la poudre de champignon Hericium erinaceus, plus connu sous le nom de crinière de lion. Le résultat est un café doux et rond, qui se prépare chaud ou froid.\n\nIl contient du lait (caséinate de sodium dans le crémier) : il ne convient pas aux personnes allergiques aux protéines de lait.",
+ description="Le Lion's Mane Coffee — « Premix Coffee with Lion's Mane Mushroom » sur sa boîte — associe café instantané, crémier et sucre à de la poudre de champignon Hericium erinaceus, plus connu sous le nom de crinière de lion. Le résultat est un café doux et rond, qui se prépare chaud ou froid.\n\nIl contient du lait (caséinate de sodium dans le crémier) : il ne convient pas aux personnes allergiques aux protéines de lait.",
  composition="Crémier (sirop de glucose, huile de palme, caséinate de sodium — lait, stabilisants, émulsifiants, sel), sucre, café instantané, poudre de champignon Lion's Mane (Hericium erinaceus).\nAllergène : lait.",
  usage="Verser un sachet (21 g) dans une tasse.\nAjouter 150 à 180 ml d'eau chaude, ou d'eau froide pour une version glacée. Remuer."),
-dict(slug="cordyceps-coffee", nom="DXN Cordyceps Coffee", categorie=AB, prix="", image="cordyceps-coffee.webp", format="",
+dict(slug="cordyceps-coffee", nom="DXN Cordyceps Coffee", categorie=AB, prix="35.40",image="cordyceps-coffee.webp", format="",
  accroche="Un café premium instantané associé à l'extrait de Cordyceps sinensis.",
- description="Le Cordyceps Coffee est un café soluble auquel DXN ajoute un extrait de Cordyceps sinensis, un champignon utilisé de longue date en Asie. Il se prépare en quelques secondes, chaud ou froid.\n\nIl existe en version noire (« 1 in 1 ») et en version avec crémier et sucre de canne (« 3 in 1 ») : la version expédiée est confirmée avec Fati avant la commande.",
- composition="Café instantané, extrait de Cordyceps sinensis. Selon la version : crémier et sucre de canne.",
+ description="Le Cordyceps Coffee est un café soluble auquel DXN ajoute un extrait de Cordyceps sinensis, un champignon utilisé de longue date en Asie. Il se prépare en quelques secondes, chaud ou froid.\n\nC'est la version « 1 in 1 » : de la poudre de café instantané de qualité et l'extrait de champignon, sans crémier dans le sachet. À chacun d'ajouter, ou non, son lait et son sucre.",
+ composition="Café instantané, extrait de Cordyceps sinensis. Liste complète sur l'emballage.",
  usage="Vider un sachet dans une tasse.\nAjouter de l'eau chaude ou froide, bien remuer."),
 dict(slug="morinzhi", nom="DXN Morinzhi", categorie=AB, prix="30", image="morinzhi.webp", format="285 ml",
  accroche="Un jus de noni (Morinda citrifolia) adouci à la roselle, à diluer dans un verre d'eau.",
@@ -50,9 +50,9 @@ dict(slug="rg-90", nom="DXN Reishi Gano (RG) 90", categorie=CO, prix="61", image
  description="Le Reishi Gano, ou RG, contient uniquement le corps fructifère du Ganoderma lucidum — le champignon reishi — récolté à maturité, après 90 jours de culture en ferme certifiée biologique selon DXN. Rien d'autre dans la gélule.\n\nLe flacon de 90 gélules est le format intermédiaire de la gamme, qui existe aussi en 30 et en 360. Les conseils d'utilisation figurent sur l'emballage ; en cas de traitement médical ou de grossesse, demandez l'avis d'un professionnel de santé avant d'en prendre.",
  composition="100 % Ganoderma lucidum (corps fructifère), 270 mg par gélule.",
  usage=FLACON),
-dict(slug="reishi-powder", nom="DXN Reishi Mushroom Powder", categorie=CO, prix="40.50", image="reishi-powder.webp", format="",
+dict(slug="reishi-powder", nom="DXN Reishilium Powder", categorie=CO, prix="87.50",image="reishi-powder.webp", format="",
  accroche="Corps fructifère et mycélium de Ganoderma lucidum réduits en poudre, à diluer.",
- description="Cette poudre réunit les deux parties du reishi que DXN propose séparément en gélules : le corps fructifère (RG) et le mycélium (GL). Elle se mélange dans de l'eau, une boisson ou une préparation.\n\nLe goût est légèrement amer, caractéristique du champignon. La dose se mesure à la cuillère fournie ; le détail figure sur l'emballage.",
+ description="Le Reishilium Powder — vendu en Europe sous le nom de Reishi Mushroom Powder — réunit les deux parties du reishi que DXN propose séparément en gélules : le corps fructifère (RG) et le mycélium (GL). Elle se mélange dans de l'eau, une boisson ou une préparation.\n\nLe goût est légèrement amer, caractéristique du champignon. La dose se mesure à la cuillère fournie ; le détail figure sur l'emballage.",
  composition="Corps fructifère et mycélium de Ganoderma lucidum, 100 %.",
  usage="Mélanger une cuillère-mesure rase dans un verre d'eau ou une boisson.\nPeut aussi s'incorporer à une préparation."),
 dict(slug="cordyceps", nom="DXN Cordyceps", categorie=CO, prix="75", image="cordyceps.webp", format="60 gélules × 450 mg",
@@ -72,15 +72,20 @@ dict(slug="lions-mane", nom="DXN Lion's Mane", categorie=CO, prix="48", image="l
  usage=FLACON),
 dict(slug="mycoveggie", nom="DXN MycoVeggie", categorie=CO, prix="118", image="mycoveggie.webp", format="400 g",
  accroche="Un mélange de psyllium, légumes, plantes, épices et champignons en poudre.",
- description="Le MycoVeggie est une poudre composée de téguments de psyllium, de légumes, de feuilles et d'épices, et d'une dizaine de champignons dont le shiitake, le pleurote et la crinière de lion. Le psyllium en est le premier ingrédient.\n\nLe pot de 400 g se dose à la cuillère-mesure dans un verre d'eau tiède ou froide, de préférence au shaker : la poudre épaissit vite, mieux vaut boire aussitôt.",
+ description="Le MycoVeggie est une poudre composée de téguments de psyllium, de légumes, de feuilles et d'épices, et de sept champignons dont le shiitake, le pleurote et la crinière de lion. Le psyllium en est le premier ingrédient.\n\nLe pot de 400 g se dose à la cuillère-mesure dans un verre d'eau tiède ou froide, de préférence au shaker : la poudre épaissit vite, mieux vaut boire aussitôt.",
  composition="Téguments de psyllium, céleri, feuille de mûrier, feuille de noni, feuille de ginkgo, gingembre, citronnelle, shiitake, Lyophyllum, tricholome de la Saint-Georges, crinière de lion, pleurote de l'orme, pleurote gris, Schizophyllum commune, maïs doux, citron vert, orange, spiruline, thé vert, écorce de mandarine, cannelle, anis étoilé, clou de girofle.",
  usage="Mélanger une cuillère-mesure (5 g) dans un verre d'eau tiède ou froide, au shaker de préférence.\nBoire aussitôt."),
-dict(slug="spirulina", nom="DXN Spirulina", categorie=CO, prix="95", image="spirulina.webp", format="500 comprimés × 250 mg",
- accroche="De la spiruline (Spirulina platensis) cultivée en bassin, en comprimés de 250 mg.",
- description="La spiruline DXN est une micro-algue, Spirulina platensis, cultivée en bassin sans pesticide ni herbicide selon DXN, puis séchée et compressée. Chaque comprimé en contient 250 mg, avec un minimum d'excipients.\n\nLe flacon de 500 comprimés est le grand format ; il existe aussi en 120 comprimés et en poudre. Les comprimés s'avalent avec de l'eau ou se croquent.",
+dict(slug="spirulina-120", nom="DXN Spirulina — 120 comprimés", categorie=CO, prix="28.70", image="spirulina-120.webp", format="120 comprimés × 250 mg",
+ accroche="De la spiruline (Spirulina platensis) cultivée en bassin, en comprimés de 250 mg — le petit flacon.",
+ description="La spiruline DXN est une micro-algue, Spirulina platensis, cultivée en bassin sans pesticide ni herbicide selon DXN, puis séchée et compressée. Chaque comprimé en contient 250 mg, avec un minimum d'excipients.\n\nCe flacon de 120 comprimés est le format de découverte ; la même spiruline existe en flacon de 500. Les comprimés s'avalent avec de l'eau ou se croquent.",
  composition="Spirulina platensis, excipients. Détail sur l'étiquette.",
  usage="Suivre les conseils d'utilisation imprimés sur le flacon.\nAvaler avec un verre d'eau ou croquer."),
-dict(slug="omega-3", nom="DXN Omega 3", categorie=CO, prix="", image="omega-3.webp", format="90 capsules molles",
+dict(slug="spirulina", nom="DXN Spirulina — 500 comprimés", categorie=CO, prix="91.90",image="spirulina.webp", format="500 comprimés × 250 mg",
+ accroche="De la spiruline (Spirulina platensis) cultivée en bassin, en comprimés de 250 mg.",
+ description="La spiruline DXN est une micro-algue, Spirulina platensis, cultivée en bassin sans pesticide ni herbicide selon DXN, puis séchée et compressée. Chaque comprimé en contient 250 mg, avec un minimum d'excipients.\n\nCe flacon de 500 comprimés est le grand format ; la même spiruline existe en flacon de 120. Les comprimés s'avalent avec de l'eau ou se croquent.",
+ composition="Spirulina platensis, excipients. Détail sur l'étiquette.",
+ usage="Suivre les conseils d'utilisation imprimés sur le flacon.\nAvaler avec un verre d'eau ou croquer."),
+dict(slug="omega-3", nom="DXN Omega 3", categorie=CO, prix="39.90",image="omega-3.webp", format="90 capsules molles",
  accroche="De l'huile de poisson purifiée, source d'EPA et de DHA, en capsules molles.",
  description="L'Omega 3 de DXN est une huile de poisson purifiée, naturellement riche en deux acides gras de la famille des oméga-3 : l'EPA et le DHA. Elle est conditionnée en capsules molles, faciles à avaler.\n\nLe flacon contient 90 capsules. Elles se prennent après un repas, avec un verre d'eau, et se conservent dans un endroit frais et sec. Les teneurs exactes en EPA et en DHA figurent sur l'étiquette ; en cas de traitement anticoagulant, de grossesse ou d'allergie au poisson, demandez l'avis d'un professionnel de santé avant d'en prendre.",
  composition="Huile de poisson purifiée (EPA, DHA), enveloppe de la capsule. Teneurs et liste complète sur l'étiquette.\nAllergène : poisson.",
@@ -148,7 +153,44 @@ dict(slug="gano-massage-oil", nom="DXN Gano Massage Oil", categorie=SP, prix="",
  usage="Bien agiter avant usage.\nAppliquer la quantité souhaitée et masser doucement.\nUsage externe. En cas de contact avec les yeux, rincer abondamment."),
 ]
 
-COLS = ["slug","nom","categorie","prix","image","format","accroche","description","composition","usage"]
+
+# Points clés affichés en liste cochée sous l'accroche. Même règle que pour le
+# reste : ce que le produit est, contient, ou la façon dont il s'utilise.
+POINTS = {
+ "lingzhi-coffee":        ["Café noir, sans sucre ni crémier dans le sachet", "Extrait de Ganoderma lucidum, le reishi", "Prêt en quelques secondes, un sachet par tasse"],
+ "lingzhi-coffee-3-en-1": ["Café, crémier et sucre déjà dosés", "Extrait de Ganoderma lucidum, le reishi", "20 sachets individuels, faciles à emporter"],
+ "lions-mane-coffee":     ["Poudre de champignon Lion's Mane (Hericium erinaceus)", "Café doux, avec crémier et sucre", "Se prépare chaud ou glacé — 20 sachets"],
+ "cordyceps-coffee":      ["Café premium et extrait de Cordyceps sinensis", "Version « 1 in 1 », sans crémier dans le sachet", "Se prépare chaud ou froid"],
+ "morinzhi":              ["Jus de noni, Morinda citrifolia", "Adouci à la roselle", "À diluer : deux bouchons par verre"],
+ "roselle":               ["Concentré de calices d'hibiscus", "Sans conservateur ni colorant artificiel", "Se boit chaud, froid, ou s'utilise en cuisine"],
+ "virgin-coconut-oil":    ["Huile de coco vierge, pressée à froid", "Associée à l'extrait de Ganoderma", "En cuisine comme en soin"],
+ "rg-90":                 ["100 % Ganoderma lucidum, corps fructifère", "Récolté à 90 jours, ferme certifiée bio selon DXN", "90 gélules de 270 mg"],
+ "reishi-powder":         ["100 % Ganoderma lucidum : corps fructifère et mycélium", "Poudre fine, à diluer dans une boisson", "Dosage à la cuillère-mesure"],
+ "cordyceps":             ["Poudre de Cordyceps sinensis, sans autre ingrédient", "Gélules végétales de 450 mg", "60 gélules par flacon"],
+ "poria-s":               ["100 % mycélium de Poria cocos", "Produit en usine certifiée GMP selon DXN", "Poudre à dissoudre dans l'eau tiède"],
+ "lions-mane":            ["Hericium erinaceus, corps fructifère", "120 comprimés de 300 mg", "Produit destiné aux adultes"],
+ "mycoveggie":            ["23 ingrédients végétaux, dont sept champignons", "Le psyllium en premier ingrédient", "Pot de 400 g, à doser à la cuillère"],
+ "spirulina-120":         ["Spirulina platensis cultivée en bassin", "Sans pesticide ni herbicide selon DXN", "120 comprimés de 250 mg, à avaler ou à croquer"],
+ "spirulina":             ["Spirulina platensis cultivée en bassin", "Sans pesticide ni herbicide selon DXN", "500 comprimés de 250 mg, à avaler ou à croquer"],
+ "omega-3":               ["Huile de poisson purifiée", "Source d'EPA et de DHA, deux oméga-3", "90 capsules molles, à prendre après un repas"],
+ "natural-shield-deo":    ["Sans sels d'aluminium, sans alcool", "Aloe vera bio, concombre et sauge", "Roll-on de 50 ml, tous types de peau"],
+ "kallow-shower-gel":     ["Aloe vera, huile d'olive, acide hyaluronique", "Mousse fine, parfum floral", "Flacon-pompe de 250 ml"],
+ "kallow-sunscreen-spf50":["Haute protection SPF 50+, UVA et UVB", "Acide hyaluronique et vitamine E", "Texture légère, tube de 50 ml"],
+ "kallow-cosmetics":      ["Les soins visage Divine Touch réunis", "Coffret composé par Fati", "Chaque soin existe aussi à l'unité"],
+ "divine-eye-cream":      ["Caféine, peptides, acide hyaluronique", "Vitamines C, E et A", "Tube de 15 ml, matin et soir"],
+ "divine-dry-oil":        ["Huiles de tournesol, d'argan et d'olive", "Visage, corps et cheveux", "Pénètre vite, sans film gras"],
+ "divine-night-oil":      ["Six huiles végétales", "Vitamines A, C et E", "Quelques gouttes le soir, sans rinçage"],
+ "divine-face-cream":     ["Peptides et cellules de pomme verte", "Huiles d'avocat, d'abricot et d'argan", "Pot de 50 ml, texture riche"],
+ "ganozhi-soap":          ["Extrait de Ganoderma et huile de palme", "Sans colorant artificiel", "Corps, visage et rasage"],
+ "ganozhi-shampoo":       ["Extrait de Ganoderma et vitamine B5", "pH équilibré", "Tous types de cheveux, usage fréquent"],
+ "ganozhi-body-foam":     ["Extrait de Ganoderma et vitamine E", "Formule douce, tous types de peau", "Flacon de 250 ml"],
+ "gano-massage-oil":      ["Huile de palme et extrait de Ganoderma", "Pour le corps et les cheveux", "Usage externe, flacon de 75 ml"],
+}
+for p in P:
+    assert p["slug"] in POINTS, p["slug"]
+    p["points"] = "\n".join(POINTS[p["slug"]])
+
+COLS = ["slug","nom","categorie","prix","image","format","accroche","description","composition","usage","points"]
 out = pathlib.Path(__file__).resolve().parent / "catalogue.csv"
 with out.open("w", encoding="utf-8", newline="") as f:
     w = csv.DictWriter(f, fieldnames=COLS, quoting=csv.QUOTE_ALL, lineterminator="\n")
@@ -159,7 +201,7 @@ with out.open("w", encoding="utf-8", newline="") as f:
 # Garde-fou : aucun mot d'allégation santé ne doit traîner dans les textes.
 interdits = [r"\bguérit",r"\bsoigne",r"\bprévient",r"\btraite\b","immunit","détox","detox","brûle","maigrir","perte de poids","diabète","cholestérol","tension","anti-âge","antioxydant","anti-inflammatoire","renforce","stimule","améliore","booste","sans danger","sans effet secondaire"]
 for p in P:
-    texte = " ".join(p[c] for c in ("accroche","description","composition","usage")).lower()
+    texte = " ".join(p[c] for c in ("accroche","description","composition","usage","points")).lower()
     for mot in interdits:
         assert not re.search(mot, texte), (p["slug"], mot)
 print(len(P), "produits →", out)

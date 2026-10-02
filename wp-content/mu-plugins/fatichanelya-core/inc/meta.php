@@ -35,6 +35,15 @@ function fati_meta_schema() {
 				'type'  => 'text',
 				'help'  => __( 'Tel qu\'imprimé sur l\'emballage : « 90 gélules », « 20 sachets × 21 g », « 250 ml ».', 'fatichanelya' ),
 			),
+			// Trois ou quatre faits sur le produit, affichés en liste cochée sous
+			// l'accroche. Des faits vérifiables sur l'emballage — ce qu'il contient,
+			// son format, la façon de l'utiliser — jamais un effet sur la santé :
+			// le site s'engage par écrit à n'en promettre aucun.
+			'_fati_points'    => array(
+				'label' => __( 'Points clés', 'fatichanelya' ),
+				'type'  => 'textarea',
+				'help'  => __( 'Un fait par ligne, trois ou quatre au plus : composition, format, usage. Aucun bénéfice santé (interdit par la réglementation européenne).', 'fatichanelya' ),
+			),
 			'_fati_composition' => array(
 				'label' => __( 'Composition', 'fatichanelya' ),
 				'type'  => 'textarea',

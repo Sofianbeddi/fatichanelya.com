@@ -44,6 +44,7 @@ METAS = {
     "format": "_fati_format",
     "composition": "_fati_composition",
     "usage": "_fati_usage",
+    "points": "_fati_points",
 }
 
 
@@ -133,7 +134,7 @@ def main():
         sys.exit(f"Catalogue introuvable : {CATALOGUE}")
 
     lignes = list(csv.DictReader(open(str(CATALOGUE), encoding="utf-8", newline="")))
-    attendues = {"slug", "nom", "categorie", "prix", "image", "format", "accroche", "description", "composition", "usage"}
+    attendues = {"slug", "nom", "categorie", "prix", "image", "format", "accroche", "description", "composition", "usage", "points"}
     manquantes = attendues - set(lignes[0].keys())
     if manquantes:
         sys.exit(f"Colonnes manquantes dans le CSV : {', '.join(sorted(manquantes))}")
