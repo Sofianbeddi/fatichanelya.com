@@ -1,0 +1,160 @@
+# Génère tools/catalogue.csv à partir des fiches rédigées.
+# Règle de rédaction : aucune allégation santé (règlement CE 1924/2006). On décrit
+# ce que c'est, ce que ça contient, comment ça s'utilise. Un champ non vérifié
+# reste vide : il ne s'affiche pas plutôt que d'afficher une approximation.
+import csv, pathlib, re
+
+AB, BS, CO, SP = "Alimentation & boissons", "Beauté & soin", "Compléments", "Soin personnel"
+FLACON = "Suivre les conseils d'utilisation imprimés sur le flacon.\nÀ prendre avec un verre d'eau."
+
+P = [
+# ---------------------------------------------------------------- Alimentation & boissons
+dict(slug="lingzhi-coffee", nom="DXN Lingzhi Black Coffee", categorie=AB, prix="30", image="lingzhi-coffee.webp", format="",
+ accroche="Un café noir instantané, sans sucre ajouté, enrichi en extrait de Ganoderma lucidum.",
+ description="Le Lingzhi Black Coffee est un café soluble d'arabica brésilien auquel DXN ajoute un extrait de Ganoderma lucidum, le champignon reishi. Il se boit noir : aucun sucre ni crémier dans le sachet, un goût de café franc.\n\nC'est la référence la plus simple de la gamme café pour qui veut garder son geste du matin sans rien changer : un sachet, de l'eau chaude, c'est prêt. Il se conserve à température ambiante, à l'abri de l'humidité.",
+ composition="Café instantané (arabica du Brésil), extrait de Ganoderma lucidum.",
+ usage="Verser le contenu d'un sachet dans une tasse.\nAjouter 150 à 180 ml d'eau chaude et remuer."),
+dict(slug="lingzhi-coffee-3-en-1", nom="DXN Lingzhi Coffee 3 in 1", categorie=AB, prix="", image="lingzhi-coffee-3-en-1.webp", format="20 sachets × 21 g",
+ accroche="Café, crémier et sucre réunis dans un sachet, avec l'extrait de Ganoderma de la gamme Lingzhi.",
+ description="Version douce du café Lingzhi : le sachet contient déjà le crémier et le sucre, pour un café au lait prêt en trente secondes. L'extrait de Ganoderma lucidum est le même que dans le Black Coffee ; seule la rondeur change.\n\nSans colorant, arôme ni conservateur artificiel selon la fiche DXN. Le crémier peut contenir un dérivé du lait : vérifiez la liste d'ingrédients de l'emballage si vous y êtes sensible.",
+ composition="Café soluble, crémier, sucre, extrait de Ganoderma lucidum. Détail complet sur l'emballage.",
+ usage="Vider un sachet dans une tasse.\nAjouter de l'eau chaude et remuer."),
+dict(slug="lions-mane-coffee", nom="DXN Lion's Mane Coffee", categorie=AB, prix="", image="lions-mane-coffee.webp", format="20 sachets × 21 g",
+ accroche="Un café instantané au lait, préparé avec de la poudre de champignon Hericium erinaceus, la crinière de lion.",
+ description="Le Lion's Mane Coffee associe café instantané, crémier et sucre à de la poudre de champignon Hericium erinaceus, plus connu sous le nom de crinière de lion. Le résultat est un café doux et rond, qui se prépare chaud ou froid.\n\nIl contient du lait (caséinate de sodium dans le crémier) : il ne convient pas aux personnes allergiques aux protéines de lait.",
+ composition="Crémier (sirop de glucose, huile de palme, caséinate de sodium — lait, stabilisants, émulsifiants, sel), sucre, café instantané, poudre de champignon Lion's Mane (Hericium erinaceus).\nAllergène : lait.",
+ usage="Verser un sachet (21 g) dans une tasse.\nAjouter 150 à 180 ml d'eau chaude, ou d'eau froide pour une version glacée. Remuer."),
+dict(slug="cordyceps-coffee", nom="DXN Cordyceps Coffee", categorie=AB, prix="", image="cordyceps-coffee.webp", format="",
+ accroche="Un café premium instantané associé à l'extrait de Cordyceps sinensis.",
+ description="Le Cordyceps Coffee est un café soluble auquel DXN ajoute un extrait de Cordyceps sinensis, un champignon utilisé de longue date en Asie. Il se prépare en quelques secondes, chaud ou froid.\n\nIl existe en version noire (« 1 in 1 ») et en version avec crémier et sucre de canne (« 3 in 1 ») : la version expédiée est confirmée avec Fati avant la commande.",
+ composition="Café instantané, extrait de Cordyceps sinensis. Selon la version : crémier et sucre de canne.",
+ usage="Vider un sachet dans une tasse.\nAjouter de l'eau chaude ou froide, bien remuer."),
+dict(slug="morinzhi", nom="DXN Morinzhi", categorie=AB, prix="30", image="morinzhi.webp", format="285 ml",
+ accroche="Un jus de noni (Morinda citrifolia) adouci à la roselle, à diluer dans un verre d'eau.",
+ description="Le Morinzhi est préparé à partir du fruit du noni, Morinda citrifolia, dont l'odeur très marquée est atténuée par l'ajout de roselle, l'hibiscus. Il se boit dilué : deux bouchons dans un verre d'eau ou de jus de fruit.\n\nLa bouteille de 285 ml se conserve au réfrigérateur après ouverture. Bien agiter avant de servir : le dépôt est naturel.",
+ composition="Jus de noni (Morinda citrifolia), extrait de roselle (Hibiscus sabdariffa). Liste complète sur l'étiquette.",
+ usage="Bien agiter avant usage.\nDiluer 30 ml (deux bouchons) dans un verre d'eau ou de jus.\nConserver au réfrigérateur après ouverture."),
+dict(slug="roselle", nom="DXN Roselle Juice", categorie=AB, prix="27", image="roselle.webp", format="285 ml",
+ accroche="Un concentré de calices d'hibiscus, acidulé, à diluer chaud ou froid.",
+ description="Le Roselle Juice est un concentré obtenu à partir des calices de roselle, l'Hibiscus sabdariffa que l'on connaît sous le nom de bissap ou de karkadé. Son goût est acidulé et rafraîchissant.\n\nIl se dilue à l'eau froide avec des glaçons, à l'eau chaude comme une infusion, ou s'ajoute à un thé. La fiche DXN suggère aussi de l'utiliser en cuisine, pour une gelée ou un sorbet. Sans conservateur ni colorant artificiel.",
+ composition="Extrait de calices de roselle (Hibiscus sabdariffa). Liste complète sur l'étiquette.",
+ usage="Diluer la quantité souhaitée dans de l'eau froide ou chaude, remuer.\nSe mélange aussi à un thé ou un jus."),
+dict(slug="virgin-coconut-oil", nom="DXN Virgin Coconut Oil with Ganoderma", categorie=AB, prix="", image="virgin-coconut-oil.webp", format="",
+ accroche="Une huile de coco vierge, pressée à froid, associée à l'extrait de Ganoderma.",
+ description="Cette huile de coco vierge est extraite à froid de noix de coco fraîches, non raffinée, puis associée à un extrait de Ganoderma lucidum. Elle est solide en dessous de 24 °C environ et redevient liquide à la chaleur : c'est le comportement normal d'une huile de coco non traitée.\n\nElle s'utilise en cuisine, pour cuire ou assaisonner, et en soin : quelques gouttes sur la peau ou les pointes des cheveux.",
+ composition="Huile de coco vierge pressée à froid, extrait de Ganoderma lucidum.",
+ usage="En cuisine : une à deux cuillères à soupe pour cuire ou assaisonner.\nEn soin : une petite quantité sur la peau ou les cheveux, selon le besoin."),
+# ---------------------------------------------------------------- Compléments
+dict(slug="rg-90", nom="DXN Reishi Gano (RG) 90", categorie=CO, prix="61", image="rg-90.webp", format="90 gélules × 270 mg",
+ accroche="Du Ganoderma lucidum, corps fructifère récolté à 90 jours, en gélules de 270 mg.",
+ description="Le Reishi Gano, ou RG, contient uniquement le corps fructifère du Ganoderma lucidum — le champignon reishi — récolté à maturité, après 90 jours de culture en ferme certifiée biologique selon DXN. Rien d'autre dans la gélule.\n\nLe flacon de 90 gélules est le format intermédiaire de la gamme, qui existe aussi en 30 et en 360. Les conseils d'utilisation figurent sur l'emballage ; en cas de traitement médical ou de grossesse, demandez l'avis d'un professionnel de santé avant d'en prendre.",
+ composition="100 % Ganoderma lucidum (corps fructifère), 270 mg par gélule.",
+ usage=FLACON),
+dict(slug="reishi-powder", nom="DXN Reishi Mushroom Powder", categorie=CO, prix="40.50", image="reishi-powder.webp", format="",
+ accroche="Corps fructifère et mycélium de Ganoderma lucidum réduits en poudre, à diluer.",
+ description="Cette poudre réunit les deux parties du reishi que DXN propose séparément en gélules : le corps fructifère (RG) et le mycélium (GL). Elle se mélange dans de l'eau, une boisson ou une préparation.\n\nLe goût est légèrement amer, caractéristique du champignon. La dose se mesure à la cuillère fournie ; le détail figure sur l'emballage.",
+ composition="Corps fructifère et mycélium de Ganoderma lucidum, 100 %.",
+ usage="Mélanger une cuillère-mesure rase dans un verre d'eau ou une boisson.\nPeut aussi s'incorporer à une préparation."),
+dict(slug="cordyceps", nom="DXN Cordyceps", categorie=CO, prix="75", image="cordyceps.webp", format="60 gélules × 450 mg",
+ accroche="De la poudre de Cordyceps sinensis en gélules végétales.",
+ description="Le Cordyceps sinensis est un champignon utilisé de longue date en Asie. DXN le propose ici en poudre encapsulée, 450 mg par gélule, sans autre ingrédient.\n\nLe flacon contient 60 gélules. Il existe aussi en poudre libre de 30 g, sur demande.",
+ composition="Poudre de Cordyceps sinensis, 450 mg par gélule. Gélule végétale.",
+ usage=FLACON),
+dict(slug="poria-s", nom="DXN Poria S", categorie=CO, prix="35", image="poria-s.webp", format="",
+ accroche="Du mycélium de Poria cocos, un champignon de la tradition chinoise, en poudre à diluer.",
+ description="Le Poria S contient uniquement du mycélium de Poria cocos, un champignon qui pousse sur les racines de pin et que la tradition chinoise utilise depuis des siècles. Il est produit en usine certifiée GMP selon DXN.\n\nIl se présente en poudre fine, à dissoudre dans de l'eau tiède.",
+ composition="100 % mycélium de Poria cocos.",
+ usage="Dissoudre une cuillère (3,5 g) dans 100 ml d'eau tiède."),
+dict(slug="lions-mane", nom="DXN Lion's Mane", categorie=CO, prix="48", image="lions-mane.webp", format="120 comprimés × 300 mg",
+ accroche="Le champignon Hericium erinaceus, dit crinière de lion, en comprimés de 300 mg.",
+ description="Le Lion's Mane, ou crinière de lion, est le champignon Hericium erinaceus, reconnaissable à ses longues aiguilles blanches. DXN le propose en comprimés de 300 mg à partir du corps fructifère.\n\nLe flacon contient 120 comprimés. Produit destiné aux adultes.",
+ composition="Hericium erinaceus (corps fructifère), excipient.",
+ usage=FLACON),
+dict(slug="mycoveggie", nom="DXN MycoVeggie", categorie=CO, prix="118", image="mycoveggie.webp", format="400 g",
+ accroche="Un mélange de psyllium, légumes, plantes, épices et champignons en poudre.",
+ description="Le MycoVeggie est une poudre composée de téguments de psyllium, de légumes, de feuilles et d'épices, et d'une dizaine de champignons dont le shiitake, le pleurote et la crinière de lion. Le psyllium en est le premier ingrédient.\n\nLe pot de 400 g se dose à la cuillère-mesure dans un verre d'eau tiède ou froide, de préférence au shaker : la poudre épaissit vite, mieux vaut boire aussitôt.",
+ composition="Téguments de psyllium, céleri, feuille de mûrier, feuille de noni, feuille de ginkgo, gingembre, citronnelle, shiitake, Lyophyllum, tricholome de la Saint-Georges, crinière de lion, pleurote de l'orme, pleurote gris, Schizophyllum commune, maïs doux, citron vert, orange, spiruline, thé vert, écorce de mandarine, cannelle, anis étoilé, clou de girofle.",
+ usage="Mélanger une cuillère-mesure (5 g) dans un verre d'eau tiède ou froide, au shaker de préférence.\nBoire aussitôt."),
+dict(slug="spirulina", nom="DXN Spirulina", categorie=CO, prix="95", image="spirulina.webp", format="500 comprimés × 250 mg",
+ accroche="De la spiruline (Spirulina platensis) cultivée en bassin, en comprimés de 250 mg.",
+ description="La spiruline DXN est une micro-algue, Spirulina platensis, cultivée en bassin sans pesticide ni herbicide selon DXN, puis séchée et compressée. Chaque comprimé en contient 250 mg, avec un minimum d'excipients.\n\nLe flacon de 500 comprimés est le grand format ; il existe aussi en 120 comprimés et en poudre. Les comprimés s'avalent avec de l'eau ou se croquent.",
+ composition="Spirulina platensis, excipients. Détail sur l'étiquette.",
+ usage="Suivre les conseils d'utilisation imprimés sur le flacon.\nAvaler avec un verre d'eau ou croquer."),
+# ---------------------------------------------------------------- Beauté & soin
+dict(slug="natural-shield-deo", nom="Kallow Natural Shield — déodorant sans aluminium", categorie=BS, prix="18", image="natural-shield-deo.webp", format="Roll-on 50 ml",
+ accroche="Un roll-on sans sels d'aluminium ni alcool, à l'aloe vera bio et à la sauge.",
+ description="Le Natural Shield est le déodorant de la gamme Kallow, la ligne cosmétique de DXN fabriquée en Grèce. Sa formule se passe de sels d'aluminium et d'alcool ; elle associe du jus d'aloe vera bio, de l'extrait de concombre et de l'huile de sauge dans une bille de 50 ml.\n\nConvient à tous les types de peau. Comme tout déodorant sans aluminium, il se réapplique au besoin dans la journée.",
+ composition="Aqua, Coco-Caprylate/Caprate, Caprylic/Capric Triglyceride, Triethyl Citrate, Glycerin, Zinc Ricinoleate, Parfum, Aloe Barbadensis Leaf Juice*, Cucumis Sativus Fruit Extract, Salvia Officinalis Oil, Tocopheryl Acetate, Sodium Caproyl/Lauroyl Lactylate, Glyceryl Stearate Citrate, Carbomer, Triethanolamine, Citric Acid, Phenoxyethanol, Ethylhexylglycerin, Potassium Sorbate, Sodium Benzoate.\n* issu de l'agriculture biologique",
+ usage="Bien agiter avant usage.\nAppliquer sur les aisselles propres et sèches, renouveler au besoin."),
+dict(slug="kallow-shower-gel", nom="Kallow Luxury Aromatic Shower Gel", categorie=BS, prix="", image="kallow-shower-gel.webp", format="250 ml",
+ accroche="Un gel douche parfumé à l'aloe vera, à l'huile d'olive et à l'acide hyaluronique.",
+ description="Le Luxury Aromatic Shower Gel nettoie le corps avec une mousse fine et laisse un parfum floral. Sa formule associe du jus d'aloe vera, de l'huile d'olive et de l'hyaluronate de sodium.\n\nIl ouvre la série Luxury Aromatic de Kallow, pensée pour être suivie de la lotion corps et de l'huile sèche Divine Touch. Réservé au corps : ce n'est pas un nettoyant visage.",
+ composition="Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Aloe Barbadensis Leaf Juice, Sodium Hyaluronate, Olea Europaea Fruit Oil, Parfum (Linalool, Limonene, Coumarin). Liste INCI complète sur le flacon.",
+ usage="Sur peau mouillée, faire mousser une petite quantité dans la main ou sur une fleur de douche.\nRincer abondamment. Éviter le contact avec les yeux."),
+dict(slug="kallow-sunscreen-spf50", nom="Kallow High Protection Face Sunscreen SPF 50+", categorie=BS, prix="", image="kallow-sunscreen-spf50.webp", format="50 ml",
+ accroche="Une crème solaire visage haute protection SPF 50+, à l'acide hyaluronique et à la vitamine E.",
+ description="Cette crème solaire visage offre une haute protection SPF 50+ contre les UVA et les UVB grâce à des filtres organiques. Sa texture légère, enrichie en hyaluronate de sodium, vitamine E et allantoïne, se porte seule ou sous le maquillage.\n\nTube de 50 ml, à appliquer généreusement avant l'exposition et à renouveler toutes les deux heures et après la baignade : une protection solaire ne tient que si elle est renouvelée.",
+ composition="Aqua, Ethylhexyl Methoxycinnamate, Octocrylene, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Glycerin, Glyceryl Stearate, Cetearyl Alcohol, Potassium Palmitoyl Hydrolyzed Wheat Protein, Polymethyl Methacrylate, Phenoxyethanol, Chlorphenesin, Tocopheryl Acetate, Parfum, Ethylhexylglycerin, Sodium Hyaluronate, Sodium Polyacrylate, Allantoin.",
+ usage="Appliquer uniformément sur le visage et le cou, 15 minutes avant l'exposition.\nRenouveler toutes les deux heures et après la baignade."),
+dict(slug="kallow-cosmetics", nom="Coffret Kallow Divine Touch — sélection Fatichanelya", categorie=BS, prix="200", image="kallow-cosmetics.webp", format="",
+ accroche="Les soins visage Divine Touch de Kallow réunis en un coffret composé par Fati.",
+ description="Ce coffret rassemble les soins visage de la ligne Divine Touch de Kallow, la gamme cosmétique de DXN fabriquée en Grèce : crème, contour des yeux et huiles. La composition exacte du coffret est confirmée avec Fati au moment de la commande, selon les disponibilités.\n\nChaque soin est aussi vendu à l'unité sur la boutique.",
+ composition="", usage=""),
+dict(slug="divine-eye-cream", nom="Kallow Divine Touch Lifting Impact Eye Cream", categorie=BS, prix="50", image="divine-eye-cream.webp", format="15 ml",
+ accroche="Un contour des yeux à la caféine, aux peptides et à l'acide hyaluronique, en tube de 15 ml.",
+ description="Le Lifting Impact Eye Cream est le soin contour des yeux de la ligne Divine Touch. Sa formule réunit de la caféine, un complexe de peptides, de l'hyaluronate de sodium, des vitamines C, E et A et des polyphénols de thé vert, dans une texture légère qui s'applique matin et soir.\n\nIl peut servir de base avant le maquillage.",
+ composition="Aqua, Glycerin, Glycereth-26, Caprylic/Capric Triglyceride, Cetearyl Glucoside, Sorbitan Olivate, Caffeine, Ascorbyl Glucoside, Malus Domestica Fruit Cell Culture Extract, Albizia Julibrissin Bark Extract, Butyrospermum Parkii Butter, Tocopheryl Acetate, Retinyl Palmitate, Allantoin, Sodium Hyaluronate Crosspolymer, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Trifluoroacetyl Tripeptide-2… Liste INCI complète sur l'emballage.",
+ usage="Appliquer une petite quantité sur le contour de l'œil, paupière supérieure comprise, par légers tapotements.\nMatin et soir, sur peau propre."),
+dict(slug="divine-dry-oil", nom="Kallow Divine Touch Multi-Purpose Dry Oil", categorie=BS, prix="45", image="divine-dry-oil.webp", format="100 ml",
+ accroche="Une huile sèche visage, corps et cheveux aux huiles de tournesol, d'argan et d'olive.",
+ description="L'huile sèche Divine Touch s'applique sur le visage, le corps et les cheveux. Sa base d'huiles végétales — tournesol, argan, olive — et de vitamine E pénètre rapidement sans laisser de film gras, d'où son nom d'huile « sèche ».\n\nFlacon de 100 ml, parfumé. Elle se combine avec le gel douche et la lotion de la série Luxury Aromatic.",
+ composition="Coco-Caprylate/Caprate, Caprylic/Capric Triglyceride, Helianthus Annuus Seed Oil, Parfum, Argania Spinosa Kernel Oil, Olea Europaea Fruit Oil, Tocopheryl Acetate, BHT, composants du parfum (Linalool, Limonene, Citronellol, Geraniol, Coumarin, Benzyl Salicylate, Hexyl Cinnamal, Hydroxycitronellal, Alpha-Isomethyl Ionone).",
+ usage="Appliquer quelques gouttes sur la peau ou les longueurs, masser légèrement.\nNe pas rincer."),
+dict(slug="divine-night-oil", nom="Kallow Divine Touch Nourishing Night Oil", categorie=BS, prix="50", image="divine-night-oil.webp", format="30 ml",
+ accroche="Une huile de nuit visage aux huiles de pépins de raisin, d'abricot, d'avocat et d'argan.",
+ description="La Nourishing Night Oil se pose le soir, en dernier geste, sur peau propre. Elle associe six huiles végétales — pépins de raisin, noyau d'abricot, avocat, argan, olive, sacha inchi — à des vitamines A, C et E.\n\nFlacon de 30 ml. Quelques gouttes suffisent ; éviter le contour des yeux, ne pas rincer.",
+ composition="Vitis Vinifera Seed Oil, Prunus Armeniaca Kernel Oil, Persea Gratissima Oil, Argania Spinosa Kernel Oil, Tocopheryl Acetate, Olea Europaea Fruit Oil, Retinyl Palmitate, Plukenetia Volubilis Seed Oil, Carthamus Tinctorius Seed Oil, Prunus Amygdalus Dulcis Oil, Ascorbyl Palmitate, BHT, Linoleic Acid.",
+ usage="Le soir, après le nettoyage et les autres soins, appliquer quelques gouttes sur le visage et le cou.\nÉviter le contour des yeux. Ne pas rincer."),
+dict(slug="divine-face-cream", nom="Kallow Divine Touch Lifting Impact Face Cream", categorie=BS, prix="55", image="divine-face-cream.webp", format="50 ml",
+ accroche="Une crème visage riche aux peptides, aux cellules de pomme verte et aux huiles d'avocat, d'abricot et d'argan.",
+ description="La Lifting Impact Face Cream est la crème visage de la ligne Divine Touch. Sa texture riche réunit un complexe de peptides, un extrait de cellules de pomme verte (Malus domestica), de l'hyaluronate de sodium et des huiles d'avocat, d'abricot et d'argan, avec des vitamines A, C et E.\n\nPot de 50 ml. Elle est conçue pour être appliquée après le sérum Divine Touch, mais s'utilise aussi seule.",
+ composition="Aqua, Persea Gratissima Oil, Prunus Armeniaca Kernel Oil, Argania Spinosa Kernel Oil, Olea Europaea Fruit Oil, Retinyl Palmitate, Malus Domestica Fruit Cell Culture Extract, Ascorbyl Glucoside, Tocopheryl Acetate, Trifluoroacetyl Tripeptide-2, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1, Sodium Hyaluronate Crosspolymer, Fomes Officinalis Extract… Liste INCI complète sur l'emballage.",
+ usage="Appliquer sur le visage et le cou nettoyés, matin et/ou soir.\nAprès le sérum Divine Touch si vous l'utilisez."),
+# ---------------------------------------------------------------- Soin personnel
+dict(slug="ganozhi-soap", nom="DXN Ganozhi Soap", categorie=SP, prix="15", image="ganozhi-soap.webp", format="Pain de 80 g",
+ accroche="Un savon corps et visage à l'extrait de Ganoderma et à l'huile de palme, sans colorant artificiel.",
+ description="Le Ganozhi Soap est un pain de 80 g à base d'huile de palme, enrichi en extrait de Ganoderma lucidum, qui lui donne sa couleur brune naturelle. Il convient à tous les types de peau et peut aussi servir au rasage.\n\nSans colorant artificiel. Laisser sécher le savon entre deux usages pour qu'il dure.",
+ composition="Base lavante à l'huile de palme, extrait de Ganoderma lucidum, glycérine, parfum. Liste INCI complète sur l'emballage.",
+ usage="Faire mousser sur peau humide, masser, rincer."),
+dict(slug="ganozhi-shampoo", nom="DXN Ganozhi Shampoo", categorie=SP, prix="25", image="ganozhi-shampoo.webp", format="250 ml",
+ accroche="Un shampooing au pH équilibré, à l'extrait de Ganoderma et à la vitamine B5, pour tous types de cheveux.",
+ description="Le Ganozhi Shampoo lave les cheveux avec une formule au pH équilibré, enrichie en extrait de Ganoderma lucidum et en panthénol, la vitamine B5. Il convient à tous les types de cheveux et à un usage fréquent.\n\nFlacon de 250 ml.",
+ composition="Aqua, Cocamide DEA, Cocamidopropyl Betaine, Parfum, Ganoderma Lucidum Extract, Glycerin, Hydroxyethylcellulose, Lanolin, Panthenol, Sodium Laureth Sulfate… Liste INCI complète sur le flacon.",
+ usage="Appliquer sur cheveux mouillés, faire mousser, rincer.\nRenouveler si nécessaire."),
+dict(slug="ganozhi-body-foam", nom="DXN Ganozhi Body Foam", categorie=SP, prix="25", image="ganozhi-body-foam.webp", format="250 ml",
+ accroche="Une mousse lavante corps douce, à l'extrait de Ganoderma et à la vitamine E.",
+ description="Le Ganozhi Body Foam est un gel douche doux, formulé pour nettoyer sans décaper le film naturel de la peau selon DXN. Il contient de l'extrait de Ganoderma lucidum et de la vitamine E.\n\nFlacon de 250 ml. Convient à tous les types de peau.",
+ composition="Contient notamment : extrait de Ganoderma lucidum, vitamine E (Tocopheryl Acetate), glycérine, agents lavants doux (bétaïne, Sodium Laureth Sulfate). Liste INCI complète sur le flacon.",
+ usage="Verser quelques gouttes dans la main ou sur une fleur de douche, ajouter un peu d'eau et faire mousser.\nRincer."),
+dict(slug="gano-massage-oil", nom="DXN Gano Massage Oil", categorie=SP, prix="", image="gano-massage-oil.webp", format="75 ml",
+ accroche="Une huile de massage à l'huile de palme et à l'extrait de Ganoderma, pour le corps et les cheveux.",
+ description="Le Gano Massage Oil, « Minyak Gosok Gano » sur son étiquette d'origine, est une huile de massage composée d'huile de palme et d'extrait de Ganoderma lucidum. Elle s'utilise sur le corps et peut aussi s'appliquer sur les cheveux.\n\nFlacon de 75 ml. Usage externe uniquement ; éviter le contact avec les yeux.",
+ composition="Huile de palme, extrait de Ganoderma lucidum.",
+ usage="Bien agiter avant usage.\nAppliquer la quantité souhaitée et masser doucement.\nUsage externe. En cas de contact avec les yeux, rincer abondamment."),
+]
+
+COLS = ["slug","nom","categorie","prix","image","format","accroche","description","composition","usage"]
+out = pathlib.Path(__file__).resolve().parent / "catalogue.csv"
+with out.open("w", encoding="utf-8", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=COLS, quoting=csv.QUOTE_ALL, lineterminator="\n")
+    w.writeheader()
+    for p in P:
+        assert set(p) == set(COLS), p["slug"]
+        w.writerow(p)
+# Garde-fou : aucun mot d'allégation santé ne doit traîner dans les textes.
+interdits = [r"\bguérit",r"\bsoigne",r"\bprévient",r"\btraite\b","immunit","détox","detox","brûle","maigrir","perte de poids","diabète","cholestérol","tension","anti-âge","antioxydant","anti-inflammatoire","renforce","stimule","améliore","booste","sans danger","sans effet secondaire"]
+for p in P:
+    texte = " ".join(p[c] for c in ("accroche","description","composition","usage")).lower()
+    for mot in interdits:
+        assert not re.search(mot, texte), (p["slug"], mot)
+print(len(P), "produits →", out)

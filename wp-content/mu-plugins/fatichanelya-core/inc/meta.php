@@ -26,6 +26,25 @@ function fati_meta_schema() {
 				'type'  => 'text',
 				'help'  => __( 'Optionnel. Affiché uniquement en interne.', 'fatichanelya' ),
 			),
+			// Les trois champs suivants sont lus sur l'emballage ou la fiche
+			// officielle du fournisseur, jamais rédigés de notre propre chef :
+			// la contenance rend le prix lisible, la composition et le mode
+			// d'emploi répondent aux deux questions qui précèdent l'achat.
+			'_fati_format'    => array(
+				'label' => __( 'Contenance / format', 'fatichanelya' ),
+				'type'  => 'text',
+				'help'  => __( 'Tel qu\'imprimé sur l\'emballage : « 90 gélules », « 20 sachets × 21 g », « 250 ml ».', 'fatichanelya' ),
+			),
+			'_fati_composition' => array(
+				'label' => __( 'Composition', 'fatichanelya' ),
+				'type'  => 'textarea',
+				'help'  => __( 'Ingrédients principaux, repris de l\'étiquette. Une ligne par ingrédient ou une phrase.', 'fatichanelya' ),
+			),
+			'_fati_usage'     => array(
+				'label' => __( 'Conseils d\'utilisation', 'fatichanelya' ),
+				'type'  => 'textarea',
+				'help'  => __( 'Mode d\'emploi de l\'emballage, une étape par ligne. Jamais de posologie inventée.', 'fatichanelya' ),
+			),
 			'_fati_indispo'   => array(
 				'label' => __( 'Visuel à venir', 'fatichanelya' ),
 				'type'  => 'checkbox',
@@ -62,7 +81,7 @@ add_action(
 						'single'            => true,
 						'type'              => 'number' === $field['type'] ? 'number' : 'string',
 						'show_in_rest'      => true,
-						'sanitize_callback' => 'number' === $field['type'] ? 'fati_sanitize_decimal' : 'sanitize_text_field',
+						'sanitize_callback' => fati_meta_sanitizer( $field['type'] ),
 						'auth_callback'     => function () {
 							return current_user_can( 'edit_posts' );
 						},
@@ -73,6 +92,16 @@ add_action(
 	}
 );
 
+/**
+ * Fonction de nettoyage selon le type de champ. Un textarea garde ses
+ * retours à la ligne : sanitize_text_field les supprimerait.
+ */
+function fati_meta_sanitizer( $type ) {
+	if ( 'number' === $type ) {
+		return 'fati_sanitize_decimal';
+	}
+	return 'textarea' === $type ? 'sanitize_textarea_field' : 'sanitize_text_field';
+}
 function fati_sanitize_decimal( $value ) {
 	$value = str_replace( ',', '.', (string) $value );
 	return '' === $value ? '' : (string) round( (float) $value, 2 );
@@ -109,6 +138,8 @@ function fati_render_meta_box( $post ) {
 
 		if ( 'checkbox' === $field['type'] ) {
 			echo '<input type="checkbox" id="' . $id . '" name="' . $id . '" value="1" ' . checked( $value, '1', false ) . '>';
+		} elseif ( 'textarea' === $field['type'] ) {
+			echo '<textarea id="' . $id . '" name="' . $id . '" class="widefat" rows="4">' . esc_textarea( $value ) . '</textarea>';
 		} else {
 			$attrs = '';
 			foreach ( ( isset( $field['attrs'] ) ? $field['attrs'] : array() ) as $a => $v ) {
@@ -148,7 +179,7 @@ add_action(
 				$raw = isset( $_POST[ $key ] ) ? '1' : '';
 			} else {
 				$raw = isset( $_POST[ $key ] ) ? wp_unslash( $_POST[ $key ] ) : '';
-				$raw = 'number' === $field['type'] ? fati_sanitize_decimal( $raw ) : sanitize_text_field( $raw );
+				$raw = call_user_func( fati_meta_sanitizer( $field['type'] ), $raw );
 			}
 
 			if ( '' === $raw ) {

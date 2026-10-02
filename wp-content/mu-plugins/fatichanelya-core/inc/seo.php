@@ -95,7 +95,9 @@ add_action(
 		$desc  = fati_meta_description();
 		$title = wp_get_document_title();
 		$url   = fati_canonical_url();
-		$image = fati_opt( 'hero_image' );
+		// Image de partage dédiée (paysage 1200 × 630) ; le portrait du hero
+		// n'est qu'un repli, une carte WhatsApp le recadre mal.
+		$image = fati_opt( 'og_image' ) ? fati_opt( 'og_image' ) : fati_opt( 'hero_image' );
 
 		if ( is_singular() && has_post_thumbnail() ) {
 			$image = get_the_post_thumbnail_url( null, 'large' );
