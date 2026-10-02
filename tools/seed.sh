@@ -145,27 +145,8 @@ done
 
 # ---------------------------------------------------------------- formations
 echo "→ Formations"
-order=0
-tail -n +2 tools/formations.csv | while IFS= read -r line; do
-  [ -z "$line" ] && continue
-  slug=$(echo "$line"   | python3 -c "import sys,csv;print(next(csv.reader(sys.stdin))[0])")
-  nom=$(echo "$line"    | python3 -c "import sys,csv;print(next(csv.reader(sys.stdin))[1])")
-  niveau=$(echo "$line" | python3 -c "import sys,csv;print(next(csv.reader(sys.stdin))[2])")
-  duree=$(echo "$line"  | python3 -c "import sys,csv;print(next(csv.reader(sys.stdin))[3])")
-  desc=$(echo "$line"   | python3 -c "import sys,csv;print(next(csv.reader(sys.stdin))[4])")
-
-  order=$((order + 10))
-
-  id=$(wp post list --post_type=formation --name="$slug" --field=ID --posts_per_page=1)
-  if [ -z "$id" ]; then
-    id=$(wp post create --post_type=formation --post_status=publish --porcelain \
-         --post_title="$nom" --post_name="$slug" --post_excerpt="$desc" \
-         --post_content="$desc" --menu_order="$order")
-    echo "   + $nom"
-  fi
-  fati_meta "$id" _fati_niveau "$niveau"
-  if [ -n "$duree" ]; then fati_meta "$id" _fati_duree "$duree"; fi
-done
+# Carte dans tools/formations.csv, programme dans tools/formations/<slug>.md.
+python3 tools/importer-formations.py
 
 # ---------------------------------------------------------------- pages
 echo "→ Pages"
@@ -189,7 +170,7 @@ wp option update page_on_front "$HOME_ID" >/dev/null
 
 ABOUT_ID=$(create_page "À propos" "a-propos")
 CONTACT_ID=$(create_page "Contact" "contact")
-SELECTION_ID=$(create_page "Ma sélection" "ma-selection")
+SELECTION_ID=$(create_page "Panier" "panier")
 
 LEGAL_ID=$(create_page "Mentions légales" "mentions-legales")
 PRIV_ID=$(create_page "Politique de confidentialité" "confidentialite")

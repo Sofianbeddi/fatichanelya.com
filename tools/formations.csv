@@ -1,5 +1,7 @@
-slug,nom,niveau,duree,description
-lancer-ecommerce,Lancer son e-commerce,Débutant,6 semaines,De l'idée à une boutique structurée.
-vendre-avec-confiance,Vendre avec confiance,Tous niveaux,4 semaines,Clarifier son offre et son discours.
-ia-au-quotidien,L'IA au quotidien,Débutant,3 semaines,"Des usages simples, utiles et responsables."
-strategie-digitale,Stratégie digitale,Sur mesure,,Construire une présence cohérente.
+slug,nom,niveau,duree,image,accroche
+ia-au-quotidien,L'IA au quotidien,Sans prérequis,À votre rythme,formation-ia.webp,"Apprendre à se servir des outils d'intelligence artificielle de façon pratique, pour gagner du temps et produire contenus, visuels et publicités."
+marketing-digital,Marketing digital,Sans prérequis,,formation-strategie.webp,"Comprendre son marché et son client, bâtir une stratégie claire, créer un contenu qui porte et toucher les bonnes personnes."
+vendre-avec-confiance,Vendre avec confiance,Sans prérequis,,formation-vendre.webp,"Marketing, vente et persuasion : comprendre son client, construire une offre solide et conclure sans pression ni manipulation."
+creation-de-contenu,Création de contenu et réseaux sociaux,,12 mois · 2 séances par semaine,formation-contenu.webp,"Monter des vidéos, concevoir des visuels publicitaires, produire pour Facebook, Instagram et TikTok, puis en faire un service et trouver ses clients."
+media-buying,Media buying et publicité en ligne,Sans prérequis,,formation-media-buying.webp,"Préparer, lancer et optimiser des campagnes publicitaires sur Meta, TikTok et Google, en lisant les chiffres pour décider."
+automatisation,Automatisation et assistants IA,Sans prérequis,,formation-automatisation.webp,"Automatiser les tâches répétitives d'une entreprise avec les outils numériques et l'IA, et proposer cette compétence comme un service."
