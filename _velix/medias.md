@@ -54,7 +54,7 @@ La meilleure solution reste des photos du stock réel de Fati.
 
 | Fichier | Emploi | Statut |
 |---|---|---|
-| `formations/formation-ecommerce.webp` | **sans emploi** depuis le 2 oct. 2026 (« Lancer son e-commerce » repassée en brouillon) | généré, 4:3, 1200 × 896 |
+| `formations/formation-ecommerce.webp` | **sans emploi** depuis le 2 oct. 2026 (« Lancer son e-commerce » supprimée) | généré, 4:3, 1200 × 896 |
 | `formations/formation-vendre.webp` | carte « Vendre avec confiance » | généré |
 | `formations/formation-ia.webp` | carte « L'IA au quotidien » | généré |
 | `formations/formation-strategie.webp` | carte « Marketing digital » (auparavant « Stratégie digitale ») | généré |

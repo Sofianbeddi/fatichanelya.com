@@ -385,3 +385,11 @@ Liste cochée de trois faits, sous l'accroche (méta `_fati_points`, une ligne p
 > d'une affiche de la marque : c'est interdit pour une boutique dans l'UE, et le site promet par
 > écrit de n'en faire aucun. `tools/rediger-catalogue.py` refuse les mots concernés.
 
+## Piège : une variable de couleur ne prend pas de suffixe d'opacité
+
+`var(--navy)80` ou `var(--surface)F0` ne sont pas des couleurs : la déclaration est invalide et
+le navigateur l'ignore sans rien dire. C'est ce qui a laissé l'en-tête collant transparent
+jusqu'au thème 1.2.1 (illisible sur les bandes bleu nuit) et le voile du tiroir sans teinte.
+Pour une couleur du système avec de la transparence :
+`color-mix(in srgb, var(--navy) 50%, transparent)`. Vérifier le fond **calculé** au navigateur,
+et toujours regarder l'en-tête collant au-dessus d'une bande bleu nuit, pas seulement en haut de page.
