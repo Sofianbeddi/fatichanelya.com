@@ -237,7 +237,14 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .site-header{position:sticky;inset-block-start:0;z-index:50;
   display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;
   padding-inline:var(--bord);block-size:84px;
-  background:var(--surface)F0;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  /* `var(--surface)F0` n'est pas une couleur : une variable ne se colle pas à
+     un suffixe d'opacité. La déclaration était donc ignorée et l'en-tête
+     restait transparent, seulement flouté — illisible dès qu'il passait sur
+     une bande bleu nuit (texte bleu sur fond bleu). Le fond est le beige de
+     la page, presque opaque : même rendu qu'avant sur les sections claires. */
+  background:var(--paper);
+  background:color-mix(in srgb,var(--paper) 94%,transparent);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
   transition:block-size var(--t-base) var(--ease-out),box-shadow var(--t-base),background var(--t-base)}
 .site-header.is-stuck{block-size:66px;box-shadow:0 1px 0 var(--line),0 10px 30px #1a1a1a0f}
 .wordmark{font-family:var(--font-display);font-size:clamp(1.5rem,2vw,1.95rem);
@@ -600,7 +607,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 @media (hover:hover){.journal-card:hover{border-color:var(--line-strong)}}
 .journal-meta{position:absolute;inset-block-end:0;inset-inline:0;display:grid;gap:.2rem;
   padding:2.5rem 1.15rem 1.15rem;color:#fff;font-size:.85rem;font-weight:600;
-  background:linear-gradient(to top,var(--navy)E6,var(--navy)00)}
+  background:linear-gradient(to top,color-mix(in srgb,var(--navy) 90%,transparent),transparent)}
 .journal-meta em{font-style:normal;font-size:.68rem;font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft)}
 @media (max-width:760px){.journal-grid{grid-template-columns:1fr;max-inline-size:420px}}
@@ -682,7 +689,10 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 @media (max-width:900px){.footer-top{grid-template-columns:1fr}}
 
 /* ---------- 17. TIROIR DU PANIER ---------- */
-.drawer-backdrop{position:fixed;inset:0;z-index:90;background:var(--navy)80;
+/* Même piège que l'en-tête : `var(--navy)80` était ignoré, le voile ne
+   faisait que flouter la page sans l'assombrir. */
+.drawer-backdrop{position:fixed;inset:0;z-index:90;
+  background:color-mix(in srgb,var(--navy) 50%,transparent);
   -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .drawer-backdrop:not([hidden]){animation:fondu var(--t-base) both}
 .drawer{position:fixed;inset-block:0;inset-inline-end:0;z-index:95;
