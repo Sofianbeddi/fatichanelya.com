@@ -79,6 +79,14 @@ Option `og_image` (Contenus du site › Général) ; repli sur la photo du hero.
 `categories/cat-*.webp` : fournies par le gérant (sept. 2026). Ce sont les seules preuves
 visuelles du site.
 
+`pages/about-avatar.webp` — **photo de profil de la section « À propos »** (le rond de 96 px posé
+sur le portrait, taille `fati-avatar` 240 × 240), remplacée le 5 oct. 2026 à la demande du gérant par
+la photo de diplôme de Fati (320 × 320 fournie telle quelle, source
+`sources/about-avatar-diplome-source.png`, WebP q86, 14 Ko). Aucun agrandissement : 320 px
+suffisent pour un rond de 96 px, même en écran dense. L'ancienne, une image de profil TikTok avec
+« fatichanelya » incrusté, est dans `reserve/about-avatar-v1-texte.webp`. Le portrait principal
+`about-main.webp` n'a pas changé.
+
 `pages/about-main.webp` — **portrait de la section « À propos »**, recadré le 2 oct. 2026 depuis
 `sources/hero-fati-source.png` (zone 1015, 45 → 1405, 738, agrandie 1,59× en Lanczos, léger
 renfort de netteté). **Aucun traitement génératif sur le visage** : pas d'agrandissement par IA,

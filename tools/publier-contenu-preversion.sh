@@ -38,7 +38,7 @@ PY=$(command -v /opt/alt/python311/bin/python3 || command -v python3)
 echo "→ Formations"
 "$PY" tools/importer-formations.py </dev/null
 
-echo "→ Images de réglage (section Formations, partage)"
+echo "→ Images de réglage (section Formations, partage, À propos)"
 poser_option_image() { # clé, fichier, titre
   local cle="$1" fichier="$2" titre="$3" att url
   att=$(wp post list --post_type=attachment --title="$titre" --field=ID --posts_per_page=1)
@@ -50,6 +50,7 @@ poser_option_image() { # clé, fichier, titre
 poser_option_image training_image tools/medias/pages/training-session.webp "training-session-2"
 poser_option_image og_image       tools/medias/pages/og-default.jpg       "og-default"
 poser_option_image about_image    tools/medias/pages/about-main.webp      "about-main-2"
+poser_option_image about_avatar   tools/medias/pages/about-avatar.webp    "about-avatar-2"
 
 echo "→ Page Panier"
 # Le thème 1.2.0 cherche la page « panier » ; elle s'appelait « ma-selection ».
