@@ -95,6 +95,18 @@ Sebastian », texte incrusté) que le gérant a jugée hors contexte et pas prof
 l'ancienne est dans `sources/about-main-san-sebastian.webp`. Le hero et ce portrait viennent de la
 même photo : c'est un intérim, la cible reste une vraie séance (blueprint E.5).
 
+## Références sans visuel (16 octobre 2026)
+
+Les 75 produits ajoutés d'après le catalogue DXN de février 2026 n'ont pas de visuel (`image=""`
+dans `rediger-catalogue.py`, méta `_fati_indispo`) ; le thème affiche `placeholder-produit.svg` et
+la mention « Visuel à venir ». L'huile de coco (`virgin-coconut-oil`) est dans le même cas depuis
+que sa fiche décrit l'huile bio 500 ml du catalogue et non le pot au Ganoderma de l'affiche ; son
+ancien rendu reste dans `tools/medias/produits/virgin-coconut-oil.webp`, inutilisé. Les images
+embarquées dans le PDF (`sources/catalogue-dxn-2026-02.pdf`) font 110 × 135 px : inutilisables
+en packshot, utilisables au mieux comme référence pour `nano_banana_2` (1,5 crédit l'image, solde
+2 crédits au 16 oct. 2026). Priorité : photos du stock réel de Fati, ou visuels officiels de
+l'espace distributrice.
+
 ## Reste à produire
 
 - Photos du stock réel (remplaceraient les packshots générés) et photo de travail de Fati pour la
