@@ -107,6 +107,22 @@ en packshot, utilisables au mieux comme référence pour `nano_banana_2` (1,5 cr
 2 crédits au 16 oct. 2026). Priorité : photos du stock réel de Fati, ou visuels officiels de
 l'espace distributrice.
 
+## Banque DXN collectée (16 octobre 2026)
+
+`tools/collecter-visuels-dxn.py` télécharge, pour chaque produit sans visuel, la galerie de sa
+fiche sur la banque produits DXN Malaisie (dxn2u.com) : `tools/medias/sources/dxn2u/<slug>/01.jpg`
+(face), `02.jpg` (dos), `03.jpg` (sachet ou variante), 735 × 960 sur fond blanc, index de
+provenance dans `index.csv`, planche de choix dans `planche.html`. Dossier hors dépôt (56 Mo,
+retéléchargeable avec `--hors-ligne` pour ne pas rejouer les pages). 52 produits couverts, 24 sans
+image : les 21 Kallow (fabriqués en Grèce, absents de la banque malaisienne), Maca Vita, Maca
+Cafe, Brook Coffee.
+
+**Non publiables en l'état** : filigrane « DXN's Property » répété sur toute l'image, emballage
+malaisien. Usage prévu : référence pour `nano_banana_2` (packshot fidèle sans filigrane, comme en
+octobre) ou pour contrôler les visuels officiels que Fati fournira. La correspondance d'une fiche
+« famille » (RG, GL, Black Cumin, Andro-G, Agaricus, Mengkudu, dentifrice, Spirudle, mégapacks)
+vaut pour tous ses formats : vérifier sur la planche quelle vignette montre le bon flacon.
+
 ## Reste à produire
 
 - Photos du stock réel (remplaceraient les packshots générés) et photo de travail de Fati pour la

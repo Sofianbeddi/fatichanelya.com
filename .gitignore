@@ -50,3 +50,9 @@ Thumbs.db
 # Python
 __pycache__/
 *.pyc
+
+# ── Banque DXN collectée (tools/collecter-visuels-dxn.py) : images et pages
+#    retéléchargeables, seuls l'index et la planche sont versionnés ────────
+tools/medias/sources/dxn2u/*/
+!tools/medias/sources/dxn2u/index.csv
+!tools/medias/sources/dxn2u/planche.html
