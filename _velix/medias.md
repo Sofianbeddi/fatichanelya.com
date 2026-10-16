@@ -123,6 +123,15 @@ octobre) ou pour contrôler les visuels officiels que Fati fournira. La correspo
 « famille » (RG, GL, Black Cumin, Andro-G, Agaricus, Mengkudu, dentifrice, Spirudle, mégapacks)
 vaut pour tous ses formats : vérifier sur la planche quelle vignette montre le bon flacon.
 
+## Affiches de formation du gérant (16 octobre 2026)
+
+Six affiches fournies (1448 × 1086, texte arabe incrusté, visuels de synthèse), originaux dans
+`tools/medias/sources/affiches-formations/`, converties en WebP 1200 × 900 dans
+`tools/medias/formations/formation-*-affiche.webp`. Posées sur trois programmes (Marketing digital,
+Création de contenu, Vendre avec confiance) ; `cosmetiques`, `nutrition`, `complements` attendent
+une décision sur l'offre. Les natures mortes générées (`formation-strategie`, `formation-contenu`,
+`formation-vendre`) restent dans le dossier, sans emploi.
+
 ## Reste à produire
 
 - Photos du stock réel (remplaceraient les packshots générés) et photo de travail de Fati pour la
