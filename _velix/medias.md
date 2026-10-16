@@ -127,8 +127,8 @@ vaut pour tous ses formats : vérifier sur la planche quelle vignette montre le 
 
 Six affiches fournies (1448 × 1086, texte arabe incrusté, visuels de synthèse), originaux dans
 `tools/medias/sources/affiches-formations/`, converties en WebP 1200 × 900 dans
-`tools/medias/formations/formation-*-affiche.webp`. Posées sur trois programmes (Marketing digital,
-Création de contenu, Vendre avec confiance) ; `cosmetiques`, `nutrition`, `complements` attendent
+`tools/medias/formations/formation-*-affiche.webp`. Huit affiches au total. Posées sur cinq programmes (Marketing digital,
+Création de contenu, Vendre avec confiance, Automatisation, IA au quotidien) ; `cosmetiques`, `nutrition`, `complements` attendent
 une décision sur l'offre. Les natures mortes générées (`formation-strategie`, `formation-contenu`,
 `formation-vendre`) restent dans le dossier, sans emploi.
 
