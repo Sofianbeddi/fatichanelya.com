@@ -6,8 +6,11 @@
  * d'une nature morte : 1 500 px de liste pour six programmes. Elle devient une
  * scène : à gauche, les programmes en rail numéroté (de vrais liens vers
  * chaque fiche, que le JavaScript transforme en onglets sur grand écran) ; à
- * droite, l'affiche du programme choisi, avec un panneau de verre qui porte
- * le titre, le résumé et l'appel à l'action. Sur mobile, le rail disparaît et
+ * droite, l'affiche du programme choisi, avec une capsule de verre qui ne
+ * porte que l'appel à l'action — titre et chip sont déjà dans le rail, le
+ * résumé est sur la fiche (retour du gérant du 25 oct. 2026 : ni numéros, ni
+ * texte sur l'affiche, une flèche sur chaque ligne). Sur mobile, le rail
+ * disparaît, la carte reprend chip, titre et résumé sous l'affiche, et
  * les six affiches défilent en carrousel, carte suivante visible, barre de
  * progression et compteur.
  *
@@ -86,7 +89,6 @@ $total = count( $programmes );
 				<li>
 					<a class="programmes-tab<?php echo 0 === $i ? ' is-active' : ''; ?>" id="prog-tab-<?php echo (int) $p['id']; ?>"
 					   href="<?php echo esc_url( $p['url'] ); ?>" data-prog-tab="<?php echo (int) $p['id']; ?>">
-						<span class="programmes-num" aria-hidden="true"><?php echo (int) $i + 1; ?></span>
 						<span class="programmes-tab-copy">
 							<span class="programmes-tab-titre"><?php echo esc_html( $p['titre'] ); ?></span>
 							<?php if ( $p['chip'] ) : ?>

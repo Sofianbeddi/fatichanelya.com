@@ -553,10 +553,11 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
   font-size:.76rem;color:var(--muted)}
 
 /* ---------- 10. FORMATIONS ----------
-   Une scène, pas une liste. À gauche le rail des programmes : filets, numéros
-   en grand corps sans zéro devant, titre et chip. À droite l'affiche du
-   programme choisi dans un cadre arrondi (le même 28 px que le hero), avec un
-   panneau de verre — autorisé sur photo — qui porte titre, résumé et bouton.
+   Une scène, pas une liste. À gauche le rail des programmes : filets, titre,
+   chip et une flèche sur chaque ligne (pas de numéros : retour du gérant du
+   25 oct. 2026). À droite l'affiche du programme choisi dans un cadre arrondi
+   (le même 28 px que le hero), avec une capsule de verre — autorisée sur
+   photo — qui ne porte que le bouton : l'affiche reste lisible.
    Les affiches sont celles du gérant : leurs couleurs sont celles d'une
    image, pas de la palette. Sous 1000 px le rail disparaît et la piste
    devient un carrousel : carte suivante visible, barre de progression et
@@ -572,27 +573,25 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 
 /* Rail — masqué sous 1000 px, les affiches suffisent. */
 .programmes-rail{display:none;list-style:none;margin:0;padding:0}
-.programmes-tab{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;
+.programmes-tab{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;
   gap:0 1.1rem;align-items:center;inline-size:100%;padding-block:1.05rem;
   border-block-start:1px solid var(--line-mid);text-align:start;
   transition:border-color var(--t-base)}
 .programmes-rail li:last-child .programmes-tab{border-block-end:1px solid var(--line-mid)}
-.programmes-num{font-family:var(--font-display);font-size:var(--fs-num);font-weight:500;
-  line-height:1;letter-spacing:-.03em;color:var(--navy);min-inline-size:1.6ch;
-  transition:color var(--t-base)}
 .programmes-tab-copy{display:grid;gap:.2rem;min-inline-size:0}
 .programmes-tab-titre{font-family:var(--font-display);font-size:1.12rem;font-weight:500;
   line-height:1.25;letter-spacing:-.015em;color:var(--navy);transition:color var(--t-base)}
 .programmes-tab-chip{font-size:var(--fs-sm);color:var(--muted)}
-.programmes-tab .i{color:var(--gold-ink);opacity:0;transform:translateX(-6px);
-  transition:opacity var(--t-base),transform var(--t-base) var(--ease-out)}
+/* La flèche est sur chaque ligne, en retrait ; elle passe à l'or sur la ligne
+   active et glisse de 4 px au survol, comme tout lien flèche du site. */
+.programmes-tab .i{color:var(--muted-soft);stroke-width:1.9;
+  transition:color var(--t-base),transform var(--t-base) var(--ease-out)}
 .programmes-tab.is-active{border-block-start-color:var(--navy)}
-.programmes-tab.is-active .programmes-num,
-.programmes-tab.is-active .programmes-tab-titre{color:var(--gold-ink)}
-.programmes-tab.is-active .i{opacity:1;transform:none}
+.programmes-tab.is-active .programmes-tab-titre,
+.programmes-tab.is-active .i{color:var(--gold-ink)}
 @media (hover:hover){
   .programmes-tab:hover{border-block-start-color:var(--navy)}
-  .programmes-tab:hover .i{opacity:1;transform:none}}
+  .programmes-tab:hover .i{color:var(--gold-ink);transform:translateX(4px)}}
 
 /* Scène : la piste est un carrousel par défaut (mobile et tablette). Les
    pistes se dimensionnent en unités absolues, jamais en pourcentage. */
@@ -637,15 +636,16 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
   @keyframes prog-fondu{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .programme{display:block;border-radius:28px;min-block-size:30rem}
   .programme-media{position:absolute;inset:0;aspect-ratio:auto}
+  /* Capsule de verre : le bouton seul. Chip, titre et résumé restent dans le
+     balisage pour le mobile ; ici le rail les porte déjà. */
   .programme-panneau{position:absolute;inset-inline-start:clamp(1rem,2vw,1.5rem);
-    inset-block-end:clamp(1rem,2vw,1.5rem);
-    max-inline-size:min(100% - 2*clamp(1rem,2vw,1.5rem),30rem);
-    padding:1.4rem 1.5rem 1.5rem;border-radius:16px;
-    background:color-mix(in srgb,var(--navy) 66%,transparent);
-    -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+    inset-block-end:clamp(1rem,2vw,1.5rem);display:block;padding:.45rem;
+    border-radius:var(--r-pill);
+    background:color-mix(in srgb,var(--navy) 55%,transparent);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
     border:1px solid #FFFFFF2E}
-  .programme-titre{font-size:1.4rem}
-  .programme-extrait{-webkit-line-clamp:4}
+  .programme-panneau .chip,.programme-titre,.programme-extrait{display:none}
+  .programme-cta{margin:0}
 }
 
 /* ---------- 11. À PROPOS ---------- */
