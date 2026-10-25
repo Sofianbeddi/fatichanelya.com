@@ -733,12 +733,14 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .contact-note{margin-block-start:1.25rem;font-size:.76rem;color:var(--text-on-navy-2)}
 
 /* ---------- 16. FOOTER ----------
-   Bleu nuit, quatre colonnes, et deux touches qui le sortent du gabarit :
+   Bleu nuit, simple — la marque et les deux menus — et deux touches qui le
+   sortent du gabarit :
    un filet d'or qui s'évanouit aux deux bouts en tête, et le nom en très
    grand corps coupé par le bas, à peine plus clair que le fond. Le halo
    chaud dans l'angle est un dégradé radial, pas une image : rien à charger.
    Aucune boîte, aucune carte : des colonnes à titres en capitales espacées,
-   des liens qui se soulignent d'un trait d'or, des repères à point doré. */
+   des liens qui se soulignent d'un trait d'or. La mention santé n'est plus
+   ici : elle se lit sur la fiche produit (`.produit-mention`). */
 .site-footer{position:relative;isolation:isolate;overflow:hidden;
   background:var(--navy);color:var(--text-on-navy-2);
   padding-inline:var(--bord);padding-block:clamp(3rem,6vw,5rem) 0}
@@ -750,9 +752,8 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
   border-radius:50%;
   background:radial-gradient(closest-side,color-mix(in srgb,var(--gold) 15%,transparent),transparent 72%)}
 
-.footer-top{display:grid;
-  grid-template-columns:minmax(0,1.35fr) minmax(0,1.5fr) minmax(0,1fr);
-  gap:2.75rem clamp(2rem,4.5vw,4.5rem);max-inline-size:100%}
+.footer-top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);
+  gap:2.75rem clamp(2rem,5vw,6rem);max-inline-size:100%}
 
 .footer-brand{display:grid;gap:.9rem;justify-items:start;align-content:start;
   max-inline-size:34rem;font-size:.92rem}
@@ -770,7 +771,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 
 .footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
   gap:2rem clamp(1.5rem,3vw,2.5rem)}
-.footer-nav h2,.footer-reperes h2{font-family:var(--font-body);font-size:var(--fs-eyebrow);
+.footer-nav h2{font-family:var(--font-body);font-size:var(--fs-eyebrow);
   font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light)}
 .footer-nav ul{display:grid;gap:.1rem;margin-block-start:.95rem}
 .footer-nav a{position:relative;display:inline-flex;align-items:center;min-height:36px;
@@ -784,19 +785,17 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
   .footer-nav a:hover{color:#fff}
   .footer-nav a:hover::after{transform:scaleX(1)}}
 
-.footer-reperes ul{display:grid;gap:.8rem;margin-block-start:.95rem}
-.footer-reperes li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.8rem;
-  align-items:start;font-size:.92rem;line-height:1.5;color:var(--text-on-navy-2)}
-.footer-reperes li::before{content:"";inline-size:6px;block-size:6px;margin-block-start:.55em;
-  border-radius:50%;background:var(--gold)}
-
-.disclaimer{max-inline-size:100%;margin-block-start:clamp(2.5rem,5vw,3.5rem);
-  padding-block-start:1.5rem;border-block-start:1px solid var(--line-light);
-  font-size:.78rem;line-height:1.6;color:var(--text-on-navy-2)}
 .footer-bottom{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;
-  max-inline-size:100%;margin-block-start:1.1rem;
+  max-inline-size:100%;margin-block-start:clamp(2.5rem,5vw,3.5rem);
+  padding-block-start:1.25rem;border-block-start:1px solid var(--line-light);
   font-size:.78rem;color:var(--text-on-navy-2)}
 .footer-bottom p{margin:0}
+/* Signature de l'agence : même corps que le copyright, le nom souligné d'or au survol. */
+.footer-velix a{position:relative;color:var(--text-on-navy);font-weight:700}
+.footer-velix a::after{content:"";position:absolute;inset-block-end:-3px;inset-inline:0;
+  block-size:1px;background:var(--gold);transform:scaleX(0);transform-origin:inline-start;
+  transition:transform var(--t-base) var(--ease-out)}
+@media (hover:hover){.footer-velix a:hover{color:#fff}.footer-velix a:hover::after{transform:scaleX(1)}}
 
 /* Signature : le nom au corps le plus grand du site, coupé par le bas. La
    taille suit la largeur de la fenêtre et se plafonne pour que le mot tienne
@@ -1157,6 +1156,12 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .produit-usage .rule-num{margin:0;min-inline-size:1.3ch;line-height:1.1}
 .produit-usage p{max-width:48ch;padding-block-start:.4rem}
 @media (min-width:760px){.produit-details{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Mention obligatoire des compléments alimentaires, sortie du pied de page le
+   25 oct. 2026 : une ligne discrète à filet, sous les conseils d'utilisation. */
+.produit-mention{max-width:72ch;padding-block-start:1.1rem;
+  border-block-start:1px solid var(--line);
+  font-size:var(--fs-sm);line-height:1.6;color:var(--muted)}
 
 /* Bande de réassurance : cellules à filets, jamais de cartes. */
 /* `repeat(4, minmax(0,1fr))` ne se replie pas : la grille gardait ses quatre
