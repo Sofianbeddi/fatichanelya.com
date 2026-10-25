@@ -3,12 +3,10 @@
  * Pied de page.
  *
  * Trois temps : la marque et la façon de la joindre, les deux menus, puis le
- * copyright et la signature de l'agence. En dessous, le nom en très grand
- * corps, coupé par le bas, à peine plus clair que le fond : une signature, pas
- * un deuxième logo (il est masqué des lecteurs d'écran, le nom est déjà lu
- * plus haut). Le gérant a demandé un pied simple (25 oct. 2026) : la colonne
- * « En bref » et la mention santé en sont sorties ; la mention, obligatoire
- * pour des compléments alimentaires, vit désormais sur la fiche produit.
+ * copyright et la signature de l'agence. Le gérant a demandé un pied simple
+ * (25 oct. 2026) : la colonne « En bref », la mention santé et le nom en très
+ * grand corps en sont sortis ; la mention, obligatoire pour des compléments
+ * alimentaires, reste sur la fiche produit.
  *
  * L'ancien bloc « newsletter » est retiré : aucun outil d'envoi n'est branché,
  * et un formulaire qui ne collecte rien est un clic mort. Le jour où un outil
@@ -97,7 +95,6 @@ $cible = fati_whatsapp_actif() ? ' target="_blank" rel="noopener"' : '';
 		<?php endif; ?>
 	</div>
 
-	<p class="footer-mark" aria-hidden="true"><?php bloginfo( 'name' ); ?></p>
 </footer>
 
 <?php get_template_part( 'template-parts/components/bag-drawer' ); ?>

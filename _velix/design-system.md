@@ -455,16 +455,15 @@ existent déjà ailleurs sur le site ; le parcours daté n'est toujours pas inve
 
 ### Pied de page
 Deux colonnes (marque et contact · les deux menus) puis une ligne copyright + « Site conçu par Velix
-Digital ». Thème 1.3.2, à la demande du gérant : **pas de colonne « En bref », pas de mention santé
-dans le pied** — elle est obligatoire pour des compléments alimentaires, elle était déjà sur la fiche
-produit (`.produit-legal`, encadré en fin de description) et y reste ; réglage renommé « Mention
-santé (fiche produit) ». Deux signatures : un **filet d'or** qui s'évanouit aux deux bouts en tête
-(dégradé, pas une bordure) et le **nom en très grand corps** coupé par le bas (`.footer-mark`,
-`clamp(3.1rem, 13.3vw, 11.9rem)`, 6 % de blanc dans le bleu nuit, disque d'or à mi-hauteur en point
-final, `aria-hidden`). Un halo chaud en dégradé radial dans l'angle. Le bloc newsletter est retiré :
-aucun outil d'envoi n'est branché, et un formulaire qui ne collecte rien est un clic mort.
+Digital ». À la demande du gérant (thèmes 1.3.2 et 1.3.3) : **pas de colonne « En bref », pas de
+mention santé dans le pied** (obligatoire pour des compléments, elle reste sur la fiche produit,
+`.produit-legal`), et **plus de nom en très grand corps** en bas (« pas ergonomique »). Restent le
+filet d'or en tête et le halo radial dans l'angle.
 
-> **Mesuré, pas deviné.** La largeur du mot vaut 6,12 × le corps : 1 165 px à 190 px, dans les 1 280
-> du conteneur de 1440 à 3200 px, 305 px dans les 335 disponibles à 375. À remesurer si la graisse,
-> le nom ou l'interlettrage changent. Le disque final est à `vertical-align:.18em` : sur la ligne de
-> base, il disparaissait dans la coupe.
+### Icônes : les logos de marque sont des aplats
+Le pictogramme WhatsApp est le **glyphe officiel** (tracé Simple Icons), rendu `fill:currentColor`
+sans trait ; `fati_icon()` tient la liste `$pleins`. Une version redessinée au trait « n'était plus
+l'original » pour le gérant : ne jamais réinterpréter un logo de marque. Le reste du jeu reste au
+trait. Dans le bandeau de réassurance, chaque icône est posée sur un **disque or clair** de 56 px
+(`--gold-soft`, icône bleu nuit, trait 1,6) et les trois titres partent de la même ligne
+(`align-items:start`) quel que soit le nombre de lignes de la description.
