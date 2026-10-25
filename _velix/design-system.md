@@ -408,11 +408,14 @@ Les pages légales gardent leurs marqueurs `[[À ACTIVER AVEC PAYPAL]]` : elles 
 en l'état de toute façon.
 
 ### Scène Formations (accueil)
-Plus de liste à filets de 1 500 px à côté d'une nature morte. À partir de 1000 px : **rail numéroté**
-à gauche (filets, `--fs-num`, titre, chip niveau · durée), **affiche du programme choisi** à droite
-dans un cadre de 28 px avec un **panneau de verre** (`color-mix` navy 66 % + flou 16 px, contour
-blanc 18 %) portant chip, titre, résumé et bouton or. Le rail est une liste de **liens vers les
-fiches** ; le JavaScript lui donne les rôles `tablist`/`tab`/`tabpanel` et le clic change l'affiche
+Plus de liste à filets de 1 500 px à côté d'une nature morte. À partir de 1000 px : **rail** à
+gauche (filets, titre, chip niveau · durée, flèche sur chaque ligne — or sur la ligne active),
+**affiche du programme choisi** à droite dans un cadre de 28 px avec une **capsule de verre**
+(`color-mix` navy 55 % + flou 14 px, contour blanc 18 %, rayon pilule) qui ne porte que le bouton
+« Voir le programme ». Thème 1.3.1, retour du gérant sur la 1.3.0 : **ni numéros dans le rail, ni
+texte sur l'affiche** — titre et chip sont déjà dans le rail, le résumé est sur la fiche, l'affiche
+doit rester lisible. Chip, titre et résumé restent dans le balisage pour la carte mobile. Le rail
+est une liste de **liens vers les fiches** ; le JavaScript lui donne les rôles `tablist`/`tab`/`tabpanel` et le clic change l'affiche
 (flèches, Début, Fin au clavier ; cmd/ctrl-clic ouvre la fiche). L'état actif est posé par PHP sur la
 première : sans script, la scène montre le premier programme et chaque clic mène quelque part.
 Sous 1000 px : rail masqué, piste en **carrousel** (cartes 17,5 rem puis 21 rem, affiche 4:3 au-dessus
