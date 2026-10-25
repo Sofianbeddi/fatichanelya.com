@@ -51,6 +51,8 @@ poser_option_image training_image tools/medias/pages/training-session.webp "trai
 poser_option_image og_image       tools/medias/pages/og-default.jpg       "og-default"
 poser_option_image about_image    tools/medias/pages/about-main.webp      "about-main-2"
 poser_option_image about_avatar   tools/medias/pages/about-avatar.webp    "about-avatar-2"
+# Thème 1.3.0 : photo large (Fati à droite) qui ouvre la page À propos.
+poser_option_image about_hero     tools/medias/pages/about-hero.webp      "about-hero"
 
 echo "→ Page Panier"
 # Le thème 1.2.0 cherche la page « panier » ; elle s'appelait « ma-selection ».

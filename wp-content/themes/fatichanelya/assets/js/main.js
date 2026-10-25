@@ -176,15 +176,101 @@
       if (suiv) suiv.disabled = piste.scrollLeft >= max;
     };
 
+    /* Barre de progression et compteur : le curseur a la longueur de l'écran
+       visible, le compteur dit la première carte affichée. */
+    const barre  = $('[data-carousel-barre]', carousel);
+    const compte = $('[data-carousel-compte]', carousel);
+    const majProgres = () => {
+      const max  = piste.scrollWidth - piste.clientWidth;
+      const part = piste.scrollWidth ? piste.clientWidth / piste.scrollWidth : 1;
+      if (barre) {
+        barre.style.setProperty('--part', String(Math.min(1, part)));
+        barre.style.setProperty('--progres', String(max > 0 ? borne(piste.scrollLeft / max, 0, 1) : 0));
+      }
+      if (compte && piste.firstElementChild) {
+        const total   = piste.children.length;
+        const largeur = piste.firstElementChild.getBoundingClientRect().width
+                      + (parseFloat(getComputedStyle(piste).columnGap) || 0);
+        compte.textContent = `${Math.min(total, Math.round(piste.scrollLeft / largeur) + 1)} / ${total}`;
+      }
+    };
+    const maj = () => { majBoutons(); majProgres(); };
+
     const glisser = (sens) => {
       piste.scrollBy({ left: sens * pas(), behavior: reduit ? 'auto' : 'smooth' });
     };
 
     if (prec) prec.addEventListener('click', () => glisser(-1));
     if (suiv) suiv.addEventListener('click', () => glisser(1));
-    piste.addEventListener('scroll', majBoutons, { passive: true });
-    window.addEventListener('resize', majBoutons);
-    majBoutons();
+    piste.addEventListener('scroll', maj, { passive: true });
+    window.addEventListener('resize', maj);
+    maj();
+  });
+
+  /* ---------- Programmes de formation : onglets sur grand écran ----------
+     Le rail est une liste de liens vers les fiches. À partir de 1000 px, le
+     script le transforme en onglets : le clic change l'affiche au lieu de
+     naviguer, les flèches du clavier parcourent la liste. En dessous, tout
+     redevient des liens, et la piste un carrousel. */
+  $$('[data-programmes]').forEach((bloc) => {
+    const liste    = $('[data-prog-liste]', bloc);
+    const tabs     = $$('[data-prog-tab]', bloc);
+    const panneaux = $$('.programme[data-prog]', bloc);
+    if (!liste || !tabs.length) return;
+    const grand = window.matchMedia('(min-width: 1000px)');
+
+    const activer = (id, focus) => {
+      tabs.forEach((t) => {
+        const on = t.dataset.progTab === id;
+        t.classList.toggle('is-active', on);
+        if (grand.matches) { t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1; }
+        if (on && focus) t.focus();
+      });
+      panneaux.forEach((p) => p.classList.toggle('is-active', p.dataset.prog === id));
+    };
+
+    const roles = () => {
+      if (grand.matches) {
+        liste.setAttribute('role', 'tablist');
+        liste.setAttribute('aria-orientation', 'vertical');
+        tabs.forEach((t) => {
+          const on = t.classList.contains('is-active');
+          t.setAttribute('role', 'tab');
+          t.setAttribute('aria-controls', `prog-${t.dataset.progTab}`);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+        });
+        panneaux.forEach((p) => {
+          p.setAttribute('role', 'tabpanel');
+          p.setAttribute('aria-labelledby', `prog-tab-${p.dataset.prog}`);
+        });
+      } else {
+        liste.removeAttribute('role'); liste.removeAttribute('aria-orientation');
+        tabs.forEach((t) => ['role', 'aria-controls', 'aria-selected', 'tabindex'].forEach((a) => t.removeAttribute(a)));
+        panneaux.forEach((p) => ['role', 'aria-labelledby'].forEach((a) => p.removeAttribute(a)));
+      }
+    };
+
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', (e) => {
+        /* Nouvel onglet demandé (cmd/ctrl-clic) : le lien reste un lien. */
+        if (!grand.matches || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
+        activer(t.dataset.progTab);
+      });
+      t.addEventListener('keydown', (e) => {
+        if (!grand.matches) return;
+        const pas = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+        let cible = null;
+        if (pas) cible = tabs[(i + pas + tabs.length) % tabs.length];
+        if (e.key === 'Home') cible = tabs[0];
+        if (e.key === 'End') cible = tabs[tabs.length - 1];
+        if (cible) { e.preventDefault(); activer(cible.dataset.progTab, true); }
+      });
+    });
+
+    grand.addEventListener('change', roles);
+    roles();
   });
 
   /* =====================================================================

@@ -1,15 +1,13 @@
 <?php
 /**
- * Page « Panier », sans paiement en ligne.
+ * Page « Panier » : la commande se finalise sur WhatsApp.
  *
- * Le paiement n'est pas branché : cette page ne prétend pas encaisser. Elle
- * récapitule le panier, laisse ajuster les quantités, et prépare un message
- * WhatsApp complet pour que Fati confirme disponibilité, frais de port réels
- * et total avant tout paiement.
- *
- * Le jour où PayPal sera actif, c'est le bouton de fin de page qui change,
- * pas la structure. Le contenu est rendu par le JavaScript à partir de la
- * panier enregistré dans le navigateur : rien n'est stocké côté serveur.
+ * Première version du site (décision du gérant, 25 oct. 2026) : aucun paiement
+ * par carte ni PayPal. Cette page récapitule le panier, laisse ajuster les
+ * quantités, et prépare un message WhatsApp complet pour que Fati confirme
+ * disponibilité, frais de port réels et total, puis indique le moyen de
+ * règlement. Le contenu est rendu par le JavaScript à partir du panier
+ * enregistré dans le navigateur : rien n'est stocké côté serveur.
  *
  * @package Fatichanelya
  */
@@ -83,7 +81,7 @@ get_template_part( 'template-parts/components/page-banner' );
 			</a>
 
 			<p class="selection-paiement">
-				<?php esc_html_e( 'Le paiement en ligne n\'est pas encore activé. Je préfère vous le dire plutôt que de faire semblant.', 'fatichanelya' ); ?>
+				<?php esc_html_e( 'Rien ne se paie sur le site : Fati confirme la disponibilité, les frais de port et le total, puis vous indique comment régler.', 'fatichanelya' ); ?>
 			</p>
 		</aside>
 	</div>

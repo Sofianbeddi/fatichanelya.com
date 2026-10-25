@@ -393,3 +393,72 @@ jusqu'au thème 1.2.1 (illisible sur les bandes bleu nuit) et le voile du tiroir
 Pour une couleur du système avec de la transparence :
 `color-mix(in srgb, var(--navy) 50%, transparent)`. Vérifier le fond **calculé** au navigateur,
 et toujours regarder l'en-tête collant au-dessus d'une bande bleu nuit, pas seulement en haut de page.
+
+## Thème 1.3.0 (25 oct. 2026) — commande WhatsApp, scène Formations, À propos, pied de page
+
+### Première version sans paiement en ligne
+Décision du gérant : ni carte ni PayPal pour l'instant, la commande se finalise sur WhatsApp. Le site
+ne dit plus « le paiement en ligne arrive » ni « interface PayPal prête » : il décrit le parcours réel
+(« Rien ne se paie sur le site : Fati confirme disponibilité, frais de port et total, puis indique le
+moyen de règlement »). Textes concernés : bandeau d'engagements (icônes `shield`, `whatsapp`,
+`support`, `leaf`), intro de la boutique, engagements détaillés, FAQ (nouvelle entrée « Comment se
+règle la commande ? »), page Panier, tiroir, fiche produit, parcours de commande. **Ne jamais inventer
+un moyen de règlement** (virement, Bizum…) tant que Fati ne l'a pas dit : la FAQ reste générique.
+Les pages légales gardent leurs marqueurs `[[À ACTIVER AVEC PAYPAL]]` : elles ne sont pas publiables
+en l'état de toute façon.
+
+### Scène Formations (accueil)
+Plus de liste à filets de 1 500 px à côté d'une nature morte. À partir de 1000 px : **rail numéroté**
+à gauche (filets, `--fs-num`, titre, chip niveau · durée), **affiche du programme choisi** à droite
+dans un cadre de 28 px avec un **panneau de verre** (`color-mix` navy 66 % + flou 16 px, contour
+blanc 18 %) portant chip, titre, résumé et bouton or. Le rail est une liste de **liens vers les
+fiches** ; le JavaScript lui donne les rôles `tablist`/`tab`/`tabpanel` et le clic change l'affiche
+(flèches, Début, Fin au clavier ; cmd/ctrl-clic ouvre la fiche). L'état actif est posé par PHP sur la
+première : sans script, la scène montre le premier programme et chaque clic mène quelque part.
+Sous 1000 px : rail masqué, piste en **carrousel** (cartes 17,5 rem puis 21 rem, affiche 4:3 au-dessus
+du texte sur fond bleu nuit), barre de progression et compteur.
+
+> **Pièges vérifiés.** (1) Un enfant de grille ne descend pas sous sa largeur de contenu : la piste
+> élargissait la page de 1 400 px sur mobile → `min-inline-size:0` sur les enfants de `.programmes`.
+> (2) `.programmes-nav{display:none}` était battu par `.carousel-nav{display:flex}` déclaré plus bas
+> dans le fichier : masquer avec `.programmes-scene .carousel-nav`. (3) Les affiches inactives sont en
+> `display:none`, pas en `opacity:0` : six panneaux de verre superposés en opacité 0 restaient visibles
+> dans certaines captures du compositeur. L'affiche entrante fait un fondu de 280 ms (`prog-fondu`).
+> (4) `ul{list-style:none}` du reset ne couvre pas `ol` : le rail et les listes numérotées de l'À
+> propos posent leur propre `list-style:none`.
+
+Le réglage « Photo des formations » (`training_image`) est retiré du back-office : la section ne
+l'affiche plus. Les affiches viennent de l'image mise en avant de chaque formation.
+
+### Carrousel : barre de progression et compteur
+Un carrousel se voit comme tel. `.carousel-nav` porte désormais, avant les flèches, une barre
+(`.carousel-barre`, curseur de la longueur de l'écran visible, position = défilement) et un compteur
+« 1 / 8 » (`.carousel-compte`). Le script les tient à jour dans `[data-carousel]` ; ils sont
+`aria-hidden` (les flèches et la liste défilante portent déjà l'accessibilité). Appliqué à l'aperçu
+boutique et à la scène Formations en mobile.
+
+### Page À propos
+Seule page intérieure **sans bannière de titre** : son hero éditorial reprend le cadre arrondi de
+l'accueil (28 px, sable, 600 px minimum, 52/48) avec la **photo large de Fati** (`about_hero`, nouveau
+réglage ; repli sur `about_image`) à droite, fondu sable côté texte, voile sombre sous la signature,
+`object-position:100% 30%` pour garder le tiers droit où elle se trouve. À gauche : fil d'Ariane,
+sur-titre, `h1` = titre « À propos » du back-office, intro, « Voir la sélection » + « Écrire à Fati »,
+trois faits à point doré. La photo est l'élément LCP : `fetchpriority=high`, jamais différée, aucune
+révélation animée. Puis : trois colonnes à filets et numéros (liens ancrés en bas par
+`grid-template-rows:auto auto 1fr auto`), bande sable portrait + valeurs (phrase de clôture ancrée en
+bas par `margin-block-start:auto` : les deux colonnes finissent à la même hauteur), bande bleu nuit
+« Ce que je ne fais pas » en grand corps sur deux colonnes, appel à écrire. Tous les faits de la page
+existent déjà ailleurs sur le site ; le parcours daté n'est toujours pas inventé.
+
+### Pied de page
+Trois colonnes (marque et contact · deux menus · « En bref », quatre faits à point doré) puis mention
+santé et copyright. Deux signatures : un **filet d'or** qui s'évanouit aux deux bouts en tête
+(dégradé, pas une bordure) et le **nom en très grand corps** coupé par le bas (`.footer-mark`,
+`clamp(3.1rem, 13.3vw, 11.9rem)`, 6 % de blanc dans le bleu nuit, disque d'or à mi-hauteur en point
+final, `aria-hidden`). Un halo chaud en dégradé radial dans l'angle. Le bloc newsletter est retiré :
+aucun outil d'envoi n'est branché, et un formulaire qui ne collecte rien est un clic mort.
+
+> **Mesuré, pas deviné.** La largeur du mot vaut 6,12 × le corps : 1 165 px à 190 px, dans les 1 280
+> du conteneur de 1440 à 3200 px, 305 px dans les 335 disponibles à 375. À remesurer si la graisse,
+> le nom ou l'interlettrage changent. Le disque final est à `vertical-align:.18em` : sur la ligne de
+> base, il disparaissait dans la coupe.

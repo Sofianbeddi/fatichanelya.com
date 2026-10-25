@@ -200,10 +200,10 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .button-outline{border:1.5px solid var(--navy);color:var(--navy)}
 /* Sur fond sombre, le contour navy devient invisible : la variante claire
    s'applique automatiquement dans les blocs à fond navy. */
-.apropos-cta .button-outline,.contact-cta .button-outline,.button-outline--light{
+.contact-cta .button-outline,.button-outline--light{
   border-color:var(--line-on-navy);color:var(--text-on-navy)}
 @media (hover:hover){
-  .apropos-cta .button-outline:hover,.contact-cta .button-outline:hover,
+  .contact-cta .button-outline:hover,
   .button-outline--light:hover{border-color:#fff;color:#fff;background:#FFFFFF14}}
 .button-lg{min-height:58px;padding-inline:2rem}
 .button-block{width:100%}
@@ -552,28 +552,101 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .shop-note{max-inline-size:100%;margin-block-start:2rem;
   font-size:.76rem;color:var(--muted)}
 
-/* ---------- 10. FORMATIONS ---------- */
-/* Pas de largeur maximale : la section porte déjà --bord, et 1408 px moins
-   deux fois 721 tombait à zéro sur un écran de 2722 px. */
-.training{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
-  gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.training-media{margin:0;position:relative}
-.training-media img{border-radius:var(--r-lg);aspect-ratio:4/5;object-fit:cover;box-shadow:var(--shadow-card)}
-.training-media figcaption{position:absolute;inset-block-end:-18px;inset-inline-start:16px;
-  inline-size:min(88%,320px);padding:1rem 1.2rem;border-radius:var(--r-md);
-  background:var(--navy);color:var(--text-on-navy);font-size:.82rem;line-height:1.45;box-shadow:var(--shadow-lift)}
-.training-list{display:grid;gap:.75rem;margin-block-start:2rem}
-.training-list li{display:grid;gap:.4rem;justify-items:start;
-  padding-block-start:1.35rem;padding-inline:0;
-  background:transparent;border:0;border-block-start:1px solid var(--line-mid);
-  border-radius:0;transition:border-color var(--t-base)}
-@media (hover:hover){.training-list li:hover{border-block-start-color:var(--navy)}}
-@media (hover:hover){.training-list li:hover{border-color:var(--navy);transform:translateX(4px)}}
-.training-list p{color:var(--muted);font-size:.9rem}
-.training-list li{position:relative}
-.training-list .arrow-link::after{content:"";position:absolute;inset:0}
-@media (max-width:920px){.training{grid-template-columns:1fr}
-  .training-media{max-inline-size:460px}}
+/* ---------- 10. FORMATIONS ----------
+   Une scène, pas une liste. À gauche le rail des programmes : filets, numéros
+   en grand corps sans zéro devant, titre et chip. À droite l'affiche du
+   programme choisi dans un cadre arrondi (le même 28 px que le hero), avec un
+   panneau de verre — autorisé sur photo — qui porte titre, résumé et bouton.
+   Les affiches sont celles du gérant : leurs couleurs sont celles d'une
+   image, pas de la palette. Sous 1000 px le rail disparaît et la piste
+   devient un carrousel : carte suivante visible, barre de progression et
+   compteur. Pas de largeur maximale : la section porte déjà --bord. */
+.training-head-aside{display:grid;gap:.9rem;justify-items:start}
+.training-head-aside .section-intro{max-width:46ch}
+
+/* `min-inline-size:0` : un enfant de grille ne descend pas sous sa largeur de
+   contenu, et la piste du carrousel (six cartes de 17,5 rem) élargissait la
+   page de 1 400 px sur mobile. */
+.programmes{display:grid;gap:clamp(1.5rem,3vw,3rem)}
+.programmes > *,.programmes-scene{min-inline-size:0}
+
+/* Rail — masqué sous 1000 px, les affiches suffisent. */
+.programmes-rail{display:none;list-style:none;margin:0;padding:0}
+.programmes-tab{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;
+  gap:0 1.1rem;align-items:center;inline-size:100%;padding-block:1.05rem;
+  border-block-start:1px solid var(--line-mid);text-align:start;
+  transition:border-color var(--t-base)}
+.programmes-rail li:last-child .programmes-tab{border-block-end:1px solid var(--line-mid)}
+.programmes-num{font-family:var(--font-display);font-size:var(--fs-num);font-weight:500;
+  line-height:1;letter-spacing:-.03em;color:var(--navy);min-inline-size:1.6ch;
+  transition:color var(--t-base)}
+.programmes-tab-copy{display:grid;gap:.2rem;min-inline-size:0}
+.programmes-tab-titre{font-family:var(--font-display);font-size:1.12rem;font-weight:500;
+  line-height:1.25;letter-spacing:-.015em;color:var(--navy);transition:color var(--t-base)}
+.programmes-tab-chip{font-size:var(--fs-sm);color:var(--muted)}
+.programmes-tab .i{color:var(--gold-ink);opacity:0;transform:translateX(-6px);
+  transition:opacity var(--t-base),transform var(--t-base) var(--ease-out)}
+.programmes-tab.is-active{border-block-start-color:var(--navy)}
+.programmes-tab.is-active .programmes-num,
+.programmes-tab.is-active .programmes-tab-titre{color:var(--gold-ink)}
+.programmes-tab.is-active .i{opacity:1;transform:none}
+@media (hover:hover){
+  .programmes-tab:hover{border-block-start-color:var(--navy)}
+  .programmes-tab:hover .i{opacity:1;transform:none}}
+
+/* Scène : la piste est un carrousel par défaut (mobile et tablette). Les
+   pistes se dimensionnent en unités absolues, jamais en pourcentage. */
+.programmes-piste{display:grid;grid-auto-flow:column;grid-auto-columns:17.5rem;
+  gap:clamp(.9rem,1.8vw,1.5rem);overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-block-end:.5rem;scrollbar-width:none}
+.programmes-piste::-webkit-scrollbar{display:none}
+.programme{scroll-snap-align:start;position:relative;display:grid;align-content:start;
+  border-radius:var(--r-lg);overflow:hidden;background:var(--navy);color:var(--text-on-navy)}
+.programme-media{margin:0;aspect-ratio:4/3;background:var(--navy-2)}
+.programme-media img{inline-size:100%;block-size:100%;object-fit:cover}
+.programme-media--vide{background:radial-gradient(circle at 30% 30%,var(--navy-2),var(--navy-deep) 75%)}
+.programme-panneau{display:grid;gap:.7rem;justify-items:start;align-content:start;
+  padding:1.25rem 1.25rem 1.4rem}
+.programme-titre{font-size:1.2rem;line-height:1.22;color:#fff;letter-spacing:-.015em}
+.programme-extrait{font-size:var(--fs-label);line-height:1.55;color:var(--text-on-navy-2);
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.programme-cta{margin-block-start:.3rem}
+@media (min-width:700px){.programmes-piste{grid-auto-columns:21rem}}
+
+/* Grand écran : rail + affiche. Toutes les affiches occupent la même case ;
+   seule l'active est visible, en fondu. L'état actif est posé par PHP sur la
+   première : sans JavaScript, la scène montre le premier programme et le rail
+   reste une liste de liens vers les fiches — rien ne clignote au chargement.
+   `.programmes-scene .carousel-nav` : la barre du carrousel est déclarée plus
+   bas dans le fichier, une classe seule ne suffirait pas à la masquer ici. */
+@media (min-width:1000px){
+  .programmes{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    gap:clamp(2rem,4vw,3.5rem);align-items:stretch}
+  .programmes-rail{display:block}
+  .programmes-scene .carousel-nav{display:none}
+  .programmes-scene{display:grid;grid-template-rows:minmax(0,1fr)}
+  .programmes-piste{grid-auto-flow:row;grid-auto-columns:auto;gap:0;
+    grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);
+    overflow:visible;scroll-snap-type:none;padding-block-end:0}
+  /* Les affiches inactives sont retirées du rendu (`display:none`), pas
+     seulement rendues transparentes : six panneaux de verre superposés en
+     opacité 0 restaient visibles dans certaines captures du compositeur. La
+     nouvelle affiche entre en fondu court. */
+  .programme:not(.is-active){display:none}
+  .programme.is-active{grid-area:1/1;animation:prog-fondu var(--t-base) var(--ease-out) both}
+  @keyframes prog-fondu{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .programme{display:block;border-radius:28px;min-block-size:30rem}
+  .programme-media{position:absolute;inset:0;aspect-ratio:auto}
+  .programme-panneau{position:absolute;inset-inline-start:clamp(1rem,2vw,1.5rem);
+    inset-block-end:clamp(1rem,2vw,1.5rem);
+    max-inline-size:min(100% - 2*clamp(1rem,2vw,1.5rem),30rem);
+    padding:1.4rem 1.5rem 1.5rem;border-radius:16px;
+    background:color-mix(in srgb,var(--navy) 66%,transparent);
+    -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+    border:1px solid #FFFFFF2E}
+  .programme-titre{font-size:1.4rem}
+  .programme-extrait{-webkit-line-clamp:4}
+}
 
 /* ---------- 11. À PROPOS ---------- */
 .about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
@@ -659,34 +732,93 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .contact .section-intro{margin-inline:auto;margin-block:1.25rem 2rem;color:var(--text-on-navy-2)}
 .contact-note{margin-block-start:1.25rem;font-size:.76rem;color:var(--text-on-navy-2)}
 
-/* ---------- 16. FOOTER ---------- */
-.site-footer{background:var(--navy);color:var(--text-on-navy-2);
-  padding-inline:var(--bord);padding-block:clamp(2.5rem,5vw,4rem) 1.5rem;
-  border-block-start:1px solid var(--line-light)}
-.footer-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.2fr) minmax(0,1.1fr);
-  gap:2.5rem clamp(2rem,4vw,3.5rem);max-inline-size:100%}
-.footer-brand{display:grid;gap:.7rem;justify-items:start;font-size:.88rem}
-.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}
-.footer-nav h2,.newsletter h2{font-family:var(--font-body);font-size:.72rem;font-weight:700;
-  letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft)}
-.footer-nav ul{display:grid;gap:.15rem;margin-block-start:.85rem}
-.footer-nav a{display:inline-flex;align-items:center;min-height:36px;font-size:.88rem}
-@media (hover:hover){.footer-nav a:hover,.footer-brand a:hover{color:#fff;text-decoration:underline}}
-.newsletter h2{max-width:26ch;line-height:1.5}
-.newsletter-row{display:flex;gap:.5rem;margin-block-start:1rem;flex-wrap:wrap}
-.newsletter input{flex:1 1 180px;min-height:52px;padding-inline:1.15rem;
-  border:1px solid var(--line-on-navy);border-radius:var(--r-pill);
-  background:#FFFFFF12;color:#fff;font-size:.88rem}
-.newsletter input::placeholder{color:var(--muted)}
-.newsletter-help{margin-block-start:.7rem;font-size:.72rem;color:var(--text-on-navy-2)}
-.disclaimer{max-inline-size:100%;margin-block-start:2.5rem;
+/* ---------- 16. FOOTER ----------
+   Bleu nuit, quatre colonnes, et deux touches qui le sortent du gabarit :
+   un filet d'or qui s'évanouit aux deux bouts en tête, et le nom en très
+   grand corps coupé par le bas, à peine plus clair que le fond. Le halo
+   chaud dans l'angle est un dégradé radial, pas une image : rien à charger.
+   Aucune boîte, aucune carte : des colonnes à titres en capitales espacées,
+   des liens qui se soulignent d'un trait d'or, des repères à point doré. */
+.site-footer{position:relative;isolation:isolate;overflow:hidden;
+  background:var(--navy);color:var(--text-on-navy-2);
+  padding-inline:var(--bord);padding-block:clamp(3rem,6vw,5rem) 0}
+.site-footer::before{content:"";position:absolute;inset-block-start:0;inset-inline:0;
+  block-size:1px;
+  background:linear-gradient(90deg,transparent,var(--gold) 18%,var(--gold) 82%,transparent)}
+.site-footer::after{content:"";position:absolute;z-index:-1;pointer-events:none;
+  inset-block-start:-24rem;inset-inline-end:-16rem;inline-size:52rem;block-size:52rem;
+  border-radius:50%;
+  background:radial-gradient(closest-side,color-mix(in srgb,var(--gold) 15%,transparent),transparent 72%)}
+
+.footer-top{display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(0,1.5fr) minmax(0,1fr);
+  gap:2.75rem clamp(2rem,4.5vw,4.5rem);max-inline-size:100%}
+
+.footer-brand{display:grid;gap:.9rem;justify-items:start;align-content:start;
+  max-inline-size:34rem;font-size:.92rem}
+.footer-brand .wordmark{font-size:clamp(1.7rem,2.2vw,2.1rem);line-height:1;margin-block-start:-.15rem}
+.footer-tagline{color:var(--text-on-navy);font-size:1rem}
+.footer-mot{max-inline-size:38ch;line-height:1.65;color:var(--text-on-navy-2)}
+.footer-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.1rem;
+  margin-block-start:.4rem}
+.footer-social{display:flex;flex-wrap:wrap;gap:.5rem}
+.footer-social a{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;
+  padding-inline:1.05rem;border:1px solid var(--line-on-navy);border-radius:var(--r-pill);
+  color:var(--text-on-navy);font-size:var(--fs-sm);font-weight:700;
+  transition:border-color var(--t-micro),background var(--t-micro)}
+@media (hover:hover){.footer-social a:hover{border-color:#fff;background:#FFFFFF14}}
+
+.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:2rem clamp(1.5rem,3vw,2.5rem)}
+.footer-nav h2,.footer-reperes h2{font-family:var(--font-body);font-size:var(--fs-eyebrow);
+  font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light)}
+.footer-nav ul{display:grid;gap:.1rem;margin-block-start:.95rem}
+.footer-nav a{position:relative;display:inline-flex;align-items:center;min-height:36px;
+  font-size:.92rem;color:var(--text-on-navy-2);transition:color var(--t-micro)}
+/* Même soulignement que la navigation principale : un trait d'or qui part de
+   la gauche. Le pied et l'en-tête parlent la même langue. */
+.footer-nav a::after{content:"";position:absolute;inset-block-end:6px;inset-inline-start:0;
+  inline-size:100%;block-size:1px;background:var(--gold);
+  transform:scaleX(0);transform-origin:inline-start;transition:transform var(--t-base) var(--ease-out)}
+@media (hover:hover){
+  .footer-nav a:hover{color:#fff}
+  .footer-nav a:hover::after{transform:scaleX(1)}}
+
+.footer-reperes ul{display:grid;gap:.8rem;margin-block-start:.95rem}
+.footer-reperes li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.8rem;
+  align-items:start;font-size:.92rem;line-height:1.5;color:var(--text-on-navy-2)}
+.footer-reperes li::before{content:"";inline-size:6px;block-size:6px;margin-block-start:.55em;
+  border-radius:50%;background:var(--gold)}
+
+.disclaimer{max-inline-size:100%;margin-block-start:clamp(2.5rem,5vw,3.5rem);
   padding-block-start:1.5rem;border-block-start:1px solid var(--line-light);
-  font-size:.72rem;line-height:1.6;color:var(--text-on-navy-2)}
+  font-size:.78rem;line-height:1.6;color:var(--text-on-navy-2)}
 .footer-bottom{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;
-  max-inline-size:100%;margin-block-start:1.25rem;
-  font-size:.72rem;color:var(--text-on-navy-2)}
+  max-inline-size:100%;margin-block-start:1.1rem;
+  font-size:.78rem;color:var(--text-on-navy-2)}
 .footer-bottom p{margin:0}
-@media (max-width:900px){.footer-top{grid-template-columns:1fr}}
+
+/* Signature : le nom au corps le plus grand du site, coupé par le bas. La
+   taille suit la largeur de la fenêtre et se plafonne pour que le mot tienne
+   dans le conteneur de 1280 px sur les très grands écrans — à mesurer, pas à
+   deviner, à chaque changement de graisse ou de nom. Le point final est le
+   seul or de la ligne. */
+.footer-mark{margin:clamp(.75rem,2vw,1.5rem) 0 -.13em;
+  font-family:var(--font-display);font-weight:var(--fw-title);
+  font-size:clamp(3.1rem,13.3vw,11.9rem);line-height:.82;letter-spacing:-.055em;
+  white-space:nowrap;color:color-mix(in srgb,#fff 6%,var(--navy));
+  user-select:none;-webkit-user-select:none}
+/* Le point final est un disque d'or posé à mi-hauteur : au niveau de la ligne
+   de base il disparaîtrait dans la coupe. */
+.footer-mark::after{content:"";display:inline-block;inline-size:.13em;block-size:.13em;
+  margin-inline-start:.07em;vertical-align:.18em;border-radius:50%;
+  background:color-mix(in srgb,var(--gold) 70%,var(--navy))}
+
+@media (max-width:900px){
+  .footer-top{grid-template-columns:1fr;gap:2.5rem}
+  .footer-brand{max-inline-size:none}
+}
+@media (max-width:360px){.footer-nav{grid-template-columns:1fr}}
 
 /* ---------- 17. TIROIR DU PANIER ---------- */
 /* Même piège que l'en-tête : `var(--navy)80` était ignoré, le voile ne
@@ -1070,50 +1202,144 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 @media (max-width:599px){.produit-rappel .button{inline-size:100%}}
 
 
-/* ---------- PAGES À PROPOS ET CONTACT ---------- */
-.page-apropos,.page-contact{display:grid;grid-template-columns:minmax(0,1fr);
-  gap:clamp(2.5rem,5vw,4.5rem)}
-.page-apropos > *,.page-contact > *{max-width:var(--container);
-  margin-inline:auto;inline-size:100%;min-inline-size:0}
+/* ---------- PAGE À PROPOS ----------
+   Seule page intérieure sans bannière de titre : son hero éditorial reprend
+   le cadre arrondi de l'accueil (28 px, sable, 600 px minimum) avec la photo
+   large de Fati à droite et le titre, l'intro, les deux actions et trois
+   faits à gauche. Puis trois colonnes à filets, une bande sable avec le
+   portrait et les valeurs, une bande bleu nuit avec « Ce que je ne fais pas »
+   et l'appel à écrire. Aucune boîte sur fond clair ; la seule boîte est le
+   cadre, parce qu'il porte une photo. */
+.page-apropos{display:block}
 
-.apropos-head,.contact-head{display:grid;gap:.9rem;justify-items:start}
-.apropos-head h1,.contact-head h1{font-size:clamp(2.1rem,1.5rem+2.4vw,3.2rem);
-  max-width:18ch;text-wrap:balance}
-.apropos-intro,.contact-intro{max-width:58ch;font-size:var(--fs-lead);color:var(--muted)}
+.apropos-hero{padding-inline:var(--bord);padding-block:clamp(.75rem,1.5vw,1.5rem) 0}
+.apropos-frame{position:relative;display:grid;
+  grid-template-columns:minmax(0,52%) minmax(0,48%);
+  min-block-size:600px;border-radius:28px;overflow:hidden;background:var(--ivory)}
+.apropos-frame--sans-photo{grid-template-columns:minmax(0,1fr)}
 
-.apropos-portrait{margin:0;display:grid;gap:.75rem;justify-items:start;max-width:34rem}
-/* Cadrage calé vers le haut : le portrait est un 9:16 serré sur le visage, un
-   recadrage centré en 4:5 coupait le sommet de la tête. */
-.apropos-portrait img{inline-size:100%;border-radius:var(--r-lg);
+/* Aucune largeur maximale sur la colonne : les enfants portent leur mesure. */
+.apropos-copy{display:grid;align-content:center;justify-items:start;min-inline-size:0;z-index:1;
+  padding-inline:clamp(1.75rem,3.5vw,3.5rem) clamp(1rem,2vw,1.5rem);padding-block:2rem}
+.apropos-copy .breadcrumb{margin-block-end:1.6rem}
+.apropos-copy .eyebrow{margin-block-end:.8rem}
+/* Le titre est l'élément le plus haut de la page avec la photo : aucune
+   animation, il est là au premier rendu. */
+.apropos-copy h1{font-size:var(--fs-hero);line-height:1.06;letter-spacing:-.03em;
+  color:var(--navy);max-width:18ch;text-wrap:balance}
+.apropos-copy h1 em{font-style:normal;color:var(--gold-ink)}
+.apropos-copy .lead{margin-block:1.25rem 1.75rem;max-width:44ch;
+  color:var(--muted);font-size:var(--fs-lead);line-height:1.7}
+.apropos-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem}
+.apropos-faits{display:grid;gap:.55rem;margin-block-start:2rem;padding-block-start:1.25rem;
+  border-block-start:1px solid var(--line-mid);inline-size:100%;max-inline-size:34rem;
+  color:var(--muted);font-size:var(--fs-label)}
+.apropos-faits li{display:flex;align-items:start;gap:.7rem;line-height:1.5}
+.apropos-faits li::before{content:"";inline-size:5px;block-size:5px;margin-block-start:.6em;
+  border-radius:50%;background:var(--gold);flex:none}
+
+/* Photo : hors flux, elle remplit sa colonne. Fati est dans le tiers droit de
+   l'image : `object-position:100%` garde ce tiers quelle que soit la largeur,
+   et laisse du mur côté texte pour le fondu sable. */
+.apropos-photo{position:relative;margin:0;min-inline-size:0;overflow:hidden}
+.apropos-photo img{position:absolute;inset:0;inline-size:100%;block-size:100%;
+  object-fit:cover;object-position:100% 30%}
+.apropos-photo::before{content:"";position:absolute;inset-block:0;inset-inline-start:0;
+  inline-size:32%;z-index:1;pointer-events:none;
+  background:linear-gradient(to right,var(--ivory),transparent)}
+.apropos-photo::after{content:"";position:absolute;inset-inline:0;inset-block-end:0;block-size:38%;
+  z-index:1;pointer-events:none;
+  background:linear-gradient(to top,#0E1729D9,#0E172966 45%,transparent)}
+.apropos-photo figcaption{position:absolute;z-index:2;
+  inset-block-end:clamp(1.25rem,3vw,2rem);inset-inline-end:clamp(1.25rem,3vw,2rem);
+  display:grid;gap:.1rem;text-align:end;color:#fff}
+.apropos-photo figcaption strong{font-size:1.5rem;font-weight:var(--fw-title);letter-spacing:-.02em}
+.apropos-photo figcaption span{font-size:var(--fs-label);color:#EDE6DA}
+
+@media (min-width:981px) and (max-width:1180px){
+  .apropos-frame{grid-template-columns:minmax(0,58%) minmax(0,42%);min-block-size:540px}}
+@media (max-width:980px){
+  .apropos-hero{padding-block:.75rem 0}
+  .apropos-frame{grid-template-columns:minmax(0,1fr);min-block-size:0;border-radius:20px}
+  .apropos-photo{order:-1;block-size:clamp(280px,46vh,380px)}
+  .apropos-photo::before{display:none}
+  .apropos-copy{padding:1.75rem clamp(1.25rem,5vw,2rem) 2rem}
+  .apropos-copy .breadcrumb{margin-block-end:1.25rem}
+  .apropos-copy h1{max-width:22ch}
+}
+
+/* Trois colonnes à filets : numéro en grand corps, titre, texte, et le lien
+   ancré en bas pour que les trois flèches s'alignent. */
+.piliers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1.5rem,3vw,3rem);list-style:none;margin:0;padding:0;max-inline-size:100%}
+.piliers li{display:grid;grid-template-rows:auto auto minmax(0,1fr) auto;gap:.55rem;
+  justify-items:start;align-content:start}
+.piliers h3{font-size:1.22rem}
+.piliers p{color:var(--muted);max-width:38ch}
+.piliers .arrow-link{margin-block-start:.5rem}
+@media (max-width:820px){.piliers{grid-template-columns:minmax(0,1fr)}
+  .piliers li{grid-template-rows:none}}
+
+/* Portrait et valeurs : la colonne de texte ferme sur une phrase ancrée en bas
+   (`margin-block-start:auto`), pour que les deux colonnes aient une hauteur
+   comparable au lieu de laisser du vide sous les valeurs. */
+.methode-grid{display:grid;gap:clamp(2rem,5vw,4.5rem);align-items:stretch;max-inline-size:100%}
+.methode-portrait{margin:0;inline-size:min(100%,24rem)}
+.methode-portrait img{inline-size:100%;block-size:100%;border-radius:var(--r-lg);
   aspect-ratio:4/5;object-fit:cover;object-position:50% 12%}
-.apropos-portrait figcaption{display:grid;gap:.1rem}
-.apropos-portrait strong{font-family:var(--font-display);font-size:1.12rem;color:var(--navy)}
-.apropos-portrait span{font-size:var(--fs-label);color:var(--muted)}
-
-.apropos-valeurs h2,.apropos-limites h2,.contact-ailleurs h2{
-  margin-block-end:1.5rem;font-size:clamp(1.3rem,1.1rem+.8vw,1.75rem)}
-.apropos-valeurs ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:clamp(1.25rem,3vw,2.5rem)}
-.apropos-valeurs li{display:grid;gap:.3rem;align-content:start;
-  padding-block-start:1.35rem;border-block-start:1px solid var(--line-mid)}
-.apropos-valeurs strong{font-family:var(--font-display);font-size:1.14rem;
-  font-weight:500;color:var(--navy);letter-spacing:-.015em}
-.apropos-valeurs p{color:var(--muted);font-size:var(--fs-label)}
-@media (max-width:820px){.apropos-valeurs ul{grid-template-columns:minmax(0,1fr)}}
+.methode-copy{display:grid;align-content:start;justify-items:start;min-inline-size:0}
+.methode-copy h2{margin-block-end:1.75rem}
+.methode-liste{display:grid;gap:0;list-style:none;margin:0;padding:0;inline-size:100%;max-inline-size:40rem}
+.methode-liste li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.25rem;
+  align-items:start;padding-block:1.15rem;border-block-start:1px solid var(--line-mid)}
+.methode-liste li:last-child{border-block-end:1px solid var(--line-mid)}
+.methode-liste .rule-num{margin:0;min-inline-size:1.6ch;line-height:1.1}
+.methode-liste strong{display:block;font-family:var(--font-display);font-size:1.14rem;
+  font-weight:500;color:var(--navy);letter-spacing:-.015em;line-height:1.25}
+.methode-liste p{margin-block-start:.2rem;color:var(--muted);font-size:var(--fs-label)}
+.methode-fin{margin-block-start:auto;padding-block-start:1.5rem;max-width:44ch;
+  color:var(--muted);font-size:var(--fs-label)}
+@media (min-width:900px){
+  .methode-grid{grid-template-columns:minmax(0,24rem) minmax(0,1fr)}
+  .methode-portrait{justify-self:start}}
+@media (max-width:899px){.methode-portrait{inline-size:min(100%,20rem)}
+  .methode-fin{margin-block-start:1rem}}
 
 /* « Ce que je ne fais pas » : la réponse à l'objection MLM se fait par
-   l'absence, et c'est vérifiable en parcourant le site. */
-.apropos-limites ul{display:grid;gap:0;max-width:72ch}
-.apropos-limites li{padding-block:1.05rem;color:var(--muted);
-  border-block-start:1px solid var(--line-mid)}
-.apropos-limites li:last-child{border-block-end:1px solid var(--line-mid)}
+   l'absence, et c'est vérifiable en parcourant le site. Grand corps, filet
+   vertical clair, deux colonnes dès 820 px — comme la bande de l'accueil. */
+.apropos-limites{background:var(--navy);color:var(--text-on-navy)}
+.apropos-limites h2{color:#fff}
+.limites-liste{display:grid;gap:1.6rem clamp(2rem,5vw,4.5rem);max-inline-size:100%}
+.limites-liste li{padding-block:.1rem;padding-inline-start:1.25rem;
+  border-inline-start-color:var(--line-decor-navy);
+  font-family:var(--font-display);font-size:clamp(1.2rem,1rem + .9vw,1.7rem);
+  font-weight:500;line-height:1.3;letter-spacing:-.02em;color:var(--text-on-navy);
+  text-wrap:balance}
+@media (min-width:820px){.limites-liste{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.limites-cta{display:grid;gap:1.25rem;justify-items:start;
+  margin-block-start:clamp(2.75rem,5vw,4.5rem);padding-block-start:clamp(1.75rem,3vw,2.5rem);
+  border-block-start:1px solid var(--line-light);max-inline-size:100%}
+.limites-cta p{max-width:52ch;font-size:var(--fs-lead);line-height:1.65;color:var(--text-on-navy-2)}
 
-.apropos-cta,.contact-cta{display:grid;gap:.85rem;justify-items:start;
+/* ---------- PAGE CONTACT ---------- */
+.page-contact{display:grid;grid-template-columns:minmax(0,1fr);
+  gap:clamp(2.5rem,5vw,4.5rem)}
+.page-contact > *{max-width:var(--container);
+  margin-inline:auto;inline-size:100%;min-inline-size:0}
+
+.contact-head{display:grid;gap:.9rem;justify-items:start}
+.contact-head h1{font-size:clamp(2.1rem,1.5rem+2.4vw,3.2rem);
+  max-width:18ch;text-wrap:balance}
+.contact-intro{max-width:58ch;font-size:var(--fs-lead);color:var(--muted)}
+
+.contact-ailleurs h2{
+  margin-block-end:1.5rem;font-size:clamp(1.3rem,1.1rem+.8vw,1.75rem)}
+
+.contact-cta{display:grid;gap:.85rem;justify-items:start;
   padding:clamp(1.75rem,3.5vw,2.75rem);border-radius:var(--r-md);
   background:var(--navy);color:var(--text-on-navy)}
-.apropos-cta h2{color:#fff;font-size:clamp(1.3rem,1.1rem+.8vw,1.75rem)}
-.apropos-cta p,.contact-cta .contact-note{max-width:52ch;color:var(--text-on-navy-2)}
-.apropos-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-block-start:.35rem}
+.contact-cta .contact-note{max-width:52ch;color:var(--text-on-navy-2)}
 
 .contact-choix ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:clamp(1.25rem,3vw,2.5rem)}
@@ -1365,8 +1591,19 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 @media (min-width:700px){.carousel-piste{grid-auto-columns:15.5rem}}
 @media (min-width:1000px){.carousel-piste{grid-auto-columns:17rem}}
 
-.carousel-nav{display:flex;gap:.6rem;justify-content:flex-end;
-  margin-block-end:1rem}
+/* Un carrousel se voit comme tel : à gauche une barre de progression dont le
+   curseur a la longueur de l'écran visible, et un compteur ; à droite les deux
+   flèches. La barre et le compteur sont tenus par le script. */
+.carousel-nav{display:flex;align-items:center;gap:.6rem;margin-block-end:1rem}
+.carousel-progres{flex:1;display:flex;align-items:center;gap:1rem;margin-inline-end:.75rem}
+.carousel-barre{position:relative;flex:1;block-size:2px;border-radius:2px;
+  background:var(--line-mid);overflow:hidden}
+.carousel-barre::after{content:"";position:absolute;inset-block:0;border-radius:2px;
+  inset-inline-start:calc(var(--progres,0) * (100% - var(--part,.5) * 100%));
+  inline-size:calc(var(--part,.5) * 100%);background:var(--navy);
+  transition:inset-inline-start var(--t-micro) linear,inline-size var(--t-micro) linear}
+.carousel-compte{font-size:var(--fs-label);color:var(--muted);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
 .carousel-bouton{inline-size:44px;block-size:44px;border-radius:50%;
   border:1.5px solid var(--line-mid);color:var(--ink);
   display:grid;place-items:center;

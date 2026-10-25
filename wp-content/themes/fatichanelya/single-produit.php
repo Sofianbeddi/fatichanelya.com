@@ -132,7 +132,7 @@ while ( have_posts() ) :
 				</a>
 
 				<p class="produit-cadrage">
-					<?php esc_html_e( 'On confirme ensemble la disponibilité, les frais de port réels et le total avant tout paiement. Le paiement en ligne n\'est pas encore activé.', 'fatichanelya' ); ?>
+					<?php esc_html_e( 'Commande par WhatsApp : on confirme ensemble la disponibilité, les frais de port réels et le total avant l\'envoi.', 'fatichanelya' ); ?>
 				</p>
 			</div>
 		</article>

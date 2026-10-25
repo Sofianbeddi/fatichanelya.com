@@ -4,7 +4,9 @@ $items = fati_opt_lines( 'trust' );
 if ( ! $items ) {
 	return;
 }
-$icones = array( 'shield', 'card', 'whatsapp', 'leaf' );
+// Dans l'ordre des quatre engagements par défaut : sélection, commande par
+// WhatsApp, réponse directe, aucune promesse santé.
+$icones = array( 'shield', 'whatsapp', 'support', 'leaf' );
 ?>
 <section class="trust" aria-label="<?php esc_attr_e( 'Nos engagements', 'fatichanelya' ); ?>">
 	<ul>

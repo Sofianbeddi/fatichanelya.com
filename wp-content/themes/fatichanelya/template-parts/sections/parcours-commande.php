@@ -3,8 +3,8 @@
  * « Comment ça se passe » — le parcours de commande en trois étapes.
  *
  * Se place sous la grille de la boutique et des pages de catégorie : la
- * visiteuse apprend qu'on ne paie pas en ligne avant de le découvrir dans le
- * tiroir, et l'apprend comme une façon de faire, pas comme une excuse.
+ * visiteuse apprend que la commande se finalise sur WhatsApp avant de le
+ * découvrir dans le tiroir, et l'apprend comme une façon de faire.
  *
  * Trois cellules à filets, numéros en grand corps sans zéro devant. Les
  * textes sont ceux du blueprint (section S4 de la boutique).
@@ -46,6 +46,6 @@ $etapes = array(
 	</ol>
 
 	<p class="parcours-note">
-		<?php esc_html_e( 'Le paiement en ligne arrive. En attendant, tout se règle après confirmation.', 'fatichanelya' ); ?>
+		<?php esc_html_e( 'Rien à payer sur le site : tout se règle avec Fati, après confirmation.', 'fatichanelya' ); ?>
 	</p>
 </section>

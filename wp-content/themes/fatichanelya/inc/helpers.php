@@ -71,6 +71,10 @@ function fati_icon( $name, $size = 18 ) {
 		'box'      => '<path d="M3 8.5 12 4l9 4.5v7L12 20l-9-4.5v-7Z"/><path d="m3 8.5 9 4.5 9-4.5M12 13v7"/>',
 		'wallet'   => '<rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18"/><circle cx="17" cy="14.5" r="1.2"/>',
 		'support'  => '<path d="M4 13a8 8 0 0 1 16 0"/><rect x="2.5" y="13" width="4" height="6" rx="1.6"/><rect x="17.5" y="13" width="4" height="6" rx="1.6"/><path d="M20 19a3 3 0 0 1-3 2.5h-2"/>',
+		// Réseaux, en trait comme le reste : une note stylisée pour TikTok, le
+		// cadre et l'objectif pour Instagram. Pas de logo plein, pas de couleur.
+		'tiktok'   => '<path d="M14.2 3.5v10.3a3.4 3.4 0 1 1-3.4-3.4"/><path d="M14.2 3.5c.3 2.9 2.2 4.8 5.1 5.1"/>',
+		'instagram' => '<rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><path d="M17.1 6.9h.01"/>',
 	);
 
 	if ( ! isset( $paths[ $name ] ) ) {

@@ -45,6 +45,11 @@ $total = (int) wp_count_posts( 'produit' )->publish;
 
 	<div class="carousel" data-carousel>
 		<div class="carousel-nav">
+			<?php // Un carrousel se voit comme tel : barre de progression et compteur, pas seulement deux flèches. ?>
+			<div class="carousel-progres" aria-hidden="true">
+				<span class="carousel-barre" data-carousel-barre></span>
+				<span class="carousel-compte" data-carousel-compte>1 / <?php echo (int) $produits->post_count; ?></span>
+			</div>
 			<button class="carousel-bouton carousel-prec" type="button" data-carousel-prec
 			        aria-label="<?php esc_attr_e( 'Produits précédents', 'fatichanelya' ); ?>">
 				<?php echo fati_icon( 'arrow', 22 ); ?>

@@ -7,8 +7,8 @@
  * sont dessinées par le JavaScript à partir du panier enregistré dans le
  * navigateur ; rien n'est stocké côté serveur.
  *
- * Le paiement en ligne n'est pas branché : la commande part en message à
- * Fati, qui confirme disponibilité, frais de port et total.
+ * La commande part en message WhatsApp à Fati, qui confirme disponibilité,
+ * frais de port et total (première version : ni carte ni PayPal).
  *
  * @package Fatichanelya
  */
@@ -52,7 +52,7 @@ $panier = fati_panier_url();
 			</a>
 		<?php endif; ?>
 		<p class="drawer-note">
-			<?php esc_html_e( 'Pas de paiement en ligne pour l\'instant : Fati confirme la disponibilité, les frais de port et le total par message.', 'fatichanelya' ); ?>
+			<?php esc_html_e( 'Votre commande part en message à Fati : elle confirme la disponibilité, les frais de port et le total.', 'fatichanelya' ); ?>
 		</p>
 	</div>
 </div>
