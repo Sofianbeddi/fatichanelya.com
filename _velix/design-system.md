@@ -456,9 +456,9 @@ existent déjà ailleurs sur le site ; le parcours daté n'est toujours pas inve
 ### Pied de page
 Deux colonnes (marque et contact · les deux menus) puis une ligne copyright + « Site conçu par Velix
 Digital ». Thème 1.3.2, à la demande du gérant : **pas de colonne « En bref », pas de mention santé
-dans le pied** — elle est obligatoire pour des compléments alimentaires, elle vit donc sur la fiche
-produit (`.produit-mention`, filet discret sous les conseils d'utilisation ; réglage « Mention santé
-(fiche produit) »). Deux signatures : un **filet d'or** qui s'évanouit aux deux bouts en tête
+dans le pied** — elle est obligatoire pour des compléments alimentaires, elle était déjà sur la fiche
+produit (`.produit-legal`, encadré en fin de description) et y reste ; réglage renommé « Mention
+santé (fiche produit) ». Deux signatures : un **filet d'or** qui s'évanouit aux deux bouts en tête
 (dégradé, pas une bordure) et le **nom en très grand corps** coupé par le bas (`.footer-mark`,
 `clamp(3.1rem, 13.3vw, 11.9rem)`, 6 % de blanc dans le bleu nuit, disque d'or à mi-hauteur en point
 final, `aria-hidden`). Un halo chaud en dégradé radial dans l'angle. Le bloc newsletter est retiré :

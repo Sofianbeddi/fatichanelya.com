@@ -740,7 +740,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
    chaud dans l'angle est un dégradé radial, pas une image : rien à charger.
    Aucune boîte, aucune carte : des colonnes à titres en capitales espacées,
    des liens qui se soulignent d'un trait d'or. La mention santé n'est plus
-   ici : elle se lit sur la fiche produit (`.produit-mention`). */
+   ici : elle se lit sur la fiche produit (`.produit-legal`, déjà en place). */
 .site-footer{position:relative;isolation:isolate;overflow:hidden;
   background:var(--navy);color:var(--text-on-navy-2);
   padding-inline:var(--bord);padding-block:clamp(3rem,6vw,5rem) 0}
@@ -1156,12 +1156,6 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .produit-usage .rule-num{margin:0;min-inline-size:1.3ch;line-height:1.1}
 .produit-usage p{max-width:48ch;padding-block-start:.4rem}
 @media (min-width:760px){.produit-details{grid-template-columns:repeat(2,minmax(0,1fr))}}
-
-/* Mention obligatoire des compléments alimentaires, sortie du pied de page le
-   25 oct. 2026 : une ligne discrète à filet, sous les conseils d'utilisation. */
-.produit-mention{max-width:72ch;padding-block-start:1.1rem;
-  border-block-start:1px solid var(--line);
-  font-size:var(--fs-sm);line-height:1.6;color:var(--muted)}
 
 /* Bande de réassurance : cellules à filets, jamais de cartes. */
 /* `repeat(4, minmax(0,1fr))` ne se replie pas : la grille gardait ses quatre

@@ -189,15 +189,6 @@ while ( have_posts() ) :
 		<?php endif; ?>
 
 		<?php
-		// Mention obligatoire pour les compléments alimentaires. Elle vivait dans le
-		// pied de page ; le gérant l'en a sortie (25 oct. 2026), elle se lit ici,
-		// à côté des conseils d'utilisation qu'elle rappelle.
-		if ( fati_opt( 'mention_sante' ) ) :
-			?>
-			<p class="produit-mention"><?php echo esc_html( fati_opt( 'mention_sante' ) ); ?></p>
-		<?php endif; ?>
-
-		<?php
 		// L'import initial a rempli l'extrait et le corps avec le même texte.
 		// Tant que la cliente n'a pas écrit une vraie description, afficher les
 		// deux reviendrait à répéter la même phrase à deux endroits.

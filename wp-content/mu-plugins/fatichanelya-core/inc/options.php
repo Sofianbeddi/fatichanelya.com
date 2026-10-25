@@ -27,7 +27,7 @@ function fati_options_schema() {
 				'tiktok'          => array( 'label' => __( 'Profil TikTok', 'fatichanelya' ), 'type' => 'url' ),
 				'instagram'       => array( 'label' => __( 'Profil Instagram', 'fatichanelya' ), 'type' => 'url' ),
 				'og_image'        => array( 'label' => __( 'Image de partage (1200 × 630)', 'fatichanelya' ), 'type' => 'image', 'help' => __( 'Affichée quand un lien du site est partagé sur WhatsApp ou les réseaux. À défaut, la photo du hero est utilisée.', 'fatichanelya' ) ),
-				'mention_sante'   => array( 'label' => __( 'Mention santé (fiche produit)', 'fatichanelya' ), 'type' => 'textarea', 'help' => __( 'Obligatoire pour les compléments alimentaires, affichée sous les conseils d\'utilisation de chaque fiche. Ne jamais promettre de guérison.', 'fatichanelya' ) ),
+				'mention_sante'   => array( 'label' => __( 'Mention santé (fiche produit)', 'fatichanelya' ), 'type' => 'textarea', 'help' => __( 'Obligatoire pour les compléments alimentaires, affichée en fin de chaque fiche produit. Ne jamais promettre de guérison.', 'fatichanelya' ) ),
 			),
 		),
 		'hero'     => array(
