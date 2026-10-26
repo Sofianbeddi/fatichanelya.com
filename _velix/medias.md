@@ -95,7 +95,7 @@ Sebastian », texte incrusté) que le gérant a jugée hors contexte et pas prof
 l'ancienne est dans `sources/about-main-san-sebastian.webp`. Le hero et ce portrait viennent de la
 même photo : c'est un intérim, la cible reste une vraie séance (blueprint E.5).
 
-## Références sans visuel (16 octobre 2026 — 76 ; 7 depuis le soir du 26 octobre, voir plus bas)
+## Références sans visuel (16 octobre 2026 — 76 ; 1 depuis le soir du 26 octobre, voir plus bas)
 
 Les 75 produits ajoutés d'après le catalogue DXN de février 2026 n'ont pas de visuel (`image=""`
 dans `rediger-catalogue.py`, méta `_fati_indispo`) ; le thème affiche `placeholder-produit.svg` et
@@ -245,9 +245,12 @@ Les PNG (80 Mo) restent hors dépôt : `tools/medias/sources/produits-dxn-retouc
 dit où ils sont. L'huile de coco reçoit sa vraie photo (bocal 500 ml bio) à la place du rendu de
 synthèse écarté le 16 octobre.
 
-**7 références sans visuel** : Brook Coffee (FB616) et les six monodoses et échantillons Kallow
-(SC101–SC106), pour lesquels aucune image n'existe nulle part. Le gabarit « Visuel à venir » reste
-pour elles ; liste dans `visuels-manquants.md`.
+**Monodoses et échantillons Kallow (SC101–SC106)** : à la demande du gérant le soir même, ils
+reprennent le visuel du produit parent — la colonne `image` de `rediger-catalogue.py` pointe le
+fichier du parent (`divine-eye-cream.webp` pour les monodoses du contour des yeux, etc.) ;
+l'importateur crée une pièce jointe par fiche, rien à dupliquer dans `tools/medias/`.
+**1 référence sans visuel** : Brook Coffee (FB616), aucune image nulle part. Le gabarit « Visuel à
+venir » reste pour elle ; voir `visuels-manquants.md`.
 
 ## Reste à produire
 
