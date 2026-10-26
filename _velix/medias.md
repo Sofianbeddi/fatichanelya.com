@@ -95,7 +95,7 @@ Sebastian », texte incrusté) que le gérant a jugée hors contexte et pas prof
 l'ancienne est dans `sources/about-main-san-sebastian.webp`. Le hero et ce portrait viennent de la
 même photo : c'est un intérim, la cible reste une vraie séance (blueprint E.5).
 
-## Références sans visuel (16 octobre 2026)
+## Références sans visuel (16 octobre 2026 — 76 ; 64 depuis le 26 octobre, voir plus bas)
 
 Les 75 produits ajoutés d'après le catalogue DXN de février 2026 n'ont pas de visuel (`image=""`
 dans `rediger-catalogue.py`, méta `_fati_indispo`) ; le thème affiche `placeholder-produit.svg` et
@@ -130,6 +130,45 @@ Six affiches fournies (1448 × 1086, texte arabe incrusté, visuels de synthèse
 `tools/medias/formations/formation-*-affiche.webp`. Neuf affiches au total. Posées sur les six programmes ; `cosmetiques`, `nutrition`, `complements` attendent
 une décision sur l'offre. Les natures mortes générées (`formation-strategie`, `formation-contenu`,
 `formation-vendre`) restent dans le dossier, sans emploi.
+
+## Packshots officiels Kallow (26 octobre 2026)
+
+Le gérant a transmis le catalogue Kallow (DXN Cosmetics, édition arabe, 28 pages), archivé dans
+`tools/medias/sources/kallow-catalogue/catalogue-kallow-ar.pdf`. Le PDF range chaque packshot en
+couche séparée avec un masque de transparence : `tools/extraire-visuels-kallow.py` (pdfimages +
+Pillow) les recompose sur blanc, les détoure et les dépose dans `tools/medias/produits/`, PNG de
+contrôle à côté du PDF. Puis `normaliser-visuels.py` et l'import, comme pour le reste.
+
+| | Produits | Taille utile du produit |
+|---|---|---|
+| Visuel posé pour la première fois | Foaming Cleanser, Tightening Serum, Argan Face Cream, Micellar Tonic, Face Mask, Divine Face Serum, Body Lotion, Lip Balm, Hand Cream, Sunscreen SPF 30, Tanning Oil, After Sun | 287 à 840 px |
+| Packshot de synthèse remplacé par l'officiel | Shower Gel, Face Sunscreen SPF 50+, Divine Eye Cream, Divine Face Cream, Night Oil, Dry Oil | 508 à 795 px |
+
+Trois visuels gardent le décor officiel collé au produit (perles du Tightening Serum, olive de
+l'Argan Face Cream, aloe et menthe de l'After Sun) : il est dans la même image, il n'est pas
+séparable. Le baume à lèvres est pris seul, sans le beurre de karité de la page.
+
+> **Piège corrigé dans `normaliser-visuels.py` : les produits blancs.** Le chemin par seuil prenait
+> le corps du pot du masque et du flacon SPF 50+ (pixels 245 à 252) pour du fond, le ramenait à
+> 255, et il ne restait que l'étiquette. Un seuil plus haut ne suffisait pas : six sources touchent
+> le bord de leur image, et les anciens packshots de synthèse auraient changé aussi. Le masque du
+> PDF est donc **conservé comme canal alpha** du WebP déposé dans `produits/` ; le normaliseur
+> reconnaît une source à son alpha et y lit exactement la boîte et la surface du produit. Les
+> sources sans alpha suivent le code d'origine, inchangé : les 22 anciens visuels normalisés sont
+> restés identiques à l'octet près.
+
+**Toujours sans visuel après cette vague : 64 références.** Côté Kallow : Divine Men After Shave,
+Summer Bling et Pink Glow Mist, et les six monodoses et échantillons, absents du catalogue. Le
+second document du gérant (« منتوجات DXN وفوائدها », 24 pages) n'a pas servi : captures à 85 ppp,
+produits de 150 à 300 px avec le filigrane « DXN's Property », et des textes faits d'allégations
+thérapeutiques inutilisables.
+
+**Textes.** Les douze fiches Kallow nouvelles ont été réécrites dans `rediger-catalogue.py` à partir
+du catalogue : ingrédients clés, pourcentage d'ingrédients d'origine naturelle tel qu'imprimé sur
+l'étiquette (cité comme tel), référence SC0xx, format réel et mode d'emploi. Aucune promesse
+d'effet reprise (anti-rides, anti-âge, cicatrisant, antibactérien, collagène…). Trois corrections
+d'emballage au passage, pour coller aux packshots : le masque est un pot et un masque de nuit sans
+rinçage, le contour des yeux un pot de 15 ml, le SPF 50+ un flacon-pompe.
 
 ## Reste à produire
 

@@ -72,34 +72,15 @@ def boite_du_produit(image: Image.Image) -> tuple[int, int, int, int] | None:
     return int(colonnes[0]), int(lignes[0]), int(colonnes[-1]) + 1, int(lignes[-1]) + 1
 
 
-def normaliser(chemin: pathlib.Path) -> Image.Image | None:
-    image = Image.open(chemin).convert("RGB")
-    boite = boite_du_produit(image)
-    if boite is None:
-        return None
-
-    produit = image.crop(boite)
-
-    # Le fond du visuel source n'est pas toujours blanc pur (gris clair,
-    # léger dégradé). On le ramène au blanc, sinon la grille garde des
-    # rectangles gris visibles autour de certains produits.
-    tableau = np.asarray(produit.convert("RGB"), dtype=np.int16)
-    fond_local = tableau.min(axis=2) >= seuil_du_fond(np.asarray(image.convert("RGB"), dtype=np.int16))
-    if fond_local.any():
-        tableau = tableau.copy()
-        tableau[fond_local] = FOND
-        produit = Image.fromarray(tableau.astype("uint8"), "RGB")
-
+def poser_sur_toile(produit: Image.Image, pixels_encre: int) -> Image.Image:
+    """Met le produit à l'échelle commune et le centre sur le carré blanc."""
     # Mise à l'échelle. Caler le plus grand côté sur une cible unique ne suffit
     # pas : un flacon fin et haut couvre alors bien moins de surface qu'un
     # coffret large, et la grille reste irrégulière. On vise donc directement
     # la surface d'encre, en bornant les deux côtés pour qu'un objet très
     # élancé ne touche jamais les bords.
-    encre = np.asarray(produit.convert("RGB"), dtype=np.int16).min(axis=2) < SEUIL_FOND
-    pixels_encre = max(int(encre.sum()), 1)
-
     # Le facteur agit sur les deux dimensions : la surface varie en son carré.
-    facteur = ((SURFACE_CIBLE * TAILLE * TAILLE) / pixels_encre) ** 0.5
+    facteur = ((SURFACE_CIBLE * TAILLE * TAILLE) / max(pixels_encre, 1)) ** 0.5
 
     # Bornes : ni plus haut que la zone utile, ni plus large qu'elle.
     facteur = min(facteur, TAILLE * HAUTEUR_MAX / produit.height)
@@ -118,8 +99,63 @@ def normaliser(chemin: pathlib.Path) -> Image.Image | None:
     return toile
 
 
+def normaliser_detoure(image: Image.Image) -> Image.Image | None:
+    """Source déjà détourée : le canal alpha dit exactement où est le produit.
+
+    C'est le cas des packshots du catalogue Kallow (26 oct. 2026), extraits
+    avec leur masque. On ne devine rien au seuil : la boîte et la surface
+    viennent de l'alpha, et le corps d'un pot blanc ou d'un flacon blanc reste
+    entier. Le chemin par seuil, lui, prenait ses pixels 245-252 pour du fond,
+    les ramenait à 255, et il ne restait que l'étiquette.
+    """
+    alpha = image.getchannel("A")
+    boite = alpha.getbbox()
+    if boite is None:
+        return None
+    alpha = alpha.crop(boite)
+    produit = Image.new("RGB", alpha.size, FOND)
+    produit.paste(image.crop(boite).convert("RGB"), mask=alpha)
+    pixels_encre = int((np.asarray(alpha) > 0).sum())
+    return poser_sur_toile(produit, pixels_encre)
+
+
+def aplatir(image: Image.Image) -> Image.Image:
+    """RGB sur blanc, que la source ait un canal alpha ou non."""
+    if "A" in image.getbands():
+        fond = Image.new("RGB", image.size, FOND)
+        fond.paste(image.convert("RGBA"), mask=image.getchannel("A"))
+        return fond
+    return image.convert("RGB")
+
+
+def normaliser(chemin: pathlib.Path) -> Image.Image | None:
+    source = Image.open(chemin)
+    if "A" in source.getbands():
+        return normaliser_detoure(source.convert("RGBA"))
+
+    image = source.convert("RGB")
+    boite = boite_du_produit(image)
+    if boite is None:
+        return None
+
+    produit = image.crop(boite)
+
+    # Le fond du visuel source n'est pas toujours blanc pur (gris clair,
+    # léger dégradé). On le ramène au blanc, sinon la grille garde des
+    # rectangles gris visibles autour de certains produits.
+    tableau = np.asarray(produit.convert("RGB"), dtype=np.int16)
+    fond_local = tableau.min(axis=2) >= seuil_du_fond(np.asarray(image.convert("RGB"), dtype=np.int16))
+    if fond_local.any():
+        tableau = tableau.copy()
+        tableau[fond_local] = FOND
+        produit = Image.fromarray(tableau.astype("uint8"), "RGB")
+
+    encre = np.asarray(produit.convert("RGB"), dtype=np.int16).min(axis=2) < SEUIL_FOND
+    return poser_sur_toile(produit, max(int(encre.sum()), 1))
+
+
 def occupation(chemin: pathlib.Path) -> float:
-    image = Image.open(chemin).convert("RGB")
+    image = aplatir(Image.open(chemin))
     pixels = np.asarray(image, dtype=np.int16)
     return float((pixels.min(axis=2) < SEUIL_FOND).mean() * 100)
 
