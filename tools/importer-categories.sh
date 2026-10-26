@@ -14,8 +14,9 @@
 set -u
 cd "$(dirname "$0")/.."
 WP="${WP:-wp}"
+# `command` : sans variable WP, la fonction s'appellerait elle-même au lieu de WP-CLI.
 # stdin fermé : sous `ssh … bash -s`, WP-CLI avalerait sinon la suite du script.
-wp() { $WP "$@" </dev/null; }
+wp() { command $WP "$@" </dev/null; }
 empreinte() { if command -v md5sum >/dev/null 2>&1; then md5sum "$1" | cut -d' ' -f1; else md5 -q "$1"; fi; }
 
 for f in tools/medias/categories/cat-*.webp; do

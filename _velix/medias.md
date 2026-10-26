@@ -95,13 +95,13 @@ Sebastian », texte incrusté) que le gérant a jugée hors contexte et pas prof
 l'ancienne est dans `sources/about-main-san-sebastian.webp`. Le hero et ce portrait viennent de la
 même photo : c'est un intérim, la cible reste une vraie séance (blueprint E.5).
 
-## Références sans visuel (16 octobre 2026 — 76 ; 64 depuis le 26 octobre, voir plus bas)
+## Références sans visuel (16 octobre 2026 — 76 ; 7 depuis le soir du 26 octobre, voir plus bas)
 
 Les 75 produits ajoutés d'après le catalogue DXN de février 2026 n'ont pas de visuel (`image=""`
 dans `rediger-catalogue.py`, méta `_fati_indispo`) ; le thème affiche `placeholder-produit.svg` et
-la mention « Visuel à venir ». L'huile de coco (`virgin-coconut-oil`) est dans le même cas depuis
-que sa fiche décrit l'huile bio 500 ml du catalogue et non le pot au Ganoderma de l'affiche ; son
-ancien rendu reste dans `tools/medias/produits/virgin-coconut-oil.webp`, inutilisé. Les images
+la mention « Visuel à venir ». L'huile de coco (`virgin-coconut-oil`) a été dans le même cas du 16 au 26 octobre
+(sa fiche décrit l'huile bio 500 ml du catalogue, pas le pot au Ganoderma de l'affiche) ; elle a
+depuis sa vraie photo, voir « Visuels DXN retouchés » plus bas. Les images
 embarquées dans le PDF (`sources/catalogue-dxn-2026-02.pdf`) font 110 × 135 px : inutilisables
 en packshot, utilisables au mieux comme référence pour `nano_banana_2` (1,5 crédit l'image, solde
 2 crédits au 16 oct. 2026). Priorité : photos du stock réel de Fati, ou visuels officiels de
@@ -225,6 +225,29 @@ trois chemins, par ordre de préférence : images officielles de l'espace membre
 de son stock (déposées dans un dossier et posées par `poser-visuels-recus.py`, une heure de travail
 une fois reçues) ; packshots provisoires Higgsfield à partir des références filigranées (crédits à
 acheter, relecture des étiquettes) ; ou garder le gabarit « Visuel à venir », qui est honnête.
+
+## Visuels DXN retouchés par le gérant (26 octobre 2026, soir)
+
+Le gérant a livré 54 copies retouchées des références dxn2u.eu : dossier client
+`[01] VELIX_DIGITAL/…/Fatichanelya/output/visuels-DXN-retouches/` (et le zip du même nom), PNG
+1098 × 1433 sur fond blanc, ombres portées conservées, nommées « CODE - Nom exact du produit ».
+Son LISEZ-MOI précise que le filigrane « DXN's Property » et ses lignes ont été retirés par
+**reconstruction générative** : les copies ne sont pas identiques pixel par pixel aux sources
+(détails, couleurs, logos, petits caractères), et **les petits textes des quatre Megapack (FB077,
+FB078, FB079, FB170) sont reconstruits — à contrôler sur l'emballage officiel avant la production**.
+Usage légitime parce que Fati est distributrice DXN et vend ces produits ; ce sont les images de
+la marque, pas des photos de tiers.
+
+Chaîne appliquée telle quelle : `poser-visuels-recus.py` (rattachement par le code DXN en tête de
+nom, détourage par remplissage, WebP alpha dans `tools/medias/produits/`), `normaliser-visuels.py`,
+54 colonnes `image` renseignées dans `rediger-catalogue.py`, import local, publication préversion.
+Les PNG (80 Mo) restent hors dépôt : `tools/medias/sources/produits-dxn-retouches/PROVENANCE.md`
+dit où ils sont. L'huile de coco reçoit sa vraie photo (bocal 500 ml bio) à la place du rendu de
+synthèse écarté le 16 octobre.
+
+**7 références sans visuel** : Brook Coffee (FB616) et les six monodoses et échantillons Kallow
+(SC101–SC106), pour lesquels aucune image n'existe nulle part. Le gabarit « Visuel à venir » reste
+pour elles ; liste dans `visuels-manquants.md`.
 
 ## Reste à produire
 
