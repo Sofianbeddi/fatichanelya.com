@@ -1,7 +1,7 @@
 #!/bin/bash
 # Publie le CONTENU sur la préversion (fatichanelya.velixdigital.com) :
 # catalogue produits (textes, métas, visuels), formations (programmes, métas,
-# visuels), image de la section Formations et image de partage.
+# visuels), visuels des catégories, images de réglage et image de partage.
 #
 #   bash tools/publier-contenu-preversion.sh
 #
@@ -37,6 +37,9 @@ PY=$(command -v /opt/alt/python311/bin/python3 || command -v python3)
 
 echo "→ Formations"
 "$PY" tools/importer-formations.py </dev/null
+
+echo "→ Visuels des catégories"
+bash tools/importer-categories.sh
 
 echo "→ Images de réglage (section Formations, partage, À propos)"
 poser_option_image() { # clé, fichier, titre

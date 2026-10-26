@@ -76,8 +76,8 @@ Option `og_image` (Contenus du site › Général) ; repli sur la photo du hero.
 ## Photos réelles — ne jamais remplacer par une génération
 
 `pages/hero-fati.webp`, `pages/about-avatar.webp`, `pages/tiktok-*.webp`,
-`categories/cat-*.webp` : fournies par le gérant (sept. 2026). Ce sont les seules preuves
-visuelles du site.
+`categories/cat-*.webp` : fournies par le gérant (sept. 2026 ; catégories refaites avec les vrais
+produits le 26 oct. 2026, voir plus bas). Ce sont les seules preuves visuelles du site.
 
 `pages/about-avatar.webp` — **photo de profil de la section « À propos »** (le rond de 96 px posé
 sur le portrait, taille `fati-avatar` 240 × 240), remplacée le 5 oct. 2026 à la demande du gérant par
@@ -169,6 +169,62 @@ l'étiquette (cité comme tel), référence SC0xx, format réel et mode d'emploi
 d'effet reprise (anti-rides, anti-âge, cicatrisant, antibactérien, collagène…). Trois corrections
 d'emballage au passage, pour coller aux packshots : le masque est un pot et un masque de nuit sans
 rinçage, le contour des yeux un pot de 15 ml, le SPF 50+ un flacon-pompe.
+
+## Visuels de catégories avec les vrais produits (26 octobre 2026)
+
+Les quatre ronds de la section « Nos catégories » de l'accueil montraient des natures mortes
+génériques (pot de crème, théière, flacon ambré, savon) : aucun produit DXN n'y figurait. Le gérant
+a fourni six mises en scène des produits réels dans la même ambiance (mur vert, travertin, olivier),
+carrées, 1254 px — cinq le matin, celle du soin personnel le jour même. Sources archivées dans `tools/medias/sources/categories-gerant/` ; anciennes
+vignettes gardées dans `reserve/cat-*-v1-generique.webp`.
+
+| Catégorie | Fichier retenu | Source | Traitement |
+|---|---|---|---|
+| Beauté & soin | `categories/cat-beaute-soin.webp` | `beaute-soin-serre.png` (gamme Kallow) | 1200 × 1200, WebP q88 |
+| Alimentation & boissons | `categories/cat-alimentation-boissons.webp` | `alimentation-boissons-serre.png` (cafés DXN, Morinzhi) | 1200 × 1200, WebP q88 |
+| Compléments | `categories/cat-complements.webp` | `complements.png` (flacons DXN) | recadrage 1000 × 1000 (zone 135, 145 → 1135, 1145), jamais agrandi, WebP q88 |
+| Soin personnel | `categories/cat-soin-personnel.webp` | `soin-personnel.png` (Ganozhi, Gano Massage Oil) | recadrage 1100 × 1100 (zone 45, 100 → 1145, 1200), jamais agrandi, WebP q88 |
+
+**Pourquoi le cadrage serré.** La vignette est un rond de 184 px (taille `fati-categorie`, 320 px,
+découpée par `border-radius:50%`) : les coins de l'image disparaissent et les produits doivent
+remplir le centre. Les deux variantes larges (`*-large.png`, plus de mur et de feuillage) ont été
+écartées après simulation du rond à 320 puis 184 px ; les images des compléments et du soin
+personnel, seules variantes fournies, sont recadrées pour que leurs produits aient la même échelle
+que les deux autres groupes (à 1000 px, le coin du savon Ganozhi touchait le bord du rond : 1100).
+
+**Import.** `tools/importer-categories.sh` pose le visuel de chaque terme depuis
+`categories/cat-<slug>.webp`, avec empreinte MD5 en méta de terme (`_fati_visuel_md5`) : un fichier
+remplacé est ré-importé et l'ancien média supprimé, un fichier inchangé est laissé tel quel. Appelé
+par `seed.sh` et par `publier-contenu-preversion.sh`. En local, passer la variable `WP` (socket
+XAMPP) comme pour les importateurs Python.
+
+## Recherche de sources en ligne et visuels Kallow de la boutique grecque (26 octobre 2026)
+
+Demande du gérant : trouver des images fiables sur Internet pour les 64 références restantes.
+Ce qui a été vérifié, pour ne pas le refaire :
+
+| Source | Résultat |
+|---|---|
+| **dxn2u.eu** (site officiel DXN Europe, `product/img/gb/<CODE>_….jpg`) | 90 images, 735 × 960, **54 de nos 64 codes** — mais c'est la même banque filigranée « DXN's Property » que dxn2u.com. **Inutilisable telle quelle, et on ne retire pas un filigrane.** |
+| dxnusa.com | Même structure et même banque. |
+| dxn.com.mx, dxn-deutschland.de, sites IT/FR/PT/HU/SK/PL/RO | Vides, morts ou sans catalogue public. |
+| **kallowshop.gr** (boutique officielle Kallow, Grèce, WooCommerce) | 25 fiches, JPEG 1200 × 1500 sur blanc, **sans filigrane**. Les 18 références SC081–SC098 (déjà posées depuis le PDF) plus **Divine Men Calming After Shave, Summer Bling et Pink Glow Mist, Natural Shield** (`Calming-After-Shave-.jpg`, `Summer-Bling-.jpg`, `Pink-Glow-.jpg`, `Natural-Shield-closed-.jpg`). Pas de monodoses ni d'échantillons. |
+| Revendeurs (eBay, Jumia, Marjane Mall, vidadxn.es…) | Écartés : photos de tiers. |
+| Higgsfield | Solde 2 crédits, plan gratuit : 1,5 crédit par packshot, soit ≈ 85 crédits pour 55 produits. Un pack de 500 crédits minimum. |
+
+Les quatre images de kallowshop.gr sont archivées dans `tools/medias/sources/kallowshop/`
+(`PROVENANCE.md`), renommées par slug, et posées par le nouveau `tools/poser-visuels-recus.py` :
+il rattache chaque fichier par slug ou par référence DXN dans le nom, détoure le fond clair par
+remplissage depuis les bords (les reflets intérieurs restent), et écrit le WebP à canal alpha que
+lit le normaliseur. **Trois produits de plus ont leur visuel, le déodorant passe du packshot de
+synthèse à l'officiel : 61 références sans visuel.** À confirmer : la bouteille grecque des brumes
+porte « 150 ml » alors que le catalogue DXN Espagne (et le site) disent 100 ml.
+
+**Pour les 55 références DXN et les 6 monodoses, aucune source en ligne propre n'existe.** Les
+trois chemins, par ordre de préférence : images officielles de l'espace membre DXN de Fati ou photos
+de son stock (déposées dans un dossier et posées par `poser-visuels-recus.py`, une heure de travail
+une fois reçues) ; packshots provisoires Higgsfield à partir des références filigranées (crédits à
+acheter, relecture des étiquettes) ; ou garder le gabarit « Visuel à venir », qui est honnête.
 
 ## Reste à produire
 
