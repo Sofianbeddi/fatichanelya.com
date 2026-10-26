@@ -1,20 +1,24 @@
-# Visuels manquants — 1 référence au 26 octobre 2026 (soir)
+# Visuels manquants — aucun au 26 octobre 2026 (soir)
 
-Les 54 références DXN listées ici le 26 octobre au matin ont reçu leur visuel le soir même (copies
-retouchées des images dxn2u.eu livrées par le gérant), et les six monodoses et échantillons Kallow
-reprennent le visuel de leur produit parent (décision du gérant). Voir `medias.md`.
+Les 103 produits ont un visuel. Historique du jour : 54 références DXN posées depuis les copies
+retouchées des images dxn2u.eu livrées par le gérant ; six monodoses et échantillons Kallow sur le
+visuel de leur produit parent ; faces avant des quatre Megapack et visuel Brook Coffee en second
+dépôt. Détail et réserves (textes des Megapack reconstruits, faces avant du format courant) dans
+`medias.md`.
 
-| # | Produit | Code DXN | Catégorie | Piste |
-|---|---|---|---|---|
-| 1 | DXN Brook Coffee | FB616 | Alimentation & boissons | photo du stock de Fati (référence récente, absente des banques DXN et des catalogues PDF) |
+## Pour remplacer ou ajouter un visuel
 
-Une fois la photo reçue, la nommer par le code DXN (ou le slug `brook-coffee`) et lancer :
+Nommer le fichier par le code DXN (`FB124 - Cocozhi.png`) ou par le slug (`cocozhi.png`), sur fond
+blanc ou transparent, puis :
 
 ```
 python3 tools/poser-visuels-recus.py <dossier>
 python3 tools/normaliser-visuels.py
-# renseigner image="brook-coffee.webp" dans tools/rediger-catalogue.py, puis :
+# nouveau produit : renseigner image="<slug>.webp" dans tools/rediger-catalogue.py, puis :
 python3 tools/rediger-catalogue.py
 WP="php -d mysqli.default_socket=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock /usr/local/bin/wp" python3 tools/importer-catalogue.py
 bash tools/publier-contenu-preversion.sh
 ```
+
+Un fichier à fond transparent dont le nom ne porte ni code ni slug se copie sous le slug après
+aplatissement sur blanc (voir `medias.md`, second dépôt du 26 octobre).

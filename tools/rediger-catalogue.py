@@ -218,7 +218,7 @@ dict(slug="lingzhi-coffee-3-en-1-mp", nom="DXN Lingzhi Coffee 3 in 1 MP — 1 kg
  description="Même recette que le Lingzhi Coffee 3 in 1 — café, crème végétale, sucre de canne et extrait de Ganoderma lucidum — en sachet de 1 kg.\n\nUn sachet individuel fait 21 g : ce format en représente près de 48. Se conserve bien fermé, à l'abri de l'humidité.",
  composition="Café soluble, crème végétale, sucre de canne, extrait de Ganoderma lucidum. Liste complète sur l'emballage.",
  usage="Mettre environ 21 g (deux cuillères à soupe) dans une tasse.\nAjouter de l'eau chaude et remuer."),
-dict(slug="brook-coffee", nom="DXN Brook Coffee", categorie=AB, prix="35.20", image="", format="Sachet de 500 g",
+dict(slug="brook-coffee", nom="DXN Brook Coffee", categorie=AB, prix="35.20", image="brook-coffee.webp", format="Sachet de 500 g",
  accroche="Un café moulu au Ganoderma, pour cafetière filtre, piston ou italienne.",
  description="Le Brook Coffee est le seul café moulu de la gamme : il se prépare de façon traditionnelle, en cafetière filtre, à piston ou italienne, et non à l'eau chaude dans la tasse. Il contient de l'extrait de Ganoderma lucidum.\n\nSachet de 500 g. À conserver bien fermé, à l'abri de la lumière et de l'humidité.",
  composition="Café moulu, extrait de Ganoderma lucidum. Liste complète sur l'emballage.",

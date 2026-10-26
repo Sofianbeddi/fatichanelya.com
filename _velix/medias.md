@@ -95,7 +95,7 @@ Sebastian », texte incrusté) que le gérant a jugée hors contexte et pas prof
 l'ancienne est dans `sources/about-main-san-sebastian.webp`. Le hero et ce portrait viennent de la
 même photo : c'est un intérim, la cible reste une vraie séance (blueprint E.5).
 
-## Références sans visuel (16 octobre 2026 — 76 ; 1 depuis le soir du 26 octobre, voir plus bas)
+## Références sans visuel (16 octobre 2026 — 76 ; plus aucune depuis le soir du 26 octobre, voir plus bas)
 
 Les 75 produits ajoutés d'après le catalogue DXN de février 2026 n'ont pas de visuel (`image=""`
 dans `rediger-catalogue.py`, méta `_fati_indispo`) ; le thème affiche `placeholder-produit.svg` et
@@ -249,8 +249,18 @@ synthèse écarté le 16 octobre.
 reprennent le visuel du produit parent — la colonne `image` de `rediger-catalogue.py` pointe le
 fichier du parent (`divine-eye-cream.webp` pour les monodoses du contour des yeux, etc.) ;
 l'importateur crée une pièce jointe par fiche, rien à dupliquer dans `tools/medias/`.
-**1 référence sans visuel** : Brook Coffee (FB616), aucune image nulle part. Le gabarit « Visuel à
-venir » reste pour elle ; voir `visuels-manquants.md`.
+**Deuxième dépôt, même soir — faces avant des Megapack et Brook Coffee.** Les quatre Megapack
+(FB077, FB078, FB079, FB170) montraient le dos du sachet kraft (étiquette de composition) ; le gérant
+a ajouté des faces avant retouchées — ce sont les sachets du format courant (20 sachets), pas le
+sachet vrac de 1 kg / 400 g : décision du gérant, même produit, et la fiche garde le format réel.
+Brook Coffee reçoit un visuel sans filigrane trouvé en ligne (`FB325 - DXN Brook Coffee.webp`,
+700 × 700, le seul disponible — le code FB325 est celui du fichier source, le site garde FB616 du
+catalogue espagnol). Ces fichiers ne portent pas le code DXN en tête : copiés sous le slug dans
+un dossier de travail (fond transparent aplati sur blanc avant le détourage par remplissage),
+puis la chaîne habituelle. **Plus aucune référence sans visuel** ; `visuels-manquants.md` reste pour
+la marche à suivre. Non utilisés, déposés en double : contour des yeux et huile de nuit Kallow
+(mêmes packshots officiels que ceux déjà en ligne), Cocozhi en sachet individuel et en trois
+sachets (le Cocozhi MP a pris la face avant du sachet).
 
 ## Reste à produire
 
