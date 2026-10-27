@@ -1779,3 +1779,76 @@ input.qty-val{min-block-size:44px}
 .announcement,.about-stat{font-size:.75rem}
 .chip,.prose th{font-size:.75rem}
 .journal-meta em{font-size:.72rem}
+
+/* =========================================================
+   23. MENU MOBILE SOUS L'EN-TÊTE, FILTRES ET RECHERCHE COLLANTS — thème 1.4.1 (27 oct. 2026)
+   Retour du gérant sur capture : le panneau du menu s'ouvrait 56 px sous l'en-tête réduit
+   (il était fixé à 122 px = barre d'annonce + en-tête plein), et les filtres de la boutique
+   disparaissaient dès qu'on défilait.
+   ========================================================= */
+
+/* Panneau du menu mobile : désormais enfant de <header> (header.php), en absolu juste sous lui.
+   Il suit la hauteur réelle de l'en-tête — 84 px, 66 px réduit, barre d'admin comprise — sans
+   JavaScript. Le script borne sa hauteur à l'écran et bloque le défilement de la page tant qu'il
+   est ouvert. */
+.mobile-panel{position:absolute;inset-block-start:100%;inset-inline:0;z-index:5;
+  max-block-size:var(--panel-max,calc(100dvh - 84px))}
+
+/* Filtres et recherche de la boutique : collants sous l'en-tête (dont la hauteur est publiée
+   dans --header-h par le script, barre d'admin dans --admin-h). Fond sable opaque, filet sous le
+   bloc : les cartes passent dessous. */
+body.admin-bar{--admin-h:32px}
+@media (max-width:782px){body.admin-bar{--admin-h:46px}}
+.shop-controls{position:sticky;inset-block-start:calc(var(--header-h,66px) + var(--admin-h,0px));
+  z-index:30;margin-block-end:1rem;padding-block:.85rem .9rem;background:var(--ivory);
+  border-block-end:1px solid var(--line-mid)}
+.shop-controls .search-form{min-inline-size:min(100%,300px)}
+
+/* Mobile : la recherche en premier, pleine largeur, puis les filtres en une seule ligne qui
+   défile au doigt, de bord à bord (marges négatives = gouttière). Le bloc reste compact
+   (≈ 110 px) pour laisser la grille respirer. */
+@media (max-width:699px){
+  /* `nowrap` : en colonne multi-ligne, la rangée des filtres (une ligne de 700 px) élargissait la
+     ligne flex, et la recherche s'étirait sur 735 px. */
+  .shop-controls{flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:.6rem;padding-block:.7rem .75rem}
+  .filters{min-inline-size:0}
+  .shop-controls .search-form{order:-1;min-inline-size:0}
+  .shop-controls .search-form input{min-height:42px}
+  .filters{flex-wrap:nowrap;overflow-x:auto;gap:.45rem;
+    margin-inline:calc(-1 * var(--bord));padding-inline:var(--bord);padding-block:2px;
+    scroll-padding-inline:var(--bord);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .filters::-webkit-scrollbar{display:none}
+  .chip-button{flex:none;min-height:40px;white-space:nowrap}
+}
+
+/* =========================================================
+   24. BOUTONS DE CATÉGORIES AVEC VISUEL — thème 1.5.0 (27 oct. 2026)
+   Demande du gérant : sur mobile, atteindre une catégorie sans défiler ; dans la boutique et
+   sur les pages de catégorie, des boutons qui montrent le visuel de la catégorie. Un seul
+   composant (`template-parts/components/categorie-chips.php`), trois emplois.
+   ========================================================= */
+.chip-button{display:inline-flex;align-items:center;gap:.55rem}
+.chip-button .chip-media{inline-size:28px;block-size:28px;margin-inline-start:-.5rem;flex:none;
+  border-radius:50%;overflow:hidden;background:var(--ivory)}
+.chip-media img{display:block;inline-size:100%;block-size:100%;object-fit:cover}
+.chip-button.is-active .chip-media{box-shadow:0 0 0 2px var(--gold)}
+/* Sur une page de catégorie les boutons sont des liens : même dessin, même survol. */
+a.chip-button{text-decoration:none}
+
+/* Accueil : la rangée de catégories est posée au-dessus du cadre du hero, juste sous l'en-tête,
+   pour être dans le premier écran. Masquée sur grand écran (les ronds de « Nos catégories » la
+   portent). Elle défile au doigt de bord à bord ; le portrait baisse à 300 px au plus et les
+   trois faits du hero sont retirés sur mobile pour raccourcir le défilement. */
+.hero-cats{display:none}
+@media (max-width:980px){
+  .hero-facts{display:none}
+  .hero-portrait{block-size:clamp(240px,36vh,300px)}
+  .hero-cats{display:flex;gap:.5rem;margin-block:.15rem .85rem;
+    padding-block:2px 4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+    margin-inline:calc(-1 * var(--bord));padding-inline:var(--bord);scroll-padding-inline:var(--bord)}
+  .hero-cats::-webkit-scrollbar{display:none}
+  .hero-cats .chip-button{flex:none;min-height:48px;padding-inline:.5rem 1.05rem;
+    border-color:var(--line-mid);background:var(--surface);color:var(--navy);font-size:.74rem}
+  .hero-cats .chip-media{inline-size:34px;block-size:34px;margin-inline-start:0}
+  .hero-cats .chip-button:first-child{padding-inline-start:1.05rem}
+}

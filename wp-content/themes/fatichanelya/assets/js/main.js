@@ -56,21 +56,40 @@
     }, { rootMargin: '-1px 0px 0px 0px', threshold: 0 }).observe(sentinel);
   }
 
-  /* ---------- Menu mobile ---------- */
+  /* ---------- Hauteur de l'en-tête publiée en CSS ----------
+     Les filtres collants de la boutique se calent dessous ; l'en-tête passe de
+     84 à 66 px quand il se réduit. */
+  if (header && 'ResizeObserver' in window) {
+    new ResizeObserver(() => {
+      document.documentElement.style.setProperty('--header-h', `${Math.round(header.getBoundingClientRect().height)}px`);
+    }).observe(header);
+  }
+
+  /* ---------- Menu mobile ----------
+     Le panneau est dans l'en-tête, posé en absolu juste sous lui. Ouvert, il est
+     borné à la hauteur restante de l'écran et la page ne défile plus derrière. */
   const burger = $('#burger');
   const panel  = $('#mobile-panel');
   if (burger && panel) {
+    const fermerMenu = () => {
+      if (panel.hidden) return;
+      panel.hidden = true;
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
     burger.addEventListener('click', () => {
-      const open = panel.hidden;
-      panel.hidden = !open;
-      burger.setAttribute('aria-expanded', String(open));
+      if (!panel.hidden) { fermerMenu(); return; }
+      const bas = header ? header.getBoundingClientRect().bottom : 84;
+      panel.style.setProperty('--panel-max', `${Math.max(160, Math.round(innerHeight - bas))}px`);
+      panel.hidden = false;
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
     });
-    panel.addEventListener('click', (e) => {
-      if (e.target.closest('a')) {
-        panel.hidden = true;
-        burger.setAttribute('aria-expanded', 'false');
-      }
-    });
+    panel.addEventListener('click', (e) => { if (e.target.closest('a')) fermerMenu(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fermerMenu(); });
+    const grandEcran = window.matchMedia('(min-width: 1081px)');
+    const surGrand = () => { if (grandEcran.matches) fermerMenu(); };
+    if (grandEcran.addEventListener) grandEcran.addEventListener('change', surGrand); else grandEcran.addListener(surGrand);
   }
 
   /* ---------- Sélecteur de langue ---------- */
@@ -125,9 +144,9 @@
       if (noRes) noRes.hidden = shown !== 0;
     };
 
-    $$('.chip-button').forEach((btn) => {
+    $$('.chip-button[data-filter]').forEach((btn) => {
       btn.addEventListener('click', () => {
-        $$('.chip-button').forEach((b) => {
+        $$('.chip-button[data-filter]').forEach((b) => {
           b.classList.toggle('is-active', b === btn);
           b.setAttribute('aria-pressed', String(b === btn));
         });

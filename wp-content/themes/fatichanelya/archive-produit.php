@@ -39,29 +39,14 @@ get_template_part( 'template-parts/components/page-banner' );
 	</header>
 
 	<?php
-	// Les filtres n'ont de sens que sur cette page : on y vient pour chercher.
-	// Ils vivaient jusqu'ici dans la section d'accueil, qui ne montre plus
-	// qu'un aperçu.
-	$categories = get_terms(
-		array(
-			'taxonomy'   => 'categorie_produit',
-			'hide_empty' => true,
-		)
-	);
-
-	if ( ! is_tax() && ! is_wp_error( $categories ) && $categories ) :
-		?>
+	// Filtres et recherche, collants sous l'en-tête (1.4.1). Les boutons de catégories
+	// filtrent la grille (JavaScript) et portent le visuel de la catégorie (1.5.0,
+	// demande du gérant). Les pages de catégorie ont leur gabarit
+	// (`taxonomy-categorie_produit.php`), avec le même bloc en liens.
+	set_query_var( 'fati_chips', array( 'mode' => 'filtres' ) );
+	?>
 		<div class="shop-controls">
-			<div class="filters" role="group" aria-label="<?php esc_attr_e( 'Filtrer par catégorie', 'fatichanelya' ); ?>">
-				<button class="chip-button is-active" type="button" data-filter="all" aria-pressed="true">
-					<?php esc_html_e( 'Tout voir', 'fatichanelya' ); ?>
-				</button>
-				<?php foreach ( $categories as $cat ) : ?>
-					<button class="chip-button" type="button" data-filter="<?php echo esc_attr( $cat->slug ); ?>" aria-pressed="false">
-						<?php echo esc_html( $cat->name ); ?>
-					</button>
-				<?php endforeach; ?>
-			</div>
+			<?php get_template_part( 'template-parts/components/categorie-chips' ); ?>
 
 			<div class="search-form">
 				<?php echo fati_icon( 'search', 22 ); ?>
@@ -79,7 +64,6 @@ get_template_part( 'template-parts/components/page-banner' );
 			);
 			?>
 		</p>
-	<?php endif; ?>
 
 	<?php if ( have_posts() ) : ?>
 		<ul class="product-grid" id="product-grid">

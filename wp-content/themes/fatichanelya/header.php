@@ -83,9 +83,9 @@ defined( 'ABSPATH' ) || exit;
 			<?php echo fati_icon( 'menu', 26 ); ?>
 		</button>
 	</div>
-</header>
 
-<div class="mobile-panel" id="mobile-panel" hidden>
+	<?php // Le panneau du menu mobile vit dans l'en-tête : en absolu sous lui, il en suit la hauteur réelle (84 px, 66 px une fois réduit, barre d'admin comprise) au lieu d'un décalage fixe de 122 px qui laissait un trou. ?>
+	<div class="mobile-panel" id="mobile-panel" hidden>
 	<?php
 	wp_nav_menu(
 		array(
@@ -98,4 +98,5 @@ defined( 'ABSPATH' ) || exit;
 		)
 	);
 	?>
-</div>
+	</div>
+</header>

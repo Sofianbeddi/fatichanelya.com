@@ -552,3 +552,44 @@ Firefox 157 : aucune anomalie sur les 15 pages, LTR et RTL.
 
 **Captures** : `captures/apres-1.4/` (accueil, fiche, À propos, panier en RTL ; accueil avec texte
 arabe d'essai ; états interactifs ; recherche avant / après ; accueil en WebKit).
+
+## Thème 1.5.0 (27 oct. 2026) — menu mobile sous l'en-tête, filtres collants, boutons de catégories à visuel
+
+Trois retours du gérant sur captures de la préversion 1.4.0.
+
+### Menu mobile
+Le panneau était fixé à 122 px (barre d'annonce + en-tête plein) : une fois l'en-tête réduit à
+66 px, il s'ouvrait 56 px plus bas et laissait voir la page entre les deux. Il vit désormais
+**dans `<header>`**, en absolu à `inset-block-start:100%` : il suit la hauteur réelle de l'en-tête
+(84 px, 66 px réduit, barre d'admin comprise) sans calcul. Le script borne sa hauteur à l'écran
+(`--panel-max`), bloque le défilement de la page tant qu'il est ouvert, le ferme sur Échap et
+quand on repasse en grand écran.
+
+### Filtres et recherche collants (boutique et pages de catégorie)
+`.shop-controls` est `position:sticky` sous l'en-tête : le script publie la hauteur de celui-ci dans
+`--header-h` (ResizeObserver, 84 → 66 px en douceur), la barre d'admin dans `--admin-h`. Fond
+sable opaque, filet sous le bloc, les cartes passent dessous. Sur mobile (< 700 px) : la recherche
+d'abord, pleine largeur, puis les filtres **en une seule ligne qui défile au doigt de bord à bord**
+(marges négatives = `--bord`), bloc d'environ 110 px.
+
+> **Piège vérifié.** En colonne, un conteneur flex `wrap` prend pour largeur de ligne celle de son
+> plus large enfant : la rangée de filtres (700 px, `nowrap`) élargissait la ligne et la recherche
+> s'étirait sur 735 px, hors écran. `flex-wrap:nowrap` sur le conteneur en colonne, `min-inline-size:0`
+> sur la rangée.
+
+### Boutons de catégories à visuel — un composant, trois emplois
+`template-parts/components/categorie-chips.php` : les mêmes pilules que les filtres, avec le visuel
+du terme (`_fati_visuel`, vignette de 150 px dans un rond de 28 px, 34 px sur l'accueil mobile).
+- **Accueil, mobile et tablette (≤ 980 px)** : rangée posée **au-dessus du cadre du hero**, juste
+  sous l'en-tête (124 px du haut à 390 px) — les catégories se choisissent sans défiler. Liens vers
+  les pages de catégorie, « Tout voir » vers la boutique. Pour raccourcir le hero : portrait à
+  300 px au plus (360 avant) et **les trois faits du hero sont retirés sur mobile** (le bandeau de
+  confiance, juste dessous, porte la même réassurance). Masquée sur grand écran : les ronds de
+  « Nos catégories » la portent.
+- **Boutique** : boutons de filtre (JavaScript), « Tout voir » actif par défaut.
+- **Pages de catégorie** : liens vers les autres catégories, la courante marquée (`is-active`,
+  `aria-current`) ; la recherche filtre la grille de la catégorie (`#product-grid` posé).
+  Le script ne s'attache qu'aux `.chip-button[data-filter]` : un lien ne vide plus la grille au clic.
+
+**Captures** : `captures/apres-1.5/` (accueil mobile premier écran, boutique et catégorie à 1440,
+boutique mobile défilée, menu mobile en haut de page et en-tête réduit).

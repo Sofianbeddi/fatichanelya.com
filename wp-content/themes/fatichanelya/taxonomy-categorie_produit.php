@@ -49,8 +49,33 @@ get_template_part( 'template-parts/components/page-banner' );
 		</p>
 	</header>
 
+	<?php
+	// Boutons de catégories à visuel (liens, la courante marquée) et recherche dans la
+	// catégorie, collants sous l'en-tête (1.5.0). Même bloc que la boutique.
+	set_query_var( 'fati_chips', array( 'mode' => 'liens', 'actuelle' => $terme ? $terme->slug : '' ) );
+	?>
+	<div class="shop-controls">
+		<?php get_template_part( 'template-parts/components/categorie-chips' ); ?>
+
+		<div class="search-form">
+			<?php echo fati_icon( 'search', 22 ); ?>
+			<label class="sr-only" for="product-search"><?php esc_html_e( 'Rechercher dans cette catégorie', 'fatichanelya' ); ?></label>
+			<input id="product-search" type="search" placeholder="<?php esc_attr_e( 'Rechercher un produit…', 'fatichanelya' ); ?>" autocomplete="off">
+		</div>
+	</div>
+
+	<p class="result-count" id="result-count" role="status" aria-live="polite">
+		<?php
+		$total = $terme ? (int) $terme->count : 0;
+		printf(
+			esc_html( _n( '%d produit affiché', '%d produits affichés', $total, 'fatichanelya' ) ),
+			$total
+		);
+		?>
+	</p>
+
 	<?php if ( have_posts() ) : ?>
-		<ul class="product-grid">
+		<ul class="product-grid" id="product-grid">
 			<?php
 			$i = 0;
 			while ( have_posts() ) :
@@ -60,6 +85,10 @@ get_template_part( 'template-parts/components/page-banner' );
 			endwhile;
 			?>
 		</ul>
+		<p class="no-result" id="no-result" hidden>
+			<?php esc_html_e( 'Aucun produit ne correspond à cette recherche.', 'fatichanelya' ); ?>
+			<button class="text-button" id="reset-search" type="button"><?php esc_html_e( 'Réinitialiser', 'fatichanelya' ); ?></button>
+		</p>
 
 		<p class="shop-note"><?php esc_html_e( 'Prix indicatifs en euros, hors livraison. Disponibilité confirmée avec Fati avant commande.', 'fatichanelya' ); ?></p>
 	<?php else : ?>
