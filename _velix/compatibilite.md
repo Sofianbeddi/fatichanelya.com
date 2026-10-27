@@ -1,6 +1,6 @@
 # Compatibilité navigateurs — fatichanelya.com
 
-État au 27 octobre 2026 (thème 1.4.0). Socle de navigateurs retenu, inventaire des fonctionnalités CSS / JS
+État au 27 octobre 2026 (thème 1.6.0). Socle de navigateurs retenu, inventaire des fonctionnalités CSS / JS
 employées avec leur comportement de repli, ce qui a été testé et ce qui ne l'a pas été.
 
 ## Socle retenu
@@ -24,6 +24,7 @@ employées partout dans `main.css`, et par `aspect-ratio` : Safari 15 / Chrome 8
 | `color-mix()` | en-tête collant, voile du tiroir, capsule de verre des formations, dégradés du journal et du halo du pied | **repli hexadécimal avec alpha déclaré juste avant** (`#16233D80`…) : même rendu, sans mélange |
 | `:has()` | filet au survol d'une cellule, fil d'Ariane mobile de la fiche | progressif : pas de filet au survol, séparateur visible (Firefox < 121) |
 | `text-wrap: balance` | titres | progressif : coupure normale (Safari < 17.5, Firefox < 121) |
+| `hyphens: auto` (+ `-webkit-`) | noms sous les cercles de catégories (1.6.0) | coupure au trait d'union en français ; sans dictionnaire, `overflow-wrap: anywhere` coupe le mot (Chrome < 88 sur Mac/Linux) |
 | `@view-transition { navigation: auto }` | changement de page | ignoré (Chrome < 126, Firefox) |
 | `backdrop-filter` + `-webkit-` | en-tête, tiroir, capsule de verre | fond translucide sans flou (Firefox < 103) |
 | `aspect-ratio`, `gap` sur flex, `clamp()`, `min()`, `max()` | partout | hors socle en dessous |

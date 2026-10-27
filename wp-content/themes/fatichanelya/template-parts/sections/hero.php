@@ -19,9 +19,10 @@ $portrait = fati_opt( 'hero_image' );
 ?>
 <section class="hero<?php echo $portrait ? '' : ' hero--sans-portrait'; ?>" aria-labelledby="hero-title">
 	<?php
-	// Mobile et tablette (1.5.0, demande du gérant) : les catégories se choisissent dès le
-	// premier écran, dans une rangée de boutons à visuel posée au-dessus du cadre. Sur grand
-	// écran elle est masquée : les ronds de la section « Nos catégories » la portent.
+	// Mobile et tablette (1.5.0, cercles en 1.6.0, demande du gérant) : les catégories se
+	// choisissent dès le premier écran, dans une rangée de quatre cercles à visuel posée
+	// au-dessus du cadre. Sur grand écran elle est masquée : les ronds de la section
+	// « Nos catégories » la portent.
 	set_query_var( 'fati_chips', array( 'mode' => 'liens', 'classe' => 'hero-cats', 'label' => __( 'Catégories de produits', 'fatichanelya' ) ) );
 	get_template_part( 'template-parts/components/categorie-chips' );
 	?>

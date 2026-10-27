@@ -39,9 +39,9 @@ get_template_part( 'template-parts/components/page-banner' );
 	</header>
 
 	<?php
-	// Filtres et recherche, collants sous l'en-tête (1.4.1). Les boutons de catégories
-	// filtrent la grille (JavaScript) et portent le visuel de la catégorie (1.5.0,
-	// demande du gérant). Les pages de catégorie ont leur gabarit
+	// Filtres et recherche, collants sous l'en-tête (1.5.0). Les cercles de catégories
+	// (1.6.0, demande du gérant) filtrent la grille en JavaScript : un cercle se sélectionne,
+	// le même se désélectionne et tout s'affiche. Les pages de catégorie ont leur gabarit
 	// (`taxonomy-categorie_produit.php`), avec le même bloc en liens.
 	set_query_var( 'fati_chips', array( 'mode' => 'filtres' ) );
 	?>

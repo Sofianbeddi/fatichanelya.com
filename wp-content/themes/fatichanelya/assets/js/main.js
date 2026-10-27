@@ -144,13 +144,18 @@
       if (noRes) noRes.hidden = shown !== 0;
     };
 
-    $$('.chip-button[data-filter]').forEach((btn) => {
+    /* Cercles de catégories (1.6.0) : un cercle se sélectionne ; le même cercle, touché à
+       nouveau, se désélectionne et tout s'affiche. Pas de bouton « Tout voir ». */
+    const cercles = $$('.cat-circle[data-filter]');
+    cercles.forEach((btn) => {
       btn.addEventListener('click', () => {
-        $$('.chip-button[data-filter]').forEach((b) => {
-          b.classList.toggle('is-active', b === btn);
-          b.setAttribute('aria-pressed', String(b === btn));
+        const deja = btn.classList.contains('is-active');
+        activeCat = deja ? 'all' : btn.dataset.filter;
+        cercles.forEach((b) => {
+          const on = !deja && b === btn;
+          b.classList.toggle('is-active', on);
+          b.setAttribute('aria-pressed', String(on));
         });
-        activeCat = btn.dataset.filter;
         apply();
       });
     });

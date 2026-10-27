@@ -428,12 +428,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 .shop{background:var(--ivory)}
 .shop-controls{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;
   align-items:center;max-inline-size:100%;margin-block-end:1.25rem}
-.filters{display:flex;flex-wrap:wrap;gap:.5rem}
-.chip-button{min-height:44px;padding-inline:1.05rem;border-radius:var(--r-pill);
-  border:1px solid var(--line-strong);background:var(--surface);color:var(--muted);
-  font-size:.78rem;font-weight:700;transition:background var(--t-micro),color var(--t-micro),border-color var(--t-micro)}
-.chip-button.is-active{background:var(--navy);border-color:var(--navy);color:#fff}
-@media (hover:hover){.chip-button:not(.is-active):hover{border-color:var(--navy);color:var(--navy)}}
+/* Les cercles de catégories (filtres) : section 24. */
 .search-form{position:relative;display:flex;align-items:center;gap:.6rem;
   padding-inline:1rem;border:1px solid var(--line-strong);border-radius:var(--r-pill);
   background:var(--surface);color:var(--muted);min-inline-size:min(100%,280px)}
@@ -1804,51 +1799,72 @@ body.admin-bar{--admin-h:32px}
   border-block-end:1px solid var(--line-mid)}
 .shop-controls .search-form{min-inline-size:min(100%,300px)}
 
-/* Mobile : la recherche en premier, pleine largeur, puis les filtres en une seule ligne qui
-   défile au doigt, de bord à bord (marges négatives = gouttière). Le bloc reste compact
-   (≈ 110 px) pour laisser la grille respirer. */
+/* Mobile : la recherche en premier, pleine largeur, puis les quatre cercles de catégories
+   (section 24) en une rangée de quatre colonnes, tous visibles. */
 @media (max-width:699px){
-  /* `nowrap` : en colonne multi-ligne, la rangée des filtres (une ligne de 700 px) élargissait la
-     ligne flex, et la recherche s'étirait sur 735 px. */
-  .shop-controls{flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:.6rem;padding-block:.7rem .75rem}
-  .filters{min-inline-size:0}
+  /* `nowrap` : en colonne multi-ligne, une rangée plus large que l'écran élargissait la ligne
+     flex et la recherche s'étirait hors écran (vu en 1.5.0). */
+  .shop-controls{flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:.65rem;padding-block:.7rem .8rem}
   .shop-controls .search-form{order:-1;min-inline-size:0}
-  .shop-controls .search-form input{min-height:42px}
-  .filters{flex-wrap:nowrap;overflow-x:auto;gap:.45rem;
-    margin-inline:calc(-1 * var(--bord));padding-inline:var(--bord);padding-block:2px;
-    scroll-padding-inline:var(--bord);scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .filters::-webkit-scrollbar{display:none}
-  .chip-button{flex:none;min-height:40px;white-space:nowrap}
+  .shop-controls .search-form input{min-height:40px}
 }
 
 /* =========================================================
-   24. BOUTONS DE CATÉGORIES AVEC VISUEL — thème 1.5.0 (27 oct. 2026)
-   Demande du gérant : sur mobile, atteindre une catégorie sans défiler ; dans la boutique et
-   sur les pages de catégorie, des boutons qui montrent le visuel de la catégorie. Un seul
-   composant (`template-parts/components/categorie-chips.php`), trois emplois.
+   24. CERCLES DE CATÉGORIES — thème 1.6.0 (27 oct. 2026 ; remplace les pilules de 1.5.0)
+   Demande du gérant : quatre catégories, donc quatre cercles en une rangée, tous visibles, le
+   visuel de la catégorie mis en valeur sur mobile ; un cercle se sélectionne et se désélectionne
+   pour tout afficher (pas de bouton « Tout voir »). Un seul composant
+   (`template-parts/components/categorie-chips.php`), trois emplois : filtres de la boutique
+   (boutons, bascule JavaScript), navigation d'une page de catégorie (liens, la courante marquée,
+   son lien mène à la boutique) et accueil mobile (liens, au-dessus du hero).
+   `--n` (nombre de cercles) est posé par le gabarit, `--cercle` est le diamètre.
    ========================================================= */
-.chip-button{display:inline-flex;align-items:center;gap:.55rem}
-.chip-button .chip-media{inline-size:28px;block-size:28px;margin-inline-start:-.5rem;flex:none;
-  border-radius:50%;overflow:hidden;background:var(--ivory)}
-.chip-media img{display:block;inline-size:100%;block-size:100%;object-fit:cover}
-.chip-button.is-active .chip-media{box-shadow:0 0 0 2px var(--gold)}
-/* Sur une page de catégorie les boutons sont des liens : même dessin, même survol. */
-a.chip-button{text-decoration:none}
+.filters{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:.35rem;
+  min-inline-size:0;--cercle:clamp(56px,18vw,74px)}
+.cat-circle{display:grid;justify-items:center;align-content:start;gap:.4rem;
+  inline-size:100%;min-inline-size:0;padding:0;border:0;background:none;cursor:pointer;
+  color:var(--muted);font-size:clamp(.62rem,2.75vw,.72rem);font-weight:700;line-height:1.2;
+  text-align:center;text-decoration:none;transition:color var(--t-micro)}
+/* Le rond : visuel, liseré blanc de 2 px (bordure), filet sable dehors. Sélectionné : anneau
+   bleu nuit à la place du filet, le liseré blanc fait le jour. Même dessin sur sable et sur beige. */
+.cat-circle-media{inline-size:var(--cercle);aspect-ratio:1;border-radius:50%;overflow:hidden;
+  border:2px solid var(--surface);background:var(--ivory);box-shadow:0 0 0 1px var(--line-mid);
+  transition:box-shadow var(--t-micro),transform var(--t-base) var(--ease-out)}
+.cat-circle-media img{display:block;inline-size:100%;block-size:100%;object-fit:cover}
+.cat-circle-initiale{display:grid;place-items:center;block-size:100%;color:var(--navy);font-size:1.1rem;line-height:1}
+/* Un nom qui ne tient pas dans sa colonne se coupe au trait d'union (français), jamais au milieu
+   d'un mot tant qu'une césure existe. `text-wrap:balance` écarté : avec `anywhere`, il coupait
+   « Complément-s ». */
+.cat-circle-label{max-inline-size:100%;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:anywhere}
+.cat-circle.is-active{color:var(--navy)}
+.cat-circle.is-active .cat-circle-media{box-shadow:0 0 0 2.5px var(--navy)}
+@media (hover:hover){
+  .cat-circle:not(.is-active):hover{color:var(--navy)}
+  .cat-circle:not(.is-active):hover .cat-circle-media{box-shadow:0 0 0 1px var(--line-strong);transform:scale(1.04)}
+}
+.cat-circle:focus-visible{outline:none}
+.cat-circle:focus-visible .cat-circle-media{box-shadow:0 0 0 3px var(--gold)}
 
-/* Accueil : la rangée de catégories est posée au-dessus du cadre du hero, juste sous l'en-tête,
-   pour être dans le premier écran. Masquée sur grand écran (les ronds de « Nos catégories » la
-   portent). Elle défile au doigt de bord à bord ; le portrait baisse à 300 px au plus et les
+/* Boutique et pages de catégorie, grand écran (≥ 700 px) : le bloc est collant, donc il reste
+   bas — le nom passe à côté du rond (48 px), sur deux lignes au plus. */
+@media (min-width:700px){
+  .shop-controls .filters{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;--cercle:48px}
+  .shop-controls .cat-circle{grid-auto-flow:column;grid-template-columns:auto auto;align-items:center;
+    justify-items:start;gap:.6rem;inline-size:auto;font-size:.76rem;text-align:start}
+  .shop-controls .cat-circle-label{max-inline-size:9em}
+}
+
+/* Accueil : la rangée est posée au-dessus du cadre du hero, juste sous l'en-tête, pour être dans
+   le premier écran ; cercles plus grands (jusqu'à 72 px), noms en bleu nuit. Masquée sur grand
+   écran : les ronds de « Nos catégories » la portent. Le portrait baisse à 300 px au plus et les
    trois faits du hero sont retirés sur mobile pour raccourcir le défilement. */
-.hero-cats{display:none}
+.filters.hero-cats{display:none}
 @media (max-width:980px){
   .hero-facts{display:none}
   .hero-portrait{block-size:clamp(240px,36vh,300px)}
-  .hero-cats{display:flex;gap:.5rem;margin-block:.15rem .85rem;
-    padding-block:2px 4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
-    margin-inline:calc(-1 * var(--bord));padding-inline:var(--bord);scroll-padding-inline:var(--bord)}
-  .hero-cats::-webkit-scrollbar{display:none}
-  .hero-cats .chip-button{flex:none;min-height:48px;padding-inline:.5rem 1.05rem;
-    border-color:var(--line-mid);background:var(--surface);color:var(--navy);font-size:.74rem}
-  .hero-cats .chip-media{inline-size:34px;block-size:34px;margin-inline-start:0}
-  .hero-cats .chip-button:first-child{padding-inline-start:1.05rem}
+  .filters.hero-cats{display:grid;margin-block:.35rem 1rem;--cercle:clamp(60px,19vw,78px)}
+  .hero-cats .cat-circle{color:var(--navy)}
+}
+@media (min-width:600px) and (max-width:980px){
+  .filters.hero-cats{grid-template-columns:repeat(var(--n,4),minmax(0,150px))}
 }

@@ -1,6 +1,6 @@
 # Outils de recette (Playwright)
 
-Scripts utilisés pour la recette du thème 1.4.0 (27 oct. 2026). Ils se copient dans un dossier de travail hors
+Scripts utilisés pour la recette des thèmes 1.4.0 à 1.6.0 (27 oct. 2026). Ils se copient dans un dossier de travail hors
 dépôt (`~/recette-fati` par exemple), avec `npm i playwright pngjs pixelmatch` puis
 `npx playwright install chromium webkit firefox`. Socle de navigateurs, inventaire et replis :
 `_velix/compatibilite.md`.
@@ -12,6 +12,8 @@ dépôt (`~/recette-fati` par exemple), avec `npm i playwright pngjs pixelmatch`
 | `bbox.mjs` | localise les zones rouges d'une image de différence |
 | `crop.mjs` | découpe une zone d'une capture |
 | `interact-fati.mjs` | menu mobile en paysage, carrousel, ajout au panier (confirmation + tiroir), en LTR et RTL (`ENGINE=webkit` ou `firefox`) |
+| `cercles-fati.mjs` | cercles de catégories (1.6.0) : rangée de quatre à 320–430 px, étiquettes sans débordement, bascule sélection / désélection, page de catégorie, accueil mobile, grand écran, RTL ; `OUT=` dossier des captures, `ENGINE=webkit` ou `firefox` |
+| `sticky-fati.mjs` | menu mobile et bloc filtres + recherche collants (1.5.0) : écart à l'en-tête en haut de page, en-tête réduit, paysage |
 | `arabe-fati.mjs` | texte arabe de substitution sur l'accueil en RTL : police Cairo chargée, interlignes |
 | `pages-fati.json` | les quinze adresses recettées (accueil, boutique, catégorie, fiche, formations, fiche formation, À propos, contact, panier, quatre pages légales, recherche, 404) |
 

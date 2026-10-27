@@ -50,8 +50,8 @@ get_template_part( 'template-parts/components/page-banner' );
 	</header>
 
 	<?php
-	// Boutons de catégories à visuel (liens, la courante marquée) et recherche dans la
-	// catégorie, collants sous l'en-tête (1.5.0). Même bloc que la boutique.
+	// Cercles de catégories (liens, la courante marquée et menant à la boutique) et recherche
+	// dans la catégorie, collants sous l'en-tête (1.5.0, cercles en 1.6.0). Même bloc que la boutique.
 	set_query_var( 'fati_chips', array( 'mode' => 'liens', 'actuelle' => $terme ? $terme->slug : '' ) );
 	?>
 	<div class="shop-controls">

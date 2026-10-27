@@ -593,3 +593,39 @@ du terme (`_fati_visuel`, vignette de 150 px dans un rond de 28 px, 34 px sur l'
 
 **Captures** : `captures/apres-1.5/` (accueil mobile premier écran, boutique et catégorie à 1440,
 boutique mobile défilée, menu mobile en haut de page et en-tête réduit).
+
+## Thème 1.6.0 (27 oct. 2026) — cercles de catégories
+
+Retour du gérant sur la préversion 1.5.0 : « quatre catégories, donc je préfère les afficher une seule
+fois, en quatre colonnes, quatre cercles ; je sélectionne un cercle, ou je désélectionne tout pour tout
+afficher, avec l'image de la catégorie mise en valeur et bien visible en mobile ».
+
+### Le dessin
+Le composant `categorie-chips.php` garde son nom et ses trois emplois, mais rend des **cercles** :
+le visuel du terme dans un rond (`.cat-circle-media`), le nom dessous. Le rond porte un liseré blanc de
+2 px (bordure) et un filet sable à l'extérieur ; **sélectionné**, le filet devient un anneau bleu nuit de
+2,5 px et le liseré blanc fait le jour — même dessin sur sable (boutique) et sur beige (hero). Survol :
+filet plus sombre et rond à 104 %. Focus clavier : anneau or. Sans visuel, l'initiale du nom en bleu nuit.
+Pas de bouton « Tout voir » : **un cercle se sélectionne, le même se désélectionne** et tout s'affiche.
+Sur une page de catégorie, le cercle courant (marqué, `aria-current`) **mène à la boutique** — c'est la
+désélection, en lien.
+
+### Les tailles
+- **Mobile (< 700 px)** : grille de `--n` colonnes égales (`--n` posé par le gabarit, 4 aujourd'hui),
+  rond `clamp(56px, 18vw, 74px)` — 70 px à 390, 58 à 320 — nom en `clamp(.62rem, 2.75vw, .72rem)`
+  (10 à 11,5 px : étiquette sous icône, exception assumée à la règle des 12 px). Le nom qui ne tient
+  pas se coupe **au trait d'union** (`hyphens:auto`, « Alimenta-tion » à 320 px) ; `text-wrap:balance`
+  a été écarté : combiné à `overflow-wrap:anywhere`, il coupait « Complément-s ».
+- **Boutique, grand écran (≥ 700 px)** : le bloc est collant, donc il reste bas — rond de 48 px et nom
+  à côté, sur deux lignes au plus (`max-inline-size:9em`) ; bloc de 77 px.
+- **Accueil mobile et tablette (≤ 980 px)** : ronds plus grands (`clamp(60px, 19vw, 78px)`, 74 px à
+  390), noms en bleu nuit, colonnes bornées à 150 px entre 600 et 980 px pour ne pas s'éparpiller.
+  Toujours dans le premier écran (128 px du haut à 390 × 667).
+
+### Le coût
+Le bloc collant de la boutique mobile passe de 110 à **180 px** à 390 (recherche + quatre cercles avec
+nom). C'est le prix des cercles « bien visibles » demandés ; si le gérant le trouve lourd au défilement,
+la première piste est de ne garder collante que la recherche.
+
+**Captures** : `captures/apres-1.6/` (boutique 390 au repos et avec « Compléments » sélectionné,
+défilée, 768 et 1440 ; accueil 390 et 320 ; page de catégorie ; WebKit et Firefox).
