@@ -17,7 +17,7 @@ comment on le fait vivre.
 | Produits | 103 | nom, accroche, description, contenance, composition, mode d'emploi, points clés ; catégorie arabe ; même visuel, même prix |
 | Catégories | 4 | noms arabes, même visuel (`_fati_visuel` copié) |
 | Menus | 3 menus « — AR » | reconstruits par l'importateur, affectés par langue dans Polylang |
-| Sélecteur | en-tête (FR / AR) et pied | `fati_languages()` |
+| Sélecteur | en-tête (menu : globe, code, liste des langues en nom natif) et pied (liste) | composant `langue.php` sur `fati_languages()` ; une langue apparaît dès qu'elle a du contenu |
 | SEO | `hreflang` fr / ar (Polylang), canonique et JSON-LD dans la langue (`pll_home_url_white_list`), `og:locale` |
 | Panier | partagé entre les langues | chaque produit expose les identifiants de ses traductions (`ids`) ; un panier rempli en français se relit en arabe |
 
@@ -38,7 +38,7 @@ leur slug français sous le préfixe : `/ar/produits/`, `/ar/formations/`, `/ar/
 ## Faire vivre la version arabe
 
 **Un texte du thème change** (bouton, libellé) : modifier `languages/ar.po` (ou le dictionnaire de
-`_velix/outils/recette/../chaines.py` si on régénère), puis `wp i18n make-mo wp-content/themes/fatichanelya/languages/ar.po`.
+`tools/traductions/ar/chaines.py` si on régénère), puis `wp i18n make-mo wp-content/themes/fatichanelya/languages/ar.po`.
 Le `.mo` part avec le thème (`tools/deploy-preversion.sh`).
 
 **Un réglage « Contenus du site » change** : Polylang → Langues → Traductions de chaînes (groupe

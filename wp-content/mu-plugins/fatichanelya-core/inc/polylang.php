@@ -90,7 +90,7 @@ function fati_languages() {
 		array(
 			'raw'                    => 1,
 			'hide_if_no_translation' => 0,
-			'display_names_as'       => 'slug',
+			'display_names_as'       => 'name', // nom natif : Français, العربية, Español…
 		)
 	);
 }

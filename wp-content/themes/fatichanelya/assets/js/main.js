@@ -97,13 +97,40 @@
     if (grandEcran.addEventListener) grandEcran.addEventListener('change', surGrand); else grandEcran.addListener(surGrand);
   }
 
-  /* ---------- Sélecteur de langue ---------- */
-  const lang = $('#lang-select');
-  if (lang) {
-    lang.addEventListener('change', (e) => {
-      if (e.target.value) window.location.href = e.target.value;
+  /* ---------- Menu de langues (1.7.1) ----------
+     Un bouton qui ouvre une liste de liens : clic ou flèches pour ouvrir, flèches / Début / Fin
+     pour circuler, Échap, Tab ou clic ailleurs pour fermer. Les liens restent de vrais liens :
+     sans JavaScript, le menu est masqué mais le pied de page porte la même liste. */
+  $$('[data-lang]').forEach((boite) => {
+    const bouton = $('.lang-toggle', boite);
+    const menu   = $('.lang-menu', boite);
+    if (!bouton || !menu) return;
+    const liens = $$('a', menu);
+    const ouvrir = (focus) => {
+      menu.hidden = false; bouton.setAttribute('aria-expanded', 'true');
+      if (focus) (liens.find((a) => a.hasAttribute('aria-current')) || liens[0]).focus();
+    };
+    const fermer = (refocus) => {
+      if (menu.hidden) return;
+      menu.hidden = true; bouton.setAttribute('aria-expanded', 'false');
+      if (refocus) bouton.focus();
+    };
+    bouton.addEventListener('click', () => (menu.hidden ? ouvrir(false) : fermer(false)));
+    bouton.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); ouvrir(true); }
     });
-  }
+    menu.addEventListener('keydown', (e) => {
+      const i = liens.indexOf(document.activeElement);
+      if (e.key === 'Escape') { e.preventDefault(); fermer(true); }
+      else if (e.key === 'ArrowDown') { e.preventDefault(); liens[(i + 1) % liens.length].focus(); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); liens[(i - 1 + liens.length) % liens.length].focus(); }
+      else if (e.key === 'Home') { e.preventDefault(); liens[0].focus(); }
+      else if (e.key === 'End') { e.preventDefault(); liens[liens.length - 1].focus(); }
+      else if (e.key === 'Tab') { fermer(false); }
+    });
+    document.addEventListener('click', (e) => { if (!boite.contains(e.target)) fermer(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden && !menu.contains(document.activeElement)) fermer(false); });
+  });
 
   /* ---------- Reveal au défilement ----------
      Le CSS ne masque que si <html> porte .js-reveal : sans JS, sans

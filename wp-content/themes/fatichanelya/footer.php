@@ -89,10 +89,10 @@ $cible = fati_whatsapp_actif() ? ' target="_blank" rel="noopener"' : '';
 			<?php esc_html_e( 'Site conçu par', 'fatichanelya' ); ?>
 			<a href="https://velixdigital.com/" target="_blank" rel="noopener">Velix Digital</a>
 		</p>
-		<?php $langues = fati_languages(); ?>
-		<?php if ( count( $langues ) > 1 ) : ?>
-			<p><?php echo esc_html( implode( ' · ', array_map( fn( $l ) => strtoupper( $l['slug'] ), $langues ) ) ); ?></p>
-		<?php endif; ?>
+		<?php
+		set_query_var( 'fati_langue', array( 'mode' => 'liste' ) );
+		get_template_part( 'template-parts/components/langue' );
+		?>
 	</div>
 
 </footer>

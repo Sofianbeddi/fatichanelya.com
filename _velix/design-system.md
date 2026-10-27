@@ -668,3 +668,27 @@ interlignes 1,8 (texte) et 1,4 (titres), petits textes remontés à .82rem, prix
 **Captures** : `captures/apres-1.7/` (accueil, boutique, fiche, formation, À propos, panier, page
 légale en 390 et 1440 ; tiroir du panier).
 
+## Thème 1.7.1 (27 oct. 2026) — menu de langues
+
+Retour du gérant : « améliore le select du switch de langue, et rends-le adapté quand on ajoutera
+d'autres langues, au moins quatre ». Le `<select>` à deux codes et le « FR · AR » inerte du pied
+disparaissent au profit d'un seul composant, `template-parts/components/langue.php`, alimenté par
+Polylang (autant d'entrées que de langues ayant du contenu).
+
+- **En-tête** : bouton compact — globe (masqué sous 480 px), code de la langue courante, chevron qui
+  se retourne à l'ouverture — qui ouvre une liste blanche posée sous lui, calée au bord de fin de
+  ligne (à droite en français, à gauche en arabe). Chaque langue est **un vrai lien** vers sa
+  traduction (ou son accueil), en **nom natif** (« Français », « العربية », demain « Español »,
+  « English »), avec son code en petit et une coche or sur la courante, qui est aussi surlignée sable.
+  Hauteur de ligne 44 px, apparition `fati-in`.
+- **Clavier et lecteurs d'écran** : `aria-expanded` / `aria-controls`, libellé « Langue : Français.
+  Changer de langue » ; flèches pour ouvrir et circuler, Début / Fin, Échap referme et rend le focus
+  au bouton, Tab ou clic ailleurs referme. Sans JavaScript, le menu reste masqué et le pied porte la
+  même liste.
+- **Pied de page** : la liste à plat, nom natif, courante en clair et en gras.
+- Chaque nom s'écrit dans sa propre écriture et son propre sens (`lang`, `hreflang`, `unicode-bidi`),
+  donc « العربية » prend Plex dans la page française.
+
+Vérifié en français et en arabe, à 390 et 1440 px : ouverture, circulation au clavier, Échap, clic
+ailleurs, alignement ; rendu simulé à quatre langues (`captures/apres-1.7/menu-langues-*.png`).
+

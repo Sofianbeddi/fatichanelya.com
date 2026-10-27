@@ -99,6 +99,7 @@ function fati_icon( $name, $size = 18 ) {
 		'menu'     => '<path d="M4 7h16M4 12h16M4 17h16"/>',
 		'close'    => '<path d="M6 6l12 12M18 6 6 18"/>',
 		'check'    => '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+		'chevron'  => '<path d="m6 9 6 6 6-6"/>',
 		'minus'    => '<path d="M6 12h12"/>',
 		'plus'     => '<path d="M6 12h12M12 6v12"/>',
 		'shield'   => '<path d="M12 2.5 4 5.8v5.9c0 4.7 3.4 8.8 8 9.8 4.6-1 8-5.1 8-9.8V5.8l-8-3.3Z"/><path d="m8.6 12.2 2.4 2.4 4.4-4.8"/>',

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Fatichanelya 1.7.0\n"
+"Project-Id-Version: Fatichanelya 1.7.1\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -185,19 +185,15 @@ msgstr "%s، الصفحة الرئيسية"
 msgid "Navigation principale"
 msgstr "التنقل الرئيسي"
 
-#: header.php:56
-msgid "Langue du site"
-msgstr "لغة الموقع"
-
-#: header.php:73
+#: header.php:60
 msgid "Panier : 0 article"
 msgstr "السلة: 0 منتج"
 
-#: header.php:82
+#: header.php:69
 msgid "Ouvrir le menu"
 msgstr "فتح القائمة"
 
-#: header.php:94
+#: header.php:81
 msgid "Navigation mobile"
 msgstr "قائمة الهاتف"
 
@@ -254,20 +250,20 @@ msgid "Retirer %s du panier"
 msgstr "إزالة %s من السلة"
 
 #: inc/assets.php:55
-#: inc/helpers.php:252
+#: inc/helpers.php:253
 #, php-format
 msgid "Retirer un %s"
 msgstr "إنقاص %s بواحد"
 
 #: inc/assets.php:56
-#: inc/helpers.php:253
+#: inc/helpers.php:254
 #, php-format
 msgid "Ajouter un %s"
 msgstr "زيادة %s بواحد"
 
 #. translators: %s : nom du produit.
 #: inc/assets.php:57
-#: inc/helpers.php:251
+#: inc/helpers.php:252
 #, php-format
 msgid "Quantité de %s dans le panier"
 msgstr "كمية %s في السلة"
@@ -285,7 +281,7 @@ msgstr "السعر يُؤكَّد لاحقاً"
 msgid "Total indicatif, hors articles à confirmer"
 msgstr "المجموع الاسترشادي، دون المنتجات التي يُؤكَّد سعرها لاحقاً"
 
-#: inc/helpers.php:190
+#: inc/helpers.php:191
 #, php-format
 msgid "Visuel à venir pour %s"
 msgstr "الصورة قادمة قريباً: %s"
@@ -834,6 +830,16 @@ msgstr "تصفية حسب الفئة"
 #: template-parts/sections/hero.php:26
 msgid "Catégories de produits"
 msgstr "فئات المنتجات"
+
+#: template-parts/components/langue.php:53
+msgid "Langues du site"
+msgstr "لغات الموقع"
+
+#. translators: %s : nom de la langue courante.
+#: template-parts/components/langue.php:59
+#, php-format
+msgid "Langue : %s. Changer de langue"
+msgstr "اللغة: %s. تغيير اللغة"
 
 #: template-parts/components/product-card.php:49
 msgid "Visuel à venir"

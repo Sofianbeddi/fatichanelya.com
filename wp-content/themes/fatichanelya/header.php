@@ -49,20 +49,7 @@ defined( 'ABSPATH' ) || exit;
 	?>
 
 	<div class="header-tools">
-		<?php $langues = fati_languages(); ?>
-		<?php if ( count( $langues ) > 1 ) : ?>
-			<div class="lang">
-				<?php echo fati_icon( 'globe', 20 ); ?>
-				<label class="sr-only" for="lang-select"><?php esc_html_e( 'Langue du site', 'fatichanelya' ); ?></label>
-				<select id="lang-select">
-					<?php foreach ( $langues as $l ) : ?>
-						<option value="<?php echo esc_url( $l['url'] ); ?>" <?php selected( ! empty( $l['current_lang'] ) ); ?>>
-							<?php echo esc_html( strtoupper( $l['slug'] ) ); ?>
-						</option>
-					<?php endforeach; ?>
-				</select>
-			</div>
-		<?php endif; ?>
+		<?php get_template_part( 'template-parts/components/langue' ); ?>
 
 		<?php
 		// Un lien vers la page Panier, pas un bouton sans destination : le

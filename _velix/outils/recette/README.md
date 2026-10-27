@@ -16,6 +16,7 @@ dépôt (`~/recette-fati` par exemple), avec `npm i playwright pngjs pixelmatch`
 | `sticky-fati.mjs` | menu mobile et bloc filtres + recherche collants (1.5.0) : écart à l'en-tête en haut de page, en-tête réduit, paysage |
 | `arabe-fati.mjs` | texte arabe de substitution sur l'accueil en RTL : police Cairo chargée, interlignes |
 | `pages-fati-ar.json` | les treize adresses de la version arabe (accueil `/ar/`, boutique, catégorie, fiche, formations, fiche formation, À propos, contact, panier, deux pages légales, recherche, 404) |
+| `langues.mjs` | menu de langues (1.7.1) : ouverture, flèches, Échap, clic ailleurs, alignement, en FR et AR à 390 et 1440 ; `OUT=` dossier des captures |
 | `panier-ar.mjs` | version arabe : polices Alexandria / Plex chargées, panier partagé FR ↔ AR, prix de gauche à droite dans le tiroir |
 | `pages-fati.json` | les quinze adresses recettées (accueil, boutique, catégorie, fiche, formations, fiche formation, À propos, contact, panier, quatre pages légales, recherche, 404) |
 
