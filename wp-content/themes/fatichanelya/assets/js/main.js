@@ -90,9 +90,11 @@
       entries.forEach((en) => {
         if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
-    $$('.reveal').forEach((el) => io.observe(el));
-    setTimeout(() => $$('.reveal:not(.is-in)').forEach((el) => {
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0 }); // seuil 0 : un bloc plus haut que l'écran apparaît dès son bord
+    /* Têtes de section : celles qui portent un h2 se déplient (jamais un h1, élément LCP). */
+    $$('.section-head').forEach((h) => { if (h.querySelector('h2')) h.classList.add('reveal-head'); });
+    $$('.reveal, .reveal-head').forEach((el) => io.observe(el));
+    setTimeout(() => $$('.reveal:not(.is-in), .reveal-head:not(.is-in)').forEach((el) => {
       if (el.getBoundingClientRect().top < innerHeight * 1.5) el.classList.add('is-in');
     }), 3000);
   }
@@ -170,10 +172,14 @@
       return parEcran * (largeur + espace);
     };
 
+    /* En RTL, scrollLeft part de 0 et devient négatif : on raisonne en distance
+       depuis le bord de départ, et le sens de glissement s'inverse. */
+    const rtl = () => getComputedStyle(piste).direction === 'rtl';
+    const depuisDebut = () => Math.abs(piste.scrollLeft);
     const majBoutons = () => {
       const max = piste.scrollWidth - piste.clientWidth - 1;
-      if (prec) prec.disabled = piste.scrollLeft <= 0;
-      if (suiv) suiv.disabled = piste.scrollLeft >= max;
+      if (prec) prec.disabled = depuisDebut() <= 0;
+      if (suiv) suiv.disabled = depuisDebut() >= max;
     };
 
     /* Barre de progression et compteur : le curseur a la longueur de l'écran
@@ -185,19 +191,19 @@
       const part = piste.scrollWidth ? piste.clientWidth / piste.scrollWidth : 1;
       if (barre) {
         barre.style.setProperty('--part', String(Math.min(1, part)));
-        barre.style.setProperty('--progres', String(max > 0 ? borne(piste.scrollLeft / max, 0, 1) : 0));
+        barre.style.setProperty('--progres', String(max > 0 ? borne(depuisDebut() / max, 0, 1) : 0));
       }
       if (compte && piste.firstElementChild) {
         const total   = piste.children.length;
         const largeur = piste.firstElementChild.getBoundingClientRect().width
                       + (parseFloat(getComputedStyle(piste).columnGap) || 0);
-        compte.textContent = `${Math.min(total, Math.round(piste.scrollLeft / largeur) + 1)} / ${total}`;
+        compte.textContent = `${Math.min(total, Math.round(depuisDebut() / largeur) + 1)} / ${total}`;
       }
     };
     const maj = () => { majBoutons(); majProgres(); };
 
     const glisser = (sens) => {
-      piste.scrollBy({ left: sens * pas(), behavior: reduit ? 'auto' : 'smooth' });
+      piste.scrollBy({ left: sens * pas() * (rtl() ? -1 : 1), behavior: reduit ? 'auto' : 'smooth' });
     };
 
     if (prec) prec.addEventListener('click', () => glisser(-1));
@@ -260,7 +266,9 @@
       });
       t.addEventListener('keydown', (e) => {
         if (!grand.matches) return;
-        const pas = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+        /* Liste verticale : haut / bas d'abord ; gauche / droite suivent le sens de lecture. */
+        const avant = getComputedStyle(liste).direction === 'rtl' ? -1 : 1;
+        const pas = { ArrowDown: 1, ArrowRight: avant, ArrowUp: -1, ArrowLeft: -avant }[e.key];
         let cible = null;
         if (pas) cible = tabs[(i + pas + tabs.length) % tabs.length];
         if (e.key === 'Home') cible = tabs[0];
@@ -269,7 +277,8 @@
       });
     });
 
-    grand.addEventListener('change', roles);
+    /* Safari < 14 ne connaît pas addEventListener sur une MediaQueryList. */
+    if (grand.addEventListener) grand.addEventListener('change', roles); else grand.addListener(roles);
     roles();
   });
 

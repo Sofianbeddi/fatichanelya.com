@@ -255,7 +255,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   font-size:.82rem;font-weight:600}
 .primary-nav a::after{content:"";position:absolute;inset-block-end:14px;inset-inline-start:0;
   inline-size:100%;block-size:2px;border-radius:2px;background:var(--gold);
-  transform:scaleX(0);transform-origin:inline-start;transition:transform var(--t-base) var(--ease-out)}
+  transform:scaleX(0);transform-origin:var(--origin-x,0%) 50%;transition:transform var(--t-base) var(--ease-out)}
 @media (hover:hover){.primary-nav a:hover::after{transform:scaleX(1)}}
 .header-tools{display:flex;align-items:center;gap:.25rem;justify-self:end}
 .icon-button{display:inline-flex;align-items:center;justify-content:center;
@@ -342,7 +342,7 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 /* Fondu côté texte : le cadre est en sable, le fondu part du sable. */
 .hero-portrait::before{content:"";position:absolute;inset-block:0;
   inset-inline-start:0;inline-size:34%;z-index:1;pointer-events:none;
-  background:linear-gradient(to right,var(--ivory),transparent)}
+  background:linear-gradient(var(--to-end,90deg),var(--ivory),transparent)}
 /* Voile sous la signature : une ombre portée ne compte pas comme du contraste. */
 .hero-portrait::after{content:"";position:absolute;inset-inline:0;
   inset-block-end:0;block-size:38%;z-index:1;pointer-events:none;
@@ -434,12 +434,12 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   font-size:.78rem;font-weight:700;transition:background var(--t-micro),color var(--t-micro),border-color var(--t-micro)}
 .chip-button.is-active{background:var(--navy);border-color:var(--navy);color:#fff}
 @media (hover:hover){.chip-button:not(.is-active):hover{border-color:var(--navy);color:var(--navy)}}
-.search{position:relative;display:flex;align-items:center;gap:.6rem;
+.search-form{position:relative;display:flex;align-items:center;gap:.6rem;
   padding-inline:1rem;border:1px solid var(--line-strong);border-radius:var(--r-pill);
   background:var(--surface);color:var(--muted);min-inline-size:min(100%,280px)}
-.search input{min-height:44px;border:0;background:none;inline-size:100%;font-size:.85rem}
-.search input:focus{outline:none}
-.search:focus-within{border-color:var(--navy)}
+.search-form input{min-height:44px;border:0;background:none;inline-size:100%;font-size:.85rem}
+.search-form input:focus{outline:none}
+.search-form:focus-within{border-color:var(--navy)}
 .result-count{max-inline-size:100%;margin-block-end:1.75rem;
   font-size:.78rem;color:var(--muted)}
 
@@ -638,7 +638,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
   .programme-media{position:absolute;inset:0;aspect-ratio:auto}
   /* Capsule de verre : le bouton seul. Chip, titre et résumé restent dans le
      balisage pour le mobile ; ici le rail les porte déjà. */
-  .programme-panneau{position:absolute;inset-inline-start:clamp(1rem,2vw,1.5rem);
+  .programme-panneau{position:absolute;inset-inline-start:clamp(1rem,2vw,1.5rem);background:#16233D8C;
     inset-block-end:clamp(1rem,2vw,1.5rem);display:block;padding:.45rem;
     border-radius:var(--r-pill);
     background:color-mix(in srgb,var(--navy) 55%,transparent);
@@ -680,7 +680,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 @media (hover:hover){.journal-card:hover{border-color:var(--line-strong)}}
 .journal-meta{position:absolute;inset-block-end:0;inset-inline:0;display:grid;gap:.2rem;
   padding:2.5rem 1.15rem 1.15rem;color:#fff;font-size:.85rem;font-weight:600;
-  background:linear-gradient(to top,color-mix(in srgb,var(--navy) 90%,transparent),transparent)}
+  background:linear-gradient(to top,#16233DE6,transparent);background:linear-gradient(to top,color-mix(in srgb,var(--navy) 90%,transparent),transparent)}
 .journal-meta em{font-style:normal;font-size:.68rem;font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft)}
 @media (max-width:760px){.journal-grid{grid-template-columns:1fr;max-inline-size:420px}}
@@ -721,8 +721,8 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .faq-list summary::-webkit-details-marker{display:none}
 .faq-list summary::after{content:"";inline-size:11px;block-size:11px;flex:none;
   border-inline-end:2px solid var(--gold-ink);border-block-end:2px solid var(--gold-ink);
-  transform:rotate(45deg) translateY(-3px);transition:transform var(--t-base) var(--ease-out)}
-.faq-list details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
+  transform:rotate(calc(45deg * var(--dir,1))) translateY(-3px);transition:transform var(--t-base) var(--ease-out)}
+.faq-list details[open] summary::after{transform:rotate(calc(-135deg * var(--dir,1))) translateY(-3px)}
 .faq-list details>div{padding:0 1.35rem 1.35rem;color:var(--muted);font-size:.92rem}
 @media (hover:hover){.faq-list summary:hover{background:var(--ivory)}}
 
@@ -750,7 +750,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .site-footer::after{content:"";position:absolute;z-index:-1;pointer-events:none;
   inset-block-start:-24rem;inset-inline-end:-16rem;inline-size:52rem;block-size:52rem;
   border-radius:50%;
-  background:radial-gradient(closest-side,color-mix(in srgb,var(--gold) 15%,transparent),transparent 72%)}
+  background:radial-gradient(closest-side,#C39A4E26,transparent 72%);background:radial-gradient(closest-side,color-mix(in srgb,var(--gold) 15%,transparent),transparent 72%)}
 
 .footer-top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);
   gap:2.75rem clamp(2rem,5vw,6rem);max-inline-size:100%}
@@ -780,7 +780,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
    la gauche. Le pied et l'en-tête parlent la même langue. */
 .footer-nav a::after{content:"";position:absolute;inset-block-end:6px;inset-inline-start:0;
   inline-size:100%;block-size:1px;background:var(--gold);
-  transform:scaleX(0);transform-origin:inline-start;transition:transform var(--t-base) var(--ease-out)}
+  transform:scaleX(0);transform-origin:var(--origin-x,0%) 50%;transition:transform var(--t-base) var(--ease-out)}
 @media (hover:hover){
   .footer-nav a:hover{color:#fff}
   .footer-nav a:hover::after{transform:scaleX(1)}}
@@ -793,7 +793,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 /* Signature de l'agence : même corps que le copyright, le nom souligné d'or au survol. */
 .footer-velix a{position:relative;color:var(--text-on-navy);font-weight:700}
 .footer-velix a::after{content:"";position:absolute;inset-block-end:-3px;inset-inline:0;
-  block-size:1px;background:var(--gold);transform:scaleX(0);transform-origin:inline-start;
+  block-size:1px;background:var(--gold);transform:scaleX(0);transform-origin:var(--origin-x,0%) 50%;
   transition:transform var(--t-base) var(--ease-out)}
 @media (hover:hover){.footer-velix a:hover{color:#fff}.footer-velix a:hover::after{transform:scaleX(1)}}
 
@@ -806,7 +806,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 /* ---------- 17. TIROIR DU PANIER ---------- */
 /* Même piège que l'en-tête : `var(--navy)80` était ignoré, le voile ne
    faisait que flouter la page sans l'assombrir. */
-.drawer-backdrop{position:fixed;inset:0;z-index:90;
+.drawer-backdrop{position:fixed;inset:0;z-index:90;background:#16233D80;
   background:color-mix(in srgb,var(--navy) 50%,transparent);
   -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .drawer-backdrop:not([hidden]){animation:fondu var(--t-base) both}
@@ -1229,7 +1229,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
   object-fit:cover;object-position:100% 30%}
 .apropos-photo::before{content:"";position:absolute;inset-block:0;inset-inline-start:0;
   inline-size:32%;z-index:1;pointer-events:none;
-  background:linear-gradient(to right,var(--ivory),transparent)}
+  background:linear-gradient(var(--to-end,90deg),var(--ivory),transparent)}
 .apropos-photo::after{content:"";position:absolute;inset-inline:0;inset-block-end:0;block-size:38%;
   z-index:1;pointer-events:none;
   background:linear-gradient(to top,#0E1729D9,#0E172966 45%,transparent)}
@@ -1629,5 +1629,153 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 body.admin-bar .site-header{inset-block-start:32px}
 @media (max-width:782px){body.admin-bar .site-header{inset-block-start:46px}}
 
-/* Fallback : sans le champ image renseigné, le hero ne doit pas s'effondrer */
-.hero-visual:not(:has(.hero-media)) .hero-shape{display:none}
+
+/* =========================================================
+   22. SOCLE BIDIRECTIONNEL, COMPATIBILITÉ, RESPONSIVE, MOUVEMENT — thème 1.4.0 (27 oct. 2026)
+   Préparé avant la phase de traduction. La feuille était déjà écrite en propriétés logiques
+   (inline-start / inline-end) : ce bloc règle ce que le logique ne couvre pas, la typographie
+   arabe, les replis navigateurs, les correctifs de l'audit responsive et la grammaire du
+   mouvement. Détail : _velix/design-system.md (section 1.4.0) et _velix/compatibilite.md.
+   ========================================================= */
+
+/* ---------- Variables de sens ----------
+   --dir (±1) pour les rotations et translations, --to-end pour les dégradés horizontaux
+   (fondu des portraits), --origin-x pour l'origine des filets qui se tracent et des
+   soulignements. WordPress pose dir="rtl" sur <html> dès que la langue du site est RTL. */
+:root{--dir:1;--to-end:90deg;--origin-x:0%}
+[dir="rtl"]{--dir:-1;--to-end:270deg;--origin-x:100%}
+
+/* Icônes directionnelles : la flèche et le lien externe se lisent en miroir en RTL, au repos
+   comme au survol. Le bouton « précédent » du carrousel garde sa rotation de 180° par-dessus. */
+[dir="rtl"] :is(.i--arrow,.i--external){transform:scaleX(-1)}
+@media (hover:hover){
+  [dir="rtl"] :is(.text-button,.arrow-link,.programmes-tab):hover .i--arrow{transform:scaleX(-1) translateX(4px)}}
+[dir="rtl"] .carousel-prec .i--arrow{transform:scaleX(-1) rotate(180deg)}
+
+/* Page À propos : la photo garde son côté droit. Fati est dans le tiers droit de l'image
+   (`object-position:100%`) ; en miroir elle passerait sous le fondu sable. Le fondu et la
+   signature changent donc de bord à la place. */
+@media (min-width:981px){
+  [dir="rtl"] .apropos-photo{order:-1}
+  [dir="rtl"] .apropos-photo::before{inset-inline-start:auto;inset-inline-end:0;
+    background:linear-gradient(to right,var(--ivory),transparent)}
+  [dir="rtl"] .apropos-photo figcaption{inset-inline-end:auto;inset-inline-start:clamp(1.25rem,3vw,2rem)}
+}
+
+/* E-mails et numéros : de gauche à droite, isolés dans un texte arabe. */
+[dir="rtl"] :is(a[href^="mailto:"],a[href^="tel:"]){direction:ltr;unicode-bidi:isolate}
+
+/* ---------- Typographie arabe ----------
+   Cairo (variable 200–1000, licence OFL, 30 Ko, servie depuis le thème) : une géométrique
+   dessinée pour s'accorder aux sans-serif latines comme Poppins. Elle ne se charge que si la
+   page contient des glyphes arabes (unicode-range) ; Poppins garde le latin, les chiffres et
+   la marque « Fatichanelya ». L'écriture arabe est liée : aucun interlettrage (les -.03em des
+   titres la rendraient illisible) ; interlignes plus hauts pour les hampes et les points. */
+@font-face{
+  font-family:"Cairo";
+  src:url("../fonts/cairo-arabic-var.woff2") format("woff2");
+  font-weight:200 1000;font-style:normal;font-display:swap;
+  unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E,U+2010-2011;
+}
+:root{--font-body:"Poppins","Cairo",Futura,"Avenir Next",Avenir,"Segoe UI",
+  system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif}
+[dir="rtl"] *{letter-spacing:0!important}
+[dir="rtl"] .wordmark{letter-spacing:-.045em!important} /* la marque reste en latin */
+[dir="rtl"] body{line-height:1.8}
+[dir="rtl"] :is(p,li,dd){line-height:1.8}
+[dir="rtl"] :is(h1,h2,h3,.programmes-tab-titre,.product-name,.pledge-non li,.limites-liste li,
+  .training-card-title,.programme-titre,.produit-prix){line-height:1.35}
+
+/* ---------- Compatibilité ----------
+   Socle : Safari / iOS 15, Chrome, Edge et Firefox des deux dernières années. Les replis de
+   couleur (`color-mix`) sont posés en hexadécimal juste avant chaque emploi ; `:has()` et
+   `text-wrap` sont progressifs. Ici : le zoom au focus d'iOS et le focus des Safari anciens. */
+@media (pointer:coarse){:is(input,select,textarea){font-size:max(16px,1em)}} /* iOS zoome sous 16 px */
+@supports not selector(:focus-visible){
+  :is(a,button,input,select,summary,[tabindex]):focus{outline:3px solid var(--gold-ink);outline-offset:3px}}
+/* Texte réservé aux lecteurs d'écran posé par WordPress (pagination, formulaires) : sans cette
+   règle, « Pagination des publications » s'affichait en titre. */
+.screen-reader-text{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+
+/* ---------- Responsive (audit du 27 oct. 2026, 26 largeurs de 320 à 3200 px) ----------
+   Le panneau du menu mobile n'avait pas de hauteur maximale : en paysage (844 × 390), ses
+   derniers liens tombaient sous l'écran sans pouvoir défiler. */
+.mobile-panel{max-block-size:calc(100vh - 122px);max-block-size:calc(100dvh - 122px);
+  overflow-y:auto;overscroll-behavior:contain}
+
+/* ---------- Mouvement (demande du gérant : « minimaliste, moderne, pro ») ----------
+   Une seule grammaire d'apparition, en animation plutôt qu'en transition : les transitions
+   propres des composants (contour de carte, couleur du nom, flèche qui glisse) gardent la
+   main au survol, et plus aucun délai ne les retarde. Fondu rapide + montée de 16 px sur la
+   courbe du site, cascade plafonnée à 4 index (280 ms). Le contenu reste visible sans
+   JavaScript, sans IntersectionObserver et en mouvement réduit (`.js-reveal` seulement). */
+@keyframes fati-in{from{opacity:0;translate:0 16px}to{opacity:1;translate:none}}
+.js-reveal .reveal{opacity:0;translate:0 16px;transform:none;transition:none}
+.js-reveal .reveal.is-in{opacity:1;translate:none;
+  animation:fati-in 700ms var(--ease-out) both;animation-delay:calc(min(var(--i,0),4)*70ms)}
+
+/* Têtes de section : le bloc ne bouge pas, ses enfants se déplient (sur-titre + titre, puis le
+   chapô ou le lien). La classe est posée par le JavaScript sur les têtes qui portent un h2 —
+   jamais sur un h1, l'élément LCP d'une page intérieure ne s'anime pas. */
+.js-reveal .reveal-head > *{opacity:0;translate:0 12px}
+.js-reveal .reveal-head.is-in > *{opacity:1;translate:none;animation:fati-in 650ms var(--ease-out) both}
+.js-reveal .reveal-head.is-in > :nth-child(2){animation-delay:90ms}
+.js-reveal .reveal-head.is-in > :nth-child(3){animation-delay:180ms}
+
+/* Cartes produit : la carte monte, puis le visuel se pose d'un zoom de 6 % ; vignettes rondes
+   des catégories qui s'épanouissent. Propriété `scale` (pas `transform`) : elle se compose
+   avec le zoom au survol, qui reste en `transform`. */
+@keyframes fati-settle{from{scale:1.06}to{scale:1}}
+@keyframes fati-pop{from{scale:.9}to{scale:1}}
+.js-reveal .product-card.reveal .product-media img{scale:1.06}
+.js-reveal .product-card.reveal.is-in .product-media img{scale:1;
+  animation:fati-settle 1100ms var(--ease-out) both;animation-delay:calc(min(var(--i,0),4)*70ms + 80ms)}
+.js-reveal .categorie.reveal .categorie-media{scale:.9}
+.js-reveal .categorie.reveal.is-in .categorie-media{scale:1;
+  animation:fati-pop 900ms var(--ease-out) both;animation-delay:calc(min(var(--i,0),4)*70ms)}
+
+/* Cellules à filet : le filet se trace depuis le début de ligne à l'apparition (le vrai bord
+   devient transparent, un pseudo-élément dessine la ligne ; le survol passe par lui). */
+.js-reveal .reveal:is(.rule-cell:not(.rule-cell--side),.training-card,.pledge-grid > li){
+  position:relative;border-block-start-color:transparent}
+.js-reveal .reveal:is(.rule-cell:not(.rule-cell--side),.training-card,.pledge-grid > li)::before{
+  content:"";position:absolute;inset-block-start:-1px;inset-inline:0;block-size:1px;
+  background:var(--line-mid);transform:scaleX(0);transform-origin:var(--origin-x,0%) 50%;
+  transition:transform 1100ms var(--ease-out) calc(min(var(--i,0),4)*70ms),background var(--t-base)}
+.js-reveal .reveal.is-in:is(.rule-cell:not(.rule-cell--side),.training-card,.pledge-grid > li)::before{transform:scaleX(1)}
+.js-reveal .pledge-grid > li.reveal::before{background:var(--line-on-navy)}
+@media (hover:hover){
+  .js-reveal .reveal.is-in:is(a.rule-cell:hover,.rule-cell:has(a:hover),.training-card:hover)::before{background:var(--navy)}}
+
+/* Parallaxe discrète pilotée par le défilement (compositeur, sans JavaScript) sur les visuels
+   des formations : ni opacité ni élément LCP (le hero et le visuel d'une fiche n'en reçoivent
+   pas). Ignorée par les navigateurs qui ne connaissent pas view(). */
+@supports (animation-timeline:view()){
+  @keyframes fati-parallax{from{translate:0 -4%}to{translate:0 4%}}
+  .training-card-media img,.programme-media img{scale:1.08;animation:fati-parallax linear both;animation-timeline:view()}
+}
+@media (prefers-reduced-motion:reduce){
+  .training-card-media img,.programme-media img{animation:none;scale:none;translate:none}}
+@media print{.js-reveal .reveal,.js-reveal .reveal-head > *{opacity:1!important;translate:none!important}}
+
+/* Résultats de recherche hors produits (formations, pages) : liste à filets. */
+.resultats{display:grid;gap:0;margin-block-start:clamp(1.5rem,3vw,2.5rem);max-inline-size:100%}
+.resultats li{display:grid;gap:.35rem;justify-items:start;padding-block:1.35rem}
+.resultats .eyebrow{margin-block-end:0}
+.resultats h3 a{transition:color var(--t-micro)}
+@media (hover:hover){.resultats h3 a:hover{color:var(--gold-ink)}}
+.resultats .section-intro{max-width:62ch}
+
+/* Responsive, suite de l'audit (26 largeurs) : fiche produit à 320 px, la quantité et le bouton
+   d'ajout ne tenaient plus sur une ligne (294 px pour 280) ; le champ quantité de la fiche fait
+   44 px de haut pour le pouce ; plancher des micro-textes à 12 px (barre d'annonce, chips,
+   en-têtes de tableau, mention du journal) ; lien de la barre d'annonce à 44 px au toucher. */
+@media (max-width:360px){
+  .produit-actions{flex-wrap:wrap}
+  .produit-actions .add-button{flex:1 1 100%;max-inline-size:none}}
+input.qty-val{min-block-size:44px}
+@media (pointer:coarse){.announcement a{min-height:44px}}
+.announcement,.about-stat{font-size:.75rem}
+.chip,.prose th{font-size:.75rem}
+.journal-meta em{font-size:.72rem}

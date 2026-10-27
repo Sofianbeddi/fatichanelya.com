@@ -172,9 +172,12 @@ Supprimés : zooms d'image au survol, pastille « Voir la fiche » en fondu
 
 ### Mouvement
 
-Un seul effet de révélation pour tout le site : opacité et 22 px, 600 ms,
-visible sans JavaScript, respectant `prefers-reduced-motion`. La cascade est
-plafonnée à 4 index, soit 280 ms — douze cartes produisaient une vague de 840 ms.
+Une seule grammaire d'apparition pour tout le site (thème 1.4.0) : fondu et montée de 16 px,
+700 ms sur la courbe `--ease-out`, **en animation et non en transition** pour que les transitions
+propres des composants (contour de carte, couleur du nom, flèche qui glisse) gardent la main au
+survol. Visible sans JavaScript, sans `IntersectionObserver` et en `prefers-reduced-motion`
+(`.js-reveal` n'est posée qu'avec l'observateur). La cascade est plafonnée à 4 index, soit
+280 ms — douze cartes produisaient une vague de 840 ms. Détail dans la section 1.4.0.
 
 ---
 
@@ -341,6 +344,10 @@ occupation constante, autour de **34 %** (bornes 86 % en hauteur et en largeur).
    qui flotte : tiroir, modale, toast, panneau mobile.
 8. **Annoncer une promesse non vérifiée** — « livraison offerte dès 50 € » et
    autres seuils tant que la cliente n'a pas fixé ses tarifs.
+9. **Écrire une propriété physique** (`left`, `margin-left`, `text-align: left`, `float: right`,
+   `to right`) : la feuille est logique de bout en bout, le RTL en dépend (section 1.4.0).
+10. **Nommer une classe comme une classe de `<body>` WordPress** (`search`, `single-produit`,
+    `archive-produit`, `page-panier`…) : le style s'applique au document entier.
 
 ---
 
@@ -467,3 +474,81 @@ l'original » pour le gérant : ne jamais réinterpréter un logo de marque. Le 
 trait. Dans le bandeau de réassurance, chaque icône est posée sur un **disque or clair** de 56 px
 (`--gold-soft`, icône bleu nuit, trait 1,6) et les trois titres partent de la même ligne
 (`align-items:start`) quel que soit le nombre de lignes de la description.
+
+## Thème 1.4.0 (27 oct. 2026) — socle LTR / RTL, responsive, compatibilité, mouvement
+
+Quatre chantiers demandés par le gérant avant la phase de traduction. Rien ne change au rendu
+français au repos : la comparaison pixel à pixel avant / après sur 30 captures ne montre que les
+corrections voulues (page de recherche, micro-textes à 12 px, barre d'annonce à 44 px au toucher).
+
+### Bidirectionnel
+
+La feuille était déjà écrite en propriétés logiques. Ce qui restait physique est passé par trois
+variables : `--dir` (±1, rotations et translations : chevron de la FAQ, flèches qui glissent),
+`--to-end` (angle des fondus des portraits : `to right` devient 270deg en RTL), `--origin-x`
+(origine des soulignements d'or et des filets qui se tracent). Les icônes `arrow` et `external`
+se lisent en miroir en RTL (`[dir="rtl"] :is(.i--arrow,.i--external)`), le bouton « précédent »
+du carrousel garde sa rotation par-dessus. WordPress pose `dir="rtl"` sur `<html>` dès que la
+langue du site est RTL (`language_attributes()`) : rien d'autre à brancher.
+
+> **La photo de l'À propos garde son côté droit.** Fati est dans le tiers droit de l'image
+> (`object-position:100%`) ; en miroir elle passerait sous le fondu sable. En RTL le cadre inverse
+> ses colonnes (`order:-1` sur la photo), le fondu et la signature changent de bord. Le portrait du
+> hero d'accueil, centré, se miroite sans correction.
+
+> **Défaut corrigé au passage.** `transform-origin:inline-start` n'est pas une valeur valide : la
+> déclaration était ignorée et les soulignements d'or partaient du centre. `var(--origin-x) 50%`.
+
+**Typographie arabe : Cairo** (variable 200–1000, licence OFL, 30 Ko, `assets/fonts/`), une
+géométrique dessinée pour s'accorder aux sans-serif latines — elle prolonge Poppins. Chargée par
+`unicode-range` seulement si la page contient de l'arabe ; Poppins garde le latin, les chiffres et
+la marque. En RTL : `letter-spacing:0!important` (les −.03em des titres rendraient l'écriture liée
+illisible ; la marque « Fatichanelya » garde son −.045em), interlignes 1,8 (texte) et 1,35
+(titres). JavaScript : le carrousel raisonne en distance depuis le bord de départ
+(`Math.abs(scrollLeft)`, sens de `scrollBy` inversé), les flèches gauche / droite des onglets de
+formation suivent le sens de lecture, le tiroir s'ouvre depuis la gauche (animation `tiroir-rtl`,
+déjà présente), la confirmation d'ajout se pose près de l'icône du panier quel que soit le sens.
+
+> **Point pour la traduction.** `.hero h1 em` est en `display:block` : une ponctuation placée après
+> le `*mot en or*` tombe seule sur une troisième ligne (vu avec le texte arabe d'essai). Garder la
+> ponctuation finale à l'intérieur du segment accentué, ou l'omettre.
+
+### Responsive
+
+Audit Playwright sur 26 largeurs de 320 à 3200 px et 15 pages (`_velix/outils/recette/`). Corrigé :
+la page de résultats de recherche était détruite (classe `search` posée par WordPress sur `<body>`
+et stylée comme le champ de recherche → `.search-form` + gabarit `search.php` en cartes produit) ;
+« Pagination des publications » affiché en titre (`.screen-reader-text` non masquée) ; fiche
+produit à 320 px, quantité et bouton d'ajout ne tenaient plus sur une ligne (294 px pour 280 :
+retour à la ligne sous 360 px) ; panneau du menu mobile sans hauteur maximale (paysage) ; champ
+quantité de la fiche à 44 px ; micro-textes sous 12 px (barre d'annonce, chips, en-têtes de
+tableau) relevés ; lien de la barre d'annonce à 44 px au toucher. Les titres mesurent 586 à 660 px
+à 2722 et 3200 px : la règle `--bord` tient.
+
+### Compatibilité
+
+Socle, inventaire et replis dans `_velix/compatibilite.md`. Replis hexadécimaux devant chaque
+`color-mix()`, `:focus` pour les Safari sans `:focus-visible`, champs à 16 px minimum au toucher
+(zoom iOS), `addListener` pour les vieilles `MediaQueryList`. Testé en Chromium 145, WebKit et
+Firefox 157 : aucune anomalie sur les 15 pages, LTR et RTL.
+
+### Mouvement
+
+- **Cartes produit** : la carte monte (16 px, 700 ms), puis le visuel se pose d'un zoom de 6 %
+  (1 100 ms, propriété `scale` pour se composer avec le zoom au survol qui reste en `transform`).
+- **Vignettes de catégories** : s'épanouissent de 90 % à 100 % (900 ms).
+- **Têtes de section** : sur-titre + titre, puis chapô ou lien, à 0 / 90 / 180 ms. Classe
+  `reveal-head` posée par le JavaScript sur les têtes qui portent un `h2` — jamais un `h1`
+  (élément LCP d'une page intérieure).
+- **Cellules à filet** (`.rule-cell`, cartes de formation, engagements) : le filet se trace depuis
+  le début de ligne (pseudo-élément, le vrai bord devient transparent ; le survol passe par lui).
+- **Parallaxe** discrète (±4 %, compositeur) sur les affiches de formation seulement
+  (`@supports (animation-timeline:view())`) : ni opacité, ni élément LCP — le hero et le visuel
+  d'une fiche n'en reçoivent pas, et la réserve notée plus haut sur `view()` (élément bloqué en
+  opacité 0 sans défilement) ne s'applique pas à une translation.
+- Observateur à `threshold:0` (un bloc plus haut que l'écran apparaissait tard à 0,1).
+- Les cartes hors champ d'un carrousel n'apparaissent qu'en entrant dans l'écran (ou après le
+  repli de 3 s) : normal, et visible dans l'audit comme « notShown » sur l'accueil.
+
+**Captures** : `captures/apres-1.4/` (accueil, fiche, À propos, panier en RTL ; accueil avec texte
+arabe d'essai ; états interactifs ; recherche avant / après ; accueil en WebKit).

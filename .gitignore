@@ -56,3 +56,8 @@ __pycache__/
 tools/medias/sources/dxn2u/*/
 !tools/medias/sources/dxn2u/index.csv
 !tools/medias/sources/dxn2u/planche.html
+
+# Captures de recette (lourdes) : locales seulement
+/_velix/captures
+# Dépendances des outils de recette installées hors dépôt
+/_velix/outils/recette/node_modules

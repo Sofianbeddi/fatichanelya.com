@@ -1,0 +1,17 @@
+{
+  "home": "",
+  "produits": "produits/",
+  "categorie": "categorie-produit/complements/",
+  "produit": "produits/lingzhi-coffee/",
+  "formations": "formations/",
+  "formation": "formations/creation-de-contenu/",
+  "a-propos": "a-propos/",
+  "contact": "contact/",
+  "panier": "panier/",
+  "mentions-legales": "mentions-legales/",
+  "livraison-retours": "livraison-retours/",
+  "cgv": "conditions-generales-de-vente/",
+  "confidentialite": "confidentialite/",
+  "recherche": "?s=caf",
+  "404": "page-qui-n-existe-pas/"
+}
