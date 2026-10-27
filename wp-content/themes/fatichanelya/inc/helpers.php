@@ -21,10 +21,44 @@ function fati_whatsapp_actif() {
 	return '' !== preg_replace( '/[^0-9]/', '', (string) fati_opt( 'whatsapp' ) );
 }
 
-/** Adresse d'une page par son slug, vide si elle n'existe pas. */
+/**
+ * Adresse d'une page par son slug français, dans la langue courante (1.7.0 :
+ * avec Polylang, la traduction de la page est servie si elle existe), vide si
+ * la page n'existe pas.
+ */
 function fati_page_url( $slug ) {
 	$page = get_page_by_path( $slug );
-	return $page ? get_permalink( $page ) : '';
+	if ( ! $page ) {
+		return '';
+	}
+	$id = $page->ID;
+	if ( function_exists( 'pll_get_post' ) ) {
+		$traduction = pll_get_post( $id );
+		if ( $traduction ) {
+			$id = $traduction;
+		}
+	}
+	return get_permalink( $id );
+}
+
+/**
+ * La page courante est-elle l'une de ces pages (slugs français), dans quelque
+ * langue que ce soit ? Remplace `is_page( 'panier' )`, qui ne connaît que le
+ * slug de la langue par défaut.
+ */
+function fati_is_page( $slugs ) {
+	if ( ! is_page() ) {
+		return false;
+	}
+	$id = get_queried_object_id();
+	if ( function_exists( 'pll_get_post' ) && function_exists( 'pll_default_language' ) ) {
+		$source = pll_get_post( $id, pll_default_language() );
+		if ( $source ) {
+			$id = $source;
+		}
+	}
+	$page = get_post( $id );
+	return $page && in_array( $page->post_name, (array) $slugs, true );
 }
 
 /** Page « Panier ». Elle s'appelait « Ma sélection » jusqu'à la version 1.2.0. */
@@ -184,7 +218,7 @@ function fati_produit_image( $post_id, $size = 'fati-produit', $class = '', $eag
 function fati_produit_details( $post_id ) {
 	$lignes = static function ( $texte ) {
 		$out = array();
-		foreach ( preg_split( '/\R/', (string) $texte ) as $l ) {
+		foreach ( preg_split( '/\R/u', (string) $texte ) as $l ) {
 			$l = trim( $l );
 			if ( '' !== $l ) {
 				$out[] = $l;
@@ -248,6 +282,9 @@ function fati_produits_json() {
 
 		$out[] = array(
 			'id'      => $post->ID,
+			// Identifiants de toutes les traductions (1.7.0) : un panier rempli en français
+			// se relit en arabe, et inversement.
+			'ids'     => function_exists( 'pll_get_post_translations' ) ? array_values( array_map( 'intval', pll_get_post_translations( $post->ID ) ) ) : array( $post->ID ),
 			'slug'    => $post->post_name,
 			'nom'     => html_entity_decode( get_the_title( $post ), ENT_QUOTES, 'UTF-8' ),
 			// `null` quand le prix n'est pas encore en base : le JavaScript
@@ -269,4 +306,16 @@ function fati_produits_json() {
 	wp_reset_postdata();
 
 	return $out;
+}
+
+/**
+ * Nombre de produits publiés dans la langue courante (1.7.0). `wp_count_posts`
+ * additionne toutes les langues : avec la version arabe, l'accueil annonçait
+ * 206 produits au lieu de 103.
+ */
+function fati_nb_produits() {
+	if ( function_exists( 'pll_count_posts' ) && function_exists( 'pll_current_language' ) && pll_current_language() ) {
+		return (int) pll_count_posts( pll_current_language(), array( 'post_type' => 'produit' ) );
+	}
+	return (int) wp_count_posts( 'produit' )->publish;
 }

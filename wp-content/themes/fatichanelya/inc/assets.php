@@ -37,7 +37,7 @@ add_action(
 				'contact'  => fati_page_url( 'contact' ) ? fati_page_url( 'contact' ) : home_url( '/' ),
 				// Sur la page Panier, l'icône de l'en-tête n'ouvre pas le tiroir :
 				// il doublerait la page.
-				'surPanier' => is_page( array( 'panier', 'ma-selection' ) ),
+				'surPanier' => fati_is_page( array( 'panier', 'ma-selection' ) ),
 				'i18n'     => array(
 					/* translators: nom du produit, puis quantité ajoutée. */
 					'ajoute'    => __( '%s × %d', 'fatichanelya' ),

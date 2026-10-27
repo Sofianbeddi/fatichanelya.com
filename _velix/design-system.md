@@ -629,3 +629,42 @@ la première piste est de ne garder collante que la recherche.
 
 **Captures** : `captures/apres-1.6/` (boutique 390 au repos et avec « Compléments » sélectionné,
 défilée, 768 et 1440 ; accueil 390 et 320 ; page de catégorie ; WebKit et Firefox).
+
+## Thème 1.7.0 (27 oct. 2026) — version arabe
+
+Demande du gérant : « crée la version arabe du site, avec des typos propres, modernes, lisibles et
+adaptées à tous les navigateurs, pas les petites typos standard ». Mode d'emploi complet dans
+`traduction-arabe.md` ; ici, ce qui relève du design et les pièges.
+
+### Typographie
+**Alexandria** pour les titres, prix, boutons, sur-titres et navigation ; **IBM Plex Sans Arabic**
+(400 / 600) pour le texte courant. Quatre familles ont été comparées sur un même gabarit (hero, carte
+produit, bouton) : Plex a la texture la plus régulière et la meilleure lisibilité en petit corps,
+Alexandria est la géométrique qui répond à Poppins. Les deux ne se chargent qu'en présence de glyphes
+arabes (`unicode-range`), Poppins garde le latin et les chiffres. Règles : aucun interlettrage en arabe,
+interlignes 1,8 (texte) et 1,4 (titres), petits textes remontés à .82rem, prix isolés de gauche à droite.
+
+### Pièges vérifiés
+- **`preg_split( '/\R/' )` sans le drapeau `u`** : en mode octet, `\R` reconnaît l'octet 0x85, qui est
+  le second octet du « م » (U+0645) en UTF-8. Chaque ligne arabe était coupée à chaque « م » : FAQ à
+  22 entrées, points clés vides, étapes d'usage en miettes. Toute expression sur du texte traduit
+  porte `u`.
+- `number_format_i18n()` suit la locale : « 26.40 » en arabe. Le prix se formate désormais en dur avec
+  la virgule, dans toutes les langues ; côté JavaScript, `ar` → `ar-MA` (chiffres occidentaux).
+- Un paragraphe de prix qui contient aussi la contenance ne se met pas en `direction:ltr` : seul le
+  nombre est isolé, le reste du texte arabe garde son sens.
+- Polylang ne traduit `home_url()` que pour les appels venant du thème : le canonique et le JSON-LD du
+  mu-plugin pointaient sur l'accueil français → liste blanche (`pll_home_url_white_list`).
+- Polylang affiche les menus par langue : sans affectation, les menus français disparaissent dès
+  l'activation. L'importateur affecte les deux langues pour chaque emplacement.
+- Avec une page d'accueil statique, `redirect_lang` doit être vrai pour que l'accueil arabe soit `/ar/`
+  et non `/ar/الرئيسية/`.
+- Les gabarits par slug (`page-a-propos.php`) ne s'appliquent pas à une traduction au slug arabe : un
+  filtre `page_template` donne à la traduction le gabarit de son original.
+- `wp eval-file` exécute un script dans une fonction : ses variables ne sont pas globales.
+- Un panier est un jeu d'identifiants : chaque produit expose `ids` (toutes ses traductions) pour que
+  le panier survive au changement de langue.
+
+**Captures** : `captures/apres-1.7/` (accueil, boutique, fiche, formation, À propos, panier, page
+légale en 390 et 1440 ; tiroir du panier).
+

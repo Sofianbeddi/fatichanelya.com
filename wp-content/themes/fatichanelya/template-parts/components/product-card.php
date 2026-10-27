@@ -21,11 +21,21 @@ $prix   = get_post_meta( $id, '_fati_prix', true );
 $format = trim( (string) get_post_meta( $id, '_fati_format', true ) );
 $index  = (int) get_query_var( 'fati_index', 0 );
 $indispo = (bool) get_post_meta( $id, '_fati_indispo', true );
+// La recherche de la boutique lit `data-name` : sur une traduction, le nom
+// français (celui du catalogue DXN, en latin) y est ajouté pour qu'une
+// recherche « lingzhi » trouve aussi « قهوة لينجزي ».
+$recherche = mb_strtolower( $nom );
+if ( function_exists( 'pll_get_post' ) && function_exists( 'pll_default_language' ) ) {
+	$source = pll_get_post( $id, pll_default_language() );
+	if ( $source && $source !== $id ) {
+		$recherche .= ' ' . mb_strtolower( get_the_title( $source ) );
+	}
+}
 ?>
 <li class="product-card reveal"
     style="--i:<?php echo esc_attr( $index % 6 ); ?>"
     data-cat="<?php echo esc_attr( $cat ? $cat->slug : '' ); ?>"
-    data-name="<?php echo esc_attr( mb_strtolower( $nom ) ); ?>"
+    data-name="<?php echo esc_attr( $recherche ); ?>"
     data-id="<?php echo esc_attr( $id ); ?>">
 
 	<?php

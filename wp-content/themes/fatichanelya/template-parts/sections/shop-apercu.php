@@ -32,7 +32,7 @@ if ( ! $produits->have_posts() ) {
 	return;
 }
 
-$total = (int) wp_count_posts( 'produit' )->publish;
+$total = fati_nb_produits();
 ?>
 <section class="section shop shop--apercu" id="shop" aria-labelledby="shop-title">
 	<header class="section-head section-head--split">

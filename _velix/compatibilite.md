@@ -1,6 +1,6 @@
 # Compatibilité navigateurs — fatichanelya.com
 
-État au 27 octobre 2026 (thème 1.6.0). Socle de navigateurs retenu, inventaire des fonctionnalités CSS / JS
+État au 27 octobre 2026 (thème 1.7.0). Socle de navigateurs retenu, inventaire des fonctionnalités CSS / JS
 employées avec leur comportement de repli, ce qui a été testé et ce qui ne l'a pas été.
 
 ## Socle retenu
@@ -39,7 +39,8 @@ employées partout dans `main.css`, et par `aspect-ratio` : Safari 15 / Chrome 8
 | `MediaQueryList.addEventListener` | onglets des formations | repli `addListener` (Safari < 14) |
 | `localStorage` | panier | `try/catch` : panier en mémoire pour la page |
 | `Intl.NumberFormat` | prix (devise selon `lang`) | Safari 10+, universel |
-| `unicode-range` | Poppins (latin), Cairo (arabe) | police système |
+| `unicode-range` | Poppins (latin), Alexandria et IBM Plex Sans Arabic (arabe) | police système |
+| Police variable (Alexandria, `font-weight: 300 800`) | titres arabes | Safari 11+, Chrome 62+, Firefox 62+ : dans le socle |
 
 Corrigé en 1.4.0 :
 

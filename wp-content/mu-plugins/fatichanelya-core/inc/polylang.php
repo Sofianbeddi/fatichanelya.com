@@ -109,3 +109,38 @@ add_filter(
 		return $classes;
 	}
 );
+
+/**
+ * Métas partagées entre les traductions (1.7.0). Le prix, la référence et le
+ * drapeau « visuel à venir » sont les mêmes dans toutes les langues : ils se
+ * copient à la création d'une traduction et se synchronisent à chaque
+ * enregistrement. Les textes (contenance, composition, mode d'emploi, points
+ * clés, niveau, durée, meta description) sont traduits, jamais copiés.
+ */
+add_filter(
+	'pll_copy_post_metas',
+	function ( $metas ) {
+		return array_merge( $metas, array( '_fati_prix', '_fati_reference', '_fati_indispo' ) );
+	}
+);
+
+/** Le visuel d'une catégorie de produit vaut pour toutes ses traductions. */
+add_filter(
+	'pll_copy_term_metas',
+	function ( $metas ) {
+		return array_merge( $metas, array( '_fati_visuel' ) );
+	}
+);
+
+/**
+ * Polylang ne traduit `home_url()` (→ /ar/) que pour les appels venant du
+ * thème ou des extensions classiques ; le mu-plugin (canonique, JSON-LD du
+ * SEO) recevait l'accueil français. On l'ajoute à la liste blanche.
+ */
+add_filter(
+	'pll_home_url_white_list',
+	function ( $liste ) {
+		$liste[] = array( 'file' => WPMU_PLUGIN_DIR );
+		return $liste;
+	}
+);

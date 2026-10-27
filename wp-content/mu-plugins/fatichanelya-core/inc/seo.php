@@ -131,7 +131,7 @@ add_action(
 		$graph = array(
 			array(
 				'@type'       => 'Person',
-				'@id'         => home_url( '/#fati' ),
+				'@id'         => home_url( '/' ) . '#fati',
 				'name'        => 'Fati',
 				'alternateName' => get_bloginfo( 'name' ),
 				'jobTitle'    => __( 'Entrepreneure, créatrice et mentore', 'fatichanelya' ),
@@ -139,11 +139,11 @@ add_action(
 			),
 			array(
 				'@type'      => 'WebSite',
-				'@id'        => home_url( '/#site' ),
+				'@id'        => home_url( '/' ) . '#site',
 				'url'        => home_url( '/' ),
 				'name'       => get_bloginfo( 'name' ),
 				'inLanguage' => fati_current_lang(),
-				'publisher'  => array( '@id' => home_url( '/#fati' ) ),
+				'publisher'  => array( '@id' => home_url( '/' ) . '#fati' ),
 			),
 		);
 

@@ -1,0 +1,1018 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fatichanelya 1.7.0\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"X-Generator: tools/traductions/ar (chaines.py)\n"
+
+#: 404.php:7
+msgid "Erreur 404"
+msgstr "خطأ 404"
+
+#: 404.php:8
+msgid "Cette page n'existe *plus*."
+msgstr "هذه الصفحة *لم تعد* موجودة."
+
+#: 404.php:9
+msgid "Le lien est peut-être ancien. Reprenez depuis l'accueil ou le catalogue."
+msgstr "ربما يكون الرابط قديماً. عد إلى الصفحة الرئيسية أو إلى الكتالوج."
+
+#: 404.php:12
+msgid "Retour à l'accueil"
+msgstr "العودة إلى الرئيسية"
+
+#: 404.php:13
+msgid "Voir le catalogue"
+msgstr "تصفح الكتالوج"
+
+#: archive-formation.php:16
+#: archive-formation.php:17
+#: single-formation.php:29
+msgid "Formations"
+msgstr "الدورات التدريبية"
+
+#: archive-formation.php:23
+msgid "Les programmes"
+msgstr "البرامج"
+
+#: archive-formation.php:69
+#: single-formation.php:126
+#: template-parts/sections/training.php:138
+msgid "Voir le programme"
+msgstr "عرض البرنامج"
+
+#: archive-formation.php:75
+msgid "Les formations arrivent très bientôt."
+msgstr "الدورات التدريبية قادمة قريباً جداً."
+
+#: archive-formation.php:79
+msgid "Vous ne savez pas laquelle choisir ?"
+msgstr "لا تعرف أيّها تختار؟"
+
+#: archive-formation.php:80
+msgid "Dites à Fati où vous en êtes et ce que vous voulez atteindre. Elle vous indique le programme qui correspond, sans engagement."
+msgstr "أخبر فاتي أين وصلت وما الذي تريد بلوغه، وستدلّك على البرنامج المناسب، بدون أي التزام."
+
+#: archive-formation.php:82
+msgid "Bonjour Fati, j'hésite entre plusieurs formations. Pouvez-vous m'orienter ?"
+msgstr "مرحباً فاتي، أتردد بين عدة دورات تدريبية. هل يمكنك توجيهي؟"
+
+#: archive-formation.php:84
+msgid "En parler avec Fati"
+msgstr "تحدّث مع فاتي"
+
+#: archive-produit.php:12
+#: archive-produit.php:15
+#: single-produit.php:39
+#: taxonomy-categorie_produit.php:19
+#: taxonomy-categorie_produit.php:24
+msgid "Boutique"
+msgstr "المتجر"
+
+#: archive-produit.php:33
+#: taxonomy-categorie_produit.php:40
+#: template-parts/sections/shop-apercu.php:40
+msgid "La sélection Fatichanelya"
+msgstr "تشكيلة Fatichanelya"
+
+#: archive-produit.php:34
+msgid "Tous les produits"
+msgstr "كل المنتجات"
+
+#: archive-produit.php:53
+msgid "Rechercher dans la sélection"
+msgstr "ابحث في التشكيلة"
+
+#: archive-produit.php:54
+#: taxonomy-categorie_produit.php:63
+msgid "Rechercher un produit…"
+msgstr "ابحث عن منتج…"
+
+#: archive-produit.php:62
+#: inc/assets.php:47
+#: taxonomy-categorie_produit.php:71
+#, php-format
+msgid "%d produit affiché"
+msgid_plural "%d produits affichés"
+msgstr[0] "%d منتج معروض"
+msgstr[1] "%d منتج معروض"
+msgstr[2] "منتجان معروضان"
+msgstr[3] "%d منتجات معروضة"
+msgstr[4] "%d منتجاً معروضاً"
+msgstr[5] "%d منتج معروض"
+
+#: archive-produit.php:80
+#: taxonomy-categorie_produit.php:89
+msgid "Aucun produit ne correspond à cette recherche."
+msgstr "لا يوجد منتج يطابق هذا البحث."
+
+#: archive-produit.php:81
+#: taxonomy-categorie_produit.php:90
+msgid "Réinitialiser"
+msgstr "إعادة ضبط"
+
+#: archive-produit.php:84
+#: taxonomy-categorie_produit.php:93
+#: template-parts/sections/shop-apercu.php:91
+msgid "Prix indicatifs en euros, hors livraison. Disponibilité confirmée avec Fati avant commande."
+msgstr "أسعار استرشادية باليورو، لا تشمل التوصيل. يُؤكَّد التوفر مع فاتي قبل الطلب."
+
+#: archive-produit.php:86
+msgid "Aucun produit dans cette catégorie."
+msgstr "لا توجد منتجات في هذه الفئة."
+
+#: archive.php:30
+#: index.php:30
+msgid "Aucun contenu pour le moment."
+msgstr "لا يوجد محتوى حالياً."
+
+#: footer.php:30
+msgid "Une question avant de commander ? Écrivez-moi : je réponds moi-même, sous 24 h en semaine."
+msgstr "لديك سؤال قبل الطلب؟ راسلني: أجيب بنفسي خلال 24 ساعة في أيام العمل."
+
+#: footer.php:32
+#: page-a-propos.php:88
+#: page-a-propos.php:178
+#: page-contact.php:70
+#: template-parts/sections/contact.php:8
+msgid "Bonjour Fati, j'aimerais échanger avec vous."
+msgstr "مرحباً فاتي، أودّ التحدث معك."
+
+#: footer.php:33
+#: page-a-propos.php:179
+#: page-contact.php:71
+#: template-parts/sections/contact.php:10
+msgid "Écrire sur WhatsApp"
+msgstr "راسلني على واتساب"
+
+#: footer.php:36
+msgid "Réseaux sociaux"
+msgstr "مواقع التواصل الاجتماعي"
+
+#: footer.php:56
+msgid "Navigation du pied de page"
+msgstr "روابط أسفل الصفحة"
+
+#: footer.php:58
+msgid "Navigation"
+msgstr "التنقل"
+
+#: footer.php:71
+msgid "Informations"
+msgstr "معلومات"
+
+#: footer.php:89
+msgid "Site conçu par"
+msgstr "موقع من تصميم"
+
+#: header.php:21
+msgid "Aller au contenu principal"
+msgstr "الانتقال إلى المحتوى الرئيسي"
+
+#: header.php:24
+msgid "Informations générales"
+msgstr "معلومات عامة"
+
+#: header.php:32
+#, php-format
+msgid "%s, accueil"
+msgstr "%s، الصفحة الرئيسية"
+
+#: header.php:42
+msgid "Navigation principale"
+msgstr "التنقل الرئيسي"
+
+#: header.php:56
+msgid "Langue du site"
+msgstr "لغة الموقع"
+
+#: header.php:73
+msgid "Panier : 0 article"
+msgstr "السلة: 0 منتج"
+
+#: header.php:82
+msgid "Ouvrir le menu"
+msgstr "فتح القائمة"
+
+#: header.php:94
+msgid "Navigation mobile"
+msgstr "قائمة الهاتف"
+
+#. translators: nom du produit, puis quantité ajoutée.
+#: inc/assets.php:43
+#, php-format
+msgid "%s × %d"
+msgstr "%s × %d"
+
+#: inc/assets.php:44
+#, php-format
+msgid "Panier : %d article"
+msgstr "السلة: %d منتج"
+
+#: inc/assets.php:45
+#, php-format
+msgid "Panier : %d articles"
+msgstr "السلة: %d منتجات"
+
+#: inc/assets.php:46
+#, php-format
+msgid "%d dans votre panier"
+msgstr "%d في سلتك"
+
+#: inc/assets.php:48
+#, php-format
+msgid "%d produits affichés"
+msgstr "%d منتج معروض"
+
+#: inc/assets.php:49
+msgid "Aucun produit affiché"
+msgstr "لا يوجد منتج معروض"
+
+#: inc/assets.php:50
+msgid "Bonjour Fati, voici ma commande :"
+msgstr "مرحباً فاتي، هذا طلبي:"
+
+#: inc/assets.php:51
+msgid "Total indicatif :"
+msgstr "المجموع الاسترشادي:"
+
+#: inc/assets.php:52
+msgid "Pouvez-vous me confirmer la disponibilité et la livraison ?"
+msgstr "هل يمكنك تأكيد التوفر والتوصيل؟"
+
+#: inc/assets.php:53
+#: page-panier.php:78
+msgid "Bonjour Fati, je souhaite commander."
+msgstr "مرحباً فاتي، أرغب في الطلب."
+
+#: inc/assets.php:54
+#, php-format
+msgid "Retirer %s du panier"
+msgstr "إزالة %s من السلة"
+
+#: inc/assets.php:55
+#: inc/helpers.php:252
+#, php-format
+msgid "Retirer un %s"
+msgstr "إنقاص %s بواحد"
+
+#: inc/assets.php:56
+#: inc/helpers.php:253
+#, php-format
+msgid "Ajouter un %s"
+msgstr "زيادة %s بواحد"
+
+#. translators: %s : nom du produit.
+#: inc/assets.php:57
+#: inc/helpers.php:251
+#, php-format
+msgid "Quantité de %s dans le panier"
+msgstr "كمية %s في السلة"
+
+#: inc/assets.php:58
+#, php-format
+msgid "%s l'unité"
+msgstr "%s للوحدة"
+
+#: inc/assets.php:61
+msgid "prix à confirmer"
+msgstr "السعر يُؤكَّد لاحقاً"
+
+#: inc/assets.php:62
+msgid "Total indicatif, hors articles à confirmer"
+msgstr "المجموع الاسترشادي، دون المنتجات التي يُؤكَّد سعرها لاحقاً"
+
+#: inc/helpers.php:190
+#, php-format
+msgid "Visuel à venir pour %s"
+msgstr "الصورة قادمة قريباً: %s"
+
+#: inc/setup.php:35
+msgid "Menu principal"
+msgstr "القائمة الرئيسية"
+
+#: inc/setup.php:36
+msgid "Pied de page — Navigation"
+msgstr "أسفل الصفحة — التنقل"
+
+#: inc/setup.php:37
+msgid "Pied de page — Informations"
+msgstr "أسفل الصفحة — معلومات"
+
+#: page-a-propos.php:37
+msgid "J'expédie depuis l'Espagne, vers toute l'Union européenne"
+msgstr "أشحن من إسبانيا إلى كل دول الاتحاد الأوروبي"
+
+#: page-a-propos.php:38
+msgid "Darija, français ou espagnol : je réponds dans votre langue"
+msgstr "بالدارجة أو الفرنسية أو الإسبانية: أجيبك بلغتك"
+
+#: page-a-propos.php:39
+msgid "Sur WhatsApp, c'est moi qui réponds"
+msgstr "على واتساب، أنا من يجيبك"
+
+#: page-a-propos.php:44
+msgid "Une sélection DXN, expédiée par moi"
+msgstr "تشكيلة DXN أشحنها بنفسي"
+
+#: page-a-propos.php:45
+msgid "Des produits choisis dans le catalogue DXN, avec leurs noms, prix et formats. Ils partent de mon propre stock, en Espagne."
+msgstr "منتجات مختارة من كتالوج DXN، بأسمائها وأسعارها وأحجامها. تُشحن من مخزوني الخاص في إسبانيا."
+
+#: page-a-propos.php:47
+#: page-a-propos.php:86
+msgid "Voir la sélection"
+msgstr "تصفح التشكيلة"
+
+#: page-a-propos.php:50
+msgid "Des formations à distance"
+msgstr "دورات تدريبية عن بُعد"
+
+#: page-a-propos.php:51
+msgid "Des programmes pour apprendre un métier du digital : marketing, contenu, vente, publicité, IA, automatisation. Le programme est publié, le format et le niveau se choisissent par message."
+msgstr "برامج لتعلّم مهنة رقمية: التسويق، صناعة المحتوى، البيع، الإعلان، الذكاء الاصطناعي، الأتمتة. البرنامج منشور، أما الصيغة والمستوى فيُختاران عبر الرسائل."
+
+#: page-a-propos.php:53
+msgid "Voir les formations"
+msgstr "تصفح الدورات"
+
+#: page-a-propos.php:56
+msgid "TikTok, là où on se parle"
+msgstr "تيك توك، حيث نتحدث"
+
+#: page-a-propos.php:57
+msgid "Je parle produits, projets et quotidien d'entrepreneure, en darija surtout, et je réponds aux questions comme je le ferais à une amie."
+msgstr "أتحدث عن المنتجات والمشاريع ويوميات رائدة الأعمال، بالدارجة غالباً، وأجيب عن الأسئلة كما أجيب صديقة."
+
+#: page-a-propos.php:59
+msgid "Suivre @fatichanelya"
+msgstr "تابع @fatichanelya"
+
+#: page-a-propos.php:65
+msgid "Je ne recrute personne. Ce site vend des produits et des formations, il ne propose aucune activité de distribution."
+msgstr "لا أقوم بتجنيد أحد. هذا الموقع يبيع منتجات ودورات تدريبية، ولا يعرض أي نشاط توزيع."
+
+#: page-a-propos.php:66
+msgid "Je ne promets aucun revenu, et je ne parle ni de gains ni d'équipe."
+msgstr "لا أعد بأي دخل، ولا أتحدث عن أرباح ولا عن فريق."
+
+#: page-a-propos.php:67
+msgid "Je ne donne aucun conseil médical. Les compléments alimentaires ne soignent pas et ne remplacent pas l'avis d'un professionnel de santé."
+msgstr "لا أقدّم أي نصيحة طبية. المكملات الغذائية لا تعالج ولا تغني عن رأي مختص في الصحة."
+
+#: page-a-propos.php:68
+msgid "Je ne publie aucun avis client tant que je n'en ai pas de véritables."
+msgstr "لا أنشر أي آراء عملاء ما دمت لا أملك آراء حقيقية."
+
+#: page-a-propos.php:76
+#: template-parts/components/page-banner.php:42
+msgid "Fil d'Ariane"
+msgstr "مسار التصفح"
+
+#: page-a-propos.php:77
+#: template-parts/components/page-banner.php:30
+msgid "Accueil"
+msgstr "الرئيسية"
+
+#: page-a-propos.php:79
+msgid "À propos"
+msgstr "من هي فاتي"
+
+#: page-a-propos.php:81
+#: template-parts/sections/about.php:23
+msgid "À propos de Fati"
+msgstr "عن فاتي"
+
+#: page-a-propos.php:89
+#: single-formation.php:89
+msgid "Écrire à Fati"
+msgstr "راسل فاتي"
+
+#: page-a-propos.php:103
+#, php-format
+msgid "Fati, créatrice de %s"
+msgstr "فاتي، مؤسِّسة %s"
+
+#: page-a-propos.php:107
+#: template-parts/sections/about.php:18
+#: template-parts/sections/hero.php:73
+msgid "Entrepreneure · Créatrice · Mentore"
+msgstr "رائدة أعمال · صانعة محتوى · مرشدة"
+
+#: page-a-propos.php:116
+msgid "Ce que vous trouverez ici"
+msgstr "ما ستجده هنا"
+
+#: page-a-propos.php:117
+msgid "Des produits, des formations, et *quelqu'un à qui parler*."
+msgstr "منتجات، ودورات تدريبية، *وشخص يمكنك التحدث إليه*."
+
+#: page-a-propos.php:141
+msgid "Fati, souriante, en veste claire"
+msgstr "فاتي مبتسمة، بسترة فاتحة اللون"
+
+#: page-a-propos.php:145
+msgid "Ma façon de faire"
+msgstr "طريقتي في العمل"
+
+#: page-a-propos.php:146
+msgid "Comment je travaille"
+msgstr "كيف أعمل"
+
+#: page-a-propos.php:158
+msgid "Ce qui n'est pas confirmé n'est pas affiché : disponibilité, frais de port et total sont validés avec vous avant l'envoi."
+msgstr "ما لم يُؤكَّد لا يُعرض: التوفر ومصاريف الشحن والمجموع تُعتمد معك قبل الإرسال."
+
+#: page-a-propos.php:166
+#: template-parts/sections/pledge.php:29
+msgid "Une relation claire"
+msgstr "علاقة واضحة"
+
+#: page-a-propos.php:167
+#: template-parts/sections/pledge.php:34
+msgid "Ce que je ne fais pas"
+msgstr "ما لا أفعله"
+
+#: page-a-propos.php:176
+msgid "Vous hésitez entre deux produits, ou vous voulez savoir si une formation est faite pour vous ? Dites-le-moi, je vous réponds sans engagement."
+msgstr "متردد بين منتجين، أو تريد أن تعرف إن كانت دورة ما مناسبة لك؟ أخبرني، وأجيبك بدون أي التزام."
+
+#: page-a-propos.php:183
+#: page-contact.php:89
+msgid "Voir mon TikTok"
+msgstr "شاهد حسابي على تيك توك"
+
+#: page-contact.php:21
+#: page-contact.php:22
+msgid "Contact"
+msgstr "اتصل بفاتي"
+
+#: page-contact.php:31
+#: template-parts/sections/contact.php:3
+msgid "WhatsApp · direct"
+msgstr "واتساب · مباشر"
+
+#: page-contact.php:39
+msgid "Choisir le bon message"
+msgstr "اختر الرسالة المناسبة"
+
+#: page-contact.php:42
+msgid "Une question sur un produit"
+msgstr "سؤال عن منتج"
+
+#: page-contact.php:43
+msgid "Disponibilité, usage, composition : dites-moi lequel vous intéresse."
+msgstr "التوفر، طريقة الاستعمال، التركيبة: أخبرني أي منتج يهمك."
+
+#: page-contact.php:45
+msgid "Bonjour Fati, j'ai une question sur un produit."
+msgstr "مرحباً فاتي، لديّ سؤال عن منتج."
+
+#: page-contact.php:46
+msgid "Poser ma question"
+msgstr "اطرح سؤالي"
+
+#: page-contact.php:50
+msgid "Commander"
+msgstr "اطلب"
+
+#: page-contact.php:51
+msgid "On confirme ensemble la disponibilité, les frais de port réels et le total avant tout paiement."
+msgstr "نؤكد معاً التوفر ومصاريف الشحن الفعلية والمجموع قبل أي دفع."
+
+#: page-contact.php:53
+msgid "Bonjour Fati, je souhaite passer une commande."
+msgstr "مرحباً فاتي، أرغب في تقديم طلب."
+
+#: page-contact.php:54
+msgid "Préparer ma commande"
+msgstr "تجهيز طلبي"
+
+#: page-contact.php:58
+msgid "Une formation"
+msgstr "دورة تدريبية"
+
+#: page-contact.php:59
+msgid "Programme, dates et tarif vous sont envoyés par message, sans engagement."
+msgstr "يُرسل إليك البرنامج والمواعيد والسعر عبر رسالة، بدون أي التزام."
+
+#: page-contact.php:61
+msgid "Bonjour Fati, je souhaite des informations sur les formations."
+msgstr "مرحباً فاتي، أرغب في معلومات عن الدورات التدريبية."
+
+#: page-contact.php:62
+#: single-formation.php:84
+msgid "Demander le programme"
+msgstr "اطلب البرنامج"
+
+#: page-contact.php:73
+#: template-parts/sections/contact.php:13
+msgid "Réponse sous 24 h en semaine. Aucun conseil médical n'est donné par message."
+msgstr "الرد خلال 24 ساعة في أيام العمل. لا تُقدَّم أي نصيحة طبية عبر الرسائل."
+
+#: page-contact.php:78
+msgid "Écrire à Fati sur TikTok"
+msgstr "راسل فاتي على تيك توك"
+
+#: page-contact.php:80
+msgid "Le numéro WhatsApp arrive. Aucun conseil médical n'est donné par message."
+msgstr "رقم واتساب قادم قريباً. لا تُقدَّم أي نصيحة طبية عبر الرسائل."
+
+#: page-contact.php:86
+msgid "Me suivre ailleurs"
+msgstr "تابعني في مكان آخر"
+
+#: page-contact.php:87
+msgid "Le quotidien, les nouveautés et les coulisses passent surtout par TikTok."
+msgstr "اليوميات والجديد والكواليس تمرّ أساساً عبر تيك توك."
+
+#: page-panier.php:19
+#: page-panier.php:20
+msgid "Panier"
+msgstr "السلة"
+
+#: page-panier.php:26
+msgid "Produits dans le panier"
+msgstr "المنتجات في السلة"
+
+#: page-panier.php:29
+msgid "Produit"
+msgstr "المنتج"
+
+#: page-panier.php:30
+msgid "Prix"
+msgstr "السعر"
+
+#: page-panier.php:31
+#: single-produit.php:111
+#: single-produit.php:113
+msgid "Quantité"
+msgstr "الكمية"
+
+#: page-panier.php:32
+#: page-panier.php:64
+msgid "Sous-total"
+msgstr "المجموع الفرعي"
+
+#: page-panier.php:38
+msgid "Votre panier est vide pour le moment."
+msgstr "سلتك فارغة حالياً."
+
+#: page-panier.php:40
+#: search.php:93
+#: template-parts/components/bag-drawer.php:35
+msgid "Voir la boutique"
+msgstr "تصفح المتجر"
+
+#: page-panier.php:46
+msgid "Continuer mes achats"
+msgstr "متابعة التسوق"
+
+#: page-panier.php:49
+msgid "Vider le panier"
+msgstr "إفراغ السلة"
+
+#: page-panier.php:55
+msgid "Récapitulatif"
+msgstr "ملخص الطلب"
+
+#: page-panier.php:59
+msgid "Articles"
+msgstr "المنتجات"
+
+#: page-panier.php:68
+msgid "Livraison"
+msgstr "التوصيل"
+
+#: page-panier.php:69
+msgid "confirmée par message"
+msgstr "يُؤكَّد عبر رسالة"
+
+#: page-panier.php:74
+msgid "Les frais de port dépendent de votre pays. Fati vous donne le total exact avant tout paiement."
+msgstr "مصاريف الشحن تختلف حسب بلدك. تعطيك فاتي المجموع الدقيق قبل أي دفع."
+
+#: page-panier.php:80
+#: template-parts/components/bag-drawer.php:47
+msgid "Commander sur WhatsApp"
+msgstr "اطلب عبر واتساب"
+
+#: page-panier.php:84
+msgid "Rien ne se paie sur le site : Fati confirme la disponibilité, les frais de port et le total, puis vous indique comment régler."
+msgstr "لا يُدفع أي شيء على الموقع: تؤكد فاتي التوفر ومصاريف الشحن والمجموع، ثم تخبرك بطريقة الدفع."
+
+#: search.php:34
+#: search.php:35
+msgid "Recherche"
+msgstr "البحث"
+
+#: search.php:42
+msgid "Résultats"
+msgstr "النتائج"
+
+#. translators: 1 : nombre de résultats, 2 : texte cherché.
+#: search.php:48
+#, php-format
+msgid "%1$d résultat pour « %2$s »"
+msgid_plural "%1$d résultats pour « %2$s »"
+msgstr[0] "لا نتائج لـ« %2$s »"
+msgstr[1] "نتيجة واحدة لـ« %2$s »"
+msgstr[2] "نتيجتان لـ« %2$s »"
+msgstr[3] "%1$d نتائج لـ« %2$s »"
+msgstr[4] "%1$d نتيجة لـ« %2$s »"
+msgstr[5] "%1$d نتيجة لـ« %2$s »"
+
+#. translators: %s : texte cherché.
+#: search.php:54
+#, php-format
+msgid "Rien ne correspond à « %s »"
+msgstr "لا شيء يطابق « %s »"
+
+#: search.php:80
+msgid "Formation"
+msgstr "دورة تدريبية"
+
+#: search.php:80
+msgid "Page"
+msgstr "صفحة"
+
+#: search.php:91
+msgid "Essayez un autre mot, ou parcourez la boutique par catégorie."
+msgstr "جرّب كلمة أخرى، أو تصفح المتجر حسب الفئة."
+
+#: search.php:97
+msgid "Pages de résultats"
+msgstr "صفحات النتائج"
+
+#: searchform.php:4
+msgid "Rechercher sur le site"
+msgstr "ابحث في الموقع"
+
+#: searchform.php:5
+msgid "Rechercher…"
+msgstr "ابحث…"
+
+#: single-formation.php:54
+msgid "Programme de formation"
+msgstr "برنامج الدورة"
+
+#: single-formation.php:61
+msgid "Niveau"
+msgstr "المستوى"
+
+#: single-formation.php:67
+msgid "Durée"
+msgstr "المدة"
+
+#: single-formation.php:72
+msgid "Format"
+msgstr "الصيغة"
+
+#: single-formation.php:73
+msgid "À distance"
+msgstr "عن بُعد"
+
+#: single-formation.php:85
+msgid "Le programme détaillé, les dates et le tarif vous sont envoyés par message. Vous décidez ensuite, sans engagement."
+msgstr "يُرسل إليك البرنامج المفصّل والمواعيد والسعر عبر رسالة. ثم تقرر أنت، بدون أي التزام."
+
+#: single-formation.php:87
+#, php-format
+msgid "Bonjour Fati, je souhaite le programme et le tarif de la formation « %s »."
+msgstr "مرحباً فاتي، أرغب في برنامج وسعر دورة « %s »."
+
+#: single-formation.php:91
+msgid "Réponse sous 24 h en semaine."
+msgstr "الرد خلال 24 ساعة في أيام العمل."
+
+#: single-formation.php:109
+msgid "Les autres formations"
+msgstr "الدورات الأخرى"
+
+#: single-produit.php:36
+#, php-format
+msgid "Bonjour Fati, j'ai une question sur « %s »."
+msgstr "مرحباً فاتي، لديّ سؤال عن « %s »."
+
+#: single-produit.php:82
+#: single-produit.php:265
+msgid "Prix communiqué sur demande"
+msgstr "السعر عند الطلب"
+
+#: single-produit.php:112
+msgid "Diminuer la quantité"
+msgstr "إنقاص الكمية"
+
+#: single-produit.php:115
+msgid "Augmenter la quantité"
+msgstr "زيادة الكمية"
+
+#: single-produit.php:118
+#: single-produit.php:269
+msgid "Ajouter au panier"
+msgstr "أضف إلى السلة"
+
+#: single-produit.php:119
+#: single-produit.php:270
+msgid "Ajouté"
+msgstr "أُضيف"
+
+#: single-produit.php:126
+#: template-parts/components/bag-drawer.php:51
+#: template-parts/components/bag-drawer.php:69
+msgid "Voir le panier"
+msgstr "عرض السلة"
+
+#: single-produit.php:131
+msgid "Poser une question sur ce produit"
+msgstr "اطرح سؤالاً عن هذا المنتج"
+
+#: single-produit.php:135
+msgid "Commande par WhatsApp : on confirme ensemble la disponibilité, les frais de port réels et le total avant l'envoi."
+msgstr "الطلب عبر واتساب: نؤكد معاً التوفر ومصاريف الشحن الفعلية والمجموع قبل الإرسال."
+
+#: single-produit.php:146
+#: template-parts/components/assurance.php:34
+#: template-parts/sections/trust.php:11
+msgid "Nos engagements"
+msgstr "التزاماتنا"
+
+#: single-produit.php:166
+msgid "Composition et conseils d'utilisation"
+msgstr "التركيبة وطريقة الاستعمال"
+
+#: single-produit.php:169
+msgid "Composition"
+msgstr "التركيبة"
+
+#: single-produit.php:176
+msgid "Conseils d'utilisation"
+msgstr "طريقة الاستعمال"
+
+#: single-produit.php:200
+msgid "Ce que c'est"
+msgstr "ما هو"
+
+#. translators: %s : nom de la catégorie.
+#: single-produit.php:235
+#, php-format
+msgid "Autres produits — %s"
+msgstr "منتجات أخرى — %s"
+
+#: single-produit.php:261
+msgid "Rappel du produit"
+msgstr "تذكير بالمنتج"
+
+#: taxonomy-categorie_produit.php:62
+msgid "Rechercher dans cette catégorie"
+msgstr "ابحث في هذه الفئة"
+
+#: taxonomy-categorie_produit.php:95
+msgid "Aucun produit dans cette catégorie pour le moment."
+msgstr "لا توجد منتجات في هذه الفئة حالياً."
+
+#: taxonomy-categorie_produit.php:100
+msgid "Voir tout le catalogue"
+msgstr "عرض الكتالوج كاملاً"
+
+#: template-parts/components/assurance.php:19
+msgid "Expédié par Fati"
+msgstr "تشحنه فاتي"
+
+#: template-parts/components/assurance.php:20
+msgid "Vos produits partent de son propre stock."
+msgstr "منتجاتك تُشحن من مخزونها الخاص."
+
+#: template-parts/components/assurance.php:24
+msgid "Total confirmé avant paiement"
+msgstr "المجموع يُؤكَّد قبل الدفع"
+
+#: template-parts/components/assurance.php:25
+msgid "Disponibilité et frais de port réels, annoncés avant."
+msgstr "التوفر ومصاريف الشحن الفعلية تُعلن مسبقاً."
+
+#: template-parts/components/assurance.php:29
+msgid "Une vraie réponse"
+msgstr "رد حقيقي"
+
+#: template-parts/components/assurance.php:30
+msgid "Fati répond elle-même, sous 24 h en semaine."
+msgstr "فاتي تجيب بنفسها، خلال 24 ساعة في أيام العمل."
+
+#: template-parts/components/bag-drawer.php:24
+msgid "Mon panier"
+msgstr "سلتي"
+
+#: template-parts/components/bag-drawer.php:25
+msgid "Fermer le panier"
+msgstr "إغلاق السلة"
+
+#: template-parts/components/bag-drawer.php:33
+msgid "Votre panier est vide."
+msgstr "سلتك فارغة."
+
+#: template-parts/components/bag-drawer.php:42
+msgid "Total indicatif"
+msgstr "المجموع الاسترشادي"
+
+#: template-parts/components/bag-drawer.php:55
+msgid "Votre commande part en message à Fati : elle confirme la disponibilité, les frais de port et le total."
+msgstr "يُرسل طلبك في رسالة إلى فاتي: تؤكد التوفر ومصاريف الشحن والمجموع."
+
+#: template-parts/components/bag-drawer.php:66
+msgid "Ajouté au panier"
+msgstr "أُضيف إلى السلة"
+
+#: template-parts/components/categorie-chips.php:53
+msgid "Filtrer par catégorie"
+msgstr "تصفية حسب الفئة"
+
+#: template-parts/components/categorie-chips.php:53
+#: template-parts/sections/hero.php:26
+msgid "Catégories de produits"
+msgstr "فئات المنتجات"
+
+#: template-parts/components/product-card.php:49
+msgid "Visuel à venir"
+msgstr "الصورة قريباً"
+
+#: template-parts/components/product-card.php:69
+msgid "Sur demande"
+msgstr "عند الطلب"
+
+#: template-parts/components/product-card.php:85
+#, php-format
+msgid "Ajouter %s au panier"
+msgstr "أضف %s إلى السلة"
+
+#: template-parts/components/product-card.php:86
+msgid "Ajouter"
+msgstr "أضف"
+
+#: template-parts/sections/about.php:6
+msgid "Fati, créatrice de Fatichanelya"
+msgstr "فاتي، مؤسِّسة Fatichanelya"
+
+#: template-parts/sections/about.php:12
+msgid "Photo de profil de Fati"
+msgstr "صورة فاتي"
+
+#: template-parts/sections/about.php:41
+msgid "Suivre Fati sur TikTok"
+msgstr "تابع فاتي على تيك توك"
+
+#: template-parts/sections/categories.php:33
+msgid "Nos catégories"
+msgstr "فئاتنا"
+
+#: template-parts/sections/categories.php:37
+msgid "Trouvez ce qu'il vous *faut*."
+msgstr "اعثر على *ما تحتاجه*."
+
+#. translators: %d : nombre de produits dans la catégorie.
+#: template-parts/sections/categories.php:75
+#, php-format
+msgid "%d produit"
+msgid_plural "%d produits"
+msgstr[0] "%d منتج"
+msgstr[1] "منتج واحد"
+msgstr[2] "منتجان"
+msgstr[3] "%d منتجات"
+msgstr[4] "%d منتجاً"
+msgstr[5] "%d منتج"
+
+#: template-parts/sections/faq.php:10
+msgid "Questions fréquentes"
+msgstr "الأسئلة الشائعة"
+
+#: template-parts/sections/faq.php:11
+msgid "Tout ce qu'il *faut savoir*."
+msgstr "كل ما *يجب معرفته*."
+
+#: template-parts/sections/hero.php:67
+#, php-format
+msgid "Portrait de Fati, créatrice de %s"
+msgstr "صورة فاتي، مؤسِّسة %s"
+
+#: template-parts/sections/parcours-commande.php:19
+msgid "Vous remplissez votre panier"
+msgstr "تملأ سلتك"
+
+#: template-parts/sections/parcours-commande.php:20
+msgid "Ajoutez les produits qui vous intéressent, sans engagement."
+msgstr "أضف المنتجات التي تهمك، بدون أي التزام."
+
+#: template-parts/sections/parcours-commande.php:23
+msgid "On confirme ensemble par message"
+msgstr "نؤكد معاً عبر رسالة"
+
+#: template-parts/sections/parcours-commande.php:24
+msgid "Disponibilité, frais de port réels et total, avant tout paiement."
+msgstr "التوفر ومصاريف الشحن الفعلية والمجموع، قبل أي دفع."
+
+#: template-parts/sections/parcours-commande.php:27
+msgid "Vous recevez chez vous"
+msgstr "تستلم في بيتك"
+
+#: template-parts/sections/parcours-commande.php:28
+msgid "Fati expédie depuis son propre stock, en Espagne."
+msgstr "تشحن فاتي من مخزونها الخاص في إسبانيا."
+
+#: template-parts/sections/parcours-commande.php:34
+msgid "Comment ça se passe"
+msgstr "كيف يتم الأمر"
+
+#: template-parts/sections/parcours-commande.php:49
+msgid "Rien à payer sur le site : tout se règle avec Fati, après confirmation."
+msgstr "لا شيء يُدفع على الموقع: كل شيء يُسوَّى مع فاتي بعد التأكيد."
+
+#: template-parts/sections/pledge.php:21
+msgid "Je ne recrute personne."
+msgstr "لا أقوم بتجنيد أحد."
+
+#: template-parts/sections/pledge.php:22
+msgid "Je ne promets aucun résultat de santé."
+msgstr "لا أعد بأي نتيجة صحية."
+
+#: template-parts/sections/pledge.php:23
+msgid "Je n'affiche aucun avis que je n'ai pas reçu."
+msgstr "لا أعرض أي رأي لم أتلقَّه."
+
+#: template-parts/sections/pledge.php:24
+msgid "Je ne mets pas de compte à rebours."
+msgstr "لا أضع عدّاً تنازلياً."
+
+#: template-parts/sections/pledge.php:30
+msgid "Du conseil *avant la pression d'acheter*."
+msgstr "نصيحة *قبل أي ضغط للشراء*."
+
+#: template-parts/sections/question.php:14
+msgid "Bonjour Fati, j'hésite entre plusieurs produits, pouvez-vous m'orienter ?"
+msgstr "مرحباً فاتي، أتردد بين عدة منتجات، هل يمكنك توجيهي؟"
+
+#: template-parts/sections/question.php:19
+msgid "Une question avant de choisir ?"
+msgstr "لديك سؤال قبل الاختيار؟"
+
+#: template-parts/sections/question.php:23
+msgid "Poser une question"
+msgstr "اطرح سؤالاً"
+
+#: template-parts/sections/question.php:27
+msgid "Livraison et retours"
+msgstr "التوصيل والإرجاع"
+
+#: template-parts/sections/shop-apercu.php:54
+msgid "Produits précédents"
+msgstr "المنتجات السابقة"
+
+#: template-parts/sections/shop-apercu.php:58
+msgid "Produits suivants"
+msgstr "المنتجات التالية"
+
+#: template-parts/sections/shop-apercu.php:67
+msgid "Sélection de produits, liste défilante"
+msgstr "تشكيلة المنتجات، قائمة قابلة للتمرير"
+
+#. translators: %d : nombre total de produits.
+#: template-parts/sections/shop-apercu.php:85
+#, php-format
+msgid "Voir les %d produits"
+msgstr "عرض المنتجات (%d)"
+
+#: template-parts/sections/training.php:70
+msgid "Formations à distance"
+msgstr "دورات تدريبية عن بُعد"
+
+#: template-parts/sections/training.php:76
+msgid "Toutes les formations"
+msgstr "كل الدورات"
+
+#: template-parts/sections/training.php:112
+msgid "Programme précédent"
+msgstr "البرنامج السابق"
+
+#: template-parts/sections/training.php:116
+msgid "Programme suivant"
+msgstr "البرنامج التالي"
+
+#: template-parts/sections/training.php:122
+msgid "Programmes de formation"
+msgstr "برامج التدريب"
+
+#: fatichanelya-core/inc/cpt.php:20
+#: fatichanelya-core/inc/cpt.php:22
+msgid "Produits"
+msgstr "المنتجات"
+
+#: fatichanelya-core/inc/cpt.php:65
+#: fatichanelya-core/inc/cpt.php:67
+msgid "Catégories de produit"
+msgstr "فئات المنتجات"
+
+#: fatichanelya-core/inc/seo.php:137
+msgid "Entrepreneure, créatrice et mentore"
+msgstr "رائدة أعمال، صانعة محتوى ومرشدة"

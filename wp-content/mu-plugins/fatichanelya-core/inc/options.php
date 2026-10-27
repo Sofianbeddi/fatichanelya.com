@@ -122,7 +122,7 @@ function fati_opt( $key, $fallback = '' ) {
 function fati_opt_lines( $key ) {
 	$raw  = fati_opt( $key );
 	$out  = array();
-	foreach ( preg_split( '/\R/', (string) $raw ) as $line ) {
+	foreach ( preg_split( '/\R/u', (string) $raw ) as $line ) {
 		$line = trim( $line );
 		if ( '' === $line ) {
 			continue;

@@ -48,3 +48,26 @@ add_filter(
 		return $sizes;
 	}
 );
+
+/**
+ * Gabarit d'une page traduite (1.7.0). Les pages À propos, Contact et Panier
+ * ont leur gabarit par slug (`page-a-propos.php`…) ; leur traduction arabe a
+ * un slug arabe, donc elle prendrait `page.php`. Elle reçoit ici le gabarit
+ * de son original, quel que soit son slug et sans dépendre d'une méta.
+ */
+add_filter(
+	'page_template',
+	function ( $template ) {
+		if ( ! function_exists( 'pll_get_post' ) || ! function_exists( 'pll_default_language' ) ) {
+			return $template;
+		}
+		$id     = get_queried_object_id();
+		$source = $id ? pll_get_post( $id, pll_default_language() ) : 0;
+		if ( ! $source || $source === $id ) {
+			return $template;
+		}
+		$original = get_post( $source );
+		$fichier  = $original ? locate_template( 'page-' . $original->post_name . '.php' ) : '';
+		return $fichier ? $fichier : $template;
+	}
+);

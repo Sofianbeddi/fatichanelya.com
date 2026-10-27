@@ -27,7 +27,9 @@
   } catch (e) {
     PRODUCTS = [];
   }
-  const byId = (id) => PRODUCTS.find((p) => String(p.id) === String(id));
+  /* Un produit se retrouve par n'importe lequel de ses identifiants de traduction (`ids`,
+     1.7.0) : le panier rempli sur la version française se relit sur l'arabe, et inversement. */
+  const byId = (id) => PRODUCTS.find((p) => String(p.id) === String(id) || (Array.isArray(p.ids) && p.ids.some((x) => String(x) === String(id))));
 
   /* Sans numéro WhatsApp, le lien mène à la page Contact : jamais à une ancre
      qui n'existe pas sur la page courante. */
@@ -35,7 +37,10 @@
     if (!CFG.whatsapp) return CFG.contact || '/';
     return `https://wa.me/${CFG.whatsapp}` + (message ? `?text=${encodeURIComponent(message)}` : '');
   };
-  const eur = (n) => new Intl.NumberFormat(document.documentElement.lang || 'fr', {
+  /* L'arabe générique (`ar`) formate en chiffres indo-arabes ; `ar-MA` garde les chiffres
+     occidentaux et la virgule, comme le français du site et le prix rendu par PHP. */
+  const localePrix = (document.documentElement.lang || 'fr').replace(/^ar(-[A-Za-z]+)?$/, 'ar-MA');
+  const eur = (n) => new Intl.NumberFormat(localePrix, {
     style: 'currency', currency: 'EUR',
     minimumFractionDigits: n % 1 === 0 ? 0 : 2
   }).format(n);
@@ -338,7 +343,8 @@
              un panier laissé la veille ne garde pas un ancien tarif. */
           const p = byId(it.id);
           const q = borne(Math.round(+it.q), 1, 99);
-          return [String(it.id), p ? ligneDepuis(p, q) : { ...it, q }];
+          /* La ligne prend l'identifiant du produit dans la langue de la page. */
+          return [String(p ? p.id : it.id), p ? ligneDepuis(p, q) : { ...it, q }];
         }));
     } catch (e) {
       /* Navigation privée, stockage plein ou désactivé : on repart à vide. */

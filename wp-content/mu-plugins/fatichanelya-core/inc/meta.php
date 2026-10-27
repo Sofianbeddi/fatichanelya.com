@@ -253,7 +253,9 @@ add_action(
 function fati_format_prix( $montant ) {
 	$montant = (float) $montant;
 	$decimales = fmod( $montant, 1 ) === 0.0 ? 0 : 2;
-	return number_format_i18n( $montant, $decimales ) . ' €';
+	// Virgule décimale dans toutes les langues du site (fr, ar, es) : la locale « ar »
+	// de WordPress donnait « 26.40 » alors que le reste du site écrit « 26,40 ».
+	return number_format( $montant, $decimales, ',', ' ' ) . ' €';
 }
 
 /**

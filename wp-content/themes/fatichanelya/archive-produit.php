@@ -57,7 +57,7 @@ get_template_part( 'template-parts/components/page-banner' );
 
 		<p class="result-count" id="result-count" role="status" aria-live="polite">
 			<?php
-			$total = (int) wp_count_posts( 'produit' )->publish;
+			$total = fati_nb_produits();
 			printf(
 				esc_html( _n( '%d produit affiché', '%d produits affichés', $total, 'fatichanelya' ) ),
 				$total

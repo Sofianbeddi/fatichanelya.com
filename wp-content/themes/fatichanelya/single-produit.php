@@ -79,7 +79,7 @@ while ( have_posts() ) :
 				// Sans prix en base, la ligne le dit plutôt que d'afficher 0 €.
 				?>
 				<p class="produit-prix<?php echo $prix ? '' : ' produit-prix--demande'; ?>">
-					<?php echo $prix ? esc_html( fati_format_prix( $prix ) ) : esc_html__( 'Prix communiqué sur demande', 'fatichanelya' ); ?>
+					<span class="produit-prix-valeur"><?php echo $prix ? esc_html( fati_format_prix( $prix ) ) : esc_html__( 'Prix communiqué sur demande', 'fatichanelya' ); ?></span>
 					<?php if ( $details['format'] ) : ?>
 						<span class="produit-format">· <?php echo esc_html( $details['format'] ); ?></span>
 					<?php endif; ?>

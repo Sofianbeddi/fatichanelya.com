@@ -1,6 +1,6 @@
 # Outils de recette (Playwright)
 
-Scripts utilisés pour la recette des thèmes 1.4.0 à 1.6.0 (27 oct. 2026). Ils se copient dans un dossier de travail hors
+Scripts utilisés pour la recette des thèmes 1.4.0 à 1.7.0 (27 oct. 2026). Ils se copient dans un dossier de travail hors
 dépôt (`~/recette-fati` par exemple), avec `npm i playwright pngjs pixelmatch` puis
 `npx playwright install chromium webkit firefox`. Socle de navigateurs, inventaire et replis :
 `_velix/compatibilite.md`.
@@ -15,6 +15,8 @@ dépôt (`~/recette-fati` par exemple), avec `npm i playwright pngjs pixelmatch`
 | `cercles-fati.mjs` | cercles de catégories (1.6.0) : rangée de quatre à 320–430 px, étiquettes sans débordement, bascule sélection / désélection, page de catégorie, accueil mobile, grand écran, RTL ; `OUT=` dossier des captures, `ENGINE=webkit` ou `firefox` |
 | `sticky-fati.mjs` | menu mobile et bloc filtres + recherche collants (1.5.0) : écart à l'en-tête en haut de page, en-tête réduit, paysage |
 | `arabe-fati.mjs` | texte arabe de substitution sur l'accueil en RTL : police Cairo chargée, interlignes |
+| `pages-fati-ar.json` | les treize adresses de la version arabe (accueil `/ar/`, boutique, catégorie, fiche, formations, fiche formation, À propos, contact, panier, deux pages légales, recherche, 404) |
+| `panier-ar.mjs` | version arabe : polices Alexandria / Plex chargées, panier partagé FR ↔ AR, prix de gauche à droite dans le tiroir |
 | `pages-fati.json` | les quinze adresses recettées (accueil, boutique, catégorie, fiche, formations, fiche formation, À propos, contact, panier, quatre pages légales, recherche, 404) |
 
 ```bash

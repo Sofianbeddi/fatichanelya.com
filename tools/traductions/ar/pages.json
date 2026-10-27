@@ -1,0 +1,22 @@
+{
+ "accueil": {
+  "titre": "الرئيسية",
+  "slug": "الرئيسية",
+  "template": ""
+ },
+ "a-propos": {
+  "titre": "من هي فاتي",
+  "slug": "من-هي-فاتي",
+  "template": "page-a-propos.php"
+ },
+ "contact": {
+  "titre": "اتصل بفاتي",
+  "slug": "اتصل-بفاتي",
+  "template": "page-contact.php"
+ },
+ "panier": {
+  "titre": "السلة",
+  "slug": "السلة",
+  "template": "page-panier.php"
+ }
+}

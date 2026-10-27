@@ -70,7 +70,7 @@ defined( 'ABSPATH' ) || exit;
 		// la page Panier elle-même) le clic mène au panier.
 		?>
 		<a class="icon-button bag-button" id="open-bag" href="<?php echo esc_url( fati_panier_url() ? fati_panier_url() : get_post_type_archive_link( 'produit' ) ); ?>"
-		   aria-label="<?php esc_attr_e( 'Panier : 0 article', 'fatichanelya' ); ?>"<?php echo is_page( array( 'panier', 'ma-selection' ) ) ? ' aria-current="page"' : ''; ?>>
+		   aria-label="<?php esc_attr_e( 'Panier : 0 article', 'fatichanelya' ); ?>"<?php echo fati_is_page( array( 'panier', 'ma-selection' ) ) ? ' aria-current="page"' : ''; ?>>
 			<?php echo fati_icon( 'bag', 24 ); ?>
 			<span class="bag-count" id="bag-count" aria-hidden="true" hidden>0</span>
 		</a>
