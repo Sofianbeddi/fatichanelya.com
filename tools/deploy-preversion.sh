@@ -9,5 +9,7 @@ cd "$(dirname "$0")/.."
 RACINE='~/domains/velixdigital.com/public_html/fatichanelya'
 URL='https://fatichanelya.velixdigital.com'
 rsync -az --delete --exclude=".DS_Store" -e ssh wp-content/themes/fatichanelya/ hostinger:"$RACINE/wp-content/themes/fatichanelya/"
-rsync -az --delete --exclude=".DS_Store" -e ssh wp-content/mu-plugins/ hostinger:"$RACINE/wp-content/mu-plugins/"
+# Les mu-plugins de l'hébergeur (hostinger-*.php) ne sont pas dans le dépôt : --delete les
+# supprimerait. Ils sont protégés par le filtre.
+rsync -az --delete --exclude=".DS_Store" --filter="protect hostinger-*" -e ssh wp-content/mu-plugins/ hostinger:"$RACINE/wp-content/mu-plugins/"
 echo "✔ Thème déployé en préversion → $URL"
