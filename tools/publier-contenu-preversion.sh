@@ -41,7 +41,7 @@ echo "→ Formations"
 echo "→ Visuels des catégories"
 bash tools/importer-categories.sh
 
-echo "→ Images de réglage (section Formations, partage, À propos)"
+echo "→ Images de réglage (section Formations, partage, À propos, hero)"
 poser_option_image() { # clé, fichier, titre
   local cle="$1" fichier="$2" titre="$3" att url
   att=$(wp post list --post_type=attachment --title="$titre" --field=ID --posts_per_page=1)
@@ -56,6 +56,8 @@ poser_option_image about_image    tools/medias/pages/about-main.webp      "about
 poser_option_image about_avatar   tools/medias/pages/about-avatar.webp    "about-avatar-2"
 # Thème 1.3.0 : photo large (Fati à droite) qui ouvre la page À propos.
 poser_option_image about_hero     tools/medias/pages/about-hero.webp      "about-hero"
+# Thème 1.7.2 : portrait de face en tailleur bleu nuit (2 nov. 2026).
+poser_option_image hero_image     tools/medias/pages/hero-fati.webp       "hero-fati-2"
 
 echo "→ Page Panier"
 # Le thème 1.2.0 cherche la page « panier » ; elle s'appelait « ma-selection ».

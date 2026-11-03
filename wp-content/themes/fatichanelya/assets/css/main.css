@@ -1901,6 +1901,10 @@ body.admin-bar{--admin-h:32px}
 }
 @media (min-width:600px) and (max-width:980px){
   .filters.hero-cats{grid-template-columns:repeat(var(--n,4),minmax(0,150px))}
+  /* 1.7.2 : en tablette portrait le portrait n'est plus qu'un bandeau de 300 px sur 600 à
+     950 de large ; à 18 % la bouche tombait dans le voile de la signature. À 26 %, les
+     yeux sont au tiers haut du bandeau. */
+  .hero-portrait img{object-position:center 26%}
 }
 
 /* =========================================================

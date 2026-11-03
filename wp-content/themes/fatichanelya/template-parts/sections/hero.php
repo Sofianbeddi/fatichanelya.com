@@ -60,10 +60,12 @@ $portrait = fati_opt( 'hero_image' );
 	<?php if ( $portrait ) : ?>
 		<figure class="hero-portrait">
 			<?php
-			// Élément LCP : chargement prioritaire, jamais différé.
+			// Élément LCP : chargement prioritaire, jamais différé. Photo entière
+			// (1.7.2) : le recadrage fati-portrait (620 × 1102) coupait le voile et
+			// les épaules du portrait de face.
 			echo fati_image(
 				$portrait,
-				'fati-portrait',
+				'full',
 				sprintf( __( 'Portrait de Fati, créatrice de %s', 'fatichanelya' ), get_bloginfo( 'name' ) ),
 				true
 			);

@@ -79,6 +79,16 @@ Option `og_image` (Contenus du site › Général) ; repli sur la photo du hero.
 `categories/cat-*.webp` : fournies par le gérant (sept. 2026 ; catégories refaites avec les vrais
 produits le 26 oct. 2026, voir plus bas). Ce sont les seules preuves visuelles du site.
 
+`pages/hero-fati.webp` — **portrait du hero de l'accueil**, remplacé le 2 nov. 2026 à la demande du
+gérant par un portrait de face en tailleur bleu nuit sur fond de studio crème (source
+`sources/hero-fati-tailleur-marine-source.png`, 1126 × 1397). Deux interventions, aucune sur le
+visage : la dernière colonne de pixels, verte (défaut d'export), est retirée, et le fond uni est
+prolongé de 110 px au-dessus du voile (les 40 premières lignes, pur fond, étirées en Lanczos) pour
+que le voile ne touche plus le bord du cadre. Résultat 1125 × 1507, WebP q86, 44 Ko, servi entier
+(thème 1.7.2). Le fond (#F6EFE5) est presque le beige du site. L'ancien portrait (veste claire,
+mur sauge et olivier) est dans `reserve/hero-fati-v1-veste-claire.webp` ; `about-main.webp` et
+`about-hero.webp` viennent toujours de l'ancienne séance.
+
 `pages/about-avatar.webp` — **photo de profil de la section « À propos »** (le rond de 96 px posé
 sur le portrait, taille `fati-avatar` 240 × 240), remplacée le 5 oct. 2026 à la demande du gérant par
 la photo de diplôme de Fati (320 × 320 fournie telle quelle, source

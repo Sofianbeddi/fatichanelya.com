@@ -692,3 +692,20 @@ Polylang (autant d'entrées que de langues ayant du contenu).
 Vérifié en français et en arabe, à 390 et 1440 px : ouverture, circulation au clavier, Échap, clic
 ailleurs, alignement ; rendu simulé à quatre langues (`captures/apres-1.7/menu-langues-*.png`).
 
+## Thème 1.7.2 (2 nov. 2026) — nouveau portrait du hero
+
+Le gérant remplace la photo du hero par un portrait de face (voir `medias.md`). Deux réglages :
+
+- Le hero sert la **photo entière** (`full`), plus la taille `fati-portrait`. Ce recadrage dur en
+  620 × 1102 gardait le centre d'une photo plus large que haute : voile collé au bord du cadre,
+  épaules coupées. Constaté au passage : le préchargement du hero prévu dans `assets.php` n'est
+  jamais émis (il s'accroche à `wp_head` priorité 1 depuis `wp_enqueue_scripts`, qui tourne
+  déjà à cette priorité) ; l'image garde `fetchpriority="high"`, non corrigé à ce jour.
+- En tablette portrait (600 à 980 px), le portrait n'est qu'un bandeau de 300 px de haut : à
+  `object-position` 18 % la bouche tombait dans le voile de la signature. Il passe à 26 % sur cette
+  plage, les yeux au tiers haut du bandeau ; 18 % reste valable partout ailleurs.
+
+**Piège** : une photo de personne plus large que 620 px et plus haute que 1102 px est rognée en
+620 × 1102 par toute taille `fati-portrait`. Simuler le cadre réel (375, 600, 768, 980, 1024, 1440,
+2722 px) avant de poser un portrait, en français et en arabe.
+
