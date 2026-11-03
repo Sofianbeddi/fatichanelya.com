@@ -86,8 +86,30 @@ visage : la dernière colonne de pixels, verte (défaut d'export), est retirée,
 prolongé de 110 px au-dessus du voile (les 40 premières lignes, pur fond, étirées en Lanczos) pour
 que le voile ne touche plus le bord du cadre. Résultat 1125 × 1507, WebP q86, 44 Ko, servi entier
 (thème 1.7.2). Le fond (#F6EFE5) est presque le beige du site. L'ancien portrait (veste claire,
-mur sauge et olivier) est dans `reserve/hero-fati-v1-veste-claire.webp` ; `about-main.webp` et
-`about-hero.webp` viennent toujours de l'ancienne séance.
+mur sauge et olivier) est dans `reserve/hero-fati-v1-veste-claire.webp`.
+
+**Une seule photo de Fati sur tout le site depuis le 3 nov. 2026** (« je veux la photo partout, je
+ne veux plus voir l'ancienne », thème 1.7.3). Les trois autres visuels sont tirés de la même base
+que le hero (colonne verte retirée, fond prolongé de 110 px en haut), sans retouche du visage :
+
+- `pages/about-hero.webp` — **photo large de la page À propos** (`about_hero`) : 2411 × 1507, soit
+  16:10 comme la taille `fati-hero`, visage à 74 % de la largeur (le cadre ne montre que la partie
+  droite, `object-position:100%`). La gauche et les 62 px de droite sont du fond de studio : chaque
+  ligne prend la couleur moyenne des 40 colonnes de pur fond du bord, raccordée en fondu sur
+  40 colonnes. WebP q86, 50 Ko. Ancienne : `reserve/about-hero-v1-veste-claire.webp`.
+- `pages/about-main.webp` — **portrait « À propos »** (`about_image`, section de l'accueil et
+  « Comment je travaille ») : zone 220, 60 → 900, 1269 de la base, 680 × 1209 (9:16 comme
+  `fati-portrait`), plus serré que le hero. WebP q86, 33 Ko. Ancien :
+  `reserve/about-main-v1-veste-claire.webp`.
+- `pages/about-avatar.webp` — **photo de profil** (`about_avatar`) : carré 252, 150 → 852, 750,
+  réduit à 320 × 320, 9 Ko. Remplace la photo de diplôme, gardée dans
+  `reserve/about-avatar-v2-diplome.webp`.
+
+Texte alternatif du portrait de la page À propos : « Fati, souriante, en tailleur bleu nuit »
+(traduction dans `tools/traductions/ar/chaines.py`). Les images `pages/tiktok-*.webp` et
+`pages/universe-training.webp` ne sont plus employées par le thème.
+
+Historique des photos de profil et du portrait « À propos » avant le 3 nov. 2026 :
 
 `pages/about-avatar.webp` — **photo de profil de la section « À propos »** (le rond de 96 px posé
 sur le portrait, taille `fati-avatar` 240 × 240), remplacée le 5 oct. 2026 à la demande du gérant par

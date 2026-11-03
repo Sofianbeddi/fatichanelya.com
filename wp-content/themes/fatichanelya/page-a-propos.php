@@ -138,7 +138,7 @@ $limites = array(
 			<div class="methode-grid">
 				<?php if ( fati_opt( 'about_image' ) ) : ?>
 					<figure class="methode-portrait reveal">
-						<?php echo fati_image( fati_opt( 'about_image' ), 'fati-portrait', __( 'Fati, souriante, en veste claire', 'fatichanelya' ) ); ?>
+						<?php echo fati_image( fati_opt( 'about_image' ), 'fati-portrait', __( 'Fati, souriante, en tailleur bleu nuit', 'fatichanelya' ) ); ?>
 					</figure>
 				<?php endif; ?>
 				<div class="methode-copy">

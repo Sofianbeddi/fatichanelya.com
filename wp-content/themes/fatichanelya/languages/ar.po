@@ -394,7 +394,7 @@ msgstr "فاتي، مؤسِّسة %s"
 
 #: page-a-propos.php:107
 #: template-parts/sections/about.php:18
-#: template-parts/sections/hero.php:73
+#: template-parts/sections/hero.php:75
 msgid "Entrepreneure · Créatrice · Mentore"
 msgstr "رائدة أعمال · صانعة محتوى · مرشدة"
 
@@ -407,8 +407,8 @@ msgid "Des produits, des formations, et *quelqu'un à qui parler*."
 msgstr "منتجات، ودورات تدريبية، *وشخص يمكنك التحدث إليه*."
 
 #: page-a-propos.php:141
-msgid "Fati, souriante, en veste claire"
-msgstr "فاتي مبتسمة، بسترة فاتحة اللون"
+msgid "Fati, souriante, en tailleur bleu nuit"
+msgstr "فاتي مبتسمة، ببدلة كحلية"
 
 #: page-a-propos.php:145
 msgid "Ma façon de faire"
@@ -898,7 +898,7 @@ msgstr "الأسئلة الشائعة"
 msgid "Tout ce qu'il *faut savoir*."
 msgstr "كل ما *يجب معرفته*."
 
-#: template-parts/sections/hero.php:67
+#: template-parts/sections/hero.php:69
 #, php-format
 msgid "Portrait de Fati, créatrice de %s"
 msgstr "صورة فاتي، مؤسِّسة %s"

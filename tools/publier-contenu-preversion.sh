@@ -52,12 +52,14 @@ poser_option_image() { # clé, fichier, titre
 }
 poser_option_image training_image tools/medias/pages/training-session.webp "training-session-2"
 poser_option_image og_image       tools/medias/pages/og-default.jpg       "og-default"
-poser_option_image about_image    tools/medias/pages/about-main.webp      "about-main-2"
-poser_option_image about_avatar   tools/medias/pages/about-avatar.webp    "about-avatar-2"
-# Thème 1.3.0 : photo large (Fati à droite) qui ouvre la page À propos.
-poser_option_image about_hero     tools/medias/pages/about-hero.webp      "about-hero"
-# Thème 1.7.2 : portrait de face en tailleur bleu nuit (2 nov. 2026).
+# Thèmes 1.7.2 et 1.7.3 : une seule photo de Fati partout, le portrait de face en tailleur
+# bleu nuit (2 et 3 nov. 2026). La recherche se fait par titre : un nouveau fichier prend un
+# nouveau titre, sinon l'ancien média resterait posé.
 poser_option_image hero_image     tools/medias/pages/hero-fati.webp       "hero-fati-2"
+poser_option_image about_image    tools/medias/pages/about-main.webp      "about-main-3"
+poser_option_image about_avatar   tools/medias/pages/about-avatar.webp    "about-avatar-3"
+# Photo large (Fati à droite) qui ouvre la page À propos.
+poser_option_image about_hero     tools/medias/pages/about-hero.webp      "about-hero-2"
 
 echo "→ Page Panier"
 # Le thème 1.2.0 cherche la page « panier » ; elle s'appelait « ma-selection ».

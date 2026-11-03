@@ -104,7 +104,7 @@ T = {
 "Entrepreneure · Créatrice · Mentore": "رائدة أعمال · صانعة محتوى · مرشدة",
 "Ce que vous trouverez ici": "ما ستجده هنا",
 "Des produits, des formations, et *quelqu'un à qui parler*.": "منتجات، ودورات تدريبية، *وشخص يمكنك التحدث إليه*.",
-"Fati, souriante, en veste claire": "فاتي مبتسمة، بسترة فاتحة اللون",
+"Fati, souriante, en tailleur bleu nuit": "فاتي مبتسمة، ببدلة كحلية",
 "Ma façon de faire": "طريقتي في العمل",
 "Comment je travaille": "كيف أعمل",
 "Ce qui n'est pas confirmé n'est pas affiché : disponibilité, frais de port et total sont validés avec vous avant l'envoi.": "ما لم يُؤكَّد لا يُعرض: التوفر ومصاريف الشحن والمجموع تُعتمد معك قبل الإرسال.",
