@@ -16,7 +16,7 @@
   <li><strong>البائعة</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>الصفة القانونية</strong> : شخص طبيعي، موزِّعة مستقلة لمنتجات DXN (عضوة في DXN)</li>
   <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
-  <li><strong>العنوان</strong> : [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا</li>
+  <li><strong>العنوان</strong> : <span dir="ltr">28027 Madrid</span>، إسبانيا (يُرسَل العنوان الكامل عند الطلب)</li>
   <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li><strong>واتساب</strong> : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
 </ul>
@@ -58,8 +58,6 @@
 
 <p>تُبيَّن مصاريف التوصيل على حدة قبل تأكيد طلبك. ويُعرض المبلغ الإجمالي الذي تدفعه دائماً قبل التأكيد، بما في ذلك مصاريف التوصيل. ولا يُضاف أي مبلغ بعد ذلك.</p>
 
-<p>[[À FOURNIR : mention de TVA exacte. Le rapport réglementaire signale que le taux applicable doit être validé produit par produit par un asesor fiscal (21 % ou 10 %), et que le régime du recargo de equivalencia peut changer ce qui doit être affiché. Ne rien écrire ici avant cette validation]]</p>
-
 <p>قد تتغير الأسعار في أي وقت، لكن السعر الملزم لك هو السعر الذي كان معروضاً لحظة تأكيدك لطلبك.</p>
 
 <p>إذا تسلّل خطأ واضح في السعر إلى صفحة منتج — سعر منخفض بشكل غير معقول مثلاً — فسأخبرك قبل الشحن، وستكون حراً في التأكيد بالسعر المصحح أو الإلغاء دون أي مصاريف.</p>
@@ -89,7 +87,7 @@
 
 <p>يُجهَّز طلبك بمجرد استلام الدفع.</p>
 
-<p>تُسلَّم إليك فاتورة عن كل طلب. [[À FOURNIR : préciser si elle est envoyée par e-mail, jointe au colis, ou les deux]]</p>
+<p>تُسلَّم إليك فاتورة عن كل طلب، وتكون مرفقة بالطرد.</p>
 
 <h2>7. التوصيل</h2>
 
@@ -99,7 +97,7 @@
 
 <h3>خلال كم من الوقت</h3>
 
-<p>[[À FOURNIR : délai de préparation, par exemple « j'expédie sous 1 à 3 jours ouvrés après réception du paiement »]] تتوقف مدة الشحن على بلد الوجهة : أؤكدها لك مع المبلغ الإجمالي لطلبك.</p>
+<p>أشحن طردك خلال 1 إلى 3 أيام عمل بعد استلام الدفع. تتوقف مدة الشحن على بلد الوجهة : أؤكدها لك مع المبلغ الإجمالي لطلبك.</p>
 
 <p>وعلى أي حال، وما لم نتفق على خلاف ذلك، يُسلَّم إليك طلبك <strong>في أجل أقصاه 30 يوماً</strong> من إبرام البيع. وإذا لم أتمكن من الوفاء بهذا الأجل، فأخبرك ويمكنك الإلغاء واسترداد المبلغ كاملاً.</p>
 
@@ -140,14 +138,14 @@
 <ul>
   <li>بالبريد الإلكتروني على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>؛</li>
   <li>عبر واتساب على <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a>؛</li>
-  <li>بالبريد العادي إلى [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا.</li>
+  <li>بالبريد العادي، إلى العنوان الذي أرسله إليك عند الطلب.</li>
 </ul>
 
 <p>يمكنك استخدام النموذج أدناه، لكنه ليس إلزامياً : تكفي جملة واضحة. وأؤكد لك استلام طلبك.</p>
 
 <h3>إرجاع المنتج</h3>
 
-<p>أعد إليّ المنتج <strong>خلال 14 يوماً</strong> من طلبك، إلى العنوان المذكور في البند 1.</p>
+<p>أعد إليّ المنتج <strong>خلال 14 يوماً</strong> من طلبك، إلى العنوان الذي أرسله إليك في رسالة عندما تخبرني بالإرجاع.</p>
 
 <p><strong>مصاريف الإرجاع على عاتقك</strong>، إلا إذا كان المنتج معيباً أو غير مطابق — ففي هذه الحالة أتحملها أنا.</p>
 
@@ -185,7 +183,7 @@
 
 <p>إلى عناية :<br>
 Fatima Bentaouyt Eziani<br>
-[[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا<br>
+<span dir="ltr">28027 Madrid</span>، إسبانيا<br>
 <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></p>
 
 <p>أُبلّغك بموجب هذه الرسالة بتراجعي عن العقد المتعلق ببيع السلعة (السلع) المبينة أدناه :</p>
@@ -229,14 +227,14 @@ Fatima Bentaouyt Eziani<br>
 <ul>
   <li>البريد الإلكتروني : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li>واتساب : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
-  <li>البريد العادي : [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا</li>
+  <li>البريد العادي : إلى العنوان الذي يُرسَل إليك عند الطلب</li>
 </ul>
 
 <p>أجيب على كل شكوى في اليوم نفسه، وفي أجل أقصاه 48 ساعة.</p>
 
 <p>وإذا لم نتوصل إلى حل، فإنك تحتفظ بطبيعة الحال بجميع سبل الطعن المتاحة لك كمستهلك. ففي إسبانيا، يمكنك على وجه الخصوص التوجه إلى المكتب البلدي لإعلام المستهلك <strong>Oficina Municipal de Información al Consumidor (OMIC)</strong> في بلديتك، أو إلى مصالح الاستهلاك في منطقتك ذات الحكم الذاتي. وإذا كنت مقيماً في بلد آخر من الاتحاد الأوروبي، فيمكن لهيئتك الوطنية لحماية المستهلك أن توجهك.</p>
 
-<p>[[À FOURNIR / À VALIDER PAR L'ABOGADO : quelles mentions relatives à la résolution alternative des litiges (directive 2013/11/UE, Ley 7/2017) restent obligatoires en 2026, et si Fati adhère à un système d'ADR. NE PAS ajouter de lien vers la plateforme européenne de règlement en ligne des litiges : elle a été supprimée le 20 juillet 2025 et le lien est mort]]</p>
+<p>لست منخرطة في أي نظام لتسوية النزاعات خارج القضاء.</p>
 
 <h2>12. القوة القاهرة</h2>
 

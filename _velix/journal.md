@@ -202,3 +202,21 @@ Aucune des quatre pages ne se publie tant qu'un seul marqueur `[[À FOURNIR]]` s
   Chaque langue passe de 28 à 19 marqueurs. Restent la rue, le délai de préparation, le seuil de livraison offerte, la remise de la facture, la TVA, le gestor, la conservation des factures, les journaux de l'hébergeur, l'ADR, le numéro de distributrice et les deux rappels sur le pixel et la campagne publicitaire.
 
   **Question pour l'abogado** : quand le client paie DXN directement, qui est le vendeur ? Les CGV désignent Fati. Les commentaires PHP du thème qui disent « ni carte ni PayPal » ne sont pas affichés ; ils décrivent le site, où rien ne se paie, et sont gardés. Vérifié sur la préversion : 30 pages publiées FR et AR, aucune mention de PayPal. Des révisions anciennes en base en contiennent encore, sans être publiques. **Production toujours en attente du feu vert.**
+- 2026-11-04 (soir, suite) · **Pages légales complètes : plus aucun marqueur**, en FR et en AR.
+
+  Réponses du gérant :
+  - Adresse sans rue (« reste smart ») : « 28027 Madrid, Espagne (adresse complète communiquée sur simple demande) ». Les courriers, la rétractation par courrier et les réclamations renvoient à une adresse donnée sur demande, et l'adresse de retour est envoyée par message.
+  - Préparation sous 1 à 3 jours ouvrés.
+  - Pas de livraison offerte : le paragraphe est retiré.
+  - Facture jointe au colis.
+
+  Décisions de l'agence, sur délégation du gérant :
+  - numéro de distributrice DXN non affiché ;
+  - pas de ligne TVA, puisque les prix sont déjà dits « taxes comprises » ;
+  - ligne gestor retirée ;
+  - factures conservées « au plus 6 ans » ;
+  - journaux du serveur à la durée fixée par Hostinger : le compte n'y a pas accès, donc aucun chiffre n'est donné ;
+  - « je n'adhère à aucun système de règlement extrajudiciaire des litiges » ;
+  - rappels pixel TikTok et campagne retirés des pages et gardés dans la note interne de `copy-legal.md`.
+
+  Préversion vérifiée : 30 pages publiées FR et AR, sans « [[ », sans PayPal, sans Naturixa, sans « 24 h en semaine ». Risques restants signalés au gérant : domicile incomplet au regard de la LSSI, pas d'alta d'autónoma, vendeur à identifier quand le client paie DXN. **Production et ouverture de l'indexation en attente du feu vert.**

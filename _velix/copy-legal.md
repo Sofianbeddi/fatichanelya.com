@@ -76,7 +76,7 @@ Le lien doit rester **permanent, facile, direct et gratuit** depuis le pied de p
   <li><strong>Nom et prénom</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>Statut</strong> : Personne physique, distributrice indépendante des produits DXN (membre DXN)</li>
   <li><strong>Numéro d'identification fiscale (NIF)</strong> : 71993478M</li>
-  <li><strong>Adresse</strong> : [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne</li>
+  <li><strong>Adresse</strong> : 28027 Madrid, Espagne (adresse complète communiquée sur simple demande)</li>
   <li><strong>Adresse e-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li><strong>Téléphone / WhatsApp</strong> : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
 </ul>
@@ -107,8 +107,6 @@ Le lien doit rester **permanent, facile, direct et gratuit** depuis le pied de p
 </ul>
 
 <p>DXN et les noms de produits sont des marques appartenant à leurs titulaires respectifs. Ils sont cités ici pour identifier les produits que je revends.</p>
-
-<p>[[À FOURNIR : numéro de distributrice DXN de Fati, si elle souhaite l'afficher — c'est une preuve d'authenticité utile face aux contrefaçons. Vérifier au préalable auprès de DXN, par écrit, que son contrat autorise la vente en ligne, l'usage de la marque et des visuels produits sur un site personnel]]</p>
 
 <h2>Ce que vous pouvez faire de ce site, et ce que vous ne pouvez pas</h2>
 
@@ -165,7 +163,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 <ul>
   <li><strong>Responsable du traitement</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>NIF</strong> : 71993478M</li>
-  <li><strong>Adresse</strong> : [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne</li>
+  <li><strong>Adresse</strong> : 28027 Madrid, Espagne (adresse complète communiquée sur simple demande)</li>
   <li><strong>E-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
 </ul>
 
@@ -203,8 +201,6 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 
 <p><strong>Aujourd'hui, ce site n'utilise aucun cookie de mesure d'audience ni de publicité.</strong> Seuls sont utilisés les cookies strictement nécessaires à son fonctionnement — par exemple pour garder en mémoire la sélection de produits que vous composez pendant votre visite. Ceux-là ne demandent pas votre consentement, parce que sans eux le site ne marche pas.</p>
 
-<p>[[À FOURNIR / À METTRE À JOUR AVANT LA PREMIÈRE CAMPAGNE PUBLICITAIRE : dès qu'un outil de mesure d'audience ou le pixel TikTok sera installé, cette section doit être entièrement réécrite et un bandeau de consentement conforme aux exigences de l'AEPD doit être posé — bouton « Refuser » aussi visible et aussi facile que « Accepter », choix par catégories, et aucun script publicitaire déclenché avant acceptation. Ne pas publier de campagne avant que ce soit fait]]</p>
-
 <h2>Qui d'autre voit vos données</h2>
 
 <p>Je ne vends, ne loue et n'échange vos données avec personne. Elles sont transmises uniquement à ceux qui en ont besoin pour que le service fonctionne.</p>
@@ -235,11 +231,6 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
     <td>Si vous choisissez de m'écrire par ce canal</td>
     <td>Meta Platforms Ireland Limited, Irlande</td>
   </tr>
-  <tr>
-    <td>Mon comptable</td>
-    <td>Pour la tenue de ma comptabilité et mes obligations fiscales</td>
-    <td>[[À FOURNIR : cabinet du gestor, ou supprimer cette ligne si Fati tient sa comptabilité seule]]</td>
-  </tr>
 </table>
 
 <p>Vos données peuvent aussi être communiquées à une administration ou à une autorité judiciaire si la loi m'y oblige.</p>
@@ -250,7 +241,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 
 <ul>
   <li><strong>WhatsApp / Meta</strong> — l'entité européenne est irlandaise, mais le groupe est américain et des transferts vers les États-Unis existent. Ils sont encadrés par le cadre de protection des données UE–États-Unis et par des clauses contractuelles types. Si vous préférez éviter ce canal, l'e-mail est toujours possible.</li>
-  <li><strong>TikTok</strong> — je publie du contenu sur TikTok, mais <strong>ce site ne contient aujourd'hui aucun traceur TikTok</strong>. Si vous arrivez ici depuis un lien TikTok, c'est TikTok qui sait que vous avez cliqué, pas moi. Ce qui se passe dans l'application relève de la politique de confidentialité de TikTok, que je ne maîtrise pas. [[À METTRE À JOUR si le pixel TikTok est installé un jour : il faudra décrire ce traitement, sa base légale — le consentement — et les transferts hors UE de TikTok]]</li>
+  <li><strong>TikTok</strong> — je publie du contenu sur TikTok, mais <strong>ce site ne contient aujourd'hui aucun traceur TikTok</strong>. Si vous arrivez ici depuis un lien TikTok, c'est TikTok qui sait que vous avez cliqué, pas moi. Ce qui se passe dans l'application relève de la politique de confidentialité de TikTok, que je ne maîtrise pas.</li>
   <li><strong>L'hébergeur</strong> — le site et sa base de données sont hébergés par Hostinger International Ltd., société établie à Chypre, sur un serveur situé en France, dans l'Union européenne.</li>
 </ul>
 
@@ -271,11 +262,11 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
   </tr>
   <tr>
     <td>Factures et pièces comptables</td>
-    <td>La durée imposée par la loi espagnole. [[À FOURNIR : durée exacte, à confirmer par le gestor — le rapport réglementaire la marque comme à vérifier]]</td>
+    <td>La durée imposée par la loi espagnole, au plus 6 ans.</td>
   </tr>
   <tr>
     <td>Journaux de connexion du serveur</td>
-    <td>[[À FOURNIR : durée de rétention des logs appliquée par l'hébergeur. À lui demander]]</td>
+    <td>La durée fixée par mon hébergeur, Hostinger, pour la sécurité du serveur. Je ne m'en sers pas pour suivre les visiteurs.</td>
   </tr>
 </table>
 
@@ -297,7 +288,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 
 <h3>Comment les exercer</h3>
 
-<p>Écrivez-moi à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>, ou par courrier à [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne. Dites-moi simplement ce que vous voulez.</p>
+<p>Écrivez-moi à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a> ou sur WhatsApp au <a href="https://wa.me/34622577161">+34 622 577 161</a>. Pour un courrier, je vous communique mon adresse postale complète sur simple demande. Dites-moi simplement ce que vous voulez.</p>
 
 <p>Je peux avoir besoin de vérifier que c'est bien vous — c'est une protection pour vous, pas un obstacle. Je réponds dans un délai d'un mois. Si votre demande est complexe, ce délai peut être prolongé de deux mois, et je vous préviens dans ce cas. C'est gratuit.</p>
 
@@ -355,7 +346,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
   <li><strong>Vendeuse</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>Statut</strong> : Personne physique, distributrice indépendante des produits DXN (membre DXN)</li>
   <li><strong>NIF</strong> : 71993478M</li>
-  <li><strong>Adresse</strong> : [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne</li>
+  <li><strong>Adresse</strong> : 28027 Madrid, Espagne (adresse complète communiquée sur simple demande)</li>
   <li><strong>E-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li><strong>WhatsApp</strong> : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
 </ul>
@@ -397,8 +388,6 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <p>Les frais de livraison sont indiqués séparément avant que vous ne validiez votre commande. Le montant total que vous payez est toujours affiché avant validation, frais de livraison inclus. Aucune somme ne s'ajoute après.</p>
 
-<p>[[À FOURNIR : mention de TVA exacte. Le rapport réglementaire signale que le taux applicable doit être validé produit par produit par un asesor fiscal (21 % ou 10 %), et que le régime du recargo de equivalencia peut changer ce qui doit être affiché. Ne rien écrire ici avant cette validation]]</p>
-
 <p>Les prix peuvent changer à tout moment, mais le prix qui vous engage est celui qui était affiché au moment où vous avez validé votre commande.</p>
 
 <p>Si une erreur de prix manifeste se glissait sur une fiche — un prix absurdement bas par exemple — je vous préviendrais avant d'expédier, et vous seriez libre de confirmer au prix corrigé ou d'annuler sans frais.</p>
@@ -428,7 +417,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <p>Votre commande est préparée une fois le paiement reçu.</p>
 
-<p>Une facture vous est remise pour chaque commande. [[À FOURNIR : préciser si elle est envoyée par e-mail, jointe au colis, ou les deux]]</p>
+<p>Une facture vous est remise pour chaque commande : elle est jointe au colis.</p>
 
 <h2>7. Livraison</h2>
 
@@ -438,7 +427,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <h3>En combien de temps</h3>
 
-<p>[[À FOURNIR : délai de préparation, par exemple « j'expédie sous 1 à 3 jours ouvrés après réception du paiement »]] Le délai d'acheminement dépend du pays de destination : je vous le confirme avec le total de votre commande.</p>
+<p>J'expédie votre colis sous 1 à 3 jours ouvrés après réception du paiement. Le délai d'acheminement dépend du pays de destination : je vous le confirme avec le total de votre commande.</p>
 
 <p>En tout état de cause, et sauf accord différent entre nous, votre commande vous est livrée <strong>au plus tard 30 jours</strong> après la conclusion de la vente. Si je ne peux pas tenir ce délai, je vous préviens et vous pouvez annuler et être remboursée intégralement.</p>
 
@@ -479,14 +468,14 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 <ul>
   <li>par e-mail à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a> ;</li>
   <li>par WhatsApp au <a href="https://wa.me/34622577161">+34 622 577 161</a> ;</li>
-  <li>par courrier à [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne.</li>
+  <li>par courrier, à l'adresse que je vous communique sur simple demande.</li>
 </ul>
 
 <p>Vous pouvez utiliser le formulaire ci-dessous, mais ce n'est pas obligatoire : une phrase claire suffit. Je vous confirme la réception de votre demande.</p>
 
 <h3>Renvoyer le produit</h3>
 
-<p>Renvoyez-moi le produit <strong>dans les 14 jours</strong> qui suivent votre demande, à l'adresse indiquée à l'article 1.</p>
+<p>Renvoyez-moi le produit <strong>dans les 14 jours</strong> qui suivent votre demande, à l'adresse que je vous communique par message quand vous me signalez votre retour.</p>
 
 <p><strong>Les frais de renvoi sont à votre charge</strong>, sauf si le produit était défectueux ou non conforme — dans ce cas, ils sont pour moi.</p>
 
@@ -524,7 +513,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <p>À l'attention de :<br>
 Fatima Bentaouyt Eziani<br>
-[[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne<br>
+28027 Madrid, Espagne<br>
 <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></p>
 
 <p>Je vous notifie par la présente ma rétractation du contrat portant sur la vente du ou des biens ci-dessous :</p>
@@ -568,14 +557,14 @@ Fatima Bentaouyt Eziani<br>
 <ul>
   <li>E-mail : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li>WhatsApp : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
-  <li>Courrier : [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne</li>
+  <li>Courrier : à l'adresse communiquée sur simple demande</li>
 </ul>
 
 <p>Je réponds à chaque réclamation le jour même, et au plus tard sous 48 heures.</p>
 
 <p>Si nous ne trouvons pas de solution, vous conservez naturellement tous vos recours de consommatrice. En Espagne, vous pouvez notamment vous adresser à l'<strong>Oficina Municipal de Información al Consumidor (OMIC)</strong> de votre commune, ou aux services de consommation de votre Communauté autonome. Si vous résidez dans un autre pays de l'Union européenne, votre organisme national de protection des consommateurs peut vous orienter.</p>
 
-<p>[[À FOURNIR / À VALIDER PAR L'ABOGADO : quelles mentions relatives à la résolution alternative des litiges (directive 2013/11/UE, Ley 7/2017) restent obligatoires en 2026, et si Fati adhère à un système d'ADR. NE PAS ajouter de lien vers la plateforme européenne de règlement en ligne des litiges : elle a été supprimée le 20 juillet 2025 et le lien est mort]]</p>
+<p>Je n'adhère à aucun système de règlement extrajudiciaire des litiges.</p>
 
 <h2>12. Force majeure</h2>
 
@@ -626,15 +615,13 @@ paragraphe de plus.
 
 <p>Les frais de livraison dépendent du pays de destination et du poids du colis : je vous les confirme par message, avec le total de votre commande.</p>
 
-<p>[[À FOURNIR : existe-t-il un seuil de livraison offerte ? Par exemple « Livraison offerte à partir de 60 € d'achat ». Si oui, l'écrire ici en évidence : c'est un argument de panier moyen. Si non, ne rien inventer]]</p>
-
 <p>Le montant exact vous est indiqué avant que vous ne validiez votre commande. Aucun frais ne s'ajoute après.</p>
 
 <h2>En combien de temps</h2>
 
 <h3>Préparation</h3>
 
-<p>[[À FOURNIR : délai de préparation réel, par exemple « Je prépare et je dépose votre colis sous 1 à 3 jours ouvrés après réception du paiement. »]]</p>
+<p>Je prépare et je dépose votre colis sous 1 à 3 jours ouvrés après réception du paiement.</p>
 
 <p>J'expédie les produits depuis mon propre stock, en Espagne. Ce n'est pas un entrepôt automatisé : c'est moi qui prépare votre colis.</p>
 
@@ -679,7 +666,7 @@ paragraphe de plus.
 
 <p><strong>Les frais de renvoi restent à votre charge</strong>, sauf si le produit était abîmé, périmé ou non conforme — dans ce cas c'est moi qui paie, et vous n'avancez rien.</p>
 
-<p>L'adresse de retour est celle des mentions légales.</p>
+<p>Je vous communique l'adresse de retour par message, quand vous me signalez votre retour.</p>
 
 <h2>Ce qui peut être retourné, et ce qui ne peut pas</h2>
 
@@ -779,6 +766,32 @@ Liste consolidée, par ordre de blocage.
   ou DXN ? Les CGV désignent Fati.
 - **Reste visible** : les deux notes `[[À METTRE À JOUR…]]` sur le pixel TikTok et la campagne
   publicitaire, qui sont des rappels internes.
+- **4 nov. 2026, soir : plus aucun marqueur** dans les huit pages. Décisions du gérant :
+  - l'adresse sans rue (« reste smart ») : « 28027 Madrid, Espagne (adresse complète communiquée sur
+    simple demande) », et l'adresse de retour est donnée par message ;
+  - préparation sous 1 à 3 jours ouvrés ;
+  - pas de livraison offerte ;
+  - facture jointe au colis.
+
+  Décisions de l'agence, sur délégation :
+  - le numéro de distributrice DXN n'est pas affiché (facultatif, et l'accord écrit de DXN est à
+    vérifier) ;
+  - pas de ligne TVA, puisque les prix sont déjà dits « taxes comprises » à l'article 4 ;
+  - la ligne gestor est retirée, puisqu'il n'y a pas de statut ;
+  - les factures sont conservées « au plus 6 ans » ;
+  - les journaux restent à la durée fixée par Hostinger, sans chiffre, car le compte n'y a pas
+    accès ;
+  - les CGV disent « je n'adhère à aucun système de règlement extrajudiciaire » ;
+  - les deux rappels pixel et campagne sont retirés des pages et restent ici.
+
+  **Risques restants, signalés à Sofian** :
+  - la LSSI demande un domicile complet ;
+  - la vente se fait sans alta d'autónoma (facture, TVA) ;
+  - on ne sait pas qui vend quand le client paie DXN.
+- **Rappel avant toute mesure d'audience ou pixel TikTok** : réécrire la section Cookies de la
+  confidentialité, décrire le traitement, sa base légale (le consentement) et les transferts hors UE,
+  et poser un bandeau conforme à l'AEPD (bouton « Refuser » aussi visible que « Accepter », choix par
+  catégories, rien ne se déclenche avant acceptation).
 - **Publication** : `tools/publier-pages-legales-en-ligne.sh` met à jour les huit pages (FR + AR)
   sans rien créer.
 

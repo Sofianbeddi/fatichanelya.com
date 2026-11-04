@@ -15,7 +15,7 @@
 <ul>
   <li><strong>المسؤولة عن المعالجة</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
-  <li><strong>العنوان</strong> : [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا</li>
+  <li><strong>العنوان</strong> : <span dir="ltr">28027 Madrid</span>، إسبانيا (يُرسَل العنوان الكامل عند الطلب)</li>
   <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
 </ul>
 
@@ -53,8 +53,6 @@
 
 <p><strong>حالياً، لا يستخدم هذا الموقع أي ملفات تعريف ارتباط لقياس الجمهور أو للإعلان.</strong> لا تُستخدم سوى ملفات تعريف الارتباط الضرورية تماماً لتشغيله — مثلاً لحفظ تشكيلة المنتجات التي تكوّنها أثناء زيارتك. وهذه لا تتطلب موافقتك، لأن الموقع لا يعمل من دونها.</p>
 
-<p>[[À FOURNIR / À METTRE À JOUR AVANT LA PREMIÈRE CAMPAGNE PUBLICITAIRE : dès qu'un outil de mesure d'audience ou le pixel TikTok sera installé, cette section doit être entièrement réécrite et un bandeau de consentement conforme aux exigences de l'AEPD doit être posé — bouton « Refuser » aussi visible et aussi facile que « Accepter », choix par catégories, et aucun script publicitaire déclenché avant acceptation. Ne pas publier de campagne avant que ce soit fait]]</p>
-
 <h2>من غيري يطّلع على بياناتك</h2>
 
 <p>لا أبيع بياناتك ولا أؤجرها ولا أتبادلها مع أي أحد. ولا تُنقل إلا إلى من يحتاجون إليها لكي تعمل الخدمة.</p>
@@ -85,11 +83,6 @@
     <td>إذا اخترت الكتابة لي عبر هذه القناة</td>
     <td>Meta Platforms Ireland Limited، أيرلندا</td>
   </tr>
-  <tr>
-    <td>محاسبي</td>
-    <td>لمسك حساباتي والوفاء بالتزاماتي الضريبية</td>
-    <td>[[À FOURNIR : cabinet du gestor, ou supprimer cette ligne si Fati tient sa comptabilité seule]]</td>
-  </tr>
 </table>
 
 <p>كما يمكن أن تُبلَّغ بياناتك إلى إدارة عمومية أو سلطة قضائية إذا ألزمني القانون بذلك.</p>
@@ -100,7 +93,7 @@
 
 <ul>
   <li><strong>واتساب / Meta</strong> — الكيان الأوروبي أيرلندي، لكن المجموعة أمريكية وتوجد عمليات نقل نحو الولايات المتحدة. وهي مؤطَّرة بإطار حماية البيانات بين الاتحاد الأوروبي والولايات المتحدة وببنود تعاقدية نموذجية. إذا كنت تفضل تجنب هذه القناة، فالبريد الإلكتروني متاح دائماً.</li>
-  <li><strong>تيك توك</strong> — أنشر محتوى على تيك توك، لكن <strong>هذا الموقع لا يحتوي حالياً على أي أداة تتبع من تيك توك</strong>. إذا وصلت إلى هنا من رابط على تيك توك، فتيك توك هو من يعلم أنك نقرت، لا أنا. وما يجري داخل التطبيق يخضع لسياسة الخصوصية الخاصة بتيك توك، التي لا سلطة لي عليها. [[À METTRE À JOUR si le pixel TikTok est installé un jour : il faudra décrire ce traitement, sa base légale — le consentement — et les transferts hors UE de TikTok]]</li>
+  <li><strong>تيك توك</strong> — أنشر محتوى على تيك توك، لكن <strong>هذا الموقع لا يحتوي حالياً على أي أداة تتبع من تيك توك</strong>. إذا وصلت إلى هنا من رابط على تيك توك، فتيك توك هو من يعلم أنك نقرت، لا أنا. وما يجري داخل التطبيق يخضع لسياسة الخصوصية الخاصة بتيك توك، التي لا سلطة لي عليها.</li>
   <li><strong>المستضيف</strong> — يستضيف الموقعَ وقاعدةَ بياناته <span dir="ltr">Hostinger International Ltd.</span>، وهي شركة مقرها قبرص، على خادم موجود في فرنسا، داخل الاتحاد الأوروبي.</li>
 </ul>
 
@@ -121,11 +114,11 @@
   </tr>
   <tr>
     <td>الفواتير والمستندات المحاسبية</td>
-    <td>المدة التي يفرضها القانون الإسباني. [[À FOURNIR : durée exacte, à confirmer par le gestor — le rapport réglementaire la marque comme à vérifier]]</td>
+    <td>المدة التي يفرضها القانون الإسباني، 6 سنوات على الأكثر.</td>
   </tr>
   <tr>
     <td>سجلات الاتصال الخاصة بالخادم</td>
-    <td>[[À FOURNIR : durée de rétention des logs appliquée par l'hébergeur. À lui demander]]</td>
+    <td>المدة التي يحددها مستضيف الموقع، Hostinger، لأمن الخادم. ولا أستعملها لتتبع الزوار.</td>
   </tr>
 </table>
 
@@ -147,7 +140,7 @@
 
 <h3>كيف تمارسها</h3>
 
-<p>اكتب لي على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>، أو بالبريد العادي إلى [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا. قل لي ببساطة ما تريده.</p>
+<p>اكتب لي على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a> أو على واتساب <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a>. وإذا فضّلت البريد العادي، أرسل إليك عنواني البريدي الكامل عند الطلب. قل لي ببساطة ما تريده.</p>
 
 <p>قد أحتاج إلى التحقق من أنك أنت فعلاً — وهذه حماية لك، لا عائق. أرد في غضون شهر واحد. وإذا كان طلبك معقداً، فقد تُمدَّد هذه المهلة شهرين إضافيين، وأخبرك بذلك في هذه الحالة. والأمر مجاني.</p>
 

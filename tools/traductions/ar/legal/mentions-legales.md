@@ -16,7 +16,7 @@
   <li><strong>الاسم الشخصي والعائلي</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>الصفة القانونية</strong> : شخص طبيعي، موزِّعة مستقلة لمنتجات DXN (عضوة في DXN)</li>
   <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
-  <li><strong>العنوان</strong> : [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا</li>
+  <li><strong>العنوان</strong> : <span dir="ltr">28027 Madrid</span>، إسبانيا (يُرسَل العنوان الكامل عند الطلب)</li>
   <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li><strong>الهاتف / واتساب</strong> : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
 </ul>
@@ -47,8 +47,6 @@
 </ul>
 
 <p>DXN وأسماء المنتجات علامات تجارية مملوكة لأصحابها. وهي مذكورة هنا للتعريف بالمنتجات التي أعيد بيعها.</p>
-
-<p>[[À FOURNIR : numéro de distributrice DXN de Fati, si elle souhaite l'afficher — c'est une preuve d'authenticité utile face aux contrefaçons. Vérifier au préalable auprès de DXN, par écrit, que son contrat autorise la vente en ligne, l'usage de la marque et des visuels produits sur un site personnel]]</p>
 
 <h2>ما يمكنك فعله بهذا الموقع، وما لا يمكنك</h2>
 
