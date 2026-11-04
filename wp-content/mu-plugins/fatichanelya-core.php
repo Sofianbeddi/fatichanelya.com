@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Fatichanelya — Cœur métier
  * Description: Types de contenu, champs, options, SEO et durcissement. Indépendant du thème : le contenu survit à un changement de thème.
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author:      Velix Digital
  *
  * @package Fatichanelya

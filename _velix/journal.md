@@ -220,3 +220,27 @@ Aucune des quatre pages ne se publie tant qu'un seul marqueur `[[À FOURNIR]]` s
   - rappels pixel TikTok et campagne retirés des pages et gardés dans la note interne de `copy-legal.md`.
 
   Préversion vérifiée : 30 pages publiées FR et AR, sans « [[ », sans PayPal, sans Naturixa, sans « 24 h en semaine ». Risques restants signalés au gérant : domicile incomplet au regard de la LSSI, pas d'alta d'autónoma, vendeur à identifier quand le client paie DXN. **Production et ouverture de l'indexation en attente du feu vert.**
+- 2026-11-04 · **Production mise à jour et ouverte à Google** (« Go prod + google »).
+
+  Envois en production :
+  - `deploy-production.sh --go` : thème 1.7.4, archive `~/backups/fati-prod-theme-avant-20261104-1105.tgz` ;
+  - chaînes arabes : `importer-reglages-ar.php`, 3 entrées Naturixa purgées ;
+  - huit pages légales : `publier-pages-legales-en-ligne.sh production`, de 88 à 0 marqueur par langue, sauvegarde `fati-legal-production-20261104-110607/avant.json`.
+
+  **Indexation ouverte** : bloc X-Robots-Tag retiré du `.htaccess` (copie `~/backups/htaccess-prod-avant-indexation-20261104`) et `blog_public` à 1.
+
+  Avant que Google ne passe, le plan du site montrait l'article « Bonjour tout le monde », « Non classé », la « Page d'exemple », le panier et `/author/velix/`. La protection `?author=N` du mu-plugin ne marchait pas : la redirection canonique de WordPress, à la même priorité 10, passait avant et menait à `/author/velix/`. Corrigé par le **mu-plugin 1.1.1** :
+  - redirection à la priorité 1, pages d'auteur renvoyées vers l'accueil ;
+  - plan du site sans utilisateurs, articles, catégories, étiquettes ni formats ;
+  - panier hors plan et en `noindex, follow` dans les deux langues.
+
+  Article et page d'exemple mis à la corbeille en local, en préversion et en prod. CDN vidé par l'API.
+
+  Vérifié en ligne :
+  - aucun X-Robots-Tag ;
+  - `robots.txt` avec le plan du site ;
+  - 8 sous-plans, 240 URL, toutes en 200, sans noindex et sans « [[ », PayPal, Naturixa, « 24 h en semaine » ni adresse de préversion ;
+  - `?author=1` et `/author/velix/` en 301 vers l'accueil, exemples en 404 ;
+  - nouveaux textes FR et AR visibles.
+
+  Reste à faire, hors serveur : déclarer le domaine dans Google Search Console et y soumettre `https://fatichanelya.com/wp-sitemap.xml`.

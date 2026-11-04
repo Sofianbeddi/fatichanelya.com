@@ -211,3 +211,75 @@ add_filter(
 	},
 	20
 );
+
+/*
+ * Plan du site et robots, à l'ouverture de l'indexation (4 nov. 2026). Le site n'a ni blog ni
+ * pages d'auteur : le plan ne garde que pages, produits, formations et catégories de produits.
+ * Le panier est propre à chaque visiteur : hors plan et en noindex, dans toutes les langues.
+ */
+add_filter(
+	'wp_sitemaps_add_provider',
+	static function ( $provider, $name ) {
+		return 'users' === $name ? false : $provider;
+	},
+	10,
+	2
+);
+add_filter(
+	'wp_sitemaps_post_types',
+	static function ( $types ) {
+		unset( $types['post'] );
+		return $types;
+	}
+);
+add_filter(
+	'wp_sitemaps_taxonomies',
+	static function ( $taxonomies ) {
+		unset( $taxonomies['category'], $taxonomies['post_tag'], $taxonomies['post_format'] );
+		return $taxonomies;
+	}
+);
+
+/** Identifiants des pages à garder hors des moteurs (panier, traductions comprises). */
+function fati_pages_sans_index() {
+	static $ids = null;
+	if ( null !== $ids ) {
+		return $ids;
+	}
+	$ids = array();
+	foreach ( array( 'panier', 'ma-selection' ) as $slug ) {
+		$page = get_page_by_path( $slug );
+		if ( ! $page ) {
+			continue;
+		}
+		$ids[] = $page->ID;
+		if ( function_exists( 'pll_get_post_translations' ) ) {
+			$ids = array_merge( $ids, array_values( pll_get_post_translations( $page->ID ) ) );
+		}
+	}
+	$ids = array_values( array_unique( array_map( 'intval', $ids ) ) );
+	return $ids;
+}
+
+add_filter(
+	'wp_sitemaps_posts_query_args',
+	static function ( $args, $post_type ) {
+		if ( 'page' === $post_type ) {
+			$args['post__not_in'] = array_merge( $args['post__not_in'] ?? array(), fati_pages_sans_index() );
+		}
+		return $args;
+	},
+	10,
+	2
+);
+
+add_filter(
+	'wp_robots',
+	static function ( $robots ) {
+		if ( is_page() && in_array( get_queried_object_id(), fati_pages_sans_index(), true ) ) {
+			$robots['noindex'] = true;
+			$robots['follow']  = true;
+		}
+		return $robots;
+	}
+);

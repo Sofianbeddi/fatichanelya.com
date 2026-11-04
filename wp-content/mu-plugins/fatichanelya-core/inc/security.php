@@ -26,15 +26,21 @@ add_action(
 remove_action( 'wp_head', 'wp_generator' );
 add_filter( 'the_generator', '__return_empty_string' );
 
-/** Coupe l'énumération des comptes via ?author=N et via l'API REST. */
+/**
+ * Coupe l'énumération des comptes via ?author=N, les pages d'auteur et l'API REST.
+ * Priorité 1 : à 10, la redirection canonique de WordPress passait avant et menait
+ * ?author=1 tout droit à /author/<identifiant>/ (constaté le 4 nov. 2026). Le site n'a pas
+ * de pages d'auteur : elles renvoient à l'accueil.
+ */
 add_action(
 	'template_redirect',
 	function () {
-		if ( ! is_admin() && isset( $_GET['author'] ) ) {
+		if ( ! is_admin() && ( isset( $_GET['author'] ) || is_author() ) ) {
 			wp_safe_redirect( home_url( '/' ), 301 );
 			exit;
 		}
-	}
+	},
+	1
 );
 
 add_filter(
