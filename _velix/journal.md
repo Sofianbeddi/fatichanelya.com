@@ -194,3 +194,11 @@ Aucune des quatre pages ne se publie tant qu'un seul marqueur `[[À FOURNIR]]` s
   - Conservation, sur recommandation de l'agence à la demande du gérant : 1 an après le dernier échange sans commande, 3 ans après la livraison pour les commandes. Les CGV donnent déjà une garantie légale de trois ans.
 
   Chaque langue passe de 51 à 28 marqueurs, dont 7 « rue et numéro ». Publié en local et sur la préversion avec `publier-pages-legales-en-ligne.sh` (sauvegarde `fati-legal-preversion-20261104-101932`). Page Livraison contrôlée en FR et AR à 390 px. **La production attend toujours le feu vert.**
+- 2026-11-04 (soir) · **PayPal retiré de partout** (« pour l'instant n'existe pas », demande du gérant) et moyens de paiement réels posés, en FR et AR :
+  - CGV, article 5 : le titre « Demain : paiement en ligne » et ses notes disparaissent, et l'étape « Je vous indique le moyen de paiement » est posée.
+  - CGV, article 6 : « Rien ne se paie sur ce site. Vous payez par carte bancaire ou par virement… sur mon compte personnel ou directement à la société DXN, selon la façon dont la commande est passée ; moyen et bénéficiaire indiqués par message, avec le total, avant tout paiement. »
+  - Confidentialité : la ligne PayPal des destinataires devient « la société DXN, si vous payez directement à DXN ». Le paragraphe PayPal des transferts hors UE est retiré. « Je ne vois jamais vos données bancaires » devient faux, puisqu'un virement fait apparaître le nom et la référence sur le relevé : la phrase est corrigée.
+
+  Chaque langue passe de 28 à 19 marqueurs. Restent la rue, le délai de préparation, le seuil de livraison offerte, la remise de la facture, la TVA, le gestor, la conservation des factures, les journaux de l'hébergeur, l'ADR, le numéro de distributrice et les deux rappels sur le pixel et la campagne publicitaire.
+
+  **Question pour l'abogado** : quand le client paie DXN directement, qui est le vendeur ? Les CGV désignent Fati. Les commentaires PHP du thème qui disent « ni carte ni PayPal » ne sont pas affichés ; ils décrivent le site, où rien ne se paie, et sont gardés. Vérifié sur la préversion : 30 pages publiées FR et AR, aucune mention de PayPal. Des révisions anciennes en base en contiennent encore, sans être publiques. **Production toujours en attente du feu vert.**

@@ -66,7 +66,7 @@
 
 <h2>5. كيف تقدّم طلباً</h2>
 
-<h3>حالياً : عبر واتساب</h3>
+<h3>عبر واتساب</h3>
 
 <p><strong>الدفع عبر الإنترنت غير مفعّل بعد على هذا الموقع.</strong> أفضّل أن أقول لك ذلك بدل التظاهر بخلافه.</p>
 
@@ -77,21 +77,15 @@
   <li>ترسل لي هذه التشكيلة على واتساب بنقرة واحدة. الرسالة معبّأة مسبقاً، ويمكنك تعديلها.</li>
   <li>أؤكد لك التوفر والمبلغ الإجمالي ومصاريف التوصيل إلى عنوانك.</li>
   <li>تؤكد، أو لا تؤكد. <strong>لا يوجد أي التزام ما لم تؤكد.</strong></li>
-  <li>نتفق على وسيلة الدفع. [[À FOURNIR : moyens de paiement réellement acceptés aujourd'hui — virement bancaire, Bizum, autre. Ne rien écrire ici tant que ce n'est pas décidé, et ne jamais demander de coordonnées bancaires par message non sécurisé]]</li>
+  <li>أحدد لك وسيلة الدفع : بطاقة بنكية أو تحويل بنكي، إلى حسابي أو مباشرة إلى شركة DXN، حسب طريقة الطلب.</li>
   <li>أجهّز طردك وأشحنه، وأرسل إليك فاتورتك.</li>
 </ol>
 
 <p>التشكيلة التي تكوّنها على الموقع <strong>ليست طلباً</strong> ولا تلزمك بشيء. ولا ينعقد عقد البيع إلا لحظة تأكيدك الصريح لطلبك ومبلغه الإجمالي.</p>
 
-<h3>[[À ACTIVER AVEC PAYPAL]] لاحقاً : الدفع عبر الإنترنت</h3>
-
-<p>[[À ACTIVER AVEC PAYPAL : lorsque le compte marchand sera actif, remplacer l'article 5 par le parcours réel — panier, saisie de l'adresse, affichage du total avec frais de port, récapitulatif avant validation, bouton de commande portant une mention sans ambiguïté sur l'obligation de payer, puis e-mail de confirmation. Le libellé exact de ce bouton doit être validé par un abogado : le rapport réglementaire signale que la formulation littérale reste à vérifier, et qu'un bouton disant seulement « Confirmer » n'est pas conforme. Ajouter aussi l'article sur la confirmation de commande par e-mail]]</p>
-
 <h2>6. الدفع</h2>
 
-<p>[[À FOURNIR : liste des moyens de paiement réellement acceptés à la mise en ligne]]</p>
-
-<p>[[À ACTIVER AVEC PAYPAL : une fois le compte marchand actif, ajouter — « Le paiement s'effectue par PayPal, qui accepte le compte PayPal et la carte bancaire. Vos données bancaires sont saisies directement sur les serveurs de PayPal. Je ne les vois jamais et je n'en conserve aucune. » Ajouter également la mention de la réserve de propriété si l'abogado la recommande]]</p>
+<p><strong>لا يُدفع أي شيء على هذا الموقع.</strong> تدفع ببطاقة بنكية أو بتحويل بنكي. وحسب طريقة الطلب، يتم الدفع إلى حسابي الشخصي أو مباشرة إلى شركة DXN : أحدد لك وسيلة الدفع والمستفيد في رسالة، مع المبلغ الإجمالي، قبل أي دفع.</p>
 
 <p>يُجهَّز طلبك بمجرد استلام الدفع.</p>
 

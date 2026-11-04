@@ -38,9 +38,12 @@ possible en les relisant. Elles ne remplacent pas cette relecture.
 - **Aucune date de dernière mise à jour inventée** : elle est en marqueur, à poser le jour de la
   publication.
 
-**Rappel sur le paiement.** PayPal n'est pas actif. Les CGV et la page Livraison sont écrites pour être
-correctes **aujourd'hui**, avec la commande par WhatsApp. Chaque endroit qui changera à l'activation du
-paiement porte un marqueur `[[À ACTIVER AVEC PAYPAL]]`.
+**Rappel sur le paiement.** Rien ne se paie sur le site. Depuis le 4 nov. 2026, **PayPal n'apparaît plus
+nulle part**, à la demande du gérant, parce qu'il n'existe pas pour l'instant. La commande passe par WhatsApp ;
+le paiement se fait par carte ou par virement, sur le compte de Fati ou directement à DXN selon la façon dont
+la commande est passée. Si un paiement en ligne arrive un jour, il faudra réécrire les articles 5 et 6 des
+CGV : parcours réel, bouton de commande validé par un abogado, e-mail de confirmation, et prestataire dans
+la confidentialité (destinataires, transferts hors UE).
 
 **Comment lire les marqueurs.** Toute occurrence de `[[À FOURNIR : …]]` est une donnée manquante.
 **Aucune des quatre pages ne doit être publiée tant qu'il en reste une seule.** Ils sont volontairement
@@ -183,10 +186,10 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 
 <h3>Quand vous passez commande</h3>
 
-<p><strong>Données</strong> : nom, prénom, adresse de livraison, adresse e-mail, téléphone, détail de la commande, montant, et — [[À ACTIVER AVEC PAYPAL]] une fois le paiement en ligne actif — la confirmation de paiement transmise par le prestataire.</p>
+<p><strong>Données</strong> : nom, prénom, adresse de livraison, adresse e-mail, téléphone, détail de la commande, montant et confirmation de votre paiement.</p>
 <p><strong>Pourquoi</strong> : préparer votre colis, l'expédier, vous tenir informée, émettre la facture et tenir ma comptabilité.</p>
 <p><strong>Base légale</strong> : l'exécution du contrat de vente, et pour la facturation, une obligation légale.</p>
-<p><strong>Important</strong> : je ne vois jamais vos données bancaires. Aucun numéro de carte ne transite par ce site et je n'en conserve aucun. [[À ACTIVER AVEC PAYPAL : quand le paiement sera actif, c'est PayPal qui traitera le paiement sur ses propres serveurs, et je ne recevrai qu'une confirmation]]</p>
+<p><strong>Important</strong> : aucun numéro de carte ne transite par ce site, et je n'en conserve aucun. Pour un virement, je vois seulement ce que votre banque inscrit sur mon relevé : votre nom et la référence du virement. Si vous payez directement la société DXN, c'est elle qui reçoit votre paiement.</p>
 
 <h3>Quand vous visitez simplement le site</h3>
 
@@ -223,9 +226,9 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
     <td>GLS : General Logistics Systems Spain, S.A., Madrid (Espagne), puis le réseau GLS du pays de livraison</td>
   </tr>
   <tr>
-    <td>PayPal</td>
-    <td>Pour traiter votre paiement, une fois le paiement en ligne activé</td>
-    <td>PayPal (Europe) S.à r.l. et Cie, S.C.A., Luxembourg. [[À ACTIVER AVEC PAYPAL]]</td>
+    <td>La société DXN</td>
+    <td>Si vous payez directement à DXN : pour encaisser votre paiement et traiter votre commande</td>
+    <td>L'entité DXN qui encaisse le paiement, indiquée avec le moyen de paiement</td>
   </tr>
   <tr>
     <td>WhatsApp / Meta</td>
@@ -246,7 +249,6 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 <p>Dans certains cas, oui. Je préfère vous le dire franchement.</p>
 
 <ul>
-  <li><strong>PayPal</strong> — l'entité européenne est établie au Luxembourg, mais le groupe PayPal est américain et certains traitements peuvent avoir lieu hors de l'Union. PayPal encadre ces transferts par les clauses contractuelles types approuvées par la Commission européenne. [[À ACTIVER AVEC PAYPAL : vérifier et citer le document de référence de PayPal au moment de l'activation du compte marchand]]</li>
   <li><strong>WhatsApp / Meta</strong> — l'entité européenne est irlandaise, mais le groupe est américain et des transferts vers les États-Unis existent. Ils sont encadrés par le cadre de protection des données UE–États-Unis et par des clauses contractuelles types. Si vous préférez éviter ce canal, l'e-mail est toujours possible.</li>
   <li><strong>TikTok</strong> — je publie du contenu sur TikTok, mais <strong>ce site ne contient aujourd'hui aucun traceur TikTok</strong>. Si vous arrivez ici depuis un lien TikTok, c'est TikTok qui sait que vous avez cliqué, pas moi. Ce qui se passe dans l'application relève de la politique de confidentialité de TikTok, que je ne maîtrise pas. [[À METTRE À JOUR si le pixel TikTok est installé un jour : il faudra décrire ce traitement, sa base légale — le consentement — et les transferts hors UE de TikTok]]</li>
   <li><strong>L'hébergeur</strong> — le site et sa base de données sont hébergés par Hostinger International Ltd., société établie à Chypre, sur un serveur situé en France, dans l'Union européenne.</li>
@@ -403,7 +405,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <h2>5. Comment passer commande</h2>
 
-<h3>Aujourd'hui : par WhatsApp</h3>
+<h3>Par WhatsApp</h3>
 
 <p><strong>Le paiement en ligne n'est pas encore activé sur ce site.</strong> Je préfère vous le dire plutôt que de faire semblant.</p>
 
@@ -414,21 +416,15 @@ préféré, le décider **avant** publication — pas de changement d'URL après
   <li>Vous m'envoyez cette sélection sur WhatsApp, en un clic. Le message est prérempli, vous pouvez le modifier.</li>
   <li>Je vous confirme la disponibilité, le montant total et les frais de livraison pour votre adresse.</li>
   <li>Vous confirmez, ou non. <strong>Rien n'est engagé tant que vous n'avez pas confirmé.</strong></li>
-  <li>Nous convenons du moyen de paiement. [[À FOURNIR : moyens de paiement réellement acceptés aujourd'hui — virement bancaire, Bizum, autre. Ne rien écrire ici tant que ce n'est pas décidé, et ne jamais demander de coordonnées bancaires par message non sécurisé]]</li>
+  <li>Je vous indique le moyen de paiement : carte bancaire ou virement, sur mon compte ou directement à la société DXN, selon la façon dont la commande est passée.</li>
   <li>Je prépare et j'expédie votre colis, et je vous envoie votre facture.</li>
 </ol>
 
 <p>La sélection que vous composez sur le site <strong>n'est pas une commande</strong> et ne vous engage à rien. Le contrat de vente n'est formé qu'au moment où vous confirmez explicitement votre commande et son montant total.</p>
 
-<h3>[[À ACTIVER AVEC PAYPAL]] Demain : paiement en ligne</h3>
-
-<p>[[À ACTIVER AVEC PAYPAL : lorsque le compte marchand sera actif, remplacer l'article 5 par le parcours réel — panier, saisie de l'adresse, affichage du total avec frais de port, récapitulatif avant validation, bouton de commande portant une mention sans ambiguïté sur l'obligation de payer, puis e-mail de confirmation. Le libellé exact de ce bouton doit être validé par un abogado : le rapport réglementaire signale que la formulation littérale reste à vérifier, et qu'un bouton disant seulement « Confirmer » n'est pas conforme. Ajouter aussi l'article sur la confirmation de commande par e-mail]]</p>
-
 <h2>6. Paiement</h2>
 
-<p>[[À FOURNIR : liste des moyens de paiement réellement acceptés à la mise en ligne]]</p>
-
-<p>[[À ACTIVER AVEC PAYPAL : une fois le compte marchand actif, ajouter — « Le paiement s'effectue par PayPal, qui accepte le compte PayPal et la carte bancaire. Vos données bancaires sont saisies directement sur les serveurs de PayPal. Je ne les vois jamais et je n'en conserve aucune. » Ajouter également la mention de la réserve de propriété si l'abogado la recommande]]</p>
+<p><strong>Rien ne se paie sur ce site.</strong> Vous payez par carte bancaire ou par virement. Selon la façon dont la commande est passée, le paiement se fait sur mon compte personnel ou directement à la société DXN : je vous indique le moyen de paiement et le bénéficiaire par message, avec le total, avant tout paiement.</p>
 
 <p>Votre commande est préparée une fois le paiement reçu.</p>
 
@@ -775,9 +771,14 @@ Liste consolidée, par ordre de blocage.
 - **Reste à fournir** : rue et numéro, délai de préparation, seuil de livraison offerte, moyens
   de paiement, remise de la facture, TVA, gestor, durée de conservation des factures, journaux
   de l'hébergeur, ADR et numéro de distributrice (facultatif).
-- **Point à trancher** : les marqueurs `[[À ACTIVER AVEC PAYPAL]]` et `[[À METTRE À JOUR…]]` sont
-  visibles sur le site alors que PayPal est abandonné depuis le thème 1.3.0. Ils ne viennent pas de
-  Fati, et il faut décider s'ils sortent des pages.
+- **PayPal retiré partout** (4 nov. 2026, demande du gérant). Moyens de paiement posés (point 13) :
+  carte ou virement, sur le compte de Fati ou directement à DXN selon la commande. Dans la
+  confidentialité, « je ne vois jamais vos données bancaires » est corrigé, puisque le virement fait
+  apparaître le nom du payeur sur le relevé, et la société DXN est ajoutée comme destinataire.
+  **Question ouverte pour l'abogado** : quand le client paie DXN directement, qui est le vendeur, Fati
+  ou DXN ? Les CGV désignent Fati.
+- **Reste visible** : les deux notes `[[À METTRE À JOUR…]]` sur le pixel TikTok et la campagne
+  publicitaire, qui sont des rappels internes.
 - **Publication** : `tools/publier-pages-legales-en-ligne.sh` met à jour les huit pages (FR + AR)
   sans rien créer.
 
