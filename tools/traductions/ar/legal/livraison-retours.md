@@ -125,7 +125,7 @@
 
 <h2>لم يصل الطرد أبداً</h2>
 
-<p>راسلني. سأتحقق لدى الناقل وأفتح شكوى. [[À FOURNIR : délai indicatif de traitement d'une réclamation transporteur, si Fati souhaite s'engager]]</p>
+<p>راسلني. سأتحقق لدى الناقل وأفتح شكوى. أجيبك في اليوم نفسه، وفي أجل أقصاه 48 ساعة.</p>
 
 <p>لن تُترك وحدك مع طرد ضائع.</p>
 
@@ -133,11 +133,11 @@
 
 <p>هذا هو الأبسط. راسلني على واتساب : أجيب بنفسي، بالفرنسية أو الإسبانية أو الدارجة.</p>
 
-<p>[[À FOURNIR : lien WhatsApp cliquable, construit sur le numéro définitif]]</p>
+<p><a href="https://wa.me/34622577161">راسلني على واتساب (<span dir="ltr">+34 622 577 161</span>)</a></p>
 
 <h2>لمزيد من التفاصيل</h2>
 
 <p>تلخِّص هذه الصفحة الأساسيات لتجنيبك قراءة طويلة. أما القواعد الكاملة والمفصَّلة — وهي وحدها المعتمدة — فتجدها في <a href="/conditions-generales-de-vente/">الشروط العامة للبيع</a>.</p>
 
-<p><em>آخر تحديث : [[À FOURNIR : date de publication réelle de la page]]</em></p>
+<p><em>آخر تحديث : 4 نوفمبر 2026</em></p>
 ```

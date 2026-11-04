@@ -88,7 +88,7 @@ while ( have_posts() ) :
 			   <?php echo fati_opt( 'whatsapp' ) ? 'target="_blank" rel="noopener"' : ''; ?>>
 				<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Écrire à Fati', 'fatichanelya' ); ?>
 			</a>
-			<p class="formation-note"><?php esc_html_e( 'Réponse sous 24 h en semaine.', 'fatichanelya' ); ?></p>
+			<p class="formation-note"><?php esc_html_e( 'Réponse le jour même, au plus tard sous 48 h.', 'fatichanelya' ); ?></p>
 		</aside>
 	</article>
 

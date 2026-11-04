@@ -13,12 +13,12 @@
 <h2>1. من يبيع</h2>
 
 <ul>
-  <li><strong>البائعة</strong> : [[À FOURNIR : nom civil complet de Fati]]</li>
+  <li><strong>البائعة</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>الصفة القانونية</strong> : [[À FOURNIR : statut exact, par exemple « travailleuse indépendante (autónoma) inscrite en Espagne »]]</li>
-  <li><strong>رقم التعريف الضريبي (NIF)</strong> : [[À FOURNIR : NIF / NIE espagnol]]</li>
+  <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
   <li><strong>العنوان</strong> : [[À FOURNIR : adresse postale complète]]</li>
-  <li><strong>البريد الإلكتروني</strong> : [[À FOURNIR : adresse e-mail de contact]]</li>
-  <li><strong>واتساب</strong> : [[À FOURNIR : numéro WhatsApp définitif]]</li>
+  <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
+  <li><strong>واتساب</strong> : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
 </ul>
 
 <p>أنا <strong>موزِّعة مستقلة</strong> لمنتجات DXN. لستُ العلامة التجارية ولا أتحدث باسمها. أعيد بيع منتجات أشتريها وأخزّنها بنفسي. انظر <a href="/mentions-legales/">الإشعار القانوني</a>.</p>
@@ -144,8 +144,8 @@
 <p>قبل انتهاء الأيام الـ14، أخبرني بذلك بوضوح، بإحدى هذه الوسائل :</p>
 
 <ul>
-  <li>بالبريد الإلكتروني على [[À FOURNIR : adresse e-mail de contact]]؛</li>
-  <li>عبر واتساب على [[À FOURNIR : numéro WhatsApp]]؛</li>
+  <li>بالبريد الإلكتروني على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>؛</li>
+  <li>عبر واتساب على <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a>؛</li>
   <li>بالبريد العادي إلى [[À FOURNIR : adresse postale]].</li>
 </ul>
 
@@ -190,9 +190,9 @@
 <hr>
 
 <p>إلى عناية :<br>
-[[À FOURNIR : nom civil complet de Fati]]<br>
+Fatima Bentaouyt Eziani<br>
 [[À FOURNIR : adresse postale complète]]<br>
-[[À FOURNIR : adresse e-mail de contact]]</p>
+<a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></p>
 
 <p>أُبلّغك بموجب هذه الرسالة بتراجعي عن العقد المتعلق ببيع السلعة (السلع) المبينة أدناه :</p>
 
@@ -233,12 +233,12 @@
 <p>اكتب لي أولاً. فمعظم الحالات تُسوّى في بضع رسائل، وهذه هي الطريقة الأسرع بالنسبة لك.</p>
 
 <ul>
-  <li>البريد الإلكتروني : [[À FOURNIR : adresse e-mail de contact]]</li>
-  <li>واتساب : [[À FOURNIR : numéro WhatsApp]]</li>
+  <li>البريد الإلكتروني : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
+  <li>واتساب : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
   <li>البريد العادي : [[À FOURNIR : adresse postale]]</li>
 </ul>
 
-<p>[[À FOURNIR : engagement de délai de réponse aux réclamations, par exemple « je réponds sous 48 heures ouvrées ». Ne rien promettre qui ne puisse être tenu]]</p>
+<p>أجيب على كل شكوى في اليوم نفسه، وفي أجل أقصاه 48 ساعة.</p>
 
 <p>وإذا لم نتوصل إلى حل، فإنك تحتفظ بطبيعة الحال بجميع سبل الطعن المتاحة لك كمستهلك. ففي إسبانيا، يمكنك على وجه الخصوص التوجه إلى المكتب البلدي لإعلام المستهلك <strong>Oficina Municipal de Información al Consumidor (OMIC)</strong> في بلديتك، أو إلى مصالح الاستهلاك في منطقتك ذات الحكم الذاتي. وإذا كنت مقيماً في بلد آخر من الاتحاد الأوروبي، فيمكن لهيئتك الوطنية لحماية المستهلك أن توجهك.</p>
 
@@ -262,5 +262,5 @@
 
 <p>إذا كنت مستهلكاً مقيماً في بلد آخر من الاتحاد الأوروبي، فإن ذلك لا يحرمك من الحماية التي تمنحك إياها القواعد الآمرة في بلدك. ويمكنك أيضاً اللجوء إلى محاكم مكان إقامتك.</p>
 
-<p><em>آخر تحديث : [[À FOURNIR : date de publication réelle de la page]]</em></p>
+<p><em>آخر تحديث : 4 نوفمبر 2026</em></p>
 ```

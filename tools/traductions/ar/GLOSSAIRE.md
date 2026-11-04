@@ -19,7 +19,7 @@ source ; l'arabe en est la traduction fidèle, jamais une réécriture.
   l'emballage », « demandez l'avis d'un professionnel de santé »).
 
 ## Noms propres et marques (restent en caractères latins)
-Fatichanelya, DXN, Naturixa, Velix Digital, WhatsApp (→ واتساب en texte courant, WhatsApp dans
+Fatichanelya, DXN, Velix Digital, WhatsApp (→ واتساب en texte courant, WhatsApp dans
 les libellés de boutons reste acceptable), TikTok (→ تيك توك), Instagram (→ إنستغرام), Facebook
 (→ فيسبوك), Google (→ غوغل), Meta (→ Meta), Kallow, Ganozhi, Zhicare, Morinzhi, Reishilium,
 Ganocelium, codes RG / GL / SPF 50+, noms latins des espèces (Ganoderma lucidum, Hericium
@@ -92,7 +92,7 @@ la description, entre parenthèses : « (DXN Lingzhi Black Coffee) ».
 | Bien-être naturel | العافية الطبيعية |
 | Échange direct | تواصل مباشر |
 | Sans engagement | بدون أي التزام |
-| Réponse sous 24 h en semaine | الرد خلال 24 ساعة في أيام العمل |
+| Réponse le jour même, au plus tard sous 48 h (depuis le 4 nov. 2026 ; avant : « sous 24 h en semaine ») | الرد في اليوم نفسه، وفي أجل أقصاه 48 ساعة |
 | Aucun conseil médical | لا تُقدَّم أي نصيحة طبية |
 | Accueil | الرئيسية |
 | À propos | من هي فاتي |

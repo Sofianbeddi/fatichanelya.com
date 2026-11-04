@@ -130,8 +130,8 @@ msgid "Aucun contenu pour le moment."
 msgstr "لا يوجد محتوى حالياً."
 
 #: footer.php:30
-msgid "Une question avant de commander ? Écrivez-moi : je réponds moi-même, sous 24 h en semaine."
-msgstr "لديك سؤال قبل الطلب؟ راسلني: أجيب بنفسي خلال 24 ساعة في أيام العمل."
+msgid "Une question avant de commander ? Écrivez-moi : je réponds personnellement, le jour même et au plus tard sous 48 h."
+msgstr "لديك سؤال قبل الطلب؟ راسلني: أجيب بنفسي في اليوم نفسه، وفي أجل أقصاه 48 ساعة."
 
 #: footer.php:32
 #: page-a-propos.php:88
@@ -506,8 +506,8 @@ msgstr "اطلب البرنامج"
 
 #: page-contact.php:73
 #: template-parts/sections/contact.php:13
-msgid "Réponse sous 24 h en semaine. Aucun conseil médical n'est donné par message."
-msgstr "الرد خلال 24 ساعة في أيام العمل. لا تُقدَّم أي نصيحة طبية عبر الرسائل."
+msgid "Réponse le jour même, au plus tard sous 48 h. Aucun conseil médical n'est donné par message."
+msgstr "الرد في اليوم نفسه، وفي أجل أقصاه 48 ساعة. لا تُقدَّم أي نصيحة طبية عبر الرسائل."
 
 #: page-contact.php:78
 msgid "Écrire à Fati sur TikTok"
@@ -681,8 +681,8 @@ msgid "Bonjour Fati, je souhaite le programme et le tarif de la formation « %s 
 msgstr "مرحباً فاتي، أرغب في برنامج وسعر دورة « %s »."
 
 #: single-formation.php:91
-msgid "Réponse sous 24 h en semaine."
-msgstr "الرد خلال 24 ساعة في أيام العمل."
+msgid "Réponse le jour même, au plus tard sous 48 h."
+msgstr "الرد في اليوم نفسه، وفي أجل أقصاه 48 ساعة."
 
 #: single-formation.php:109
 msgid "Les autres formations"
@@ -795,8 +795,8 @@ msgid "Une vraie réponse"
 msgstr "رد حقيقي"
 
 #: template-parts/components/assurance.php:30
-msgid "Fati répond elle-même, sous 24 h en semaine."
-msgstr "فاتي تجيب بنفسها، خلال 24 ساعة في أيام العمل."
+msgid "Fati répond personnellement, le jour même et au plus tard sous 48 h."
+msgstr "فاتي تجيب بنفسها، في اليوم نفسه وفي أجل أقصاه 48 ساعة."
 
 #: template-parts/components/bag-drawer.php:24
 msgid "Mon panier"

@@ -70,29 +70,29 @@ Le lien doit rester **permanent, facile, direct et gratuit** depuis le pied de p
 <p>Ce site est édité par une personne, pas par une société anonyme. La voici.</p>
 
 <ul>
-  <li><strong>Nom et prénom</strong> : [[À FOURNIR : nom civil complet de Fati, tel qu'il figure sur ses documents officiels espagnols. Un prénom seul ne suffit pas au regard de l'article 10 LSSI]]</li>
+  <li><strong>Nom et prénom</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>Statut</strong> : [[À FOURNIR : statut exact — « travailleuse indépendante (autónoma) inscrite en Espagne » ou autre. À confirmer avec le gestor une fois l'alta effectuée]]</li>
-  <li><strong>Numéro d'identification fiscale (NIF)</strong> : [[À FOURNIR : NIF / NIE espagnol]]</li>
+  <li><strong>Numéro d'identification fiscale (NIF)</strong> : 71993478M</li>
   <li><strong>Adresse</strong> : [[À FOURNIR : adresse postale réelle et complète, avec code postal, ville et province. Une autónoma doit publier une adresse réelle. Si Fati travaille depuis chez elle, vérifier avec le gestor si une domiciliation professionnelle est acceptable au regard de la LSSI avant de publier son domicile]]</li>
-  <li><strong>Adresse e-mail</strong> : [[À FOURNIR : adresse e-mail de contact, relevée régulièrement. Obligatoire : la LSSI exige un moyen de communication directe et effective]]</li>
-  <li><strong>Téléphone / WhatsApp</strong> : [[À FOURNIR : numéro WhatsApp définitif au format international]]</li>
+  <li><strong>Adresse e-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
+  <li><strong>Téléphone / WhatsApp</strong> : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
 </ul>
 
 <p>[[À FOURNIR : le cas échéant — numéro d'inscription à un registre public, ou numéro d'autorisation administrative si l'activité y est soumise. Si rien ne s'applique, supprimer cette ligne plutôt que d'écrire « sans objet »]]</p>
 
 <h2>Comment me joindre</h2>
 
-<p>Le plus simple est de m'écrire sur WhatsApp : [[À FOURNIR : numéro WhatsApp]]. Je réponds moi-même, il n'y a pas de service client derrière.</p>
+<p>Le plus simple est de m'écrire sur WhatsApp : <a href="https://wa.me/34622577161">+34 622 577 161</a>. Je réponds moi-même, il n'y a pas de service client derrière.</p>
 
-<p>Par e-mail : [[À FOURNIR : adresse e-mail de contact]]. [[À FOURNIR : délai de réponse habituel que Fati s'engage à tenir, par exemple « sous 48 heures ouvrées ». Ne rien promettre qu'elle ne puisse tenir]]</p>
+<p>Par e-mail : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>. Je réponds le jour même, et au plus tard sous 48 heures.</p>
 
 <h2>Hébergement du site</h2>
 
 <ul>
-  <li><strong>Hébergeur</strong> : [[À FOURNIR : raison sociale de l'hébergeur]]</li>
-  <li><strong>Adresse</strong> : [[À FOURNIR : adresse postale de l'hébergeur]]</li>
-  <li><strong>Site</strong> : [[À FOURNIR : site web de l'hébergeur]]</li>
-  <li><strong>Localisation des serveurs</strong> : [[À FOURNIR : pays d'hébergement des données. À demander à l'hébergeur par écrit — cette information est reprise dans la politique de confidentialité]]</li>
+  <li><strong>Hébergeur</strong> : Hostinger International Ltd.</li>
+  <li><strong>Adresse</strong> : 61 Lordou Vironos Street, 6023 Larnaca, Chypre</li>
+  <li><strong>Site</strong> : <a href="https://www.hostinger.com/">www.hostinger.com</a></li>
+  <li><strong>Localisation des serveurs</strong> : France, dans l'Union européenne</li>
 </ul>
 
 <h2>Distributrice indépendante DXN</h2>
@@ -135,9 +135,9 @@ Le lien doit rester **permanent, facile, direct et gratuit** depuis le pied de p
 
 <h2>Une erreur sur cette page ?</h2>
 
-<p>Si vous voyez une information inexacte ou incomplète, écrivez-moi à [[À FOURNIR : adresse e-mail de contact]]. Je corrige.</p>
+<p>Si vous voyez une information inexacte ou incomplète, écrivez-moi à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>. Je corrige.</p>
 
-<p><em>Dernière mise à jour : [[À FOURNIR : date de publication réelle de la page, au format « 14 septembre 2026 ». À mettre à jour à chaque modification]]</em></p>
+<p><em>Dernière mise à jour : 4 novembre 2026</em></p>
 ```
 
 ---
@@ -162,10 +162,10 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 <p>C'est moi, personnellement.</p>
 
 <ul>
-  <li><strong>Responsable du traitement</strong> : [[À FOURNIR : nom civil complet de Fati]]</li>
-  <li><strong>NIF</strong> : [[À FOURNIR : NIF / NIE espagnol]]</li>
+  <li><strong>Responsable du traitement</strong> : Fatima Bentaouyt Eziani</li>
+  <li><strong>NIF</strong> : 71993478M</li>
   <li><strong>Adresse</strong> : [[À FOURNIR : adresse postale complète, la même que dans les mentions légales]]</li>
-  <li><strong>E-mail</strong> : [[À FOURNIR : adresse e-mail de contact]]</li>
+  <li><strong>E-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
 </ul>
 
 <p>Je n'ai pas désigné de délégué à la protection des données : l'activité ne l'exige pas. Vous vous adressez donc directement à moi.</p>
@@ -189,13 +189,6 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 <p><strong>Pourquoi</strong> : préparer votre colis, l'expédier, vous tenir informée, émettre la facture et tenir ma comptabilité.</p>
 <p><strong>Base légale</strong> : l'exécution du contrat de vente, et pour la facturation, une obligation légale.</p>
 <p><strong>Important</strong> : je ne vois jamais vos données bancaires. Aucun numéro de carte ne transite par ce site et je n'en conserve aucun. [[À ACTIVER AVEC PAYPAL : quand le paiement sera actif, c'est PayPal qui traitera le paiement sur ses propres serveurs, et je ne recevrai qu'une confirmation]]</p>
-
-<h3>Quand vous vous inscrivez à la lettre d'information</h3>
-
-<p><strong>Données</strong> : votre adresse e-mail, et votre prénom si vous le donnez.</p>
-<p><strong>Pourquoi</strong> : vous envoyer mes nouveautés et mes conseils.</p>
-<p><strong>Base légale</strong> : votre consentement. Une case cochée par vous, jamais pré-cochée. Vous pouvez vous désinscrire à tout moment avec le lien présent dans chaque envoi, ou en m'écrivant. C'est immédiat et sans justification.</p>
-<p>[[À FOURNIR : l'outil d'envoi retenu (Brevo, Mailchimp, autre) et son pays d'établissement. Tant qu'aucun outil n'est connecté, le formulaire de newsletter ne doit pas collecter d'adresses — voir le risque « newsletter sans service derrière » du brief. Si le formulaire reste affiché sans outil, supprimer ce bloc de la page]]</p>
 
 <h3>Quand vous visitez simplement le site</h3>
 
@@ -224,7 +217,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
   <tr>
     <td>Mon hébergeur</td>
     <td>Le site et sa base de données sont stockés chez lui</td>
-    <td>[[À FOURNIR : nom de l'hébergeur et pays d'hébergement]]</td>
+    <td>Hostinger International Ltd. (Chypre), serveur situé en France</td>
   </tr>
   <tr>
     <td>Le transporteur</td>
@@ -246,11 +239,6 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
     <td>Pour la tenue de ma comptabilité et mes obligations fiscales</td>
     <td>[[À FOURNIR : cabinet du gestor, ou supprimer cette ligne si Fati tient sa comptabilité seule]]</td>
   </tr>
-  <tr>
-    <td>L'outil d'envoi de la lettre d'information</td>
-    <td>Pour vous envoyer les e-mails auxquels vous vous êtes abonnée</td>
-    <td>[[À FOURNIR : outil retenu et pays, ou supprimer cette ligne si la newsletter n'est pas active]]</td>
-  </tr>
 </table>
 
 <p>Vos données peuvent aussi être communiquées à une administration ou à une autorité judiciaire si la loi m'y oblige.</p>
@@ -263,7 +251,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
   <li><strong>PayPal</strong> — l'entité européenne est établie au Luxembourg, mais le groupe PayPal est américain et certains traitements peuvent avoir lieu hors de l'Union. PayPal encadre ces transferts par les clauses contractuelles types approuvées par la Commission européenne. [[À ACTIVER AVEC PAYPAL : vérifier et citer le document de référence de PayPal au moment de l'activation du compte marchand]]</li>
   <li><strong>WhatsApp / Meta</strong> — l'entité européenne est irlandaise, mais le groupe est américain et des transferts vers les États-Unis existent. Ils sont encadrés par le cadre de protection des données UE–États-Unis et par des clauses contractuelles types. Si vous préférez éviter ce canal, l'e-mail est toujours possible.</li>
   <li><strong>TikTok</strong> — je publie du contenu sur TikTok, mais <strong>ce site ne contient aujourd'hui aucun traceur TikTok</strong>. Si vous arrivez ici depuis un lien TikTok, c'est TikTok qui sait que vous avez cliqué, pas moi. Ce qui se passe dans l'application relève de la politique de confidentialité de TikTok, que je ne maîtrise pas. [[À METTRE À JOUR si le pixel TikTok est installé un jour : il faudra décrire ce traitement, sa base légale — le consentement — et les transferts hors UE de TikTok]]</li>
-  <li><strong>L'hébergeur</strong> — [[À FOURNIR : confirmer par écrit auprès de l'hébergeur que les serveurs et les sauvegardes sont situés dans l'Union européenne. Si ce n'est pas le cas, décrire ici le transfert et son encadrement]]</li>
+  <li><strong>L'hébergeur</strong> — le site et sa base de données sont hébergés par Hostinger International Ltd., société établie à Chypre, sur un serveur situé en France, dans l'Union européenne.</li>
 </ul>
 
 <h2>Combien de temps je garde vos données</h2>
@@ -284,10 +272,6 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
   <tr>
     <td>Factures et pièces comptables</td>
     <td>La durée imposée par la loi espagnole. [[À FOURNIR : durée exacte, à confirmer par le gestor — le rapport réglementaire la marque comme à vérifier]]</td>
-  </tr>
-  <tr>
-    <td>Inscription à la lettre d'information</td>
-    <td>Jusqu'à votre désinscription, puis une trace de votre désinscription pour ne plus vous écrire</td>
   </tr>
   <tr>
     <td>Journaux de connexion du serveur</td>
@@ -313,7 +297,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 
 <h3>Comment les exercer</h3>
 
-<p>Écrivez-moi à [[À FOURNIR : adresse e-mail de contact]], ou par courrier à [[À FOURNIR : adresse postale]]. Dites-moi simplement ce que vous voulez.</p>
+<p>Écrivez-moi à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>, ou par courrier à [[À FOURNIR : adresse postale]]. Dites-moi simplement ce que vous voulez.</p>
 
 <p>Je peux avoir besoin de vérifier que c'est bien vous — c'est une protection pour vous, pas un obstacle. Je réponds dans un délai d'un mois. Si votre demande est complexe, ce délai peut être prolongé de deux mois, et je vous préviens dans ce cas. C'est gratuit.</p>
 
@@ -342,7 +326,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 
 <p>Cette politique peut évoluer, par exemple si j'active le paiement en ligne ou un outil de mesure d'audience. La date ci-dessous vous dit de quand date la version que vous lisez.</p>
 
-<p><em>Dernière mise à jour : [[À FOURNIR : date de publication réelle de la page]]</em></p>
+<p><em>Dernière mise à jour : 4 novembre 2026</em></p>
 ```
 
 ---
@@ -368,12 +352,12 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 <h2>1. Qui vend</h2>
 
 <ul>
-  <li><strong>Vendeuse</strong> : [[À FOURNIR : nom civil complet de Fati]]</li>
+  <li><strong>Vendeuse</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>Statut</strong> : [[À FOURNIR : statut exact, par exemple « travailleuse indépendante (autónoma) inscrite en Espagne »]]</li>
-  <li><strong>NIF</strong> : [[À FOURNIR : NIF / NIE espagnol]]</li>
+  <li><strong>NIF</strong> : 71993478M</li>
   <li><strong>Adresse</strong> : [[À FOURNIR : adresse postale complète]]</li>
-  <li><strong>E-mail</strong> : [[À FOURNIR : adresse e-mail de contact]]</li>
-  <li><strong>WhatsApp</strong> : [[À FOURNIR : numéro WhatsApp définitif]]</li>
+  <li><strong>E-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
+  <li><strong>WhatsApp</strong> : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
 </ul>
 
 <p>Je suis <strong>distributrice indépendante</strong> des produits DXN. Je ne suis pas la marque et je ne parle pas en son nom. Je revends des produits que j'achète et que je stocke moi-même. Voir les <a href="/mentions-legales/">mentions légales</a>.</p>
@@ -499,8 +483,8 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 <p>Avant la fin des 14 jours, dites-le-moi clairement, par l'un de ces moyens :</p>
 
 <ul>
-  <li>par e-mail à [[À FOURNIR : adresse e-mail de contact]] ;</li>
-  <li>par WhatsApp au [[À FOURNIR : numéro WhatsApp]] ;</li>
+  <li>par e-mail à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a> ;</li>
+  <li>par WhatsApp au <a href="https://wa.me/34622577161">+34 622 577 161</a> ;</li>
   <li>par courrier à [[À FOURNIR : adresse postale]].</li>
 </ul>
 
@@ -545,9 +529,9 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 <hr>
 
 <p>À l'attention de :<br>
-[[À FOURNIR : nom civil complet de Fati]]<br>
+Fatima Bentaouyt Eziani<br>
 [[À FOURNIR : adresse postale complète]]<br>
-[[À FOURNIR : adresse e-mail de contact]]</p>
+<a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></p>
 
 <p>Je vous notifie par la présente ma rétractation du contrat portant sur la vente du ou des biens ci-dessous :</p>
 
@@ -588,12 +572,12 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 <p>Écrivez-moi en premier. La plupart des situations se règlent en quelques messages, et c'est la voie la plus rapide pour vous.</p>
 
 <ul>
-  <li>E-mail : [[À FOURNIR : adresse e-mail de contact]]</li>
-  <li>WhatsApp : [[À FOURNIR : numéro WhatsApp]]</li>
+  <li>E-mail : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
+  <li>WhatsApp : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
   <li>Courrier : [[À FOURNIR : adresse postale]]</li>
 </ul>
 
-<p>[[À FOURNIR : engagement de délai de réponse aux réclamations, par exemple « je réponds sous 48 heures ouvrées ». Ne rien promettre qui ne puisse être tenu]]</p>
+<p>Je réponds à chaque réclamation le jour même, et au plus tard sous 48 heures.</p>
 
 <p>Si nous ne trouvons pas de solution, vous conservez naturellement tous vos recours de consommatrice. En Espagne, vous pouvez notamment vous adresser à l'<strong>Oficina Municipal de Información al Consumidor (OMIC)</strong> de votre commune, ou aux services de consommation de votre Communauté autonome. Si vous résidez dans un autre pays de l'Union européenne, votre organisme national de protection des consommateurs peut vous orienter.</p>
 
@@ -617,7 +601,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <p>Si vous êtes consommatrice et que vous résidez dans un autre pays de l'Union européenne, cela ne vous prive pas de la protection que vous donnent les règles impératives de votre propre pays. Vous pouvez également saisir les tribunaux de votre lieu de résidence.</p>
 
-<p><em>Dernière mise à jour : [[À FOURNIR : date de publication réelle de la page]]</em></p>
+<p><em>Dernière mise à jour : 4 novembre 2026</em></p>
 ```
 
 ---
@@ -755,7 +739,7 @@ paragraphe de plus.
 
 <h2>Le colis n'est jamais arrivé</h2>
 
-<p>Écrivez-moi. Je vérifie auprès du transporteur et j'ouvre une réclamation. [[À FOURNIR : délai indicatif de traitement d'une réclamation transporteur, si Fati souhaite s'engager]]</p>
+<p>Écrivez-moi. Je vérifie auprès du transporteur et j'ouvre une réclamation. Je vous réponds le jour même, et au plus tard sous 48 heures.</p>
 
 <p>Vous ne restez pas seule avec un colis perdu.</p>
 
@@ -763,13 +747,13 @@ paragraphe de plus.
 
 <p>C'est le plus simple. Écrivez-moi sur WhatsApp : je réponds moi-même, en français, en espagnol ou en darija.</p>
 
-<p>[[À FOURNIR : lien WhatsApp cliquable, construit sur le numéro définitif]]</p>
+<p><a href="https://wa.me/34622577161">M'écrire sur WhatsApp (+34 622 577 161)</a></p>
 
 <h2>Pour aller plus loin</h2>
 
 <p>Cette page résume l'essentiel pour vous éviter une lecture longue. Les règles complètes et détaillées — et ce sont elles qui font foi — sont dans les <a href="/conditions-generales-de-vente/">conditions générales de vente</a>.</p>
 
-<p><em>Dernière mise à jour : [[À FOURNIR : date de publication réelle de la page]]</em></p>
+<p><em>Dernière mise à jour : 4 novembre 2026</em></p>
 ```
 
 ---
@@ -779,6 +763,28 @@ paragraphe de plus.
 
 Aucune des quatre pages ne se publie tant qu'un seul marqueur `[[À FOURNIR : …]]` subsiste.
 Liste consolidée, par ordre de blocage.
+
+**État au 4 nov. 2026** (pages en ligne sur fatichanelya.com, indexation fermée) :
+
+- **Reçu de Sofian et posé en français et en arabe** : nom civil (point 1), NIF (point 2 ; le
+  format est celui d'un DNI et la lettre de contrôle est valide), e-mail (point 5), et un délai de
+  réponse « le jour même, au plus tard sous 48 heures » (point 15, repris aussi dans les mentions
+  légales et la page Livraison).
+- **Posé par l'agence** :
+  - Le numéro WhatsApp (point 6) est celui des commandes, réglé dans Contenus du site.
+  - L'hébergeur (point 7) est Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca,
+    Chypre. Le serveur `fr-int-web1052` est en France : son IP est enregistrée « HOSTINGER FR »,
+    pays FR. Le lieu des sauvegardes n'est pas confirmé par écrit, donc la page ne l'affirme pas.
+  - Les dates de mise à jour.
+  - Point 16 : la newsletter est retirée de la politique de confidentialité, parce qu'aucun outil
+    n'est branché et que le formulaire a disparu du site au thème 1.3.0.
+- **Reste à fournir** : adresse postale (point 3, bloquant absolu), statut (point 4), et les
+  points 8 à 14 et 17 à 28.
+- **Point à trancher** : les marqueurs `[[À ACTIVER AVEC PAYPAL]]` et `[[À METTRE À JOUR…]]` sont
+  visibles sur le site alors que PayPal est abandonné depuis le thème 1.3.0. Ils ne viennent pas de
+  Fati, et il faut décider s'ils sortent des pages.
+- **Publication** : `tools/publier-pages-legales-en-ligne.sh` met à jour les huit pages (FR + AR)
+  sans rien créer.
 
 ### Bloquant absolu — les quatre pages sont impubliables sans
 

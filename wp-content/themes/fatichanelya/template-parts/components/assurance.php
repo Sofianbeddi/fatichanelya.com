@@ -27,7 +27,7 @@ $promesses = array(
 	array(
 		'icone' => 'support',
 		'titre' => __( 'Une vraie réponse', 'fatichanelya' ),
-		'texte' => __( 'Fati répond elle-même, sous 24 h en semaine.', 'fatichanelya' ),
+		'texte' => __( 'Fati répond personnellement, le jour même et au plus tard sous 48 h.', 'fatichanelya' ),
 	),
 );
 ?>

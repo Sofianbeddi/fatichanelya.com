@@ -13,10 +13,10 @@
 <p>أنا، شخصياً.</p>
 
 <ul>
-  <li><strong>المسؤولة عن المعالجة</strong> : [[À FOURNIR : nom civil complet de Fati]]</li>
-  <li><strong>رقم التعريف الضريبي (NIF)</strong> : [[À FOURNIR : NIF / NIE espagnol]]</li>
+  <li><strong>المسؤولة عن المعالجة</strong> : Fatima Bentaouyt Eziani</li>
+  <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
   <li><strong>العنوان</strong> : [[À FOURNIR : adresse postale complète, la même que dans les mentions légales]]</li>
-  <li><strong>البريد الإلكتروني</strong> : [[À FOURNIR : adresse e-mail de contact]]</li>
+  <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
 </ul>
 
 <p>لم أعيّن مندوباً لحماية البيانات : فالنشاط لا يستلزم ذلك. لذلك تتوجه مباشرة إليّ.</p>
@@ -40,13 +40,6 @@
 <p><strong>لماذا</strong> : لتجهيز طردك، وشحنه، وإبقائك على اطلاع، وإصدار الفاتورة، ومسك حساباتي.</p>
 <p><strong>الأساس القانوني</strong> : تنفيذ عقد البيع، وفيما يخص الفوترة، التزام قانوني.</p>
 <p><strong>مهم</strong> : لا أطّلع أبداً على بياناتك البنكية. لا يمر أي رقم بطاقة عبر هذا الموقع ولا أحتفظ بأي منها. [[À ACTIVER AVEC PAYPAL : quand le paiement sera actif, c'est PayPal qui traitera le paiement sur ses propres serveurs, et je ne recevrai qu'une confirmation]]</p>
-
-<h3>عندما تشترك في النشرة الإخبارية</h3>
-
-<p><strong>البيانات</strong> : بريدك الإلكتروني، واسمك الشخصي إذا أعطيته.</p>
-<p><strong>لماذا</strong> : لإرسال جديدي ونصائحي إليك.</p>
-<p><strong>الأساس القانوني</strong> : موافقتك. خانة تحددها أنت بنفسك، ولا تكون محددة مسبقاً أبداً. يمكنك إلغاء اشتراكك في أي وقت عبر الرابط الموجود في كل رسالة، أو بالكتابة إليّ. يتم ذلك فوراً ودون الحاجة إلى تبرير.</p>
-<p>[[À FOURNIR : l'outil d'envoi retenu (Brevo, Mailchimp, autre) et son pays d'établissement. Tant qu'aucun outil n'est connecté, le formulaire de newsletter ne doit pas collecter d'adresses — voir le risque « newsletter sans service derrière » du brief. Si le formulaire reste affiché sans outil, supprimer ce bloc de la page]]</p>
 
 <h3>عندما تزور الموقع فحسب</h3>
 
@@ -75,7 +68,7 @@
   <tr>
     <td>المستضيف</td>
     <td>يُخزَّن الموقع وقاعدة بياناته لديه</td>
-    <td>[[À FOURNIR : nom de l'hébergeur et pays d'hébergement]]</td>
+    <td><span dir="ltr">Hostinger International Ltd.</span> (قبرص)، والخادم موجود في فرنسا</td>
   </tr>
   <tr>
     <td>شركة النقل</td>
@@ -97,11 +90,6 @@
     <td>لمسك حساباتي والوفاء بالتزاماتي الضريبية</td>
     <td>[[À FOURNIR : cabinet du gestor, ou supprimer cette ligne si Fati tient sa comptabilité seule]]</td>
   </tr>
-  <tr>
-    <td>أداة إرسال النشرة الإخبارية</td>
-    <td>لإرسال الرسائل الإلكترونية التي اشتركت فيها</td>
-    <td>[[À FOURNIR : outil retenu et pays, ou supprimer cette ligne si la newsletter n'est pas active]]</td>
-  </tr>
 </table>
 
 <p>كما يمكن أن تُبلَّغ بياناتك إلى إدارة عمومية أو سلطة قضائية إذا ألزمني القانون بذلك.</p>
@@ -114,7 +102,7 @@
   <li><strong>PayPal</strong> — الكيان الأوروبي مقره في لوكسمبورغ، لكن مجموعة PayPal أمريكية وقد تجري بعض عمليات المعالجة خارج الاتحاد. وتؤطّر PayPal عمليات النقل هذه بالبنود التعاقدية النموذجية المعتمدة من المفوضية الأوروبية. [[À ACTIVER AVEC PAYPAL : vérifier et citer le document de référence de PayPal au moment de l'activation du compte marchand]]</li>
   <li><strong>واتساب / Meta</strong> — الكيان الأوروبي أيرلندي، لكن المجموعة أمريكية وتوجد عمليات نقل نحو الولايات المتحدة. وهي مؤطَّرة بإطار حماية البيانات بين الاتحاد الأوروبي والولايات المتحدة وببنود تعاقدية نموذجية. إذا كنت تفضل تجنب هذه القناة، فالبريد الإلكتروني متاح دائماً.</li>
   <li><strong>تيك توك</strong> — أنشر محتوى على تيك توك، لكن <strong>هذا الموقع لا يحتوي حالياً على أي أداة تتبع من تيك توك</strong>. إذا وصلت إلى هنا من رابط على تيك توك، فتيك توك هو من يعلم أنك نقرت، لا أنا. وما يجري داخل التطبيق يخضع لسياسة الخصوصية الخاصة بتيك توك، التي لا سلطة لي عليها. [[À METTRE À JOUR si le pixel TikTok est installé un jour : il faudra décrire ce traitement, sa base légale — le consentement — et les transferts hors UE de TikTok]]</li>
-  <li><strong>المستضيف</strong> — [[À FOURNIR : confirmer par écrit auprès de l'hébergeur que les serveurs et les sauvegardes sont situés dans l'Union européenne. Si ce n'est pas le cas, décrire ici le transfert et son encadrement]]</li>
+  <li><strong>المستضيف</strong> — يستضيف الموقعَ وقاعدةَ بياناته <span dir="ltr">Hostinger International Ltd.</span>، وهي شركة مقرها قبرص، على خادم موجود في فرنسا، داخل الاتحاد الأوروبي.</li>
 </ul>
 
 <h2>كم من الوقت أحتفظ ببياناتك</h2>
@@ -135,10 +123,6 @@
   <tr>
     <td>الفواتير والمستندات المحاسبية</td>
     <td>المدة التي يفرضها القانون الإسباني. [[À FOURNIR : durée exacte, à confirmer par le gestor — le rapport réglementaire la marque comme à vérifier]]</td>
-  </tr>
-  <tr>
-    <td>الاشتراك في النشرة الإخبارية</td>
-    <td>حتى إلغاء اشتراكك، ثم أثر لإلغاء الاشتراك حتى لا أراسلك مجدداً</td>
   </tr>
   <tr>
     <td>سجلات الاتصال الخاصة بالخادم</td>
@@ -164,7 +148,7 @@
 
 <h3>كيف تمارسها</h3>
 
-<p>اكتب لي على [[À FOURNIR : adresse e-mail de contact]]، أو بالبريد العادي إلى [[À FOURNIR : adresse postale]]. قل لي ببساطة ما تريده.</p>
+<p>اكتب لي على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>، أو بالبريد العادي إلى [[À FOURNIR : adresse postale]]. قل لي ببساطة ما تريده.</p>
 
 <p>قد أحتاج إلى التحقق من أنك أنت فعلاً — وهذه حماية لك، لا عائق. أرد في غضون شهر واحد. وإذا كان طلبك معقداً، فقد تُمدَّد هذه المهلة شهرين إضافيين، وأخبرك بذلك في هذه الحالة. والأمر مجاني.</p>
 
@@ -193,5 +177,5 @@
 
 <p>قد تتغير هذه السياسة، مثلاً إذا فعّلت الدفع عبر الإنترنت أو أداة لقياس الجمهور. ويخبرك التاريخ أدناه بتاريخ النسخة التي تقرؤها.</p>
 
-<p><em>آخر تحديث : [[À FOURNIR : date de publication réelle de la page]]</em></p>
+<p><em>آخر تحديث : 4 نوفمبر 2026</em></p>
 ```

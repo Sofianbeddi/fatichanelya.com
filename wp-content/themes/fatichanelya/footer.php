@@ -27,7 +27,7 @@ $cible = fati_whatsapp_actif() ? ' target="_blank" rel="noopener"' : '';
 		<div class="footer-brand">
 			<p class="wordmark wordmark--light"><?php bloginfo( 'name' ); ?></p>
 			<p class="footer-tagline"><?php bloginfo( 'description' ); ?></p>
-			<p class="footer-mot"><?php esc_html_e( 'Une question avant de commander ? Écrivez-moi : je réponds moi-même, sous 24 h en semaine.', 'fatichanelya' ); ?></p>
+			<p class="footer-mot"><?php esc_html_e( 'Une question avant de commander ? Écrivez-moi : je réponds personnellement, le jour même et au plus tard sous 48 h.', 'fatichanelya' ); ?></p>
 			<div class="footer-actions">
 				<a class="button button-gold" href="<?php echo esc_url( fati_wa( __( 'Bonjour Fati, j\'aimerais échanger avec vous.', 'fatichanelya' ) ) ); ?>"<?php echo $cible; ?>>
 					<?php echo fati_icon( 'whatsapp', 22 ); ?><?php esc_html_e( 'Écrire sur WhatsApp', 'fatichanelya' ); ?>

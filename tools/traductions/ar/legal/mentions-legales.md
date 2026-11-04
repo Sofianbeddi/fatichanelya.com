@@ -13,29 +13,29 @@
 <p>هذا الموقع ينشره شخص واحد، لا شركة مساهمة. وها هي بياناته.</p>
 
 <ul>
-  <li><strong>الاسم الشخصي والعائلي</strong> : [[À FOURNIR : nom civil complet de Fati, tel qu'il figure sur ses documents officiels espagnols. Un prénom seul ne suffit pas au regard de l'article 10 LSSI]]</li>
+  <li><strong>الاسم الشخصي والعائلي</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>الصفة القانونية</strong> : [[À FOURNIR : statut exact — « travailleuse indépendante (autónoma) inscrite en Espagne » ou autre. À confirmer avec le gestor une fois l'alta effectuée]]</li>
-  <li><strong>رقم التعريف الضريبي (NIF)</strong> : [[À FOURNIR : NIF / NIE espagnol]]</li>
+  <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
   <li><strong>العنوان</strong> : [[À FOURNIR : adresse postale réelle et complète, avec code postal, ville et province. Une autónoma doit publier une adresse réelle. Si Fati travaille depuis chez elle, vérifier avec le gestor si une domiciliation professionnelle est acceptable au regard de la LSSI avant de publier son domicile]]</li>
-  <li><strong>البريد الإلكتروني</strong> : [[À FOURNIR : adresse e-mail de contact, relevée régulièrement. Obligatoire : la LSSI exige un moyen de communication directe et effective]]</li>
-  <li><strong>الهاتف / واتساب</strong> : [[À FOURNIR : numéro WhatsApp définitif au format international]]</li>
+  <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
+  <li><strong>الهاتف / واتساب</strong> : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
 </ul>
 
 <p>[[À FOURNIR : le cas échéant — numéro d'inscription à un registre public, ou numéro d'autorisation administrative si l'activité y est soumise. Si rien ne s'applique, supprimer cette ligne plutôt que d'écrire « sans objet »]]</p>
 
 <h2>كيف تتواصل معي</h2>
 
-<p>أبسط طريقة هي أن تراسلني على واتساب : [[À FOURNIR : numéro WhatsApp]]. أجيب بنفسي، فلا توجد خدمة عملاء وراء ذلك.</p>
+<p>أبسط طريقة هي أن تراسلني على واتساب : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a>. أجيب بنفسي، فلا توجد خدمة عملاء وراء ذلك.</p>
 
-<p>عبر البريد الإلكتروني : [[À FOURNIR : adresse e-mail de contact]]. [[À FOURNIR : délai de réponse habituel que Fati s'engage à tenir, par exemple « sous 48 heures ouvrées ». Ne rien promettre qu'elle ne puisse tenir]]</p>
+<p>عبر البريد الإلكتروني : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>. أجيب في اليوم نفسه، وفي أجل أقصاه 48 ساعة.</p>
 
 <h2>استضافة الموقع</h2>
 
 <ul>
-  <li><strong>المستضيف</strong> : [[À FOURNIR : raison sociale de l'hébergeur]]</li>
-  <li><strong>العنوان</strong> : [[À FOURNIR : adresse postale de l'hébergeur]]</li>
-  <li><strong>الموقع الإلكتروني</strong> : [[À FOURNIR : site web de l'hébergeur]]</li>
-  <li><strong>موقع الخوادم</strong> : [[À FOURNIR : pays d'hébergement des données. À demander à l'hébergeur par écrit — cette information est reprise dans la politique de confidentialité]]</li>
+  <li><strong>المستضيف</strong> : <span dir="ltr">Hostinger International Ltd.</span></li>
+  <li><strong>العنوان</strong> : <span dir="ltr">61 Lordou Vironos Street, 6023 Larnaca</span>، قبرص</li>
+  <li><strong>الموقع الإلكتروني</strong> : <a href="https://www.hostinger.com/" dir="ltr">www.hostinger.com</a></li>
+  <li><strong>موقع الخوادم</strong> : فرنسا، داخل الاتحاد الأوروبي</li>
 </ul>
 
 <h2>موزِّعة مستقلة لمنتجات DXN</h2>
@@ -78,7 +78,7 @@
 
 <h2>هل وجدت خطأ في هذه الصفحة؟</h2>
 
-<p>إذا لاحظت معلومة غير دقيقة أو ناقصة، فراسلني على [[À FOURNIR : adresse e-mail de contact]]. وسأصحِّحها.</p>
+<p>إذا لاحظت معلومة غير دقيقة أو ناقصة، فراسلني على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>. وسأصحِّحها.</p>
 
-<p><em>آخر تحديث : [[À FOURNIR : date de publication réelle de la page, au format « 14 septembre 2026 ». À mettre à jour à chaque modification]]</em></p>
+<p><em>آخر تحديث : 4 نوفمبر 2026</em></p>
 ```

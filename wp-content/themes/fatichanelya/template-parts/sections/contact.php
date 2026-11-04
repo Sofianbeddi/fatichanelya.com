@@ -10,5 +10,5 @@
 		<?php echo fati_icon( 'whatsapp', 24 ); ?><?php esc_html_e( 'Écrire sur WhatsApp', 'fatichanelya' ); ?>
 	</a>
 
-	<p class="contact-note"><?php esc_html_e( 'Réponse sous 24 h en semaine. Aucun conseil médical n\'est donné par message.', 'fatichanelya' ); ?></p>
+	<p class="contact-note"><?php esc_html_e( 'Réponse le jour même, au plus tard sous 48 h. Aucun conseil médical n\'est donné par message.', 'fatichanelya' ); ?></p>
 </section>
