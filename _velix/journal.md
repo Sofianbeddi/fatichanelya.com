@@ -184,3 +184,13 @@ Aucune des quatre pages ne se publie tant qu'un seul marqueur `[[À FOURNIR]]` s
   Nouvel outil `tools/publier-pages-legales-en-ligne.sh preversion|production`. Il s'appuie sur `tools/mettre-a-jour-pages-legales.php`, met à jour les huit pages sans en créer, et sauvegarde d'abord le contenu en ligne dans `~/backups/fati-legal-*/avant.json`.
 
   En arabe, les noms et numéros latins sont isolés en `dir="ltr"`, sinon le point de « Ltd. » et le « + » du numéro se déplacent. Vérifié en local en FR et AR à 375 et 1440 px. La préversion est mise à jour le même jour, sans aucun « Naturixa » en base ni en page. **La production n'est pas encore faite** : le mode automatique a refusé l'envoi, qui attend le feu vert du gérant.
+- 2026-11-04 (après-midi) · **Pages légales, second remplissage** (FR + AR, mêmes règles qu'au matin) avec les réponses du gérant :
+  - Code postal 28027, à Madrid (quartier de Ciudad Lineal). La rue et le numéro manquent encore.
+  - Statut : « personne physique, distributrice indépendante des produits DXN (membre DXN) ». Fati n'est pas inscrite comme autónoma, la ligne « registre public » est donc supprimée. **Risque signalé au gérant** : vente habituelle sans alta, facture et TVA à valider par un gestor.
+  - Livraison : Espagne et tous les pays de l'Union européenne. Pour les Canaries et l'Europe hors UE, la page invite à écrire avant de commander, à cause de la douane.
+  - Transporteur : GLS (General Logistics Systems Spain, S.A., Madrid), avec numéro de suivi. Le point relais Parcel Shop est mentionné d'après une capture de suivi GLS ; l'adresse du Parcel Shop d'Águilas visible dessus n'est pas celle de Fati et n'est pas utilisée.
+  - Retours : à l'adresse de l'article 1 et des mentions légales.
+  - Frais et délais : le tableau tarifaire vide est remplacé par « selon le pays et le poids, confirmés par message avec le total, avant tout paiement ». La FAQ et les engagements le disent déjà depuis 1.3.0.
+  - Conservation, sur recommandation de l'agence à la demande du gérant : 1 an après le dernier échange sans commande, 3 ans après la livraison pour les commandes. Les CGV donnent déjà une garantie légale de trois ans.
+
+  Chaque langue passe de 51 à 28 marqueurs, dont 7 « rue et numéro ». Publié en local et sur la préversion avec `publier-pages-legales-en-ligne.sh` (sauvegarde `fati-legal-preversion-20261104-101932`). Page Livraison contrôlée en FR et AR à 390 px. **La production attend toujours le feu vert.**

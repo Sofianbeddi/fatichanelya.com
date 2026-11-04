@@ -14,14 +14,12 @@
 
 <ul>
   <li><strong>الاسم الشخصي والعائلي</strong> : Fatima Bentaouyt Eziani</li>
-  <li><strong>الصفة القانونية</strong> : [[À FOURNIR : statut exact — « travailleuse indépendante (autónoma) inscrite en Espagne » ou autre. À confirmer avec le gestor une fois l'alta effectuée]]</li>
+  <li><strong>الصفة القانونية</strong> : شخص طبيعي، موزِّعة مستقلة لمنتجات DXN (عضوة في DXN)</li>
   <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
-  <li><strong>العنوان</strong> : [[À FOURNIR : adresse postale réelle et complète, avec code postal, ville et province. Une autónoma doit publier une adresse réelle. Si Fati travaille depuis chez elle, vérifier avec le gestor si une domiciliation professionnelle est acceptable au regard de la LSSI avant de publier son domicile]]</li>
+  <li><strong>العنوان</strong> : [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا</li>
   <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li><strong>الهاتف / واتساب</strong> : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
 </ul>
-
-<p>[[À FOURNIR : le cas échéant — numéro d'inscription à un registre public, ou numéro d'autorisation administrative si l'activité y est soumise. Si rien ne s'applique, supprimer cette ligne plutôt que d'écrire « sans objet »]]</p>
 
 <h2>كيف تتواصل معي</h2>
 

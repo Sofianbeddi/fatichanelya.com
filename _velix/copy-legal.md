@@ -71,14 +71,12 @@ Le lien doit rester **permanent, facile, direct et gratuit** depuis le pied de p
 
 <ul>
   <li><strong>Nom et prénom</strong> : Fatima Bentaouyt Eziani</li>
-  <li><strong>Statut</strong> : [[À FOURNIR : statut exact — « travailleuse indépendante (autónoma) inscrite en Espagne » ou autre. À confirmer avec le gestor une fois l'alta effectuée]]</li>
+  <li><strong>Statut</strong> : Personne physique, distributrice indépendante des produits DXN (membre DXN)</li>
   <li><strong>Numéro d'identification fiscale (NIF)</strong> : 71993478M</li>
-  <li><strong>Adresse</strong> : [[À FOURNIR : adresse postale réelle et complète, avec code postal, ville et province. Une autónoma doit publier une adresse réelle. Si Fati travaille depuis chez elle, vérifier avec le gestor si une domiciliation professionnelle est acceptable au regard de la LSSI avant de publier son domicile]]</li>
+  <li><strong>Adresse</strong> : [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne</li>
   <li><strong>Adresse e-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li><strong>Téléphone / WhatsApp</strong> : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
 </ul>
-
-<p>[[À FOURNIR : le cas échéant — numéro d'inscription à un registre public, ou numéro d'autorisation administrative si l'activité y est soumise. Si rien ne s'applique, supprimer cette ligne plutôt que d'écrire « sans objet »]]</p>
 
 <h2>Comment me joindre</h2>
 
@@ -164,7 +162,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 <ul>
   <li><strong>Responsable du traitement</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>NIF</strong> : 71993478M</li>
-  <li><strong>Adresse</strong> : [[À FOURNIR : adresse postale complète, la même que dans les mentions légales]]</li>
+  <li><strong>Adresse</strong> : [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne</li>
   <li><strong>E-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
 </ul>
 
@@ -222,7 +220,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
   <tr>
     <td>Le transporteur</td>
     <td>Pour vous livrer : nom, adresse, et selon le cas téléphone ou e-mail pour le suivi</td>
-    <td>[[À FOURNIR : nom du ou des transporteurs utilisés]]</td>
+    <td>GLS : General Logistics Systems Spain, S.A., Madrid (Espagne), puis le réseau GLS du pays de livraison</td>
   </tr>
   <tr>
     <td>PayPal</td>
@@ -263,11 +261,11 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
   </tr>
   <tr>
     <td>Échanges WhatsApp ou e-mail sans commande</td>
-    <td>[[À FOURNIR : durée retenue, par exemple 1 an après le dernier échange. À valider]]</td>
+    <td>1 an après notre dernier échange</td>
   </tr>
   <tr>
     <td>Données de commande et de livraison</td>
-    <td>Le temps nécessaire à l'exécution de la commande, puis conservées au titre de la garantie légale et des éventuelles réclamations. [[À FOURNIR : durée précise, à valider avec le gestor ou l'abogado]]</td>
+    <td>Le temps nécessaire à l'exécution de la commande, puis conservées au titre de la garantie légale et des éventuelles réclamations. Au total : 3 ans après la livraison, la durée de la garantie légale.</td>
   </tr>
   <tr>
     <td>Factures et pièces comptables</td>
@@ -297,7 +295,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 
 <h3>Comment les exercer</h3>
 
-<p>Écrivez-moi à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>, ou par courrier à [[À FOURNIR : adresse postale]]. Dites-moi simplement ce que vous voulez.</p>
+<p>Écrivez-moi à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>, ou par courrier à [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne. Dites-moi simplement ce que vous voulez.</p>
 
 <p>Je peux avoir besoin de vérifier que c'est bien vous — c'est une protection pour vous, pas un obstacle. Je réponds dans un délai d'un mois. Si votre demande est complexe, ce délai peut être prolongé de deux mois, et je vous préviens dans ce cas. C'est gratuit.</p>
 
@@ -353,9 +351,9 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <ul>
   <li><strong>Vendeuse</strong> : Fatima Bentaouyt Eziani</li>
-  <li><strong>Statut</strong> : [[À FOURNIR : statut exact, par exemple « travailleuse indépendante (autónoma) inscrite en Espagne »]]</li>
+  <li><strong>Statut</strong> : Personne physique, distributrice indépendante des produits DXN (membre DXN)</li>
   <li><strong>NIF</strong> : 71993478M</li>
-  <li><strong>Adresse</strong> : [[À FOURNIR : adresse postale complète]]</li>
+  <li><strong>Adresse</strong> : [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne</li>
   <li><strong>E-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li><strong>WhatsApp</strong> : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
 </ul>
@@ -440,23 +438,23 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <h3>Où je livre</h3>
 
-<p>[[À FOURNIR : liste exacte des pays livrés. Le brief prévoit l'Espagne d'abord, puis l'Union européenne. Attention : le rapport réglementaire recommande de ne pas ouvrir la vente de compléments alimentaires vers le Maroc tant que le statut AMMPS/ONSSA n'est pas clarifié. N'écrire ici que des pays confirmés par Fati]]</p>
+<p>Je livre en Espagne et dans tous les autres pays de l'Union européenne. Pour les îles Canaries ou un pays d'Europe hors de l'Union (Royaume-Uni, Suisse…), des droits de douane et des taxes peuvent s'ajouter : écrivez-moi avant de commander.</p>
 
 <h3>En combien de temps</h3>
 
-<p>[[À FOURNIR : délai de préparation, par exemple « j'expédie sous 1 à 3 jours ouvrés après réception du paiement », puis délai d'acheminement par zone]]</p>
+<p>[[À FOURNIR : délai de préparation, par exemple « j'expédie sous 1 à 3 jours ouvrés après réception du paiement »]] Le délai d'acheminement dépend du pays de destination : je vous le confirme avec le total de votre commande.</p>
 
 <p>En tout état de cause, et sauf accord différent entre nous, votre commande vous est livrée <strong>au plus tard 30 jours</strong> après la conclusion de la vente. Si je ne peux pas tenir ce délai, je vous préviens et vous pouvez annuler et être remboursée intégralement.</p>
 
 <h3>Combien coûte la livraison</h3>
 
-<p>[[À FOURNIR : grille des frais de port par zone ou par pays, et éventuel seuil de livraison offerte. Sans cette grille, le prix total ne peut pas être annoncé avant commande, ce qui est une obligation d'information précontractuelle]]</p>
+<p>Les frais de livraison dépendent du pays de destination et du poids du colis.</p>
 
 <p>Le montant exact vous est indiqué avant que vous ne validiez votre commande.</p>
 
 <h3>Suivi</h3>
 
-<p>[[À FOURNIR : transporteur utilisé, et indiquer si un numéro de suivi est fourni. Si oui : « Je vous envoie votre numéro de suivi dès l'expédition. » Si non, le dire honnêtement plutôt que de le laisser deviner]]</p>
+<p>J'expédie avec GLS. Je vous envoie le numéro de suivi dès l'expédition : vous suivez votre colis sur le site de GLS.</p>
 
 <h3>À la réception</h3>
 
@@ -485,14 +483,14 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 <ul>
   <li>par e-mail à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a> ;</li>
   <li>par WhatsApp au <a href="https://wa.me/34622577161">+34 622 577 161</a> ;</li>
-  <li>par courrier à [[À FOURNIR : adresse postale]].</li>
+  <li>par courrier à [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne.</li>
 </ul>
 
 <p>Vous pouvez utiliser le formulaire ci-dessous, mais ce n'est pas obligatoire : une phrase claire suffit. Je vous confirme la réception de votre demande.</p>
 
 <h3>Renvoyer le produit</h3>
 
-<p>Renvoyez-moi le produit <strong>dans les 14 jours</strong> qui suivent votre demande, à [[À FOURNIR : adresse de retour, si elle est différente de l'adresse postale]].</p>
+<p>Renvoyez-moi le produit <strong>dans les 14 jours</strong> qui suivent votre demande, à l'adresse indiquée à l'article 1.</p>
 
 <p><strong>Les frais de renvoi sont à votre charge</strong>, sauf si le produit était défectueux ou non conforme — dans ce cas, ils sont pour moi.</p>
 
@@ -530,7 +528,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <p>À l'attention de :<br>
 Fatima Bentaouyt Eziani<br>
-[[À FOURNIR : adresse postale complète]]<br>
+[[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne<br>
 <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></p>
 
 <p>Je vous notifie par la présente ma rétractation du contrat portant sur la vente du ou des biens ci-dessous :</p>
@@ -574,7 +572,7 @@ Fatima Bentaouyt Eziani<br>
 <ul>
   <li>E-mail : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li>WhatsApp : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
-  <li>Courrier : [[À FOURNIR : adresse postale]]</li>
+  <li>Courrier : [[À FOURNIR : rue et numéro]], 28027 Madrid, Espagne</li>
 </ul>
 
 <p>Je réponds à chaque réclamation le jour même, et au plus tard sous 48 heures.</p>
@@ -624,34 +622,13 @@ paragraphe de plus.
 
 <h2>Où je livre</h2>
 
-<p>[[À FOURNIR : liste exacte des pays livrés, par zone si possible. Par exemple : « Espagne péninsulaire », « Baléares et Canaries » — attention, les Canaries sont hors territoire TVA de l'UE et les envois y passent la douane —, « France métropolitaine », « autres pays de l'Union européenne ». N'annoncer que des pays confirmés par Fati. Le rapport réglementaire recommande de ne pas ouvrir la vente de compléments alimentaires vers le Maroc tant que le statut AMMPS/ONSSA n'est pas clarifié]]</p>
+<p>Je livre en Espagne et dans tous les autres pays de l'Union européenne, avec GLS. Pour les îles Canaries ou un pays d'Europe hors de l'Union (Royaume-Uni, Suisse…), des droits de douane et des taxes peuvent s'ajouter : écrivez-moi avant de commander.</p>
 
 <p>Vous ne voyez pas votre pays ? Écrivez-moi, je vous dis si c'est possible et à quel prix.</p>
 
 <h2>Combien coûte la livraison</h2>
 
-<table>
-  <tr>
-    <th>Destination</th>
-    <th>Frais de livraison</th>
-    <th>Délai estimé</th>
-  </tr>
-  <tr>
-    <td>[[À FOURNIR : zone 1]]</td>
-    <td>[[À FOURNIR : tarif]]</td>
-    <td>[[À FOURNIR : délai]]</td>
-  </tr>
-  <tr>
-    <td>[[À FOURNIR : zone 2]]</td>
-    <td>[[À FOURNIR : tarif]]</td>
-    <td>[[À FOURNIR : délai]]</td>
-  </tr>
-  <tr>
-    <td>[[À FOURNIR : autant de lignes que de zones réelles]]</td>
-    <td>[[À FOURNIR : tarif]]</td>
-    <td>[[À FOURNIR : délai]]</td>
-  </tr>
-</table>
+<p>Les frais de livraison dépendent du pays de destination et du poids du colis : je vous les confirme par message, avec le total de votre commande.</p>
 
 <p>[[À FOURNIR : existe-t-il un seuil de livraison offerte ? Par exemple « Livraison offerte à partir de 60 € d'achat ». Si oui, l'écrire ici en évidence : c'est un argument de panier moyen. Si non, ne rien inventer]]</p>
 
@@ -667,7 +644,7 @@ paragraphe de plus.
 
 <h3>Acheminement</h3>
 
-<p>[[À FOURNIR : délais d'acheminement par zone, cohérents avec le tableau ci-dessus]]</p>
+<p>Le délai dépend du pays de destination : je vous le confirme avec le total de votre commande, avant tout paiement.</p>
 
 <p>Ce sont des délais estimés, communiqués par le transporteur. Un pic d'activité ou un jour férié peut les allonger de quelques jours.</p>
 
@@ -675,7 +652,7 @@ paragraphe de plus.
 
 <h2>Comment suivre mon colis</h2>
 
-<p>[[À FOURNIR : transporteur utilisé et existence ou non d'un numéro de suivi. Si un suivi existe : « Dès que votre colis part, je vous envoie le numéro de suivi par [e-mail / WhatsApp]. Vous pouvez le suivre sur le site du transporteur. » Si aucun suivi n'est fourni, le dire franchement plutôt que de laisser la question sans réponse]]</p>
+<p>J'expédie avec GLS. Dès que votre colis part, je vous envoie son numéro de suivi par WhatsApp ou par e-mail : vous le suivez sur le site de GLS. Si vous êtes absente, GLS peut déposer le colis dans un point relais (Parcel Shop) proche de chez vous ; vous l'y retirez avant la date limite indiquée dans le suivi.</p>
 
 <p>Et si vous vous posez une question sur votre colis, écrivez-moi. C'est moi qui réponds.</p>
 
@@ -706,7 +683,7 @@ paragraphe de plus.
 
 <p><strong>Les frais de renvoi restent à votre charge</strong>, sauf si le produit était abîmé, périmé ou non conforme — dans ce cas c'est moi qui paie, et vous n'avancez rien.</p>
 
-<p>[[À FOURNIR : adresse de retour, si elle est différente de l'adresse indiquée dans les mentions légales]]</p>
+<p>L'adresse de retour est celle des mentions légales.</p>
 
 <h2>Ce qui peut être retourné, et ce qui ne peut pas</h2>
 
@@ -778,8 +755,26 @@ Liste consolidée, par ordre de blocage.
   - Les dates de mise à jour.
   - Point 16 : la newsletter est retirée de la politique de confidentialité, parce qu'aucun outil
     n'est branché et que le formulaire a disparu du site au thème 1.3.0.
-- **Reste à fournir** : adresse postale (point 3, bloquant absolu), statut (point 4), et les
-  points 8 à 14 et 17 à 28.
+- **Reçu le 4 nov. 2026 après-midi, et posé** :
+  - Code postal 28027 Madrid, pour le point 3. La rue et le numéro manquent encore.
+  - Statut (point 4) : « personne physique, distributrice indépendante DXN ». Pas d'alta
+    d'autónoma, donc la ligne « registre public » est supprimée. **Risque signalé à Sofian** :
+    une vente habituelle sans alta est à faire valider par un gestor, et la facture (point 14)
+    comme la TVA (point 25) en dépendent.
+  - Pays (point 8) : Espagne et Union européenne. Pour les Canaries et l'Europe hors UE, la page
+    dit d'écrire avant de commander, à cause de la douane.
+  - Transporteur GLS avec suivi (point 11), et point relais Parcel Shop d'après une capture de
+    suivi GLS.
+  - Retours à la même adresse (point 12).
+  - Points 9 et 10 : le tableau des tarifs est remplacé par « frais et délai selon le pays et le
+    poids, confirmés par message avec le total avant paiement », ce que la FAQ et les engagements
+    du site disent déjà.
+  - Conservation (point 18) : 1 an après le dernier échange sans commande, et 3 ans après la
+    livraison pour les commandes, soit la durée de la garantie légale. Ce sont les
+    recommandations de l'agence, demandées par Sofian.
+- **Reste à fournir** : rue et numéro, délai de préparation, seuil de livraison offerte, moyens
+  de paiement, remise de la facture, TVA, gestor, durée de conservation des factures, journaux
+  de l'hébergeur, ADR et numéro de distributrice (facultatif).
 - **Point à trancher** : les marqueurs `[[À ACTIVER AVEC PAYPAL]]` et `[[À METTRE À JOUR…]]` sont
   visibles sur le site alors que PayPal est abandonné depuis le thème 1.3.0. Ils ne viennent pas de
   Fati, et il faut décider s'ils sortent des pages.

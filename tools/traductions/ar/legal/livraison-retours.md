@@ -10,34 +10,13 @@
 
 <h2>إلى أين أوصِّل</h2>
 
-<p>[[À FOURNIR : liste exacte des pays livrés, par zone si possible. Par exemple : « Espagne péninsulaire », « Baléares et Canaries » — attention, les Canaries sont hors territoire TVA de l'UE et les envois y passent la douane —, « France métropolitaine », « autres pays de l'Union européenne ». N'annoncer que des pays confirmés par Fati. Le rapport réglementaire recommande de ne pas ouvrir la vente de compléments alimentaires vers le Maroc tant que le statut AMMPS/ONSSA n'est pas clarifié]]</p>
+<p>أوصل الطلبات إلى إسبانيا وإلى جميع دول الاتحاد الأوروبي الأخرى، عبر GLS. بالنسبة لجزر الكناري أو لبلد أوروبي خارج الاتحاد (المملكة المتحدة، سويسرا…)، قد تُضاف رسوم جمركية وضرائب : راسلني قبل أن تطلب.</p>
 
 <p>لا تجد بلدك؟ راسلني، وسأخبرك إن كان ذلك ممكناً وبأي سعر.</p>
 
 <h2>كم يكلف التوصيل</h2>
 
-<table>
-  <tr>
-    <th>الوجهة</th>
-    <th>مصاريف التوصيل</th>
-    <th>المدة التقديرية</th>
-  </tr>
-  <tr>
-    <td>[[À FOURNIR : zone 1]]</td>
-    <td>[[À FOURNIR : tarif]]</td>
-    <td>[[À FOURNIR : délai]]</td>
-  </tr>
-  <tr>
-    <td>[[À FOURNIR : zone 2]]</td>
-    <td>[[À FOURNIR : tarif]]</td>
-    <td>[[À FOURNIR : délai]]</td>
-  </tr>
-  <tr>
-    <td>[[À FOURNIR : autant de lignes que de zones réelles]]</td>
-    <td>[[À FOURNIR : tarif]]</td>
-    <td>[[À FOURNIR : délai]]</td>
-  </tr>
-</table>
+<p>تتوقف تكاليف التوصيل على بلد الوجهة ووزن الطرد، وأؤكدها لك في رسالة مع المبلغ الإجمالي لطلبك.</p>
 
 <p>[[À FOURNIR : existe-t-il un seuil de livraison offerte ? Par exemple « Livraison offerte à partir de 60 € d'achat ». Si oui, l'écrire ici en évidence : c'est un argument de panier moyen. Si non, ne rien inventer]]</p>
 
@@ -53,7 +32,7 @@
 
 <h3>النقل</h3>
 
-<p>[[À FOURNIR : délais d'acheminement par zone, cohérents avec le tableau ci-dessus]]</p>
+<p>تتوقف المدة على بلد الوجهة : أؤكدها لك مع المبلغ الإجمالي لطلبك، قبل أي دفع.</p>
 
 <p>هذه مدد تقديرية يحددها الناقل. وقد تطيلها ذروة نشاط أو يوم عطلة ببضعة أيام.</p>
 
@@ -61,7 +40,7 @@
 
 <h2>كيف أتتبع طردي</h2>
 
-<p>[[À FOURNIR : transporteur utilisé et existence ou non d'un numéro de suivi. Si un suivi existe : « Dès que votre colis part, je vous envoie le numéro de suivi par [e-mail / WhatsApp]. Vous pouvez le suivre sur le site du transporteur. » Si aucun suivi n'est fourni, le dire franchement plutôt que de laisser la question sans réponse]]</p>
+<p>أشحن الطلبات عبر GLS. فور انطلاق طردك، أرسل إليك رقم التتبع عبر واتساب أو البريد الإلكتروني، لتتابعه على موقع GLS. وإذا لم تكن موجوداً، يمكن لـ GLS أن تودع الطرد في نقطة استلام (Parcel Shop) قريبة منك، تسحبه منها قبل الموعد الأقصى المذكور في التتبع.</p>
 
 <p>وإن كان لديك سؤال عن طردك، فراسلني. أنا من يجيب بنفسي.</p>
 
@@ -92,7 +71,7 @@
 
 <p><strong>تبقى مصاريف الإعادة على عاتقك</strong>، إلا إذا كان المنتج تالفاً أو منتهي الصلاحية أو غير مطابق — وفي هذه الحالة أنا من يدفع، ولا تدفع أنت شيئاً مقدماً.</p>
 
-<p>[[À FOURNIR : adresse de retour, si elle est différente de l'adresse indiquée dans les mentions légales]]</p>
+<p>عنوان الإرجاع هو العنوان المذكور في الإشعار القانوني.</p>
 
 <h2>ما يمكن إرجاعه، وما لا يمكن</h2>
 

@@ -14,9 +14,9 @@
 
 <ul>
   <li><strong>البائعة</strong> : Fatima Bentaouyt Eziani</li>
-  <li><strong>الصفة القانونية</strong> : [[À FOURNIR : statut exact, par exemple « travailleuse indépendante (autónoma) inscrite en Espagne »]]</li>
+  <li><strong>الصفة القانونية</strong> : شخص طبيعي، موزِّعة مستقلة لمنتجات DXN (عضوة في DXN)</li>
   <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
-  <li><strong>العنوان</strong> : [[À FOURNIR : adresse postale complète]]</li>
+  <li><strong>العنوان</strong> : [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا</li>
   <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li><strong>واتساب</strong> : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
 </ul>
@@ -101,23 +101,23 @@
 
 <h3>إلى أين أوصِّل</h3>
 
-<p>[[À FOURNIR : liste exacte des pays livrés. Le brief prévoit l'Espagne d'abord, puis l'Union européenne. Attention : le rapport réglementaire recommande de ne pas ouvrir la vente de compléments alimentaires vers le Maroc tant que le statut AMMPS/ONSSA n'est pas clarifié. N'écrire ici que des pays confirmés par Fati]]</p>
+<p>أوصل الطلبات إلى إسبانيا وإلى جميع دول الاتحاد الأوروبي الأخرى. بالنسبة لجزر الكناري أو لبلد أوروبي خارج الاتحاد (المملكة المتحدة، سويسرا…)، قد تُضاف رسوم جمركية وضرائب : راسلني قبل أن تطلب.</p>
 
 <h3>خلال كم من الوقت</h3>
 
-<p>[[À FOURNIR : délai de préparation, par exemple « j'expédie sous 1 à 3 jours ouvrés après réception du paiement », puis délai d'acheminement par zone]]</p>
+<p>[[À FOURNIR : délai de préparation, par exemple « j'expédie sous 1 à 3 jours ouvrés après réception du paiement »]] تتوقف مدة الشحن على بلد الوجهة : أؤكدها لك مع المبلغ الإجمالي لطلبك.</p>
 
 <p>وعلى أي حال، وما لم نتفق على خلاف ذلك، يُسلَّم إليك طلبك <strong>في أجل أقصاه 30 يوماً</strong> من إبرام البيع. وإذا لم أتمكن من الوفاء بهذا الأجل، فأخبرك ويمكنك الإلغاء واسترداد المبلغ كاملاً.</p>
 
 <h3>كم يكلف التوصيل</h3>
 
-<p>[[À FOURNIR : grille des frais de port par zone ou par pays, et éventuel seuil de livraison offerte. Sans cette grille, le prix total ne peut pas être annoncé avant commande, ce qui est une obligation d'information précontractuelle]]</p>
+<p>تتوقف تكاليف التوصيل على بلد الوجهة ووزن الطرد.</p>
 
 <p>يُبيَّن لك المبلغ الدقيق قبل تأكيد طلبك.</p>
 
 <h3>التتبع</h3>
 
-<p>[[À FOURNIR : transporteur utilisé, et indiquer si un numéro de suivi est fourni. Si oui : « Je vous envoie votre numéro de suivi dès l'expédition. » Si non, le dire honnêtement plutôt que de le laisser deviner]]</p>
+<p>أشحن الطلبات عبر GLS، وأرسل إليك رقم التتبع فور الشحن لتتابع طردك على موقع GLS.</p>
 
 <h3>عند الاستلام</h3>
 
@@ -146,14 +146,14 @@
 <ul>
   <li>بالبريد الإلكتروني على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>؛</li>
   <li>عبر واتساب على <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a>؛</li>
-  <li>بالبريد العادي إلى [[À FOURNIR : adresse postale]].</li>
+  <li>بالبريد العادي إلى [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا.</li>
 </ul>
 
 <p>يمكنك استخدام النموذج أدناه، لكنه ليس إلزامياً : تكفي جملة واضحة. وأؤكد لك استلام طلبك.</p>
 
 <h3>إرجاع المنتج</h3>
 
-<p>أعد إليّ المنتج <strong>خلال 14 يوماً</strong> من طلبك، إلى [[À FOURNIR : adresse de retour, si elle est différente de l'adresse postale]].</p>
+<p>أعد إليّ المنتج <strong>خلال 14 يوماً</strong> من طلبك، إلى العنوان المذكور في البند 1.</p>
 
 <p><strong>مصاريف الإرجاع على عاتقك</strong>، إلا إذا كان المنتج معيباً أو غير مطابق — ففي هذه الحالة أتحملها أنا.</p>
 
@@ -191,7 +191,7 @@
 
 <p>إلى عناية :<br>
 Fatima Bentaouyt Eziani<br>
-[[À FOURNIR : adresse postale complète]]<br>
+[[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا<br>
 <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></p>
 
 <p>أُبلّغك بموجب هذه الرسالة بتراجعي عن العقد المتعلق ببيع السلعة (السلع) المبينة أدناه :</p>
@@ -235,7 +235,7 @@ Fatima Bentaouyt Eziani<br>
 <ul>
   <li>البريد الإلكتروني : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
   <li>واتساب : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
-  <li>البريد العادي : [[À FOURNIR : adresse postale]]</li>
+  <li>البريد العادي : [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا</li>
 </ul>
 
 <p>أجيب على كل شكوى في اليوم نفسه، وفي أجل أقصاه 48 ساعة.</p>

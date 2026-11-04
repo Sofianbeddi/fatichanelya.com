@@ -15,7 +15,7 @@
 <ul>
   <li><strong>المسؤولة عن المعالجة</strong> : Fatima Bentaouyt Eziani</li>
   <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
-  <li><strong>العنوان</strong> : [[À FOURNIR : adresse postale complète, la même que dans les mentions légales]]</li>
+  <li><strong>العنوان</strong> : [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا</li>
   <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
 </ul>
 
@@ -73,7 +73,7 @@
   <tr>
     <td>شركة النقل</td>
     <td>لتوصيل طلبك : الاسم، والعنوان، وبحسب الحالة الهاتف أو البريد الإلكتروني للتتبع</td>
-    <td>[[À FOURNIR : nom du ou des transporteurs utilisés]]</td>
+    <td>GLS : <span dir="ltr">General Logistics Systems Spain, S.A.</span>، مدريد (إسبانيا)، ثم شبكة GLS في بلد التوصيل</td>
   </tr>
   <tr>
     <td>PayPal</td>
@@ -114,11 +114,11 @@
   </tr>
   <tr>
     <td>مراسلات واتساب أو البريد الإلكتروني دون طلب</td>
-    <td>[[À FOURNIR : durée retenue, par exemple 1 an après le dernier échange. À valider]]</td>
+    <td>سنة واحدة بعد آخر تواصل بيننا</td>
   </tr>
   <tr>
     <td>بيانات الطلب والتوصيل</td>
-    <td>المدة اللازمة لتنفيذ الطلب، ثم يُحتفظ بها لأغراض الضمان القانوني والشكاوى المحتملة. [[À FOURNIR : durée précise, à valider avec le gestor ou l'abogado]]</td>
+    <td>المدة اللازمة لتنفيذ الطلب، ثم يُحتفظ بها لأغراض الضمان القانوني والشكاوى المحتملة. أي 3 سنوات بعد التسليم، وهي مدة الضمان القانوني.</td>
   </tr>
   <tr>
     <td>الفواتير والمستندات المحاسبية</td>
@@ -148,7 +148,7 @@
 
 <h3>كيف تمارسها</h3>
 
-<p>اكتب لي على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>، أو بالبريد العادي إلى [[À FOURNIR : adresse postale]]. قل لي ببساطة ما تريده.</p>
+<p>اكتب لي على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>، أو بالبريد العادي إلى [[À FOURNIR : rue et numéro]]، <span dir="ltr">28027 Madrid</span>، إسبانيا. قل لي ببساطة ما تريده.</p>
 
 <p>قد أحتاج إلى التحقق من أنك أنت فعلاً — وهذه حماية لك، لا عائق. أرد في غضون شهر واحد. وإذا كان طلبك معقداً، فقد تُمدَّد هذه المهلة شهرين إضافيين، وأخبرك بذلك في هذه الحالة. والأمر مجاني.</p>
 
