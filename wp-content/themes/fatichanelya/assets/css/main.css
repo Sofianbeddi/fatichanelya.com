@@ -647,10 +647,8 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .about-gallery{position:relative;justify-self:center;inline-size:min(100%,380px)}
 .about-main{margin:0}
 .about-main img{border-radius:var(--r-lg);aspect-ratio:3/5;object-fit:cover;box-shadow:var(--shadow-lift)}
-.about-avatar{position:absolute;inset-block-start:-22px;inset-inline-end:-22px;margin:0}
-@media (max-width:560px){.about-avatar{inset-inline-end:4px;inset-block-start:-16px}}
-.about-avatar img{inline-size:96px;block-size:96px;border-radius:50%;
-  border:5px solid var(--paper);object-fit:cover}
+/* La pastille « photo de profil » posée sur le coin du portrait est retirée (1.8.0) : elle
+   répétait le même visage à dix centimètres du grand (retour du gérant, 13 nov. 2026). */
 .about-stat{position:absolute;inset-block-end:-20px;inset-inline-start:-18px;
   display:grid;gap:.1rem;padding:.85rem 1.2rem;border-radius:var(--r-md);
   background:var(--surface);box-shadow:var(--shadow-card);font-size:.72rem;color:var(--muted)}
@@ -876,6 +874,46 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
   .toast{inset-block:var(--toast-top,134px) auto;inset-inline:auto var(--bord);
     inline-size:min(430px,calc(100vw - 2rem));transform:translateY(-12px)}
 }
+
+/* ---------- 19 bis. BOUTON WHATSAPP FLOTTANT (1.8.0) ----------
+   Seul élément du site aux couleurs d'une autre marque : c'est le vert de WhatsApp qui le
+   fait reconnaître sans le lire. Liseré blanc, comme les ronds de catégories, pour qu'il se
+   détache du beige comme d'une photo.
+   Étagement : sous l'en-tête (50) et son panneau de menu, sous le voile du tiroir (90), sous
+   la confirmation d'ajout (120). Jamais de soulèvement au survol : le vert fonce, et sur
+   grand écran l'étiquette sort du bouton. */
+.wa-float{position:fixed;z-index:40;
+  inset-block-end:calc(16px + env(safe-area-inset-bottom,0px));inset-inline-end:16px;
+  display:grid;place-items:center;inline-size:56px;block-size:56px;border-radius:50%;
+  background:#25D366;color:#fff;box-shadow:0 0 0 3px #fff,var(--shadow-float);
+  transition:background var(--t-micro),opacity var(--t-base),visibility 0s;
+  animation:wa-in 420ms var(--ease-out) 700ms backwards}
+/* Sans état final : une fois jouée, l'animation rend la main à `.is-away`. */
+@keyframes wa-in{from{opacity:0;transform:scale(.82)}}
+.wa-float:focus-visible{outline-color:var(--navy);outline-offset:5px;border-radius:50%}
+.wa-float.is-away{opacity:0;visibility:hidden;
+  transition:opacity var(--t-base),visibility 0s var(--t-base)}
+/* Menu mobile ouvert : le bouton ne flotte pas sur les entrées du menu. */
+body:has(#mobile-panel:not([hidden])) .wa-float{opacity:0;visibility:hidden}
+.wa-float-label{position:absolute;inset-inline-end:calc(100% + 12px);
+  padding:.55rem .95rem;border-radius:var(--r-pill);background:var(--navy);color:var(--text-on-navy);
+  font-size:.8rem;font-weight:700;line-height:1.2;white-space:nowrap;pointer-events:none;
+  opacity:0;transform:translateX(calc(8px * var(--dir,1)));
+  transition:opacity var(--t-base),transform var(--t-base) var(--ease-out)}
+@media (hover:hover){
+  .wa-float:hover{background:#1DB954}
+  .wa-float:hover .wa-float-label{opacity:1;transform:none}
+}
+.wa-float:focus-visible .wa-float-label{opacity:1;transform:none}
+@media (min-width:700px){
+  .wa-float{inset-block-end:24px;inset-inline-end:24px;inline-size:60px;block-size:60px}
+}
+/* Sur mobile, la confirmation d'ajout occupe tout le bas de l'écran : le bouton s'efface le
+   temps qu'elle reste (elle le précède dans le document). */
+@media (max-width:699px){
+  .toast.is-visible ~ .wa-float{opacity:0;visibility:hidden}
+}
+@media print{.wa-float{display:none}}
 
 /* ---------- 20. PERF ----------
    content-visibility:auto retiré volontairement : gain nul ici (LCP 1,5 s / TBT 80 ms

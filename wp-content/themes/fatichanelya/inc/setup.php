@@ -25,7 +25,6 @@ add_action(
 		add_image_size( 'fati-hero', 1400, 876, true );
 		add_image_size( 'fati-paysage', 1000, 750, true );
 		add_image_size( 'fati-vertical', 520, 924, true );
-		add_image_size( 'fati-avatar', 240, 240, true );
 		// Vignette ronde des catégories : servie en 320 px pour un affichage
 		// de 160, donc nette sur les écrans à haute densité.
 		add_image_size( 'fati-categorie', 320, 320, true );

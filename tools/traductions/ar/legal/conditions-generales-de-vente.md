@@ -18,7 +18,7 @@
   <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
   <li><strong>العنوان</strong> : <span dir="ltr">28027 Madrid</span>، إسبانيا (يُرسَل العنوان الكامل عند الطلب)</li>
   <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
-  <li><strong>واتساب</strong> : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
+  <li><strong>واتساب</strong> : <a href="https://wa.me/34604284263" dir="ltr">+34 604 284 263</a></li>
 </ul>
 
 <p>أنا <strong>موزِّعة مستقلة</strong> لمنتجات DXN. لستُ العلامة التجارية ولا أتحدث باسمها. أعيد بيع منتجات أشتريها وأخزّنها بنفسي. انظر <a href="/mentions-legales/">الإشعار القانوني</a>.</p>
@@ -137,7 +137,7 @@
 
 <ul>
   <li>بالبريد الإلكتروني على <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>؛</li>
-  <li>عبر واتساب على <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a>؛</li>
+  <li>عبر واتساب على <a href="https://wa.me/34604284263" dir="ltr">+34 604 284 263</a>؛</li>
   <li>بالبريد العادي، إلى العنوان الذي أرسله إليك عند الطلب.</li>
 </ul>
 
@@ -226,7 +226,7 @@ Fatima Bentaouyt Eziani<br>
 
 <ul>
   <li>البريد الإلكتروني : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
-  <li>واتساب : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
+  <li>واتساب : <a href="https://wa.me/34604284263" dir="ltr">+34 604 284 263</a></li>
   <li>البريد العادي : إلى العنوان الذي يُرسَل إليك عند الطلب</li>
 </ul>
 

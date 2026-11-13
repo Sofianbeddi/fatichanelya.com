@@ -18,12 +18,12 @@
   <li><strong>رقم التعريف الضريبي (NIF)</strong> : 71993478M</li>
   <li><strong>العنوان</strong> : <span dir="ltr">28027 Madrid</span>، إسبانيا (يُرسَل العنوان الكامل عند الطلب)</li>
   <li><strong>البريد الإلكتروني</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
-  <li><strong>الهاتف / واتساب</strong> : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a></li>
+  <li><strong>الهاتف / واتساب</strong> : <a href="https://wa.me/34604284263" dir="ltr">+34 604 284 263</a></li>
 </ul>
 
 <h2>كيف تتواصل معي</h2>
 
-<p>أبسط طريقة هي أن تراسلني على واتساب : <a href="https://wa.me/34622577161" dir="ltr">+34 622 577 161</a>. أجيب بنفسي، فلا توجد خدمة عملاء وراء ذلك.</p>
+<p>أبسط طريقة هي أن تراسلني على واتساب : <a href="https://wa.me/34604284263" dir="ltr">+34 604 284 263</a>. أجيب بنفسي، فلا توجد خدمة عملاء وراء ذلك.</p>
 
 <p>عبر البريد الإلكتروني : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>. أجيب في اليوم نفسه، وفي أجل أقصاه 48 ساعة.</p>
 

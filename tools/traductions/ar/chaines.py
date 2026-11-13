@@ -43,6 +43,8 @@ T = {
 "Une question avant de commander ? Écrivez-moi : je réponds personnellement, le jour même et au plus tard sous 48 h.": "لديك سؤال قبل الطلب؟ راسلني: أجيب بنفسي في اليوم نفسه، وفي أجل أقصاه 48 ساعة.",
 "Bonjour Fati, j'aimerais échanger avec vous.": "مرحباً فاتي، أودّ التحدث معك.",
 "Écrire sur WhatsApp": "راسلني على واتساب",
+"Une question ?": "لديك سؤال؟",
+"Une question ? Écrivez à Fati sur WhatsApp": "لديك سؤال؟ راسل فاتي على واتساب",
 "Réseaux sociaux": "مواقع التواصل الاجتماعي",
 "Navigation du pied de page": "روابط أسفل الصفحة",
 "Navigation": "التنقل",
@@ -286,7 +288,7 @@ for pot in (S / 'theme.pot', S / 'core.pot'):
 
 entete = '''msgid ""
 msgstr ""
-"Project-Id-Version: Fatichanelya 1.7.1\\n"
+"Project-Id-Version: Fatichanelya 1.8.0\\n"
 "Language: ar\\n"
 "MIME-Version: 1.0\\n"
 "Content-Type: text/plain; charset=UTF-8\\n"

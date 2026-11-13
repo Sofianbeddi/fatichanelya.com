@@ -57,7 +57,7 @@ poser_option_image og_image       tools/medias/pages/og-default.jpg       "og-de
 # nouveau titre, sinon l'ancien média resterait posé.
 poser_option_image hero_image     tools/medias/pages/hero-fati.webp       "hero-fati-2"
 poser_option_image about_image    tools/medias/pages/about-main.webp      "about-main-3"
-poser_option_image about_avatar   tools/medias/pages/about-avatar.webp    "about-avatar-3"
+# La photo de profil (about_avatar) n'est plus affichée depuis le thème 1.8.0.
 # Photo large (Fati à droite) qui ouvre la page À propos.
 poser_option_image about_hero     tools/medias/pages/about-hero.webp      "about-hero-2"
 

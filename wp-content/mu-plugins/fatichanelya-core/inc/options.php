@@ -56,7 +56,6 @@ function fati_options_schema() {
 				'about_valeurs'  => array( 'label' => __( 'Valeurs', 'fatichanelya' ), 'type' => 'lines', 'help' => __( 'Titre | description', 'fatichanelya' ) ),
 				'about_image'    => array( 'label' => __( 'Photo « À propos »', 'fatichanelya' ), 'type' => 'image' ),
 				'about_hero'     => array( 'label' => __( 'Photo large de la page « À propos »', 'fatichanelya' ), 'type' => 'image', 'help' => __( 'Format paysage, Fati à droite : elle ouvre la page À propos. À défaut, la photo « À propos » est utilisée.', 'fatichanelya' ) ),
-				'about_avatar'   => array( 'label' => __( 'Photo de profil', 'fatichanelya' ), 'type' => 'image' ),
 				'pledge'         => array( 'label' => __( 'Engagements détaillés', 'fatichanelya' ), 'type' => 'lines', 'help' => __( 'Titre | description', 'fatichanelya' ) ),
 				'faq'            => array( 'label' => __( 'Questions fréquentes', 'fatichanelya' ), 'type' => 'lines', 'help' => __( 'Question | réponse', 'fatichanelya' ) ),
 				'contact_titre'  => array( 'label' => __( 'Titre du bloc contact', 'fatichanelya' ), 'type' => 'text' ),

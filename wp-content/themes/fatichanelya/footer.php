@@ -99,6 +99,12 @@ $cible = fati_whatsapp_actif() ? ' target="_blank" rel="noopener"' : '';
 
 <?php get_template_part( 'template-parts/components/bag-drawer' ); ?>
 
+<?php
+// Après le tiroir : la confirmation d'ajout (`.toast`) le précède dans le document,
+// la feuille de style s'en sert pour lui céder la place sur mobile.
+get_template_part( 'template-parts/components/whatsapp-flottant' );
+?>
+
 <?php wp_footer(); ?>
 </body>
 </html>

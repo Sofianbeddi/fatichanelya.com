@@ -231,7 +231,6 @@ settings.update({
     'hero_image':     url('hero-fati'),
     'training_image': url('training-session'),
     'about_image':    url('about-main'),
-    'about_avatar':   url('about-avatar'),
 })
 subprocess.run(['wp','option','update','fati_settings','--format=json'], input=json.dumps(settings), text=True, check=True)
 print('   visuels des sections reliés')

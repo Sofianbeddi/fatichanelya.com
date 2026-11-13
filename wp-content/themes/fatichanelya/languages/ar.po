@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Fatichanelya 1.7.1\n"
+"Project-Id-Version: Fatichanelya 1.8.0\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -137,6 +137,7 @@ msgstr "لديك سؤال قبل الطلب؟ راسلني: أجيب بنفسي 
 #: page-a-propos.php:88
 #: page-a-propos.php:178
 #: page-contact.php:70
+#: template-parts/components/whatsapp-flottant.php:34
 #: template-parts/sections/contact.php:8
 msgid "Bonjour Fati, j'aimerais échanger avec vous."
 msgstr "مرحباً فاتي، أودّ التحدث معك."
@@ -286,15 +287,15 @@ msgstr "المجموع الاسترشادي، دون المنتجات التي �
 msgid "Visuel à venir pour %s"
 msgstr "الصورة قادمة قريباً: %s"
 
-#: inc/setup.php:35
+#: inc/setup.php:34
 msgid "Menu principal"
 msgstr "القائمة الرئيسية"
 
-#: inc/setup.php:36
+#: inc/setup.php:35
 msgid "Pied de page — Navigation"
 msgstr "أسفل الصفحة — التنقل"
 
-#: inc/setup.php:37
+#: inc/setup.php:36
 msgid "Pied de page — Informations"
 msgstr "أسفل الصفحة — معلومات"
 
@@ -378,7 +379,7 @@ msgid "À propos"
 msgstr "من هي فاتي"
 
 #: page-a-propos.php:81
-#: template-parts/sections/about.php:23
+#: template-parts/sections/about.php:17
 msgid "À propos de Fati"
 msgstr "عن فاتي"
 
@@ -393,7 +394,7 @@ msgid "Fati, créatrice de %s"
 msgstr "فاتي، مؤسِّسة %s"
 
 #: page-a-propos.php:107
-#: template-parts/sections/about.php:18
+#: template-parts/sections/about.php:12
 #: template-parts/sections/hero.php:75
 msgid "Entrepreneure · Créatrice · Mentore"
 msgstr "رائدة أعمال · صانعة محتوى · مرشدة"
@@ -675,7 +676,9 @@ msgstr "عن بُعد"
 msgid "Le programme détaillé, les dates et le tarif vous sont envoyés par message. Vous décidez ensuite, sans engagement."
 msgstr "يُرسل إليك البرنامج المفصّل والمواعيد والسعر عبر رسالة. ثم تقرر أنت، بدون أي التزام."
 
+#. translators: %s : nom de la formation.
 #: single-formation.php:87
+#: template-parts/components/whatsapp-flottant.php:32
 #, php-format
 msgid "Bonjour Fati, je souhaite le programme et le tarif de la formation « %s »."
 msgstr "مرحباً فاتي، أرغب في برنامج وسعر دورة « %s »."
@@ -688,7 +691,9 @@ msgstr "الرد في اليوم نفسه، وفي أجل أقصاه 48 ساعة
 msgid "Les autres formations"
 msgstr "الدورات الأخرى"
 
+#. translators: %s : nom du produit.
 #: single-produit.php:36
+#: template-parts/components/whatsapp-flottant.php:29
 #, php-format
 msgid "Bonjour Fati, j'ai une question sur « %s »."
 msgstr "مرحباً فاتي، لديّ سؤال عن « %s »."
@@ -858,15 +863,19 @@ msgstr "أضف %s إلى السلة"
 msgid "Ajouter"
 msgstr "أضف"
 
+#: template-parts/components/whatsapp-flottant.php:38
+msgid "Une question ? Écrivez à Fati sur WhatsApp"
+msgstr "لديك سؤال؟ راسل فاتي على واتساب"
+
+#: template-parts/components/whatsapp-flottant.php:39
+msgid "Une question ?"
+msgstr "لديك سؤال؟"
+
 #: template-parts/sections/about.php:6
 msgid "Fati, créatrice de Fatichanelya"
 msgstr "فاتي، مؤسِّسة Fatichanelya"
 
-#: template-parts/sections/about.php:12
-msgid "Photo de profil de Fati"
-msgstr "صورة فاتي"
-
-#: template-parts/sections/about.php:41
+#: template-parts/sections/about.php:35
 msgid "Suivre Fati sur TikTok"
 msgstr "تابع فاتي على تيك توك"
 

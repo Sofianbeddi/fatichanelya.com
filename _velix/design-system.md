@@ -709,3 +709,46 @@ Le gérant remplace la photo du hero par un portrait de face (voir `medias.md`).
 620 × 1102 par toute taille `fati-portrait`. Simuler le cadre réel (375, 600, 768, 980, 1024, 1440,
 2722 px) avant de poser un portrait, en français et en arabe.
 
+
+## Thème 1.8.0 (13 nov. 2026) — bouton WhatsApp flottant, photo de profil retirée
+
+Demande du gérant : un bouton WhatsApp flottant, pour qu'une visiteuse qui a une question la pose
+sans chercher le bouton du pied de page. Composant `template-parts/components/whatsapp-flottant.php`,
+inclus par `footer.php` **après** le tiroir du panier.
+
+- **Forme.** Disque de 56 px (60 px à partir de 700 px), coin bas côté fin de ligne (droite en
+  français, gauche en arabe), à 16 px du bord (24 px sur grand écran), marge basse augmentée de
+  `env(safe-area-inset-bottom)`. Glyphe officiel en blanc, 30 px.
+- **Couleur.** Vert WhatsApp `#25D366`, survol `#1DB954` (il fonce, comme l'or). C'est le seul
+  élément du site aux couleurs d'une autre marque : le vert le fait reconnaître sans le lire. Liseré
+  blanc de 3 px, comme les ronds de catégories, pour qu'il se détache du beige comme d'une photo. Les
+  autres boutons WhatsApp du site restent or.
+- **Étiquette.** « Une question ? » sort du disque au survol et au focus clavier, en pastille bleu
+  nuit. Rien sur écran tactile. Le nom accessible la contient : « Une question ? Écrivez à Fati sur
+  WhatsApp ».
+- **Message selon la page.** Fiche produit : « j'ai une question sur « … » » ; fiche formation :
+  programme et tarif de la formation ; ailleurs : « j'aimerais échanger avec vous ». Ce sont les
+  chaînes déjà traduites des boutons de ces pages.
+- **Où il n'est pas.** Sans numéro, il n'est pas rendu (il mènerait à la page Contact sous un logo
+  WhatsApp). Sur le **panier**, non plus : « Commander sur WhatsApp » y envoie la commande rédigée, un
+  second bouton WhatsApp la ferait partir sans son contenu.
+- **Quand il s'efface** (`.is-away` ou règle CSS, `opacity` + `visibility` pour sortir de l'ordre de
+  tabulation) : pied de page à l'écran (`.footer-actions` ou `.footer-bottom`, observés par le
+  script : le bouton or du pied prend le relais et les liens du bas restent libres) ; menu mobile
+  ouvert (`body:has(#mobile-panel:not([hidden]))`) ; confirmation d'ajout sur mobile
+  (`.toast.is-visible ~ .wa-float`, d'où l'ordre d'inclusion dans `footer.php`).
+- **Étagement.** `z-index` 40 : sous l'en-tête (50), le voile du tiroir (90) et la confirmation (120).
+- **Mouvement.** Entrée en fondu et légère mise à l'échelle 700 ms après le chargement. L'image clé
+  n'a pas d'état final et l'animation est en `backwards` : avec `both`, elle garderait
+  `opacity:1` et `.is-away` ne pourrait plus masquer le bouton. Aucun soulèvement au survol.
+
+**Photo de profil de la section « À propos » (accueil) retirée.** La pastille ronde posée sur le coin
+du portrait répétait le même visage à côté du grand (retour du gérant sur capture). Le champ
+« Photo de profil » sort du back-office, la taille d'image `fati-avatar` et les lignes
+`about_avatar` de `seed.sh` et `publier-contenu-preversion.sh` aussi. La valeur reste dans
+`fati_settings` en base, sans effet. Ne pas remettre deux portraits de Fati dans le même bloc.
+
+**Numéro WhatsApp** : il vit à deux endroits. Le réglage `fati_settings.whatsapp` (chiffres seuls)
+alimente tous les boutons ; les pages légales le citent en clair et se republient depuis leurs
+sources. Marche à suivre et outils dans le journal du 13 nov. 2026
+(`tools/changer-numero-whatsapp.sh`, puis `tools/publier-pages-legales-en-ligne.sh`).

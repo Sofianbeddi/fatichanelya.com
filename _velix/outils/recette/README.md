@@ -18,6 +18,7 @@ dépôt (`~/recette-fati` par exemple), avec `npm i playwright pngjs pixelmatch`
 | `pages-fati-ar.json` | les treize adresses de la version arabe (accueil `/ar/`, boutique, catégorie, fiche, formations, fiche formation, À propos, contact, panier, deux pages légales, recherche, 404) |
 | `langues.mjs` | menu de langues (1.7.1) : ouverture, flèches, Échap, clic ailleurs, alignement, en FR et AR à 390 et 1440 ; `OUT=` dossier des captures |
 | `panier-ar.mjs` | version arabe : polices Alexandria / Plex chargées, panier partagé FR ↔ AR, prix de gauche à droite dans le tiroir |
+| `whatsapp-fati.mjs` | bouton WhatsApp flottant (1.8.0) et numéro WhatsApp sur les 28 pages FR et AR, à 390 et 1440 px : liens `wa.me` vers le numéro attendu (`NUM=`), aucun ancien numéro, bouton calé au coin, absent du panier, effacé devant le pied de page, le menu mobile et la confirmation d'ajout ; `ENGINE=`, `OUT=` ; lançable sur la production (lecture seule) |
 | `pages-fati.json` | les quinze adresses recettées (accueil, boutique, catégorie, fiche, formations, fiche formation, À propos, contact, panier, quatre pages légales, recherche, 404) |
 
 ```bash

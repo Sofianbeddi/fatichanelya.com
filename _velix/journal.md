@@ -244,3 +244,18 @@ Aucune des quatre pages ne se publie tant qu'un seul marqueur `[[À FOURNIR]]` s
   - nouveaux textes FR et AR visibles.
 
   Reste à faire, hors serveur : déclarer le domaine dans Google Search Console et y soumettre `https://fatichanelya.com/wp-sitemap.xml`.
+- 2026-11-13 · **Nouveau numéro WhatsApp, bouton WhatsApp flottant, photo de profil retirée — thème 1.8.0, en production le jour même** (demande « urgente » du gérant, feu vert « Tout en prod »).
+
+  **Numéro.** +34 604 284 263 remplace +34 622 577 161. Il vit à deux endroits :
+  - le réglage `fati_settings.whatsapp` (`34604284263`), lu par tous les boutons : nouvel outil `tools/changer-numero-whatsapp.sh preversion|production <numéro>`, qui consigne l'ancien dans `~/backups/fati-whatsapp.log` ;
+  - les huit pages légales FR et AR, qui le citent en clair : remplacé dans `_velix/copy-legal.md` et `tools/traductions/ar/legal/`, puis `tools/publier-pages-legales-en-ligne.sh production` (sauvegarde `fati-legal-production-20261113-101054/avant.json`). Avant l'envoi, les huit pages de la production ont été comparées aux sources par leur texte public : identiques au numéro près, rien d'autre n'a été écrasé.
+
+  **Bouton flottant** et **photo de profil** : voir `design-system.md`, section 1.8.0. Deux chaînes arabes ajoutées (`chaines.py`, 227 chaînes).
+
+  **Production.** `deploy-production.sh --go`, archive `~/backups/fati-prod-theme-avant-20261113-1011.tgz`. Le CDN sert le HTML en `DYNAMIC` : pas de purge nécessaire, les feuilles sont versionnées par date de fichier.
+
+  **Vérifié** par `_velix/outils/recette/whatsapp-fati.mjs` (296 contrôles : 28 pages FR et AR à 390 et 1440 px) : en local sous Chromium, WebKit et Firefox, puis sur fatichanelya.com sous Chromium. Tous les liens `wa.me` mènent au nouveau numéro, l'ancien n'apparaît plus nulle part.
+
+  **Préversion hors service** : `fatichanelya.velixdigital.com` refuse la connexion TLS (alerte 80), répond 403 en HTTP, et WP-CLI y reçoit « Access denied » pour l'utilisateur de base `u281708908_fatichanelya`. Les autres préversions du compte répondent. Rien n'y a été envoyé. À rétablir dans hPanel (sous-domaine, certificat, mot de passe de la base) ou à abandonner, la production étant en ligne.
+
+  Deux garde-fous rencontrés : lecture ad hoc de la base de production par `wp eval` refusée (remplacée par la comparaison des pages publiques), et toute écriture en production refusée sans feu vert explicite du gérant.

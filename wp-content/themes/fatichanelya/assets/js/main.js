@@ -842,4 +842,17 @@
       openDrawer();
     }
   });
+
+  /* ---------- Bouton WhatsApp flottant (1.8.0) ----------
+     Il s'efface quand le pied de page est à l'écran : le bouton « Écrire sur WhatsApp » du
+     pied prend le relais, et les liens du bas (langues, signature) ne sont pas recouverts. */
+  const waFloat = $('#wa-float');
+  if (waFloat && 'IntersectionObserver' in window) {
+    const aLEcran = new Set();
+    const veille = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) aLEcran.add(en.target); else aLEcran.delete(en.target); });
+      waFloat.classList.toggle('is-away', aLEcran.size > 0);
+    });
+    $$('.footer-actions, .footer-bottom').forEach((el) => veille.observe(el));
+  }
 })();

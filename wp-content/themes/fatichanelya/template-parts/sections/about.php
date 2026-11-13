@@ -7,12 +7,6 @@
 			</figure>
 		<?php endif; ?>
 
-		<?php if ( fati_opt( 'about_avatar' ) ) : ?>
-			<figure class="about-avatar">
-				<?php echo fati_image( fati_opt( 'about_avatar' ), 'fati-avatar', __( 'Photo de profil de Fati', 'fatichanelya' ) ); ?>
-			</figure>
-		<?php endif; ?>
-
 		<p class="about-stat">
 			<strong>Fati</strong>
 			<span><?php esc_html_e( 'Entrepreneure · Créatrice · Mentore', 'fatichanelya' ); ?></span>

@@ -78,12 +78,12 @@ Le lien doit rester **permanent, facile, direct et gratuit** depuis le pied de p
   <li><strong>Numéro d'identification fiscale (NIF)</strong> : 71993478M</li>
   <li><strong>Adresse</strong> : 28027 Madrid, Espagne (adresse complète communiquée sur simple demande)</li>
   <li><strong>Adresse e-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
-  <li><strong>Téléphone / WhatsApp</strong> : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
+  <li><strong>Téléphone / WhatsApp</strong> : <a href="https://wa.me/34604284263">+34 604 284 263</a></li>
 </ul>
 
 <h2>Comment me joindre</h2>
 
-<p>Le plus simple est de m'écrire sur WhatsApp : <a href="https://wa.me/34622577161">+34 622 577 161</a>. Je réponds moi-même, il n'y a pas de service client derrière.</p>
+<p>Le plus simple est de m'écrire sur WhatsApp : <a href="https://wa.me/34604284263">+34 604 284 263</a>. Je réponds moi-même, il n'y a pas de service client derrière.</p>
 
 <p>Par e-mail : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a>. Je réponds le jour même, et au plus tard sous 48 heures.</p>
 
@@ -288,7 +288,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 
 <h3>Comment les exercer</h3>
 
-<p>Écrivez-moi à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a> ou sur WhatsApp au <a href="https://wa.me/34622577161">+34 622 577 161</a>. Pour un courrier, je vous communique mon adresse postale complète sur simple demande. Dites-moi simplement ce que vous voulez.</p>
+<p>Écrivez-moi à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a> ou sur WhatsApp au <a href="https://wa.me/34604284263">+34 604 284 263</a>. Pour un courrier, je vous communique mon adresse postale complète sur simple demande. Dites-moi simplement ce que vous voulez.</p>
 
 <p>Je peux avoir besoin de vérifier que c'est bien vous — c'est une protection pour vous, pas un obstacle. Je réponds dans un délai d'un mois. Si votre demande est complexe, ce délai peut être prolongé de deux mois, et je vous préviens dans ce cas. C'est gratuit.</p>
 
@@ -348,7 +348,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
   <li><strong>NIF</strong> : 71993478M</li>
   <li><strong>Adresse</strong> : 28027 Madrid, Espagne (adresse complète communiquée sur simple demande)</li>
   <li><strong>E-mail</strong> : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
-  <li><strong>WhatsApp</strong> : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
+  <li><strong>WhatsApp</strong> : <a href="https://wa.me/34604284263">+34 604 284 263</a></li>
 </ul>
 
 <p>Je suis <strong>distributrice indépendante</strong> des produits DXN. Je ne suis pas la marque et je ne parle pas en son nom. Je revends des produits que j'achète et que je stocke moi-même. Voir les <a href="/mentions-legales/">mentions légales</a>.</p>
@@ -467,7 +467,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 
 <ul>
   <li>par e-mail à <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a> ;</li>
-  <li>par WhatsApp au <a href="https://wa.me/34622577161">+34 622 577 161</a> ;</li>
+  <li>par WhatsApp au <a href="https://wa.me/34604284263">+34 604 284 263</a> ;</li>
   <li>par courrier, à l'adresse que je vous communique sur simple demande.</li>
 </ul>
 
@@ -556,7 +556,7 @@ Fatima Bentaouyt Eziani<br>
 
 <ul>
   <li>E-mail : <a href="mailto:fbentaouyt@gmail.com">fbentaouyt@gmail.com</a></li>
-  <li>WhatsApp : <a href="https://wa.me/34622577161">+34 622 577 161</a></li>
+  <li>WhatsApp : <a href="https://wa.me/34604284263">+34 604 284 263</a></li>
   <li>Courrier : à l'adresse communiquée sur simple demande</li>
 </ul>
 
@@ -707,7 +707,7 @@ paragraphe de plus.
 
 <p>C'est le plus simple. Écrivez-moi sur WhatsApp : je réponds moi-même, en français, en espagnol ou en darija.</p>
 
-<p><a href="https://wa.me/34622577161">M'écrire sur WhatsApp (+34 622 577 161)</a></p>
+<p><a href="https://wa.me/34604284263">M'écrire sur WhatsApp (+34 604 284 263)</a></p>
 
 <h2>Pour aller plus loin</h2>
 
