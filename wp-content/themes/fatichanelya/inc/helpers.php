@@ -17,6 +17,20 @@ function fati_accent( $text ) {
 }
 
 /**
+ * Logo manuscrit de Fatichanelya (1.10.0, fichiers fournis par le gérant le 17 nov. 2026).
+ * Trois variantes rognées au ras du tracé (560 × 176) : « noir » sur les fonds clairs
+ * (en-tête), « or » sur le bleu nuit (pied de page), « blanc » en réserve. Sources dans
+ * tools/medias/sources/logo/. Le nom du site reste le texte de remplacement.
+ */
+function fati_logo( $variante = 'noir' ) {
+	return sprintf(
+		'<img class="logo" src="%s" alt="%s" width="560" height="176" decoding="async">',
+		esc_url( get_theme_file_uri( 'assets/img/logo/fatichanelya-' . sanitize_key( $variante ) . '.webp' ) ),
+		esc_attr( get_bloginfo( 'name' ) )
+	);
+}
+
+/**
  * Langue dans laquelle les formations sont données (1.9.0). Toutes le sont en arabe pour
  * l'instant (Sofian, 17 nov. 2026) ; sans cette mention, la version espagnole ou anglaise
  * laisserait croire qu'elles existent dans ces langues. Une seule source : le jour où une

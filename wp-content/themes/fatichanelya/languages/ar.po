@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Fatichanelya 1.9.0\n"
+"Project-Id-Version: Fatichanelya 1.10.0\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -251,20 +251,20 @@ msgid "Retirer %s du panier"
 msgstr "إزالة %s من السلة"
 
 #: inc/assets.php:55
-#: inc/helpers.php:277
+#: inc/helpers.php:291
 #, php-format
 msgid "Retirer un %s"
 msgstr "إنقاص %s بواحد"
 
 #: inc/assets.php:56
-#: inc/helpers.php:278
+#: inc/helpers.php:292
 #, php-format
 msgid "Ajouter un %s"
 msgstr "زيادة %s بواحد"
 
 #. translators: %s : nom du produit.
 #: inc/assets.php:57
-#: inc/helpers.php:276
+#: inc/helpers.php:290
 #, php-format
 msgid "Quantité de %s dans le panier"
 msgstr "كمية %s في السلة"
@@ -282,15 +282,15 @@ msgstr "السعر يُؤكَّد لاحقاً"
 msgid "Total indicatif, hors articles à confirmer"
 msgstr "المجموع الاسترشادي، دون المنتجات التي يُؤكَّد سعرها لاحقاً"
 
-#: inc/helpers.php:26
+#: inc/helpers.php:40
 msgid "Arabe"
 msgstr "العربية"
 
-#: inc/helpers.php:37
+#: inc/helpers.php:51
 msgid "En arabe"
 msgstr "بالعربية"
 
-#: inc/helpers.php:215
+#: inc/helpers.php:229
 #, php-format
 msgid "Visuel à venir pour %s"
 msgstr "الصورة قادمة قريباً: %s"
@@ -403,7 +403,7 @@ msgstr "فاتي، مؤسِّسة %s"
 
 #: page-a-propos.php:107
 #: template-parts/sections/about.php:12
-#: template-parts/sections/hero.php:75
+#: template-parts/sections/hero.php:71
 msgid "Entrepreneure · Créatrice · Mentore"
 msgstr "رائدة أعمال · صانعة محتوى · مرشدة"
 
@@ -844,7 +844,7 @@ msgid "Filtrer par catégorie"
 msgstr "تصفية حسب الفئة"
 
 #: template-parts/components/categorie-chips.php:53
-#: template-parts/sections/hero.php:26
+#: template-parts/sections/hero.php:31
 msgid "Catégories de produits"
 msgstr "فئات المنتجات"
 
@@ -919,7 +919,7 @@ msgstr "الأسئلة الشائعة"
 msgid "Tout ce qu'il *faut savoir*."
 msgstr "كل ما *يجب معرفته*."
 
-#: template-parts/sections/hero.php:69
+#: template-parts/sections/hero.php:65
 #, php-format
 msgid "Portrait de Fati, créatrice de %s"
 msgstr "صورة فاتي، مؤسِّسة %s"

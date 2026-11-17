@@ -25,7 +25,7 @@ $cible = fati_whatsapp_actif() ? ' target="_blank" rel="noopener"' : '';
 <footer class="site-footer">
 	<div class="footer-top">
 		<div class="footer-brand">
-			<p class="wordmark wordmark--light"><?php bloginfo( 'name' ); ?></p>
+			<p class="wordmark wordmark--pied"><?php echo fati_logo( 'or' ); ?></p>
 			<p class="footer-tagline"><?php bloginfo( 'description' ); ?></p>
 			<p class="footer-mot"><?php esc_html_e( 'Une question avant de commander ? Écrivez-moi : je réponds personnellement, le jour même et au plus tard sous 48 h.', 'fatichanelya' ); ?></p>
 			<div class="footer-actions">

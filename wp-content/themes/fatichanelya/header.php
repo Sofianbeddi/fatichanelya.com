@@ -30,7 +30,7 @@ defined( 'ABSPATH' ) || exit;
 
 <header class="site-header" id="header">
 	<a class="wordmark" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( sprintf( __( '%s, accueil', 'fatichanelya' ), get_bloginfo( 'name' ) ) ); ?>">
-		<?php bloginfo( 'name' ); ?>
+		<?php echo fati_logo( 'noir' ); ?>
 	</a>
 
 	<?php

@@ -246,10 +246,20 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   background:color-mix(in srgb,var(--paper) 94%,transparent);
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
   transition:block-size var(--t-base) var(--ease-out),box-shadow var(--t-base),background var(--t-base)}
+/* Repère du défilement (1.10.0) : le <span> vide faisait 0 × 0 px en haut de page ; avec la
+   marge de -1 px de l'observateur, il n'était jamais « visible » et l'en-tête restait réduit dès
+   le chargement. 40 px de haut : l'en-tête garde ses 84 px en haut de page, se réduit au-delà. */
+#scroll-sentinel{position:absolute;inset-block-start:0;inset-inline-start:0;
+  inline-size:1px;block-size:40px;pointer-events:none;visibility:hidden}
 .site-header.is-stuck{block-size:66px;box-shadow:0 1px 0 var(--line),0 10px 30px #1a1a1a0f}
-.wordmark{font-family:var(--font-display);font-size:clamp(1.5rem,2vw,1.95rem);
-  font-weight:600;letter-spacing:-.045em;color:var(--navy)}
-.wordmark--light{color:#fff}
+/* Logo manuscrit (1.10.0) : image rognée au ras du tracé, 560 × 176. La hauteur porte la
+   taille ; le jambage du « y » occupe le bas de l'image, d'où une hauteur généreuse pour que
+   les minuscules gardent le corps de l'ancien texte. Il se réduit avec l'en-tête collé. */
+.wordmark{display:inline-flex;align-items:center;justify-self:start;line-height:0;--logo-h:58px}
+.wordmark .logo{display:block;inline-size:auto;block-size:var(--logo-h);max-inline-size:none;
+  transition:block-size var(--t-base) var(--ease-out)}
+.site-header.is-stuck .wordmark{--logo-h:47px}
+@media (max-width:1080px){.wordmark{--logo-h:48px}.site-header.is-stuck .wordmark{--logo-h:42px}}
 .primary-nav{display:flex;gap:clamp(1.1rem,2.6vw,2.4rem);justify-self:center}
 .primary-nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;
   font-size:.82rem;font-weight:600}
@@ -323,28 +333,35 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   font-size:var(--fs-lead);line-height:1.7}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem}
 
-.hero-facts{display:flex;flex-wrap:wrap;gap:.6rem 1.9rem;
-  margin-block-start:2rem;padding-block-start:1.25rem;
-  border-block-start:1px solid var(--line-mid);
-  inline-size:100%;max-inline-size:34rem;
-  color:var(--muted);font-size:var(--fs-label)}
-.hero-facts li{display:inline-flex;align-items:center;gap:.6rem}
-.hero-facts li::before{content:"";inline-size:5px;block-size:5px;
-  border-radius:50%;background:var(--gold);flex:none}
-
 /* Portrait : remplit sa colonne sur toute la hauteur du cadre. Hors flux,
-   sinon l'image imposerait sa hauteur intrinsèque à la rangée. */
-.hero-portrait{position:relative;margin:0;min-inline-size:0;overflow:hidden}
+   sinon l'image imposerait sa hauteur intrinsèque à la rangée.
+   1.10.0 : la photo est détourée (fond transparent). Le fond de studio est dessiné ici : il
+   part du sable du cadre côté texte, sans couture, fonce un peu vers le bord, et une lumière
+   douce se pose derrière la tête. L'ancien fondu posé sur la photo est retiré : il serait
+   passé sur le visage, Fati étant cadrée à gauche de l'image.
+   Fati touche le bord gauche de l'image (épaule, voile). En arabe, ce bord est celui du cadre
+   arrondi : la coupe est naturelle. En français, espagnol et anglais, la colonne est à droite
+   et ce bord tomberait contre le texte : la photo s'y décale de 12 % vers l'extérieur et son
+   bord gauche s'efface en dégradé. Une photo ordinaire (non détourée) couvre simplement ce
+   fond. */
+.hero-portrait{position:relative;margin:0;min-inline-size:0;overflow:hidden;
+  background:
+    radial-gradient(42% 36% at var(--lumiere-x,56%) 30%,#FBF7F0 0%,#FBF7F000 100%),
+    linear-gradient(var(--to-end,90deg),var(--ivory) 0%,#E7DAC6 100%)}
+[dir="rtl"] .hero-portrait{--lumiere-x:36%}
 .hero-portrait img{position:absolute;inset:0;inline-size:100%;block-size:100%;
-  object-fit:cover;object-position:center 18%}
-/* Fondu côté texte : le cadre est en sable, le fondu part du sable. */
-.hero-portrait::before{content:"";position:absolute;inset-block:0;
-  inset-inline-start:0;inline-size:34%;z-index:1;pointer-events:none;
-  background:linear-gradient(var(--to-end,90deg),var(--ivory),transparent)}
-/* Voile sous la signature : une ombre portée ne compte pas comme du contraste. */
+  object-fit:cover;object-position:center 22%}
+:root:not([dir="rtl"]) .hero-portrait img{left:12%;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 14%);
+  mask-image:linear-gradient(to right,transparent 0,#000 14%)}
+/* Voile sous la signature : une ombre portée ne compte pas comme du contraste.
+   1.10.0 : il s'efface vers le texte, sinon il dessinait un rectangle sombre à bord net sur le
+   fond clair du studio. Sur mobile, le portrait est un bandeau : voile sur toute la largeur. */
 .hero-portrait::after{content:"";position:absolute;inset-inline:0;
   inset-block-end:0;block-size:38%;z-index:1;pointer-events:none;
-  background:linear-gradient(to top,#0E1729D9,#0E172966 45%,transparent)}
+  background:linear-gradient(to top,#0E1729D9,#0E172966 45%,transparent);
+  -webkit-mask-image:linear-gradient(var(--to-end,90deg),transparent 0,#000 60%);
+  mask-image:linear-gradient(var(--to-end,90deg),transparent 0,#000 60%)}
 .hero-portrait figcaption{position:absolute;z-index:2;
   inset-block-end:clamp(1.25rem,3vw,2rem);inset-inline-end:clamp(1.25rem,3vw,2rem);
   display:grid;gap:.1rem;text-align:end;color:#fff}
@@ -368,10 +385,16 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   .hero{padding-block:.75rem 0}
   .hero-frame{grid-template-columns:minmax(0,1fr);min-block-size:0;border-radius:20px}
   .hero-portrait{order:-1;block-size:clamp(280px,46vh,360px)}
-  .hero-portrait::before{display:none}
+  /* Bandeau (1.10.0) : étirée sur toute la largeur, la photo détourée coupait le haut de la
+     tête dès 600 px. Elle garde un cadre carré, calé à gauche (le bord coupé de l'image contre
+     le bord du cadre), la lumière derrière la tête, la signature à droite dans les deux sens. */
+  .hero-portrait,[dir="rtl"] .hero-portrait{--lumiere-x:clamp(130px,24vw,190px)}
+  .hero-portrait::after{-webkit-mask-image:none;mask-image:none}
+  .hero-portrait img,:root:not([dir="rtl"]) .hero-portrait img{left:0;right:auto;inline-size:auto;
+    aspect-ratio:1;object-position:center 12%;-webkit-mask-image:none;mask-image:none}
+  [dir="rtl"] .hero-portrait figcaption{inset-inline:clamp(1.25rem,3vw,2rem) auto;text-align:start}
   .hero-copy{padding:1.75rem clamp(1.25rem,5vw,2rem) 2rem}
   .hero h1{max-width:22ch}
-  .hero-facts{margin-block-start:1.75rem;padding-block-start:1.25rem}
 }
 
 /* ---------- 7. TRUST ---------- */
@@ -748,7 +771,7 @@ input.qty-val::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 
 .footer-brand{display:grid;gap:.9rem;justify-items:start;align-content:start;
   max-inline-size:34rem;font-size:.92rem}
-.footer-brand .wordmark{font-size:clamp(1.7rem,2.2vw,2.1rem);line-height:1;margin-block-start:-.15rem}
+.footer-brand .wordmark{--logo-h:clamp(64px,5.6vw,80px);margin-block-end:.2rem}
 .footer-tagline{color:var(--text-on-navy);font-size:1rem}
 .footer-mot{max-inline-size:38ch;line-height:1.65;color:var(--text-on-navy-2)}
 .footer-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.1rem;
@@ -1758,7 +1781,6 @@ body.admin-bar .site-header{inset-block-start:32px}
   --font-display:"Poppins","Alexandria",Futura,"Avenir Next",Avenir,"Segoe UI",
   system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif}
 [dir="rtl"] *{letter-spacing:0!important}
-[dir="rtl"] .wordmark{letter-spacing:-.045em!important} /* la marque reste en latin */
 [dir="rtl"] body{line-height:1.8}
 [dir="rtl"] :is(p,li,dd){line-height:1.8}
 [dir="rtl"] :is(h1,h2,h3,.programmes-tab-titre,.product-name,.pledge-non li,.limites-liste li,
@@ -1960,20 +1982,17 @@ body.admin-bar{--admin-h:32px}
 /* Accueil : la rangée est posée au-dessus du cadre du hero, juste sous l'en-tête, pour être dans
    le premier écran ; cercles plus grands (jusqu'à 72 px), noms en bleu nuit. Masquée sur grand
    écran : les ronds de « Nos catégories » la portent. Le portrait baisse à 300 px au plus et les
-   trois faits du hero sont retirés sur mobile pour raccourcir le défilement. */
+   trois faits du hero, retirés sur mobile pour raccourcir le défilement, ont disparu partout en 1.10.0. */
 .filters.hero-cats{display:none}
 @media (max-width:980px){
-  .hero-facts{display:none}
   .hero-portrait{block-size:clamp(240px,36vh,300px)}
   .filters.hero-cats{display:grid;margin-block:.35rem 1rem;--cercle:clamp(60px,19vw,78px)}
   .hero-cats .cat-circle{color:var(--navy)}
 }
 @media (min-width:600px) and (max-width:980px){
   .filters.hero-cats{grid-template-columns:repeat(var(--n,4),minmax(0,150px))}
-  /* 1.7.2 : en tablette portrait le portrait n'est plus qu'un bandeau de 300 px sur 600 à
-     950 de large ; à 18 % la bouche tombait dans le voile de la signature. À 26 %, les
-     yeux sont au tiers haut du bandeau. */
-  .hero-portrait img{object-position:center 26%}
+  /* 1.7.2 : object-position à 26 % pour le bandeau de tablette ; remplacé en 1.10.0 par le
+     cadre carré de la photo détourée (section 6). */
 }
 
 /* =========================================================
@@ -2016,7 +2035,7 @@ body.admin-bar{--admin-h:32px}
 /* Très petits écrans (320 px, 1.9.0) : marque, sélecteur de langue, panier et menu dépassaient de
    9 px dans toutes les langues. La marque perd un cran, les outils se serrent (cibles à 40 px). */
 @media (max-width:359px){
-  .wordmark{font-size:1.3rem}
+  .wordmark,.site-header.is-stuck .wordmark{--logo-h:40px}
   .header-tools{gap:0}
   .header-tools .icon-button{inline-size:40px}
 }

@@ -7,8 +7,13 @@
  * droite, fondu entre les deux, signature en bas du portrait. En mobile, le
  * cadre empile le portrait au-dessus du texte.
  *
- * Le titre tient sur deux lignes, la seconde en or : c'est l'élément LCP, il
- * ne porte donc aucune animation et l'image est chargée en priorité.
+ * Le titre tient sur trois lignes, celle du milieu en or : c'est l'élément LCP,
+ * il ne porte donc aucune animation et l'image est chargée en priorité.
+ *
+ * 1.10.0 (17 nov. 2026, demande du gérant) : titre « Entrepreneure en vente
+ * directe et marketing digital », les trois points clés sous les boutons sont
+ * retirés (le troisième répétait la signature du portrait), et le portrait est
+ * une photo détourée posée sur un fond de studio dessiné en CSS.
  *
  * @package Fatichanelya
  */
@@ -46,15 +51,6 @@ $portrait = fati_opt( 'hero_image' );
 				<?php echo esc_html( fati_opt( 'hero_cta2' ) ); ?><?php echo fati_icon( 'arrow', 20 ); ?>
 			</a>
 		</div>
-
-		<?php $faits = fati_opt_lines( 'hero_faits' ); ?>
-		<?php if ( $faits ) : ?>
-			<ul class="hero-facts">
-				<?php foreach ( $faits as $fait ) : ?>
-					<li><?php echo esc_html( $fait[0] ); ?></li>
-				<?php endforeach; ?>
-			</ul>
-		<?php endif; ?>
 	</div>
 
 	<?php if ( $portrait ) : ?>

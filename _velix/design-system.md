@@ -785,3 +785,48 @@ côté JavaScript (`Intl` en `en-GB`) ; virgule et symbole derrière dans les tr
 **Pièges.** `0 €` était écrit en dur dans le tiroir du panier (corrigé : `fati_format_prix(0)`). Les
 liens internes des pages traduites reprenaient l'adresse française : le mu-plugin les réécrit à
 l'affichage vers la traduction de la langue courante (1.2.0), ce qui corrige aussi l'arabe.
+
+## 1.10.0 — Logo manuscrit, hero recentré sur Fati (17 nov. 2026)
+
+Demande du gérant, sur une capture de l'accueil arabe.
+
+**Logo.** Le nom en Poppins est remplacé par le logo manuscrit fourni en trois variantes (sources
+3000 × 993 dans `tools/medias/sources/logo/`). Rognées au ras du tracé et servies en WebP 560 × 176
+(`assets/img/logo/`, 18 Ko, 33 Ko, 16 Ko), par `fati_logo( $variante )` :
+- **noir** (#1E1E1E) dans l'en-tête, sur le beige ;
+- **or** (dégradé du logo) dans le pied de page, sur le bleu nuit ;
+- **blanc** en réserve. L'or n'est pas mis sur le beige : contraste d'environ 2:1, le tracé fin
+  s'y perd.
+Hauteur portée par `--logo-h` : 58 px (47 px en-tête réduit), 48 / 42 px sous 1 080 px, 40 px sous
+360 px, `clamp(64px, 5.6vw, 80px)` au pied. Le jambage du « y » occupe la moitié basse de l'image :
+il faut cette hauteur pour que les minuscules gardent le corps de l'ancien texte. Toujours en
+latin, il ne se retourne pas en RTL.
+
+**En-tête qui se réduit.** Il était réduit en permanence depuis la première version : le repère
+`#scroll-sentinel` faisait 0 × 0 px et l'observateur rogne 1 px du haut de l'écran. Il mesure
+désormais 40 px : 84 px en haut de page, 66 px avec ombre au-delà.
+
+**Hero.**
+- Titre : « Entrepreneure en *vente directe* et marketing digital » (AR « رائدة أعمال في البيع
+  المباشر والتسويق الرقمي », texte du gérant ; ES « Emprendedora en venta directa y marketing
+  digital » ; EN « Entrepreneur in direct selling and digital marketing »). Trois lignes, celle du
+  milieu en or, comme l'ancien titre. Répond au point 1 du blueprint (« le hero ne dit pas qui
+  parle »).
+- Les trois points clés sous les boutons et leur filet sont retirés, ainsi que le champ du
+  back-office : le troisième répétait la signature du portrait.
+- Portrait **détouré** (fond transparent, Fati en abaya noire au voile brodé d'or ; source
+  `tools/medias/sources/hero-fati-abaya-noire-source.png`, 472 px de vide retirés au-dessus du
+  voile). Le fond de studio est en CSS : sable `--ivory` côté texte, sans couture avec le cadre,
+  `#E7DAC6` vers le bord, lumière douce derrière la tête. L'ancien fondu posé sur la photo est
+  retiré.
+- Fati est cadrée à gauche de l'image et la touche (épaule, voile). En arabe, ce bord est celui du
+  cadre arrondi. En LTR, la photo se décale de 12 % vers l'extérieur et son bord gauche s'efface en
+  dégradé (14 %), sinon il tombait contre le texte. Le voile de la signature s'efface vers le texte,
+  sinon il dessinait un rectangle sombre sur le fond clair.
+- Bandeau mobile et tablette (≤ 980 px) : la photo garde un cadre carré calé à gauche, centrée à
+  12 % en hauteur (étirée sur 700 px de large, elle coupait le haut de la tête), signature à droite
+  dans les deux sens.
+
+**Piège** : un portrait détouré n'a pas de fond ; ne jamais le poser sur une colonne sans fond
+dessiné. Une photo ordinaire posée dans « Photo du hero » couvre simplement le fond de studio (en
+LTR, elle garde le décalage de 12 % et le bord fondu).

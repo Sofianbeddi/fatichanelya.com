@@ -88,6 +88,15 @@ que le voile ne touche plus le bord du cadre. Résultat 1125 × 1507, WebP q86, 
 (thème 1.7.2). Le fond (#F6EFE5) est presque le beige du site. L'ancien portrait (veste claire,
 mur sauge et olivier) est dans `reserve/hero-fati-v1-veste-claire.webp`.
 
+**17 nov. 2026 (thème 1.10.0)** : le hero passe à un portrait **détouré** fourni par le gérant, Fati
+en abaya noire et voile brodé d'or (source `sources/hero-fati-abaya-noire-source.png`, 1080 × 1920,
+fond transparent, détourage propre sur fond clair). Seule intervention : les 300 premières lignes,
+entièrement transparentes, sont retirées (172 px d'air gardés au-dessus du voile). Résultat
+1080 × 1620, WebP q84 avec transparence, 68 Ko, média « hero-fati-3 ». Le fond de studio est
+dessiné en CSS (`design-system.md`, section 1.10.0). Le portrait en tailleur est dans
+`reserve/hero-fati-v2-tailleur-marine.webp` et reste celui de la page À propos. Logo manuscrit
+du même jour : `sources/logo/` (trois variantes, 3000 × 993).
+
 **Une seule photo de Fati sur tout le site depuis le 3 nov. 2026** (« je veux la photo partout, je
 ne veux plus voir l'ancienne », thème 1.7.3). Les trois autres visuels sont tirés de la même base
 que le hero (colonne verte retirée, fond prolongé de 110 px en haut), sans retouche du visage :

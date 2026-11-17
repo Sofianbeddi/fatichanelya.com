@@ -54,8 +54,9 @@ poser_option_image training_image tools/medias/pages/training-session.webp "trai
 poser_option_image og_image       tools/medias/pages/og-default.jpg       "og-default"
 # Thèmes 1.7.2 et 1.7.3 : une seule photo de Fati partout, le portrait de face en tailleur
 # bleu nuit (2 et 3 nov. 2026). La recherche se fait par titre : un nouveau fichier prend un
-# nouveau titre, sinon l'ancien média resterait posé.
-poser_option_image hero_image     tools/medias/pages/hero-fati.webp       "hero-fati-2"
+# nouveau titre, sinon l'ancien média resterait posé. Thème 1.10.0 (17 nov. 2026) : le hero
+# passe au portrait détouré en abaya noire (média « hero-fati-3 ») ; À propos garde le tailleur.
+poser_option_image hero_image     tools/medias/pages/hero-fati.webp       "hero-fati-3"
 poser_option_image about_image    tools/medias/pages/about-main.webp      "about-main-3"
 # La photo de profil (about_avatar) n'est plus affichée depuis le thème 1.8.0.
 # Photo large (Fati à droite) qui ouvre la page À propos.

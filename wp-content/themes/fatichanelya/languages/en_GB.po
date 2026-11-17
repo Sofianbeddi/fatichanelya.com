@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Fatichanelya 1.9.0\n"
+"Project-Id-Version: Fatichanelya 1.10.0\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -247,20 +247,20 @@ msgid "Retirer %s du panier"
 msgstr "Remove %s from the basket"
 
 #: inc/assets.php:55
-#: inc/helpers.php:277
+#: inc/helpers.php:291
 #, php-format
 msgid "Retirer un %s"
 msgstr "Remove one %s"
 
 #: inc/assets.php:56
-#: inc/helpers.php:278
+#: inc/helpers.php:292
 #, php-format
 msgid "Ajouter un %s"
 msgstr "Add one %s"
 
 #. translators: %s : nom du produit.
 #: inc/assets.php:57
-#: inc/helpers.php:276
+#: inc/helpers.php:290
 #, php-format
 msgid "Quantité de %s dans le panier"
 msgstr "Quantity of %s in the basket"
@@ -278,15 +278,15 @@ msgstr "price to be confirmed"
 msgid "Total indicatif, hors articles à confirmer"
 msgstr "Estimated total, excluding items to be confirmed"
 
-#: inc/helpers.php:26
+#: inc/helpers.php:40
 msgid "Arabe"
 msgstr "Arabic"
 
-#: inc/helpers.php:37
+#: inc/helpers.php:51
 msgid "En arabe"
 msgstr "In Arabic"
 
-#: inc/helpers.php:215
+#: inc/helpers.php:229
 #, php-format
 msgid "Visuel à venir pour %s"
 msgstr "Image coming soon: %s"
@@ -399,7 +399,7 @@ msgstr "Fati, founder of %s"
 
 #: page-a-propos.php:107
 #: template-parts/sections/about.php:12
-#: template-parts/sections/hero.php:75
+#: template-parts/sections/hero.php:71
 msgid "Entrepreneure · Créatrice · Mentore"
 msgstr "Entrepreneur · Creator · Mentor"
 
@@ -836,7 +836,7 @@ msgid "Filtrer par catégorie"
 msgstr "Filter by category"
 
 #: template-parts/components/categorie-chips.php:53
-#: template-parts/sections/hero.php:26
+#: template-parts/sections/hero.php:31
 msgid "Catégories de produits"
 msgstr "Product categories"
 
@@ -907,7 +907,7 @@ msgstr "Frequently asked questions"
 msgid "Tout ce qu'il *faut savoir*."
 msgstr "Everything you *need to know*."
 
-#: template-parts/sections/hero.php:69
+#: template-parts/sections/hero.php:65
 #, php-format
 msgid "Portrait de Fati, créatrice de %s"
 msgstr "Portrait of Fati, founder of %s"
