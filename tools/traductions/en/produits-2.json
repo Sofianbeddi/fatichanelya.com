@@ -1,0 +1,342 @@
+{
+ "zhi-ca-plus": {
+  "nom": "DXN Zhi Ca Plus",
+  "slug": "dxn-zhi-ca-plus",
+  "accroche": "Coffee-flavoured sweets with Ganoderma lucidum extract, in 30 individual sachets.",
+  "description": "Zhi Ca Plus comes as coffee-flavoured sweets with Ganoderma lucidum extract, in individual sachets that are easy to slip into a bag.\n\nThe box contains 30 sachets of 9.5 g.",
+  "format": "30 sachets × 9.5 g",
+  "composition": "Sugar, coffee flavouring, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Let one sweet dissolve in your mouth.",
+  "points": "Coffee-flavoured sweets\nGanoderma lucidum extract\n30 individual sachets"
+ },
+ "goji-berries": {
+  "nom": "DXN Goji Berries",
+  "slug": "dxn-goji-berries",
+  "accroche": "Dried goji berries, in a 350 g bag.",
+  "description": "Dried goji berries (Lycium barbarum), to snack on as they are or to add to a yoghurt, porridge, salad or herbal tea.\n\n350 g bag, to reseal after opening and keep in a dry place.",
+  "format": "350 g bag",
+  "composition": "Dried goji berries (Lycium barbarum).",
+  "usage": "Eat a handful as they are, or add them to a recipe.\nThey can be rehydrated for a few minutes in lukewarm water.",
+  "points": "Dried goji berries\nTo snack on or cook with\n350 g bag"
+ },
+ "rg-90": {
+  "nom": "DXN Reishi Gano (RG) 90",
+  "slug": "dxn-reishi-gano-rg-90",
+  "accroche": "Ganoderma lucidum, fruiting body harvested at 90 days, in 270 mg capsules.",
+  "description": "Reishi Gano, or RG, contains only the fruiting body of Ganoderma lucidum — the reishi mushroom — harvested at maturity, after 90 days of cultivation on a certified organic farm according to DXN. Nothing else goes into the capsule.\n\nThis bottle of 90 capsules is the middle size in the range, which also comes in 30 and 360. The directions for use are on the packaging; if you are undergoing medical treatment or are pregnant, ask a healthcare professional for advice before taking it.",
+  "format": "90 capsules × 270 mg",
+  "composition": "100% Ganoderma lucidum (fruiting body), 270 mg per capsule.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "100% Ganoderma lucidum, fruiting body\nHarvested at 90 days, on a certified organic farm according to DXN\n90 capsules of 270 mg"
+ },
+ "reishi-powder": {
+  "nom": "DXN Reishi Mushroom Powder — 22 g",
+  "slug": "dxn-reishi-mushroom-powder-22-g",
+  "accroche": "Ganoderma lucidum fruiting body and mycelium ground into a powder for mixing — the small jar.",
+  "description": "Reishi Mushroom Powder — “Reishilium Powder” on the Malaysian packaging — brings together the two parts of the reishi that DXN offers separately in capsules: the fruiting body (RG) and the mycelium (GL). It can be mixed into water, a drink or a recipe.\n\nThe taste is slightly bitter, typical of the mushroom. The dose is measured with the scoop provided; details are on the packaging. This 22 g jar is the small size; the same powder comes in a 70 g jar.",
+  "format": "22 g jar",
+  "composition": "Ganoderma lucidum fruiting body and mycelium, 100%.",
+  "usage": "Mix one level measuring scoop into a glass of water or a drink.\nCan also be added to a recipe.",
+  "points": "100% Ganoderma lucidum: fruiting body and mycelium\nFine powder to mix into a drink\n22 g jar, measured out with the scoop"
+ },
+ "cordyceps": {
+  "nom": "DXN Cordyceps",
+  "slug": "dxn-cordyceps",
+  "accroche": "Cordyceps sinensis powder in vegetable capsules.",
+  "description": "Cordyceps sinensis is a mushroom long used in Asia. Here DXN offers it as an encapsulated powder, 450 mg per capsule, with no other ingredient.\n\nThe bottle contains 60 capsules. It also comes as a 30 g loose powder, on request.",
+  "format": "60 capsules × 450 mg",
+  "composition": "Cordyceps sinensis powder, 450 mg per capsule. Vegetable capsule.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Cordyceps sinensis powder, no other ingredient\n450 mg vegetable capsules\n60 capsules per bottle"
+ },
+ "poria-s": {
+  "nom": "DXN Poria S",
+  "slug": "dxn-poria-s",
+  "accroche": "Poria cocos mycelium, a mushroom from Chinese tradition, as a powder for mixing.",
+  "description": "Poria S contains only Poria cocos mycelium, a mushroom that grows on pine roots and that Chinese tradition has used for centuries. It is produced in a GMP-certified factory according to DXN.\n\nIt comes as a fine powder, to dissolve in lukewarm water.",
+  "format": "30 g jar",
+  "composition": "100% Poria cocos mycelium.",
+  "usage": "Dissolve one spoonful (3.5 g) in 100 ml of lukewarm water.",
+  "points": "100% Poria cocos mycelium\nProduced in a GMP-certified factory according to DXN\nPowder to dissolve in lukewarm water"
+ },
+ "lions-mane": {
+  "nom": "DXN Lion's Mane",
+  "slug": "dxn-lions-mane",
+  "accroche": "The Hericium erinaceus mushroom, known as lion's mane, in 300 mg tablets.",
+  "description": "Lion's Mane is the Hericium erinaceus mushroom, recognisable by its long white spines. DXN offers it in 300 mg tablets made from the fruiting body.\n\nThe bottle contains 120 tablets. Intended for adults.",
+  "format": "120 tablets × 300 mg",
+  "composition": "Hericium erinaceus (fruiting body), excipient.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Hericium erinaceus, fruiting body\n120 tablets of 300 mg\nIntended for adults"
+ },
+ "mycoveggie": {
+  "nom": "DXN MycoVeggie",
+  "slug": "dxn-mycoveggie",
+  "accroche": "A powdered blend of psyllium, vegetables, plants, spices and mushrooms.",
+  "description": "MycoVeggie is a powder made of psyllium husks, vegetables, leaves and spices, and seven mushrooms including shiitake, oyster mushroom and lion's mane. Psyllium is its first ingredient.\n\nFrom the 400 g jar, the powder is measured out with the scoop into a glass of lukewarm or cold water, preferably in a shaker: it thickens quickly, so it is best to drink it straight away.",
+  "format": "400 g",
+  "composition": "Psyllium husks, celery, mulberry leaf, noni leaf, ginkgo leaf, ginger, lemongrass, shiitake, Lyophyllum, St George's mushroom, lion's mane, elm oyster mushroom, grey oyster mushroom, Schizophyllum commune, sweetcorn, lime, orange, spirulina, green tea, mandarin peel, cinnamon, star anise, clove.",
+  "usage": "Mix one measuring scoop (5 g) into a glass of lukewarm or cold water, preferably in a shaker.\nDrink straight away.",
+  "points": "23 plant ingredients, including seven mushrooms\nPsyllium as the first ingredient\n400 g jar, measured out with the scoop"
+ },
+ "spirulina": {
+  "nom": "DXN Spirulina — 500 tablets",
+  "slug": "dxn-spirulina-500-tablets",
+  "accroche": "Spirulina (Spirulina platensis) grown in ponds, in 250 mg tablets.",
+  "description": "DXN spirulina is a micro-alga, Spirulina platensis, grown in ponds without pesticides or herbicides according to DXN, then dried and pressed. Each tablet contains 250 mg, with a minimum of excipients.\n\nThis bottle of 500 tablets is the large size; the same spirulina comes in a bottle of 120. The tablets can be swallowed with water or chewed.",
+  "format": "500 tablets × 250 mg",
+  "composition": "Spirulina platensis, excipients. Details on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nSwallow with a glass of water or chew.",
+  "points": "Spirulina platensis grown in ponds\nNo pesticides or herbicides, according to DXN\n500 tablets of 250 mg, to swallow or chew"
+ },
+ "omega-3": {
+  "nom": "DXN Omega 3",
+  "slug": "dxn-omega-3",
+  "accroche": "Purified fish oil, a source of EPA and DHA, in softgels.",
+  "description": "DXN Omega 3 is a purified fish oil, naturally rich in two fatty acids of the omega-3 family: EPA and DHA. It comes in softgels, which are easy to swallow.\n\nThe bottle contains 90 softgels. They are to be taken after a meal, with a glass of water, and stored in a cool, dry place. The exact EPA and DHA content is on the label; if you are on anticoagulant treatment, are pregnant or have a fish allergy, ask a healthcare professional for advice before taking it.",
+  "format": "90 softgels",
+  "composition": "Purified fish oil (EPA, DHA), capsule shell. Amounts and full list on the label.\nAllergen: fish.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake after a meal, with a glass of water.\nStore in a cool, dry place.",
+  "points": "Purified fish oil\nSource of EPA and DHA, two omega-3s\n90 softgels, to be taken after a meal"
+ },
+ "rg-30": {
+  "nom": "DXN Reishi Gano (RG) 30",
+  "slug": "dxn-reishi-gano-rg-30",
+  "accroche": "Reishi Gano in a small bottle of 30 capsules, to try it out.",
+  "description": "The same content as RG 90 — the fruiting body of Ganoderma lucidum harvested at maturity, 270 mg per capsule, nothing else — in a bottle of 30 capsules.\n\nIt is the introductory size; RG also comes in 90 and 360 capsules. The directions for use are on the packaging; if you are undergoing medical treatment or are pregnant, ask a healthcare professional for advice before taking it.",
+  "format": "30 capsules × 270 mg",
+  "composition": "100% Ganoderma lucidum (fruiting body), 270 mg per capsule.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "100% Ganoderma lucidum, fruiting body\n270 mg per capsule\n30 capsules, introductory size"
+ },
+ "rg-360": {
+  "nom": "DXN Reishi Gano (RG) 360",
+  "slug": "dxn-reishi-gano-rg-360",
+  "accroche": "Reishi Gano in a large bottle of 360 capsules.",
+  "description": "The same content as RG 90 — the fruiting body of Ganoderma lucidum, 270 mg per capsule — in a bottle of 360 capsules, the most economical size in the range.\n\nThe directions for use are on the packaging; if you are undergoing medical treatment or are pregnant, ask a healthcare professional for advice before taking it.",
+  "format": "360 capsules × 270 mg",
+  "composition": "100% Ganoderma lucidum (fruiting body), 270 mg per capsule.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "100% Ganoderma lucidum, fruiting body\n270 mg per capsule\n360 capsules, the most economical size"
+ },
+ "gl-90": {
+  "nom": "DXN Ganocelium (GL) 90",
+  "slug": "dxn-ganocelium-gl-90",
+  "accroche": "Ganoderma lucidum mycelium, harvested at 18 days, in capsules.",
+  "description": "Ganocelium, or GL, is the other half of DXN's reishi: where RG contains the fruiting body of the mushroom, GL contains its mycelium, harvested after 18 days of cultivation. The two are often taken together.\n\nBottle of 90 capsules; also comes in 30 and 360. Directions for use on the packaging; if you are undergoing medical treatment or are pregnant, ask a healthcare professional for advice before taking it.",
+  "format": "90 capsules",
+  "composition": "100% Ganoderma lucidum (mycelium).",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "100% Ganoderma lucidum, mycelium\nHarvested at 18 days\n90 capsules"
+ },
+ "gl-30": {
+  "nom": "DXN Ganocelium (GL) 30",
+  "slug": "dxn-ganocelium-gl-30",
+  "accroche": "Ganocelium, Ganoderma lucidum mycelium, in a small bottle of 30 capsules.",
+  "description": "The same content as GL 90 — Ganoderma lucidum mycelium, harvested at 18 days — in a bottle of 30 capsules, the introductory size.\n\nDirections for use on the packaging; if you are undergoing medical treatment or are pregnant, ask a healthcare professional for advice before taking it.",
+  "format": "30 capsules",
+  "composition": "100% Ganoderma lucidum (mycelium).",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "100% Ganoderma lucidum, mycelium\nHarvested at 18 days\n30 capsules, introductory size"
+ },
+ "gl-360": {
+  "nom": "DXN Ganocelium (GL) 360",
+  "slug": "dxn-ganocelium-gl-360",
+  "accroche": "Ganocelium, Ganoderma lucidum mycelium, in a large bottle of 360 capsules.",
+  "description": "The same content as GL 90 — Ganoderma lucidum mycelium, harvested at 18 days — in a bottle of 360 capsules, the most economical size.\n\nDirections for use on the packaging; if you are undergoing medical treatment or are pregnant, ask a healthcare professional for advice before taking it.",
+  "format": "360 capsules",
+  "composition": "100% Ganoderma lucidum (mycelium).",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "100% Ganoderma lucidum, mycelium\nHarvested at 18 days\n360 capsules, the most economical size"
+ },
+ "rg-powder": {
+  "nom": "DXN RG Powder",
+  "slug": "dxn-rg-powder",
+  "accroche": "The fruiting body of Ganoderma lucidum as a pure powder for mixing.",
+  "description": "RG Powder is the same Ganoderma lucidum as the RG capsules — the fruiting body, harvested at maturity — ground into a powder, for anyone who would rather mix it into a drink than swallow a capsule.\n\n15 g jar, measured out with the scoop. The taste is bitter, typical of the mushroom.",
+  "format": "15 g jar",
+  "composition": "100% Ganoderma lucidum (fruiting body).",
+  "usage": "Mix one measuring scoop into a glass of water or a drink and stir.\nDose stated on the packaging.",
+  "points": "100% Ganoderma lucidum, fruiting body\nPowder for mixing\n15 g jar"
+ },
+ "gl-powder": {
+  "nom": "DXN GL Powder",
+  "slug": "dxn-gl-powder",
+  "accroche": "Ganoderma lucidum mycelium as a powder for mixing.",
+  "description": "GL Powder is Ganocelium — Ganoderma lucidum mycelium, harvested at 18 days — as a powder, to mix into water, a drink or a recipe.\n\n30 g jar, measured out with the scoop.",
+  "format": "30 g jar",
+  "composition": "100% Ganoderma lucidum (mycelium).",
+  "usage": "Mix one measuring scoop into a glass of water or a drink and stir.\nDose stated on the packaging.",
+  "points": "100% Ganoderma lucidum, mycelium\nPowder for mixing\n30 g jar"
+ },
+ "reishi-powder-70": {
+  "nom": "DXN Reishi Mushroom Powder — 70 g",
+  "slug": "dxn-reishi-mushroom-powder-70-g",
+  "accroche": "Ganoderma lucidum fruiting body and mycelium as a powder, the large 70 g jar.",
+  "description": "The same powder as the 22 g Reishi Mushroom Powder — Ganoderma lucidum fruiting body and mycelium combined — in a 70 g jar, for regular use.\n\nIt can be mixed into water, a drink or a recipe. Measured out with the scoop; details on the packaging.",
+  "format": "70 g jar",
+  "composition": "Ganoderma lucidum fruiting body and mycelium, 100%.",
+  "usage": "Mix one measuring scoop into a glass of water or a drink and stir.\nDose stated on the packaging.",
+  "points": "Fruiting body and mycelium combined\nPowder for mixing\nLarge 70 g jar"
+ },
+ "cordyceps-powder": {
+  "nom": "DXN Cordyceps Powder",
+  "slug": "dxn-cordyceps-powder",
+  "accroche": "Cordyceps sinensis powder in a 30 g jar, for mixing.",
+  "description": "The same Cordyceps sinensis as the DXN capsules, as a loose powder, for anyone who prefers to mix it into a drink.\n\n30 g jar, measured out with the scoop.",
+  "format": "30 g jar",
+  "composition": "100% Cordyceps sinensis powder.",
+  "usage": "Mix one measuring scoop into a glass of water or a drink and stir.\nDose stated on the packaging.",
+  "points": "100% Cordyceps sinensis\nPowder for mixing\n30 g jar"
+ },
+ "spirulina-powder": {
+  "nom": "DXN Spirulina Powder",
+  "slug": "dxn-spirulina-powder",
+  "accroche": "Spirulina powder, to mix into a drink or a dish.",
+  "description": "The same spirulina as the DXN tablets — Spirulina platensis grown in ponds — as a powder, to add to a smoothie, juice, yoghurt or recipe.\n\n50 g jar. The powder turns whatever it touches a strong green.",
+  "format": "50 g jar",
+  "composition": "100% Spirulina platensis.",
+  "usage": "Mix one teaspoon into a juice, smoothie or yoghurt.\nDose stated on the packaging.",
+  "points": "100% Spirulina platensis\nFor smoothies, juices and yoghurts\n50 g jar"
+ },
+ "black-cumin-plus-90": {
+  "nom": "DXN Black Cumin Plus 90",
+  "slug": "dxn-black-cumin-plus-90",
+  "accroche": "Black cumin extract, Nigella sativa, in capsules.",
+  "description": "Black Cumin Plus contains extract of black cumin, the seed of Nigella sativa, known in Morocco as habba sawda or sanouj.\n\nBottle of 90 capsules; also comes in 30. Directions for use on the packaging.",
+  "format": "90 capsules",
+  "composition": "Black cumin extract (Nigella sativa). Full list on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Black cumin extract, Nigella sativa\nHabba sawda\n90 capsules"
+ },
+ "black-cumin-plus-30": {
+  "nom": "DXN Black Cumin Plus 30",
+  "slug": "dxn-black-cumin-plus-30",
+  "accroche": "Black cumin extract, Nigella sativa, in a small bottle of 30 capsules.",
+  "description": "The same content as Black Cumin Plus 90 — the extract of the Nigella sativa seed, habba sawda — in a bottle of 30 capsules, the introductory size.\n\nDirections for use on the packaging.",
+  "format": "30 capsules",
+  "composition": "Black cumin extract (Nigella sativa). Full list on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Black cumin extract, Nigella sativa\nHabba sawda\n30 capsules, introductory size"
+ },
+ "andro-g-90": {
+  "nom": "DXN Andro-G 90",
+  "slug": "dxn-andro-g-90",
+  "accroche": "Andrographis paniculata, a plant from Asian tradition, in capsules.",
+  "description": "Andro-G contains Andrographis paniculata, a herbaceous plant long used in South and South-East Asia, in capsules.\n\nBottle of 90 capsules; also comes in 30. Directions for use on the packaging.",
+  "format": "90 capsules",
+  "composition": "Andrographis paniculata. Full list on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Andrographis paniculata\nA plant from Asian tradition\n90 capsules"
+ },
+ "andro-g-30": {
+  "nom": "DXN Andro-G 30",
+  "slug": "dxn-andro-g-30",
+  "accroche": "Andrographis paniculata in a small bottle of 30 capsules.",
+  "description": "The same content as Andro-G 90 — Andrographis paniculata in capsules — in a bottle of 30, the introductory size.\n\nDirections for use on the packaging.",
+  "format": "30 capsules",
+  "composition": "Andrographis paniculata. Full list on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Andrographis paniculata\nA plant from Asian tradition\n30 capsules, introductory size"
+ },
+ "agaricus-90": {
+  "nom": "DXN Agaricus Blazei Murill 90",
+  "slug": "dxn-agaricus-blazei-murill-90",
+  "accroche": "The Agaricus blazei Murill mushroom, originally from Brazil, in capsules.",
+  "description": "Agaricus blazei Murill is a mushroom discovered in the Piedade region of Brazil and now grown in Asia. DXN offers it in capsules.\n\nBottle of 90 capsules; also comes in 30. Directions for use on the packaging.",
+  "format": "90 capsules",
+  "composition": "Agaricus blazei Murill. Full list on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Agaricus blazei Murill\nMushroom originally from Brazil\n90 capsules"
+ },
+ "agaricus-30": {
+  "nom": "DXN Agaricus Blazei Murill 30",
+  "slug": "dxn-agaricus-blazei-murill-30",
+  "accroche": "Agaricus blazei Murill in a small bottle of 30 capsules.",
+  "description": "The same content as Agaricus Blazei Murill 90 — the Brazilian mushroom in capsules — in a bottle of 30, the introductory size.\n\nDirections for use on the packaging.",
+  "format": "30 capsules",
+  "composition": "Agaricus blazei Murill. Full list on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Agaricus blazei Murill\nMushroom originally from Brazil\n30 capsules, introductory size"
+ },
+ "mengkudu-90": {
+  "nom": "DXN Mengkudu 90",
+  "slug": "dxn-mengkudu-90",
+  "accroche": "The noni fruit, Morinda citrifolia, in capsules.",
+  "description": "Mengkudu is the Malay name for noni, Morinda citrifolia, the fruit that DXN also offers as a juice under the name Morinzhi. Here, it comes in capsules.\n\nBottle of 90 capsules; also comes in 30. Directions for use on the packaging.",
+  "format": "90 capsules",
+  "composition": "Noni fruit (Morinda citrifolia). Full list on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Noni fruit, Morinda citrifolia\nMorinzhi in capsule form\n90 capsules"
+ },
+ "mengkudu-30": {
+  "nom": "DXN Mengkudu 30",
+  "slug": "dxn-mengkudu-30",
+  "accroche": "The noni fruit in a small bottle of 30 capsules.",
+  "description": "The same content as Mengkudu 90 — the noni fruit, Morinda citrifolia, in capsules — in a bottle of 30, the introductory size.\n\nDirections for use on the packaging.",
+  "format": "30 capsules",
+  "composition": "Noni fruit (Morinda citrifolia). Full list on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Noni fruit, Morinda citrifolia\nMorinzhi in capsule form\n30 capsules, introductory size"
+ },
+ "roselle-tablets": {
+  "nom": "DXN Roselle — 120 tablets",
+  "slug": "dxn-roselle-120-tablets",
+  "accroche": "Roselle calyx extract — the hibiscus — in tablets.",
+  "description": "Roselle (Hibiscus sabdariffa), which DXN offers as a juice concentrate, also comes as tablets made from its calyx extract.\n\nBottle of 120 tablets. Directions for use on the packaging.",
+  "format": "120 tablets",
+  "composition": "Roselle calyx extract (Hibiscus sabdariffa). Full list on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nTake with a glass of water.",
+  "points": "Hibiscus calyx extract\nRoselle in tablet form\n120 tablets"
+ },
+ "natural-shield-deo": {
+  "nom": "Kallow Natural Shield — aluminium-free deodorant",
+  "slug": "kallow-natural-shield-aluminium-free-deodorant",
+  "accroche": "A roll-on free from aluminium salts and alcohol, with organic aloe vera and sage.",
+  "description": "Natural Shield is the deodorant in the Kallow range, DXN's cosmetics line made in Greece. Its formula contains no aluminium salts or alcohol; it combines organic aloe vera juice, cucumber extract and sage oil in a 50 ml roll-on.\n\nSuitable for all skin types. Like any aluminium-free deodorant, it can be reapplied during the day as needed.",
+  "format": "50 ml roll-on",
+  "composition": "Aqua, Coco-Caprylate/Caprate, Caprylic/Capric Triglyceride, Triethyl Citrate, Glycerin, Zinc Ricinoleate, Parfum, Aloe Barbadensis Leaf Juice*, Cucumis Sativus Fruit Extract, Salvia Officinalis Oil, Tocopheryl Acetate, Sodium Caproyl/Lauroyl Lactylate, Glyceryl Stearate Citrate, Carbomer, Triethanolamine, Citric Acid, Phenoxyethanol, Ethylhexylglycerin, Potassium Sorbate, Sodium Benzoate.\n* from organic farming",
+  "usage": "Shake well before use.\nApply to clean, dry underarms; reapply as needed.",
+  "points": "No aluminium salts, no alcohol\nOrganic aloe vera, cucumber and sage\n50 ml roll-on, all skin types"
+ },
+ "kallow-shower-gel": {
+  "nom": "Kallow Luxury Aromatic Shower Gel",
+  "slug": "kallow-luxury-aromatic-shower-gel",
+  "accroche": "A scented shower gel with aloe vera, olive oil and hyaluronic acid.",
+  "description": "Luxury Aromatic Shower Gel washes the body with a fine lather and leaves a floral fragrance. Its formula combines aloe vera juice, olive oil and sodium hyaluronate.\n\nIt is the first step in Kallow's Luxury Aromatic series, designed to be followed by the body lotion and the Divine Touch dry oil. For the body only: it is not a face wash.",
+  "format": "250 ml",
+  "composition": "Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Aloe Barbadensis Leaf Juice, Sodium Hyaluronate, Olea Europaea Fruit Oil, Parfum (Linalool, Limonene, Coumarin). Full INCI list on the bottle.",
+  "usage": "On wet skin, work a small amount into a lather in your hand or on a shower puff.\nRinse thoroughly. Avoid contact with the eyes.",
+  "points": "Aloe vera, olive oil, hyaluronic acid\nFine lather, floral fragrance\n250 ml pump bottle"
+ },
+ "kallow-sunscreen-spf50": {
+  "nom": "Kallow High Protection Face Sunscreen SPF 50+",
+  "slug": "kallow-high-protection-face-sunscreen-spf-50",
+  "accroche": "A high-protection SPF 50+ face sunscreen with hyaluronic acid and vitamin E.",
+  "description": "This face sunscreen offers high SPF 50+ protection against UVA and UVB thanks to organic filters. Its light texture, enriched with sodium hyaluronate, vitamin E and allantoin, can be worn alone or under make-up.\n\n50 ml pump bottle, to be applied generously before sun exposure and reapplied every two hours and after swimming: sun protection only lasts if it is reapplied.",
+  "format": "50 ml",
+  "composition": "Aqua, Ethylhexyl Methoxycinnamate, Octocrylene, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Glycerin, Glyceryl Stearate, Cetearyl Alcohol, Potassium Palmitoyl Hydrolyzed Wheat Protein, Polymethyl Methacrylate, Phenoxyethanol, Chlorphenesin, Tocopheryl Acetate, Parfum, Ethylhexylglycerin, Sodium Hyaluronate, Sodium Polyacrylate, Allantoin.",
+  "usage": "Apply evenly to the face and neck, 15 minutes before sun exposure.\nReapply every two hours and after swimming.",
+  "points": "High SPF 50+ protection, UVA and UVB\nHyaluronic acid and vitamin E\nLight texture, 50 ml pump bottle"
+ },
+ "kallow-cosmetics": {
+  "nom": "Kallow Divine Touch gift set — Fatichanelya selection",
+  "slug": "kallow-divine-touch-gift-set-fatichanelya-selection",
+  "accroche": "Kallow's Divine Touch face care products in one gift set, put together by Fati.",
+  "description": "This gift set brings together the face care products of Kallow's Divine Touch line, DXN's cosmetics range made in Greece: cream, eye contour and oils. The exact contents of the set are confirmed with Fati when you order, depending on availability.\n\nEach product is also sold individually in the shop.",
+  "format": "",
+  "composition": "",
+  "usage": "",
+  "points": "The Divine Touch face care products in one set\nGift set put together by Fati\nEach product is also available individually"
+ },
+ "divine-eye-cream": {
+  "nom": "Kallow Divine Touch Lifting Impact Eye Cream",
+  "slug": "kallow-divine-touch-lifting-impact-eye-cream",
+  "accroche": "An eye-contour cream with caffeine, peptides and hyaluronic acid, in a 15 ml jar.",
+  "description": "Lifting Impact Eye Cream is the eye-contour product in the Divine Touch line. Its formula combines caffeine, a peptide complex, sodium hyaluronate, vitamins C, E and A and green tea polyphenols, in a light texture to apply morning and evening.\n\nIt can be used as a base before make-up.",
+  "format": "15 ml",
+  "composition": "Aqua, Glycerin, Glycereth-26, Caprylic/Capric Triglyceride, Cetearyl Glucoside, Sorbitan Olivate, Caffeine, Ascorbyl Glucoside, Malus Domestica Fruit Cell Culture Extract, Albizia Julibrissin Bark Extract, Butyrospermum Parkii Butter, Tocopheryl Acetate, Retinyl Palmitate, Allantoin, Sodium Hyaluronate Crosspolymer, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Trifluoroacetyl Tripeptide-2… Full INCI list on the packaging.",
+  "usage": "Apply a small amount around the eye, including the upper eyelid, with light patting movements.\nMorning and evening, on clean skin.",
+  "points": "Caffeine, peptides, hyaluronic acid\nVitamins C, E and A\n15 ml jar, morning and evening"
+ }
+}

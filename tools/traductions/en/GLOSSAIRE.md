@@ -34,7 +34,7 @@ ambiguë : la traduire au plus près, sans l'améliorer.
 
 ## Noms propres et marques (inchangés)
 Fatichanelya, Fati, DXN, Kallow, Velix Digital, WhatsApp, TikTok, Instagram, Facebook, Google, Meta,
-Ganozhi, Zhicare, Morinzhi, Reishilium, Ganocelium, Spirudle, codes RG / GL / SPF 50+.
+Ganozhi, Zhicare, Morinzhi, Reishilium, Ganocelium, Sprudle, codes RG / GL / SPF 50+.
 Noms latins des espèces en latin, précédés du nom courant : « reishi (Ganoderma lucidum) », « lion's
 mane (Hericium erinaceus) », « cordyceps (Cordyceps sinensis) », « noni (Morinda citrifolia) »,
 « roselle (Hibiscus sabdariffa) », « spirulina (Spirulina platensis) », « tea tree (Melaleuca

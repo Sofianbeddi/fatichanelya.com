@@ -1,0 +1,32 @@
+{
+ "lingzhi-coffee": {
+  "nom": "DXN Lingzhi Black Coffee",
+  "slug": "dxn-lingzhi-black-coffee",
+  "accroche": "An instant black coffee with no added sugar, enriched with Ganoderma lucidum extract.",
+  "description": "Lingzhi Black Coffee is a soluble Brazilian arabica coffee to which DXN adds an extract of Ganoderma lucidum, the reishi mushroom. It is drunk black: no sugar or creamer in the sachet, just a straightforward coffee taste.\n\nIt is the simplest product in the coffee range for anyone who wants to keep their morning ritual without changing a thing: one sachet, hot water, done. Store at room temperature, away from moisture.",
+  "format": "20 sachets × 4.5 g",
+  "composition": "Instant coffee (Brazilian arabica), Ganoderma lucidum extract.",
+  "usage": "Empty the contents of one sachet into a cup.\nAdd 150 to 180 ml of hot water and stir.",
+  "points": "Black coffee, no sugar or creamer in the sachet\nGanoderma lucidum extract, the reishi\nReady in seconds, one sachet per cup"
+ },
+ "spirulina-120": {
+  "nom": "DXN Spirulina — 120 tablets",
+  "slug": "dxn-spirulina-120-tablets",
+  "accroche": "Spirulina (Spirulina platensis) grown in ponds, in 250 mg tablets — the small bottle.",
+  "description": "DXN spirulina is a micro-alga, Spirulina platensis, grown in ponds without pesticides or herbicides according to DXN, then dried and pressed. Each tablet contains 250 mg, with a minimum of excipients.\n\nThis bottle of 120 tablets is the introductory size; the same spirulina comes in a bottle of 500. The tablets can be swallowed with water or chewed.",
+  "format": "120 tablets × 250 mg",
+  "composition": "Spirulina platensis, excipients. Details on the label.",
+  "usage": "Follow the directions for use printed on the bottle.\nSwallow with a glass of water or chew.",
+  "points": "Spirulina platensis grown in ponds\nNo pesticides or herbicides, according to DXN\n120 tablets of 250 mg, to swallow or chew"
+ },
+ "kallow-argan-face-cream": {
+  "nom": "Kallow Argan & Grapeseed Oil Hydrating Face Cream",
+  "slug": "kallow-argan-grapeseed-oil-hydrating-face-cream",
+  "accroche": "A hydrating face cream with argan oil, grapeseed oil and hyaluronic acid.",
+  "description": "This light-textured hydrating face cream combines argan oil, grapeseed oil, hyaluronic acid and vitamin E. It is applied daily to the face and neck, morning or evening.\n\n50 ml jar, reference SC083. It is the line's “everyday” cream, lighter than Divine Touch. Label: 96% ingredients of natural origin.",
+  "format": "50 ml",
+  "composition": "Contains, among other things, argan oil (Argania spinosa), grapeseed oil (Vitis vinifera), hyaluronic acid and vitamin E. 96% ingredients of natural origin according to the label. Full INCI list on the packaging.",
+  "usage": "Apply to clean face and neck, morning or evening.\nMassage in until absorbed.",
+  "points": "Argan, grapeseed, hyaluronic acid\n96% ingredients of natural origin (label)\n50 ml jar, light texture"
+ }
+}

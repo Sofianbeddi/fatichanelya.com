@@ -102,6 +102,8 @@ $cible = fati_whatsapp_actif() ? ' target="_blank" rel="noopener"' : '';
 <?php
 // Après le tiroir : la confirmation d'ajout (`.toast`) le précède dans le document,
 // la feuille de style s'en sert pour lui céder la place sur mobile.
+// La suggestion de langue (1.9.0) le précède aussi : sur mobile, le bouton s'efface devant elle.
+get_template_part( 'template-parts/components/langue-suggestion' );
 get_template_part( 'template-parts/components/whatsapp-flottant' );
 ?>
 

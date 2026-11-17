@@ -60,7 +60,12 @@ $GLOBALS['fati_tr_compte'] = array( '+' => 0, '~' => 0 );
 $fati_tr_defaut = $GLOBALS['fati_tr_defaut'];
 $fati_tr_langue = PLL()->model->get_language( FATI_TR_LANG );
 if ( ! $fati_tr_langue ) {
-	WP_CLI::error( 'Langue « ' . FATI_TR_LANG . ' » absente : lancer tools/configurer-polylang.php.' );
+	if ( ! FATI_TR_SIMULATION ) {
+		WP_CLI::error( 'Langue « ' . FATI_TR_LANG . ' » absente : lancer tools/configurer-polylang.php.' );
+	}
+	// Simulation avant la création de la langue (première mise en ligne) : on contrôle quand même
+	// les sources françaises et les slugs ; tout serait créé.
+	WP_CLI::warning( 'Langue « ' . FATI_TR_LANG . ' » pas encore créée : configurer-polylang.php la créera avant l\'import.' );
 }
 
 function fati_tr_json( $fichier ) {
@@ -419,7 +424,9 @@ if ( ! FATI_TR_SIMULATION ) {
 /* ------------------------------------------------------------------ 7. Réglages (chaînes Polylang) */
 WP_CLI::log( '→ Réglages « Contenus du site » et slogan' );
 $mo = new PLL_MO();
-$mo->import_from_db( $fati_tr_langue );
+if ( $fati_tr_langue ) {
+	$mo->import_from_db( $fati_tr_langue );
+}
 $n = 0;
 foreach ( (array) fati_tr_json( 'reglages.json' ) as $cle => $ar ) {
 	$fr = 'blogdescription' === $cle ? get_option( 'blogdescription' ) : fati_opt_raw( $cle );

@@ -11,5 +11,10 @@
   "contact": "es/contacto/",
   "panier": "es/cesta/",
   "recherche": "es/?s=lingzhi",
-  "404": "es/pagina-que-no-existe/"
+  "404": "es/pagina-que-no-existe/",
+  "mentions-legales": "es/aviso-legal/",
+  "cgv": "es/condiciones-generales-de-venta/",
+  "confidentialite": "es/politica-de-privacidad/",
+  "livraison": "es/envios-y-devoluciones/",
+  "categorie-beaute": "es/categorie-produit/belleza-y-cuidado/"
 }

@@ -4,6 +4,7 @@ Contrôle bloquant d'une langue traduite, avant tout import (thème 1.9.0).
 
     WP="php -d mysqli.default_socket=… /usr/local/bin/wp" python3 tools/traductions/verifier.py es
     python3 tools/traductions/verifier.py en --complet     # exige 103 produits, 6 formations, 4 pages légales
+    python3 tools/traductions/verifier.py es --seul produits-2.json   # un seul lot (aussi : formations, legal)
 
 Vérifie, contre la source française :
   - clés : chaque entrée correspond à un contenu français existant ; avec --complet, rien ne manque ;
@@ -12,7 +13,9 @@ Vérifie, contre la source française :
   - slugs : présents, ASCII minuscules, uniques entre les langues et jamais égaux à un slug français ;
   - mots interdits (allégations santé, voir GLOSSAIRE.md), hors phrases de négation listées ;
   - restes de français ;
-  - pages légales : même suite de balises HTML que la source.
+  - pages légales : même suite de balises HTML et mêmes chiffres que la source française
+    (_velix/copy-legal.md), hors note « pour information » en tête ; pas de contrôle des mots
+    interdits (« tratamiento de datos » y est légitime).
 Sort en erreur (code 1) au premier problème de chaque fichier, après les avoir tous listés.
 """
 import csv, json, os, re, shlex, subprocess, sys, pathlib
@@ -27,19 +30,24 @@ INTERDITS = {
            r'antienvejecimiento', r'antioxidante', r'antiinflamatori', r'\brefuerza', r'\bfortalece', r'\bestimula',
            r'\bpotencia\b', r'milagro', r'sin efectos secundarios', r'beneficios para la salud', r'bueno para la salud',
            r'tratamiento'],
-    'en': [r'\bcures?\b', r'\bheal(s|ed|ing)?\b', r'\bprevent', r'immun', r'\bdefences?\b', r'detox', r'\bcleanse', r'\bpurif',
+    'en': [r'\bcures?\b', r'\bheal(s|ed|ing)?\b', r'\bprevent', r'immun', r'\bdefences?\b', r'detox', r'\bcleanse\b',
            r'slimming', r'weight loss', r'fat-burning', r'diabetes', r'cholesterol', r'blood pressure', r'blood sugar',
            r'anti-?ag(e)?ing', r'antioxidant', r'anti-inflammatory', r'\bboost', r'\bstrengthen', r'\bstimulat',
            r'miracle', r'no side effects', r'health benefits', r'good for your health', r'treatment'],
 }
-# Phrases de négation reprises du français, seules exceptions admises.
+# Seules exceptions admises : les négations et les mises en garde reprises du français
+# (« en cas de traitement médical ou de grossesse, demandez l'avis… », « traitement
+# anticoagulant »). Ce ne sont pas des allégations, la traduction doit rester fidèle.
+# « Purified » / « cleanser » ne sont pas interdits : faits d'étiquette, nom officiel Kallow.
 NEGATIONS = {
-    'es': ['los complementos alimenticios no curan', '¿sustituyen los complementos a un tratamiento?'],
-    'en': ['food supplements do not cure anything', 'can supplements replace a treatment?'],
+    'es': ['los complementos alimenticios no curan', '¿sustituyen los complementos a un tratamiento?',
+           'tratamiento médico', 'tratamiento anticoagulante'],
+    'en': ['food supplements do not cure anything', 'can supplements replace a treatment?',
+           'medical treatment', 'anticoagulant treatment'],
 }
 FRANCAIS = {
-    'es': [r'\bavec\b', r'\bpour\b', r'\bdans\b', r'\bsans\b', r'\bdes\b', r'\best\b', r'\bet\b', r'\bvous\b', r'\bnous\b', r'\bune\b'],
-    'en': [r'\bavec\b', r'\bpour\b', r'\bdans\b', r'\bsans\b', r'\bdes\b', r'\best\b', r'\bet\b', r'\bvous\b', r'\bles\b', r'\bune\b', r'\bde la\b'],
+    'es': [r'\bavec\b', r'\bpour\b', r'\bdans\b', r'\bsans\b', r'\bdes\b', r'\best\b', r'\bet\b', r'\bvous\b', r'\bnous\b'],  # « une » est aussi un verbe espagnol (unir)
+    'en': [r'\bavec\b', r'\bdans\b', r'\bsans\b', r'\bdes\b', r'\best\b', r'\bet\b', r'\bvous\b', r'\bles\b', r'\bune\b', r'\bde la\b'],
 }
 
 erreurs = []
@@ -114,6 +122,7 @@ def main():
     if len(sys.argv) < 2 or sys.argv[1] not in ('es', 'en'):
         sys.exit('Usage : verifier.py <es|en> [--complet]')
     langue, complet = sys.argv[1], '--complet' in sys.argv
+    seul = sys.argv[sys.argv.index('--seul') + 1] if '--seul' in sys.argv else None
     d = TR / langue
     autre = TR / ('en' if langue == 'es' else 'es')
 
@@ -125,14 +134,26 @@ def main():
     vus = {}
     # slugs de l'autre langue latine : ils ne doivent pas être repris
     for fichier in sorted(autre.glob('*.json')):
-        for cle, v in json.load(open(fichier, encoding='utf-8')).items():
+        try:
+            contenu = json.load(open(fichier, encoding='utf-8'))
+        except ValueError:
+            continue  # fichier en cours d'écriture par un autre traducteur
+        for cle, v in contenu.items():
             if isinstance(v, dict) and v.get('slug'):
                 vus[v['slug']] = f'{autre.name}/{fichier.name}:{cle}'
 
     # Produits
     produits = {}
-    for lot in sorted(d.glob('produits-*.json')):
-        for cle, p in json.load(open(lot, encoding='utf-8')).items():
+    lots = sorted(d.glob('produits-*.json'))
+    if seul:
+        lots = [l for l in lots if l.name == seul]
+    for lot in lots:
+        try:
+            contenu_lot = json.load(open(lot, encoding='utf-8'))
+        except ValueError as e:
+            err(f'{langue}/{lot.name}', f'JSON invalide : {e}')
+            continue
+        for cle, p in contenu_lot.items():
             f = f'{langue}/{lot.name}'
             if cle in produits:
                 err(f, f'{cle} : en double')
@@ -144,12 +165,12 @@ def main():
             slug_ok(f, cle, p.get('slug'), vus, slugs_fr)
             for champ in ('nom', 'accroche', 'description', 'format', 'composition', 'usage', 'points'):
                 comparer(f, f'{cle}.{champ}', src[champ], p.get(champ, ''), langue)
-    if complet and set(produits) != set(produits_fr):
+    if complet and not seul and set(produits) != set(produits_fr):
         err(langue, f'produits manquants : {sorted(set(produits_fr) - set(produits))}')
 
     # Formations
     fichier = d / 'formations.json'
-    if fichier.exists():
+    if fichier.exists() and seul in (None, 'formations'):
         for cle, x in json.load(open(fichier, encoding='utf-8')).items():
             f = f'{langue}/formations.json'
             if cle not in formations_fr:
@@ -174,7 +195,7 @@ def main():
             err(langue, 'formations manquantes')
 
     # Pages, catégories, menus
-    for nom, cles in (('pages.json', {'accueil', 'a-propos', 'contact', 'panier'}),
+    for nom, cles in () if seul else (('pages.json', {'accueil', 'a-propos', 'contact', 'panier'}),
                       ('termes.json', {'alimentation-boissons', 'beaute-soin', 'complements', 'soin-personnel'})):
         data = json.load(open(d / nom, encoding='utf-8'))
         if set(data) != cles:
@@ -183,11 +204,11 @@ def main():
             slug_ok(f'{langue}/{nom}', cle, v.get('slug'), vus, slugs_fr)
     menus = json.load(open(d / 'menus.json', encoding='utf-8'))
     ref = json.load(open(TR / 'ar/menus.json', encoding='utf-8'))
-    if set(menus) != set(ref):
+    if not seul and set(menus) != set(ref):
         err(f'{langue}/menus.json', 'libellés différents de ceux de l\'arabe')
 
     # Réglages
-    fr = reglages_fr()
+    fr = reglages_fr() if not seul else None
     tr = json.load(open(d / 'reglages.json', encoding='utf-8'))
     if fr is not None:
         if set(tr) != set(fr):
@@ -195,19 +216,32 @@ def main():
         for cle in fr:
             comparer(f'{langue}/reglages.json', cle, fr[cle], tr.get(cle, ''), langue)
 
-    # Pages légales
-    for md in sorted((d / 'legal').glob('*.md')) if (d / 'legal').exists() else []:
-        src = RACINE / f'tools/traductions/ar/legal/{md.name}'
-        bloc = lambda t: (re.search(r'```html\n(.*?)\n```', t, re.S) or [None, ''])[1]
-        h = bloc(md.read_text(encoding='utf-8'))
-        if not h:
-            err(f'{langue}/legal/{md.name}', 'bloc html absent')
+    # Pages légales : comparées au HTML français de _velix/copy-legal.md
+    sources = {m.group(1): m.group(2) for m in re.finditer(r'\*\*Slug\*\* : `([^`]+)`.*?```html\n(.*?)\n```',
+               (RACINE / '_velix/copy-legal.md').read_text(encoding='utf-8'), re.S)}
+    textes = lambda h: re.sub(r'<[^>]+>', ' ', h)
+    pages_legales = sorted((d / 'legal').glob('*.md')) if (d / 'legal').exists() and seul in (None, 'legal') else []
+    for md in pages_legales:
+        f = f'{langue}/legal/{md.name}'
+        t = md.read_text(encoding='utf-8')
+        h = (re.search(r'```html\n(.*?)\n```', t, re.S) or [None, ''])[1]
+        slug_src = (re.search(r'\*\*Slug\*\*\s*:\s*`([^`]+)`', t) or [None, ''])[1]
+        if not h or slug_src not in sources:
+            err(f, 'bloc html absent ou **Slug** français inconnu')
             continue
-        if src.exists() and tags(bloc(src.read_text(encoding='utf-8'))) != tags(h):
-            err(f'{langue}/legal/{md.name}', 'suite de balises différente de la version arabe (même source française)')
-        if not re.search(r'\*\*Slug traduit\*\*', md.read_text(encoding='utf-8')):
-            err(f'{langue}/legal/{md.name}', 'ligne **Slug traduit** absente')
-    if complet and len(list((d / 'legal').glob('*.md')) if (d / 'legal').exists() else []) != 4:
+        h = re.sub(r'^\s*<p class="legal-note">.*?</p>\s*', '', h, flags=re.S)
+        if tags(sources[slug_src]) != tags(h):
+            err(f, 'suite de balises HTML différente de la source française')
+        if nombres(textes(sources[slug_src])) != nombres(textes(h)):
+            err(f, f'chiffres différents : {sorted(set(nombres(textes(sources[slug_src]))) ^ set(nombres(textes(h))))}')
+        for motif in FRANCAIS[langue]:
+            if re.search(motif, textes(h).lower()):
+                err(f, f'reste de français /{motif}/')
+        tr_slug = (re.search(r'\*\*Slug traduit\*\*\s*:\s*`([^`]+)`', t) or [None, ''])[1]
+        slug_ok(f, 'slug traduit', tr_slug, vus, slugs_fr)
+        if not re.search(r'\*\*Titre\*\*\s*:', t) or not re.search(r'\*\*Meta description\*\*[^\n]*\n`[^`]+`', t):
+            err(f, 'ligne **Titre** ou **Meta description** absente ou mal formée')
+    if complet and not seul and len(pages_legales) != 4:
         err(langue, 'pages légales manquantes')
 
     if erreurs:
@@ -215,7 +249,7 @@ def main():
         for e in erreurs:
             print('  -', e)
         sys.exit(1)
-    print(f'✔ « {langue} » : {len(produits)} produit(s), réglages, pages, catégories, menus — aucun problème')
+    print(f'✔ « {langue} »{" (" + seul + ")" if seul else ""} : {len(produits)} produit(s), {len(pages_legales)} page(s) légale(s) — aucun problème')
 
 
 if __name__ == '__main__':

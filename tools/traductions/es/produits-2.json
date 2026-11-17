@@ -1,0 +1,342 @@
+{
+ "zhi-ca-plus": {
+  "nom": "DXN Zhi Ca Plus",
+  "slug": "caramelos-de-cafe-zhi-ca-plus-dxn",
+  "accroche": "Caramelos sabor café con extracto de Ganoderma lucidum, en 30 sobres individuales.",
+  "description": "El Zhi Ca Plus se presenta en caramelos sabor café, con extracto de Ganoderma lucidum, en sobres individuales fáciles de meter en un bolso.\n\nLa caja contiene 30 sobres de 9,5 g.",
+  "format": "30 sobres × 9,5 g",
+  "composition": "Azúcar, aroma de café, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Dejar que un caramelo se deshaga en la boca.",
+  "points": "Caramelos sabor café\nExtracto de Ganoderma lucidum\n30 sobres individuales"
+ },
+ "goji-berries": {
+  "nom": "DXN Goji Berries",
+  "slug": "bayas-de-goji-dxn",
+  "accroche": "Bayas de goji secas, en bolsa de 350 g.",
+  "description": "Bayas de goji (Lycium barbarum) secas, para picar tal cual o para añadir a un yogur, unas gachas de avena, una ensalada o una infusión.\n\nBolsa de 350 g. Una vez abierta, volver a cerrarla y conservarla en un lugar seco.",
+  "format": "Bolsa de 350 g",
+  "composition": "Bayas de goji secas (Lycium barbarum).",
+  "usage": "Consumir tal cual, un puñado, o añadirlas a una preparación.\nSe pueden rehidratar unos minutos en agua tibia.",
+  "points": "Bayas de goji secas\nPara picar o para cocinar\nBolsa de 350 g"
+ },
+ "rg-90": {
+  "nom": "DXN Reishi Gano (RG) 90",
+  "slug": "reishi-gano-rg-dxn-90-capsulas",
+  "accroche": "Ganoderma lucidum, cuerpo fructífero cosechado a los 90 días, en cápsulas de 270 mg.",
+  "description": "El Reishi Gano, o RG, contiene únicamente el cuerpo fructífero del Ganoderma lucidum —el hongo reishi— cosechado en su madurez, tras 90 días de cultivo en una granja con certificación ecológica según DXN. La cápsula no lleva nada más.\n\nEl frasco de 90 cápsulas es el formato intermedio de la gama, que también existe en 30 y en 360. El modo de empleo figura en el envase; en caso de tratamiento médico o embarazo, consulta a un profesional sanitario antes de tomarlo.",
+  "format": "90 cápsulas × 270 mg",
+  "composition": "100 % Ganoderma lucidum (cuerpo fructífero), 270 mg por cápsula.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "100 % Ganoderma lucidum, cuerpo fructífero\nCosechado a los 90 días, granja con certificación ecológica según DXN\n90 cápsulas de 270 mg"
+ },
+ "reishi-powder": {
+  "nom": "DXN Reishi Mushroom Powder — 22 g",
+  "slug": "reishi-en-polvo-dxn-22-g",
+  "accroche": "Cuerpo fructífero y micelio de Ganoderma lucidum reducidos a polvo, para diluir — el tarro pequeño.",
+  "description": "El Reishi Mushroom Powder —«Reishilium Powder» en el envase malasio— reúne las dos partes del reishi que DXN ofrece por separado en cápsulas: el cuerpo fructífero (RG) y el micelio (GL). Se mezcla con agua, con una bebida o con una preparación.\n\nEl sabor es ligeramente amargo, característico del hongo. La dosis se mide con la cuchara medidora incluida; el detalle figura en el envase. Este tarro de 22 g es el formato pequeño; el mismo polvo existe en tarro de 70 g.",
+  "format": "Tarro de 22 g",
+  "composition": "Cuerpo fructífero y micelio de Ganoderma lucidum, 100 %.",
+  "usage": "Mezclar una cuchara medidora rasa en un vaso de agua o en una bebida.\nTambién se puede incorporar a una preparación.",
+  "points": "100 % Ganoderma lucidum: cuerpo fructífero y micelio\nPolvo fino, para diluir en una bebida\nTarro de 22 g, dosificación con cuchara medidora"
+ },
+ "cordyceps": {
+  "nom": "DXN Cordyceps",
+  "slug": "cordyceps-en-capsulas-dxn",
+  "accroche": "Polvo de Cordyceps sinensis en cápsulas vegetales.",
+  "description": "El Cordyceps sinensis es un hongo que se utiliza desde hace mucho tiempo en Asia. DXN lo ofrece aquí en polvo encapsulado, 450 mg por cápsula, sin ningún otro ingrediente.\n\nEl frasco contiene 60 cápsulas. También existe en polvo suelto de 30 g, bajo pedido.",
+  "format": "60 cápsulas × 450 mg",
+  "composition": "Polvo de Cordyceps sinensis, 450 mg por cápsula. Cápsula vegetal.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Polvo de Cordyceps sinensis, sin ningún otro ingrediente\nCápsulas vegetales de 450 mg\n60 cápsulas por frasco"
+ },
+ "poria-s": {
+  "nom": "DXN Poria S",
+  "slug": "poria-s-en-polvo-dxn",
+  "accroche": "Micelio de Poria cocos, un hongo de la tradición china, en polvo para diluir.",
+  "description": "El Poria S contiene únicamente micelio de Poria cocos, un hongo que crece en las raíces del pino y que la tradición china utiliza desde hace siglos. Se produce en una fábrica con certificación GMP según DXN.\n\nSe presenta en polvo fino, para disolver en agua tibia.",
+  "format": "Tarro de 30 g",
+  "composition": "100 % micelio de Poria cocos.",
+  "usage": "Disolver una cucharada (3,5 g) en 100 ml de agua tibia.",
+  "points": "100 % micelio de Poria cocos\nProducido en fábrica con certificación GMP según DXN\nPolvo para disolver en agua tibia"
+ },
+ "lions-mane": {
+  "nom": "DXN Lion's Mane",
+  "slug": "melena-de-leon-dxn",
+  "accroche": "El hongo Hericium erinaceus, conocido como melena de león, en comprimidos de 300 mg.",
+  "description": "El Lion's Mane, o melena de león, es el hongo Hericium erinaceus, reconocible por sus largas agujas blancas. DXN lo ofrece en comprimidos de 300 mg elaborados a partir del cuerpo fructífero.\n\nEl frasco contiene 120 comprimidos. Producto destinado a adultos.",
+  "format": "120 comprimidos × 300 mg",
+  "composition": "Hericium erinaceus (cuerpo fructífero), excipiente.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Hericium erinaceus, cuerpo fructífero\n120 comprimidos de 300 mg\nProducto destinado a adultos"
+ },
+ "mycoveggie": {
+  "nom": "DXN MycoVeggie",
+  "slug": "mezcla-vegetal-mycoveggie-dxn",
+  "accroche": "Una mezcla de psyllium, verduras, plantas, especias y hongos en polvo.",
+  "description": "El MycoVeggie es un polvo compuesto de cáscara de psyllium, verduras, hojas y especias, y siete hongos, entre ellos el shiitake, la seta de ostra y la melena de león. El psyllium es su primer ingrediente.\n\nEl tarro de 400 g se dosifica con la cuchara medidora en un vaso de agua tibia o fría, preferiblemente en un shaker: el polvo espesa rápido, así que es mejor beberlo enseguida.",
+  "format": "400 g",
+  "composition": "Cáscara de psyllium, apio, hoja de morera, hoja de noni, hoja de ginkgo, jengibre, hierba limón, shiitake, Lyophyllum, seta de San Jorge, melena de león, seta del olmo, seta de ostra gris, Schizophyllum commune, maíz dulce, lima, naranja, espirulina, té verde, piel de mandarina, canela, anís estrellado, clavo.",
+  "usage": "Mezclar una cuchara medidora (5 g) en un vaso de agua tibia o fría, preferiblemente en un shaker.\nBeber enseguida.",
+  "points": "23 ingredientes vegetales, entre ellos siete hongos\nEl psyllium como primer ingrediente\nTarro de 400 g, para dosificar con cuchara"
+ },
+ "spirulina": {
+  "nom": "DXN Spirulina — 500 comprimidos",
+  "slug": "espirulina-dxn-500-comprimidos",
+  "accroche": "Espirulina (Spirulina platensis) cultivada en estanque, en comprimidos de 250 mg.",
+  "description": "La espirulina DXN es una microalga, Spirulina platensis, cultivada en estanque sin pesticidas ni herbicidas según DXN, y después secada y comprimida. Cada comprimido contiene 250 mg, con un mínimo de excipientes.\n\nEste frasco de 500 comprimidos es el formato grande; la misma espirulina existe en frasco de 120. Los comprimidos se tragan con agua o se mastican.",
+  "format": "500 comprimidos × 250 mg",
+  "composition": "Spirulina platensis, excipientes. Detalle en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTragar con un vaso de agua o masticar.",
+  "points": "Spirulina platensis cultivada en estanque\nSin pesticidas ni herbicidas según DXN\n500 comprimidos de 250 mg, para tragar o masticar"
+ },
+ "omega-3": {
+  "nom": "DXN Omega 3",
+  "slug": "aceite-de-pescado-omega-3-dxn",
+  "accroche": "Aceite de pescado purificado, fuente de EPA y de DHA, en cápsulas blandas.",
+  "description": "El Omega 3 de DXN es un aceite de pescado purificado, naturalmente rico en dos ácidos grasos de la familia de los omega-3: el EPA y el DHA. Se presenta en cápsulas blandas, fáciles de tragar.\n\nEl frasco contiene 90 cápsulas. Se toman después de una comida, con un vaso de agua, y se conservan en un lugar fresco y seco. Las cantidades exactas de EPA y de DHA figuran en la etiqueta; en caso de tratamiento anticoagulante, embarazo o alergia al pescado, consulta a un profesional sanitario antes de tomarlo.",
+  "format": "90 cápsulas blandas",
+  "composition": "Aceite de pescado purificado (EPA, DHA), envoltura de la cápsula. Cantidades y lista completa en la etiqueta.\nAlérgeno: pescado.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar después de una comida, con un vaso de agua.\nConservar en un lugar fresco y seco.",
+  "points": "Aceite de pescado purificado\nFuente de EPA y de DHA, dos omega-3\n90 cápsulas blandas, para tomar después de una comida"
+ },
+ "rg-30": {
+  "nom": "DXN Reishi Gano (RG) 30",
+  "slug": "reishi-gano-rg-dxn-30-capsulas",
+  "accroche": "El Reishi Gano en frasco pequeño de 30 cápsulas, para descubrirlo.",
+  "description": "El mismo contenido que el RG 90 —el cuerpo fructífero del Ganoderma lucidum cosechado en su madurez, 270 mg por cápsula, nada más— en frasco de 30 cápsulas.\n\nEs el formato para descubrirlo; el RG también existe en 90 y en 360 cápsulas. El modo de empleo figura en el envase; en caso de tratamiento médico o embarazo, consulta a un profesional sanitario antes de tomarlo.",
+  "format": "30 cápsulas × 270 mg",
+  "composition": "100 % Ganoderma lucidum (cuerpo fructífero), 270 mg por cápsula.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "100 % Ganoderma lucidum, cuerpo fructífero\n270 mg por cápsula\n30 cápsulas, formato para descubrirlo"
+ },
+ "rg-360": {
+  "nom": "DXN Reishi Gano (RG) 360",
+  "slug": "reishi-gano-rg-dxn-360-capsulas",
+  "accroche": "El Reishi Gano en frasco grande de 360 cápsulas.",
+  "description": "El mismo contenido que el RG 90 —el cuerpo fructífero del Ganoderma lucidum, 270 mg por cápsula— en frasco de 360 cápsulas, el formato más económico de la gama.\n\nEl modo de empleo figura en el envase; en caso de tratamiento médico o embarazo, consulta a un profesional sanitario antes de tomarlo.",
+  "format": "360 cápsulas × 270 mg",
+  "composition": "100 % Ganoderma lucidum (cuerpo fructífero), 270 mg por cápsula.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "100 % Ganoderma lucidum, cuerpo fructífero\n270 mg por cápsula\n360 cápsulas, el más económico"
+ },
+ "gl-90": {
+  "nom": "DXN Ganocelium (GL) 90",
+  "slug": "ganocelium-gl-dxn-90-capsulas",
+  "accroche": "El micelio del Ganoderma lucidum, cosechado a los 18 días, en cápsulas.",
+  "description": "El Ganocelium, o GL, es la otra mitad del reishi de DXN: mientras que el RG contiene el cuerpo fructífero del hongo, el GL contiene su micelio, cosechado tras 18 días de cultivo. A menudo se toman juntos.\n\nFrasco de 90 cápsulas; también existe en 30 y en 360. Modo de empleo en el envase; en caso de tratamiento médico o embarazo, consulta a un profesional sanitario antes de tomarlo.",
+  "format": "90 cápsulas",
+  "composition": "100 % Ganoderma lucidum (micelio).",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "100 % Ganoderma lucidum, micelio\nCosechado a los 18 días\n90 cápsulas"
+ },
+ "gl-30": {
+  "nom": "DXN Ganocelium (GL) 30",
+  "slug": "ganocelium-gl-dxn-30-capsulas",
+  "accroche": "El Ganocelium, micelio del Ganoderma lucidum, en frasco pequeño de 30 cápsulas.",
+  "description": "El mismo contenido que el GL 90 —el micelio del Ganoderma lucidum, cosechado a los 18 días— en frasco de 30 cápsulas, el formato para descubrirlo.\n\nModo de empleo en el envase; en caso de tratamiento médico o embarazo, consulta a un profesional sanitario antes de tomarlo.",
+  "format": "30 cápsulas",
+  "composition": "100 % Ganoderma lucidum (micelio).",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "100 % Ganoderma lucidum, micelio\nCosechado a los 18 días\n30 cápsulas, formato para descubrirlo"
+ },
+ "gl-360": {
+  "nom": "DXN Ganocelium (GL) 360",
+  "slug": "ganocelium-gl-dxn-360-capsulas",
+  "accroche": "El Ganocelium, micelio del Ganoderma lucidum, en frasco grande de 360 cápsulas.",
+  "description": "El mismo contenido que el GL 90 —el micelio del Ganoderma lucidum, cosechado a los 18 días— en frasco de 360 cápsulas, el formato más económico.\n\nModo de empleo en el envase; en caso de tratamiento médico o embarazo, consulta a un profesional sanitario antes de tomarlo.",
+  "format": "360 cápsulas",
+  "composition": "100 % Ganoderma lucidum (micelio).",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "100 % Ganoderma lucidum, micelio\nCosechado a los 18 días\n360 cápsulas, el más económico"
+ },
+ "rg-powder": {
+  "nom": "DXN RG Powder",
+  "slug": "reishi-rg-en-polvo-dxn",
+  "accroche": "El cuerpo fructífero del Ganoderma lucidum en polvo puro, para diluir.",
+  "description": "El RG Powder es el mismo Ganoderma lucidum que las cápsulas RG —el cuerpo fructífero, cosechado en su madurez— reducido a polvo, para quien prefiere diluirlo en una bebida en lugar de tragar una cápsula.\n\nTarro de 15 g, para dosificar con la cuchara medidora. El sabor es amargo, característico del hongo.",
+  "format": "Tarro de 15 g",
+  "composition": "100 % Ganoderma lucidum (cuerpo fructífero).",
+  "usage": "Mezclar una cuchara medidora en un vaso de agua o en una bebida y remover.\nDosis indicada en el envase.",
+  "points": "100 % Ganoderma lucidum, cuerpo fructífero\nPolvo para diluir\nTarro de 15 g"
+ },
+ "gl-powder": {
+  "nom": "DXN GL Powder",
+  "slug": "reishi-gl-en-polvo-dxn",
+  "accroche": "El micelio del Ganoderma lucidum en polvo, para diluir.",
+  "description": "El GL Powder es el Ganocelium —el micelio del Ganoderma lucidum, cosechado a los 18 días— en polvo, para mezclar con agua, con una bebida o con una preparación.\n\nTarro de 30 g, para dosificar con la cuchara medidora.",
+  "format": "Tarro de 30 g",
+  "composition": "100 % Ganoderma lucidum (micelio).",
+  "usage": "Mezclar una cuchara medidora en un vaso de agua o en una bebida y remover.\nDosis indicada en el envase.",
+  "points": "100 % Ganoderma lucidum, micelio\nPolvo para diluir\nTarro de 30 g"
+ },
+ "reishi-powder-70": {
+  "nom": "DXN Reishi Mushroom Powder — 70 g",
+  "slug": "reishi-en-polvo-dxn-70-g",
+  "accroche": "Cuerpo fructífero y micelio de Ganoderma lucidum en polvo, el tarro grande de 70 g.",
+  "description": "El mismo polvo que el Reishi Mushroom Powder de 22 g —cuerpo fructífero y micelio del Ganoderma lucidum reunidos— en tarro de 70 g, para un uso regular.\n\nSe mezcla con agua, con una bebida o con una preparación. Dosis con la cuchara medidora, detalle en el envase.",
+  "format": "Tarro de 70 g",
+  "composition": "Cuerpo fructífero y micelio de Ganoderma lucidum, 100 %.",
+  "usage": "Mezclar una cuchara medidora en un vaso de agua o en una bebida y remover.\nDosis indicada en el envase.",
+  "points": "Cuerpo fructífero y micelio reunidos\nPolvo para diluir\nTarro grande de 70 g"
+ },
+ "cordyceps-powder": {
+  "nom": "DXN Cordyceps Powder",
+  "slug": "cordyceps-en-polvo-dxn",
+  "accroche": "Polvo de Cordyceps sinensis en tarro de 30 g, para diluir.",
+  "description": "El mismo Cordyceps sinensis que las cápsulas DXN, en polvo suelto, para quien prefiere mezclarlo con una bebida.\n\nTarro de 30 g, para dosificar con la cuchara medidora.",
+  "format": "Tarro de 30 g",
+  "composition": "100 % polvo de Cordyceps sinensis.",
+  "usage": "Mezclar una cuchara medidora en un vaso de agua o en una bebida y remover.\nDosis indicada en el envase.",
+  "points": "100 % Cordyceps sinensis\nPolvo para diluir\nTarro de 30 g"
+ },
+ "spirulina-powder": {
+  "nom": "DXN Spirulina Powder",
+  "slug": "espirulina-en-polvo-dxn",
+  "accroche": "Espirulina en polvo, para mezclar con una bebida o un plato.",
+  "description": "La misma espirulina que los comprimidos DXN —Spirulina platensis cultivada en estanque— en polvo, para añadirla a un smoothie, un zumo, un yogur o una preparación.\n\nTarro de 50 g. El polvo tiñe intensamente de verde todo lo que toca.",
+  "format": "Tarro de 50 g",
+  "composition": "100 % Spirulina platensis.",
+  "usage": "Mezclar una cucharadita en un zumo, un smoothie o un yogur.\nDosis indicada en el envase.",
+  "points": "100 % Spirulina platensis\nPara smoothies, zumos y yogures\nTarro de 50 g"
+ },
+ "black-cumin-plus-90": {
+  "nom": "DXN Black Cumin Plus 90",
+  "slug": "comino-negro-plus-dxn-90-capsulas",
+  "accroche": "Extracto de comino negro, Nigella sativa, en cápsulas.",
+  "description": "El Black Cumin Plus contiene extracto de comino negro, la semilla de Nigella sativa, conocida en Marruecos como habba sawda o sanouj.\n\nFrasco de 90 cápsulas; también existe en 30. Modo de empleo en el envase.",
+  "format": "90 cápsulas",
+  "composition": "Extracto de comino negro (Nigella sativa). Lista completa en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Extracto de comino negro, Nigella sativa\nLa habba sawda\n90 cápsulas"
+ },
+ "black-cumin-plus-30": {
+  "nom": "DXN Black Cumin Plus 30",
+  "slug": "comino-negro-plus-dxn-30-capsulas",
+  "accroche": "El extracto de comino negro, Nigella sativa, en frasco pequeño de 30 cápsulas.",
+  "description": "El mismo contenido que el Black Cumin Plus 90 —el extracto de la semilla de Nigella sativa, habba sawda— en frasco de 30 cápsulas, el formato para descubrirlo.\n\nModo de empleo en el envase.",
+  "format": "30 cápsulas",
+  "composition": "Extracto de comino negro (Nigella sativa). Lista completa en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Extracto de comino negro, Nigella sativa\nLa habba sawda\n30 cápsulas, formato para descubrirlo"
+ },
+ "andro-g-90": {
+  "nom": "DXN Andro-G 90",
+  "slug": "andrographis-andro-g-dxn-90-capsulas",
+  "accroche": "Andrographis paniculata, una planta de la tradición asiática, en cápsulas.",
+  "description": "El Andro-G presenta en cápsulas la Andrographis paniculata, una planta herbácea que se utiliza desde hace mucho tiempo en el sur y el sudeste de Asia.\n\nFrasco de 90 cápsulas; también existe en 30. Modo de empleo en el envase.",
+  "format": "90 cápsulas",
+  "composition": "Andrographis paniculata. Lista completa en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Andrographis paniculata\nPlanta de la tradición asiática\n90 cápsulas"
+ },
+ "andro-g-30": {
+  "nom": "DXN Andro-G 30",
+  "slug": "andrographis-andro-g-dxn-30-capsulas",
+  "accroche": "La Andrographis paniculata en frasco pequeño de 30 cápsulas.",
+  "description": "El mismo contenido que el Andro-G 90 —Andrographis paniculata en cápsulas— en frasco de 30, el formato para descubrirlo.\n\nModo de empleo en el envase.",
+  "format": "30 cápsulas",
+  "composition": "Andrographis paniculata. Lista completa en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Andrographis paniculata\nPlanta de la tradición asiática\n30 cápsulas, formato para descubrirlo"
+ },
+ "agaricus-90": {
+  "nom": "DXN Agaricus Blazei Murill 90",
+  "slug": "hongo-agaricus-blazei-dxn-90-capsulas",
+  "accroche": "El hongo Agaricus blazei Murill, originario de Brasil, en cápsulas.",
+  "description": "El Agaricus blazei Murill es un hongo descubierto en la región de Piedade, en Brasil, y hoy cultivado en Asia. DXN lo ofrece en cápsulas.\n\nFrasco de 90 cápsulas; también existe en 30. Modo de empleo en el envase.",
+  "format": "90 cápsulas",
+  "composition": "Agaricus blazei Murill. Lista completa en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Agaricus blazei Murill\nHongo originario de Brasil\n90 cápsulas"
+ },
+ "agaricus-30": {
+  "nom": "DXN Agaricus Blazei Murill 30",
+  "slug": "hongo-agaricus-blazei-dxn-30-capsulas",
+  "accroche": "El Agaricus blazei Murill en frasco pequeño de 30 cápsulas.",
+  "description": "El mismo contenido que el Agaricus Blazei Murill 90 —el hongo brasileño en cápsulas— en frasco de 30, el formato para descubrirlo.\n\nModo de empleo en el envase.",
+  "format": "30 cápsulas",
+  "composition": "Agaricus blazei Murill. Lista completa en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Agaricus blazei Murill\nHongo originario de Brasil\n30 cápsulas, formato para descubrirlo"
+ },
+ "mengkudu-90": {
+  "nom": "DXN Mengkudu 90",
+  "slug": "noni-mengkudu-dxn-90-capsulas",
+  "accroche": "El fruto del noni, Morinda citrifolia, en cápsulas.",
+  "description": "Mengkudu es el nombre malayo del noni, Morinda citrifolia, el fruto que DXN también ofrece en zumo con el nombre de Morinzhi. Aquí se presenta en cápsulas.\n\nFrasco de 90 cápsulas; también existe en 30. Modo de empleo en el envase.",
+  "format": "90 cápsulas",
+  "composition": "Fruto de noni (Morinda citrifolia). Lista completa en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Fruto del noni, Morinda citrifolia\nEl Morinzhi en cápsulas\n90 cápsulas"
+ },
+ "mengkudu-30": {
+  "nom": "DXN Mengkudu 30",
+  "slug": "noni-mengkudu-dxn-30-capsulas",
+  "accroche": "El fruto del noni en frasco pequeño de 30 cápsulas.",
+  "description": "El mismo contenido que el Mengkudu 90 —el fruto del noni, Morinda citrifolia, en cápsulas— en frasco de 30, el formato para descubrirlo.\n\nModo de empleo en el envase.",
+  "format": "30 cápsulas",
+  "composition": "Fruto de noni (Morinda citrifolia). Lista completa en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Fruto del noni, Morinda citrifolia\nEl Morinzhi en cápsulas\n30 cápsulas, formato para descubrirlo"
+ },
+ "roselle-tablets": {
+  "nom": "DXN Roselle — 120 comprimidos",
+  "slug": "hibisco-roselle-dxn-120-comprimidos",
+  "accroche": "El extracto de cálices de hibisco (Hibiscus sabdariffa), en comprimidos.",
+  "description": "El hibisco (Hibiscus sabdariffa), que DXN ofrece en zumo concentrado, existe también en comprimidos elaborados a partir del extracto de sus cálices.\n\nFrasco de 120 comprimidos. Modo de empleo en el envase.",
+  "format": "120 comprimidos",
+  "composition": "Extracto de cálices de hibisco (Hibiscus sabdariffa). Lista completa en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTomar con un vaso de agua.",
+  "points": "Extracto de cálices de hibisco\nEl Roselle en comprimidos\n120 comprimidos"
+ },
+ "natural-shield-deo": {
+  "nom": "Kallow Natural Shield — desodorante sin aluminio",
+  "slug": "desodorante-natural-shield-kallow",
+  "accroche": "Un roll-on sin sales de aluminio ni alcohol, con aloe vera ecológico y salvia.",
+  "description": "El Natural Shield es el desodorante de la gama Kallow, la línea cosmética de DXN fabricada en Grecia. Su fórmula prescinde de sales de aluminio y de alcohol; combina jugo de aloe vera ecológico, extracto de pepino y aceite de salvia en un roll-on de 50 ml.\n\nApto para todo tipo de pieles. Como cualquier desodorante sin aluminio, se vuelve a aplicar cuando haga falta a lo largo del día.",
+  "format": "Roll-on 50 ml",
+  "composition": "Aqua, Coco-Caprylate/Caprate, Caprylic/Capric Triglyceride, Triethyl Citrate, Glycerin, Zinc Ricinoleate, Parfum, Aloe Barbadensis Leaf Juice*, Cucumis Sativus Fruit Extract, Salvia Officinalis Oil, Tocopheryl Acetate, Sodium Caproyl/Lauroyl Lactylate, Glyceryl Stearate Citrate, Carbomer, Triethanolamine, Citric Acid, Phenoxyethanol, Ethylhexylglycerin, Potassium Sorbate, Sodium Benzoate.\n* procedente de agricultura ecológica",
+  "usage": "Agitar bien antes de usar.\nAplicar sobre las axilas limpias y secas, repetir cuando haga falta.",
+  "points": "Sin sales de aluminio, sin alcohol\nAloe vera ecológico, pepino y salvia\nRoll-on de 50 ml, todo tipo de pieles"
+ },
+ "kallow-shower-gel": {
+  "nom": "Kallow Luxury Aromatic Shower Gel",
+  "slug": "gel-de-ducha-kallow",
+  "accroche": "Un gel de ducha perfumado con aloe vera, aceite de oliva y ácido hialurónico.",
+  "description": "El Luxury Aromatic Shower Gel limpia el cuerpo con una espuma fina y deja un perfume floral. Su fórmula combina jugo de aloe vera, aceite de oliva e hialuronato de sodio.\n\nAbre la serie Luxury Aromatic de Kallow, pensada para usarse antes de la loción corporal y del aceite seco Divine Touch. Solo para el cuerpo: no es un limpiador facial.",
+  "format": "250 ml",
+  "composition": "Aqua, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Aloe Barbadensis Leaf Juice, Sodium Hyaluronate, Olea Europaea Fruit Oil, Parfum (Linalool, Limonene, Coumarin). Lista INCI completa en el frasco.",
+  "usage": "Sobre la piel mojada, hacer espuma con una pequeña cantidad en la mano o en una esponja de ducha.\nAclarar abundantemente. Evitar el contacto con los ojos.",
+  "points": "Aloe vera, aceite de oliva, ácido hialurónico\nEspuma fina, perfume floral\nFrasco dosificador de 250 ml"
+ },
+ "kallow-sunscreen-spf50": {
+  "nom": "Kallow High Protection Face Sunscreen SPF 50+",
+  "slug": "crema-solar-facial-spf-50-kallow",
+  "accroche": "Una crema solar facial de protección alta SPF 50+, con ácido hialurónico y vitamina E.",
+  "description": "Esta crema solar facial ofrece una protección alta SPF 50+ frente a los rayos UVA y UVB gracias a filtros orgánicos. Su textura ligera, enriquecida con hialuronato de sodio, vitamina E y alantoína, se lleva sola o bajo el maquillaje.\n\nFrasco dosificador de 50 ml, para aplicar generosamente antes de la exposición y renovar cada dos horas y después del baño: una protección solar solo se mantiene si se renueva.",
+  "format": "50 ml",
+  "composition": "Aqua, Ethylhexyl Methoxycinnamate, Octocrylene, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Glycerin, Glyceryl Stearate, Cetearyl Alcohol, Potassium Palmitoyl Hydrolyzed Wheat Protein, Polymethyl Methacrylate, Phenoxyethanol, Chlorphenesin, Tocopheryl Acetate, Parfum, Ethylhexylglycerin, Sodium Hyaluronate, Sodium Polyacrylate, Allantoin.",
+  "usage": "Aplicar de manera uniforme sobre el rostro y el cuello, 15 minutos antes de la exposición.\nRenovar cada dos horas y después del baño.",
+  "points": "Protección alta SPF 50+, UVA y UVB\nÁcido hialurónico y vitamina E\nTextura ligera, frasco dosificador de 50 ml"
+ },
+ "kallow-cosmetics": {
+  "nom": "Estuche Kallow Divine Touch — selección Fatichanelya",
+  "slug": "estuche-divine-touch-kallow",
+  "accroche": "Los cuidados faciales Divine Touch de Kallow reunidos en un estuche preparado por Fati.",
+  "description": "Este estuche reúne los cuidados faciales de la línea Divine Touch de Kallow, la gama cosmética de DXN fabricada en Grecia: crema, contorno de ojos y aceites. La composición exacta del estuche se confirma con Fati en el momento del pedido, según la disponibilidad.\n\nCada producto se vende también por separado en la tienda.",
+  "format": "",
+  "composition": "",
+  "usage": "",
+  "points": "Los cuidados faciales Divine Touch reunidos\nEstuche preparado por Fati\nCada producto existe también por separado"
+ },
+ "divine-eye-cream": {
+  "nom": "Kallow Divine Touch Lifting Impact Eye Cream",
+  "slug": "contorno-de-ojos-divine-touch-kallow",
+  "accroche": "Un contorno de ojos con cafeína, péptidos y ácido hialurónico, en tarro de 15 ml.",
+  "description": "El Lifting Impact Eye Cream es el contorno de ojos de la línea Divine Touch. Su fórmula reúne cafeína, un complejo de péptidos, hialuronato de sodio, vitaminas C, E y A y polifenoles de té verde, en una textura ligera que se aplica por la mañana y por la noche.\n\nPuede servir de base antes del maquillaje.",
+  "format": "15 ml",
+  "composition": "Aqua, Glycerin, Glycereth-26, Caprylic/Capric Triglyceride, Cetearyl Glucoside, Sorbitan Olivate, Caffeine, Ascorbyl Glucoside, Malus Domestica Fruit Cell Culture Extract, Albizia Julibrissin Bark Extract, Butyrospermum Parkii Butter, Tocopheryl Acetate, Retinyl Palmitate, Allantoin, Sodium Hyaluronate Crosspolymer, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Trifluoroacetyl Tripeptide-2… Lista INCI completa en el envase.",
+  "usage": "Aplicar una pequeña cantidad en el contorno del ojo, incluido el párpado superior, con ligeros toques.\nPor la mañana y por la noche, sobre la piel limpia.",
+  "points": "Cafeína, péptidos, ácido hialurónico\nVitaminas C, E y A\nTarro de 15 ml, mañana y noche"
+ }
+}

@@ -1,0 +1,322 @@
+{
+ "divine-dry-oil": {
+  "nom": "Kallow Divine Touch Multi-Purpose Dry Oil",
+  "slug": "aceite-seco-divine-touch-kallow",
+  "accroche": "Un aceite seco para rostro, cuerpo y cabello con aceites de girasol, argán y oliva.",
+  "description": "El aceite seco Divine Touch se aplica en el rostro, el cuerpo y el cabello. Su base de aceites vegetales —girasol, argán, oliva— y vitamina E penetra rápidamente sin dejar película grasa, de ahí su nombre de aceite «seco».\n\nFrasco de 100 ml, perfumado. Se combina con el gel de ducha y la loción de la serie Luxury Aromatic.",
+  "format": "100 ml",
+  "composition": "Coco-Caprylate/Caprate, Caprylic/Capric Triglyceride, Helianthus Annuus Seed Oil, Parfum, Argania Spinosa Kernel Oil, Olea Europaea Fruit Oil, Tocopheryl Acetate, BHT, componentes del perfume (Linalool, Limonene, Citronellol, Geraniol, Coumarin, Benzyl Salicylate, Hexyl Cinnamal, Hydroxycitronellal, Alpha-Isomethyl Ionone).",
+  "usage": "Aplicar unas gotas sobre la piel o en medios y puntas del cabello y masajear suavemente.\nNo aclarar.",
+  "points": "Aceites de girasol, argán y oliva\nRostro, cuerpo y cabello\nPenetra rápido, sin película grasa"
+ },
+ "divine-night-oil": {
+  "nom": "Kallow Divine Touch Nourishing Night Oil",
+  "slug": "aceite-de-noche-divine-touch-kallow",
+  "accroche": "Un aceite facial de noche con aceites de pepita de uva, albaricoque, aguacate y argán.",
+  "description": "El Nourishing Night Oil se aplica por la noche, como último paso, sobre la piel limpia. Combina seis aceites vegetales —pepita de uva, hueso de albaricoque, aguacate, argán, oliva, sacha inchi— con vitaminas A, C y E.\n\nFrasco de 30 ml. Bastan unas gotas; evitar el contorno de los ojos, no aclarar.",
+  "format": "30 ml",
+  "composition": "Vitis Vinifera Seed Oil, Prunus Armeniaca Kernel Oil, Persea Gratissima Oil, Argania Spinosa Kernel Oil, Tocopheryl Acetate, Olea Europaea Fruit Oil, Retinyl Palmitate, Plukenetia Volubilis Seed Oil, Carthamus Tinctorius Seed Oil, Prunus Amygdalus Dulcis Oil, Ascorbyl Palmitate, BHT, Linoleic Acid.",
+  "usage": "Por la noche, después de la limpieza y de los demás cuidados, aplicar unas gotas en el rostro y el cuello.\nEvitar el contorno de los ojos. No aclarar.",
+  "points": "Seis aceites vegetales\nVitaminas A, C y E\nUnas gotas por la noche, sin aclarado"
+ },
+ "divine-face-cream": {
+  "nom": "Kallow Divine Touch Lifting Impact Face Cream",
+  "slug": "crema-facial-divine-touch-kallow",
+  "accroche": "Una crema facial rica, con péptidos, células de manzana verde y aceites de aguacate, albaricoque y argán.",
+  "description": "La Lifting Impact Face Cream es la crema facial de la línea Divine Touch. Su textura rica reúne un complejo de péptidos, un extracto de células de manzana verde (Malus domestica), hialuronato de sodio y aceites de aguacate, albaricoque y argán, con vitaminas A, C y E.\n\nTarro de 50 ml. Está pensada para aplicarse después del sérum Divine Touch, pero también se usa sola.",
+  "format": "50 ml",
+  "composition": "Aqua, Persea Gratissima Oil, Prunus Armeniaca Kernel Oil, Argania Spinosa Kernel Oil, Olea Europaea Fruit Oil, Retinyl Palmitate, Malus Domestica Fruit Cell Culture Extract, Ascorbyl Glucoside, Tocopheryl Acetate, Trifluoroacetyl Tripeptide-2, Palmitoyl Tetrapeptide-7, Palmitoyl Tripeptide-1, Sodium Hyaluronate Crosspolymer, Fomes Officinalis Extract… Lista INCI completa en el envase.",
+  "usage": "Aplicar sobre el rostro y el cuello limpios, por la mañana y/o por la noche.\nDespués del sérum Divine Touch si lo usas.",
+  "points": "Péptidos y células de manzana verde\nAceites de aguacate, albaricoque y argán\nTarro de 50 ml, textura rica"
+ },
+ "kallow-foaming-cleanser": {
+  "nom": "Kallow Aloe & Chamomile Instant Foaming Cleanser",
+  "slug": "limpiador-facial-espuma-aloe-manzanilla-kallow",
+  "accroche": "Un limpiador facial en espuma con aloe vera y manzanilla, 92 % de ingredientes de origen natural.",
+  "description": "Este limpiador facial sale en forma de espuma ligera con solo presionar el dosificador. Su fórmula combina aloe vera y manzanilla; se usa sobre el rostro y el cuello húmedos, por la mañana o por la noche, y después se aclara con agua. Para todo tipo de pieles, según el fabricante.\n\nFrasco dosificador de 150 ml, referencia SC081 de la gama Kallow, la línea cosmética de DXN fabricada en Grecia. Etiqueta: 92 % de ingredientes de origen natural.",
+  "format": "150 ml",
+  "composition": "Contiene, entre otros, aloe vera (Aloe barbadensis) y manzanilla (Chamomilla recutita). 92 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Sobre el rostro y el cuello húmedos, masajear una pequeña cantidad de espuma, por la mañana o por la noche.\nAclarar con agua.",
+  "points": "Aloe vera y manzanilla\n92 % de ingredientes de origen natural (etiqueta)\nFrasco dosificador de 150 ml, se aclara con agua"
+ },
+ "kallow-tightening-serum": {
+  "nom": "Kallow Instant Tightening Serum",
+  "slug": "serum-facial-instant-tightening-kallow",
+  "accroche": "Un sérum facial de efecto tensor, con perlas activas y disacáridos de origen natural.",
+  "description": "El Instant Tightening Serum es un sérum facial de efecto tensor. Su fórmula contiene perlas activas nacaradas y disacáridos de origen natural. Se aplica sobre la piel limpia, antes de la crema de día; el fabricante lo presenta como base de maquillaje.\n\nFrasco dosificador de 30 ml, referencia SC082. Etiqueta: 95 % de ingredientes de origen natural.",
+  "format": "30 ml",
+  "composition": "Contiene, entre otros, perlas activas y disacáridos de origen natural. 95 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Aplicar unas gotas sobre el rostro y el cuello limpios.\nDejar que se absorba y aplicar después la crema de día o el maquillaje.",
+  "points": "Efecto tensor, textura sérum\n95 % de ingredientes de origen natural (etiqueta)\nFrasco de 30 ml, antes de la crema de día"
+ },
+ "kallow-micellar-tonic": {
+  "nom": "Kallow Sage & Witch Hazel Micellar Cleansing Tonic Water",
+  "slug": "tonico-micelar-salvia-hamamelis-kallow",
+  "accroche": "Un tónico micelar de salvia y hamamelis, sin aclarado.",
+  "description": "Este tónico micelar de salvia y hamamelis se usa con un algodón, por la mañana y por la noche, en el rostro y el cuello. Retira el maquillaje, también el del contorno de los ojos, y no se aclara.\n\nFrasco de 200 ml, referencia SC084. Etiqueta: 99 % de ingredientes de origen natural.",
+  "format": "200 ml",
+  "composition": "Contiene, entre otros, extracto de salvia (Salvia officinalis) y de hamamelis (Hamamelis virginiana). 99 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Empapar un algodón y pasarlo por el rostro y el cuello, por la mañana y por la noche.\nNo aclarar.",
+  "points": "Salvia y hamamelis\n99 % de ingredientes de origen natural (etiqueta)\nCon algodón, sin aclarado, 200 ml"
+ },
+ "kallow-face-mask": {
+  "nom": "Kallow Spirulina & Avocado Hydrating Face Mask",
+  "slug": "mascarilla-facial-hidratante-espirulina-aguacate-kallow",
+  "accroche": "Una mascarilla de noche hidratante con espirulina, aguacate y aceite de macadamia.",
+  "description": "Esta mascarilla facial hidratante se aplica por la noche, como último paso de la rutina de cuidado, y se deja puesta toda la noche: sin aclarado. Su fórmula combina espirulina, aceite de aguacate y aceite de macadamia.\n\nTarro de 75 ml, referencia SC085. También existe en pack de muestras de 10 × 5 ml. Etiqueta: 96 % de ingredientes de origen natural.",
+  "format": "75 ml",
+  "composition": "Contiene, entre otros, espirulina, aceite de aguacate (Persea gratissima) y aceite de macadamia. 96 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Por la noche, aplicar una pequeña cantidad sobre el rostro limpio, evitando el contorno de los ojos.\nDejar actuar toda la noche, sin aclarar.",
+  "points": "Espirulina, aguacate, macadamia\nMascarilla de noche, sin aclarado\nTarro de 75 ml"
+ },
+ "divine-face-serum": {
+  "nom": "Kallow Divine Touch Lifting Impact Face Serum",
+  "slug": "serum-facial-divine-touch-kallow",
+  "accroche": "El sérum facial de la línea Divine Touch, con péptidos, ácido hialurónico y células de manzana.",
+  "description": "El Lifting Impact Face Serum es el sérum de la línea Divine Touch de Kallow, para el rostro, el cuello y el escote. Su fórmula reúne un complejo de péptidos, un extracto de células de manzana, ácido hialurónico, vitaminas E, C y F, retinol (vitamina A) y biosacáridos de origen natural. Se aplica después de la limpieza, antes de la crema de día o de noche; está pensado para preceder a la Lifting Impact Face Cream.\n\nFrasco dosificador de 30 ml, referencia SC088. También existe en monodosis de 10 × 2 ml. Etiqueta: 97 % de ingredientes de origen natural.",
+  "format": "30 ml",
+  "composition": "Contiene, entre otros, un complejo de péptidos, un extracto de células de manzana (Malus domestica), ácido hialurónico, vitaminas E, C y F, retinol y biosacáridos. 97 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Después de la limpieza, aplicar unas gotas en el rostro, el cuello y el escote.\nDejar que se absorba antes de la crema de día o de noche.",
+  "points": "Péptidos, células de manzana, ácido hialurónico\n97 % de ingredientes de origen natural (etiqueta)\nFrasco de 30 ml, antes de la Lifting Impact Face Cream"
+ },
+ "kallow-body-lotion": {
+  "nom": "Kallow Luxury Aromatic Body Lotion",
+  "slug": "locion-corporal-luxury-aromatic-kallow",
+  "accroche": "Una loción corporal con ácido hialurónico, aloe vera y aceite de oliva, con el mismo perfume que el gel de ducha Luxury Aromatic.",
+  "description": "La Luxury Aromatic Body Lotion es la loción corporal de la serie Luxury Aromatic de Kallow. Su fórmula combina ácido hialurónico, aloe vera y aceite de oliva, con el perfume floral de la serie. Se aplica en pequeña cantidad después de la ducha y se combina con el gel de ducha y el aceite seco de la misma serie.\n\nFrasco dosificador de 250 ml, referencia SC093. También existe en monodosis de 10 × 5 ml. Etiqueta: 95 % de ingredientes de origen natural.",
+  "format": "250 ml",
+  "composition": "Contiene, entre otros, ácido hialurónico, aloe vera (Aloe barbadensis) y aceite de oliva (Olea europaea). 95 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Aplicar una pequeña cantidad sobre el cuerpo después de la ducha, con la piel seca.\nMasajear hasta su completa absorción.",
+  "points": "Ácido hialurónico, aloe vera, aceite de oliva\nEl mismo perfume que el gel de ducha Luxury Aromatic\nFrasco dosificador de 250 ml"
+ },
+ "kallow-lip-balm": {
+  "nom": "Kallow Moisturizing Lip Balm",
+  "slug": "balsamo-labial-hidratante-kallow",
+  "accroche": "Un bálsamo labial con manteca de cacao y manteca de karité, en tarro de 7 ml.",
+  "description": "El Moisturizing Lip Balm es el bálsamo labial de Kallow. Su fórmula se basa en la manteca de cacao y la manteca de karité. Tarro pequeño de 7 ml para llevar en el bolso o en el bolsillo; se aplica con el dedo sobre los labios limpios y secos, tantas veces como haga falta.\n\nReferencia SC094. Etiqueta: 99 % de ingredientes de origen natural.",
+  "format": "7 ml",
+  "composition": "Contiene, entre otros, manteca de cacao (Theobroma cacao) y manteca de karité (Butyrospermum parkii). 99 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Aplicar sobre los labios limpios y secos, tantas veces como haga falta.",
+  "points": "Manteca de cacao y manteca de karité\n99 % de ingredientes de origen natural (etiqueta)\nTarro de 7 ml, formato de bolsillo"
+ },
+ "kallow-hand-cream": {
+  "nom": "Kallow Nourishing Hand Cream",
+  "slug": "crema-de-manos-kallow",
+  "accroche": "Una crema de manos con manteca de karité, de textura no grasa, en tarro de 75 ml.",
+  "description": "La Nourishing Hand Cream es la crema de manos de Kallow, con manteca de karité. El fabricante la presenta como no grasa y ligeramente perfumada, pensada para manos secas o agrietadas. Se aplica sobre las manos limpias y secas, tantas veces como haga falta.\n\nTarro de 75 ml, referencia SC095. Etiqueta: 96 % de ingredientes de origen natural.",
+  "format": "75 ml",
+  "composition": "Contiene, entre otros, manteca de karité (Butyrospermum parkii). 96 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Aplicar una pequeña cantidad sobre las manos limpias y secas y masajear.\nRepetir después de cada lavado si hace falta.",
+  "points": "Manteca de karité, textura no grasa\n96 % de ingredientes de origen natural (etiqueta)\nTarro de 75 ml"
+ },
+ "kallow-sunscreen-spf30": {
+  "nom": "Kallow Essential Sunscreen Emulsion SPF 30",
+  "slug": "protector-solar-corporal-spf-30-kallow",
+  "accroche": "Una emulsión solar corporal SPF 30, con ácido hialurónico, glicerina y vitamina E.",
+  "description": "La Essential Sunscreen Emulsion SPF 30 es el protector solar corporal de Kallow: una emulsión fluida de factor 30, con ácido hialurónico, glicerina y vitamina E. Se aplica antes de la exposición y se renueva a menudo, sobre todo después de sudar, de bañarse o de secarse con la toalla.\n\nFrasco dosificador de 150 ml, referencia SC096. Para el rostro, la línea ofrece un SPF 50+. Etiqueta: 89 % de ingredientes de origen natural.",
+  "format": "150 ml",
+  "composition": "Contiene, entre otros, ácido hialurónico, glicerina y vitamina E. 89 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Aplicar generosamente sobre el cuerpo antes de la exposición.\nRenovar a menudo, sobre todo después de sudar, de bañarse o de secarse con la toalla.",
+  "points": "Factor SPF 30, para el cuerpo\nÁcido hialurónico, glicerina, vitamina E\nFrasco dosificador de 150 ml"
+ },
+ "kallow-tanning-oil": {
+  "nom": "Kallow Natural Tanning Oil",
+  "slug": "aceite-corporal-natural-tanning-kallow",
+  "accroche": "Un aceite corporal para la exposición al sol, con aceites de coco, girasol y zanahoria.",
+  "description": "El Natural Tanning Oil es un aceite corporal con aceites de coco, girasol y zanahoria, y vitamina E. Se aplica en todo el cuerpo, después del protector solar Kallow o por sí solo.\n\nFrasco de 150 ml, referencia SC097. No tiene factor de protección: combinarlo con un producto con SPF según el tiempo de exposición. Etiqueta: 95 % de ingredientes de origen natural.",
+  "format": "150 ml",
+  "composition": "Contiene, entre otros, aceite de coco (Cocos nucifera), aceite de girasol (Helianthus annuus), aceite de zanahoria (Daucus carota) y vitamina E. 95 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Aplicar en todo el cuerpo, después del protector solar o por sí solo.\nNo sustituye a un producto con SPF.",
+  "points": "Aceites de coco, girasol y zanahoria\nSin factor SPF: combinar con un protector\nFrasco de 150 ml"
+ },
+ "kallow-after-sun": {
+  "nom": "Kallow Cooling After Sun",
+  "slug": "gel-aftersun-kallow",
+  "accroche": "Un gel aftersun con efecto frescor, con aloe vera, yogur, menta y pepino.",
+  "description": "El Cooling After Sun es el gel aftersun de Kallow: una textura fresca con aloe vera, extractos de yogur, menta y pepino, vitamina E y un perfume veraniego. Se aplica en todo el cuerpo después de la exposición; el fabricante aconseja guardarlo en el frigorífico para que resulte más fresco.\n\nFrasco de 150 ml, referencia SC098. Completa la emulsión SPF 30 y el aceite de la misma serie. Etiqueta: 94 % de ingredientes de origen natural.",
+  "format": "150 ml",
+  "composition": "Contiene, entre otros, aloe vera (Aloe barbadensis), extractos de yogur, menta y pepino, y vitamina E. 94 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Aplicar una cantidad suficiente en todo el cuerpo después de la exposición.\nPuede guardarse en el frigorífico.",
+  "points": "Aloe vera, yogur, menta, pepino\nGel fresco, que puedes guardar en el frigorífico\nFrasco de 150 ml"
+ },
+ "divine-men-after-shave": {
+  "nom": "Kallow Divine Men Calming After Shave",
+  "slug": "locion-aftershave-divine-men-kallow",
+  "accroche": "Una loción calmante para después del afeitado, en frasco de 100 ml.",
+  "description": "El Divine Men Calming After Shave es la loción para después del afeitado de la línea para hombre de Kallow. Se aplica en el rostro justo después del afeitado.\n\nFrasco de 100 ml.",
+  "format": "100 ml",
+  "composition": "Lista INCI completa en el envase.",
+  "usage": "Aplicar en el rostro después del afeitado, sobre la piel limpia y seca.",
+  "points": "Aftershave calmante\nLínea para hombre Divine Men\nFrasco de 100 ml"
+ },
+ "summer-bling-mist": {
+  "nom": "Kallow Summer Bling Hair & Body Mist",
+  "slug": "bruma-perfumada-summer-bling-kallow",
+  "accroche": "Una bruma perfumada ligera para el cabello y el cuerpo, en frasco de 100 ml.",
+  "description": "La Summer Bling Hair & Body Mist es una bruma perfumada para vaporizar sobre el cabello y el cuerpo, más ligera que un perfume. También existe en versión Pink Glow.\n\nFrasco de 100 ml.",
+  "format": "100 ml",
+  "composition": "Lista INCI completa en el envase.",
+  "usage": "Vaporizar sobre el cabello y el cuerpo, a cierta distancia.\nRepetir a lo largo del día.",
+  "points": "Bruma perfumada para cabello y cuerpo\nMás ligera que un perfume\nFrasco de 100 ml"
+ },
+ "pink-glow-mist": {
+  "nom": "Kallow Pink Glow Hair & Body Mist",
+  "slug": "bruma-perfumada-pink-glow-kallow",
+  "accroche": "Una bruma perfumada fresca para el cabello y el cuerpo, en frasco de 100 ml.",
+  "description": "La Pink Glow Hair & Body Mist es la segunda bruma perfumada de Kallow, para vaporizar sobre el cabello y el cuerpo. También existe en versión Summer Bling.\n\nFrasco de 100 ml.",
+  "format": "100 ml",
+  "composition": "Lista INCI completa en el envase.",
+  "usage": "Vaporizar sobre el cabello y el cuerpo, a cierta distancia.\nRepetir a lo largo del día.",
+  "points": "Bruma perfumada para cabello y cuerpo\nMás ligera que un perfume\nFrasco de 100 ml"
+ },
+ "divine-eye-cream-monodoses": {
+  "nom": "Kallow Divine Touch Lifting Impact Eye Cream — 10 monodosis",
+  "slug": "contorno-de-ojos-divine-touch-kallow-10-monodosis",
+  "accroche": "El contorno de ojos Divine Touch en 10 monodosis de 1 ml, para probarlo o para viajar.",
+  "description": "El Lifting Impact Eye Cream en monodosis: 10 dosis de 1 ml, para descubrir este cuidado antes de comprar el tarro, o para los viajes.\n\nLa misma fórmula que el tarro de 15 ml.",
+  "format": "10 × 1 ml",
+  "composition": "Lista INCI completa en el envase.",
+  "usage": "Abrir una monodosis y aplicar en el contorno del ojo con ligeros toques.\nUna dosis por aplicación.",
+  "points": "La misma fórmula que el tarro de 15 ml\n10 monodosis de 1 ml\nPara probar o para viajar"
+ },
+ "divine-face-serum-monodoses": {
+  "nom": "Kallow Divine Touch Lifting Impact Face Serum — 10 monodosis",
+  "slug": "serum-facial-divine-touch-kallow-10-monodosis",
+  "accroche": "El sérum Divine Touch en 10 monodosis de 2 ml, para probarlo o para viajar.",
+  "description": "El Lifting Impact Face Serum en monodosis: 10 dosis de 2 ml, para descubrir este cuidado antes de comprar el frasco, o para los viajes.\n\nLa misma fórmula que el frasco de 30 ml.",
+  "format": "10 × 2 ml",
+  "composition": "Lista INCI completa en el envase.",
+  "usage": "Abrir una monodosis y aplicar sobre el rostro y el cuello limpios.\nUna dosis por aplicación.",
+  "points": "La misma fórmula que el frasco de 30 ml\n10 monodosis de 2 ml\nPara probar o para viajar"
+ },
+ "divine-face-cream-monodoses": {
+  "nom": "Kallow Divine Touch Lifting Impact Face Cream — 10 monodosis",
+  "slug": "crema-facial-divine-touch-kallow-10-monodosis",
+  "accroche": "La crema facial Divine Touch en 10 monodosis de 2 ml.",
+  "description": "La crema facial de la línea Divine Touch en monodosis: 10 dosis de 2 ml, para descubrir este cuidado o para los viajes.\n\nReferencia SC103 del catálogo DXN.",
+  "format": "10 × 2 ml",
+  "composition": "Lista INCI completa en el envase.",
+  "usage": "Abrir una monodosis y aplicar sobre el rostro y el cuello limpios.\nUna dosis por aplicación.",
+  "points": "Crema facial Divine Touch\n10 monodosis de 2 ml\nPara probar o para viajar"
+ },
+ "kallow-face-mask-echantillons": {
+  "nom": "Kallow Spirulina & Avocado Hydrating Face Mask — 10 muestras",
+  "slug": "mascarilla-facial-hidratante-espirulina-aguacate-kallow-10-muestras",
+  "accroche": "La mascarilla facial de espirulina y aguacate en 10 dosis de 5 ml.",
+  "description": "La Spirulina & Avocado Hydrating Face Mask en pack de muestras: 10 dosis de 5 ml, una por mascarilla de noche.\n\nLa misma fórmula que el tarro de 75 ml.",
+  "format": "10 × 5 ml",
+  "composition": "Contiene, entre otros, espirulina, aceite de aguacate (Persea gratissima) y aceite de macadamia. Lista INCI completa en el envase.",
+  "usage": "Por la noche, aplicar una dosis sobre el rostro limpio, evitando el contorno de los ojos.\nDejar actuar toda la noche, sin aclarar.",
+  "points": "La misma fórmula que el tarro de 75 ml\n10 dosis de 5 ml\nMascarilla de noche, una dosis por aplicación"
+ },
+ "kallow-sunscreen-spf50-echantillons": {
+  "nom": "Kallow High Protection Face Sunscreen SPF 50+ — 10 muestras",
+  "slug": "crema-solar-facial-spf-50-kallow-10-muestras",
+  "accroche": "La crema solar facial SPF 50+ en 10 dosis de 2 ml, para probarla.",
+  "description": "La High Protection Face Sunscreen SPF 50+ en pack de muestras: 10 dosis de 2 ml, para probar la textura antes de comprar el frasco de 50 ml.\n\nLa misma fórmula que el frasco.",
+  "format": "10 × 2 ml",
+  "composition": "Lista INCI completa en el envase.",
+  "usage": "Aplicar una dosis en el rostro y el cuello antes de la exposición.\nRenovar cada dos horas.",
+  "points": "La misma fórmula que el frasco de 50 ml\n10 dosis de 2 ml\nPara probar la textura"
+ },
+ "kallow-body-lotion-monodoses": {
+  "nom": "Kallow Luxury Aromatic Body Lotion — 10 monodosis",
+  "slug": "locion-corporal-luxury-aromatic-kallow-10-monodosis",
+  "accroche": "La loción corporal Luxury Aromatic en 10 monodosis de 5 ml, para viajar.",
+  "description": "La Luxury Aromatic Body Lotion en monodosis: 10 dosis de 5 ml, prácticas para los viajes o para descubrir el perfume de la serie.\n\nLa misma fórmula que el frasco de 250 ml.",
+  "format": "10 × 5 ml",
+  "composition": "Lista INCI completa en el envase.",
+  "usage": "Abrir una monodosis y aplicar sobre el cuerpo después de la ducha.\nUna dosis por aplicación.",
+  "points": "La misma fórmula que el frasco de 250 ml\n10 monodosis de 5 ml\nPara viajar"
+ },
+ "ganozhi-soap": {
+  "nom": "DXN Ganozhi Soap",
+  "slug": "jabon-ganozhi-dxn",
+  "accroche": "Un jabón para cuerpo y rostro con extracto de Ganoderma y aceite de palma, sin colorantes artificiales.",
+  "description": "El Ganozhi Soap es una pastilla de 80 g a base de aceite de palma, enriquecida con extracto de Ganoderma lucidum, que le da su color marrón natural. Es apto para todo tipo de pieles y también puede usarse para el afeitado.\n\nSin colorantes artificiales. Dejar secar el jabón entre un uso y otro para que dure.",
+  "format": "Pastilla de 80 g",
+  "composition": "Base limpiadora de aceite de palma, extracto de Ganoderma lucidum, glicerina, perfume. Lista INCI completa en el envase.",
+  "usage": "Hacer espuma sobre la piel húmeda, masajear y aclarar.",
+  "points": "Extracto de Ganoderma y aceite de palma\nSin colorantes artificiales\nCuerpo, rostro y afeitado"
+ },
+ "ganozhi-shampoo": {
+  "nom": "DXN Ganozhi Shampoo",
+  "slug": "champu-ganozhi-dxn",
+  "accroche": "Un champú de pH equilibrado, con extracto de Ganoderma y vitamina B5, para todo tipo de cabello.",
+  "description": "El Ganozhi Shampoo lava el cabello con una fórmula de pH equilibrado, enriquecida con extracto de Ganoderma lucidum y pantenol, la vitamina B5. Es apto para todo tipo de cabello y para un uso frecuente.\n\nFrasco de 250 ml.",
+  "format": "250 ml",
+  "composition": "Aqua, Cocamide DEA, Cocamidopropyl Betaine, Parfum, Ganoderma Lucidum Extract, Glycerin, Hydroxyethylcellulose, Lanolin, Panthenol, Sodium Laureth Sulfate… Lista INCI completa en el frasco.",
+  "usage": "Aplicar sobre el cabello mojado, hacer espuma y aclarar.\nRepetir si es necesario.",
+  "points": "Extracto de Ganoderma y vitamina B5\npH equilibrado\nTodo tipo de cabello, uso frecuente"
+ },
+ "ganozhi-body-foam": {
+  "nom": "DXN Ganozhi Body Foam",
+  "slug": "gel-de-ducha-ganozhi-dxn",
+  "accroche": "Una espuma limpiadora corporal suave, con extracto de Ganoderma y vitamina E.",
+  "description": "El Ganozhi Body Foam es un gel de ducha suave, formulado para limpiar sin arrastrar la película natural de la piel, según DXN. Contiene extracto de Ganoderma lucidum y vitamina E.\n\nFrasco de 250 ml. Apto para todo tipo de pieles.",
+  "format": "250 ml",
+  "composition": "Contiene, entre otros: extracto de Ganoderma lucidum, vitamina E (Tocopheryl Acetate), glicerina, agentes limpiadores suaves (betaína, Sodium Laureth Sulfate). Lista INCI completa en el frasco.",
+  "usage": "Verter unas gotas en la mano o en una esponja de ducha, añadir un poco de agua y hacer espuma.\nAclarar.",
+  "points": "Extracto de Ganoderma y vitamina E\nFórmula suave, todo tipo de pieles\nFrasco de 250 ml"
+ },
+ "gano-massage-oil": {
+  "nom": "DXN Gano Massage Oil",
+  "slug": "aceite-de-masaje-gano-dxn",
+  "accroche": "Un aceite de masaje con aceite de palma y extracto de Ganoderma, para el cuerpo y el cabello.",
+  "description": "El Gano Massage Oil, «Minyak Gosok Gano» en su etiqueta original, es un aceite de masaje compuesto de aceite de palma y extracto de Ganoderma lucidum. Se usa en el cuerpo y también puede aplicarse en el cabello.\n\nFrasco de 75 ml. Solo para uso externo; evitar el contacto con los ojos.",
+  "format": "75 ml",
+  "composition": "Aceite de palma, extracto de Ganoderma lucidum.",
+  "usage": "Agitar bien antes de usar.\nAplicar la cantidad deseada y masajear suavemente.\nUso externo. En caso de contacto con los ojos, aclarar abundantemente.",
+  "points": "Aceite de palma y extracto de Ganoderma\nPara el cuerpo y el cabello\nUso externo, frasco de 75 ml"
+ },
+ "toiletries-travel-kit": {
+  "nom": "DXN Toiletries Travel Kit",
+  "slug": "kit-de-aseo-de-viaje-dxn",
+  "accroche": "Los tres básicos Ganozhi en formato de viaje: champú, espuma limpiadora y pasta de dientes.",
+  "description": "El Toiletries Travel Kit reúne los tres productos de aseo Ganozhi en formato pequeño, apto para cabina: el champú (50 ml), la espuma limpiadora corporal (50 ml) y la pasta de dientes (40 g), todos con extracto de Ganoderma.\n\nPráctico para un fin de semana, o para probar la gama antes de pasar a los formatos grandes.",
+  "format": "Champú 50 ml, espuma corporal 50 ml, pasta de dientes 40 g",
+  "composition": "Ganozhi Shampoo 50 ml, Ganozhi Body Foam 50 ml, Ganozhi Toothpaste 40 g. Listas INCI completas en cada envase.",
+  "usage": "Champú y espuma: sobre la piel o el cabello mojados, hacer espuma y aclarar.\nPasta de dientes: cepillarse los dientes después de cada comida.",
+  "points": "Champú 50 ml, espuma corporal 50 ml, pasta de dientes 40 g\nExtracto de Ganoderma\nFormatos admitidos en cabina"
+ },
+ "chubby-baby-oil": {
+  "nom": "DXN Chubby Baby Oil",
+  "slug": "aceite-para-bebe-chubby-baby-dxn",
+  "accroche": "Un aceite corporal suave para la piel de los bebés, en frasco de 200 ml.",
+  "description": "El Chubby Baby Oil es un aceite corporal suave, pensado para la piel de los bebés y de los niños pequeños: después del baño, para el masaje o para hidratar las zonas secas.\n\nFrasco de 200 ml. Uso externo; evitar el contacto con los ojos.",
+  "format": "200 ml",
+  "composition": "Lista INCI completa en el envase.",
+  "usage": "Aplicar una pequeña cantidad sobre la piel limpia y seca y masajear suavemente.\nUso externo.",
+  "points": "Aceite corporal suave\nPara bebés y niños pequeños\nFrasco de 200 ml"
+ },
+ "ganozhi-toothpaste": {
+  "nom": "DXN Ganozhi Toothpaste",
+  "slug": "pasta-de-dientes-ganozhi-dxn",
+  "accroche": "Una pasta de dientes con extracto de Ganoderma, en tubo de 150 g.",
+  "description": "La Ganozhi Toothpaste es la pasta de dientes de la gama Ganozhi, formulada con extracto de Ganoderma lucidum y sabor a menta.\n\nTubo de 150 g. También existe en lote de 4 tubos de 40 g, práctico para viajar.",
+  "format": "Tubo de 150 g",
+  "composition": "Contiene, entre otros, extracto de Ganoderma lucidum y aroma de menta. Lista INCI completa en el envase.",
+  "usage": "Cepillarse los dientes después de cada comida, al menos dos veces al día.\nNo tragar.",
+  "points": "Extracto de Ganoderma lucidum\nSabor a menta\nTubo de 150 g"
+ },
+ "ganozhi-toothpaste-4x40": {
+  "nom": "DXN Ganozhi Toothpaste — 4 × 40 g",
+  "slug": "pasta-de-dientes-ganozhi-dxn-4x40",
+  "accroche": "La pasta de dientes Ganozhi en cuatro tubos de 40 g, formato de viaje.",
+  "description": "La misma pasta de dientes Ganozhi con extracto de Ganoderma lucidum, en lote de cuatro tubos de 40 g: uno para el neceser, otro para la oficina y uno para cada bolso.\n\nFormato admitido en cabina.",
+  "format": "4 tubos × 40 g",
+  "composition": "Contiene, entre otros, extracto de Ganoderma lucidum y aroma de menta. Lista INCI completa en el envase.",
+  "usage": "Cepillarse los dientes después de cada comida, al menos dos veces al día.\nNo tragar.",
+  "points": "Extracto de Ganoderma lucidum\n4 tubos de 40 g\nFormato de viaje"
+ },
+ "zhicare-toothpaste": {
+  "nom": "DXN Zhicare — pasta de dientes con árbol del té y aloe vera",
+  "slug": "pasta-de-dientes-zhicare-dxn",
+  "accroche": "Una pasta de dientes con aceite de árbol del té y aloe vera.",
+  "description": "Zhicare es la segunda pasta de dientes de DXN: su fórmula combina aceite de árbol del té (Melaleuca alternifolia) y aloe vera.\n\nTubo de 100 g.",
+  "format": "Tubo de 100 g",
+  "composition": "Contiene, entre otros, aceite de árbol del té (Melaleuca alternifolia) y aloe vera. Lista INCI completa en el envase.",
+  "usage": "Cepillarse los dientes después de cada comida, al menos dos veces al día.\nNo tragar.",
+  "points": "Aceite de árbol del té y aloe vera\nLa segunda pasta de dientes de DXN\nTubo de 100 g"
+ }
+}

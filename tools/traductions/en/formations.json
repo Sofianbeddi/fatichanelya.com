@@ -1,9 +1,44 @@
 {
+ "ia-au-quotidien": {
+  "nom": "AI in everyday life",
+  "slug": "ai-in-everyday-life",
+  "accroche": "Learn to use artificial intelligence tools in a practical way, to save time and produce content, visuals and ads.",
+  "niveau": "No prerequisites",
+  "duree": "At your own pace"
+ },
+ "marketing-digital": {
+  "nom": "Digital marketing",
+  "slug": "digital-marketing",
+  "accroche": "Understand your market and your customer, build a clear strategy, create content that resonates and reach the right people.",
+  "niveau": "No prerequisites",
+  "duree": ""
+ },
+ "vendre-avec-confiance": {
+  "nom": "Selling with confidence",
+  "slug": "selling-with-confidence",
+  "accroche": "Marketing, sales and persuasion: understand your customer, build a solid offer and close the sale without pressure or manipulation.",
+  "niveau": "No prerequisites",
+  "duree": ""
+ },
  "creation-de-contenu": {
   "nom": "Content creation and social media",
   "slug": "content-creation-and-social-media",
   "accroche": "Edit videos, design ad visuals, create for Facebook, Instagram and TikTok, then turn it into a service and find your own clients.",
   "niveau": "",
   "duree": "12 months · 2 sessions a week"
+ },
+ "media-buying": {
+  "nom": "Media buying and online advertising",
+  "slug": "media-buying-and-online-advertising",
+  "accroche": "Prepare, launch and optimise ad campaigns on Meta, TikTok and Google, reading the numbers to make decisions.",
+  "niveau": "No prerequisites",
+  "duree": ""
+ },
+ "automatisation": {
+  "nom": "Automation and AI assistants",
+  "slug": "automation-and-ai-assistants",
+  "accroche": "Automate a business's repetitive tasks with digital tools and AI, and offer this skill as a service.",
+  "niveau": "No prerequisites",
+  "duree": ""
  }
 }

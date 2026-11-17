@@ -1,9 +1,44 @@
 {
+ "ia-au-quotidien": {
+  "nom": "La IA en el día a día",
+  "slug": "la-ia-en-el-dia-a-dia",
+  "accroche": "Aprender a usar herramientas de inteligencia artificial de forma práctica, para ganar tiempo y crear contenidos, imágenes y anuncios.",
+  "niveau": "Sin requisitos previos",
+  "duree": "A tu ritmo"
+ },
+ "marketing-digital": {
+  "nom": "Marketing digital",
+  "slug": "marketing-digital-curso",
+  "accroche": "Entender tu mercado y a tu cliente, construir una estrategia clara, crear contenido que cale y llegar a las personas adecuadas.",
+  "niveau": "Sin requisitos previos",
+  "duree": ""
+ },
+ "vendre-avec-confiance": {
+  "nom": "Vender con confianza",
+  "slug": "vender-con-confianza",
+  "accroche": "Marketing, ventas y persuasión: entender a tu cliente, construir una oferta sólida y cerrar la venta sin presión ni manipulación.",
+  "niveau": "Sin requisitos previos",
+  "duree": ""
+ },
  "creation-de-contenu": {
   "nom": "Creación de contenido y redes sociales",
   "slug": "creacion-de-contenido-y-redes-sociales",
   "accroche": "Editar vídeos, diseñar imágenes publicitarias, crear contenido para Facebook, Instagram y TikTok, y después convertirlo en un servicio y encontrar tus propios clientes.",
   "niveau": "",
   "duree": "12 meses · 2 sesiones por semana"
+ },
+ "media-buying": {
+  "nom": "Media buying y publicidad online",
+  "slug": "media-buying-y-publicidad-online",
+  "accroche": "Preparar, lanzar y optimizar campañas publicitarias en Meta, TikTok y Google, leyendo las cifras para tomar decisiones.",
+  "niveau": "Sin requisitos previos",
+  "duree": ""
+ },
+ "automatisation": {
+  "nom": "Automatización y asistentes de IA",
+  "slug": "automatizacion-y-asistentes-de-ia",
+  "accroche": "Automatizar las tareas repetitivas de una empresa con las herramientas digitales y la IA, y ofrecer esta habilidad como un servicio.",
+  "niveau": "Sin requisitos previos",
+  "duree": ""
  }
 }

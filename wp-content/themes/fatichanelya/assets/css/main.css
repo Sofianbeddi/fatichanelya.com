@@ -915,6 +915,36 @@ body:has(#mobile-panel:not([hidden])) .wa-float{opacity:0;visibility:hidden}
 }
 @media print{.wa-float{display:none}}
 
+/* ---------- 19 bis. SUGGESTION DE LANGUE (1.9.0) ----------
+   Carte bleu nuit posée en bas, côté début de ligne : le coin de fin appartient au bouton
+   WhatsApp. Sur mobile, pleine largeur, posée AU-DESSUS du bouton WhatsApp, qui reste visible :
+   c'est le chemin de commande, il ne doit pas disparaître tant que la carte est ignorée. Texte dans la langue proposée (`lang` et `dir` posés par
+   le script, l'arabe se lit donc de droite à gauche même sur une page française). Entrée en
+   glissé, sans soulèvement au survol. Étagement : au-dessus du bouton WhatsApp (40), sous
+   l'en-tête (50). */
+.langue-suggestion{position:fixed;z-index:45;
+  inset-block-end:calc(16px + 56px + 12px + env(safe-area-inset-bottom,0px));inset-inline:16px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem;
+  padding:1rem 1rem 1rem 1.15rem;border-radius:var(--r-lg);
+  background:var(--navy);color:var(--text-on-navy);box-shadow:var(--shadow-float);
+  animation:suggestion-in 460ms var(--ease-out) backwards}
+.langue-suggestion[hidden]{display:none}
+@keyframes suggestion-in{from{opacity:0;transform:translateY(14px)}}
+.langue-suggestion-texte{flex:1 1 13rem;display:flex;align-items:center;gap:.7rem;margin:0;
+  font-size:var(--fs-sm);line-height:1.45}
+.langue-suggestion-texte svg{flex:none;color:var(--gold-light)}
+.langue-suggestion-voir.button{min-height:44px;padding-inline:1.15rem}
+.langue-suggestion-fermer{display:grid;place-items:center;inline-size:44px;block-size:44px;
+  margin-inline-start:auto;border-radius:50%;color:var(--text-on-navy);
+  transition:background var(--t-micro)}
+.langue-suggestion-fermer:hover{background:var(--navy-2)}
+.langue-suggestion-fermer:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
+@media (min-width:700px){
+  .langue-suggestion{inset-block-end:24px;inset-inline:24px auto;max-inline-size:34rem;flex-wrap:nowrap}
+}
+@media (prefers-reduced-motion:reduce){.langue-suggestion{animation:none}}
+@media print{.langue-suggestion{display:none}}
+
 /* ---------- 20. PERF ----------
    content-visibility:auto retiré volontairement : gain nul ici (LCP 1,5 s / TBT 80 ms
    sans lui) et il casse les captures pleine page, l'impression et l'ancrage du scroll. */
@@ -1750,7 +1780,8 @@ body.admin-bar .site-header{inset-block-start:32px}
    les très petits textes montent d'un cran pour rester lisibles. */
 [dir="rtl"] :is(.announcement,.about-stat,.chip,.journal-meta em,.product-cat,.result-count,.breadcrumb){font-size:.82rem}
 [dir="rtl"] .cat-circle{font-size:clamp(.7rem,2.9vw,.8rem)}
-[dir="rtl"] .legal-note{padding:.9rem 1.1rem;border-inline-start:3px solid var(--gold);background:var(--surface);
+/* Note « traduction pour information » des pages légales (arabe, et anglais depuis 1.9.0). */
+.legal-note{padding:.9rem 1.1rem;border-inline-start:3px solid var(--gold);background:var(--surface);
   border-radius:var(--r-sm,10px);font-size:.92rem}
 
 /* ---------- Compatibilité ----------
@@ -1982,3 +2013,10 @@ body.admin-bar{--admin-h:32px}
 .footer-lang a[aria-current]{color:var(--text-on-navy);font-weight:700}
 @media (hover:hover){.footer-lang a:hover{color:var(--text-on-navy)}}
 @media (max-width:480px){.lang-toggle{padding-inline:.45rem .3rem}.lang-toggle .i--globe{display:none}}
+/* Très petits écrans (320 px, 1.9.0) : marque, sélecteur de langue, panier et menu dépassaient de
+   9 px dans toutes les langues. La marque perd un cran, les outils se serrent (cibles à 40 px). */
+@media (max-width:359px){
+  .wordmark{font-size:1.3rem}
+  .header-tools{gap:0}
+  .header-tools .icon-button{inline-size:40px}
+}

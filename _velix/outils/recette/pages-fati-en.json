@@ -11,5 +11,10 @@
   "contact": "en/contact-fati/",
   "panier": "en/basket/",
   "recherche": "en/?s=lingzhi",
-  "404": "en/page-that-does-not-exist/"
+  "404": "en/page-that-does-not-exist/",
+  "mentions-legales": "en/legal-notice/",
+  "cgv": "en/terms-and-conditions-of-sale/",
+  "confidentialite": "en/privacy-policy/",
+  "livraison": "en/delivery-and-returns/",
+  "categorie-beaute": "en/categorie-produit/beauty-and-care/"
 }

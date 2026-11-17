@@ -43,7 +43,7 @@ finalité sanitaire). La version espagnole est la plus exposée : clientes et au
 
 ## Noms propres et marques (inchangés)
 Fatichanelya, Fati, DXN, Kallow, Velix Digital, WhatsApp, TikTok, Instagram, Facebook, Google, Meta,
-Ganozhi, Zhicare, Morinzhi, Reishilium, Ganocelium, Spirudle, codes RG / GL / SPF 50+.
+Ganozhi, Zhicare, Morinzhi, Reishilium, Ganocelium, Sprudle, codes RG / GL / SPF 50+.
 Noms latins des espèces en latin, précédés du nom courant quand il existe : « reishi (Ganoderma
 lucidum) », « melena de león (Hericium erinaceus) », « cordyceps (Cordyceps sinensis) », « noni
 (Morinda citrifolia) », « hibisco (Hibiscus sabdariffa) », « espirulina (Spirulina platensis) »,

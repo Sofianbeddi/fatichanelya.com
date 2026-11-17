@@ -1,32 +1,342 @@
 {
- "lingzhi-coffee": {
-  "nom": "DXN Lingzhi Black Coffee",
-  "slug": "cafe-negro-lingzhi-dxn",
-  "accroche": "Un café negro instantáneo, sin azúcar añadido, enriquecido con extracto de Ganoderma lucidum.",
-  "description": "El Lingzhi Black Coffee es un café soluble de arábica brasileño al que DXN añade extracto de Ganoderma lucidum, el hongo reishi. Se toma solo: sin azúcar ni crema en el sobre, con un sabor a café sin rodeos.\n\nEs la referencia más sencilla de la gama de cafés para quien quiere mantener su rutina de la mañana sin cambiar nada: un sobre, agua caliente y listo. Se conserva a temperatura ambiente, protegido de la humedad.",
-  "format": "20 sobres × 4,5 g",
-  "composition": "Café instantáneo (arábica de Brasil), extracto de Ganoderma lucidum.",
+ "lingzhi-coffee-3-en-1": {
+  "nom": "DXN Lingzhi Coffee 3 in 1",
+  "slug": "cafe-3-en-1-lingzhi-dxn",
+  "accroche": "Café, crema en polvo y azúcar reunidos en un sobre, con el extracto de Ganoderma de la gama Lingzhi.",
+  "description": "Versión suave del café Lingzhi: el sobre ya contiene la crema en polvo y el azúcar, para un café con leche listo en treinta segundos. El extracto de Ganoderma lucidum es el mismo que en el Black Coffee; solo cambia la suavidad.\n\nSin colorantes, aromas ni conservantes artificiales según la ficha de DXN. La crema en polvo puede contener un derivado de la leche: revisa la lista de ingredientes del envase si eres sensible a la leche.",
+  "format": "20 sobres × 21 g",
+  "composition": "Café soluble, crema en polvo, azúcar, extracto de Ganoderma lucidum. Detalle completo en el envase.",
+  "usage": "Vaciar un sobre en una taza.\nAñadir agua caliente y remover.",
+  "points": "Café, crema en polvo y azúcar ya dosificados\nExtracto de Ganoderma lucidum, el reishi\n20 sobres individuales, fáciles de llevar"
+ },
+ "lions-mane-coffee": {
+  "nom": "DXN Lion's Mane Coffee",
+  "slug": "cafe-melena-de-leon-dxn",
+  "accroche": "Un café con leche instantáneo, preparado con polvo del hongo Hericium erinaceus, la melena de león.",
+  "description": "El Lion's Mane Coffee —«Premix Coffee with Lion's Mane Mushroom» en su caja— combina café instantáneo, crema en polvo y azúcar con polvo del hongo Hericium erinaceus, más conocido como melena de león. El resultado es un café suave y redondo, que se prepara caliente o frío.\n\nContiene leche (caseinato de sodio en la crema en polvo): no es apto para personas alérgicas a las proteínas de la leche.",
+  "format": "20 sobres × 21 g",
+  "composition": "Crema en polvo (jarabe de glucosa, aceite de palma, caseinato de sodio — leche, estabilizantes, emulgentes, sal), azúcar, café instantáneo, polvo de hongo melena de león (Hericium erinaceus).\nAlérgeno: leche.",
+  "usage": "Verter un sobre (21 g) en una taza.\nAñadir de 150 a 180 ml de agua caliente, o de agua fría para una versión helada. Remover.",
+  "points": "Polvo de hongo melena de león (Hericium erinaceus)\nCafé suave, con crema vegetal y azúcar de caña\nSe prepara caliente o helado — 20 sobres"
+ },
+ "cordyceps-coffee": {
+  "nom": "DXN Cordyceps Coffee 3 in 1",
+  "slug": "cafe-3-en-1-cordyceps-dxn",
+  "accroche": "Un café instantáneo con crema vegetal y azúcar de caña, al que se añade Cordyceps sinensis.",
+  "description": "El Cordyceps Coffee 3 in 1 es un café soluble al que DXN añade Cordyceps sinensis, un hongo utilizado desde hace mucho tiempo en Asia. La crema vegetal y el azúcar de caña ya están en el sobre: un café con leche listo en unos segundos, caliente o frío.\n\nEs la versión que se vende en Europa (catálogo DXN España 2026). La caja contiene 20 sobres de 21 g.",
+  "format": "20 sobres × 21 g",
+  "composition": "Café instantáneo, crema vegetal, azúcar de caña, Cordyceps sinensis. Lista completa en el envase.",
+  "usage": "Vaciar un sobre en una taza.\nAñadir agua caliente o fría y remover bien.",
+  "points": "Café, crema vegetal y azúcar de caña ya dosificados\nCordyceps sinensis\nSe prepara caliente o frío — 20 sobres"
+ },
+ "morinzhi": {
+  "nom": "DXN Morinzhi",
+  "slug": "zumo-de-noni-morinzhi-dxn",
+  "accroche": "Un zumo de noni (Morinda citrifolia) suavizado con hibisco, para diluir en un vaso de agua.",
+  "description": "El Morinzhi se elabora a partir del fruto del noni, Morinda citrifolia, cuyo olor, muy marcado, se suaviza al añadir hibisco (Hibiscus sabdariffa). Se toma diluido: dos tapones en un vaso de agua o de zumo de fruta.\n\nLa botella de 285 ml se conserva en el frigorífico una vez abierta. Agitar bien antes de servir: el poso es natural.",
+  "format": "285 ml",
+  "composition": "Zumo de noni (Morinda citrifolia), extracto de hibisco (Hibiscus sabdariffa). Lista completa en la etiqueta.",
+  "usage": "Agitar bien antes de usar.\nDiluir 30 ml (dos tapones) en un vaso de agua o de zumo.\nConservar en el frigorífico una vez abierto.",
+  "points": "Zumo de noni, Morinda citrifolia\nSuavizado con hibisco\nPara diluir: dos tapones por vaso"
+ },
+ "roselle": {
+  "nom": "DXN Roselle Juice",
+  "slug": "zumo-de-hibisco-roselle-dxn",
+  "accroche": "Un concentrado acidulado de cálices de hibisco, para diluir en caliente o en frío.",
+  "description": "El Roselle Juice es un concentrado obtenido a partir de los cálices de hibisco (Hibiscus sabdariffa), la planta que también se conoce como bissap o karkadé. Su sabor es acidulado y refrescante.\n\nSe diluye en agua fría con hielo, en agua caliente como una infusión, o se añade a un té. La ficha de DXN sugiere también usarlo en la cocina, para una gelatina o un sorbete. Sin conservantes ni colorantes artificiales.",
+  "format": "285 ml",
+  "composition": "Extracto de cálices de hibisco (Hibiscus sabdariffa). Lista completa en la etiqueta.",
+  "usage": "Diluir la cantidad deseada en agua fría o caliente y remover.\nTambién se mezcla con un té o un zumo.",
+  "points": "Concentrado de cálices de hibisco\nSin conservantes ni colorantes artificiales\nSe toma caliente o frío, o se usa en la cocina"
+ },
+ "virgin-coconut-oil": {
+  "nom": "DXN Organic Virgin Coconut Oil (Bio)",
+  "slug": "aceite-de-coco-virgen-ecologico-dxn",
+  "accroche": "Un aceite de coco virgen procedente de agricultura ecológica, prensado en frío, para la cocina.",
+  "description": "Este aceite de coco virgen se extrae en frío de cocos frescos, sin refinar, y cuenta con certificación de agricultura ecológica. Es sólido por debajo de unos 24 °C y vuelve a ser líquido con el calor: es el comportamiento normal de un aceite de coco sin tratar.\n\nTarro de 500 ml, de uso alimentario: para cocinar, asar o aliñar. También se usa para el cuidado personal, unas gotas sobre la piel o las puntas del cabello.",
+  "format": "Tarro de 500 ml",
+  "composition": "100 % aceite de coco virgen ecológico, prensado en frío.",
+  "usage": "En la cocina: una o dos cucharadas soperas para cocinar o aliñar.\nPara el cuidado personal: una pequeña cantidad sobre la piel o el cabello, según se necesite.",
+  "points": "Aceite de coco virgen, prensado en frío\nProcedente de agricultura ecológica\nTarro de 500 ml, en la cocina y en el cuidado personal"
+ },
+ "white-coffee-zhino": {
+  "nom": "DXN White Coffee Zhino",
+  "slug": "cafe-blanco-zhino-dxn",
+  "accroche": "Un café blanco instantáneo, con crema vegetal y azúcar de caña, y extracto de Ganoderma lucidum.",
+  "description": "El White Coffee Zhino es la versión «café blanco» de la gama DXN: un café instantáneo redondo y de sabor lácteo, preparado con crema vegetal y azúcar de caña, al que se añade el extracto de Ganoderma lucidum.\n\nLa caja contiene 12 sobres de 28 g, un formato de taza grande. Se prepara con agua caliente en unos segundos.",
+  "format": "12 sobres × 28 g",
+  "composition": "Café instantáneo, crema vegetal, azúcar de caña, extracto de Ganoderma lucidum. Lista completa en el envase.",
   "usage": "Verter el contenido de un sobre en una taza.\nAñadir de 150 a 180 ml de agua caliente y remover.",
-  "points": "Café negro, sin azúcar ni crema en el sobre\nExtracto de Ganoderma lucidum, el reishi\nListo en segundos, un sobre por taza"
+  "points": "Café blanco: crema vegetal y azúcar de caña\nExtracto de Ganoderma lucidum\n12 sobres grandes de 28 g"
  },
- "spirulina-120": {
-  "nom": "DXN Spirulina — 120 comprimidos",
-  "slug": "espirulina-dxn-120-comprimidos",
-  "accroche": "Espirulina (Spirulina platensis) cultivada en estanque, en comprimidos de 250 mg — el frasco pequeño.",
-  "description": "La espirulina DXN es una microalga, Spirulina platensis, cultivada en estanque sin pesticidas ni herbicidas según DXN, y después secada y comprimida. Cada comprimido contiene 250 mg, con un mínimo de excipientes.\n\nEste frasco de 120 comprimidos es el formato para descubrirla; la misma espirulina existe en frasco de 500. Los comprimidos se tragan con agua o se mastican.",
-  "format": "120 comprimidos × 250 mg",
-  "composition": "Spirulina platensis, excipientes. Detalle en la etiqueta.",
-  "usage": "Seguir el modo de empleo impreso en el frasco.\nTragar con un vaso de agua o masticar.",
-  "points": "Spirulina platensis cultivada en estanque\nSin pesticidas ni herbicidas según DXN\n120 comprimidos de 250 mg, para tragar o masticar"
+ "cream-coffee": {
+  "nom": "DXN Cream Coffee",
+  "slug": "cafe-con-crema-dxn",
+  "accroche": "Un café soluble cremoso, café y crema vegetal, con extracto de Ganoderma lucidum.",
+  "description": "El Cream Coffee reúne café soluble y crema vegetal en un sobre de 14 g, con el extracto de Ganoderma lucidum común a toda la gama. Es el café «con leche» de DXN, para endulzar al gusto.\n\nLa caja contiene 20 sobres. Se prepara con agua caliente, y también se toma helado.",
+  "format": "20 sobres × 14 g",
+  "composition": "Café soluble, crema vegetal, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Verter el contenido de un sobre en una taza.\nAñadir de 150 a 180 ml de agua caliente y remover.",
+  "points": "Café soluble y crema vegetal\nExtracto de Ganoderma lucidum\n20 sobres de 14 g, para endulzar al gusto"
  },
- "kallow-argan-face-cream": {
-  "nom": "Kallow Argan & Grapeseed Oil Hydrating Face Cream",
-  "slug": "crema-facial-hidratante-argan-kallow",
-  "accroche": "Una crema facial hidratante con aceite de argán, aceite de pepita de uva y ácido hialurónico.",
-  "description": "Esta crema facial hidratante de textura ligera combina aceite de argán, aceite de pepita de uva, ácido hialurónico y vitamina E. Se aplica a diario en el rostro y el cuello, por la mañana o por la noche.\n\nTarro de 50 ml, referencia SC083. Es la crema «de diario» de la línea, más ligera que la Divine Touch. Etiqueta: 96 % de ingredientes de origen natural.",
-  "format": "50 ml",
-  "composition": "Contiene, entre otros, aceite de argán (Argania spinosa), aceite de pepita de uva (Vitis vinifera), ácido hialurónico y vitamina E. 96 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
-  "usage": "Aplicar sobre el rostro y el cuello limpios, por la mañana o por la noche.\nMasajear hasta su completa absorción.",
-  "points": "Argán, pepita de uva, ácido hialurónico\n96 % de ingredientes de origen natural (etiqueta)\nTarro de 50 ml, textura ligera"
+ "maca-vita": {
+  "nom": "DXN Maca Vita",
+  "slug": "bebida-maca-vita-dxn",
+  "accroche": "Una bebida instantánea de maca, ginseng y extractos vegetales, con Ganoderma lucidum.",
+  "description": "El Maca Vita es una bebida caliente instantánea, sin café, que combina maca, ginseng y extractos vegetales con el extracto de Ganoderma lucidum.\n\nLa caja contiene 20 sobres de 21 g. Un sobre por taza, con agua caliente.",
+  "format": "20 sobres × 21 g",
+  "composition": "Maca, ginseng, extractos vegetales, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Verter el contenido de un sobre en una taza.\nAñadir de 150 a 180 ml de agua caliente y remover.",
+  "points": "Maca, ginseng y extractos vegetales\nSin café\n20 sobres de 21 g"
+ },
+ "maca-cafe": {
+  "nom": "DXN Maca Cafe",
+  "slug": "cafe-con-maca-dxn",
+  "accroche": "Un café instantáneo enriquecido con maca y extractos vegetales.",
+  "description": "El Maca Cafe es un café instantáneo al que DXN añade maca, una raíz cultivada en los Andes, y extractos vegetales. El sabor sigue siendo el de un café, con un toque más suave.\n\nLa caja contiene 20 sobres de 21 g.",
+  "format": "20 sobres × 21 g",
+  "composition": "Café instantáneo, maca, extractos vegetales. Lista completa en el envase.",
+  "usage": "Verter el contenido de un sobre en una taza.\nAñadir de 150 a 180 ml de agua caliente y remover.",
+  "points": "Café instantáneo con maca\nExtractos vegetales\n20 sobres de 21 g"
+ },
+ "zhi-mocha": {
+  "nom": "DXN Zhi Mocha",
+  "slug": "cafe-zhi-mocha-dxn",
+  "accroche": "Una bebida instantánea sabor moca, café y cacao, con extracto de Ganoderma lucidum.",
+  "description": "El Zhi Mocha combina café y cacao en una bebida instantánea sabor moca, con el extracto de Ganoderma lucidum. Un sobre, agua caliente y listo.\n\nLa caja contiene 20 sobres de 21 g. El mismo producto existe en bolsa de 1 kg (Zhi Mocha MP).",
+  "format": "20 sobres × 21 g",
+  "composition": "Café instantáneo, cacao, crema vegetal, azúcar, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Verter el contenido de un sobre en una taza.\nAñadir de 150 a 180 ml de agua caliente y remover.",
+  "points": "Café y cacao, sabor moca\nExtracto de Ganoderma lucidum\n20 sobres de 21 g"
+ },
+ "zhi-mocha-mp": {
+  "nom": "DXN Zhi Mocha MP — 1 kg",
+  "slug": "cafe-zhi-mocha-dxn-1-kg",
+  "accroche": "El Zhi Mocha en formato económico de 1 kg, para dosificar con cuchara.",
+  "description": "La misma receta que el Zhi Mocha en sobres individuales —café, cacao y extracto de Ganoderma lucidum—, pero en bolsa de 1 kg, para que lo dosifiques tú.\n\nFormato pensado para un hogar que lo consume a diario. Se conserva bien cerrado, protegido de la humedad.",
+  "format": "Bolsa de 1 kg",
+  "composition": "Café instantáneo, cacao, crema vegetal, azúcar, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Poner unos 21 g (dos cucharadas soperas) en una taza.\nAñadir agua caliente y remover.",
+  "points": "La misma receta que el Zhi Mocha\nBolsa de 1 kg, para dosificar con cuchara\nUnas 48 tazas"
+ },
+ "zhi-cafe-classic": {
+  "nom": "DXN Zhi Cafe Classic",
+  "slug": "cafe-clasico-zhi-dxn",
+  "accroche": "El café clásico de DXN con Ganoderma lucidum, en 20 sobres de 20 g.",
+  "description": "El Zhi Cafe Classic es la receta «clásica» de la gama DXN: un café con extracto de Ganoderma lucidum, envasado en 20 sobres individuales de 20 g.\n\nEl catálogo de DXN lo describe como un café clásico; el detalle de la receta figura en el envase.",
+  "format": "20 sobres × 20 g",
+  "composition": "Café, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Verter el contenido de un sobre en una taza.\nAñadir de 150 a 180 ml de agua caliente y remover.",
+  "points": "La receta clásica de DXN\nExtracto de Ganoderma lucidum\n20 sobres de 20 g"
+ },
+ "cocozhi": {
+  "nom": "DXN Cocozhi",
+  "slug": "bebida-de-cacao-cocozhi-dxn",
+  "accroche": "Una bebida de cacao instantánea, con crema vegetal y azúcar de caña, y extracto de Ganoderma lucidum.",
+  "description": "El Cocozhi es la bebida de chocolate de DXN: cacao, crema vegetal y azúcar de caña, con el extracto de Ganoderma lucidum. Sin café, también es adecuada para los niños y para la merienda.\n\nLa caja contiene 20 sobres de 32 g. También existe en bolsa de 1 kg (Cocozhi MP).",
+  "format": "20 sobres × 32 g",
+  "composition": "Cacao, crema vegetal, azúcar de caña, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Verter un sobre en una taza.\nAñadir 200 ml de agua caliente o de leche y remover.",
+  "points": "Bebida de cacao, sin café\nCrema vegetal y azúcar de caña\n20 sobres de 32 g"
+ },
+ "cocozhi-mp": {
+  "nom": "DXN Cocozhi MP — 1 kg",
+  "slug": "bebida-de-cacao-cocozhi-dxn-1-kg",
+  "accroche": "El Cocozhi en formato económico de 1 kg, para dosificar con cuchara.",
+  "description": "La misma receta que el Cocozhi en sobres —cacao, crema vegetal, azúcar de caña y extracto de Ganoderma lucidum—, en bolsa de 1 kg para casa.\n\nSe conserva bien cerrado, protegido de la humedad.",
+  "format": "Bolsa de 1 kg",
+  "composition": "Cacao, crema vegetal, azúcar de caña, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Poner unos 32 g (tres cucharadas soperas) en una taza.\nAñadir agua caliente o leche y remover.",
+  "points": "La misma receta que el Cocozhi\nBolsa de 1 kg, para dosificar con cuchara\nUnas 31 tazas"
+ },
+ "lingzhi-black-coffee-mp": {
+  "nom": "DXN Lingzhi Black Coffee MP — 400 g",
+  "slug": "cafe-negro-lingzhi-dxn-400-g",
+  "accroche": "El Lingzhi Black Coffee en bolsa de 400 g, es decir, el equivalente a unas 90 tazas.",
+  "description": "El mismo café negro soluble sin azúcar, con extracto de Ganoderma lucidum, que el Lingzhi Black Coffee en sobres; aquí, en bolsa de 400 g para que lo dosifiques tú.\n\nUn sobre individual contiene 4,5 g: este formato equivale a casi 90. Se conserva bien cerrado, protegido de la humedad.",
+  "format": "Bolsa de 400 g",
+  "composition": "Café instantáneo, extracto de Ganoderma lucidum.",
+  "usage": "Poner unos 4,5 g (una cucharadita colmada) en una taza.\nAñadir de 150 a 180 ml de agua caliente y remover.",
+  "points": "Café negro, sin azúcar ni crema\nExtracto de Ganoderma lucidum\nBolsa de 400 g, unas 90 tazas"
+ },
+ "lingzhi-coffee-3-en-1-mp": {
+  "nom": "DXN Lingzhi Coffee 3 in 1 MP — 1 kg",
+  "slug": "cafe-3-en-1-lingzhi-dxn-1-kg",
+  "accroche": "El Lingzhi Coffee 3 in 1 en bolsa de 1 kg, para que lo dosifiques tú.",
+  "description": "La misma receta que el Lingzhi Coffee 3 in 1 —café, crema vegetal, azúcar de caña y extracto de Ganoderma lucidum—, en bolsa de 1 kg.\n\nUn sobre individual pesa 21 g: este formato equivale a casi 48. Se conserva bien cerrado, protegido de la humedad.",
+  "format": "Bolsa de 1 kg",
+  "composition": "Café soluble, crema vegetal, azúcar de caña, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Poner unos 21 g (dos cucharadas soperas) en una taza.\nAñadir agua caliente y remover.",
+  "points": "La misma receta que el Lingzhi Coffee 3 in 1\nBolsa de 1 kg, para dosificar con cuchara\nUnas 48 tazas"
+ },
+ "brook-coffee": {
+  "nom": "DXN Brook Coffee",
+  "slug": "cafe-molido-brook-dxn",
+  "accroche": "Un café molido con Ganoderma, para cafetera de filtro, de émbolo o italiana.",
+  "description": "El Brook Coffee es el único café molido de la gama: se prepara de forma tradicional, en cafetera de filtro, de émbolo o italiana, y no con agua caliente en la taza. Contiene extracto de Ganoderma lucidum.\n\nBolsa de 500 g. Conservar bien cerrada, protegida de la luz y de la humedad.",
+  "format": "Bolsa de 500 g",
+  "composition": "Café molido, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Dosificar como un café molido normal, según la cafetera.\nNo se disuelve en la taza.",
+  "points": "Café molido, preparación tradicional\nExtracto de Ganoderma lucidum\nBolsa de 500 g"
+ },
+ "nutrizhi": {
+  "nom": "DXN Nutrizhi",
+  "slug": "bebida-instantanea-nutrizhi-dxn",
+  "accroche": "Una bebida instantánea a base de ingredientes vegetales y Ganoderma, sin café.",
+  "description": "El Nutrizhi es una bebida caliente instantánea, sin café, elaborada con ingredientes vegetales y Ganoderma. Se toma en el desayuno o como tentempié.\n\nLa caja contiene 20 sobres de 30 g. Un sobre por taza, con agua caliente.",
+  "format": "20 sobres × 30 g",
+  "composition": "Ingredientes vegetales, Ganoderma. Lista completa en el envase.",
+  "usage": "Verter un sobre en una taza.\nAñadir 200 ml de agua caliente y remover.",
+  "points": "Bebida instantánea sin café\nIngredientes vegetales y Ganoderma\n20 sobres de 30 g"
+ },
+ "spirulina-cereal": {
+  "nom": "DXN Spirulina Cereal",
+  "slug": "cereales-con-espirulina-dxn",
+  "accroche": "Un desayuno instantáneo de cereales y espirulina, en sobres de 30 g.",
+  "description": "El Spirulina Cereal es un preparado instantáneo para el desayuno: cereales y espirulina, para reconstituir con agua caliente o con leche.\n\nLa caja contiene 30 sobres de 30 g, es decir, un mes de desayunos a razón de uno al día.",
+  "format": "30 sobres × 30 g",
+  "composition": "Cereales, espirulina (Spirulina platensis). Lista completa en el envase.",
+  "usage": "Verter un sobre en un cuenco.\nAñadir de 150 a 200 ml de agua caliente o de leche y remover.",
+  "points": "Cereales y espirulina\nDesayuno instantáneo\n30 sobres de 30 g"
+ },
+ "reishi-gano-tea": {
+  "nom": "DXN Reishi Gano Tea",
+  "slug": "te-reishi-gano-dxn",
+  "accroche": "Té en sobres con extracto de Ganoderma lucidum.",
+  "description": "El Reishi Gano Tea es un té en sobres para infusionar, al que DXN añade extracto de Ganoderma lucidum. Se toma caliente o helado, solo o con un poco de limón.\n\nLa caja contiene 20 sobres de 2 g.",
+  "format": "20 sobres × 2 g",
+  "composition": "Té, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Dejar infusionar un sobre en una taza de agua caliente de 3 a 5 minutos.\nSe toma caliente o frío.",
+  "points": "Té en sobres para infusionar\nExtracto de Ganoderma lucidum\n20 sobres de 2 g"
+ },
+ "spica-tea": {
+  "nom": "DXN Spica Tea",
+  "slug": "infusion-spica-dxn",
+  "accroche": "Una infusión de hierbas en sobres de 5 g.",
+  "description": "El Spica Tea es una infusión de hierbas en sobres, para tomar caliente o fría, a lo largo del día.\n\nLa caja contiene 20 sobres de 5 g. Las hierbas que lo componen figuran en el envase.",
+  "format": "20 sobres × 5 g",
+  "composition": "Mezcla de hierbas. Lista completa en el envase.",
+  "usage": "Dejar infusionar un sobre en una taza de agua caliente de 3 a 5 minutos.\nSe toma caliente o frío.",
+  "points": "Infusión de hierbas\nSe toma caliente o fría\n20 sobres de 5 g"
+ },
+ "zhi-tea": {
+  "nom": "DXN Zhi Tea",
+  "slug": "te-soluble-zhi-dxn",
+  "accroche": "Un té soluble con extracto de Ganoderma lucidum, en tarro de 100 g.",
+  "description": "El Zhi Tea es un té instantáneo: un polvo soluble, con extracto de Ganoderma lucidum, que se disuelve en agua caliente o fría sin infusionar.\n\nTarro de 100 g, para dosificar con cuchara.",
+  "format": "Tarro de 100 g",
+  "composition": "Té soluble, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Disolver una cucharadita en una taza de agua caliente o fría.\nRemover.",
+  "points": "Té soluble, sin infusionar\nExtracto de Ganoderma lucidum\nTarro de 100 g"
+ },
+ "sprudle": {
+  "nom": "DXN Sprudle",
+  "slug": "fideos-espirulina-sprudle-dxn",
+  "accroche": "Unos fideos instantáneos con espirulina, listos en tres minutos.",
+  "description": "Los Sprudle son unos fideos instantáneos cuya masa contiene espirulina, que les da un tono verde. Se preparan como unos fideos instantáneos normales, en tres minutos.\n\nEl paquete contiene 4 bolsas de 75 g, con su sazonador.",
+  "format": "4 bolsas × 75 g",
+  "composition": "Fideos (harina de trigo, espirulina), sobre de sazonador. Lista completa y alérgenos en el envase.",
+  "usage": "Cocer los fideos 3 minutos en 400 ml de agua hirviendo.\nAñadir el sazonador, remover y servir.",
+  "points": "Fideos instantáneos con espirulina\nListos en 3 minutos\n4 bolsas de 75 g"
+ },
+ "sprudle-tom-yam": {
+  "nom": "DXN Sprudle — Tom Yam",
+  "slug": "fideos-espirulina-sprudle-tom-yam-dxn",
+  "accroche": "Los fideos con espirulina Sprudle, sabor Tom Yam, acidulado y especiado.",
+  "description": "La misma masa con espirulina que los Sprudle originales, con un sazonador sabor Tom Yam, la sopa tailandesa acidulada y especiada con hierba limón.\n\nEl paquete contiene 4 bolsas de 85 g.",
+  "format": "4 bolsas × 85 g",
+  "composition": "Fideos (harina de trigo, espirulina), sobre de sazonador sabor Tom Yam. Lista completa y alérgenos en el envase.",
+  "usage": "Cocer los fideos 3 minutos en 400 ml de agua hirviendo.\nAñadir el sazonador, remover y servir.",
+  "points": "Fideos con espirulina, sabor Tom Yam\nAcidulado y especiado\n4 bolsas de 85 g"
+ },
+ "ococha-noodle": {
+  "nom": "DXN Ococha Noodle",
+  "slug": "fideos-instantaneos-ococha-dxn",
+  "accroche": "Unos fideos instantáneos, listos en tres minutos.",
+  "description": "Los Ococha Noodle son los fideos instantáneos de DXN, que se preparan en agua hirviendo en tres minutos, con su sobre de sazonador.\n\nEl paquete contiene 4 bolsas de 75 g.",
+  "format": "4 bolsas × 75 g",
+  "composition": "Fideos (harina de trigo), sobre de sazonador. Lista completa y alérgenos en el envase.",
+  "usage": "Cocer los fideos 3 minutos en 400 ml de agua hirviendo.\nAñadir el sazonador, remover y servir.",
+  "points": "Fideos instantáneos\nListos en 3 minutos\n4 bolsas de 75 g"
+ },
+ "apple-fermented-jam": {
+  "nom": "DXN Apple Fermented Jam",
+  "slug": "mermelada-de-manzana-fermentada-dxn",
+  "accroche": "Una mermelada de manzana fermentada, en sobres individuales de 15 g.",
+  "description": "La Apple Fermented Jam es una mermelada de manzana obtenida por fermentación, envasada en sobres individuales de 15 g. Práctica para llevar, se unta o se come tal cual.\n\nLa caja contiene 20 sobres.",
+  "format": "20 sobres × 15 g",
+  "composition": "Manzana fermentada, azúcar. Lista completa en el envase.",
+  "usage": "Abrir un sobre y consumir tal cual, o untar.\nUn sobre por ración.",
+  "points": "Mermelada de manzana fermentada\nSobres individuales para llevar\n20 sobres de 15 g"
+ },
+ "apple-enzyme-drink": {
+  "nom": "DXN Apple Enzyme Drink",
+  "slug": "bebida-de-manzana-fermentada-dxn",
+  "accroche": "Una bebida de manzana fermentada, en sticks individuales de 50 ml.",
+  "description": "La Apple Enzyme Drink es una bebida a base de manzana fermentada, en sticks de 50 ml listos para beber. Se toma sola o diluida en un vaso de agua.\n\nLa caja contiene 15 sticks.",
+  "format": "15 sticks × 50 ml",
+  "composition": "Zumo de manzana fermentado. Lista completa en el envase.",
+  "usage": "Beber un stick tal cual, o diluirlo en un vaso de agua.\nAgitar bien antes de usar.",
+  "points": "Bebida de manzana fermentada\nSticks listos para beber\n15 sticks de 50 ml"
+ },
+ "lemonzhi": {
+  "nom": "DXN Lemonzhi",
+  "slug": "bebida-de-limon-lemonzhi-dxn",
+  "accroche": "Una bebida instantánea de limón con extracto de Ganoderma lucidum, caliente o helada.",
+  "description": "El Lemonzhi es una bebida instantánea sabor limón, con extracto de Ganoderma lucidum. Se prepara tanto con agua caliente como con agua fría, con hielo.\n\nLa caja contiene 20 sobres de 22 g.",
+  "format": "20 sobres × 22 g",
+  "composition": "Azúcar, limón en polvo, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Verter un sobre en un vaso.\nAñadir 200 ml de agua caliente o fría y remover.",
+  "points": "Bebida sabor limón\nExtracto de Ganoderma lucidum\nCaliente o helada — 20 sobres"
+ },
+ "morinzhi-700": {
+  "nom": "DXN Morinzhi — 700 ml",
+  "slug": "zumo-de-noni-morinzhi-dxn-700-ml",
+  "accroche": "El zumo de noni Morinzhi en botella familiar de 700 ml.",
+  "description": "La misma preparación que el Morinzhi de 285 ml —zumo de noni, Morinda citrifolia, suavizado con hibisco—, en botella de 700 ml, para un consumo regular.\n\nSe toma diluido: dos tapones en un vaso de agua o de zumo. Agitar bien y conservar en el frigorífico una vez abierto.",
+  "format": "700 ml",
+  "composition": "Zumo de noni (Morinda citrifolia), extracto de hibisco (Hibiscus sabdariffa). Lista completa en la etiqueta.",
+  "usage": "Agitar bien antes de usar.\nDiluir 30 ml (dos tapones) en un vaso de agua o de zumo.\nConservar en el frigorífico una vez abierto.",
+  "points": "Zumo de noni, Morinda citrifolia\nSuavizado con hibisco\nBotella familiar de 700 ml"
+ },
+ "vinaigrette": {
+  "nom": "DXN Vinaigrette",
+  "slug": "vinagreta-dxn",
+  "accroche": "Una vinagreta con ingredientes naturales, en botella de 700 ml.",
+  "description": "La Vinaigrette DXN es un preparado a base de vinagre e ingredientes naturales, para aliñar ensaladas y verduras crudas.\n\nBotella de 700 ml. Agitar bien antes de usar; la lista de ingredientes figura en la etiqueta.",
+  "format": "700 ml",
+  "composition": "Vinagre, ingredientes naturales. Lista completa en la etiqueta.",
+  "usage": "Agitar bien antes de usar.\nVerter la cantidad deseada sobre la ensalada o las verduras crudas.",
+  "points": "A base de vinagre e ingredientes naturales\nPara ensaladas y verduras crudas\nBotella de 700 ml"
+ },
+ "himalayan-salt": {
+  "nom": "DXN Himalayan Salt",
+  "slug": "sal-rosa-himalaya-dxn",
+  "accroche": "Sal rosa del Himalaya para la cocina de todos los días, en tarro de 650 g.",
+  "description": "Sal rosa del Himalaya, para usar en la cocina como sal de mesa, al cocinar o para sazonar.\n\nTarro de 650 g; conservar en un lugar seco.",
+  "format": "Tarro de 650 g",
+  "composition": "Sal rosa del Himalaya.",
+  "usage": "Usar como sal de mesa, al cocinar o para sazonar.",
+  "points": "Sal rosa del Himalaya\nPara cocinar y sazonar\nTarro de 650 g"
+ },
+ "cordypine": {
+  "nom": "DXN Cordypine",
+  "slug": "bebida-de-pina-cordypine-dxn",
+  "accroche": "Una bebida a base de zumo de piña fermentado y Cordyceps sinensis, en botella de 700 ml.",
+  "description": "El Cordypine combina zumo de piña fermentado y Cordyceps sinensis, el hongo que DXN también ofrece en cápsulas y en polvo. Se toma diluido en un vaso de agua.\n\nBotella de 700 ml. Conservar en el frigorífico una vez abierto.",
+  "format": "700 ml",
+  "composition": "Zumo de piña fermentado, Cordyceps sinensis. Lista completa en la etiqueta.",
+  "usage": "Agitar bien antes de usar.\nDiluir 30 ml en un vaso de agua.\nConservar en el frigorífico una vez abierto.",
+  "points": "Zumo de piña fermentado\nCordyceps sinensis\nBotella de 700 ml, para diluir"
+ },
+ "zhi-mint-plus": {
+  "nom": "DXN Zhi Mint Plus",
+  "slug": "pastillas-de-menta-zhi-mint-plus-dxn",
+  "accroche": "Pastillas de menta con extracto de Ganoderma lucidum, en 12 sobres.",
+  "description": "El Zhi Mint Plus se presenta en pastillas de menta, con extracto de Ganoderma lucidum, que se dejan deshacer en la boca.\n\nLa caja contiene 12 sobres de 25 g.",
+  "format": "12 sobres × 25 g",
+  "composition": "Azúcar, menta, extracto de Ganoderma lucidum. Lista completa en el envase.",
+  "usage": "Dejar que una pastilla se deshaga en la boca.\nNo masticar.",
+  "points": "Pastillas de menta\nExtracto de Ganoderma lucidum\n12 sobres de 25 g"
  }
 }

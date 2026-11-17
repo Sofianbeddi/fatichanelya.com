@@ -634,7 +634,7 @@ défilée, 768 et 1440 ; accueil 390 et 320 ; page de catégorie ; WebKit et Fir
 
 Demande du gérant : « crée la version arabe du site, avec des typos propres, modernes, lisibles et
 adaptées à tous les navigateurs, pas les petites typos standard ». Mode d'emploi complet dans
-`traduction-arabe.md` ; ici, ce qui relève du design et les pièges.
+`traductions.md` ; ici, ce qui relève du design et les pièges.
 
 ### Typographie
 **Alexandria** pour les titres, prix, boutons, sur-titres et navigation ; **IBM Plex Sans Arabic**
@@ -752,3 +752,36 @@ du portrait répétait le même visage à côté du grand (retour du gérant sur
 alimente tous les boutons ; les pages légales le citent en clair et se republient depuis leurs
 sources. Marche à suivre et outils dans le journal du 13 nov. 2026
 (`tools/changer-numero-whatsapp.sh`, puis `tools/publier-pages-legales-en-ligne.sh`).
+
+## 1.9.0 — Espagnol, anglais et langue du visiteur (17 nov. 2026)
+
+Mode d'emploi complet : `_velix/traductions.md`. Ici, ce qui relève du design.
+
+**Carte de suggestion de langue** (`template-parts/components/langue-suggestion.php`, fin de
+`main.js`, section 19 bis de `main.css`).
+- **Rôle.** Sur une page intérieure, proposer la même page dans la langue du visiteur, jamais la lui
+  imposer : seul l'accueil redirige. La carte n'apparaît que si la traduction existe.
+- **Forme.** Carte bleu nuit `--navy`, rayon `--r-lg`, ombre `--shadow-float`, globe en
+  `--gold-light`, bouton or (`.button-gold`, texte `--navy-deep`) et croix ronde de 44 px. Grand
+  écran : en bas, côté début de ligne, 34rem au plus — le coin de fin appartient au bouton WhatsApp.
+  Mobile : pleine largeur à 16 px des bords, posée au-dessus du bouton WhatsApp, qui reste visible —
+  c'est le chemin de commande, une carte ignorée ne doit pas le masquer (première version qui le
+  cachait corrigée pendant la recette).
+- **Langue de la carte.** Écrite dans la langue proposée, pas dans celle de la page (`lang` et `dir`
+  posés par le script) : une carte arabe se lit de droite à gauche sur une page française.
+- **Mouvement.** Glissé de 14 px en 460 ms, 1,2 s après le chargement pour ne pas disputer l'affichage
+  de la page ; aucune animation avec `prefers-reduced-motion`. Aucun soulèvement au survol.
+- **Étagement.** `z-index` 45 : au-dessus du bouton WhatsApp (40), sous l'en-tête (50).
+- **Mémoire.** « Plus tard » (la croix) et le choix fait dans le menu de langues sont gardés dans le
+  stockage local (`fati-langue`) : la carte ne revient pas proposer une langue écartée.
+
+**Formations en arabe.** Ligne « Langue » ajoutée aux faits de la fiche (après « Format »), et
+« En arabe » en fin de pastille sur les cartes de la page Formations et des autres formations. Le
+rail de l'accueil est inchangé : le gérant y a voulu le moins de texte possible.
+
+**Prix en anglais.** « €26.40 » (symbole devant, point décimal) côté PHP (`fati_format_prix`) comme
+côté JavaScript (`Intl` en `en-GB`) ; virgule et symbole derrière dans les trois autres langues.
+
+**Pièges.** `0 €` était écrit en dur dans le tiroir du panier (corrigé : `fati_format_prix(0)`). Les
+liens internes des pages traduites reprenaient l'adresse française : le mu-plugin les réécrit à
+l'affichage vers la traduction de la langue courante (1.2.0), ce qui corrige aussi l'arabe.

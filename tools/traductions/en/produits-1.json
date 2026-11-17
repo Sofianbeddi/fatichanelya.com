@@ -1,32 +1,342 @@
 {
- "lingzhi-coffee": {
-  "nom": "DXN Lingzhi Black Coffee",
-  "slug": "dxn-lingzhi-black-coffee",
-  "accroche": "An instant black coffee with no added sugar, enriched with Ganoderma lucidum extract.",
-  "description": "Lingzhi Black Coffee is a soluble Brazilian arabica coffee to which DXN adds an extract of Ganoderma lucidum, the reishi mushroom. It is drunk black: no sugar or creamer in the sachet, just a straightforward coffee taste.\n\nIt is the simplest product in the coffee range for anyone who wants to keep their morning ritual without changing a thing: one sachet, hot water, done. Store at room temperature, away from moisture.",
-  "format": "20 sachets × 4.5 g",
-  "composition": "Instant coffee (Brazilian arabica), Ganoderma lucidum extract.",
+ "lingzhi-coffee-3-en-1": {
+  "nom": "DXN Lingzhi Coffee 3 in 1",
+  "slug": "dxn-lingzhi-coffee-3-in-1",
+  "accroche": "Coffee, creamer and sugar together in one sachet, with the Lingzhi range's Ganoderma extract.",
+  "description": "The mild version of Lingzhi coffee: the sachet already contains the creamer and sugar, for a milky coffee ready in thirty seconds. The Ganoderma lucidum extract is the same as in the Black Coffee; only the taste is rounder.\n\nNo artificial colouring, flavouring or preservative, according to the DXN product sheet. The creamer may contain a milk derivative: check the ingredients list on the packaging if you are sensitive to it.",
+  "format": "20 sachets × 21 g",
+  "composition": "Instant coffee, creamer, sugar, Ganoderma lucidum extract. Full details on the packaging.",
+  "usage": "Empty one sachet into a cup.\nAdd hot water and stir.",
+  "points": "Coffee, creamer and sugar already measured out\nGanoderma lucidum extract, the reishi\n20 individual sachets, easy to take with you"
+ },
+ "lions-mane-coffee": {
+  "nom": "DXN Lion's Mane Coffee",
+  "slug": "dxn-lions-mane-coffee",
+  "accroche": "An instant milky coffee made with powdered Hericium erinaceus, the lion's mane mushroom.",
+  "description": "Lion's Mane Coffee — “Premix Coffee with Lion's Mane Mushroom” on its box — combines instant coffee, creamer and sugar with powdered Hericium erinaceus mushroom, better known as lion's mane. The result is a mild, rounded coffee that can be made hot or cold.\n\nIt contains milk (sodium caseinate in the creamer): it is not suitable for people who are allergic to milk proteins.",
+  "format": "20 sachets × 21 g",
+  "composition": "Creamer (glucose syrup, palm oil, sodium caseinate — milk, stabilisers, emulsifiers, salt), sugar, instant coffee, lion's mane mushroom powder (Hericium erinaceus).\nAllergen: milk.",
+  "usage": "Empty one sachet (21 g) into a cup.\nAdd 150 to 180 ml of hot water, or cold water for an iced version. Stir.",
+  "points": "Lion's mane mushroom powder (Hericium erinaceus)\nMild coffee, with plant-based creamer and cane sugar\nMade hot or iced — 20 sachets"
+ },
+ "cordyceps-coffee": {
+  "nom": "DXN Cordyceps Coffee 3 in 1",
+  "slug": "dxn-cordyceps-coffee-3-in-1",
+  "accroche": "An instant coffee with plant-based creamer, cane sugar and Cordyceps sinensis.",
+  "description": "Cordyceps Coffee 3 in 1 is an instant coffee to which DXN adds Cordyceps sinensis, a mushroom long used in Asia. The plant-based creamer and cane sugar are already in the sachet: a milky coffee ready in seconds, hot or cold.\n\nThis is the version sold in Europe (DXN Spain 2026 catalogue). The box contains 20 sachets of 21 g.",
+  "format": "20 sachets × 21 g",
+  "composition": "Instant coffee, plant-based creamer, cane sugar, Cordyceps sinensis. Full list on the packaging.",
+  "usage": "Empty one sachet into a cup.\nAdd hot or cold water and stir well.",
+  "points": "Coffee, plant-based creamer and cane sugar already measured out\nCordyceps sinensis\nMade hot or cold — 20 sachets"
+ },
+ "morinzhi": {
+  "nom": "DXN Morinzhi",
+  "slug": "dxn-morinzhi",
+  "accroche": "A noni juice (Morinda citrifolia) mellowed with roselle, to be diluted in a glass of water.",
+  "description": "Morinzhi is made from the noni fruit, Morinda citrifolia, whose very strong smell is toned down by the addition of roselle, the hibiscus. It is drunk diluted: two capfuls in a glass of water or fruit juice.\n\nThe 285 ml bottle should be kept in the fridge once opened. Shake well before serving: the sediment is natural.",
+  "format": "285 ml",
+  "composition": "Noni juice (Morinda citrifolia), roselle extract (Hibiscus sabdariffa). Full list on the label.",
+  "usage": "Shake well before use.\nDilute 30 ml (two capfuls) in a glass of water or juice.\nKeep in the fridge once opened.",
+  "points": "Noni juice, Morinda citrifolia\nMellowed with roselle\nTo be diluted: two capfuls per glass"
+ },
+ "roselle": {
+  "nom": "DXN Roselle Juice",
+  "slug": "dxn-roselle-juice",
+  "accroche": "A tangy concentrate of hibiscus calyces, to be diluted in hot or cold water.",
+  "description": "Roselle Juice is a concentrate made from roselle calyces, the Hibiscus sabdariffa known as bissap or karkadé. It has a tangy, refreshing taste.\n\nIt can be diluted in cold water with ice, in hot water as an infusion, or added to tea. The DXN product sheet also suggests using it in cooking, for a jelly or a sorbet. No artificial preservatives or colourings.",
+  "format": "285 ml",
+  "composition": "Roselle calyx extract (Hibiscus sabdariffa). Full list on the label.",
+  "usage": "Dilute the desired amount in cold or hot water and stir.\nCan also be mixed into tea or juice.",
+  "points": "Hibiscus calyx concentrate\nNo artificial preservatives or colourings\nDrunk hot or cold, or used in cooking"
+ },
+ "virgin-coconut-oil": {
+  "nom": "DXN Organic Virgin Coconut Oil (Bio)",
+  "slug": "dxn-organic-virgin-coconut-oil-bio",
+  "accroche": "A cold-pressed virgin coconut oil from organic farming, for cooking.",
+  "description": "This virgin coconut oil is cold-extracted from fresh coconuts, unrefined, and certified as coming from organic farming. It is solid below about 24°C and turns liquid again when warm: this is the normal behaviour of an untreated coconut oil.\n\n500 ml jar, for food use: for cooking, roasting or seasoning. It can also be used for personal care, a few drops on the skin or the ends of the hair.",
+  "format": "500 ml jar",
+  "composition": "100% organic virgin coconut oil, cold-pressed.",
+  "usage": "In the kitchen: one to two tablespoons for cooking or seasoning.\nFor personal care: a small amount on the skin or hair, as needed.",
+  "points": "Virgin coconut oil, cold-pressed\nFrom organic farming\n500 ml jar, for the kitchen and for personal care"
+ },
+ "white-coffee-zhino": {
+  "nom": "DXN White Coffee Zhino",
+  "slug": "dxn-white-coffee-zhino",
+  "accroche": "An instant white coffee with plant-based creamer, cane sugar and Ganoderma lucidum extract.",
+  "description": "White Coffee Zhino is the “white coffee” version in the DXN range: a rounded, milky instant coffee made with plant-based creamer and cane sugar, to which Ganoderma lucidum extract is added.\n\nThe box contains 12 sachets of 28 g, a large cup size. It is made with hot water in seconds.",
+  "format": "12 sachets × 28 g",
+  "composition": "Instant coffee, plant-based creamer, cane sugar, Ganoderma lucidum extract. Full list on the packaging.",
   "usage": "Empty the contents of one sachet into a cup.\nAdd 150 to 180 ml of hot water and stir.",
-  "points": "Black coffee, no sugar or creamer in the sachet\nGanoderma lucidum extract, the reishi\nReady in seconds, one sachet per cup"
+  "points": "White coffee: plant-based creamer and cane sugar\nGanoderma lucidum extract\n12 large sachets of 28 g"
  },
- "spirulina-120": {
-  "nom": "DXN Spirulina — 120 tablets",
-  "slug": "dxn-spirulina-120-tablets",
-  "accroche": "Spirulina (Spirulina platensis) grown in ponds, in 250 mg tablets — the small bottle.",
-  "description": "DXN spirulina is a micro-alga, Spirulina platensis, grown in ponds without pesticides or herbicides according to DXN, then dried and pressed. Each tablet contains 250 mg, with a minimum of excipients.\n\nThis bottle of 120 tablets is the introductory size; the same spirulina comes in a bottle of 500. The tablets can be swallowed with water or chewed.",
-  "format": "120 tablets × 250 mg",
-  "composition": "Spirulina platensis, excipients. Details on the label.",
-  "usage": "Follow the directions for use printed on the bottle.\nSwallow with a glass of water or chew.",
-  "points": "Spirulina platensis grown in ponds\nNo pesticides or herbicides, according to DXN\n120 tablets of 250 mg, to swallow or chew"
+ "cream-coffee": {
+  "nom": "DXN Cream Coffee",
+  "slug": "dxn-cream-coffee",
+  "accroche": "A creamy instant coffee — coffee and plant-based creamer — with Ganoderma lucidum extract.",
+  "description": "Cream Coffee brings together instant coffee and plant-based creamer in a 14 g sachet, with the Ganoderma lucidum extract common to the range. It is DXN's “milky” coffee: you add the sugar yourself, to taste.\n\nThe box contains 20 sachets. It is made with hot water, and can also be drunk iced.",
+  "format": "20 sachets × 14 g",
+  "composition": "Instant coffee, plant-based creamer, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Empty the contents of one sachet into a cup.\nAdd 150 to 180 ml of hot water and stir.",
+  "points": "Instant coffee and plant-based creamer\nGanoderma lucidum extract\n20 sachets of 14 g, sweeten to taste"
  },
- "kallow-argan-face-cream": {
-  "nom": "Kallow Argan & Grapeseed Oil Hydrating Face Cream",
-  "slug": "kallow-argan-grapeseed-oil-hydrating-face-cream",
-  "accroche": "A hydrating face cream with argan oil, grapeseed oil and hyaluronic acid.",
-  "description": "This light-textured hydrating face cream combines argan oil, grapeseed oil, hyaluronic acid and vitamin E. It is applied daily to the face and neck, morning or evening.\n\n50 ml jar, reference SC083. It is the line's “everyday” cream, lighter than Divine Touch. Label: 96% ingredients of natural origin.",
-  "format": "50 ml",
-  "composition": "Contains, among other things, argan oil (Argania spinosa), grapeseed oil (Vitis vinifera), hyaluronic acid and vitamin E. 96% ingredients of natural origin according to the label. Full INCI list on the packaging.",
-  "usage": "Apply to clean face and neck, morning or evening.\nMassage in until absorbed.",
-  "points": "Argan, grapeseed, hyaluronic acid\n96% ingredients of natural origin (label)\n50 ml jar, light texture"
+ "maca-vita": {
+  "nom": "DXN Maca Vita",
+  "slug": "dxn-maca-vita",
+  "accroche": "An instant drink with maca, ginseng and plant extracts, with Ganoderma lucidum.",
+  "description": "Maca Vita is an instant hot drink, coffee-free, that combines maca, ginseng and plant extracts with Ganoderma lucidum extract.\n\nThe box contains 20 sachets of 21 g. One sachet per cup, with hot water.",
+  "format": "20 sachets × 21 g",
+  "composition": "Maca, ginseng, plant extracts, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Empty the contents of one sachet into a cup.\nAdd 150 to 180 ml of hot water and stir.",
+  "points": "Maca, ginseng and plant extracts\nCoffee-free\n20 sachets of 21 g"
+ },
+ "maca-cafe": {
+  "nom": "DXN Maca Cafe",
+  "slug": "dxn-maca-cafe",
+  "accroche": "An instant coffee enriched with maca and plant extracts.",
+  "description": "Maca Cafe is an instant coffee to which DXN adds maca, a root grown in the Andes, and plant extracts. It still tastes like coffee, with a softer note.\n\nThe box contains 20 sachets of 21 g.",
+  "format": "20 sachets × 21 g",
+  "composition": "Instant coffee, maca, plant extracts. Full list on the packaging.",
+  "usage": "Empty the contents of one sachet into a cup.\nAdd 150 to 180 ml of hot water and stir.",
+  "points": "Instant coffee with maca\nPlant extracts\n20 sachets of 21 g"
+ },
+ "zhi-mocha": {
+  "nom": "DXN Zhi Mocha",
+  "slug": "dxn-zhi-mocha",
+  "accroche": "A mocha-flavoured instant drink of coffee and cocoa, with Ganoderma lucidum extract.",
+  "description": "Zhi Mocha combines coffee and cocoa in a mocha-flavoured instant drink, with Ganoderma lucidum extract. One sachet, hot water, and it is ready.\n\nThe box contains 20 sachets of 21 g. The same product comes in a 1 kg bag (Zhi Mocha MP).",
+  "format": "20 sachets × 21 g",
+  "composition": "Instant coffee, cocoa, plant-based creamer, sugar, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Empty the contents of one sachet into a cup.\nAdd 150 to 180 ml of hot water and stir.",
+  "points": "Coffee and cocoa, mocha flavour\nGanoderma lucidum extract\n20 sachets of 21 g"
+ },
+ "zhi-mocha-mp": {
+  "nom": "DXN Zhi Mocha MP — 1 kg",
+  "slug": "dxn-zhi-mocha-mp-1-kg",
+  "accroche": "Zhi Mocha in a 1 kg economy size, to measure out with a spoon.",
+  "description": "The same recipe as Zhi Mocha in individual sachets — coffee, cocoa and Ganoderma lucidum extract — but in a 1 kg bag, to measure out yourself.\n\nA size designed for a household that drinks it every day. Keep tightly closed, away from moisture.",
+  "format": "1 kg bag",
+  "composition": "Instant coffee, cocoa, plant-based creamer, sugar, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Put about 21 g (two tablespoons) into a cup.\nAdd hot water and stir.",
+  "points": "Same recipe as Zhi Mocha\n1 kg bag, to measure out with a spoon\nAbout 48 cups"
+ },
+ "zhi-cafe-classic": {
+  "nom": "DXN Zhi Cafe Classic",
+  "slug": "dxn-zhi-cafe-classic",
+  "accroche": "DXN's classic coffee with Ganoderma lucidum, in 20 sachets of 20 g.",
+  "description": "Zhi Cafe Classic is the “classic” recipe in the DXN range: a coffee with Ganoderma lucidum extract, packed in 20 individual sachets of 20 g.\n\nThe DXN catalogue describes it as a classic coffee; the details of the recipe are on the packaging.",
+  "format": "20 sachets × 20 g",
+  "composition": "Coffee, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Empty the contents of one sachet into a cup.\nAdd 150 to 180 ml of hot water and stir.",
+  "points": "DXN's classic recipe\nGanoderma lucidum extract\n20 sachets of 20 g"
+ },
+ "cocozhi": {
+  "nom": "DXN Cocozhi",
+  "slug": "dxn-cocozhi",
+  "accroche": "An instant cocoa drink with plant-based creamer, cane sugar and Ganoderma lucidum extract.",
+  "description": "Cocozhi is DXN's chocolate drink: cocoa, plant-based creamer and cane sugar, with Ganoderma lucidum extract. As it contains no coffee, it is also suitable for children and for an afternoon snack.\n\nThe box contains 20 sachets of 32 g. Also available in a 1 kg bag (Cocozhi MP).",
+  "format": "20 sachets × 32 g",
+  "composition": "Cocoa, plant-based creamer, cane sugar, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Empty one sachet into a cup.\nAdd 200 ml of hot water or milk and stir.",
+  "points": "Cocoa drink, coffee-free\nPlant-based creamer and cane sugar\n20 sachets of 32 g"
+ },
+ "cocozhi-mp": {
+  "nom": "DXN Cocozhi MP — 1 kg",
+  "slug": "dxn-cocozhi-mp-1-kg",
+  "accroche": "Cocozhi in a 1 kg economy size, to measure out with a spoon.",
+  "description": "The same recipe as Cocozhi in sachets — cocoa, plant-based creamer, cane sugar and Ganoderma lucidum extract — in a 1 kg bag for the home.\n\nKeep tightly closed, away from moisture.",
+  "format": "1 kg bag",
+  "composition": "Cocoa, plant-based creamer, cane sugar, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Put about 32 g (three tablespoons) into a cup.\nAdd hot water or milk and stir.",
+  "points": "Same recipe as Cocozhi\n1 kg bag, to measure out with a spoon\nAbout 31 cups"
+ },
+ "lingzhi-black-coffee-mp": {
+  "nom": "DXN Lingzhi Black Coffee MP — 400 g",
+  "slug": "dxn-lingzhi-black-coffee-mp-400-g",
+  "accroche": "Lingzhi Black Coffee in a 400 g bag, the equivalent of about 90 cups.",
+  "description": "The same unsweetened instant black coffee with Ganoderma lucidum extract as Lingzhi Black Coffee in sachets — here in a 400 g bag to measure out yourself.\n\nAn individual sachet contains 4.5 g: this bag holds the equivalent of nearly 90. Keep tightly closed, away from moisture.",
+  "format": "400 g bag",
+  "composition": "Instant coffee, Ganoderma lucidum extract.",
+  "usage": "Put about 4.5 g (one heaped teaspoon) into a cup.\nAdd 150 to 180 ml of hot water and stir.",
+  "points": "Black coffee, no sugar or creamer\nGanoderma lucidum extract\n400 g bag, about 90 cups"
+ },
+ "lingzhi-coffee-3-en-1-mp": {
+  "nom": "DXN Lingzhi Coffee 3 in 1 MP — 1 kg",
+  "slug": "dxn-lingzhi-coffee-3-in-1-mp-1-kg",
+  "accroche": "Lingzhi Coffee 3 in 1 in a 1 kg bag, to measure out yourself.",
+  "description": "The same recipe as Lingzhi Coffee 3 in 1 — coffee, plant-based creamer, cane sugar and Ganoderma lucidum extract — in a 1 kg bag.\n\nAn individual sachet weighs 21 g: this bag holds the equivalent of nearly 48. Keep tightly closed, away from moisture.",
+  "format": "1 kg bag",
+  "composition": "Instant coffee, plant-based creamer, cane sugar, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Put about 21 g (two tablespoons) into a cup.\nAdd hot water and stir.",
+  "points": "Same recipe as Lingzhi Coffee 3 in 1\n1 kg bag, to measure out with a spoon\nAbout 48 cups"
+ },
+ "brook-coffee": {
+  "nom": "DXN Brook Coffee",
+  "slug": "dxn-brook-coffee",
+  "accroche": "A ground coffee with Ganoderma, for a filter coffee maker, cafetière or moka pot.",
+  "description": "Brook Coffee is the only ground coffee in the range: it is brewed the traditional way, in a filter coffee maker, cafetière or moka pot, and not with hot water in the cup. It contains Ganoderma lucidum extract.\n\n500 g bag. Keep tightly closed, away from light and moisture.",
+  "format": "500 g bag",
+  "composition": "Ground coffee, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Measure out as for any ground coffee, according to your coffee maker.\nDoes not dissolve in the cup.",
+  "points": "Ground coffee, traditional brewing\nGanoderma lucidum extract\n500 g bag"
+ },
+ "nutrizhi": {
+  "nom": "DXN Nutrizhi",
+  "slug": "dxn-nutrizhi",
+  "accroche": "An instant drink made from plant ingredients and Ganoderma, coffee-free.",
+  "description": "Nutrizhi is an instant hot drink, coffee-free, made of plant ingredients and Ganoderma. It can be had at breakfast or as a snack.\n\nThe box contains 20 sachets of 30 g. One sachet per cup, with hot water.",
+  "format": "20 sachets × 30 g",
+  "composition": "Plant ingredients, Ganoderma. Full list on the packaging.",
+  "usage": "Empty one sachet into a cup.\nAdd 200 ml of hot water and stir.",
+  "points": "Coffee-free instant drink\nPlant ingredients and Ganoderma\n20 sachets of 30 g"
+ },
+ "spirulina-cereal": {
+  "nom": "DXN Spirulina Cereal",
+  "slug": "dxn-spirulina-cereal",
+  "accroche": "An instant breakfast with cereals and spirulina, in 30 g sachets.",
+  "description": "Spirulina Cereal is an instant breakfast mix: cereals and spirulina, to make up with hot water or milk.\n\nThe box contains 30 sachets of 30 g, a month's worth of breakfasts at one a day.",
+  "format": "30 sachets × 30 g",
+  "composition": "Cereals, spirulina (Spirulina platensis). Full list on the packaging.",
+  "usage": "Empty one sachet into a bowl.\nAdd 150 to 200 ml of hot water or milk and stir.",
+  "points": "Cereals and spirulina\nInstant breakfast\n30 sachets of 30 g"
+ },
+ "reishi-gano-tea": {
+  "nom": "DXN Reishi Gano Tea",
+  "slug": "dxn-reishi-gano-tea",
+  "accroche": "Tea bags with Ganoderma lucidum extract.",
+  "description": "Reishi Gano Tea is a bagged tea for brewing, to which DXN adds Ganoderma lucidum extract. It is drunk hot or iced, plain or with a little lemon.\n\nThe box contains 20 tea bags of 2 g.",
+  "format": "20 tea bags × 2 g",
+  "composition": "Tea, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Steep one tea bag in a cup of hot water for 3 to 5 minutes.\nCan be drunk hot or cold.",
+  "points": "Tea bags for brewing\nGanoderma lucidum extract\n20 tea bags of 2 g"
+ },
+ "spica-tea": {
+  "nom": "DXN Spica Tea",
+  "slug": "dxn-spica-tea",
+  "accroche": "A herbal infusion in 5 g tea bags.",
+  "description": "Spica Tea is a herbal infusion in tea bags, to drink hot or cold, throughout the day.\n\nThe box contains 20 tea bags of 5 g. The herbs it is made from are listed on the packaging.",
+  "format": "20 tea bags × 5 g",
+  "composition": "Herbal blend. Full list on the packaging.",
+  "usage": "Steep one tea bag in a cup of hot water for 3 to 5 minutes.\nCan be drunk hot or cold.",
+  "points": "Herbal infusion\nDrink hot or cold\n20 tea bags of 5 g"
+ },
+ "zhi-tea": {
+  "nom": "DXN Zhi Tea",
+  "slug": "dxn-zhi-tea",
+  "accroche": "An instant tea with Ganoderma lucidum extract, in a 100 g jar.",
+  "description": "Zhi Tea is an instant tea: a soluble powder with Ganoderma lucidum extract that dissolves in hot or cold water, with no steeping.\n\n100 g jar, to measure out with a spoon.",
+  "format": "100 g jar",
+  "composition": "Instant tea, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Dissolve one teaspoon in a cup of hot or cold water.\nStir.",
+  "points": "Instant tea, no steeping\nGanoderma lucidum extract\n100 g jar"
+ },
+ "sprudle": {
+  "nom": "DXN Sprudle",
+  "slug": "dxn-sprudle",
+  "accroche": "Instant noodles with spirulina, ready in three minutes.",
+  "description": "Sprudle are instant noodles whose dough contains spirulina, which gives them a green tint. They are prepared like ordinary instant noodles, in three minutes.\n\nThe pack contains 4 packets of 75 g, with their seasoning.",
+  "format": "4 packets × 75 g",
+  "composition": "Noodles (wheat flour, spirulina), seasoning sachet. Full list and allergens on the packaging.",
+  "usage": "Cook the noodles for 3 minutes in 400 ml of boiling water.\nAdd the seasoning, stir and serve.",
+  "points": "Instant noodles with spirulina\nReady in 3 minutes\n4 packets of 75 g"
+ },
+ "sprudle-tom-yam": {
+  "nom": "DXN Sprudle — Tom Yam",
+  "slug": "dxn-sprudle-tom-yam",
+  "accroche": "Sprudle spirulina noodles, Tom Yam flavour, tangy and spicy.",
+  "description": "The same spirulina dough as plain Sprudle, with a seasoning that tastes of Tom Yam, the tangy, spicy Thai lemongrass soup.\n\nThe pack contains 4 packets of 85 g.",
+  "format": "4 packets × 85 g",
+  "composition": "Noodles (wheat flour, spirulina), Tom Yam flavour seasoning sachet. Full list and allergens on the packaging.",
+  "usage": "Cook the noodles for 3 minutes in 400 ml of boiling water.\nAdd the seasoning, stir and serve.",
+  "points": "Spirulina noodles, Tom Yam flavour\nTangy and spicy\n4 packets of 85 g"
+ },
+ "ococha-noodle": {
+  "nom": "DXN Ococha Noodle",
+  "slug": "dxn-ococha-noodle",
+  "accroche": "Instant noodles, ready in three minutes.",
+  "description": "Ococha Noodle are DXN's instant noodles, cooked in boiling water in three minutes, with their seasoning sachet.\n\nThe pack contains 4 packets of 75 g.",
+  "format": "4 packets × 75 g",
+  "composition": "Noodles (wheat flour), seasoning sachet. Full list and allergens on the packaging.",
+  "usage": "Cook the noodles for 3 minutes in 400 ml of boiling water.\nAdd the seasoning, stir and serve.",
+  "points": "Instant noodles\nReady in 3 minutes\n4 packets of 75 g"
+ },
+ "apple-fermented-jam": {
+  "nom": "DXN Apple Fermented Jam",
+  "slug": "dxn-apple-fermented-jam",
+  "accroche": "A fermented apple jam, in individual 15 g sachets.",
+  "description": "Apple Fermented Jam is an apple jam made by fermentation, packed in individual 15 g sachets. Handy to take with you, it can be spread or eaten as it is.\n\nThe box contains 20 sachets.",
+  "format": "20 sachets × 15 g",
+  "composition": "Fermented apple, sugar. Full list on the packaging.",
+  "usage": "Open one sachet and eat it as it is, or spread it.\nOne sachet per serving.",
+  "points": "Fermented apple jam\nIndividual sachets to take with you\n20 sachets of 15 g"
+ },
+ "apple-enzyme-drink": {
+  "nom": "DXN Apple Enzyme Drink",
+  "slug": "dxn-apple-enzyme-drink",
+  "accroche": "A fermented apple drink, in individual 50 ml sticks.",
+  "description": "Apple Enzyme Drink is a drink made from fermented apple, in ready-to-drink 50 ml sticks. It can be drunk neat or diluted in a glass of water.\n\nThe box contains 15 sticks.",
+  "format": "15 sticks × 50 ml",
+  "composition": "Fermented apple juice. Full list on the packaging.",
+  "usage": "Drink one stick neat, or dilute it in a glass of water.\nShake well before use.",
+  "points": "Fermented apple drink\nReady-to-drink sticks\n15 sticks of 50 ml"
+ },
+ "lemonzhi": {
+  "nom": "DXN Lemonzhi",
+  "slug": "dxn-lemonzhi",
+  "accroche": "An instant lemon drink with Ganoderma lucidum extract, hot or iced.",
+  "description": "Lemonzhi is a lemon-flavoured instant drink with Ganoderma lucidum extract. It can be made with hot water or with cold water and ice.\n\nThe box contains 20 sachets of 22 g.",
+  "format": "20 sachets × 22 g",
+  "composition": "Sugar, lemon powder, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Empty one sachet into a glass.\nAdd 200 ml of hot or cold water and stir.",
+  "points": "Lemon-flavoured drink\nGanoderma lucidum extract\nHot or iced — 20 sachets"
+ },
+ "morinzhi-700": {
+  "nom": "DXN Morinzhi — 700 ml",
+  "slug": "dxn-morinzhi-700-ml",
+  "accroche": "Morinzhi noni juice in a 700 ml family-size bottle.",
+  "description": "The same preparation as the 285 ml Morinzhi — noni juice, Morinda citrifolia, mellowed with roselle — in a 700 ml bottle, for regular use.\n\nIt is drunk diluted: two capfuls in a glass of water or juice. Shake well; keep in the fridge once opened.",
+  "format": "700 ml",
+  "composition": "Noni juice (Morinda citrifolia), roselle extract (Hibiscus sabdariffa). Full list on the label.",
+  "usage": "Shake well before use.\nDilute 30 ml (two capfuls) in a glass of water or juice.\nKeep in the fridge once opened.",
+  "points": "Noni juice, Morinda citrifolia\nMellowed with roselle\n700 ml family-size bottle"
+ },
+ "vinaigrette": {
+  "nom": "DXN Vinaigrette",
+  "slug": "dxn-vinaigrette",
+  "accroche": "A vinaigrette made with natural ingredients, in a 700 ml bottle.",
+  "description": "DXN Vinaigrette is a dressing made from vinegar and natural ingredients, for seasoning salads and raw vegetables.\n\n700 ml bottle. Shake well before use; the list of ingredients is on the label.",
+  "format": "700 ml",
+  "composition": "Vinegar, natural ingredients. Full list on the label.",
+  "usage": "Shake well before use.\nPour the desired amount over the salad or raw vegetables.",
+  "points": "Made from vinegar and natural ingredients\nFor salads and raw vegetables\n700 ml bottle"
+ },
+ "himalayan-salt": {
+  "nom": "DXN Himalayan Salt",
+  "slug": "dxn-himalayan-salt",
+  "accroche": "Pink Himalayan salt for everyday cooking, in a 650 g jar.",
+  "description": "Pink Himalayan salt, to use in the kitchen like table salt, during cooking or for seasoning.\n\n650 g jar, keep in a dry place.",
+  "format": "650 g jar",
+  "composition": "Pink Himalayan salt.",
+  "usage": "Use like table salt, during cooking or for seasoning.",
+  "points": "Pink Himalayan salt\nCooking and seasoning\n650 g jar"
+ },
+ "cordypine": {
+  "nom": "DXN Cordypine",
+  "slug": "dxn-cordypine",
+  "accroche": "A drink made from fermented pineapple juice and Cordyceps sinensis, in a 700 ml bottle.",
+  "description": "Cordypine combines fermented pineapple juice and Cordyceps sinensis, the mushroom DXN also offers in capsules and powder. It is drunk diluted in a glass of water.\n\n700 ml bottle. Keep in the fridge once opened.",
+  "format": "700 ml",
+  "composition": "Fermented pineapple juice, Cordyceps sinensis. Full list on the label.",
+  "usage": "Shake well before use.\nDilute 30 ml in a glass of water.\nKeep in the fridge once opened.",
+  "points": "Fermented pineapple juice\nCordyceps sinensis\n700 ml bottle, to be diluted"
+ },
+ "zhi-mint-plus": {
+  "nom": "DXN Zhi Mint Plus",
+  "slug": "dxn-zhi-mint-plus",
+  "accroche": "Mint pastilles with Ganoderma lucidum extract, in 12 sachets.",
+  "description": "Zhi Mint Plus comes as mint pastilles with Ganoderma lucidum extract, to be left to melt in the mouth.\n\nThe box contains 12 sachets of 25 g.",
+  "format": "12 sachets × 25 g",
+  "composition": "Sugar, mint, Ganoderma lucidum extract. Full list on the packaging.",
+  "usage": "Let one pastille melt in your mouth.\nDo not chew.",
+  "points": "Mint pastilles\nGanoderma lucidum extract\n12 sachets of 25 g"
  }
 }

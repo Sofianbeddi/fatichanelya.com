@@ -855,4 +855,68 @@
     });
     $$('.footer-actions, .footer-bottom').forEach((el) => veille.observe(el));
   }
+
+  /* ---------- Langue du visiteur (1.9.0) ----------
+     L'accueil est redirigé par Polylang selon le navigateur ; les pages intérieures ne le sont
+     jamais (lien partagé, robots). Ici, une carte propose la même page dans la langue du
+     visiteur, si elle existe (balises `link rel="alternate" hreflang` posées par Polylang).
+     Ordre : la langue choisie dans le menu (mémorisée), sinon la première langue du navigateur
+     que le site possède, sinon l'anglais. « Plus tard » mémorise la langue de la page : la carte
+     ne revient plus. Les textes sont écrits dans la langue proposée, la seule que le visiteur
+     lit à coup sûr. Stockage local seulement (aucun cookie), mentionné dans la politique de
+     confidentialité ; s'il est bloqué, la carte reste possible et ne se souvient de rien. */
+  const CLE_LANGUE = 'fati-langue';
+  const lireLangue = () => { try { return localStorage.getItem(CLE_LANGUE); } catch (e) { return null; } };
+  const retenirLangue = (code) => { try { localStorage.setItem(CLE_LANGUE, code); } catch (e) { /* stockage bloqué */ } };
+  $$('.lang-menu a[hreflang], .footer-lang a[hreflang]').forEach((a) => {
+    a.addEventListener('click', () => retenirLangue(a.getAttribute('hreflang').slice(0, 2).toLowerCase()));
+  });
+
+  const suggestion = $('#langue-suggestion');
+  if (suggestion) {
+    const PROPOSITION = {
+      fr: { texte: 'Cette page existe aussi en français.', voir: 'Voir en français', fermer: 'Plus tard', nom: 'Langue' },
+      es: { texte: 'Esta página también está en español.', voir: 'Ver en español', fermer: 'Ahora no', nom: 'Idioma' },
+      en: { texte: 'This page is also available in English.', voir: 'View in English', fermer: 'Not now', nom: 'Language' },
+      ar: { texte: 'هذه الصفحة متوفرة أيضاً بالعربية.', voir: 'عرض بالعربية', fermer: 'لاحقاً', nom: 'اللغة', dir: 'rtl' },
+    };
+    const courante = (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase();
+    const versions = new Map($$('link[rel="alternate"][hreflang]')
+      .filter((l) => l.hreflang !== 'x-default')
+      .map((l) => [l.hreflang.slice(0, 2).toLowerCase(), l.href]));
+    let cible = lireLangue();
+    if (!cible) {
+      const prefs = ((navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''])
+        .map((l) => String(l).slice(0, 2).toLowerCase()).filter(Boolean);
+      cible = prefs.find((l) => versions.has(l)) || (prefs.length ? 'en' : null);
+    }
+    const t = cible && PROPOSITION[cible];
+    if (t && cible !== courante && versions.has(cible)) {
+      // La langue vaut pour toute la carte ; le sens de lecture seulement pour ses textes : la
+      // carte garde la position et l'ordre de la page (sur une page arabe, elle reste du côté
+      // opposé au bouton WhatsApp, même quand elle propose l'anglais).
+      suggestion.lang = cible;
+      $$('.langue-suggestion-texte, [data-voir]', suggestion).forEach((el) => { el.dir = t.dir || 'ltr'; });
+      suggestion.setAttribute('aria-label', t.nom);
+      $('[data-texte]', suggestion).textContent = t.texte;
+      const voir = $('[data-voir]', suggestion);
+      voir.textContent = t.voir;
+      voir.href = versions.get(cible);
+      voir.hreflang = cible;
+      voir.addEventListener('click', () => retenirLangue(cible));
+      const fermer = $('[data-fermer]', suggestion);
+      fermer.setAttribute('aria-label', t.fermer);
+      fermer.title = t.fermer;
+      fermer.addEventListener('click', () => {
+        retenirLangue(courante);
+        suggestion.hidden = true;
+        document.body.classList.remove('has-langue-suggestion');
+      });
+      // Après le premier affichage : la carte ne dispute pas le chargement de la page.
+      setTimeout(() => {
+        suggestion.hidden = false;
+        document.body.classList.add('has-langue-suggestion');
+      }, reduit ? 0 : 1200);
+    }
+  }
 })();

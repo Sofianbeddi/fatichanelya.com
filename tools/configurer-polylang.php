@@ -7,7 +7,7 @@
  * Idempotent. Crée les langues « fr » (défaut), « ar » (RTL), « es » (es_ES)
  * et « en » (en_GB) si elles manquent — dans cet ordre, qui est celui du menu de
  * langues ; une langue existante n'est jamais modifiée —, pose les réglages (adresses en /ar/, français sans préfixe, pas de
- * redirection selon le navigateur, médias non traduits, vignette / gabarit /
+ * redirection selon le navigateur sur l'accueil seulement — 1.9.0 —, médias non traduits, vignette / gabarit /
  * ordre synchronisés entre traductions), rattache au français tout contenu
  * sans langue, puis régénère les permaliens. Les contenus arabes se créent
  * ensuite avec tools/importer-traductions.php <langue>.
@@ -42,7 +42,7 @@ $reglages = array(
 	'force_lang'    => 1,      // /ar/ dans l'adresse
 	'hide_default'  => true,   // le français sans préfixe
 	'rewrite'       => true,   // /ar/ et non /language/ar/
-	'browser'       => false,  // pas de redirection selon la langue du navigateur
+	'browser'       => true,   // 1.9.0 : l'accueil suit la langue du navigateur (pages intérieures jamais)
 	// true : l'accueil arabe est /ar/ (et non /ar/الرئيسية/, le permalien de la page traduite).
 	'redirect_lang' => true,
 	'media_support' => false,

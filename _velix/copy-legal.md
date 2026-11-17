@@ -199,7 +199,7 @@ campagne publicitaire, en même temps que la pose du bandeau de consentement. Ma
 
 <p>Un cookie est un petit fichier déposé sur votre appareil par un site.</p>
 
-<p><strong>Aujourd'hui, ce site n'utilise aucun cookie de mesure d'audience ni de publicité.</strong> Seuls sont utilisés les cookies strictement nécessaires à son fonctionnement — par exemple pour garder en mémoire la sélection de produits que vous composez pendant votre visite. Ceux-là ne demandent pas votre consentement, parce que sans eux le site ne marche pas.</p>
+<p><strong>Aujourd'hui, ce site n'utilise aucun cookie de mesure d'audience ni de publicité.</strong> Seuls sont utilisés les cookies et le stockage du navigateur strictement nécessaires à son fonctionnement : ils gardent en mémoire la sélection de produits que vous composez pendant votre visite, et la langue dans laquelle vous consultez le site (cookie « pll_language », conservé un an). Ceux-là ne demandent pas votre consentement, parce que sans eux le site ne marche pas.</p>
 
 <h2>Qui d'autre voit vos données</h2>
 
@@ -401,7 +401,7 @@ préféré, le décider **avant** publication — pas de changement d'URL après
 <p>Voici comment cela se passe :</p>
 
 <ol>
-  <li>Vous composez votre sélection sur le site. Le bouton « Ma sélection » garde vos produits en mémoire pendant votre visite.</li>
+  <li>Vous composez votre sélection sur le site. Le bouton « Panier » garde vos produits en mémoire pendant votre visite.</li>
   <li>Vous m'envoyez cette sélection sur WhatsApp, en un clic. Le message est prérempli, vous pouvez le modifier.</li>
   <li>Je vous confirme la disponibilité, le montant total et les frais de livraison pour votre adresse.</li>
   <li>Vous confirmez, ou non. <strong>Rien n'est engagé tant que vous n'avez pas confirmé.</strong></li>
