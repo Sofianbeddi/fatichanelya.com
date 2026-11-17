@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 """
-Génère wp-content/themes/fatichanelya/languages/ar.po (puis le .mo) à partir des
-chaînes du thème et du mu-plugin et du dictionnaire ci-dessous.
+Génère wp-content/themes/fatichanelya/languages/ar.po à partir des chaînes du thème et du
+mu-plugin et du dictionnaire ci-dessous (moteur commun : tools/traductions/po.py).
 
     python3 tools/traductions/ar/chaines.py && wp i18n make-mo wp-content/themes/fatichanelya/languages/ar.po
 
-Les chaînes absentes du dictionnaire (libellés d'administration, en-tête du
-thème, palette de l'éditeur) restent en français et sont listées en sortie.
+Les chaînes absentes du dictionnaire (libellés d'administration, en-tête du thème, palette de
+l'éditeur) restent en français et sont listées en sortie. Ce dictionnaire sert de référence aux
+autres langues : toute chaîne traduite ici doit l'être en espagnol et en anglais.
 Formes plurielles de l'arabe : six (0, 1, 2, 3-10, 11-99, autres).
 """
-import re, sys, pathlib, subprocess, tempfile
-F = pathlib.Path(__file__).resolve().parents[3]
-S = pathlib.Path(tempfile.mkdtemp())
-for dossier, nom in (("wp-content/themes/fatichanelya", "theme.pot"), ("wp-content/mu-plugins", "core.pot")):
-    subprocess.run(["wp", "i18n", "make-pot", str(F / dossier), str(S / nom), "--domain=fatichanelya"], cwd=str(F), check=True, capture_output=True)
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+from po import generer
 
 T = {
 "Erreur 404": "خطأ 404",
@@ -242,62 +241,15 @@ T = {
 "Programme précédent": "البرنامج السابق",
 "Programme suivant": "البرنامج التالي",
 "Programmes de formation": "برامج التدريب",
+# thème 1.9.0 : langue des formations
+"Langue": "اللغة",
+"Arabe": "العربية",
+"En arabe": "بالعربية",
 # mu-plugin, côté public
 "Entrepreneure, créatrice et mentore": "رائدة أعمال، صانعة محتوى ومرشدة",
 "Produits": "المنتجات",
 "Catégories de produit": "فئات المنتجات",
 }
 
-def lire_pot(chemin):
-    s = chemin.read_text(encoding='utf-8')
-    entrees = []
-    for bloc in s.split('\n\n'):
-        m = re.search(r'^msgid "(.*)"$', bloc, re.M)
-        if not m or m.group(1) == '': continue
-        ctx = re.search(r'^msgctxt "(.*)"$', bloc, re.M)
-        pl = re.search(r'^msgid_plural "(.*)"$', bloc, re.M)
-        comm = '\n'.join(l for l in bloc.splitlines() if l.startswith('#'))
-        entrees.append((ctx.group(1) if ctx else None, m.group(1), pl.group(1) if pl else None, comm))
-    return entrees
-
-def de(s):  # décoder les échappements du PO
-    return s.encode().decode('unicode_escape').encode('latin-1').decode('utf-8') if '\\' in s else s
-def enc(s):
-    return s.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n')
-
-vus = set(); out = []; manquantes = []
-for pot in (S / 'theme.pot', S / 'core.pot'):
-    for ctx, mid, pl, comm in lire_pot(pot):
-        cle = (ctx, mid)
-        if cle in vus: continue
-        vus.add(cle)
-        src = de(mid)
-        tr = T.get(src)
-        if tr is None:
-            manquantes.append(src); continue
-        bloc = [comm] if comm else []
-        if ctx: bloc.append(f'msgctxt "{ctx}"')
-        bloc.append(f'msgid "{mid}"')
-        if pl:
-            bloc.append(f'msgid_plural "{pl}"')
-            formes = tr if isinstance(tr, list) else [tr] * 6
-            for i, f in enumerate(formes): bloc.append(f'msgstr[{i}] "{enc(f)}"')
-        else:
-            bloc.append(f'msgstr "{enc(tr if isinstance(tr, str) else tr[0])}"')
-        out.append('\n'.join(bloc))
-
-entete = '''msgid ""
-msgstr ""
-"Project-Id-Version: Fatichanelya 1.8.0\\n"
-"Language: ar\\n"
-"MIME-Version: 1.0\\n"
-"Content-Type: text/plain; charset=UTF-8\\n"
-"Content-Transfer-Encoding: 8bit\\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\\n"
-"X-Generator: tools/traductions/ar (chaines.py)\\n"
-'''
-dest = F / 'wp-content/themes/fatichanelya/languages/ar.po'
-dest.parent.mkdir(exist_ok=True)
-dest.write_text(entete + '\n' + '\n\n'.join(out) + '\n', encoding='utf-8')
-print('traduites', len(out), '| non traduites (admin ou en-tête) :', len(manquantes))
-for m in manquantes: print('   -', m[:70])
+if __name__ == '__main__':
+    generer(T, 'ar', 'ar', 6, '(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5)')

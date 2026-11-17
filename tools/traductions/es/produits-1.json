@@ -1,0 +1,32 @@
+{
+ "lingzhi-coffee": {
+  "nom": "DXN Lingzhi Black Coffee",
+  "slug": "cafe-negro-lingzhi-dxn",
+  "accroche": "Un café negro instantáneo, sin azúcar añadido, enriquecido con extracto de Ganoderma lucidum.",
+  "description": "El Lingzhi Black Coffee es un café soluble de arábica brasileño al que DXN añade extracto de Ganoderma lucidum, el hongo reishi. Se toma solo: sin azúcar ni crema en el sobre, con un sabor a café sin rodeos.\n\nEs la referencia más sencilla de la gama de cafés para quien quiere mantener su rutina de la mañana sin cambiar nada: un sobre, agua caliente y listo. Se conserva a temperatura ambiente, protegido de la humedad.",
+  "format": "20 sobres × 4,5 g",
+  "composition": "Café instantáneo (arábica de Brasil), extracto de Ganoderma lucidum.",
+  "usage": "Verter el contenido de un sobre en una taza.\nAñadir de 150 a 180 ml de agua caliente y remover.",
+  "points": "Café negro, sin azúcar ni crema en el sobre\nExtracto de Ganoderma lucidum, el reishi\nListo en segundos, un sobre por taza"
+ },
+ "spirulina-120": {
+  "nom": "DXN Spirulina — 120 comprimidos",
+  "slug": "espirulina-dxn-120-comprimidos",
+  "accroche": "Espirulina (Spirulina platensis) cultivada en estanque, en comprimidos de 250 mg — el frasco pequeño.",
+  "description": "La espirulina DXN es una microalga, Spirulina platensis, cultivada en estanque sin pesticidas ni herbicidas según DXN, y después secada y comprimida. Cada comprimido contiene 250 mg, con un mínimo de excipientes.\n\nEste frasco de 120 comprimidos es el formato para descubrirla; la misma espirulina existe en frasco de 500. Los comprimidos se tragan con agua o se mastican.",
+  "format": "120 comprimidos × 250 mg",
+  "composition": "Spirulina platensis, excipientes. Detalle en la etiqueta.",
+  "usage": "Seguir el modo de empleo impreso en el frasco.\nTragar con un vaso de agua o masticar.",
+  "points": "Spirulina platensis cultivada en estanque\nSin pesticidas ni herbicidas según DXN\n120 comprimidos de 250 mg, para tragar o masticar"
+ },
+ "kallow-argan-face-cream": {
+  "nom": "Kallow Argan & Grapeseed Oil Hydrating Face Cream",
+  "slug": "crema-facial-hidratante-argan-kallow",
+  "accroche": "Una crema facial hidratante con aceite de argán, aceite de pepita de uva y ácido hialurónico.",
+  "description": "Esta crema facial hidratante de textura ligera combina aceite de argán, aceite de pepita de uva, ácido hialurónico y vitamina E. Se aplica a diario en el rostro y el cuello, por la mañana o por la noche.\n\nTarro de 50 ml, referencia SC083. Es la crema «de diario» de la línea, más ligera que la Divine Touch. Etiqueta: 96 % de ingredientes de origen natural.",
+  "format": "50 ml",
+  "composition": "Contiene, entre otros, aceite de argán (Argania spinosa), aceite de pepita de uva (Vitis vinifera), ácido hialurónico y vitamina E. 96 % de ingredientes de origen natural según la etiqueta. Lista INCI completa en el envase.",
+  "usage": "Aplicar sobre el rostro y el cuello limpios, por la mañana o por la noche.\nMasajear hasta su completa absorción.",
+  "points": "Argán, pepita de uva, ácido hialurónico\n96 % de ingredientes de origen natural (etiqueta)\nTarro de 50 ml, textura ligera"
+ }
+}

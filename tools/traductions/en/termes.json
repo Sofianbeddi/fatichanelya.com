@@ -1,0 +1,18 @@
+{
+ "alimentation-boissons": {
+  "nom": "Food & drinks",
+  "slug": "food-and-drinks"
+ },
+ "beaute-soin": {
+  "nom": "Beauty & care",
+  "slug": "beauty-and-care"
+ },
+ "complements": {
+  "nom": "Supplements",
+  "slug": "supplements"
+ },
+ "soin-personnel": {
+  "nom": "Personal care",
+  "slug": "personal-care"
+ }
+}

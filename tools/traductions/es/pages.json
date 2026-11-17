@@ -1,0 +1,22 @@
+{
+ "accueil": {
+  "titre": "Inicio",
+  "slug": "inicio",
+  "template": ""
+ },
+ "a-propos": {
+  "titre": "Sobre Fati",
+  "slug": "sobre-fati",
+  "template": "page-a-propos.php"
+ },
+ "contact": {
+  "titre": "Contacto",
+  "slug": "contacto",
+  "template": "page-contact.php"
+ },
+ "panier": {
+  "titre": "Cesta",
+  "slug": "cesta",
+  "template": "page-panier.php"
+ }
+}

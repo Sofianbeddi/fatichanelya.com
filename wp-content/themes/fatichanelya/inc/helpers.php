@@ -16,6 +16,30 @@ function fati_accent( $text ) {
 	return preg_replace( '/\*(.+?)\*/u', '<em>$1</em>', $escaped );
 }
 
+/**
+ * Langue dans laquelle les formations sont données (1.9.0). Toutes le sont en arabe pour
+ * l'instant (Sofian, 17 nov. 2026) ; sans cette mention, la version espagnole ou anglaise
+ * laisserait croire qu'elles existent dans ces langues. Une seule source : le jour où une
+ * formation change de langue, la remplacer par un champ par formation.
+ */
+function fati_formation_langue() {
+	return __( 'Arabe', 'fatichanelya' );
+}
+
+/** Pastille d'une carte de formation : niveau · durée · langue. */
+function fati_formation_chip( $id ) {
+	return implode(
+		' · ',
+		array_filter(
+			array(
+				get_post_meta( $id, '_fati_niveau', true ),
+				get_post_meta( $id, '_fati_duree', true ),
+				__( 'En arabe', 'fatichanelya' ),
+			)
+		)
+	);
+}
+
 /** Le numéro WhatsApp est-il renseigné ? Sans lui, aucun bouton WhatsApp ne peut aboutir. */
 function fati_whatsapp_actif() {
 	return '' !== preg_replace( '/[^0-9]/', '', (string) fati_opt( 'whatsapp' ) );

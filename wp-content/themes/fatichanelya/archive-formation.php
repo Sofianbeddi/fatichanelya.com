@@ -32,9 +32,7 @@ get_template_part( 'template-parts/components/page-banner' );
 			$i = 0;
 			while ( have_posts() ) :
 				the_post();
-				$niveau = get_post_meta( get_the_ID(), '_fati_niveau', true );
-				$duree  = get_post_meta( get_the_ID(), '_fati_duree', true );
-				$chip   = trim( implode( ' · ', array_filter( array( $niveau, $duree ) ) ) );
+				$chip = fati_formation_chip( get_the_ID() );
 				?>
 				<li class="training-card reveal" style="--i:<?php echo esc_attr( $i++ ); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>

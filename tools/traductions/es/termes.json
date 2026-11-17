@@ -1,0 +1,18 @@
+{
+ "alimentation-boissons": {
+  "nom": "Alimentación y bebidas",
+  "slug": "alimentacion-y-bebidas"
+ },
+ "beaute-soin": {
+  "nom": "Belleza y cuidado",
+  "slug": "belleza-y-cuidado"
+ },
+ "complements": {
+  "nom": "Complementos",
+  "slug": "complementos"
+ },
+ "soin-personnel": {
+  "nom": "Cuidado personal",
+  "slug": "cuidado-personal"
+ }
+}

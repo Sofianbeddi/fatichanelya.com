@@ -40,7 +40,7 @@ $panier = fati_panier_url();
 		<p class="drawer-total">
 			<?php // Le libellé change quand un article est sans prix : « hors articles à confirmer ». ?>
 			<span id="drawer-total-label"><?php esc_html_e( 'Total indicatif', 'fatichanelya' ); ?></span>
-			<strong id="drawer-total">0 €</strong>
+			<strong id="drawer-total"><?php echo esc_html( function_exists( 'fati_format_prix' ) ? fati_format_prix( 0 ) : '0 €' ); ?></strong>
 		</p>
 		<a class="button button-gold button-block" id="drawer-wa" href="<?php echo esc_url( fati_wa() ); ?>"
 		   <?php echo fati_whatsapp_actif() ? 'target="_blank" rel="noopener"' : ''; ?>>

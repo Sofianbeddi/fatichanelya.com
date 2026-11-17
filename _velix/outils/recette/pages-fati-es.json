@@ -1,0 +1,15 @@
+{
+  "home": "es/",
+  "produits": "es/produits/",
+  "categorie": "es/categorie-produit/alimentacion-y-bebidas/",
+  "produit": "es/produits/cafe-negro-lingzhi-dxn/",
+  "produit-complement": "es/produits/espirulina-dxn-120-comprimidos/",
+  "produit-kallow": "es/produits/crema-facial-hidratante-argan-kallow/",
+  "formations": "es/formations/",
+  "formation": "es/formations/creacion-de-contenido-y-redes-sociales/",
+  "a-propos": "es/sobre-fati/",
+  "contact": "es/contacto/",
+  "panier": "es/cesta/",
+  "recherche": "es/?s=lingzhi",
+  "404": "es/pagina-que-no-existe/"
+}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Réécrit les traductions arabes des réglages « Contenus du site » (chaînes Polylang),
+ * Réécrit les traductions d'une langue des réglages « Contenus du site » (chaînes Polylang),
  * et rien d'autre. C'est la section 7 d'importer-traductions.php, seule, pour la production.
  *
  *     wp eval-file tools/importer-reglages-ar.php tools/traductions/ar/reglages.json [motif]
@@ -25,9 +25,12 @@ $fati_rg = json_decode( (string) file_get_contents( $fati_rg_json ), true );
 if ( ! is_array( $fati_rg ) ) {
 	WP_CLI::error( "JSON illisible : $fati_rg_json" );
 }
-$fati_rg_langue = PLL()->model->get_language( 'ar' );
+// La langue est celle du dossier du JSON (tools/traductions/<langue>/reglages.json) ; l'outil
+// a servi à l'arabe d'abord, d'où son nom.
+$fati_rg_code   = basename( dirname( (string) $fati_rg_json ) );
+$fati_rg_langue = PLL()->model->get_language( $fati_rg_code );
 if ( ! $fati_rg_langue ) {
-	WP_CLI::error( 'Langue « ar » absente.' );
+	WP_CLI::error( "Langue « $fati_rg_code » absente." );
 }
 
 $mo = new PLL_MO();

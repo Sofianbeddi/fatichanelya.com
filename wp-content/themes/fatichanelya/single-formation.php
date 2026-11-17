@@ -54,26 +54,28 @@ while ( have_posts() ) :
 			<p class="eyebrow"><?php esc_html_e( 'Programme de formation', 'fatichanelya' ); ?></p>
 			<h2><?php echo esc_html( $titre ); ?></h2>
 
-			<?php if ( $niveau || $duree ) : ?>
-				<dl class="formation-facts">
-					<?php if ( $niveau ) : ?>
-						<div>
-							<dt><?php esc_html_e( 'Niveau', 'fatichanelya' ); ?></dt>
-							<dd><?php echo esc_html( $niveau ); ?></dd>
-						</div>
-					<?php endif; ?>
-					<?php if ( $duree ) : ?>
-						<div>
-							<dt><?php esc_html_e( 'Durée', 'fatichanelya' ); ?></dt>
-							<dd><?php echo esc_html( $duree ); ?></dd>
-						</div>
-					<?php endif; ?>
+			<dl class="formation-facts">
+				<?php if ( $niveau ) : ?>
 					<div>
-						<dt><?php esc_html_e( 'Format', 'fatichanelya' ); ?></dt>
-						<dd><?php esc_html_e( 'À distance', 'fatichanelya' ); ?></dd>
+						<dt><?php esc_html_e( 'Niveau', 'fatichanelya' ); ?></dt>
+						<dd><?php echo esc_html( $niveau ); ?></dd>
 					</div>
-				</dl>
-			<?php endif; ?>
+				<?php endif; ?>
+				<?php if ( $duree ) : ?>
+					<div>
+						<dt><?php esc_html_e( 'Durée', 'fatichanelya' ); ?></dt>
+						<dd><?php echo esc_html( $duree ); ?></dd>
+					</div>
+				<?php endif; ?>
+				<div>
+					<dt><?php esc_html_e( 'Format', 'fatichanelya' ); ?></dt>
+					<dd><?php esc_html_e( 'À distance', 'fatichanelya' ); ?></dd>
+				</div>
+				<div>
+					<dt><?php esc_html_e( 'Langue', 'fatichanelya' ); ?></dt>
+					<dd><?php echo esc_html( fati_formation_langue() ); ?></dd>
+				</div>
+			</dl>
 		</header>
 
 		<div class="prose">
@@ -111,9 +113,7 @@ while ( have_posts() ) :
 				<?php
 				while ( $autres->have_posts() ) :
 					$autres->the_post();
-					$n    = get_post_meta( get_the_ID(), '_fati_niveau', true );
-					$d    = get_post_meta( get_the_ID(), '_fati_duree', true );
-					$chip = trim( implode( ' · ', array_filter( array( $n, $d ) ) ) );
+					$chip = fati_formation_chip( get_the_ID() );
 					?>
 					<li class="training-card">
 						<?php if ( $chip ) : ?>

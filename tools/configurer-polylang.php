@@ -1,15 +1,16 @@
 <?php
 /**
- * Configure Polylang pour la version arabe (thème 1.7.0).
+ * Configure Polylang : français par défaut, arabe (thème 1.7.0), espagnol et anglais (1.9.0).
  *
  *     wp eval-file tools/configurer-polylang.php
  *
- * Idempotent. Crée les langues « fr » (défaut) et « ar » (RTL) si elles
- * manquent, pose les réglages (adresses en /ar/, français sans préfixe, pas de
+ * Idempotent. Crée les langues « fr » (défaut), « ar » (RTL), « es » (es_ES)
+ * et « en » (en_GB) si elles manquent — dans cet ordre, qui est celui du menu de
+ * langues ; une langue existante n'est jamais modifiée —, pose les réglages (adresses en /ar/, français sans préfixe, pas de
  * redirection selon le navigateur, médias non traduits, vignette / gabarit /
  * ordre synchronisés entre traductions), rattache au français tout contenu
  * sans langue, puis régénère les permaliens. Les contenus arabes se créent
- * ensuite avec tools/importer-traductions.php.
+ * ensuite avec tools/importer-traductions.php <langue>.
  *
  * @package Fatichanelya
  */
@@ -22,7 +23,7 @@ if ( ! defined( 'WP_CLI' ) || ! function_exists( 'PLL' ) ) {
 $modele  = PLL()->model;
 $langues = $modele->languages;
 
-foreach ( array( 'fr_FR' => 0, 'ar' => 1 ) as $locale => $ordre ) {
+foreach ( array( 'fr_FR' => 0, 'ar' => 1, 'es_ES' => 2, 'en_GB' => 3 ) as $locale => $ordre ) {
 	$existante = $langues->get( $locale );
 	if ( $existante ) {
 		WP_CLI::log( "   = langue déjà là : {$existante->slug} ({$locale})" );
