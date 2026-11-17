@@ -4,16 +4,16 @@
  *
  * Composition reprise de la maquette du gérant : un cadre arrondi posé dans
  * la colonne de contenu, à hauteur fixe. Texte à gauche, portrait de Fati à
- * droite, fondu entre les deux, signature en bas du portrait. En mobile, le
- * cadre empile le portrait au-dessus du texte.
+ * droite (l'inverse en arabe), sur un même fond. En mobile, le cadre empile
+ * le portrait au-dessus du texte.
  *
  * Le titre tient sur trois lignes, celle du milieu en or : c'est l'élément LCP,
  * il ne porte donc aucune animation et l'image est chargée en priorité.
  *
  * 1.10.0 (17 nov. 2026, demande du gérant) : titre « Entrepreneure en vente
  * directe et marketing digital », les trois points clés sous les boutons sont
- * retirés (le troisième répétait la signature du portrait), et le portrait est
- * une photo détourée posée sur un fond de studio dessiné en CSS.
+ * retirés, et le portrait est une photo détourée posée sur un fond de studio
+ * dessiné en CSS, sans signature ni voile : la photo seule.
  *
  * @package Fatichanelya
  */
@@ -66,10 +66,6 @@ $portrait = fati_opt( 'hero_image' );
 				true
 			);
 			?>
-			<figcaption>
-				<strong>Fati</strong>
-				<span><?php esc_html_e( 'Entrepreneure · Créatrice · Mentore', 'fatichanelya' ); ?></span>
-			</figcaption>
 		</figure>
 	<?php endif; ?>
 	</div>

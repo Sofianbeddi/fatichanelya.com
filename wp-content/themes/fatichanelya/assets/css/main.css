@@ -354,20 +354,8 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
 :root:not([dir="rtl"]) .hero-portrait img{left:12%;
   -webkit-mask-image:linear-gradient(to right,transparent 0,#000 14%);
   mask-image:linear-gradient(to right,transparent 0,#000 14%)}
-/* Voile sous la signature : une ombre portée ne compte pas comme du contraste.
-   1.10.0 : il s'efface vers le texte, sinon il dessinait un rectangle sombre à bord net sur le
-   fond clair du studio. Sur mobile, le portrait est un bandeau : voile sur toute la largeur. */
-.hero-portrait::after{content:"";position:absolute;inset-inline:0;
-  inset-block-end:0;block-size:38%;z-index:1;pointer-events:none;
-  background:linear-gradient(to top,#0E1729D9,#0E172966 45%,transparent);
-  -webkit-mask-image:linear-gradient(var(--to-end,90deg),transparent 0,#000 60%);
-  mask-image:linear-gradient(var(--to-end,90deg),transparent 0,#000 60%)}
-.hero-portrait figcaption{position:absolute;z-index:2;
-  inset-block-end:clamp(1.25rem,3vw,2rem);inset-inline-end:clamp(1.25rem,3vw,2rem);
-  display:grid;gap:.1rem;text-align:end;color:#fff}
-.hero-portrait figcaption strong{font-size:1.5rem;font-weight:var(--fw-title);
-  letter-spacing:-.02em}
-.hero-portrait figcaption span{font-size:var(--fs-label);color:#EDE6DA}
+/* 1.10.0 : la signature posée sur la photo (« Fati », « Entrepreneure · Créatrice · Mentore »)
+   et le voile sombre qui la rendait lisible sont retirés à la demande du gérant : la photo seule. */
 
 /* Sans portrait, le cadre prend sa hauteur naturelle sur une colonne. */
 .hero--sans-portrait .hero-frame{grid-template-columns:minmax(0,1fr);block-size:auto}
@@ -387,12 +375,10 @@ h1 em,h2 em{font-style:normal;color:var(--gold-ink)}
   .hero-portrait{order:-1;block-size:clamp(280px,46vh,360px)}
   /* Bandeau (1.10.0) : étirée sur toute la largeur, la photo détourée coupait le haut de la
      tête dès 600 px. Elle garde un cadre carré, calé à gauche (le bord coupé de l'image contre
-     le bord du cadre), la lumière derrière la tête, la signature à droite dans les deux sens. */
+     le bord du cadre), avec la lumière derrière la tête. */
   .hero-portrait,[dir="rtl"] .hero-portrait{--lumiere-x:clamp(130px,24vw,190px)}
-  .hero-portrait::after{-webkit-mask-image:none;mask-image:none}
   .hero-portrait img,:root:not([dir="rtl"]) .hero-portrait img{left:0;right:auto;inline-size:auto;
     aspect-ratio:1;object-position:center 12%;-webkit-mask-image:none;mask-image:none}
-  [dir="rtl"] .hero-portrait figcaption{inset-inline:clamp(1.25rem,3vw,2rem) auto;text-align:start}
   .hero-copy{padding:1.75rem clamp(1.25rem,5vw,2rem) 2rem}
   .hero h1{max-width:22ch}
 }

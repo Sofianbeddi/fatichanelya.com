@@ -821,11 +821,12 @@ désormais 40 px : 84 px en haut de page, 66 px avec ombre au-delà.
   retiré.
 - Fati est cadrée à gauche de l'image et la touche (épaule, voile). En arabe, ce bord est celui du
   cadre arrondi. En LTR, la photo se décale de 12 % vers l'extérieur et son bord gauche s'efface en
-  dégradé (14 %), sinon il tombait contre le texte. Le voile de la signature s'efface vers le texte,
-  sinon il dessinait un rectangle sombre sur le fond clair.
+  dégradé (14 %), sinon il tombait contre le texte.
+- **Photo seule** : la signature posée sur le portrait (« Fati », « Entrepreneure · Créatrice ·
+  Mentore ») et le voile sombre qui la rendait lisible sont retirés à la demande du gérant (elle
+  répétait le premier mot du titre). La signature reste sur la page À propos.
 - Bandeau mobile et tablette (≤ 980 px) : la photo garde un cadre carré calé à gauche, centrée à
-  12 % en hauteur (étirée sur 700 px de large, elle coupait le haut de la tête), signature à droite
-  dans les deux sens.
+  12 % en hauteur (étirée sur 700 px de large, elle coupait le haut de la tête).
 
 **Piège** : un portrait détouré n'a pas de fond ; ne jamais le poser sur une colonne sans fond
 dessiné. Une photo ordinaire posée dans « Photo du hero » couvre simplement le fond de studio (en
