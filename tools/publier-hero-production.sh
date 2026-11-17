@@ -41,7 +41,7 @@ wp() { command wp "$@" </dev/null; }
 VERSION=$(wp eval 'echo wp_get_theme( "fatichanelya" )->get( "Version" );')
 echo "→ Thème en ligne : $VERSION"
 STOCKE=$(wp option pluck fati_settings hero_titre 2>/dev/null || true)
-echo "→ Titre stocké en base : ${STOCKE:-(aucun, la valeur par défaut du mu-plugin s'applique)}"
+echo "→ Titre stocké en base : ${STOCKE:-(aucun, la valeur par défaut du mu-plugin s’applique)}"
 echo "→ Photo du hero en ligne : $(wp option pluck fati_settings hero_image 2>/dev/null || echo '(aucune)')"
 
 if [ "$3" != "--go" ]; then
